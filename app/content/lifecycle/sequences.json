@@ -1,0 +1,354 @@
+{
+  "version": 1,
+  "rules": {
+    "quiet_start_hour": 20,
+    "quiet_end_hour": 8,
+    "daily_cap": 1,
+    "default_timezone": "America/New_York"
+  },
+  "sequences": {
+    "failed_payment": {
+      "kind": "transactional",
+      "from": "team",
+      "priority": 1,
+      "audience": "memberships past_due with a grace date (we only know when a payment attempt failed)",
+      "description": "Failed-payment recovery: the facts, the date access pauses, how to update the card. No pressure, no fake deadlines.",
+      "steps": [
+        {
+          "id": "f1",
+          "after_hours": 0,
+          "subject": "Your Strong Years payment didn't go through",
+          "body": "Hi {{first_name}},\n\nYour last membership payment didn't go through. Nothing is lost: your sessions, your numbers and your printables are all still here.\n\nAccess continues until {{grace_date}}. To keep it going, update your card on your account page: {{account_url}}\n\nIf you meant to stop, you don't need to do anything. Questions? Reply to this email and a person on our team will answer.\n\nThe Strong Years team"
+        },
+        {
+          "id": "f2",
+          "after_hours": 72,
+          "subject": "Reminder: update your card to keep Strong Years",
+          "body": "Hi {{first_name}},\n\nA quick reminder that your membership payment still needs a working card. Access continues until {{grace_date}}.\n\nUpdate it here: {{account_url}}\n\nIf you'd rather pause or pay less, the same page has a pause option and the $12 Essentials plan.\n\nThe Strong Years team"
+        },
+        {
+          "id": "f3",
+          "after_hours": 144,
+          "subject": "Last note about your Strong Years payment",
+          "body": "Hi {{first_name}},\n\nThis is our last note about the payment. If the card isn't updated by {{grace_date}}, your membership pauses. Your history and numbers stay saved, and you can come back anytime.\n\nUpdate the card: {{account_url}}\n\nThank you for practicing with us.\n\nThe Strong Years team"
+        }
+      ]
+    },
+    "pre_renewal": {
+      "kind": "transactional",
+      "from": "team",
+      "priority": 2,
+      "audience": "live memberships with a known period end; renewal certainty re-checked first (Shopify contracts: conditional wording)",
+      "description": "Pre-renewal notices. 7 days here; the 48-hour reminder is sent by the billing reminders cron (one source).",
+      "steps": [
+        {
+          "id": "d7",
+          "after_hours": 0,
+          "subject": "Your Strong Years membership renews on {{renew_date}}",
+          "body": "Hi {{first_name}},\n\n{{if_active}}your membership renews on {{renew_date}} at {{price}}. If you already cancelled or paused it on your account page, nothing is charged and you can ignore this email.\n\nTo cancel, pause or switch to the $12 Essentials plan, open your account page: {{account_url}}. Cancelling takes two screens.\n\nThe Strong Years team"
+        },
+        {
+          "id": "d2",
+          "after_hours": 120,
+          "subject": "(sent by the billing reminders cron)",
+          "body": "(sent by the billing reminders cron)",
+          "owner": "billing reminders cron (pre_charge_48h)"
+        }
+      ]
+    },
+    "gift_recipient": {
+      "kind": "transactional",
+      "from": "sun",
+      "priority": 3,
+      "audience": "active gift memberships, 7 days before the gift ends",
+      "description": "Gift ending notice: the gift never renews and nothing is charged.",
+      "steps": [
+        {
+          "id": "g1",
+          "after_hours": 0,
+          "subject": "Your Strong Years gift ends on {{gift_end}}",
+          "body": "Hello {{first_name}},\n\nSun Yoon here. Your gift membership ends on {{gift_end}}. It does not renew and nobody will be charged. That's how gifts work here.\n\nIf you'd like to keep going on your own, your account page shows the options: {{account_url}}. If not, thank you for cooking and practicing with us. Your printables are yours to keep.\n\nSun Yoon\n(an AI character, written by the Strong Years team)"
+        }
+      ]
+    },
+    "member_onboarding": {
+      "kind": "lifecycle",
+      "from": "chang",
+      "priority": 4,
+      "audience": "paying members, days 0 to 14 from the first payment",
+      "description": "Member onboarding d0 to d14. Day 0 (the welcome with the sign-in link) is sent by orders/paid.",
+      "steps": [
+        {
+          "id": "d0",
+          "after_hours": 0,
+          "subject": "(welcome, sent by orders/paid)",
+          "body": "(welcome, sent by orders/paid)",
+          "owner": "orders/paid welcome"
+        },
+        {
+          "id": "d1",
+          "after_hours": 24,
+          "subject": "Day 1: one chair, eight minutes",
+          "body": "Good morning, {{first_name}}.\n\nChang here. Today is simple. Push a sturdy chair against the wall. Shoes on. Kitchen counter close by.\n\nOpen today's session: {{site}}/app\n\nPick the version that matches today, not the one you wish matched today. If you need your hands to stand up, use your hands. That's where we start, not where we stay.\n\nStop if anything hurts sharply or you feel dizzy.\n\nChang"
+        },
+        {
+          "id": "d2",
+          "after_hours": 48,
+          "subject": "Day 2: write one number down",
+          "body": "Morning, {{first_name}}.\n\nChang again. Yesterday you stood up from a chair. Today, count how many times you can do it in 30 seconds, then write the number down in the app: {{site}}/app/progress\n\nThat number is yours. We check it again in four weeks. No prizes, just the truth.\n\nChang"
+        },
+        {
+          "id": "d3",
+          "after_hours": 72,
+          "subject": "Day 3: Sun Yoon's soup",
+          "body": "Hello {{first_name}},\n\nSun Yoon. Chang does chairs, I do soup. This week's recipe has the protein grams written in, and a box that says who should skip it.\n\nRecipes: {{site}}/app/kitchen\n\nMake one pot on Sunday. Eat it twice. Tell Chang it was your idea.\n\nSun Yoon"
+        },
+        {
+          "id": "d5",
+          "after_hours": 120,
+          "subject": "Day 5: the easier version is not cheating",
+          "body": "{{first_name}},\n\nChang here. Some mornings the easier version is the right version. Bad sleep, sore knees, long day yesterday: pick it and do it slowly. A short session done is better than a long one skipped.\n\nToday: {{site}}/app\n\nChang"
+        },
+        {
+          "id": "d7",
+          "after_hours": 168,
+          "subject": "One week in",
+          "body": "{{first_name}},\n\nSeven days. Chang here. Look at your log and count the mornings you showed up: {{site}}/app/progress\n\nThree is good. Five is very good. Seven, and I'll tell Sun Yoon you beat her.\n\nNext week the sessions add one new move. Same chair.\n\nChang"
+        },
+        {
+          "id": "d10",
+          "after_hours": 240,
+          "subject": "A question from Sun Yoon",
+          "body": "Hello {{first_name}},\n\nSun Yoon. A real question: what's for dinner on Tuesday? Most people don't know, so they eat whatever is easy. Pick one recipe from the kitchen page tonight and put the groceries on the list now.\n\n{{site}}/app/kitchen\n\nSun Yoon"
+        },
+        {
+          "id": "d14",
+          "after_hours": 336,
+          "subject": "Two weeks: what to expect next",
+          "body": "{{first_name}},\n\nChang here. Two weeks. The sessions keep coming every morning, a new recipe from Sun Yoon every Sunday, and the strength retest at week four.\n\nIf something isn't working, a slow day, a sore spot, a question, reply to this email. A person on our team reads it.\n\nYour account and membership details are always here: {{account_url}}\n\nChang"
+        }
+      ]
+    },
+    "books_to_membership": {
+      "kind": "lifecycle",
+      "from": "chang",
+      "priority": 5,
+      "audience": "bought the starter books, no membership",
+      "description": "Cell A: the books-only buyer's 3 onboarding emails with the founding offer (email 1 = SH_books_e1 from orders/paid).",
+      "steps": [
+        {
+          "id": "e1",
+          "after_hours": 0,
+          "subject": "(sent by orders/paid as SH_books_e1)",
+          "body": "(sent by orders/paid as SH_books_e1)",
+          "owner": "orders/paid SH_books_e1"
+        },
+        {
+          "id": "e2",
+          "after_hours": 48,
+          "subject": "How day 2 of the Reset went",
+          "body": "Hi {{first_name}},\n\nChang here. You have the 7-Day Strength Reset. Day 2 is the one people skip, so here's the honest version: it's eight minutes, one chair, and the easier version is printed right under every move.\n\nIf you want a new session every morning after the seven days, that's what the Strong Years membership is. The founding membership is $25 a month, the price stays the same for as long as you stay subscribed, and you can cancel online in two screens. 14-day money-back guarantee on the membership charge, once per person.\n\nEvery term is on the page before you pay: {{founding_url}}\n\nNo pressure. The books are yours either way.\n\nChang"
+        },
+        {
+          "id": "e3",
+          "after_hours": 120,
+          "subject": "Sun Yoon on what comes after the book",
+          "body": "Hello {{first_name}},\n\nSun Yoon. The Strong Kitchen book is yours to keep. Members get a new recipe from me every Sunday, with the grams written in and the who-should-skip box.\n\nThe founding membership is $25 a month until you cancel, cancel online anytime. The page shows the price, what renews and when, before you pay: {{founding_url}}\n\nThis is the last email about it. If you'd rather just cook from the book, I approve.\n\nSun Yoon"
+        }
+      ]
+    },
+    "activation": {
+      "kind": "lifecycle",
+      "from": "chang",
+      "priority": 6,
+      "audience": "paying members with no practice logged 3 days after joining",
+      "description": "Activation nudge: one, kind, specific.",
+      "steps": [
+        {
+          "id": "a1",
+          "after_hours": 72,
+          "subject": "The first session is the hardest one",
+          "body": "{{first_name}},\n\nChang here. You joined three days ago and haven't logged a session yet. Very normal. The first one is the hardest to start.\n\nHere's the smallest version: three minutes, seated. {{site}}/app\n\nThree minutes still counts.\n\nChang"
+        }
+      ]
+    },
+    "activation_lapsed": {
+      "kind": "lifecycle",
+      "from": "chang",
+      "priority": 7,
+      "audience": "paying members with no practice logged for 7 days",
+      "description": "Lapsed-practice nudge, once per gap.",
+      "steps": [
+        {
+          "id": "l1",
+          "after_hours": 0,
+          "subject": "The chair is still against the wall",
+          "body": "{{first_name}},\n\nChang here. A week without a session happens to everybody. No need to make up for it. Start with today's session, the easier version: {{site}}/app\n\nIf something got in the way, a sore knee, a busy week, reply and tell us. A person reads it.\n\nChang"
+        }
+      ]
+    },
+    "annual_offer": {
+      "kind": "marketing",
+      "from": "team",
+      "priority": 8,
+      "audience": "founding monthly members after their first renewal",
+      "description": "The founding annual ($249/yr) offered once after renewal 1, as a request handled by a person (never charged twice).",
+      "steps": [
+        {
+          "id": "y1",
+          "after_hours": 24,
+          "subject": "Switch to yearly: $249 (optional)",
+          "body": "Hi {{first_name}},\n\nYou've been a founding member for two months now. Thank you.\n\nIf you'd like to pay yearly instead, the founding annual plan is $249 a year (instead of $300 for twelve monthly payments). It's optional. To switch, request it on your account page; a person sends the yearly checkout and ends the monthly plan the day it is paid, so you are never charged for both: {{account_url}}\n\nIf monthly suits you, change nothing.\n\nThe Strong Years team"
+        }
+      ]
+    },
+    "gift_unclaimed": {
+      "kind": "lifecycle",
+      "from": "sun",
+      "priority": 9,
+      "audience": "gift recipients who haven't claimed yet (the code is never re-sent by email here)",
+      "description": "Gift claim reminders at day 3 and day 10.",
+      "steps": [
+        {
+          "id": "u1",
+          "after_hours": 72,
+          "subject": "A gift from {{gifter}} is waiting",
+          "body": "Hello {{first_name}},\n\nSun Yoon. {{gifter}} gave you Strong Years: morning sessions with Chang Yin and Sunday recipes from me. It's prepaid and it never renews.\n\nThe first email had your gift code. To start, enter it here: {{redeem_url}}. Can't find it? Reply to this email and a person will help.\n\nSun Yoon\n(an AI character, written by the Strong Years team)"
+        },
+        {
+          "id": "u2",
+          "after_hours": 240,
+          "subject": "Your gift is still here",
+          "body": "Hello {{first_name}},\n\nSun Yoon again, last note. Your gift from {{gifter}} is still waiting: {{redeem_url}}\n\nNothing is charged, now or later.\n\nSun Yoon"
+        }
+      ]
+    },
+    "waitlist_nurture": {
+      "kind": "marketing",
+      "from": "chang",
+      "priority": 10,
+      "audience": "confirmed waitlisters during the runway who ALSO gave a separate tips opt-in (email_prefs.lifecycle_opt_in)",
+      "description": "Runway nurture, only with the separate tips consent. The waitlist consent alone promises launch emails only.",
+      "steps": [
+        {
+          "id": "n1",
+          "after_hours": 48,
+          "subject": "A tip from Chang before doors open",
+          "body": "{{first_name}},\n\nChang here. While you wait: try standing up from a chair without using your hands, once, slowly. If you need your hands, use them. Either way, now you know where you're starting.\n\nDay 1 is free on our site: {{site}}/start\n\nChang"
+        },
+        {
+          "id": "n2",
+          "after_hours": 120,
+          "subject": "Sun Yoon's Tuesday soup",
+          "body": "Hello {{first_name}},\n\nSun Yoon. One pot, four bowls, the grams written in. Here's the free recipe: {{site}}/kitchen\n\nChang says it's his favorite. Chang says that about every soup.\n\nSun Yoon"
+        },
+        {
+          "id": "n3",
+          "after_hours": 216,
+          "subject": "What Strong Years will be",
+          "body": "{{first_name}},\n\nChang here. When Strong Years opens: a new 8 to 12 minute session every morning, an easier version of everything, Sun Yoon's recipes every Sunday, and a strength number you retest each month. Every price and term goes on one page before checkout.\n\nYou'll get one email when doors open.\n\nChang"
+        }
+      ]
+    },
+    "win_back": {
+      "kind": "marketing",
+      "from": "chang",
+      "priority": 11,
+      "audience": "former members (cancelled or ended), no live membership; 30, 60 and 90 days after the end",
+      "description": "Win-back: three notes, honest, no fake deadlines.",
+      "steps": [
+        {
+          "id": "w30",
+          "after_hours": 720,
+          "subject": "The chair is still here, {{first_name}}",
+          "body": "{{first_name}},\n\nChang here. It's been a month since your membership ended. No hard sell. If you want to come back, the sessions are where you left them: {{join_url}}\n\nIf something didn't work for you, reply and tell us what. A person reads it.\n\nChang"
+        },
+        {
+          "id": "w60",
+          "after_hours": 1440,
+          "subject": "What changed at Strong Years",
+          "body": "Hello {{first_name}},\n\nSun Yoon. Since you left we added new recipes every Sunday and new seated versions of the morning sessions. If you'd like to try again: {{join_url}}\n\nSun Yoon"
+        },
+        {
+          "id": "w90",
+          "after_hours": 2160,
+          "subject": "Last note from Chang",
+          "body": "{{first_name}},\n\nChang here, last note. If you ever want the morning sessions again, the door is here: {{join_url}}. Every term is on the page before you pay. Until then, keep the chair against the wall.\n\nChang"
+        }
+      ]
+    },
+    "daily_coach": {
+      "kind": "marketing",
+      "from": "chang",
+      "priority": 12,
+      "audience": "paying members who opted in to the daily coach email (email_prefs.coach_opt_in)",
+      "description": "One short coach email a day, only with its own opt-in, never on a day another email went out.",
+      "steps": [
+        {
+          "id": "c1",
+          "after_hours": 0,
+          "subject": "(daily tip)",
+          "body": "(daily tip)"
+        }
+      ]
+    }
+  },
+  "coach_tips": [
+    {
+      "subject": "Today: chair first",
+      "body": "{{first_name}}, Chang here. Chair against the wall, shoes on. Today's session: {{site}}/app\n\nStop if anything hurts sharply or you feel dizzy."
+    },
+    {
+      "subject": "Today: breathe out on the effort",
+      "body": "{{first_name}}, Chang here. Breathe out as you stand up, in as you sit down. Today's session: {{site}}/app\n\nStop if anything hurts sharply or you feel dizzy."
+    },
+    {
+      "subject": "Today: slow on the way down",
+      "body": "{{first_name}}, Chang here. Three seconds down, one second up. Slow is the hard part. {{site}}/app\n\nStop if anything hurts sharply or you feel dizzy."
+    },
+    {
+      "subject": "From Sun Yoon: plan one dinner",
+      "body": "{{first_name}}, Sun Yoon. Pick Tuesday's dinner now. Future you says thank you. {{site}}/app/kitchen\n\nStop if anything hurts sharply or you feel dizzy."
+    },
+    {
+      "subject": "Today: the counter is your friend",
+      "body": "{{first_name}}, Chang here. Balance work happens at the kitchen counter, one hand hovering. {{site}}/app\n\nStop if anything hurts sharply or you feel dizzy."
+    },
+    {
+      "subject": "Today: write the number down",
+      "body": "{{first_name}}, Chang here. Whatever you did today, log it. Numbers don't lie, and neither do I. {{site}}/app/progress\n\nStop if anything hurts sharply or you feel dizzy."
+    },
+    {
+      "subject": "From Sun Yoon: water first",
+      "body": "{{first_name}}, Sun Yoon. A glass of water before the session. Then Chang can talk. {{site}}/app\n\nStop if anything hurts sharply or you feel dizzy."
+    },
+    {
+      "subject": "Today: easier is allowed",
+      "body": "{{first_name}}, Chang here. Sore or tired? The easier version, slowly. It still counts. {{site}}/app\n\nStop if anything hurts sharply or you feel dizzy."
+    },
+    {
+      "subject": "Today: walk after lunch",
+      "body": "{{first_name}}, Chang here. Ten minutes of walking after lunch. That's it. Today's session: {{site}}/app\n\nStop if anything hurts sharply or you feel dizzy."
+    },
+    {
+      "subject": "From Sun Yoon: protein at breakfast",
+      "body": "{{first_name}}, Sun Yoon. Eggs, tofu or yogurt at breakfast. The grams are in the kitchen page. {{site}}/app/kitchen\n\nStop if anything hurts sharply or you feel dizzy."
+    },
+    {
+      "subject": "Today: posture check",
+      "body": "{{first_name}}, Chang here. Sit tall, feet flat, then stand. Same chair, better start. {{site}}/app\n\nStop if anything hurts sharply or you feel dizzy."
+    },
+    {
+      "subject": "Today: one more than last week",
+      "body": "{{first_name}}, Chang here. One more rep than last week, if it feels right. If not, same as last week. {{site}}/app\n\nStop if anything hurts sharply or you feel dizzy."
+    },
+    {
+      "subject": "From Sun Yoon: Sunday soup",
+      "body": "{{first_name}}, Sun Yoon. Sunday: one pot. Monday and Wednesday: lunch is done. {{site}}/app/kitchen\n\nStop if anything hurts sharply or you feel dizzy."
+    },
+    {
+      "subject": "Today: rest day done right",
+      "body": "{{first_name}}, Chang here. Rest day? A slow walk and the breathing session. {{site}}/app\n\nStop if anything hurts sharply or you feel dizzy."
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+@import "@fontsource-variable/fraunces/index.css";
+@import "@fontsource/atkinson-hyperlegible/400.css";
+@import "@fontsource/atkinson-hyperlegible/700.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Brand rules (client, non-negotiable): no gray text anywhere, high contrast only,
+ * no "//" decorations, no monospace, no tracked all-caps eyebrows.
+ * Every text colour is Ink on Paper/Rice, or Rice on Ink/Jade/Persimmon.
+ */
+:root {
+  --paper: #fbf6ec;
+  --ink: #16120e;
+  --persimmon: #b3311c;
+  --jade: #1f5a46;
+  --rice: #ffffff;
+  --brass: #e7b85a;
+  color-scheme: light;
+}
+
+html {
+  font-size: 20px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Atkinson Hyperlegible", system-ui, sans-serif;
+  font-size: 20px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 1024px) {
+  body { font-size: 21px; }
+}
+
+h1, h2, h3, .font-display {
+  font-family: "Fraunces Variable", Georgia, serif;
+  font-variation-settings: "opsz" 72;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+input::placeholder, textarea::placeholder { color: var(--ink) !important; opacity: 1 !important; font-style: italic; }
+
+a { text-underline-offset: 3px; }
+
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex min-h-btn w-full items-center justify-center gap-2 rounded-btn px-6 py-3 text-center text-[20px] font-bold leading-tight no-underline transition-colors sm:w-auto;
+  }
+  .btn-primary { @apply btn bg-persimmon text-rice hover:bg-persimmon-dark; }
+  .btn-jade { @apply btn bg-jade text-rice hover:bg-jade-dark; }
+  .btn-ink { @apply btn bg-ink text-rice hover:bg-jade-dark; }
+  .btn-outline { @apply btn border-2 border-ink bg-rice text-ink hover:bg-cream; }
+  .card { @apply rounded-2xl border-2 border-ink bg-rice p-5 sm:p-7; }
+  .fine { @apply text-fine text-ink; }
+  .field { @apply block w-full min-h-[56px] rounded-xl border-2 border-ink bg-rice px-4 py-3 text-[20px] text-ink; }
+  .label { @apply mb-2 block text-[20px] font-bold text-ink; }
+  .check { @apply mt-1 h-7 w-7 flex-none cursor-pointer accent-jade; }
+  .choice {
+    @apply flex min-h-btn w-full items-center gap-3 rounded-btn border-2 border-ink bg-rice px-5 py-3 text-left text-[20px] font-bold text-ink hover:bg-cream;
+  }
+  .choice[aria-pressed="true"], .choice[aria-checked="true"] { @apply bg-jade text-rice; }
+  .wrap { @apply mx-auto w-full max-w-[1120px] px-4 sm:px-6; }
+  .narrow { @apply mx-auto w-full max-w-[720px] px-4 sm:px-6; }
+  .marker { @apply mt-[0.55em] inline-block h-3 w-3 flex-none bg-persimmon; }
+}
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff; }
+}

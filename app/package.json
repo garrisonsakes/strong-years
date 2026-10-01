@@ -1,0 +1,44 @@
+{
+  "name": "strong-years",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "screenshots": "playwright test --config playwright.screens.config.ts",
+    "smoke": "node --experimental-strip-types scripts/smoke.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.129.0",
+    "@fontsource-variable/fraunces": "^5.3.0",
+    "@fontsource/atkinson-hyperlegible": "^5.3.0",
+    "@supabase/supabase-js": "^2.117.2",
+    "next": "15.5.26",
+    "pdf-lib": "^1.17.1",
+    "react": "19.1.9",
+    "react-dom": "19.1.9",
+    "server-only": "^0.0.1",
+    "stripe": "18.5.0",
+    "web-push": "^3.6.7"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@playwright/test": "1.56.1",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@types/web-push": "^3.6.4",
+    "autoprefixer": "^10.4.21",
+    "eslint": "9.39.5",
+    "eslint-config-next": "15.5.26",
+    "postcss": "^8.5.6",
+    "tailwindcss": "3.4.19",
+    "typescript": "5.9.3",
+    "vitest": "3.2.7"
+  }
+}
