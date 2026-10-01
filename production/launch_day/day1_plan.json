@@ -25,12 +25,12 @@
    "evidence": [],
    "has_movement": false,
    "target_seconds": 44,
-   "hook_line": "Not a doctor, not a real person. An AI welder. Here's what's real.",
+   "hook_line": "Not a doctor, not a real person. A seventy-four-year-old AI welder. Here's what's real.",
    "skip_line": "New to exercise, or living with a heart condition? Talk to your doctor first.",
    "beats": [
     {
      "t": "0-3",
-     "vo": "Not a doctor, not a real person. An AI welder. Here's what's real.",
+     "vo": "Not a doctor, not a real person. A seventy-four-year-old AI welder. Here's what's real.",
      "ost": "AI CHARACTER · HERE'S WHAT'S REAL",
      "route": "talk",
      "study_card": false
@@ -44,7 +44,7 @@
     },
     {
      "t": "11-20",
-     "vo": "Every number we use comes from a published study. The study goes in the caption. Check me.",
+     "vo": "Every number we use comes from a published study. The study goes in the caption. Save this and check me.",
      "ost": "Studies in the caption",
      "route": "talk",
      "study_card": false
@@ -65,7 +65,7 @@
     },
     {
      "t": "36-44",
-     "vo": "Comment WAITLIST. It's free. Day one now, one email when we open.",
+     "vo": "Comment WAITLIST. It's free. Send this to the friend who asked about me.",
      "ost": "Comment WAITLIST · free",
      "route": "talk",
      "study_card": false
@@ -123,10 +123,32 @@
     }
    },
    "first_comment": "Chang Yin is an AI character made by a team of people; the story is fiction.\nComment WAITLIST and the team sends the free link by DM. No card, one email when we open.",
+   "virality": {
+    "score": 88.7,
+    "top_decile": true,
+    "hook_class": "NOT_X",
+    "parts": {
+     "hook_class": 19.48,
+     "first_line": 10.0,
+     "number": 10.0,
+     "demo_on_self": 11.25,
+     "open_loop": 10.0,
+     "share": 8.0,
+     "save": 7.0,
+     "length": 10.0,
+     "emotion": 0.0,
+     "cta_friction": 3.0
+    },
+    "frame1_text": "AI CHARACTER · HERE'S WHAT'S REAL",
+    "frame1_words": 6,
+    "ig_trial_reel": true,
+    "trial_note": "VIRALITY_SYSTEM.md §5: every IG reel in a page's first 14 days goes out as a Trial Reel (non-followers first; share to followers if it beats the page median at 24 h). Professional account required; if the toggle is missing, post normally and log it."
+   },
    "ai_label_reminder": "Turn ON the AI label on BOTH posts (IG 'AI info', FB 'AI info'); the burned-in 'AI character' tag and the caption footer stay as rendered.",
    "fallback_window": "If a file is not QA-passed 30 min before its slot, do not rush it: post it at tomorrow's 08:30 IG / 08:00 FB slot instead.",
    "validation": {
     "build_content_rules": "pass",
+    "virality_gate": "top-decile",
     "compliance_pass1": "pass",
     "compliance_pass2": "pass",
     "first_comment_scan": "pass",
@@ -202,7 +224,7 @@
     },
     {
      "t": "42-47",
-     "vo": "Comment TEST. I'll send the three-minute strength test.",
+     "vo": "Comment TEST for the strength test. Send this to whoever says they're too old.",
      "ost": "Comment TEST",
      "route": "talk",
      "study_card": false
@@ -266,10 +288,32 @@
     }
    },
    "first_comment": "Sources: Fragala et al., J Strength Cond Res 2019; Riebe et al., Med Sci Sports Exerc 2015.\nComment TEST and the team sends the free 3-minute Strength Age test by DM.\nChang Yin is an AI character made by the Strong Years team.",
+   "virality": {
+    "score": 94.5,
+    "top_decile": true,
+    "hook_class": "MYTH",
+    "parts": {
+     "hook_class": 19.48,
+     "first_line": 10.0,
+     "number": 10.0,
+     "demo_on_self": 15.0,
+     "open_loop": 10.0,
+     "share": 8.0,
+     "save": 7.0,
+     "length": 10.0,
+     "emotion": 2.0,
+     "cta_friction": 3.0
+    },
+    "frame1_text": "MYTH ✗ 'TOO OLD TO LIFT'",
+    "frame1_words": 6,
+    "ig_trial_reel": true,
+    "trial_note": "VIRALITY_SYSTEM.md §5: every IG reel in a page's first 14 days goes out as a Trial Reel (non-followers first; share to followers if it beats the page median at 24 h). Professional account required; if the toggle is missing, post normally and log it."
+   },
    "ai_label_reminder": "Turn ON the AI label on BOTH posts (IG 'AI info', FB 'AI info'); the burned-in 'AI character' tag and the caption footer stay as rendered.",
    "fallback_window": "If a file is not QA-passed 30 min before its slot, do not rush it: post it at tomorrow's 08:30 IG / 08:00 FB slot instead.",
    "validation": {
     "build_content_rules": "pass",
+    "virality_gate": "top-decile",
     "compliance_pass1": "pass",
     "compliance_pass2": "pass",
     "first_comment_scan": "pass",
@@ -335,8 +379,8 @@
     },
     {
      "t": "38-44",
-     "vo": "Bench, bed, or bus stop. Comment BREATH for the guided five minutes.",
-     "ost": "Comment BREATH",
+     "vo": "Save it for tonight before bed. Send it to whoever needs it. Comment BREATH.",
+     "ost": "Send it · Comment BREATH",
      "route": "talk",
      "study_card": false
     }
@@ -399,10 +443,32 @@
     }
    },
    "first_comment": "Sources: Laborde et al., Neurosci Biobehav Rev 2022.\nComment BREATH and the team sends the guided 5-minute 4-6 Breath by DM.\nChang Yin is an AI character made by the Strong Years team.",
+   "virality": {
+    "score": 88.7,
+    "top_decile": true,
+    "hook_class": "NOT_X",
+    "parts": {
+     "hook_class": 19.48,
+     "first_line": 10.0,
+     "number": 10.0,
+     "demo_on_self": 11.25,
+     "open_loop": 10.0,
+     "share": 8.0,
+     "save": 7.0,
+     "length": 10.0,
+     "emotion": 0.0,
+     "cta_friction": 3.0
+    },
+    "frame1_text": "LONGER OUT, NOT DEEPER",
+    "frame1_words": 4,
+    "ig_trial_reel": true,
+    "trial_note": "VIRALITY_SYSTEM.md §5: every IG reel in a page's first 14 days goes out as a Trial Reel (non-followers first; share to followers if it beats the page median at 24 h). Professional account required; if the toggle is missing, post normally and log it."
+   },
    "ai_label_reminder": "Turn ON the AI label on BOTH posts (IG 'AI info', FB 'AI info'); the burned-in 'AI character' tag and the caption footer stay as rendered.",
    "fallback_window": "If a file is not QA-passed 30 min before its slot, do not rush it: post it at tomorrow's 08:30 IG / 08:00 FB slot instead.",
    "validation": {
     "build_content_rules": "pass",
+    "virality_gate": "top-decile",
     "compliance_pass1": "pass",
     "compliance_pass2": "pass",
     "first_comment_scan": "pass",
@@ -460,15 +526,22 @@
      "study_card": false
     },
     {
-     "t": "29-35",
+     "t": "29-33",
      "vo": "Food allergy or a special diet from your doctor? Their plan comes first. Always.",
      "ost": "Special diet? Doctor's plan first.",
      "route": "talk",
      "study_card": false
     },
     {
-     "t": "35-45",
-     "vo": "Comment WAITLIST. It's free. One email when we open. I don't spam. The team won't let me.",
+     "t": "33-38",
+     "vo": "Show this to whoever asked you about me. Save it for the next one who asks.",
+     "ost": "Show them this",
+     "route": "talk",
+     "study_card": false
+    },
+    {
+     "t": "38-45",
+     "vo": "Comment WAITLIST. It's free. One email when we open. No spam.",
      "ost": "Comment WAITLIST · free",
      "route": "talk",
      "study_card": false
@@ -526,10 +599,32 @@
     }
    },
    "first_comment": "Sun Yoon is an AI character made by a team of people; the story is fiction.\nComment WAITLIST and the team sends the free link by DM. No card, one email when we open.",
+   "virality": {
+    "score": 90.7,
+    "top_decile": true,
+    "hook_class": "MYTH",
+    "parts": {
+     "hook_class": 19.48,
+     "first_line": 10.0,
+     "number": 10.0,
+     "demo_on_self": 11.25,
+     "open_loop": 10.0,
+     "share": 8.0,
+     "save": 7.0,
+     "length": 10.0,
+     "emotion": 2.0,
+     "cta_friction": 3.0
+    },
+    "frame1_text": "'ARE YOU EVEN REAL?' NO.",
+    "frame1_words": 5,
+    "ig_trial_reel": true,
+    "trial_note": "VIRALITY_SYSTEM.md §5: every IG reel in a page's first 14 days goes out as a Trial Reel (non-followers first; share to followers if it beats the page median at 24 h). Professional account required; if the toggle is missing, post normally and log it."
+   },
    "ai_label_reminder": "Turn ON the AI label on BOTH posts (IG 'AI info', FB 'AI info'); the burned-in 'AI character' tag and the caption footer stay as rendered.",
    "fallback_window": "If a file is not QA-passed 30 min before its slot, do not rush it: post it at tomorrow's 08:30 IG / 08:00 FB slot instead.",
    "validation": {
     "build_content_rules": "pass",
+    "virality_gate": "top-decile",
     "compliance_pass1": "pass",
     "compliance_pass2": "pass",
     "first_comment_scan": "pass",
@@ -583,7 +678,7 @@
     },
     {
      "t": "21-31",
-     "vo": "Two kiwis, a spoon, done. Skin on is more fiber, if you can stand the fuzz. I can't.",
+     "vo": "Two kiwis, a spoon, done. Try it tomorrow morning. Skin on is more fiber, if you can stand the fuzz. I can't.",
      "ost": "Two kiwis, a spoon, done",
      "route": "insert",
      "study_card": false
@@ -604,7 +699,7 @@
     },
     {
      "t": "42-46",
-     "vo": "Comment GUT. I'll send my seven-day fiber ladder.",
+     "vo": "Comment GUT for my seven-day fiber ladder. Send this to the prune buyer.",
      "ost": "Comment GUT",
      "route": "talk",
      "study_card": false
@@ -668,10 +763,32 @@
     }
    },
    "first_comment": "Sources: Chey et al., Am J Gastroenterol 2021.\nComment GUT and the team sends Sun Yoon's 7-Day Fiber Ladder by DM.\nSun Yoon is an AI character made by the Strong Years team.",
+   "virality": {
+    "score": 96.2,
+    "top_decile": true,
+    "hook_class": "IF_EVERY",
+    "parts": {
+     "hook_class": 25.0,
+     "first_line": 10.0,
+     "number": 10.0,
+     "demo_on_self": 11.25,
+     "open_loop": 10.0,
+     "share": 8.0,
+     "save": 7.0,
+     "length": 10.0,
+     "emotion": 2.0,
+     "cta_friction": 3.0
+    },
+    "frame1_text": "2 KIWIS: THE REAL STUDY",
+    "frame1_words": 5,
+    "ig_trial_reel": true,
+    "trial_note": "VIRALITY_SYSTEM.md §5: every IG reel in a page's first 14 days goes out as a Trial Reel (non-followers first; share to followers if it beats the page median at 24 h). Professional account required; if the toggle is missing, post normally and log it."
+   },
    "ai_label_reminder": "Turn ON the AI label on BOTH posts (IG 'AI info', FB 'AI info'); the burned-in 'AI character' tag and the caption footer stay as rendered.",
    "fallback_window": "If a file is not QA-passed 30 min before its slot, do not rush it: post it at tomorrow's 08:30 IG / 08:00 FB slot instead.",
    "validation": {
     "build_content_rules": "pass",
+    "virality_gate": "top-decile",
     "compliance_pass1": "pass",
     "compliance_pass2": "pass",
     "first_comment_scan": "pass",
@@ -723,7 +840,7 @@
     },
     {
      "t": "20-31",
-     "vo": "So why do I make it? Warm, salty, easy to swallow, and it gets protein into a tired person. That's real.",
+     "vo": "So why do I make it? Warm, salty, easy to swallow, and it gets protein into a tired person. That's real. Save this for the next cold.",
      "ost": "Warm · easy · protein",
      "route": "insert",
      "study_card": false
@@ -744,7 +861,7 @@
     },
     {
      "t": "43-47",
-     "vo": "Comment SOUP. Three of my soups, with grams.",
+     "vo": "Comment SOUP. Three soups, with grams. Send this to whoever swears by it.",
      "ost": "Comment SOUP",
      "route": "talk",
      "study_card": false
@@ -808,10 +925,32 @@
     }
    },
    "first_comment": "Sources: Rennard et al., Chest 2000.\nComment SOUP and the team sends Sun Yoon's Three Soups (with grams) by DM.\nSun Yoon is an AI character made by the Strong Years team.",
+   "virality": {
+    "score": 88.7,
+    "top_decile": true,
+    "hook_class": "MYTH",
+    "parts": {
+     "hook_class": 19.48,
+     "first_line": 10.0,
+     "number": 10.0,
+     "demo_on_self": 11.25,
+     "open_loop": 10.0,
+     "share": 8.0,
+     "save": 7.0,
+     "length": 10.0,
+     "emotion": 0.0,
+     "cta_friction": 3.0
+    },
+    "frame1_text": "MYTH? CHICKEN SOUP",
+    "frame1_words": 3,
+    "ig_trial_reel": true,
+    "trial_note": "VIRALITY_SYSTEM.md §5: every IG reel in a page's first 14 days goes out as a Trial Reel (non-followers first; share to followers if it beats the page median at 24 h). Professional account required; if the toggle is missing, post normally and log it."
+   },
    "ai_label_reminder": "Turn ON the AI label on BOTH posts (IG 'AI info', FB 'AI info'); the burned-in 'AI character' tag and the caption footer stay as rendered.",
    "fallback_window": "If a file is not QA-passed 30 min before its slot, do not rush it: post it at tomorrow's 08:30 IG / 08:00 FB slot instead.",
    "validation": {
     "build_content_rules": "pass",
+    "virality_gate": "top-decile",
     "compliance_pass1": "pass",
     "compliance_pass2": "pass",
     "first_comment_scan": "pass",

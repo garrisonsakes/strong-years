@@ -11,7 +11,9 @@ score(snapshots_for_post, baseline_lookup, cfg) -> post_scores row:
     PROMISING  score >= 0.75 at >= 1 h
     LOSER      score <= -1.0 at >= 24 h
     NORMAL     otherwise (including anything that is too young or too small to call)
-  reward = clip(w_v * Phi(score / scale) + w_c * conversion_norm, 0, 1)      the allocator's Bernoulli reward
+  reward = clip(w_ss * Phi(z_share_save / scale) + w_v * Phi(score / scale) + w_c * conversion_norm, 0, 1)
+           the allocator's Bernoulli reward; (shares + saves) per view is the primary term (VIRALITY_SYSTEM.md §4),
+           falling back to the velocity term when the platform reports neither shares nor saves
            (conversion_norm = 0 when no rollups are known: no evidence, no credit)
 """
 from __future__ import annotations
@@ -59,13 +61,17 @@ def conversion_norm(snapshot: dict, cfg: dict) -> float | None:
                0.4 * min(1.0, mem / float(r["target_members_per_1k"])))
 
 
-def reward(score: float | None, conv: float | None, cfg: dict) -> float:
+def reward(score: float | None, conv: float | None, cfg: dict, share_save_z: float | None = None) -> float:
     """Bandit reward in [0, 1]. Unknown velocity counts as baseline (0.5); unknown conversions earn no conversion
     credit (0), so a post with measured conversions is never ranked below one whose rollups are missing. The n8n
     normalize node therefore always sends optins / buyers / members (0 when none) once the DB feeds exist."""
     r = cfg["scoring"]["reward"]
     vel = phi(score / float(r["score_scale"])) if score is not None else 0.5
-    return max(0.0, min(1.0, float(r["velocity_weight"]) * vel + float(r["conversion_weight"]) * (conv or 0.0)))
+    # primary reward: (shares + saves) per view; unknown counts as baseline (0.5), like velocity
+    ss = phi(share_save_z / float(r["score_scale"])) if share_save_z is not None else vel
+    v = float(r.get("share_save_weight", 0.0)) * ss + float(r["velocity_weight"]) * vel + \
+        float(r["conversion_weight"]) * (conv or 0.0)
+    return max(0.0, min(1.0, v)) if math.isfinite(v) else 0.5
 
 
 def classify(score: float | None, horizon_h: int, views: int | None, n_components: int, cfg: dict) -> tuple[str, list[str]]:
@@ -125,8 +131,17 @@ def score_post(snapshots: list[dict], baseline_lookup: dict[tuple, dict], cfg: d
             "components_used": latest["components_used"], "views": last_snap.get("views"),
             "class": cls, "reasons": reasons, "breakout": any("breakout" in r for r in reasons),
             "conversion_norm": None if conv is None else round(conv, 4),
-            "reward": round(reward(latest["score"], conv, cfg), 4),
+            "reward": round(reward(latest["score"], conv, cfg, latest["z"].get("share_save_rate")), 4),
+            "share_save_z": latest["z"].get("share_save_rate"),
+            "retention_proxy": _retention_proxy(snaps),
             "save_rate_z": latest["z"].get("save_rate"), "history": per_h, "config_version": cfg.get("version")}
+
+
+def _retention_proxy(snaps: list[dict]) -> float | None:
+    """Mean watch-through at the 1 h and 3 h horizons (VIRALITY_SYSTEM.md §4); None when the platform gave none."""
+    vals = [B.retention_value(s) for s in snaps if int(s.get("horizon_h") or 0) in B.RETENTION_HORIZONS]
+    vals = [v for v in vals if v is not None]
+    return round(sum(vals) / len(vals), 4) if vals else None
 
 
 def score_many(snapshots: list[dict], baselines: list[dict], cfg: dict | None = None) -> list[dict]:

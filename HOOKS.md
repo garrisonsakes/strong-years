@@ -65,7 +65,7 @@ Why these 30: each one is (a) a participation hook (the viewer does something in
 | 19 | H181 | The soup I make when he's sore from training. Thirty grams of protein. | KIT | P11 | SOUP | SK | E28 |
 | 20 | H182 | This is 30 grams of protein for breakfast at 76. | KIT | P13 | SOUP | SK | E28 |
 | 21 | H183 | If you eat two kiwis every day, here's what one small study found. | KIT | P12 | GUT | SK | E25 |
-| 22 | H211 | He flexes in the microwave. So I made a sign. | CPL | P17 | STRONG | CS | E21 |
+| 22 | H211 | He flexes in the microwave every morning at seventy-four. So I made a sign. | CPL | P17 | STRONG | CS | E21 |
 | 23 | H212 | Fifty years married. I still beat him at balance. | CPL | P17 | BALANCE | CS | E09 |
 | 24 | H213 | Our daughter called. She thinks we train too much. | CPL | P17 | FAMILY | CS | E12 |
 | 25 | H241 | Nobody is coming to save your knees. You are. | BLT | P16 | KNEES | SY | E01 |
@@ -306,7 +306,7 @@ Why these 30: each one is (a) a participation hook (the viewer does something in
 | H361 |  | Three knee questions from you. Three blunt answers from me. | P18 | F26 | KNEES | SY | S | E03,E41 |
 | H392 |  | If you brush your teeth every night, add ten slow heel raises at the sink. | P02 | F32 | STRONG | CY | C | E47 |
 | H396 |  | If you sit on the floor every evening for the news, getting up stops being scary. | P01 | F17 | WAITLIST | CY | C | E45 |
-| H398 |  | Not a doctor, not a real person. An AI welder. Here's what's real. | P20 | F08 | WAITLIST | CY | C |  |
+| H398 |  | Not a doctor, not a real person. A seventy-four-year-old AI welder. Here's what's real. | P20 | F08 | WAITLIST | CY | C |  |
 | H413 |  | Sunday video call with your mom? Do the chair test together. She'll say she's fine. | P01 | F33 | TEST | CS | D | E49 |
 
 ---
@@ -360,7 +360,7 @@ Why these 30: each one is (a) a participation hook (the viewer does something in
 | H182 | ★ | This is 30 grams of protein for breakfast at 76. | P13 | F18 | SOUP | SK | S | E28 |
 | H183 | ★ | If you eat two kiwis every day, here's what one small study found. | P12 | F06 | GUT | SK | S | E25 |
 | H184 |  | My mother's easy kimchi. No special jar. Ten minutes of work. | P11 | F31 | GUT | SK | S | E26 |
-| H185 |  | Seaweed soup. The Korean birthday soup. Everyone in this house gets it. | P11 | F31 | SOUP | SK | S | E28 |
+| H185 |  | Seaweed soup. The Korean birthday soup, thirty grams of protein a bowl. Watch. | P11 | F31 | SOUP | SK | S | E28 |
 | H186 |  | Eggs, tofu, beans, fish. How I get 90 grams into a 74-year-old. | P13 | F18 | SOUP | SK | S | E28 |
 | H187 |  | Doenjang stew for a cold night. It's salty, so here's the trick. | P11 | F31 | SOUP | SK | S | E24 |
 | H188 |  | If you eat five prunes every day for a year, here's what one bone study found. | P12 | F06 | GUT | SK | S | E27 |
@@ -395,9 +395,9 @@ Why these 30: each one is (a) a participation hook (the viewer does something in
 | H353 |  | If you buy the little fruit yogurts every week, flip one. Read one number. | P13 | F18 | SOUP | SK | S | E28 |
 | H354 |  | Popcorn is not junk, not a cheat. Three cups air-popped is a whole grain. | P10 | F06 | GUT | SK | S | E24 |
 | H363 |  | If you eat crackers and tea every lunch, look at this plate. Three grams. | P13 | F10 | SOUP | SY | S | E28 |
-| H367 |  | Jajangmyeon Sunday. He cooked. I brought the kimchi and a cucumber. | P17 | F31 | GUT | CS | D | E26 |
+| H367 |  | Jajangmyeon Sunday. He cooked. I brought the kimchi. Watch what it does that the sauce can't. | P17 | F31 | GUT | CS | D | E26 |
 | H400 |  | If you eat two green kiwis every morning, here's what a real study found. | P10 | F06 | GUT | SK | S | E25 |
-| H403 |  | One can of chickpeas. Three meals. Here's the fiber math, out loud. | P10 | F18 | WAITLIST | SK | S | E24,E52 |
+| H403 |  | One can of chickpeas. Three meals. Watch the fiber math, out loud. Grams, not vibes. | P10 | F18 | WAITLIST | SK | S | E24,E52 |
 | H406 |  | Firm tofu, crumbled. Watch it turn into breakfast with thirty grams of protein. | P11 | F31 | SOUP | SK | S | E28,E52 |
 
 ---
@@ -406,7 +406,7 @@ Why these 30: each one is (a) a participation hook (the viewer does something in
 
 | ID | ★ | Hook | Pillar | Fmt | CTA | Page | Spk | Ev |
 |---|---|---|---|---|---|---|---|---|
-| H211 | ★ | He flexes in the microwave. So I made a sign. | P17 | F08 | STRONG | CS | D | E21 |
+| H211 | ★ | He flexes in the microwave every morning at seventy-four. So I made a sign. | P17 | F08 | STRONG | CS | D | E21 |
 | H212 | ★ | Fifty years married. I still beat him at balance. | P17 | F08 | BALANCE | CS | D | E09 |
 | H213 | ★ | Our daughter called. She thinks we train too much. | P17 | F33 | FAMILY | CS | D | E12 |
 | H214 |  | He says he stretched. The kettlebell is still hidden. | P17 | F08 | BACK | CS | D | E30 |
@@ -427,21 +427,21 @@ Why these 30: each one is (a) a participation hook (the viewer does something in
 | H229 |  | A couples workout where nobody gets divorced. | P17 | F34 | STRONG | CS | D | E21 |
 | H230 |  | Our son tried to help his father carry the couch. It went badly for the son. | P17 | F08 | STRONG | CS | D | E04 |
 | H231 |  | She's older. So she's right. That's the rule. | P17 | F08 | BEGIN | CS | D | E37 |
-| H232 |  | He snores. I found a study. The study says: see the doctor. | P17 | F08 | SLEEP | CS | D | E43 |
+| H232 |  | He snores. I found a study, one page. It says: see the doctor. | P17 | F08 | SLEEP | CS | D | E43 |
 | H233 |  | We tried a TikTok dance. The cat left. | P17 | F08 | BEGIN | CS | D | E37 |
 | H234 |  | He ate twelve dumplings and called it a protein meal. Let's count. | P17 | F18 | SOUP | CS | D | E28 |
 | H235 |  | Fiftieth anniversary in 23 days. She still says the dumplings were over-salted. | P17 | F27 | BEGIN | CS | D | E37 |
 | H236 |  | "Show me the study." He pulled it out of his shorts. | P17 | F28 | STRONG | CS | D | E01 |
 | H237 |  | When we fight, one of us says "exhale." Here's why. | P17 | F21 | BREATH | CS | D | E18 |
 | H238 |  | Things he does that I'll never admit are sweet. | P17 | F35 | BEGIN | CS | D | E37 |
-| H239 |  | We're AI. The marriage is fictional. The advice isn't. | P20 | F08 | BEGIN | CS | D | E37 |
+| H239 |  | We're AI. The marriage is fictional. The advice isn't. Watch the three real tests. | P20 | F08 | BEGIN | CS | D | E37 |
 | H240 |  | The one habit that kept us from killing each other for 50 years. | P17 | F35 | BEGIN | CS | D | E37 |
 | H324 |  | Cooler full of ice. Frank carries it one way. I carry it another. Both count. | P04 | F25 | STRONG | ST | C | E01 |
 | H336 |  | If you stand heel-to-toe every time you do the dishes, that's balance practice every night. | P03 | F32 | BALANCE | MB | C | E12 |
 | H365 |  | Walk backwards along the counter. Ten steps. Loser does the dishes. | P17 | F34 | BALANCE | CS | D | E13 |
 | H366 |  | Forty-one degrees in the garage. He's in the tank top again. | P17 | F08 | BACK | CS | D | E02 |
 | H368 |  | Toy truck under the couch. Who gets down, grabs it, and gets back up first? | P17 | F34 | TEST | CS | D | E45 |
-| H369 |  | Printer's out of ink again. Thirty pages. One study. About friends. | P17 | F28 | BEGIN | CS | D | E37 |
+| H369 |  | Printer's out of ink again. Thirty pages, one study, about your friends, not your pills. | P17 | F28 | BEGIN | CS | D | E37 |
 | H370 |  | Frank's porch steps. Going down is the hard part. Watch his knee. | P17 | F25 | KNEES | CS | D | E01 |
 | H371 |  | Hips. Now. I don't care that the cat is on the mat. | P17 | F08 | BACK | CS | D | E30,E41 |
 | H372 |  | 1976. He carried me over the threshold. He still wants to. Absolutely not. | P17 | F27 | STRONG | CS | D | E01 |
@@ -463,7 +463,7 @@ Why these 30: each one is (a) a participation hook (the viewer does something in
 | H242 | ★ | Your kids don't need your money. They need you to be able to get up. | P16 | F07 | FAMILY | SY | S | E08 |
 | H243 | ★ | If a video says 'instantly,' close it. Not a study, not a plan. | P15 | F07 | BEGIN | SK | S | E20 |
 | H244 |  | Stop saying "I'm fine." You're not fine. You're untrained. | P16 | F07 | STRONG | SY | S | E01 |
-| H245 |  | Loneliness is a health problem. Call someone. Today. | P16 | F07 | BEGIN | SY | S | E37 |
+| H245 |  | Loneliness is a health problem, and here's the study that says so. Call someone. | P16 | F07 | BEGIN | SY | S | E37 |
 | H246 |  | Tea and toast isn't breakfast. It's a hug. | P13 | F18 | SOUP | SK | S | E28 |
 | H247 |  | You're not too old to make friends. You're too comfortable. | P16 | F07 | BEGIN | SY | S | E37 |
 | H248 |  | He didn't leave the dishes because he's tired. He left them because you always do them. | P16 | F35 | BEGIN | SY | S | E37 |
@@ -561,7 +561,7 @@ Why these 30: each one is (a) a participation hook (the viewer does something in
 | H383 |  | Cancel button. I made them put it where you can find it. Watch. | P20 | F07 | JOIN | SK | S |  |
 | H384 |  | Rules of my kitchen page. Four of them. Read before you follow. | P20 | F39 | BEGIN | SK | S |  |
 | H385 |  | Fifty years married. Fictional. Founding members: real. Doors are open. | P20 | F38 | JOIN | CS | D |  |
-| H386 |  | Before you follow us, or join us: we're AI. | P20 | F39 | JOIN | CS | D |  |
+| H386 |  | Before you follow us, or join us: we're AI. Not real, not doctors. Watch what's real. | P20 | F39 | JOIN | CS | D |  |
 | H387 |  | Two chairs. Seven days. Ten minutes. Loser does dishes all week. | P19 | F11 | STRONG | CS | D | E01 |
 | H388 |  | To the kids who call on Sundays: here's a gift that shows up every morning. | P16 | F33 | FAMILY | CS | D |  |
 | H389 |  | 'Founding price, locked.' Locked how? Show me the terms. | P20 | F38 | JOIN | CS | D |  |

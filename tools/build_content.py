@@ -96,6 +96,38 @@ PROVEN = ("IF_EVERY", "NOT_X", "MYTH", "WATCH")   # POSTDB_FINDINGS §3/§8 rule
 PROVEN_MIN_SHARE = 0.45
 
 
+# ---------------- virality gate (VIRALITY_SYSTEM.md §2; rubric code in tools/virality.py) ----------------
+def _load_virality():
+    import importlib.util as _ilu
+    spec = _ilu.spec_from_file_location("cs_virality", os.path.join(ROOT, "tools", "virality.py"))
+    mod = _ilu.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+VIR = _load_virality()
+VIRALITY_HARD_FROM = V2_FROM      # S61+ (and every wave/new script) fails the build below VIR.THRESHOLD
+VIRALITY_OFFER_FLOOR = 50         # launch/offer scripts (launch=True) sell to warm viewers; lower reach bar, still gated
+VIRALITY_LEGACY_GATE = "REWRITE"  # S01–S60 below threshold: kept in the library, never scheduled, listed for rewrite
+
+
+def virality_gate(s):
+    """Score one script and return (problems, gate). gate is 'PASS', 'OFFER' (launch script above the offer floor)
+    or 'REWRITE' (a legacy S01–S60 script below threshold: excluded from every calendar/plan queue)."""
+    v = VIR.score(s)
+    s["_virality"] = v
+    n = int(s["id"][1:]) if s["id"][1:].isdigit() else 10**6
+    floor = VIRALITY_OFFER_FLOOR if s.get("launch") else VIR.THRESHOLD
+    if v["score"] >= floor:
+        v["gate"] = "PASS" if v["score"] >= VIR.THRESHOLD else "OFFER"
+        return [], v["gate"]
+    if n >= VIRALITY_HARD_FROM:
+        v["gate"] = "FAIL"
+        return [f"{s['id']}: virality {v['score']} < {floor} ({v['hook_class']}): " + "; ".join(v["why"])], "FAIL"
+    v["gate"] = VIRALITY_LEGACY_GATE
+    return [], VIRALITY_LEGACY_GATE
+
+
 def proven_grammar(hook, s):
     """Classify the spoken hook against the proven grammars, from the text itself (not from tags).
     IF_EVERY: 'If you [habit] every [time], [change]'. NOT_X: 'not X, not Y'. MYTH: a myth-bust hook (P15 or MB-EX script)
@@ -240,6 +272,7 @@ def validate(scripts, hooks, ev_ids):
             for k in ("IF_EVERY", "WATCH"):  # grammar tags must match what the hook text actually does
                 if (k in s["grammar"]) != (k in s["_proven"]):
                     problems.append(f"{sid}: grammar tag {k} doesn't match the hook text")
+        problems.extend(virality_gate(s)[0])
     problems.extend(validate_uniqueness(scripts))
     share = sum(1 for s in scripts if s["_proven"]) / len(scripts)
     if share < PROVEN_MIN_SHARE:
@@ -465,6 +498,10 @@ def scripts_md(scripts, hooks):
         L.append(f"\n---\n\n## {s['id']}: {s['title']}")
         L.append(f"**Page** {s['page']} · **Speaker** {s['speaker']} · **Format** {s['format']} · **Pillar** {s['pillar']} ({PILLAR[s['pillar']]}) · **Hook** {s['hook_id']} · **Target** {s['secs']} s · **Spoken words** {s['_wc']} · **CTA** `{s['cta']}` → {CTA_DELIV[s['cta']]}\n")
         L.append(f"**Hook line:** \"{s['beats'][0][2]}\"\n")
+        if s.get("_virality"):
+            v = s["_virality"]
+            L.append(f"**Virality (VIRALITY_SYSTEM.md §2):** {v['score']} · gate {v.get('gate', '')} · hook class {v['hook_class']}"
+                     + (" · needs: " + "; ".join(v["why"]) if v["why"] else "") + "\n")
         if int(s["id"][1:]) >= V2_FROM:
             meta = [f"**Grammar:** {', '.join(s['grammar'])}", f"**Frame-1 prop:** {s['prop']}"]
             if s.get("series"): meta.append(f"**Series:** {s['series']}")
@@ -507,7 +544,12 @@ def to_schema(s):
         "caption": s["caption"], "hashtags": {"ig": s["ig"], "tt": s["tt"], "yt_title": s["yt"]},
         "evidence": s["ev"], "evidence_note": s["note"], "running_bit": s.get("bit", ""), "wink": s.get("wink", False),
         "myth_bust": s.get("myth", False), "music": s["music"], "thumbnail_text": s["thumb"],
+        "demo": bool(s.get("demo")), "hook_object": s.get("obj") or "",   # virality rubric inputs (tools/virality.py)
     }
+    if s.get("_virality"):  # VIRALITY_SYSTEM.md §2: score, gate and the rubric parts (tools/virality.py)
+        v = s["_virality"]
+        out["virality"] = {"score": v["score"], "gate": v.get("gate", "PASS" if v["pass"] else "FAIL"), "top_decile": v["top_decile"],
+                           "hook_class": v["hook_class"], "parts": v["parts"], "why": v["why"]}
     if int(s["id"][1:]) >= V2_FROM:  # optional v2 keys (additive; the §12.4 fields above are unchanged)
         out.update({"hook_grammar": s["grammar"], "series": s.get("series", ""), "launch_week": bool(s.get("launch")),
                     "prop": s["prop"], "skip_line": s["skip"], "hook_category": s["hcat"]})
@@ -566,7 +608,8 @@ def build_calendar(hooks, scripts):
     launch_handles = {"@changyin", "@sunyoon.kitchen", "@changandsun"}
     # S61+ scripts written for the day-15/22 pages stay on those pages (CONTENT_SYSTEM §8.2); only S01–S60 keep the old mapping
     spool = {p: [s for s in scripts if page_map[s["page"]] == p and s["id"] not in fixed_ids and int(s["id"][1:]) < RUNWAY_FROM
-                 and (int(s["id"][1:]) < V2_FROM or s["page"] in launch_handles)] for p in LAUNCH_PAGES}
+                 and (int(s["id"][1:]) < V2_FROM or s["page"] in launch_handles)
+                 and (s.get("_virality") or {}).get("gate") != VIRALITY_LEGACY_GATE] for p in LAUNCH_PAGES}
     used, mix = set(), {p: collections.Counter() for p in LAUNCH_PAGES}
     rows = []
     def take_script(p, cats):
@@ -869,6 +912,18 @@ def coverage_md(scripts, M):
     L.append("| Proven share by page | " + " | ".join(f"{p}" for p in ["@changyin", "@sunyoon.kitchen", "@changandsun", "@changyin.strength", "@changyin.mobility", "@sunyoon"]) + " |\n|---|---|---|---|---|---|---|")
     L.append("| Scripts | " + " | ".join(f"{sum(1 for s in prov if s['page']==p)}/{sum(1 for s in scripts if s['page']==p)}" for p in ["@changyin", "@sunyoon.kitchen", "@changandsun", "@changyin.strength", "@changyin.mobility", "@sunyoon"]) + " |\n")
     L.append("Hashtags: no script carries a condition hashtag (validator rule `CONDITION_HASHTAG`, AUDIT_BUSINESS F15).\n")
+    L.append("## Virality gate (VIRALITY_SYSTEM.md §2, `tools/virality.py`)\n")
+    vs = [s["_virality"] for s in scripts if s.get("_virality")]
+    L.append(VIR.report(vs) + f". Hard gate (build fails) from S{VIRALITY_HARD_FROM}; launch/offer scripts need ≥{VIRALITY_OFFER_FLOOR}; "
+             f"S01–S{VIRALITY_HARD_FROM - 1} below {VIR.THRESHOLD} are marked `REWRITE` and never scheduled.\n")
+    L.append("| Band | Scripts |\n|---|---|")
+    for name, lo, hi in (("top decile ≥85", 85, 1000), ("70–84", 70, 85), ("60–69 (pass)", 60, 70), ("below 60", 0, 60)):
+        ids = [v["id"] for v in vs if lo <= v["score"] < hi]
+        L.append(f"| {name} | {len(ids)}: {', '.join(ids)} |")
+    rw = [v for v in vs if v.get("gate") == VIRALITY_LEGACY_GATE]
+    L.append(f"\n**REWRITE backlog (legacy, unscheduled):** {len(rw)}: " + ", ".join(f"{v['id']} ({v['score']})" for v in rw) + "\n")
+    hc = collections.Counter(v["hook_class"] for v in vs)
+    L.append("Hook classes: " + " · ".join(f"{k} {n}" for k, n in hc.most_common()) + ".\n")
     L.append("## Summary\n")
     new = [s for s in scripts if int(s["id"][1:]) >= V2_FROM]
     L.append(f"- Organic scripts: **{len(scripts)}** ({len(scripts) - len(new)} original + {len(new)} expansion, of which {sum(1 for s in new if s.get('launch'))} are founding-launch-week).")
@@ -922,6 +977,323 @@ def runway_md(rw, hooks):
     L.append("- **Placeholders:** `{{EBOOK_PRICE}}` (live ebook cell: $7 / $12 / $15, default $12), `{{FOUNDING_PRICE}}` ($25 default), `{{DOMAIN}}`. One value per render, filled by the pipeline from live config.\n")
     L.append("## Index\n" + body)
     return "\n".join(L) + "\n"
+
+
+# ---------------- Wave 2: GEN scripts for the posting plan (data/content/scripts_wave2.py) ----------------
+# One source script per plan uniqueness_group that was "GEN-needed" from D−7 to D+7. Validated with the library's
+# rules plus plan-match, render-lane, running-bit rotation and 7-word-shingle uniqueness, then rendered to
+# WAVE2_SCRIPTS.md and data/content/wave2_scripts.json. tools/assign_scripts.py writes the ids into the plan CSV.
+WAVE2_FILE = "scripts_wave2"
+PLAN_CSV = os.path.join(DATA, "posting_plan_90d.csv")
+CALL_SHEET = os.path.join(ROOT, "production", "performer", "call_sheet.csv")
+WAVE2_D_FROM, WAVE2_D_TO = -7, 7
+WAVE2_TIMES = {6: ["0-3", "3-11", "11-19", "19-27", "27-35", "35-42"],
+               7: ["0-3", "3-10", "10-17", "17-24", "24-31", "31-37", "37-42"],
+               8: ["0-3", "3-9", "9-15", "15-21", "21-27", "27-32", "32-37", "37-42"]}
+SPEAKER_PAGE = {"CHANG": "@changyin", "SUN": "@sunyoon.kitchen", "DUO": "@changandsun"}
+# CHARACTERS.md §7: the 24 running bits, each with the words that must show up when it's used (spoken, on-screen or shot)
+BITS = {1: ("NO MIRROR FLEXING", r"mirror flexing"), 2: ("I'm older, so I'm right", r"older,? so (i'm|she's|i am|she is) (also )?right"),
+        3: ("Hips. Now.", r"hips\. now"), 4: ("The study card from the shorts pocket", r"show me the study|study card from|shorts pocket"),
+        5: ("Dumpling count", r"dumpling"), 6: ("The tank top in January", r"tank top"), 7: ("Seven out of ten", r"seven out of ten|7/10"),
+        8: ("Mandu the cat", r"\bmandu\b"), 9: ("Fridge balance leaderboard", r"leaderboard"), 10: ("Short version:", r"short version"),
+        11: ("The apron", r"\bapron\b"), 12: ("Frank's excuses", r"\bfrank\b"), 13: ("The welding metaphors", r"\bweld"),
+        14: ("Sun's visor", r"\bvisor\b"), 15: ("Printer ink", r"\bprinter\b"), 16: ("Aigo", r"\baigo\b"),
+        17: ("The AI winks", r"\b(i'm|we're|he's|she's) (an )?ai\b|\bpixels?\b|\brender\b|\b4k\b"), 18: ("The anniversary countdown", r"anniversary"),
+        19: ("Jajangmyeon Sunday", r"jajangmyeon"), 20: ("The hidden kettlebell", r"\bhid(e|es|den)?\b[^.]{0,60}kettlebell|kettlebell[^.]{0,60}\bhid(e|es|den)?\b"),
+        21: ("Phone calls from Mina", r"\bmina\b"), 22: ("The chair called Coach", r"\bcoach\b"), 23: ("Write this down", r"write this down"),
+        24: ("Old photos", r"\bphoto\b|\b1976\b")}
+BIT_WINDOW_DAYS = 3        # the same bit never twice on one page inside any 3-day window
+SHINGLE_N = 7
+OFFER_AI_LINE = re.compile(r"\b(i'm|i am|we're|we are) (an )?ai\b|\bai (coach|characters?)\b", re.I)
+PLAN_GRAMMARS = {"OBJ3", "IF_EVERY", "MYTH_NOT", "WATCH", "TEST_NOW", "SHARE", "DEMO"}
+
+
+def load_wave2():
+    spec = importlib.util.spec_from_file_location(WAVE2_FILE, os.path.join(DATA, WAVE2_FILE + ".py"))
+    m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
+    out = []
+    for s in m.SCRIPTS:
+        s = dict(s)
+        if s["beats"] and len(s["beats"][0]) == 4:   # (speaker, spoken, on-screen, shot) → add time codes from the beat count
+            s["beats"] = [(t,) + tuple(b) for t, b in zip(WAVE2_TIMES[len(s["beats"])], s["beats"])]
+        s.setdefault("secs", 42); s.setdefault("wink", False); s.setdefault("series", "")
+        s.setdefault("hook_id", "HW" + s["id"][1:])
+        s["launch"] = s["cta"] in ("BOOK", "JOIN")
+        out.append(s)
+    return out
+
+
+def load_plan_groups(path=PLAN_CSV):
+    groups = collections.OrderedDict()
+    if not os.path.exists(path):
+        return groups
+    for r in csv.DictReader(open(path, newline="", encoding="utf-8")):
+        groups.setdefault(r["uniqueness_group"], []).append(r)
+    return groups
+
+
+def shingles(text, n=SHINGLE_N):
+    w = [t.strip("'") for t in re.findall(r"[a-z0-9']+", text.lower().replace("\u2019", "'"))]
+    w = [t for t in w if t]
+    return {" ".join(w[i:i + n]) for i in range(len(w) - n + 1)}
+
+
+def plan_grammar_ok(g, hook, s):
+    h = hook.lower().replace("’", "'")
+    prov = proven_grammar(hook, s)
+    if g == "IF_EVERY": return "IF_EVERY" in prov
+    if g == "WATCH": return "WATCH" in prov
+    if g == "MYTH_NOT": return "NOT_X" in prov or "MYTH" in prov
+    if g == "OBJ3":
+        first = [re.sub(r"[^\w'-]", "", w).lower().strip("'") for w in hook.split()[:3]]
+        return any(w.startswith(s.get("obj", "@@").lower()) for w in first)
+    if g == "TEST_NOW": return bool(re.search(r"\b(right now|now|today|seconds?|count|score yourself|try it)\b", h))
+    if g == "SHARE": return bool(re.search(r"\b(send|share|tag|forward)\b", h))
+    if g == "DEMO": return bool(s.get("demo", True)) and bool(re.search(r"\b(watch|look|here's|this is|like this|see)\b", h))
+    return False
+
+
+def validate_wave2(w2, library, hooks, ev_ids, plan_groups):
+    P = []
+    hook_ids = {h["id"] for h in hooks}
+    clips = {r["id"] for r in csv.DictReader(open(CALL_SHEET, newline="", encoding="utf-8"))} if os.path.exists(CALL_SHEET) else set()
+    ids = [s["id"] for s in w2]
+    if len(set(ids)) != len(ids): P.append("wave2: duplicate script ids")
+    lib_ids = {s["id"] for s in library}
+    for s in w2:
+        if s["id"] in lib_ids: P.append(f"{s['id']}: wave2 id collides with the library")
+    groups_seen = collections.Counter(s.get("group") for s in w2)
+    for g, n in groups_seen.items():
+        if n > 1: P.append(f"wave2: group {g} has {n} scripts (one source script per uniqueness group)")
+    # every GEN-needed group in the D−7…D+7 window is covered
+    for g, rows in plan_groups.items():
+        d = int(rows[0]["day_index"])
+        if WAVE2_D_FROM <= d <= WAVE2_D_TO and any(r["script_id"] == "GEN-needed" for r in rows) and g not in groups_seen:
+            P.append(f"WARN wave2: plan group {g} (D{d:+d}) is GEN-needed but has no wave2 script yet")
+    lib_sh = set()
+    for s in library:
+        lib_sh |= shingles(" ".join(b[2] for b in s["beats"]))
+    seen_sh = {}
+    seen_line = {re.sub(r"[^a-z0-9 ]", "", s["beats"][0][2].lower()): s["id"] for s in library}
+    seen_sp = {}
+    for s in library:
+        if s.get("prop"): seen_sp.setdefault((s["beats"][0][4].split("|")[0].strip(), s["prop"].lower()), (s["id"], s["page"]))
+    bit_use = collections.defaultdict(list)   # page -> [(day, bit, id)]
+    for s in w2:
+        sid = s["id"]
+        rows = plan_groups.get(s.get("group"), [])
+        if not rows:
+            P.append(f"{sid}: group {s.get('group')} not in the posting plan"); continue
+        r0 = next((r for r in rows if r["render_lane"] != "carousel_text"), rows[0])
+        day = int(r0["day_index"])
+        s["_day"], s["_date"] = day, r0["date"]
+        for r in rows:
+            if r["script_id"] not in ("GEN-needed", sid):
+                P.append(f"{sid}: plan rows of {s['group']} already carry script {r['script_id']}")
+                break
+        want = {"page": r0["page"], "pillar": r0["pillar"], "format": r0["format"], "speaker": r0["character"],
+                "lane": r0["render_lane"], "cta": r0["cta_keyword"]}
+        for k, v in want.items():
+            if s.get(k) != v:
+                P.append(f"{sid}: {k} {s.get(k)!r} doesn't match the plan row ({v!r})")
+        if SPEAKER_PAGE.get(s["speaker"]) != s["page"]:
+            P.append(f"{sid}: speaker {s['speaker']} on {s['page']}")
+        cta_type = {"BOOK": "book", "JOIN": "join", "WAITLIST": "waitlist"}.get(s["cta"], "none")
+        if r0["cta_type"] != cta_type:
+            P.append(f"{sid}: CTA type {cta_type} doesn't match the plan ({r0['cta_type']})")
+        if not s.get("grammar") or s["grammar"][0] != r0["hook_grammar"]:
+            P.append(f"{sid}: grammar[0] must be the plan's hook grammar {r0['hook_grammar']}")
+        spoken = " ".join(b[2] for b in s["beats"] if b[2])
+        ost = " ".join(b[3] for b in s["beats"])
+        shots = " ".join(b[4] for b in s["beats"])
+        s["_spoken"], s["_wc"] = spoken, words(spoken)
+        hook = s["beats"][0][2]
+        # --- library rules (validate + validate_v2 + runway/launch offer rules)
+        if s["hook_id"] in hook_ids: P.append(f"{sid}: hook id {s['hook_id']} collides with the hook bank")
+        if s["cta"] not in CTA_OK: P.append(f"{sid}: CTA {s['cta']} not in keyword map")
+        if f"Comment {s['cta']}" not in " ".join(b[2] for b in s["beats"][-2:]): P.append(f"{sid}: last beats don't say 'Comment {s['cta']}'")
+        if not s["caption"].startswith(f"Comment {s['cta']}"): P.append(f"{sid}: caption line 1 must start with 'Comment {s['cta']}'")
+        for e in s["ev"]:
+            if e not in ev_ids: P.append(f"{sid}: evidence {e} not in EVIDENCE.md")
+        if not s["ev"] and s["pillar"] not in ("P16", "P17", "P20"): P.append(f"{sid}: no evidence on a health pillar")
+        if s["move"]:
+            if not s.get("regression"): P.append(f"{sid}: movement without regression")
+            if SUPPORT_TAGS & set(s["tags"]) and not re.search(r"counter|chair|wall|rail|sink|bed|sofa|headboard|bench", spoken + s["safety"], re.I):
+                P.append(f"{sid}: movement without support cue")
+        text = (spoken + " " + ost + " " + s["caption"]).lower()
+        for pat in BANNED:
+            for m, vtext in tn_finditer(pat, text):
+                ctx = vtext[max(0, m.start() - 40): m.end() + 20].lower()
+                if any(re.search(n, ctx) for n in NEGATION_OK): continue
+                if s.get("myth") and not any(re.search(h, m.group(0)) for h in HARD_BLOCK): continue
+                P.append(f"{sid}: banned pattern '{m.group(0)}' … {ctx!r}")
+        if re.search(r"\bSun (Yin|Chang)\b|\bMrs\.? (Chang|Yin)\b", spoken + ost + s["caption"] + s["title"] + s["yt"]):
+            P.append(f"{sid}: Sun Yoon keeps her own surname")
+        for tag in s["ig"] + s["tt"]:
+            if CONDITION_HASHTAG.search(tag): P.append(f"{sid}: condition hashtag {tag}")
+        s["_proven"] = proven_grammar(hook, s)
+        s["grammar_v2"] = s["grammar"]
+        P.extend(validate_v2_core(s, ost))
+        P.extend(virality_gate(s)[0])   # VIRALITY_SYSTEM.md §2: every generated script clears the same bar
+        if not plan_grammar_ok(s["grammar"][0], hook, s):
+            P.append(f"{sid}: hook doesn't do the plan grammar {s['grammar'][0]}: {hook!r}")
+        for k in ("IF_EVERY", "WATCH"):
+            if (k in s["grammar"]) != (k in s["_proven"]):
+                P.append(f"{sid}: grammar tag {k} doesn't match the hook text")
+        if set(s["grammar"]) - GRAMMARS - PLAN_GRAMMARS: P.append(f"{sid}: unknown grammar tag {set(s['grammar']) - GRAMMARS - PLAN_GRAMMARS}")
+        everything = spoken + " " + ost + " " + s["caption"]
+        if day < 0:   # runway: checkout closed
+            if "$" in everything or "{{" in everything: P.append(f"{sid}: runway script states a price or offer placeholder")
+            for m in re.finditer(r"\b(membership|subscri\w*|founding)\b", everything, re.I):
+                P.append(f"{sid}: runway script mentions '{m.group(0)}'")
+            if s["cta"] in ("BOOK", "JOIN"): P.append(f"{sid}: offer CTA during the runway")
+        elif s["cta"] == "WAITLIST":
+            P.append(f"{sid}: WAITLIST is a runway-only keyword")
+        if s["cta"] == "WAITLIST" and ("free" not in s["caption"].lower() or not re.search(r"\bfree\b", spoken, re.I)):
+            P.append(f"{sid}: WAITLIST script must say it's free (spoken and caption)")
+        if s["cta"] == "BOOK":
+            for need in BOOK_TERMS:
+                if need not in s["caption"]: P.append(f"{sid}: BOOK caption missing '{need}'")
+            if "{{EBOOK_PRICE}}" not in spoken + ost or "one-time" not in spoken + ost:
+                P.append(f"{sid}: BOOK spoken/on-screen text must state {{{{EBOOK_PRICE}}}} and 'one-time'")
+        if s["cta"] in ("BOOK", "JOIN") and not OFFER_AI_LINE.search(spoken + " " + ost):
+            P.append(f"{sid}: offer script needs a spoken or on-screen AI disclosure line")
+        cap_wo = s["caption"].replace("not a subscription", "")
+        so_wo = re.sub(r"not a subscription", "", spoken + " " + ost, flags=re.I)
+        if day >= 0 and (MEMBER_MENTION.search(cap_wo) or MEMBER_MENTION.search(so_wo)):
+            for need in MEMBER_TERMS:
+                if need not in s["caption"]: P.append(f"{sid}: membership mentioned but caption missing '{need}'")
+            if MEMBER_MENTION.search(so_wo):
+                for need in ("{{founding_price}}", "cancel", "renew"):
+                    if need not in (spoken + " " + ost).lower(): P.append(f"{sid}: membership mentioned in spoken/on-screen text without '{need}'")
+        if re.search(r"\block(ed|s)?\b", everything, re.I) and "locked for as long as you stay subscribed" not in everything:
+            P.append(f"{sid}: price-lock wording must be 'locked for as long as you stay subscribed'")
+        if re.search(r"\b(forever|lifetime|for good)\b", everything, re.I): P.append(f"{sid}: open-ended price/term wording")
+        if re.search(r"\b(spots?|seats?) left\b|\bends (tonight|at midnight)\b|\blast chance\b|\bhurry\b|\bonly \d+ left\b", everything, re.I):
+            P.append(f"{sid}: urgency/scarcity wording (T-04)")
+        # --- render lane
+        if s["lane"] == "insert":
+            if any(not b[1].endswith("-VO") for b in s["beats"]): P.append(f"{sid}: insert lane is voice-over only (speaker must end in -VO)")
+            if re.search(r"lip-sync|to camera|\bMC DRV-", shots): P.append(f"{sid}: insert lane shot shows a face or a performer clip")
+        elif s["lane"] == "talking_head":
+            if shots.count("VEO INSERT") > 2: P.append(f"{sid}: talking_head allows at most 2 Veo inserts")
+            if re.search(r"\bMC DRV-", shots) or s.get("clip"): P.append(f"{sid}: talking_head script references a performer clip")
+            if any(b[1].endswith("-VO") for b in s["beats"]): P.append(f"{sid}: talking_head beats are lip-synced, not VO")
+        elif s["lane"] == "movement":
+            if s.get("clip") not in clips: P.append(f"{sid}: movement clip {s.get('clip')!r} not in production/performer/call_sheet.csv")
+            elif f"MC {s['clip']}" not in s["beats"][0][4]: P.append(f"{sid}: frame 1 must cite the performer clip 'MC {s['clip']}'")
+            if not s["move"]: P.append(f"{sid}: movement lane script must set move=True")
+            if day < -2: P.append(f"{sid}: movement lane before the shoot (D−2)")
+        else:
+            P.append(f"{sid}: unknown lane {s['lane']}")
+        # --- running bit
+        b = s.get("bitn")
+        if b not in BITS:
+            P.append(f"{sid}: running bit number {b!r} not in CHARACTERS.md §7 (1–24)")
+        else:
+            if not re.search(BITS[b][1], (spoken + " " + ost + " " + shots).lower().replace("’", "'")):
+                P.append(f"{sid}: running bit {b} ({BITS[b][0]}) not visible in the script")
+            if b == 24 and s["pillar"] not in ("P16", "P17"): P.append(f"{sid}: old photos are for love/wisdom content only")
+            bit_use[s["page"]].append((day, b, sid))
+        # --- uniqueness
+        norm = re.sub(r"[^a-z0-9 ]", "", hook.lower())
+        if norm in seen_line: P.append(f"{sid}: hook line duplicates {seen_line[norm]}")
+        seen_line[norm] = sid
+        key = (s["beats"][0][4].split("|")[0].strip(), s["prop"].lower())
+        if key in seen_sp and seen_sp[key][1] != s["page"]: P.append(f"{sid}: set+prop {key} already used on {seen_sp[key][1]} by {seen_sp[key][0]}")
+        seen_sp.setdefault(key, (sid, s["page"]))
+        for sh in shingles(spoken):
+            if sh in lib_sh: P.append(f"{sid}: 7-word shingle repeats the library: '{sh}'")
+            elif sh in seen_sh and seen_sh[sh] != sid: P.append(f"{sid}: 7-word shingle repeats {seen_sh[sh]}: '{sh}'")
+            seen_sh.setdefault(sh, sid)
+    for page, uses in bit_use.items():
+        uses.sort()
+        for i, (d1, b1, s1) in enumerate(uses):
+            for d2, b2, s2 in uses[i + 1:]:
+                if d2 - d1 >= BIT_WINDOW_DAYS: break
+                if b1 == b2: P.append(f"{s2}: running bit {b1} repeats {s1} on {page} within {BIT_WINDOW_DAYS} days")
+    if w2:
+        share = sum(1 for s in w2 if s["_proven"]) / len(w2)
+        if share < PROVEN_MIN_SHARE: P.append(f"wave2: proven hook grammar share {share:.0%} < {PROVEN_MIN_SHARE:.0%}")
+    for s in w2:   # SAFETY scans shared with the library
+        pub = script_published_text(s)
+        P.extend(blocked_claims_scan(s["id"], pub))
+        prom = {"on_screen": pub["on_screen"], "thumbnail": s["thumb"], "title": s["title"], "yt_title": s["yt"], "hook_line": s["beats"][0][2]}
+        P.extend(outcome_claim_hits(s["id"], pub, prom))
+        P.extend(mortality_hits(s["id"], prom, {"spoken": pub["spoken"], "caption": pub["caption"]}))
+    return P
+
+
+def validate_v2_core(s, ost):
+    """The POSTDB §8 / BLITZ structure rules from validate_v2 that don't depend on the S-number ranges."""
+    sid, P = s["id"], []
+    if not 70 <= s["_wc"] <= 130: P.append(f"{sid}: word count {s['_wc']} outside 70-130")
+    if not 30 <= s["secs"] <= 59: P.append(f"{sid}: target {s['secs']} s outside 30-59 s")
+    if int(s["beats"][-1][0].split("-")[1]) != s["secs"]: P.append(f"{sid}: last beat end != secs")
+    if len(s["beats"][0][2].split()) > 22: P.append(f"{sid}: hook line >22 words")
+    if len(s["beats"][0][3].split()) > 7: P.append(f"{sid}: frame-1 on-screen text >7 words")
+    for k in ("prop", "grammar", "skip", "hcat", "obj", "group", "lane", "title", "thumb", "yt", "music", "note"):
+        if not s.get(k): P.append(f"{sid}: missing field '{k}'")
+    if s["hcat"] not in CAT_NAMES: P.append(f"{sid}: hook category {s['hcat']} unknown")
+    if s.get("skip") and s["skip"] not in s["_spoken"] + " " + ost: P.append(f"{sid}: skip/safety line not found verbatim in spoken or on-screen text")
+    if s["cta"] == "JOIN":
+        for need in ("{{FOUNDING_PRICE}}/month", "renews monthly", "Cancel online anytime", "14-day money-back", "5,000"):
+            if need not in s["caption"]: P.append(f"{sid}: JOIN caption missing '{need}'")
+        so = (s["_spoken"] + " " + ost).lower()
+        for need in ("{{founding_price}}", "cancel", "renew"):
+            if need not in so: P.append(f"{sid}: JOIN spoken/on-screen text missing '{need}'")
+    return P
+
+
+def wave2_md(w2, hooks, plan_groups):
+    fake = hooks + [dict(id=s["hook_id"]) for s in w2]
+    body = scripts_md(w2, fake).split("\n## Index\n", 1)[1]
+    for s in w2:
+        extra = (f"**Plan group** `{s['group']}` · **First post** {s['_date']} (D{s['_day']:+d}) · **Render lane** {s['lane']}"
+                 + (f" · **Performer clip** `{s['clip']}`" if s.get("clip") else "")
+                 + f" · **Running bit** #{s['bitn']} {BITS[s['bitn']][0]} · **Plan grammar** {s['grammar'][0]}")
+        body = body.replace(f"\n## {s['id']}: {s['title']}\n", f"\n## {s['id']}: {s['title']}\n{extra}  \n", 1)
+    def mix(key):
+        return " · ".join(f"{k} {v}" for k, v in sorted(collections.Counter(key(s) for s in w2).items(), key=lambda x: (-x[1], str(x[0]))))
+    rows = sum(len(plan_groups.get(s["group"], [])) for s in w2)
+    L = [f"# WAVE2_SCRIPTS.md: {len(w2)} generated source scripts ({w2[0]['id']}–{w2[-1]['id']}) for the posting plan, D{WAVE2_D_FROM:+d}…D{WAVE2_D_TO:+d}\n"]
+    L.append(f"One source script per `uniqueness_group` that `data/content/posting_plan_90d.csv` marked `GEN-needed` from D{WAVE2_D_FROM:+d} (Oct 1) to D{WAVE2_D_TO:+d} (Oct 15): {len(w2)} groups, {rows} plan rows (each group posts once on all 6 platforms; Threads/X get the text cut). Source: `data/content/scripts_wave2.py`; machine-readable copy `data/content/wave2_scripts.json`. `python3 tools/assign_scripts.py` writes these ids into the plan's `script_id` column. Validated by `python3 tools/build_content.py` (validate_wave2) and `cd workers && python3 -m compliance scan ../data/content/wave2_scripts.json`.\n")
+    L.append(f"- **Pages:** {mix(lambda s: s['page'])} · **speakers** {mix(lambda s: s['speaker'])} · **lanes** {mix(lambda s: s['lane'])}.")
+    L.append(f"- **CTAs:** {mix(lambda s: s['cta'])}. Runway rows (D<0) carry no price, no '$' and no membership talk; WAITLIST says it's free. BOOK states `{{{{EBOOK_PRICE}}}}` one-time / not a subscription / yours to keep; JOIN carries price per month, monthly renewal, cancel online anytime, the 14-day money-back guarantee, 'locked for as long as you stay subscribed' and the real 5,000 cap. Every offer script has a spoken AI line.")
+    prov = collections.Counter(g for s in w2 for g in s["_proven"])
+    L.append(f"- **Proven hook grammar: {sum(1 for s in w2 if s['_proven'])}/{len(w2)} = {sum(1 for s in w2 if s['_proven'])/len(w2):.0%}** (floor 45%): " + " · ".join(f"{k} {v}" for k, v in prov.most_common()) + f". Plan grammars: {mix(lambda s: s['grammar'][0])}.")
+    L.append(f"- **Render lanes:** movement scripts cite a performer clip from `production/performer/call_sheet.csv` in frame 1 (`MC DRV-…`); insert scripts are voice-over only (every beat speaker `-VO`, hands and props, no face); talking-head scripts use at most 2 Veo inserts.")
+    L.append(f"- **Running bits:** every script carries one of the 24 (CHARACTERS.md §7); no bit repeats on a page inside {BIT_WINDOW_DAYS} days. Uses: " + " · ".join(f"#{k} {v}" for k, v in sorted(collections.Counter(s['bitn'] for s in w2).items())) + ".")
+    L.append(f"- **Uniqueness:** no spoken {SHINGLE_N}-word shingle repeats across the {len(w2)} wave-2 scripts or the 190 library scripts; hook lines and set+prop combinations are new.")
+    L.append("- **Every script:** 30–59 s (42 s target, 70–130 spoken words), a ~3-second who-should-skip line, evidence IDs on health claims, no condition hashtags, no fall-outcome / percentage-outcome / mortality framing, Sun Yoon always by her own name, Chang never 'Master', AI tag + caption footer auto-appended (SAFETY D-02/D-03).\n")
+    L.append("## Index\n" + body)
+    return "\n".join(L) + "\n"
+
+
+def build_wave2(library, hooks, ev_ids):
+    if not os.path.exists(os.path.join(DATA, WAVE2_FILE + ".py")):
+        return [], "wave2: no source file"
+    w2 = load_wave2()
+    plan_groups = load_plan_groups()
+    problems = validate_wave2(w2, library, hooks, ev_ids, plan_groups)
+    # GEN-needed rows still being written (wave2 is produced in batches) are warnings, not failures
+    warnings = [p for p in problems if p.startswith("WARN ")]
+    problems = [p for p in problems if not p.startswith("WARN ")]
+    if warnings:
+        print(f"WARNINGS ({len(warnings)} GEN-needed plan groups without a wave2 script yet; first: {warnings[0][5:]})")
+    if not problems:
+        write_generated_md(os.path.join(ROOT, "WAVE2_SCRIPTS.md"), wave2_md(w2, hooks, plan_groups))
+        out = []
+        for s in w2:
+            j = to_schema(s)
+            j.update({"plan_group": s["group"], "render_lane": s["lane"], "performer_clip": s.get("clip", ""),
+                      "running_bit_n": s["bitn"], "first_post_date": s["_date"], "day_index": s["_day"], "hook_grammar": s["grammar"]})
+            out.append(j)
+        json.dump(out, open(os.path.join(DATA, "wave2_scripts.json"), "w"), indent=1, ensure_ascii=False)
+    prov = sum(1 for s in w2 if s.get("_proven"))
+    summary = (f"wave2 scripts: {len(w2)} {dict(collections.Counter(s['speaker'] for s in w2))}; lanes {dict(collections.Counter(s['lane'] for s in w2))}; "
+               f"proven grammar {prov}/{len(w2)}; CTAs {dict(collections.Counter(s['cta'] for s in w2))}; problems {len(problems)}")
+    return problems, summary
 
 
 GEN_HEADER = "> GENERATED by tools/build_content.py — edit the sources in data/content/, not this file.\n\n"
@@ -1039,8 +1411,13 @@ def main():
           f"{dict(collections.Counter(s['speaker'] for s in rw))}; proven grammar {sum(1 for s in rw if s['_proven'])}/{len(rw)}; "
           f"CTAs {dict(collections.Counter(s['cta'] for s in rw))}")
     print(f"calendar rows: {len(rows)}, hooks scheduled: {len(used)}")
+    print(VIR.report([s["_virality"] for s in scripts]) + "; REWRITE (legacy, unscheduled): "
+          + ", ".join(s["id"] for s in scripts if s["_virality"].get("gate") == VIRALITY_LEGACY_GATE))
     for p in mix:
         tot = sum(mix[p].values()); print(p, "pillar mix:", {k: round(100*v/tot) for k, v in sorted(mix[p].items())})
+    w2_problems, w2_summary = build_wave2(scripts, hooks, ev_ids)
+    print(w2_summary)
+    problems += w2_problems
     if problems:
         print("PROBLEMS:"); [print(" -", p) for p in problems]; sys.exit(1)
     print("VALIDATION: PASS")

@@ -14,7 +14,7 @@ import re
 import time
 from pathlib import Path
 
-from assemble import c2pa_sign, graphics
+from assemble import c2pa_sign, graphics, virality_gate
 from assemble import captions as C
 from assemble.layout import FPS, H, W, safe_zone
 from assemble.overlay import CaptionStyle, OverlayPlan, burned_in_strings, render_track
@@ -176,6 +176,15 @@ def assemble(manifest: dict, workdir: Path | None = None) -> dict:
     if total <= 0:
         raise AssemblyError("empty timeline and no voice")
 
+    # 0) virality preflight (VIRALITY_SYSTEM.md §3): frame-1 hook, captions, pattern interrupt, loop, 9:16, cover
+    vg = virality_gate.check(manifest, total)
+    warns += vg["warnings"]
+    if vg["errors"]:
+        if vg["mode"] == "warn":
+            warns += [f"virality gate (warn mode): {e}" for e in vg["errors"]]
+        else:
+            raise AssemblyError("virality gate: " + "; ".join(vg["errors"]))
+
     # 1) base video
     base, pips, w = plan_timeline(timeline, total)
     warns += w
@@ -303,5 +312,5 @@ def assemble(manifest: dict, workdir: Path | None = None) -> dict:
         "words": [{"word": w.text, "start_s": w.start, "end_s": w.end} for w in words],
         "burned_in_text": burned, "expected_on_screen": [t["text"] for t in (manifest.get("on_screen") or [])],
         "phash_seq": phash_seq, "audio_fp": audio_fp, "c2pa": c2pa_info, "frames": frames,
-        "loudness": media.loudness(master), "warnings": warns, "render_s": round(time.time() - t0, 1),
+        "loudness": media.loudness(master), "virality_preflight": vg, "warnings": warns, "render_s": round(time.time() - t0, 1),
     }

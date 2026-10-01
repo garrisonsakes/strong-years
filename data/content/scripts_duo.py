@@ -6,7 +6,7 @@ G = "SET-GARAGE | C-TRAIN-A + S-CARDI-MUSTARD"
 SCRIPTS = [
 dict(id="S51", page="@changandsun", speaker="DUO", format="F08", pillar="P17", hook_id="H211", title="Microwave flexing / the sign", secs=40,
  beats=[
-  ("0-3","SUN","He flexes in the microwave. So I made a sign.","NO MIRROR FLEXING",f"{K} | Chang flexing at his reflection in the microwave door; cut to taped sign 'NO MIRROR FLEXING — S.Y.' | medium, then insert"),
+  ("0-3","SUN","He flexes in the microwave every morning at seventy-four. So I made a sign. Watch him find it.","NO MIRROR FLEXING",f"{K} | Chang flexing at his reflection in the microwave door; cut to taped sign 'NO MIRROR FLEXING — S.Y.' | medium, then insert"),
   ("3-6","CHANG","I'm checking the popcorn.","","same | Chang, caught | CU"),
   ("6-8","SUN","There's no popcorn.","","same | Sun, deadpan | CU"),
   ("8-15","CHANG","Muscle is a savings account. Adults doing thirty to sixty minutes of strength a week tended to have longer lives.","30–60 min/week strength","same | Chang turns to camera | medium"),
@@ -15,7 +15,7 @@ dict(id="S51", page="@changandsun", speaker="DUO", format="F08", pillar="P17", h
   ("22-30","CHANG","Three twenty-minute sessions. Chair stands, counter push-ups, carrying things.","3 × 20 min: stands · push-ups · carries","same | quick demo cuts | quick cuts"),
   ("30-33","SUN","And the microwave?","","same | two-shot"),
   ("33-35","CHANG","Recovery.","","same | flex, grin | CU"),
-  ("35-40","SUN","Seven out of ten. The arms get an eight. Comment STRONG for his chair builder.","Comment STRONG","same | pats his arm, walks off | two-shot"),
+  ("35-40","SUN","Seven out of ten. Send this to your flexer. Comment STRONG for his chair builder.","Comment STRONG","same | pats his arm, walks off | two-shot"),
  ],
  move=False, tags=[], safety="No demonstration beyond quick cuts; caption add-on stop rule included since exercises named.",
  regression="", cta="STRONG",
@@ -80,7 +80,7 @@ dict(id="S54", page="@changandsun", speaker="DUO", format="F08", pillar="P17", h
 
 dict(id="S55", page="@changandsun", speaker="DUO", format="F18", pillar="P13", hook_id="H215", title="Dumpling count = protein count", secs=40,
  beats=[
-  ("0-3","SUN","He counts reps. I count dumplings. That's fourteen.","THAT'S FOURTEEN","SET-TABLE | C-CASUAL + S-CARDI-JADE | plate of dumplings, Chang reaching | overhead then two-shot"),
+  ("0-3","SUN","He counts reps. I count dumplings. That's fourteen, and here's what fourteen is in protein.","THAT'S FOURTEEN","SET-TABLE | C-CASUAL + S-CARDI-JADE | plate of dumplings, Chang reaching | overhead then two-shot"),
   ("3-6","CHANG","Twelve.","","same | CU | CU"),
   ("6-7","SUN","Fourteen, Chang.","","same | CU | CU"),
   ("7-16","SUN","Protein check. Pork dumplings, about two grams each. Twelve is twenty-four grams, and a lot of wrapper.","~2 g protein per dumpling","same | gram labels on dumplings | overhead"),
@@ -89,7 +89,7 @@ dict(id="S55", page="@changandsun", speaker="DUO", format="F18", pillar="P13", h
   ("28-30","CHANG","Eight.","","same | CU, sad | CU"),
   ("30-33","SUN","You heard me.","","same | CU | CU"),
   ("33-37","SUN","Kidney disease? Your doctor sets your protein. Not us.","Kidney disease? Ask your doctor.","same | CU | CU"),
-  ("37-40","CHANG","Comment SOUP. She'll send three soups.","Comment SOUP","same | eats dumpling #8 slowly | medium"),
+  ("37-40","CHANG","Comment SOUP for three soups. Send this to your dumpling counter.","Comment SOUP","same | eats dumpling #8 slowly | medium"),
  ],
  move=False, tags=["high_protein"], safety="Kidney caution.",
  regression="", cta="SOUP",
@@ -117,13 +117,13 @@ dict(id="S56", page="@changandsun", speaker="DUO", format="F34", pillar="P17", h
 
 dict(id="S57", page="@changandsun", speaker="DUO", format="F08", pillar="P17", hook_id="H232", title="He snores: the study says see the doctor", secs=38,
  beats=[
-  ("0-3","SUN","He snores. I found a study. The study says: see the doctor.","SNORING → SEE THE DOCTOR","SET-BED | C-BED + S-BED | night, Chang snoring, Sun sitting up with phone | medium two-shot"),
+  ("0-3","SUN","He snores. I found a study, one page, and the study says: see the doctor. Watch his face.","SNORING → SEE THE DOCTOR","SET-BED | C-BED + S-BED | night, Chang snoring, Sun sitting up with phone | medium two-shot"),
   ("3-5","CHANG","I don't snore.","","same | Chang wakes | CU"),
   ("5-8","SUN","","","same | Sun plays a recording on her phone (snoring sound) | CU phone"),
   ("8-18","SUN","Loud snoring, gasping, stopping breathing in your sleep, and tired all day? Sleep doctors say get checked for sleep apnea.","Snoring + gasping + tired all day → get checked","same | study card inset (AASM guideline) | medium"),
   ("18-24","CHANG","No breathing trick fixes that. That's a doctor visit.","Not a breathing-trick problem","same | CU | CU"),
   ("24-28","SUN","He's going Tuesday. I'm driving.","","same | Sun, smug | CU"),
-  ("28-34","CHANG","Want to wind down better at night? Comment SLEEP.","Comment SLEEP","same | Chang to camera | medium"),
+  ("28-34","CHANG","Send this to the snorer in your bed. Comment SLEEP for the wind-down.","Comment SLEEP","same | Chang to camera | medium"),
   ("34-37","SUN","And sleep on your side, Chang.","","same | pushes him to roll over | two-shot"),
  ],
  move=False, tags=["red_flag_referral"], safety="Red-flag referral; no treatment claim.",
@@ -135,14 +135,14 @@ dict(id="S57", page="@changandsun", speaker="DUO", format="F08", pillar="P17", h
 
 dict(id="S58", page="@changandsun", speaker="DUO", format="F35", pillar="P17", hook_id="H237", title="When we fight, we exhale", secs=39,
  beats=[
-  ("0-3","SUN","When we fight, one of us says 'exhale.' Here's why.","WHEN WE FIGHT: EXHALE",f"{L} | mid-argument by the thermostat | medium two-shot"),
+  ("0-3","SUN","When we fight, one of us says 'exhale,' in for four, out for six. Here's why it works.","WHEN WE FIGHT: EXHALE",f"{L} | mid-argument by the thermostat | medium two-shot"),
   ("3-11","CHANG","A long exhale works like a brake. Slow breathing raises heart-rate variability. That's the calm side of your nervous system.","Slow breathing ↑ HRV","same | study card inset (Laborde 2022) | medium"),
   ("11-20","SUN","So when he says the thermostat is fine and it's freezing: in for four, out for six.","In 4 · Out 6","same | both breathing, a timer ring | medium two-shot"),
   ("20-25","CHANG","Three times. Then talk.","3 breaths. Then talk.","same | CU | CU"),
   ("25-27","SUN","Then I win.","","same | CU smirk | CU"),
   ("27-33","CHANG","It doesn't solve the fight. It stops the fight from driving the car.","It stops the fight from driving","same | medium | medium"),
   ("33-35","SUN","Fifty years. Still married.","","same | turns thermostat up | two-shot"),
-  ("35-39","CHANG","Comment BREATH. I'll send the 4-6 breath.","Comment BREATH","same | to camera | medium CU"),
+  ("35-39","CHANG","Send this to your sparring partner. Comment BREATH for the 4-6 breath.","Comment BREATH","same | to camera | medium CU"),
  ],
  move=False, tags=["breath_slow","relationships"], safety="Crisis resource in caption (relationship conflict topic); no breath holds.",
  regression="", cta="BREATH",
@@ -153,13 +153,13 @@ dict(id="S58", page="@changandsun", speaker="DUO", format="F35", pillar="P17", h
 
 dict(id="S59", page="@changandsun", speaker="DUO", format="F08", pillar="P20", hook_id="H239", title="We're AI. The advice isn't fake.", secs=40,
  beats=[
-  ("0-3","SUN","We're AI. The marriage is fictional. The advice isn't.","WE'RE AI.",f"{L} | both on sofa, Mandu between them | medium two-shot"),
+  ("0-3","SUN","We're AI. The marriage is fictional. The advice isn't. Watch the three tests that are real.","WE'RE AI.",f"{L} | both on sofa, Mandu between them | medium two-shot"),
   ("3-8","CHANG","A team made us. Real people check every video against the research.","Checked against real research","same | CU | CU"),
   ("8-12","SUN","He's not real. His arms are also not real.","","same | pokes his bicep | two-shot"),
   ("12-23","CHANG","What is real: three tests. Chair stands in thirty seconds. Ten seconds on one leg. Sitting on the floor and getting up.","Chair · one leg · floor","same | quick inserts of S01/S02/S03 demos | quick cuts"),
   ("23-29","SUN","Each one comes from a real study. The links are in the caption. I read them. Well, they read them to me.","Studies in the caption","same | holds up study cards | medium"),
   ("29-34","CHANG","Do the tests today. Write your numbers. Come back in thirty days.","Test today · retest in 30 days","same | CU | CU"),
-  ("34-39","SUN","Comment TEST. We'll help you find your strength age.","Comment TEST","same | Mandu yawns | two-shot"),
+  ("34-39","SUN","Comment TEST for your strength age. Send this to your person.","Comment TEST","same | Mandu yawns | two-shot"),
  ],
  move=False, tags=[], safety="Disclosure content; tests demonstrated in linked videos with full safety cues. Reviewer gate: [ONLY PUBLISH ONCE A SIGNED, CREDENTIALED REVIEWER EXISTS: beat 3-8 review-claim line, on-screen review badge and caption review line as written in SAFETY_RULES.md §7 (reviewer-gated strings)] FALLBACK: the no-claim lines used in this script (ship these until a signed, credentialed reviewer exists).",
  regression="", cta="TEST",
@@ -170,12 +170,12 @@ dict(id="S59", page="@changandsun", speaker="DUO", format="F08", pillar="P20", h
 
 dict(id="S60", page="@changandsun", speaker="DUO", format="F27", pillar="P17", hook_id="H235", title="50th anniversary in 23 days", secs=41,
  beats=[
-  ("0-3","CHANG","Fiftieth anniversary in twenty-three days. She still says the dumplings were over-salted.","50 YEARS IN 23 DAYS",f"{L} | holding an illustrated vintage-style 1976 wedding portrait (clearly artwork) | medium two-shot"),
+  ("0-3","CHANG","Fiftieth anniversary in twenty-three days, and she still says my wedding dumplings were over-salted. Watch her face.","50 YEARS IN 23 DAYS",f"{L} | holding an illustrated vintage-style 1976 wedding portrait (clearly artwork) | medium two-shot"),
   ("3-7","SUN","They were. Then you over-corrected.","","same | CU smile | CU"),
   ("7-12","CHANG","People ask how we did fifty years.","","same | medium | medium"),
   ("12-20","SUN","Short version: eat together. Walk together. Fight, then exhale. Then eat again.","Eat · walk · fight · exhale · eat","same | Sun counts on fingers | CU"),
   ("20-29","CHANG","In 148 studies, people with strong relationships tended to have longer lives. Friends, family, neighbors. Not only marriage.","148 studies · 308,849 people","same | study card inset | medium"),
-  ("29-35","SUN","Call your person tonight. Or be someone's person.","Be someone's person.","same | hand on his | CU hands, rings"),
+  ("29-35","SUN","Call your person tonight. Or be someone's person. Send this to yours.","Be someone's person.","same | hand on his | CU hands, rings"),
   ("35-38","CHANG","Seven out of ten?","","same | CU | CU"),
   ("38-41","SUN","Fifty years. Ten. Comment BEGIN if you're starting something together.","Comment BEGIN","same | she kisses his cheek | two-shot"),
  ],

@@ -37,6 +37,7 @@ WRITING RULES (performance)
 7. Numbers beat adjectives: "142,000 people, 17 countries" beats "a big study".
 8. CTA: "Comment {{CTA_KEYWORD}} and I'll send you the [specific free thing]". It must be a specific deliverable (a 7-day plan, a checklist, a recipe card). Never "to live longer".
 9. End on a loopable line or a Sun Yoon button (a one-line tease that rewards watching to the end).
+10. Virality gate (VIRALITY_SYSTEM.md §2, `tools/virality.py`; the build rejects < 60, launch posts need ≥ 85). Pick the hook grammar by measured rel: "If you [action] every [time anchor]…" > "Not X, not Y" / myth > honest authority (visible strength, a named study) > "…and watch what happens" / object-first command > story > statement; never open with a question or "How to". Put a concrete number in the hook or re-hook, the object or body part in the first 3 words, a visible demo in frame 1, ONE share trigger ("send this to your sister who…", "do this with your husband") and ONE save trigger ("save it for tonight", "day 1 of 7"), 30–59 s, no sign-off at the end.
 
 WRITING RULES (truth and safety, non-negotiable)
 - Every health or physiology claim must cite an EVIDENCE ID in `claims[].evidence_ids`. Hedge by grade: grades C and D use "linked with" or "people who… tend to…". Grades A and B may say "improved" or "reduced". Never say "cures", "treats", "prevents [disease]", "reverses", "detox", "instantly", "doctors hate", or "replace your medication".

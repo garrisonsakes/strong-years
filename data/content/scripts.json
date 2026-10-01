@@ -95,7 +95,32 @@
   "wink": false,
   "myth_bust": false,
   "music": "warm soul instrumental, light",
-  "thumbnail_text": "YOUR NUMBER?"
+  "thumbnail_text": "YOUR NUMBER?",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 77.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 1.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S02",
@@ -185,7 +210,31 @@
   "wink": false,
   "myth_bust": false,
   "music": "warm acoustic",
-  "thumbnail_text": "10 SECONDS?"
+  "thumbnail_text": "10 SECONDS?",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 74.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "WATCH",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S03",
@@ -275,7 +324,30 @@
   "wink": false,
   "myth_bust": false,
   "music": "warm soul instrumental",
-  "thumbnail_text": "SCORE /10"
+  "thumbnail_text": "SCORE /10",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 81.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "COMMAND",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)"
+   ]
+  }
  },
  {
   "id": "S04",
@@ -366,7 +438,32 @@
   "wink": false,
   "myth_bust": false,
   "music": "warm soul instrumental",
-  "thumbnail_text": "GRIP = FUTURE?"
+  "thumbnail_text": "GRIP = FUTURE?",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 70.2,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "STATEMENT",
+   "parts": {
+    "hook_class": 10.2,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "hook class STATEMENT is a bottom-tier opener (POSTDB §3b)",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S05",
@@ -458,7 +555,31 @@
   "wink": false,
   "myth_bust": false,
   "music": "soft piano",
-  "thumbnail_text": "10 DAYS = 1 KG"
+  "thumbnail_text": "10 DAYS = 1 KG",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 74.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "WATCH",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S06",
@@ -549,7 +670,32 @@
   "wink": false,
   "myth_bust": false,
   "music": "warm soul instrumental",
-  "thumbnail_text": "TOO OLD? NO."
+  "thumbnail_text": "TOO OLD? NO.",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 72.5,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "MYTH",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S07",
@@ -641,7 +787,31 @@
   "wink": false,
   "myth_bust": false,
   "music": "warm soul instrumental",
-  "thumbnail_text": "DANGEROUS?"
+  "thumbnail_text": "DANGEROUS?",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 78.5,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "MYTH",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 1.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S08",
@@ -733,7 +903,32 @@
   "wink": false,
   "myth_bust": false,
   "music": "warm acoustic",
-  "thumbnail_text": "NOT VITAMIN D"
+  "thumbnail_text": "NOT VITAMIN D",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 72.5,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "NOT_X",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S09",
@@ -824,7 +1019,32 @@
   "wink": false,
   "myth_bust": false,
   "music": "soft acoustic, ocean ambience",
-  "thumbnail_text": "TRY ONE SLOW MOVE"
+  "thumbnail_text": "TRY ONE SLOW MOVE",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 70.5,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "NOT_X",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S10",
@@ -907,7 +1127,33 @@
   "wink": false,
   "myth_bust": false,
   "music": "none / soft room tone",
-  "thumbnail_text": "2 IN, 1 LONG OUT"
+  "thumbnail_text": "2 IN, 1 LONG OUT",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 61.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 0.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S11",
@@ -1000,7 +1246,32 @@
   "wink": false,
   "myth_bust": false,
   "music": "soft piano",
-  "thumbnail_text": "IN BED · 90 SEC"
+  "thumbnail_text": "IN BED · 90 SEC",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 81.2,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 1.2
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)",
+    "CTA is long or asks for more than one keyword"
+   ]
+  }
  },
  {
   "id": "S12",
@@ -1083,7 +1354,31 @@
   "wink": false,
   "myth_bust": false,
   "music": "none",
-  "thumbnail_text": "SIT. COUNT. STAND."
+  "thumbnail_text": "SIT. COUNT. STAND.",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 84.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S13",
@@ -1174,7 +1469,32 @@
   "wink": false,
   "myth_bust": false,
   "music": "warm soul instrumental",
-  "thumbnail_text": "NO CURL-UPS"
+  "thumbnail_text": "NO CURL-UPS",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 72.5,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "MYTH",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S14",
@@ -1265,7 +1585,31 @@
   "wink": false,
   "myth_bust": false,
   "music": "warm soul instrumental",
-  "thumbnail_text": "HINGE, DON'T BEND"
+  "thumbnail_text": "HINGE, DON'T BEND",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 77.5,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "NOT_X",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)"
+   ]
+  }
  },
  {
   "id": "S15",
@@ -1356,7 +1700,32 @@
   "wink": false,
   "myth_bust": false,
   "music": "warm acoustic",
-  "thumbnail_text": "10 STEPS?"
+  "thumbnail_text": "10 STEPS?",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 68.2,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "STATEMENT",
+   "parts": {
+    "hook_class": 10.2,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "hook class STATEMENT is a bottom-tier opener (POSTDB §3b)",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S16",
@@ -1446,7 +1815,32 @@
   "wink": false,
   "myth_bust": false,
   "music": "warm soul instrumental",
-  "thumbnail_text": "HOW MANY?"
+  "thumbnail_text": "HOW MANY?",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 76.6,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "COMMAND",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 4.0,
+    "save": 3.5,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S17",
@@ -1537,7 +1931,31 @@
   "wink": false,
   "myth_bust": false,
   "music": "upbeat soul instrumental",
-  "thumbnail_text": "WHO STOPS FIRST?"
+  "thumbnail_text": "WHO STOPS FIRST?",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 83.6,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "COMMAND",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 4.0,
+    "save": 3.5,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S18",
@@ -1621,7 +2039,33 @@
   "wink": false,
   "myth_bust": false,
   "music": "soft piano",
-  "thumbnail_text": "COULD YOU GET UP?"
+  "thumbnail_text": "COULD YOU GET UP?",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 63.2,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "STATEMENT",
+   "parts": {
+    "hook_class": 10.2,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "hook class STATEMENT is a bottom-tier opener (POSTDB §3b)",
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S19",
@@ -1713,7 +2157,31 @@
   "wink": false,
   "myth_bust": false,
   "music": "upbeat soul instrumental",
-  "thumbnail_text": "DAY 1"
+  "thumbnail_text": "DAY 1",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 75.2,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "STATEMENT",
+   "parts": {
+    "hook_class": 10.2,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "hook class STATEMENT is a bottom-tier opener (POSTDB §3b)",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)"
+   ]
+  }
  },
  {
   "id": "S20",
@@ -1811,7 +2279,31 @@
   "wink": false,
   "myth_bust": false,
   "music": "warm acoustic",
-  "thumbnail_text": "SINK BACK?"
+  "thumbnail_text": "SINK BACK?",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 83.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)"
+   ]
+  }
  },
  {
   "id": "S21",
@@ -1901,7 +2393,33 @@
   "wink": false,
   "myth_bust": false,
   "music": "warm acoustic",
-  "thumbnail_text": "2ND HEART"
+  "thumbnail_text": "2ND HEART",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 71.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S22",
@@ -1993,7 +2511,32 @@
   "wink": false,
   "myth_bust": false,
   "music": "soft acoustic",
-  "thumbnail_text": "BEFORE YOU STAND"
+  "thumbnail_text": "BEFORE YOU STAND",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 76.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S23",
@@ -2085,7 +2628,32 @@
   "wink": false,
   "myth_bust": false,
   "music": "upbeat acoustic",
-  "thumbnail_text": "WALKING ISN'T ENOUGH"
+  "thumbnail_text": "WALKING ISN'T ENOUGH",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 70.5,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "MYTH",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S24",
@@ -2175,7 +2743,32 @@
   "wink": false,
   "myth_bust": false,
   "music": "none",
-  "thumbnail_text": "BRUSH + BALANCE"
+  "thumbnail_text": "BRUSH + BALANCE",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 76.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S25",
@@ -2267,7 +2860,33 @@
   "wink": false,
   "myth_bust": false,
   "music": "warm acoustic",
-  "thumbnail_text": "KNEE LADDER"
+  "thumbnail_text": "KNEE LADDER",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 63.2,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "STATEMENT",
+   "parts": {
+    "hook_class": 10.2,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "hook class STATEMENT is a bottom-tier opener (POSTDB §3b)",
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S26",
@@ -2358,7 +2977,31 @@
   "wink": false,
   "myth_bust": false,
   "music": "warm soul instrumental",
-  "thumbnail_text": "SQUATS vs KNEES"
+  "thumbnail_text": "SQUATS vs KNEES",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 77.5,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "MYTH",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S27",
@@ -2449,7 +3092,32 @@
   "wink": false,
   "myth_bust": false,
   "music": "warm soul instrumental",
-  "thumbnail_text": "JARS TOO TIGHT?"
+  "thumbnail_text": "JARS TOO TIGHT?",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 68.2,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "STATEMENT",
+   "parts": {
+    "hook_class": 10.2,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "hook class STATEMENT is a bottom-tier opener (POSTDB §3b)",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S28",
@@ -2541,7 +3209,33 @@
   "wink": false,
   "myth_bust": false,
   "music": "upbeat soul instrumental",
-  "thumbnail_text": "UP FAST"
+  "thumbnail_text": "UP FAST",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 61.2,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "STATEMENT",
+   "parts": {
+    "hook_class": 10.2,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "hook class STATEMENT is a bottom-tier opener (POSTDB §3b)",
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S29",
@@ -2627,7 +3321,32 @@
   "wink": false,
   "myth_bust": false,
   "music": "warm acoustic",
-  "thumbnail_text": "3 COUNTER MOVES"
+  "thumbnail_text": "3 COUNTER MOVES",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 76.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S30",
@@ -2718,7 +3437,32 @@
   "wink": false,
   "myth_bust": false,
   "music": "soft acoustic, crickets",
-  "thumbnail_text": "EVENING QIGONG"
+  "thumbnail_text": "EVENING QIGONG",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 68.2,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "STATEMENT",
+   "parts": {
+    "hook_class": 10.2,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "hook class STATEMENT is a bottom-tier opener (POSTDB §3b)",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S31",
@@ -2808,7 +3552,32 @@
   "wink": false,
   "myth_bust": true,
   "music": "playful pizzicato",
-  "thumbnail_text": "ONION WATER? NO."
+  "thumbnail_text": "ONION WATER? NO.",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 71.5,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "NOT_X",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 9.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S32",
@@ -2905,7 +3674,33 @@
   "wink": false,
   "myth_bust": false,
   "music": "playful jazz",
-  "thumbnail_text": "20 g SHORT"
+  "thumbnail_text": "20 g SHORT",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 61.5,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "STORY",
+   "parts": {
+    "hook_class": 14.52,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 9.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S33",
@@ -2996,7 +3791,31 @@
   "wink": false,
   "myth_bust": false,
   "music": "playful pizzicato",
-  "thumbnail_text": "2 KIWIS"
+  "thumbnail_text": "2 KIWIS",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 84.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 9.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)"
+   ]
+  }
  },
  {
   "id": "S34",
@@ -3086,7 +3905,33 @@
   "wink": false,
   "myth_bust": true,
   "music": "playful pizzicato",
-  "thumbnail_text": "LIVER TEA? NO."
+  "thumbnail_text": "LIVER TEA? NO.",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 66.5,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "MYTH",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 9.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S35",
@@ -3183,7 +4028,31 @@
   "wink": false,
   "myth_bust": false,
   "music": "warm jazz",
-  "thumbnail_text": "THE DISHES WAIT"
+  "thumbnail_text": "THE DISHES WAIT",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 83.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S36",
@@ -3274,7 +4143,33 @@
   "wink": false,
   "myth_bust": false,
   "music": "warm jazz",
-  "thumbnail_text": "EASY KIMCHI"
+  "thumbnail_text": "EASY KIMCHI",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 61.5,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "STORY",
+   "parts": {
+    "hook_class": 14.52,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 9.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S37",
@@ -3285,12 +4180,12 @@
   "hook_id": "H185",
   "title": "Seaweed birthday soup",
   "target_seconds": 41,
-  "hook_line": "Seaweed soup. The Korean birthday soup. Everyone in this house gets it.",
+  "hook_line": "Seaweed soup. The Korean birthday soup, thirty grams of protein a bowl. Everyone in this house gets it. Watch.",
   "beats": [
    {
     "t": "0-3",
     "speaker": "SUN",
-    "vo": "Seaweed soup. The Korean birthday soup. Everyone in this house gets it.",
+    "vo": "Seaweed soup. The Korean birthday soup, thirty grams of protein a bowl. Everyone in this house gets it. Watch.",
     "ost": "MIYEOK-GUK · BIRTHDAY SOUP",
     "shot": "SET-KITCHEN | S-KITCHEN | steaming pot; Chang in a paper party hat at the table | medium"
    },
@@ -3325,12 +4220,12 @@
    {
     "t": "35-40",
     "speaker": "SUN",
-    "vo": "AI birthdays. Very cheap. Comment SOUP for three of my soups.",
+    "vo": "AI birthdays. Very cheap. Send this to the birthday person. Comment SOUP for my soups.",
     "ost": "Comment SOUP",
     "shot": "same | ladles bowl | two-shot"
    }
   ],
-  "spoken_word_count": 88,
+  "spoken_word_count": 99,
   "has_movement": false,
   "movement_tags": [
    "high_protein",
@@ -3340,7 +4235,7 @@
   "regression": "",
   "cta_keyword": "SOUP",
   "cta_deliverable": "Sun Yoon's Three Soups",
-  "cta_line": "AI birthdays. Very cheap. Comment SOUP for three of my soups.",
+  "cta_line": "AI birthdays. Very cheap. Send this to the birthday person. Comment SOUP for my soups.",
   "caption": "Comment SOUP for Sun Yoon's Three Soups.\nMiyeok-guk (Korean seaweed soup): soak dried seaweed 10 min → sauté 150 g lean beef or tofu in sesame oil with garlic → add seaweed + water → a little soy sauce → simmer 20 min. ~30 g protein with beef, ~12 g with tofu.\nThyroid condition? Seaweed is very high in iodine, so ask your doctor. Kidney disease? Ask about your protein target.",
   "hashtags": {
    "ig": [
@@ -3365,7 +4260,33 @@
   "wink": true,
   "myth_bust": false,
   "music": "warm jazz",
-  "thumbnail_text": "BIRTHDAY SOUP"
+  "thumbnail_text": "BIRTHDAY SOUP",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 59.4,
+   "gate": "REWRITE",
+   "top_decile": false,
+   "hook_class": "STATEMENT",
+   "parts": {
+    "hook_class": 10.2,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 0.0,
+    "open_loop": 10.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 1.2
+   },
+   "why": [
+    "hook class STATEMENT is a bottom-tier opener (POSTDB §3b)",
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no save trigger (a routine / day N / tonight / write it down)",
+    "CTA is long or asks for more than one keyword"
+   ]
+  }
  },
  {
   "id": "S38",
@@ -3463,7 +4384,32 @@
   "wink": false,
   "myth_bust": false,
   "music": "playful jazz",
-  "thumbnail_text": "PRUNES → BONES?"
+  "thumbnail_text": "PRUNES → BONES?",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 68.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 0.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S39",
@@ -3553,7 +4499,34 @@
   "wink": false,
   "myth_bust": false,
   "music": "soft piano",
-  "thumbnail_text": "HONEY WORKS?"
+  "thumbnail_text": "HONEY WORKS?",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 65.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 9.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S40",
@@ -3643,7 +4616,30 @@
   "wink": false,
   "myth_bust": false,
   "music": "warm soul instrumental",
-  "thumbnail_text": "SAVE YOUR KNEES"
+  "thumbnail_text": "SAVE YOUR KNEES",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 85.2,
+   "gate": "PASS",
+   "top_decile": true,
+   "hook_class": "STATEMENT",
+   "parts": {
+    "hook_class": 10.2,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 8.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "hook class STATEMENT is a bottom-tier opener (POSTDB §3b)"
+   ]
+  }
  },
  {
   "id": "S41",
@@ -3654,12 +4650,12 @@
   "hook_id": "H245",
   "title": "Loneliness: call someone today",
   "target_seconds": 41,
-  "hook_line": "Loneliness is a health problem. Call someone. Today.",
+  "hook_line": "Loneliness is a health problem, and here's the study that says so. Call someone. Today.",
   "beats": [
    {
     "t": "0-3",
     "speaker": "SUN",
-    "vo": "Loneliness is a health problem. Call someone. Today.",
+    "vo": "Loneliness is a health problem, and here's the study that says so. Call someone. Today.",
     "ost": "CALL SOMEONE. TODAY.",
     "shot": "SET-TABLE | S-CARDI-JADE | slides her phone across the table toward camera | CU"
    },
@@ -3694,12 +4690,12 @@
    {
     "t": "35-40",
     "speaker": "SUN",
-    "vo": "Tell me who you called. Comment BEGIN, and we'll send where to start.",
+    "vo": "Send this to the one you're calling. Comment BEGIN for where to start.",
     "ost": "Comment BEGIN",
     "shot": "same | warm smile | medium"
    }
   ],
-  "spoken_word_count": 94,
+  "spoken_word_count": 101,
   "has_movement": false,
   "movement_tags": [
    "social_connection"
@@ -3708,7 +4704,7 @@
   "regression": "",
   "cta_keyword": "BEGIN",
   "cta_deliverable": "Where should I begin? start menu",
-  "cta_line": "Tell me who you called. Comment BEGIN, and we'll send where to start.",
+  "cta_line": "Send this to the one you're calling. Comment BEGIN for where to start.",
   "caption": "Comment BEGIN and we'll send where to start.\nIn a PLoS Medicine meta-analysis (148 studies, 308,849 people), people with stronger social relationships tended to have longer lives; the link was comparable in size to well-known factors like smoking.\nCall one person today. Not a text. A call.\nIf you're struggling or thinking of harming yourself, in the US call or text 988.",
   "hashtags": {
    "ig": [
@@ -3733,7 +4729,32 @@
   "wink": false,
   "myth_bust": false,
   "music": "soft piano",
-  "thumbnail_text": "CALL SOMEONE"
+  "thumbnail_text": "CALL SOMEONE",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 71.2,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "STATEMENT",
+   "parts": {
+    "hook_class": 10.2,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 9.0,
+    "open_loop": 10.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 1.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "hook class STATEMENT is a bottom-tier opener (POSTDB §3b)",
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S42",
@@ -3831,7 +4852,32 @@
   "wink": false,
   "myth_bust": false,
   "music": "warm jazz",
-  "thumbnail_text": "MY OWN JARS"
+  "thumbnail_text": "MY OWN JARS",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 71.3,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "AUTHORITY",
+   "parts": {
+    "hook_class": 18.35,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S43",
@@ -3923,7 +4969,32 @@
   "wink": false,
   "myth_bust": true,
   "music": "upbeat soul instrumental",
-  "thumbnail_text": "TOO FRAGILE? NO."
+  "thumbnail_text": "TOO FRAGILE? NO.",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 70.5,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "MYTH",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S44",
@@ -3934,12 +5005,12 @@
   "hook_id": "H280",
   "title": "72 grams of protein: a day on three plates",
   "target_seconds": 40,
-  "hook_line": "1.2 grams of protein per kilo. For a 60 kilo woman, that's 72 grams.",
+  "hook_line": "1.2 grams of protein per kilo. For a 60 kilo woman, that's 72 grams. Watch where it goes.",
   "beats": [
    {
     "t": "0-3",
     "speaker": "SUN",
-    "vo": "1.2 grams of protein per kilo. For a 60 kilo woman, that's 72 grams.",
+    "vo": "1.2 grams of protein per kilo. For a 60 kilo woman, that's 72 grams. Watch where it goes.",
     "ost": "60 kg × 1.2 = 72 g",
     "shot": "SET-KITCHEN | S-KITCHEN | three plates lined up on counter | overhead"
    },
@@ -3974,12 +5045,12 @@
    {
     "t": "34-39",
     "speaker": "SUN",
-    "vo": "Grams, not vibes. Comment SOUP for three high-protein soups.",
+    "vo": "Grams, not vibes. Show this to whoever cooks. Comment SOUP for three soups.",
     "ost": "Comment SOUP",
     "shot": "same | hands plate toward camera | medium"
    }
   ],
-  "spoken_word_count": 73,
+  "spoken_word_count": 81,
   "has_movement": false,
   "movement_tags": [
    "high_protein"
@@ -3988,7 +5059,7 @@
   "regression": "",
   "cta_keyword": "SOUP",
   "cta_deliverable": "Sun Yoon's Three Soups",
-  "cta_line": "Grams, not vibes. Comment SOUP for three high-protein soups.",
+  "cta_line": "Grams, not vibes. Show this to whoever cooks. Comment SOUP for three soups.",
   "caption": "Comment SOUP for Sun Yoon's Three Soups.\nPROT-AGE: adults over 65 should aim for 1.0–1.2 g protein per kg per day, and 1.2–1.5 g/kg if active or ill (unless there is severe kidney disease). For 60 kg (132 lb): about 72 g.\nExample day: Greek yogurt + nuts (~25 g), tofu rice bowl (~20 g), salmon + vegetables (~27 g).",
   "hashtags": {
    "ig": [
@@ -4013,7 +5084,32 @@
   "wink": false,
   "myth_bust": false,
   "music": "playful jazz",
-  "thumbnail_text": "72 GRAMS"
+  "thumbnail_text": "72 GRAMS",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 61.2,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "STATEMENT",
+   "parts": {
+    "hook_class": 10.2,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 0.0,
+    "open_loop": 10.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "hook class STATEMENT is a bottom-tier opener (POSTDB §3b)",
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S45",
@@ -4103,7 +5199,32 @@
   "wink": false,
   "myth_bust": false,
   "music": "playful pizzicato",
-  "thumbnail_text": "NO BLOAT FIBER"
+  "thumbnail_text": "NO BLOAT FIBER",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 69.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 0.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 1.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S46",
@@ -4191,7 +5312,34 @@
   "wink": true,
   "myth_bust": false,
   "music": "soft piano",
-  "thumbnail_text": "FORGIVE OR NOT?"
+  "thumbnail_text": "FORGIVE OR NOT?",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 61.4,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "STATEMENT",
+   "parts": {
+    "hook_class": 10.2,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 9.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 1.0,
+    "cta_friction": 1.2
+   },
+   "why": [
+    "hook class STATEMENT is a bottom-tier opener (POSTDB §3b)",
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)",
+    "CTA is long or asks for more than one keyword"
+   ]
+  }
  },
  {
   "id": "S47",
@@ -4281,7 +5429,34 @@
   "wink": false,
   "myth_bust": true,
   "music": "playful pizzicato",
-  "thumbnail_text": "'INSTANTLY'? CLOSE IT"
+  "thumbnail_text": "'INSTANTLY'? CLOSE IT",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 59.5,
+   "gate": "REWRITE",
+   "top_decile": false,
+   "hook_class": "NOT_X",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 9.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S48",
@@ -4371,7 +5546,33 @@
   "wink": false,
   "myth_bust": false,
   "music": "playful jazz",
-  "thumbnail_text": "30 g, CHEAP"
+  "thumbnail_text": "30 g, CHEAP",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 61.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 0.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S49",
@@ -4463,7 +5664,33 @@
   "wink": false,
   "myth_bust": false,
   "music": "soft piano",
-  "thumbnail_text": "COOKING FOR ONE"
+  "thumbnail_text": "COOKING FOR ONE",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 55.2,
+   "gate": "REWRITE",
+   "top_decile": false,
+   "hook_class": "STATEMENT",
+   "parts": {
+    "hook_class": 10.2,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 0.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "hook class STATEMENT is a bottom-tier opener (POSTDB §3b)",
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S50",
@@ -4553,7 +5780,33 @@
   "wink": false,
   "myth_bust": false,
   "music": "warm acoustic",
-  "thumbnail_text": "NOT LAZY. SCARED."
+  "thumbnail_text": "NOT LAZY. SCARED.",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 63.2,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "STATEMENT",
+   "parts": {
+    "hook_class": 10.2,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "hook class STATEMENT is a bottom-tier opener (POSTDB §3b)",
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S51",
@@ -4564,12 +5817,12 @@
   "hook_id": "H211",
   "title": "Microwave flexing / the sign",
   "target_seconds": 40,
-  "hook_line": "He flexes in the microwave. So I made a sign.",
+  "hook_line": "He flexes in the microwave every morning at seventy-four. So I made a sign. Watch him find it.",
   "beats": [
    {
     "t": "0-3",
     "speaker": "SUN",
-    "vo": "He flexes in the microwave. So I made a sign.",
+    "vo": "He flexes in the microwave every morning at seventy-four. So I made a sign. Watch him find it.",
     "ost": "NO MIRROR FLEXING",
     "shot": "SET-KITCHEN | C-CASUAL + S-KITCHEN | Chang flexing at his reflection in the microwave door; cut to taped sign 'NO MIRROR FLEXING — S.Y.' | medium, then insert"
    },
@@ -4632,19 +5885,19 @@
    {
     "t": "35-40",
     "speaker": "SUN",
-    "vo": "Seven out of ten. The arms get an eight. Comment STRONG for his chair builder.",
+    "vo": "Seven out of ten. Send this to your flexer. Comment STRONG for his chair builder.",
     "ost": "Comment STRONG",
     "shot": "same | pats his arm, walks off | two-shot"
    }
   ],
-  "spoken_word_count": 69,
+  "spoken_word_count": 77,
   "has_movement": false,
   "movement_tags": [],
   "safety_cue": "No demonstration beyond quick cuts; caption add-on stop rule included since exercises named.",
   "regression": "",
   "cta_keyword": "STRONG",
   "cta_deliverable": "8-Minute Chair Builder",
-  "cta_line": "Seven out of ten. The arms get an eight. Comment STRONG for his chair builder.",
+  "cta_line": "Seven out of ten. Send this to your flexer. Comment STRONG for his chair builder.",
   "caption": "Comment STRONG for the 8-minute Chair Builder.\nIn a BJSM 2022 meta-analysis, adults doing 30–60 minutes/week of muscle-strengthening activity tended to have longer lives, with less heart disease and cancer (observational). Chang's version: 3 × 20 minutes of chair stands, counter push-ups and carries.\nThe microwave is not part of the program.",
   "hashtags": {
    "ig": [
@@ -4669,7 +5922,32 @@
   "wink": false,
   "myth_bust": false,
   "music": "playful jazz",
-  "thumbnail_text": "NO FLEXING"
+  "thumbnail_text": "NO FLEXING",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 72.7,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "STORY",
+   "parts": {
+    "hook_class": 14.52,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 9.0,
+    "open_loop": 10.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 1.2
+   },
+   "why": [
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no save trigger (a routine / day N / tonight / write it down)",
+    "CTA is long or asks for more than one keyword"
+   ]
+  }
  },
  {
   "id": "S52",
@@ -4773,7 +6051,32 @@
   "wink": false,
   "myth_bust": false,
   "music": "playful jazz",
-  "thumbnail_text": "LOSER DOES DISHES"
+  "thumbnail_text": "LOSER DOES DISHES",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 71.3,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "AUTHORITY",
+   "parts": {
+    "hook_class": 18.35,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S53",
@@ -4875,7 +6178,31 @@
   "wink": false,
   "myth_bust": false,
   "music": "warm jazz",
-  "thumbnail_text": "SHOULD I BE SITTING?"
+  "thumbnail_text": "SHOULD I BE SITTING?",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 76.5,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "STORY",
+   "parts": {
+    "hook_class": 14.52,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 9.0,
+    "open_loop": 10.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S54",
@@ -4979,7 +6306,33 @@
   "wink": false,
   "myth_bust": false,
   "music": "playful jazz",
-  "thumbnail_text": "SHOW ME."
+  "thumbnail_text": "SHOW ME.",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 60.5,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "STORY",
+   "parts": {
+    "hook_class": 14.52,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S55",
@@ -4990,12 +6343,12 @@
   "hook_id": "H215",
   "title": "Dumpling count = protein count",
   "target_seconds": 40,
-  "hook_line": "He counts reps. I count dumplings. That's fourteen.",
+  "hook_line": "He counts reps. I count dumplings. That's fourteen, and here's what fourteen is in protein.",
   "beats": [
    {
     "t": "0-3",
     "speaker": "SUN",
-    "vo": "He counts reps. I count dumplings. That's fourteen.",
+    "vo": "He counts reps. I count dumplings. That's fourteen, and here's what fourteen is in protein.",
     "ost": "THAT'S FOURTEEN",
     "shot": "SET-TABLE | C-CASUAL + S-CARDI-JADE | plate of dumplings, Chang reaching | overhead then two-shot"
    },
@@ -5058,12 +6411,12 @@
    {
     "t": "37-40",
     "speaker": "CHANG",
-    "vo": "Comment SOUP. She'll send three soups.",
+    "vo": "Comment SOUP for three soups. Send this to your dumpling counter.",
     "ost": "Comment SOUP",
     "shot": "same | eats dumpling #8 slowly | medium"
    }
   ],
-  "spoken_word_count": 68,
+  "spoken_word_count": 80,
   "has_movement": false,
   "movement_tags": [
    "high_protein"
@@ -5072,7 +6425,7 @@
   "regression": "",
   "cta_keyword": "SOUP",
   "cta_deliverable": "Sun Yoon's Three Soups",
-  "cta_line": "Comment SOUP. She'll send three soups.",
+  "cta_line": "Comment SOUP for three soups. Send this to your dumpling counter.",
   "caption": "Comment SOUP for Sun Yoon's Three Soups.\nAfter 65, aim for roughly 25–30 g protein per meal (PROT-AGE). Pork dumplings are ~2 g each, so 12 is ~24 g with a lot of wrapper. Add an egg-drop soup and you're past 30.\nKidney disease? Your doctor sets your protein target.",
   "hashtags": {
    "ig": [
@@ -5097,7 +6450,32 @@
   "wink": false,
   "myth_bust": false,
   "music": "playful jazz",
-  "thumbnail_text": "THAT'S 14"
+  "thumbnail_text": "THAT'S 14",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 61.2,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "STATEMENT",
+   "parts": {
+    "hook_class": 10.2,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 0.0,
+    "open_loop": 10.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "hook class STATEMENT is a bottom-tier opener (POSTDB §3b)",
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S56",
@@ -5196,7 +6574,33 @@
   "wink": false,
   "myth_bust": false,
   "music": "upbeat soul instrumental",
-  "thumbnail_text": "NOBODY GETS DIVORCED"
+  "thumbnail_text": "NOBODY GETS DIVORCED",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 65.2,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "STATEMENT",
+   "parts": {
+    "hook_class": 10.2,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "hook class STATEMENT is a bottom-tier opener (POSTDB §3b)",
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S57",
@@ -5207,12 +6611,12 @@
   "hook_id": "H232",
   "title": "He snores: the study says see the doctor",
   "target_seconds": 38,
-  "hook_line": "He snores. I found a study. The study says: see the doctor.",
+  "hook_line": "He snores. I found a study, one page, and the study says: see the doctor. Watch his face.",
   "beats": [
    {
     "t": "0-3",
     "speaker": "SUN",
-    "vo": "He snores. I found a study. The study says: see the doctor.",
+    "vo": "He snores. I found a study, one page, and the study says: see the doctor. Watch his face.",
     "ost": "SNORING → SEE THE DOCTOR",
     "shot": "SET-BED | C-BED + S-BED | night, Chang snoring, Sun sitting up with phone | medium two-shot"
    },
@@ -5254,7 +6658,7 @@
    {
     "t": "28-34",
     "speaker": "CHANG",
-    "vo": "Want to wind down better at night? Comment SLEEP.",
+    "vo": "Send this to the snorer in your bed. Comment SLEEP for the wind-down.",
     "ost": "Comment SLEEP",
     "shot": "same | Chang to camera | medium"
    },
@@ -5266,7 +6670,7 @@
     "shot": "same | pushes him to roll over | two-shot"
    }
   ],
-  "spoken_word_count": 64,
+  "spoken_word_count": 74,
   "has_movement": false,
   "movement_tags": [
    "red_flag_referral"
@@ -5275,7 +6679,7 @@
   "regression": "",
   "cta_keyword": "SLEEP",
   "cta_deliverable": "Sleep Wind-Down (10 min)",
-  "cta_line": "Want to wind down better at night? Comment SLEEP.",
+  "cta_line": "Send this to the snorer in your bed. Comment SLEEP for the wind-down.",
   "caption": "Comment SLEEP for the Sleep Wind-Down.\nLoud snoring plus gasping, pauses in breathing or daytime sleepiness should be checked by a doctor for obstructive sleep apnea (American Academy of Sleep Medicine guideline). A breathing exercise or pillow trick isn't a substitute.",
   "hashtags": {
    "ig": [
@@ -5300,7 +6704,31 @@
   "wink": false,
   "myth_bust": false,
   "music": "playful jazz",
-  "thumbnail_text": "HE SNORES"
+  "thumbnail_text": "HE SNORES",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 76.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "WATCH",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 9.0,
+    "open_loop": 10.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S58",
@@ -5311,12 +6739,12 @@
   "hook_id": "H237",
   "title": "When we fight, we exhale",
   "target_seconds": 39,
-  "hook_line": "When we fight, one of us says 'exhale.' Here's why.",
+  "hook_line": "When we fight, one of us says 'exhale,' in for four, out for six. Here's why it works.",
   "beats": [
    {
     "t": "0-3",
     "speaker": "SUN",
-    "vo": "When we fight, one of us says 'exhale.' Here's why.",
+    "vo": "When we fight, one of us says 'exhale,' in for four, out for six. Here's why it works.",
     "ost": "WHEN WE FIGHT: EXHALE",
     "shot": "SET-LIVING | C-CASUAL + S-CARDI-JADE | mid-argument by the thermostat | medium two-shot"
    },
@@ -5365,12 +6793,12 @@
    {
     "t": "35-39",
     "speaker": "CHANG",
-    "vo": "Comment BREATH. I'll send the 4-6 breath.",
+    "vo": "Send this to your sparring partner. Comment BREATH for the 4-6 breath.",
     "ost": "Comment BREATH",
     "shot": "same | to camera | medium CU"
    }
   ],
-  "spoken_word_count": 78,
+  "spoken_word_count": 91,
   "has_movement": false,
   "movement_tags": [
    "breath_slow",
@@ -5380,7 +6808,7 @@
   "regression": "",
   "cta_keyword": "BREATH",
   "cta_deliverable": "The 4-6 Breath (5 min)",
-  "cta_line": "Comment BREATH. I'll send the 4-6 breath.",
+  "cta_line": "Send this to your sparring partner. Comment BREATH for the 4-6 breath.",
   "caption": "Comment BREATH for the 4-6 Breath.\nA meta-analysis (Laborde 2022) found voluntary slow breathing increases vagally mediated heart-rate variability, a marker of the calming branch of the nervous system. Chang and Sun's rule: in 4, out 6, three times, then talk.\nIf arguments at home ever make you feel unsafe, in the US call 1-800-799-7233.",
   "hashtags": {
    "ig": [
@@ -5406,7 +6834,32 @@
   "wink": false,
   "myth_bust": false,
   "music": "soft piano",
-  "thumbnail_text": "EXHALE FIRST"
+  "thumbnail_text": "EXHALE FIRST",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 62.2,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "STATEMENT",
+   "parts": {
+    "hook_class": 10.2,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 0.0,
+    "open_loop": 10.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 1.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "hook class STATEMENT is a bottom-tier opener (POSTDB §3b)",
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S59",
@@ -5417,12 +6870,12 @@
   "hook_id": "H239",
   "title": "We're AI. The advice isn't fake.",
   "target_seconds": 40,
-  "hook_line": "We're AI. The marriage is fictional. The advice isn't.",
+  "hook_line": "We're AI. The marriage is fictional. The advice isn't. Watch the three tests that are real.",
   "beats": [
    {
     "t": "0-3",
     "speaker": "SUN",
-    "vo": "We're AI. The marriage is fictional. The advice isn't.",
+    "vo": "We're AI. The marriage is fictional. The advice isn't. Watch the three tests that are real.",
     "ost": "WE'RE AI.",
     "shot": "SET-LIVING | C-CASUAL + S-CARDI-JADE | both on sofa, Mandu between them | medium two-shot"
    },
@@ -5464,19 +6917,19 @@
    {
     "t": "34-39",
     "speaker": "SUN",
-    "vo": "Comment TEST. We'll help you find your strength age.",
+    "vo": "Comment TEST for your strength age. Send this to your person.",
     "ost": "Comment TEST",
     "shot": "same | Mandu yawns | two-shot"
    }
   ],
-  "spoken_word_count": 95,
+  "spoken_word_count": 104,
   "has_movement": false,
   "movement_tags": [],
   "safety_cue": "Disclosure content; tests demonstrated in linked videos with full safety cues. Reviewer gate: [ONLY PUBLISH ONCE A SIGNED, CREDENTIALED REVIEWER EXISTS: beat 3-8 review-claim line, on-screen review badge and caption review line as written in SAFETY_RULES.md §7 (reviewer-gated strings)] FALLBACK: the no-claim lines used in this script (ship these until a signed, credentialed reviewer exists).",
   "regression": "",
   "cta_keyword": "TEST",
   "cta_deliverable": "Strength Age test (quiz)",
-  "cta_line": "Comment TEST. We'll help you find your strength age.",
+  "cta_line": "Comment TEST for your strength age. Send this to your person.",
   "caption": "Comment TEST for the free Strength Age check.\nChang and Sun are AI characters. The research isn't made up:\n• 30-second chair stand: CDC STEADI\n• 10-second one-leg stance: Araújo et al., BJSM 2022\n• Sitting-rising test: Brito et al., Eur J Prev Cardiol\nEvery video is checked by our team against published research before posting.",
   "hashtags": {
    "ig": [
@@ -5503,7 +6956,31 @@
   "wink": true,
   "myth_bust": false,
   "music": "warm jazz",
-  "thumbnail_text": "WE'RE AI"
+  "thumbnail_text": "WE'RE AI",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 67.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "WATCH",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 0.0,
+    "open_loop": 10.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S60",
@@ -5514,12 +6991,12 @@
   "hook_id": "H235",
   "title": "50th anniversary in 23 days",
   "target_seconds": 41,
-  "hook_line": "Fiftieth anniversary in twenty-three days. She still says the dumplings were over-salted.",
+  "hook_line": "Fiftieth anniversary in twenty-three days, and she still says my wedding dumplings were over-salted. Watch her face.",
   "beats": [
    {
     "t": "0-3",
     "speaker": "CHANG",
-    "vo": "Fiftieth anniversary in twenty-three days. She still says the dumplings were over-salted.",
+    "vo": "Fiftieth anniversary in twenty-three days, and she still says my wedding dumplings were over-salted. Watch her face.",
     "ost": "50 YEARS IN 23 DAYS",
     "shot": "SET-LIVING | C-CASUAL + S-CARDI-JADE | holding an illustrated vintage-style 1976 wedding portrait (clearly artwork) | medium two-shot"
    },
@@ -5554,7 +7031,7 @@
    {
     "t": "29-35",
     "speaker": "SUN",
-    "vo": "Call your person tonight. Or be someone's person.",
+    "vo": "Call your person tonight. Or be someone's person. Send this to yours.",
     "ost": "Be someone's person.",
     "shot": "same | hand on his | CU hands, rings"
    },
@@ -5573,7 +7050,7 @@
     "shot": "same | she kisses his cheek | two-shot"
    }
   ],
-  "spoken_word_count": 76,
+  "spoken_word_count": 85,
   "has_movement": false,
   "movement_tags": [
    "social_connection"
@@ -5607,7 +7084,31 @@
   "wink": false,
   "myth_bust": false,
   "music": "soft piano, warm strings",
-  "thumbnail_text": "50 YEARS"
+  "thumbnail_text": "50 YEARS",
+  "demo": false,
+  "hook_object": "",
+  "virality": {
+   "score": 69.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "WATCH",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 0.0,
+    "open_loop": 10.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  }
  },
  {
   "id": "S61",
@@ -5706,6 +7207,30 @@
   "myth_bust": false,
   "music": "warm soul instrumental",
   "thumbnail_text": "MILK JUG TEST",
+  "demo": true,
+  "hook_object": "milk",
+  "virality": {
+   "score": 74.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "TEST_NOW",
@@ -5815,6 +7340,30 @@
   "myth_bust": false,
   "music": "warm soul instrumental",
   "thumbnail_text": "EVERY AD BREAK",
+  "demo": true,
+  "hook_object": "ads",
+  "virality": {
+   "score": 84.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "SHARE",
@@ -5922,6 +7471,29 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "WATCH THE WATER",
+  "demo": true,
+  "hook_object": "glass",
+  "virality": {
+   "score": 81.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "WATCH",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "WATCH",
@@ -6031,6 +7603,32 @@
   "myth_bust": false,
   "music": "playful jazz",
   "thumbnail_text": "MICROWAVE = MARCH",
+  "demo": true,
+  "hook_object": "microwave",
+  "virality": {
+   "score": 71.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "DEMO"
@@ -6130,6 +7728,31 @@
   "myth_bust": false,
   "music": "warm soul instrumental",
   "thumbnail_text": "NOT ONLY CARDIO",
+  "demo": true,
+  "hook_object": "heart's",
+  "virality": {
+   "score": 66.7,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "MYTH",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "MYTH",
    "OBJ3"
@@ -6238,6 +7861,30 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "DON'T FOLD",
+  "demo": true,
+  "hook_object": "shelf",
+  "virality": {
+   "score": 74.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "WATCH",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "WATCH",
    "OBJ3",
@@ -6345,6 +7992,31 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "4 METERS. GO.",
+  "demo": true,
+  "hook_object": "painter's",
+  "virality": {
+   "score": 76.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "TEST_NOW",
@@ -6453,6 +8125,31 @@
   "myth_bust": false,
   "music": "warm soul instrumental",
   "thumbnail_text": "ARMS = ZERO",
+  "demo": true,
+  "hook_object": "armrests",
+  "virality": {
+   "score": 76.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "DEMO"
@@ -6559,6 +8256,29 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "DO IT WITH MOM",
+  "demo": true,
+  "hook_object": "send",
+  "virality": {
+   "score": 84.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "SHARE",
    "TEST_NOW",
@@ -6661,6 +8381,31 @@
   "myth_bust": false,
   "music": "warm soul instrumental",
   "thumbnail_text": "STRENGTH LEAVES FIRST",
+  "demo": true,
+  "hook_object": "thighs",
+  "virality": {
+   "score": 70.5,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "NOT_X",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "MYTH",
    "DEMO"
@@ -6769,6 +8514,31 @@
   "myth_bust": false,
   "music": "upbeat soul",
   "thumbnail_text": "60 SECONDS",
+  "demo": true,
+  "hook_object": "timer",
+  "virality": {
+   "score": 76.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "TEST_NOW",
@@ -6877,6 +8647,31 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "PICK IT UP LIKE THIS",
+  "demo": true,
+  "hook_object": "keys",
+  "virality": {
+   "score": 76.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "DEMO"
@@ -6985,6 +8780,29 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "3 RUGS",
+  "demo": true,
+  "hook_object": "rug",
+  "virality": {
+   "score": 91.0,
+   "gate": "PASS",
+   "top_decile": true,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "DEMO",
@@ -7094,6 +8912,31 @@
   "myth_bust": false,
   "music": "warm soul instrumental",
   "thumbnail_text": "3 MISTAKES",
+  "demo": true,
+  "hook_object": "red",
+  "virality": {
+   "score": 67.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "MYTH",
    "DEMO"
@@ -7204,6 +9047,31 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "3 NUMBERS",
+  "demo": true,
+  "hook_object": "notebook",
+  "virality": {
+   "score": 67.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "TEST_NOW",
@@ -7311,6 +9179,31 @@
   "myth_bust": false,
   "music": "playful jazz",
   "thumbnail_text": "28 GRAMS",
+  "demo": true,
+  "hook_object": "breakfast",
+  "virality": {
+   "score": 72.2,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "DEMO"
@@ -7425,6 +9318,30 @@
   "myth_bust": false,
   "music": "upbeat soul",
   "thumbnail_text": "SOUP CAN GYM",
+  "demo": true,
+  "hook_object": "soup",
+  "virality": {
+   "score": 74.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "WATCH",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "WATCH",
    "OBJ3",
@@ -7533,6 +9450,30 @@
   "myth_bust": false,
   "music": "upbeat soul",
   "thumbnail_text": "RICE BAG SQUAT",
+  "demo": true,
+  "hook_object": "bag",
+  "virality": {
+   "score": 81.6,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 4.0,
+    "save": 3.5,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "TEST_NOW",
@@ -7643,6 +9584,31 @@
   "myth_bust": false,
   "music": "upbeat soul",
   "thumbnail_text": "FAST FEET",
+  "demo": true,
+  "hook_object": "feet",
+  "virality": {
+   "score": 76.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "DEMO"
@@ -7751,6 +9717,30 @@
   "myth_bust": false,
   "music": "warm soul instrumental",
   "thumbnail_text": "NOT 2 LB FOREVER",
+  "demo": true,
+  "hook_object": "two-pound",
+  "virality": {
+   "score": 77.5,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "MYTH",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "MYTH",
    "OBJ3",
@@ -7859,6 +9849,30 @@
   "myth_bust": false,
   "music": "warm soul instrumental",
   "thumbnail_text": "80 kg AT 74",
+  "demo": true,
+  "hook_object": "eighty",
+  "virality": {
+   "score": 76.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "DEMO"
@@ -7965,6 +9979,31 @@
   "myth_bust": false,
   "music": "warm soul instrumental",
   "thumbnail_text": "HAMMER TEST",
+  "demo": true,
+  "hook_object": "hammer",
+  "virality": {
+   "score": 69.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "WATCH",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "WATCH",
    "OBJ3",
@@ -8072,6 +10111,32 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "LEGS, NOT THE FRAME",
+  "demo": true,
+  "hook_object": "car",
+  "virality": {
+   "score": 71.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "DEMO"
@@ -8186,6 +10251,31 @@
   "myth_bust": false,
   "music": "playful jazz",
   "thumbnail_text": "FRANK vs CHANG",
+  "demo": true,
+  "hook_object": "cooler",
+  "virality": {
+   "score": 67.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "DEMO"
@@ -8294,6 +10384,30 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "POINT AT THE TAPE",
+  "demo": true,
+  "hook_object": "tape",
+  "virality": {
+   "score": 76.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "WATCH",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)"
+   ]
+  },
   "hook_grammar": [
    "WATCH",
    "OBJ3",
@@ -8402,6 +10516,31 @@
   "myth_bust": false,
   "music": "warm soul instrumental",
   "thumbnail_text": "PULL, DON'T PUSH",
+  "demo": true,
+  "hook_object": "door",
+  "virality": {
+   "score": 76.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "DEMO"
@@ -8509,6 +10648,31 @@
   "myth_bust": false,
   "music": "upbeat soul",
   "thumbnail_text": "OVERHEAD BIN",
+  "demo": true,
+  "hook_object": "carry-on",
+  "virality": {
+   "score": 67.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "COMMAND",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "DEMO"
@@ -8617,6 +10781,30 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "ANKLE ALPHABET",
+  "demo": true,
+  "hook_object": "ankles",
+  "virality": {
+   "score": 83.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "DEMO"
@@ -8723,6 +10911,30 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "3 OUT OF 10",
+  "demo": true,
+  "hook_object": "knee",
+  "virality": {
+   "score": 74.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "DEMO"
@@ -8830,6 +11042,30 @@
   "myth_bust": false,
   "music": "soft ambient",
   "thumbnail_text": "CLOUD HANDS",
+  "demo": true,
+  "hook_object": "fence",
+  "virality": {
+   "score": 74.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "WATCH",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "WATCH",
    "OBJ3",
@@ -8930,6 +11166,30 @@
   "myth_bust": false,
   "music": "soft ambient",
   "thumbnail_text": "THE STRAW TRICK",
+  "demo": true,
+  "hook_object": "straw",
+  "virality": {
+   "score": 70.3,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "WATCH",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "WATCH",
@@ -9033,6 +11293,30 @@
   "myth_bust": false,
   "music": "soft piano",
   "thumbnail_text": "WATCH THE BOOK",
+  "demo": true,
+  "hook_object": "paperback",
+  "virality": {
+   "score": 79.2,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "WATCH",
@@ -9142,6 +11426,29 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "TOP SHELF TEST",
+  "demo": true,
+  "hook_object": "top",
+  "virality": {
+   "score": 81.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "WATCH",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)"
+   ]
+  },
   "hook_grammar": [
    "WATCH",
    "OBJ3",
@@ -9245,6 +11552,31 @@
   "myth_bust": false,
   "music": "soft ambient",
   "thumbnail_text": "DRAW THE BOW",
+  "demo": true,
+  "hook_object": "edge",
+  "virality": {
+   "score": 78.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "DEMO"
@@ -9354,6 +11686,31 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "ROLL LIKE A LOG",
+  "demo": true,
+  "hook_object": "alarm",
+  "virality": {
+   "score": 76.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "DEMO"
@@ -9460,6 +11817,32 @@
   "myth_bust": false,
   "music": "playful jazz",
   "thumbnail_text": "DISHES = BALANCE",
+  "demo": true,
+  "hook_object": "dishes",
+  "virality": {
+   "score": 71.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "DEMO"
@@ -9567,6 +11950,32 @@
   "myth_bust": false,
   "music": "playful jazz",
   "thumbnail_text": "SEND TO HIM",
+  "demo": true,
+  "hook_object": "send",
+  "virality": {
+   "score": 65.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 5.0,
+    "number": 5.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "first spoken clause 16 words / sentence 16 (max 12 / 22)",
+    "no concrete number in the hook or re-hook",
+    "no open loop / re-hook by second 3–6",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "SHARE",
    "DEMO"
@@ -9668,6 +12077,31 @@
   "myth_bust": false,
   "music": "soft ambient",
   "thumbnail_text": "TAI CHI = PT?",
+  "demo": true,
+  "hook_object": "knee",
+  "virality": {
+   "score": 72.3,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 1.2
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "CTA is long or asks for more than one keyword"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "DEMO"
@@ -9774,6 +12208,31 @@
   "myth_bust": true,
   "music": "playful pizzicato",
   "thumbnail_text": "IT'S JUST WATER",
+  "demo": true,
+  "hook_object": "warm",
+  "virality": {
+   "score": 74.2,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "MYTH",
@@ -9884,6 +12343,31 @@
   "myth_bust": true,
   "music": "playful pizzicato",
   "thumbnail_text": "GARLIC WATER? NO.",
+  "demo": true,
+  "hook_object": "garlic",
+  "virality": {
+   "score": 68.7,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "MYTH",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "MYTH",
@@ -9994,6 +12478,30 @@
   "myth_bust": true,
   "music": "playful pizzicato",
   "thumbnail_text": "WATCH WHAT HAPPENS",
+  "demo": true,
+  "hook_object": "honey",
+  "virality": {
+   "score": 74.3,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "WATCH",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 1.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "WATCH",
@@ -10103,6 +12611,31 @@
   "myth_bust": false,
   "music": "playful jazz",
   "thumbnail_text": "8 g FIBER · $1",
+  "demo": true,
+  "hook_object": "frozen",
+  "virality": {
+   "score": 72.2,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "KITCHEN_SERIES",
@@ -10210,6 +12743,31 @@
   "myth_bust": true,
   "music": "playful pizzicato",
   "thumbnail_text": "IT'S JUST PRETTY",
+  "demo": true,
+  "hook_object": "cucumber",
+  "virality": {
+   "score": 68.7,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "MYTH",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "MYTH",
@@ -10318,6 +12876,30 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "14 g BY 8 A.M.",
+  "demo": true,
+  "hook_object": "oats",
+  "virality": {
+   "score": 79.2,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "KITCHEN_SERIES",
@@ -10425,6 +13007,31 @@
   "myth_bust": true,
   "music": "playful pizzicato",
   "thumbnail_text": "SPICE, NOT A PLAN",
+  "demo": true,
+  "hook_object": "cinnamon",
+  "virality": {
+   "score": 69.7,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "MYTH",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 1.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "MYTH",
@@ -10533,6 +13140,31 @@
   "myth_bust": false,
   "music": "playful jazz",
   "thumbnail_text": "2 EGGS = 12 g",
+  "demo": true,
+  "hook_object": "eggs",
+  "virality": {
+   "score": 73.2,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 1.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "KITCHEN_SERIES",
@@ -10633,6 +13265,31 @@
   "myth_bust": true,
   "music": "playful pizzicato",
   "thumbnail_text": "SALAD ON YOUR SPINE",
+  "demo": true,
+  "hook_object": "cabbage",
+  "virality": {
+   "score": 68.7,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "MYTH",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "MYTH",
@@ -10741,6 +13398,31 @@
   "myth_bust": false,
   "music": "playful jazz",
   "thumbnail_text": "FRIDGE AISLE ONLY",
+  "demo": true,
+  "hook_object": "sauerkraut",
+  "virality": {
+   "score": 68.7,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "NOT_X",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "MYTH",
    "OBJ3",
@@ -10843,6 +13525,31 @@
   "myth_bust": true,
   "music": "playful pizzicato",
   "thumbnail_text": "SALT GOES IN THE POT",
+  "demo": true,
+  "hook_object": "standing",
+  "virality": {
+   "score": 68.7,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "MYTH",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "MYTH",
    "DEBUNK",
@@ -10950,6 +13657,31 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "MAY HELP A LITTLE",
+  "demo": true,
+  "hook_object": "ginger",
+  "virality": {
+   "score": 68.7,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "NOT_X",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "MYTH",
    "OBJ3",
@@ -11058,6 +13790,31 @@
   "myth_bust": false,
   "music": "playful jazz",
   "thumbnail_text": "IT'S A SAUCE",
+  "demo": true,
+  "hook_object": "peanut",
+  "virality": {
+   "score": 72.2,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "KITCHEN_SERIES",
@@ -11165,6 +13922,31 @@
   "myth_bust": true,
   "music": "playful pizzicato",
   "thumbnail_text": "THEY FLOAT",
+  "demo": true,
+  "hook_object": "blueberries",
+  "virality": {
+   "score": 65.3,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "WATCH",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "WATCH",
@@ -11274,6 +14056,31 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "READ ONE NUMBER",
+  "demo": true,
+  "hook_object": "greek",
+  "virality": {
+   "score": 73.2,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 1.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "KITCHEN_SERIES",
@@ -11381,6 +14188,31 @@
   "myth_bust": false,
   "music": "playful jazz",
   "thumbnail_text": "IT'S A WHOLE GRAIN",
+  "demo": true,
+  "hook_object": "popcorn",
+  "virality": {
+   "score": 66.7,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "NOT_X",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "MYTH",
    "OBJ3",
@@ -11483,6 +14315,31 @@
   "myth_bust": true,
   "music": "soft piano",
   "thumbnail_text": "IT GOES IN SPINACH",
+  "demo": true,
+  "hook_object": "sesame",
+  "virality": {
+   "score": 68.7,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "MYTH",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "MYTH",
@@ -11583,6 +14440,32 @@
   "myth_bust": true,
   "music": "soft piano",
   "thumbnail_text": "EXHALE, NOT FEET",
+  "demo": true,
+  "hook_object": "feet",
+  "virality": {
+   "score": 66.9,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "MYTH",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 1.2
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)",
+    "CTA is long or asks for more than one keyword"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "MYTH",
@@ -11691,6 +14574,30 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "CARRY YOUR OWN",
+  "demo": true,
+  "hook_object": "grocery",
+  "virality": {
+   "score": 85.0,
+   "gate": "PASS",
+   "top_decile": true,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 1.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "SHARE",
@@ -11799,6 +14706,31 @@
   "myth_bust": false,
   "music": "soft piano",
   "thumbnail_text": "CALL HER TODAY",
+  "demo": false,
+  "hook_object": "friend",
+  "virality": {
+   "score": 66.3,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 11.25,
+    "open_loop": 3.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no open loop / re-hook by second 3–6",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "SHARE"
   ],
@@ -11905,6 +14837,31 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "DOWN AND BACK UP",
+  "demo": true,
+  "hook_object": "grandkids",
+  "virality": {
+   "score": 71.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "TEST_NOW",
@@ -12012,6 +14969,31 @@
   "myth_bust": false,
   "music": "playful jazz",
   "thumbnail_text": "ICE RINK",
+  "demo": true,
+  "hook_object": "socks",
+  "virality": {
+   "score": 80.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 1.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no open loop / re-hook by second 3–6",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "SHARE",
@@ -12120,6 +15102,31 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "3 KNEE QUESTIONS",
+  "demo": false,
+  "hook_object": "three",
+  "virality": {
+   "score": 73.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 6.75,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 1.2
+   },
+   "why": [
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "CTA is long or asks for more than one keyword"
+   ]
+  },
   "hook_grammar": [
    "DEMO"
   ],
@@ -12226,6 +15233,31 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "THE COUCH RULE",
+  "demo": true,
+  "hook_object": "couch",
+  "virality": {
+   "score": 76.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "DEMO"
@@ -12332,6 +15364,31 @@
   "myth_bust": false,
   "music": "playful jazz",
   "thumbnail_text": "NOT LUNCH",
+  "demo": true,
+  "hook_object": "crackers",
+  "virality": {
+   "score": 72.2,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "DEMO"
@@ -12438,6 +15495,30 @@
   "myth_bust": false,
   "music": "playful jazz",
   "thumbnail_text": "WRONG BUDGET",
+  "demo": true,
+  "hook_object": "eighty-dollar",
+  "virality": {
+   "score": 84.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "SHARE",
@@ -12553,6 +15634,31 @@
   "myth_bust": false,
   "music": "playful jazz",
   "thumbnail_text": "LOSER DOES DISHES",
+  "demo": true,
+  "hook_object": "walk",
+  "virality": {
+   "score": 68.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "COMMAND",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 1.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "TEST_NOW",
@@ -12668,6 +15774,31 @@
   "myth_bust": false,
   "music": "playful jazz",
   "thumbnail_text": "41° · TANK TOP",
+  "demo": true,
+  "hook_object": "forty-one",
+  "virality": {
+   "score": 67.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "DEMO"
@@ -12687,19 +15818,19 @@
   "hook_id": "H367",
   "title": "Jajangmyeon Sunday: I brought the kimchi",
   "target_seconds": 47,
-  "hook_line": "Jajangmyeon Sunday. He cooked. I brought the kimchi and a cucumber.",
+  "hook_line": "Jajangmyeon Sunday. He cooked. I brought the kimchi. Watch what the kimchi does that the sauce can't.",
   "beats": [
    {
     "t": "0-3",
     "speaker": "SUN",
-    "vo": "Jajangmyeon Sunday. He cooked. I brought the kimchi and a cucumber.",
+    "vo": "Jajangmyeon Sunday. He cooked. I brought the kimchi. Watch what the kimchi does that the sauce can't.",
     "ost": "JAJANGMYEON SUNDAY",
     "shot": "SET-KITCHEN | C-KITCHEN + S-KITCHEN | glossy black-bean noodles set down; Sun places a kimchi dish and julienned cucumber beside it | overhead"
    },
    {
     "t": "3-8",
     "speaker": "CHANG",
-    "vo": "The sauce is perfect.",
+    "vo": "The sauce is perfect. Ten out of ten.",
     "ost": "",
     "shot": "same | Chang in the pink floral apron | CU"
    },
@@ -12741,12 +15872,12 @@
    {
     "t": "42-47",
     "speaker": "SUN",
-    "vo": "Seven. Comment GUT for my fiber ladder.",
+    "vo": "Seven. Send this to the cook in your house. Comment GUT for my fiber ladder.",
     "ost": "Comment GUT",
     "shot": "same | Sun steals his cucumber | two-shot"
    }
   ],
-  "spoken_word_count": 89,
+  "spoken_word_count": 107,
   "has_movement": false,
   "movement_tags": [
    "fermented_foods",
@@ -12756,7 +15887,7 @@
   "regression": "",
   "cta_keyword": "GUT",
   "cta_deliverable": "Sun Yoon's 7-Day Fiber Ladder (NEW flow, clone SOUP flow)",
-  "cta_line": "Seven. Comment GUT for my fiber ladder.",
+  "cta_line": "Seven. Send this to the cook in your house. Comment GUT for my fiber ladder.",
   "caption": "Comment GUT for Sun Yoon's 7-Day Fiber Ladder.\nJajangmyeon Sunday, rebuilt: smaller noodle pile, cucumber on top, kimchi on the side. In a small Stanford study (36 adults, 10 weeks, Cell 2021), a high-fermented-food diet increased microbiome diversity and lowered 19 inflammatory proteins.\nKimchi and black-bean sauce are salty: small portions if you watch sodium. Still seven out of ten.",
   "hashtags": {
    "ig": [
@@ -12782,8 +15913,34 @@
   "myth_bust": false,
   "music": "playful jazz",
   "thumbnail_text": "SEVEN OUT OF TEN",
+  "demo": true,
+  "hook_object": "jajangmyeon",
+  "virality": {
+   "score": 76.5,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "WATCH",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 1.2
+   },
+   "why": [
+    "no save trigger (a routine / day N / tonight / write it down)",
+    "CTA is long or asks for more than one keyword"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
+   "WATCH",
+   "SHARE",
    "DEMO"
   ],
   "series": "Jajangmyeon Sunday",
@@ -12889,6 +16046,31 @@
   "myth_bust": false,
   "music": "playful jazz",
   "thumbnail_text": "WHO GETS UP FIRST?",
+  "demo": true,
+  "hook_object": "toy",
+  "virality": {
+   "score": 70.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 1.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "TEST_NOW",
@@ -12909,19 +16091,19 @@
   "hook_id": "H369",
   "title": "Printer ink: the friendship study",
   "target_seconds": 47,
-  "hook_line": "Printer's out of ink again. Thirty pages. One study. About friends.",
+  "hook_line": "Printer's out of ink again. Thirty pages, one study, and it's about your friends, not your pills.",
   "beats": [
    {
     "t": "0-3",
     "speaker": "SUN",
-    "vo": "Printer's out of ink again. Thirty pages. One study. About friends.",
+    "vo": "Printer's out of ink again. Thirty pages, one study, and it's about your friends, not your pills.",
     "ost": "THE PRINTER IS TIRED",
     "shot": "SET-TABLE | C-CASUAL + S-CARDI-JADE | the printer wheezes out a last page; Sun holds up a thick stack | medium"
    },
    {
     "t": "3-7",
     "speaker": "CHANG",
-    "vo": "It's a meta-analysis.",
+    "vo": "It's a meta-analysis. Wait for the last line.",
     "ost": "",
     "shot": "same | Chang, proud | CU"
    },
@@ -12963,12 +16145,12 @@
    {
     "t": "41-47",
     "speaker": "SUN",
-    "vo": "Comment BEGIN. And tell us who you're inviting. First names only.",
+    "vo": "Comment BEGIN. Then send this to the one you're inviting.",
     "ost": "Comment BEGIN",
     "shot": "same | hands Chang one page, recycles the rest | two-shot"
    }
   ],
-  "spoken_word_count": 83,
+  "spoken_word_count": 93,
   "has_movement": false,
   "movement_tags": [
    "social"
@@ -12977,7 +16159,7 @@
   "regression": "",
   "cta_keyword": "BEGIN",
   "cta_deliverable": "Where should I begin? start menu",
-  "cta_line": "Comment BEGIN. And tell us who you're inviting. First names only.",
+  "cta_line": "Comment BEGIN. Then send this to the one you're inviting.",
   "caption": "Comment BEGIN and tell us who you're inviting.\nIn a PLoS Medicine meta-analysis (148 studies, 308,849 people), people with stronger social relationships tended to have longer lives; the link was comparable in size to well-known factors like smoking. Short version: one name, one night this week. Frank comes Tuesdays.\nFeeling alone most days for weeks? Tell your doctor.",
   "hashtags": {
    "ig": [
@@ -13003,8 +16185,32 @@
   "myth_bust": false,
   "music": "playful jazz",
   "thumbnail_text": "THE PRINTER IS TIRED",
+  "demo": false,
+  "hook_object": "printer",
+  "virality": {
+   "score": 79.3,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 1.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
-   "OBJ3"
+   "OBJ3",
+   "SHARE"
   ],
   "series": "",
   "launch_week": false,
@@ -13123,6 +16329,31 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "GOING DOWN",
+  "demo": true,
+  "hook_object": "frank's",
+  "virality": {
+   "score": 69.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "WATCH",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "WATCH",
    "OBJ3",
@@ -13238,6 +16469,31 @@
   "myth_bust": false,
   "music": "playful jazz",
   "thumbnail_text": "HIPS. NOW.",
+  "demo": true,
+  "hook_object": "hips",
+  "virality": {
+   "score": 69.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "DEMO"
@@ -13352,6 +16608,31 @@
   "myth_bust": false,
   "music": "soft piano",
   "thumbnail_text": "ABSOLUTELY NOT",
+  "demo": true,
+  "hook_object": "1976",
+  "virality": {
+   "score": 68.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 1.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "DEMO"
@@ -13466,6 +16747,31 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "NOT 10K",
+  "demo": true,
+  "hook_object": "visor",
+  "virality": {
+   "score": 76.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "DEMO"
@@ -13580,6 +16886,31 @@
   "myth_bust": false,
   "music": "playful jazz",
   "thumbnail_text": "SHORT VERSION",
+  "demo": true,
+  "hook_object": "page",
+  "virality": {
+   "score": 67.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "DEMO"
@@ -13691,6 +17022,31 @@
   "myth_bust": false,
   "music": "warm soul instrumental",
   "thumbnail_text": "DOORS OPEN",
+  "demo": true,
+  "hook_object": "garage",
+  "virality": {
+   "score": 63.3,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "LAUNCH"
@@ -13795,6 +17151,30 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "I'M AI. THIS IS REAL.",
+  "demo": true,
+  "hook_object": "i'm",
+  "virality": {
+   "score": 67.3,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 0.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)"
+   ]
+  },
   "hook_grammar": [
    "LAUNCH"
   ],
@@ -13900,6 +17280,29 @@
   "myth_bust": false,
   "music": "upbeat soul",
   "thumbnail_text": "STARTS TOMORROW",
+  "demo": true,
+  "hook_object": "thirty",
+  "virality": {
+   "score": 81.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "LAUNCH",
@@ -14013,6 +17416,30 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "4 PLAIN FACTS",
+  "demo": false,
+  "hook_object": "founding",
+  "virality": {
+   "score": 73.7,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "MYTH",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "LAUNCH"
@@ -14117,6 +17544,30 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "FOR THE DAD WHO NEEDS NOTHING",
+  "demo": true,
+  "hook_object": "dad",
+  "virality": {
+   "score": 75.3,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 11.25,
+    "open_loop": 3.0,
+    "share": 8.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no open loop / re-hook by second 3–6"
+   ]
+  },
   "hook_grammar": [
    "SHARE",
    "LAUNCH"
@@ -14222,6 +17673,29 @@
   "myth_bust": false,
   "music": "upbeat soul",
   "thumbnail_text": "YOUR FIRST SESSION",
+  "demo": true,
+  "hook_object": "phone",
+  "virality": {
+   "score": 77.3,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "LAUNCH",
@@ -14327,6 +17801,32 @@
   "myth_bust": false,
   "music": "playful jazz",
   "thumbnail_text": "DOORS OPEN",
+  "demo": true,
+  "hook_object": "recipe",
+  "virality": {
+   "score": 61.5,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 1.2
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)",
+    "CTA is long or asks for more than one keyword"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "LAUNCH",
@@ -14432,6 +17932,30 @@
   "myth_bust": false,
   "music": "playful jazz",
   "thumbnail_text": "NOT ANOTHER CANDLE",
+  "demo": true,
+  "hook_object": "send",
+  "virality": {
+   "score": 75.3,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 11.25,
+    "open_loop": 3.0,
+    "share": 8.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no open loop / re-hook by second 3–6"
+   ]
+  },
   "hook_grammar": [
    "SHARE",
    "LAUNCH"
@@ -14536,6 +18060,31 @@
   "myth_bust": false,
   "music": "playful pizzicato",
   "thumbnail_text": "2 SCREENS TO LEAVE",
+  "demo": true,
+  "hook_object": "cancel",
+  "virality": {
+   "score": 68.5,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 1.2
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)",
+    "CTA is long or asks for more than one keyword"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "LAUNCH",
@@ -14641,6 +18190,31 @@
   "myth_bust": false,
   "music": "playful pizzicato",
   "thumbnail_text": "MY 4 RULES",
+  "demo": false,
+  "hook_object": "rules",
+  "virality": {
+   "score": 63.3,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "LAUNCH"
@@ -14752,6 +18326,31 @@
   "myth_bust": false,
   "music": "playful jazz",
   "thumbnail_text": "DOORS OPEN",
+  "demo": true,
+  "hook_object": "fifty",
+  "virality": {
+   "score": 67.6,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "AUTHORITY",
+   "parts": {
+    "hook_class": 18.35,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "LAUNCH"
@@ -14771,20 +18370,20 @@
   "hook_id": "H386",
   "title": "PIN 1-D (founding week): Hi, we're AI. Doors are open.",
   "target_seconds": 46,
-  "hook_line": "Before you follow us, or join us: we're AI.",
+  "hook_line": "Before you follow us, or join us: we're AI. Not real, not doctors. Watch what is real.",
   "beats": [
    {
     "t": "0-3",
     "speaker": "SUN",
-    "vo": "Before you follow us, or join us: we're AI.",
-    "ost": "WE'RE AI",
+    "vo": "Before you follow us, or join us: we're AI. Not real, not doctors. Watch what is real.",
+    "ost": "WE'RE AI. WATCH WHAT'S REAL.",
     "shot": "SET-LIVING | C-CASUAL + S-CARDI-JADE | both on the sofa, Mandu between them | two-shot"
    },
    {
     "t": "3-7",
     "speaker": "CHANG",
-    "vo": "Made by a team of people who love their grandparents.",
-    "ost": "Made by a team",
+    "vo": "Made by a team of people who love their grandparents. Fifty years married? Fiction.",
+    "ost": "Made by a team · 50 years = fiction",
     "shot": "same | CU | CU"
    },
    {
@@ -14830,7 +18429,7 @@
     "shot": "same | deadpan; Chang laughs | two-shot"
    }
   ],
-  "spoken_word_count": 109,
+  "spoken_word_count": 121,
   "has_movement": false,
   "movement_tags": [
    "disclosure",
@@ -14864,8 +18463,35 @@
   "myth_bust": false,
   "music": "playful jazz",
   "thumbnail_text": "HI, WE'RE AI",
+  "demo": false,
+  "hook_object": "before",
+  "virality": {
+   "score": 69.4,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "NOT_X",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 6.75,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 1.2
+   },
+   "why": [
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)",
+    "CTA is long or asks for more than one keyword"
+   ]
+  },
   "hook_grammar": [
-   "LAUNCH"
+   "LAUNCH",
+   "WATCH"
   ],
   "series": "",
   "launch_week": true,
@@ -14969,6 +18595,30 @@
   "myth_bust": false,
   "music": "upbeat soul",
   "thumbnail_text": "7 DAYS · FOR TWO",
+  "demo": true,
+  "hook_object": "two",
+  "virality": {
+   "score": 76.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "LAUNCH",
@@ -15075,6 +18725,31 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "THEY SAY 'NOTHING'",
+  "demo": true,
+  "hook_object": "kids",
+  "virality": {
+   "score": 67.3,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "SHARE",
    "LAUNCH"
@@ -15193,6 +18868,31 @@
   "myth_bust": false,
   "music": "playful jazz",
   "thumbnail_text": "SHOW ME THE TERMS",
+  "demo": false,
+  "hook_object": "founding",
+  "virality": {
+   "score": 69.7,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "MYTH",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 1.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "LAUNCH"
@@ -15298,6 +18998,32 @@
   "myth_bust": false,
   "music": "playful jazz",
   "thumbnail_text": "IS IT A SUBSCRIPTION?",
+  "demo": false,
+  "hook_object": "subscription",
+  "virality": {
+   "score": 67.4,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "MYTH",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 6.75,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 1.2
+   },
+   "why": [
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)",
+    "CTA is long or asks for more than one keyword"
+   ]
+  },
   "hook_grammar": [
    "LAUNCH"
   ],
@@ -15405,6 +19131,31 @@
   "myth_bust": false,
   "music": "warm soul instrumental",
   "thumbnail_text": "LAUNDRY = REPS",
+  "demo": true,
+  "hook_object": "laundry",
+  "virality": {
+   "score": 69.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "WATCH",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "WATCH",
@@ -15512,6 +19263,31 @@
   "myth_bust": false,
   "music": "light acoustic",
   "thumbnail_text": "BRUSH. RAISE. REPEAT.",
+  "demo": true,
+  "hook_object": "brush",
+  "virality": {
+   "score": 76.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "DEMO"
@@ -15618,6 +19394,30 @@
   "myth_bust": false,
   "music": "warm soul instrumental",
   "thumbnail_text": "KETTLE BALANCE",
+  "demo": true,
+  "hook_object": "kettle",
+  "virality": {
+   "score": 88.2,
+   "gate": "PASS",
+   "top_decile": true,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 1.2
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "CTA is long or asks for more than one keyword"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "DEMO",
@@ -15685,12 +19485,12 @@
    {
     "t": "42-47",
     "speaker": "CHANG",
-    "vo": "Comment TEST. I'll send the three-minute strength test.",
+    "vo": "Comment TEST for the strength test. Send this to whoever says they're too old.",
     "ost": "Comment TEST",
     "shot": "same | sets the bell down | medium"
    }
   ],
-  "spoken_word_count": 98,
+  "spoken_word_count": 104,
   "has_movement": true,
   "movement_tags": [
    "hinge"
@@ -15699,7 +19499,7 @@
   "regression": "A backpack with two books instead of a kettlebell.",
   "cta_keyword": "TEST",
   "cta_deliverable": "Strength Age test (quiz)",
-  "cta_line": "Comment TEST. I'll send the three-minute strength test.",
+  "cta_line": "Comment TEST for the strength test. Send this to whoever says they're too old.",
   "caption": "Comment TEST for the free 3-minute Strength Age test.\nMyth: lifting is dangerous after 70. The NSCA position statement: resistance training is safe and effective for older adults, frail adults included, when it starts light and progresses gradually. The risky part is too heavy, too soon, with a straining breath.\nHeart condition or new chest pain? Get medical clearance first (ACSM).",
   "hashtags": {
    "ig": [
@@ -15726,6 +19526,27 @@
   "myth_bust": true,
   "music": "driving soul",
   "thumbnail_text": "TOO OLD TO LIFT?",
+  "demo": true,
+  "hook_object": "lifting",
+  "virality": {
+   "score": 94.5,
+   "gate": "PASS",
+   "top_decile": true,
+   "hook_class": "MYTH",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 8.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": []
+  },
   "hook_grammar": [
    "MYTH",
    "WATCH",
@@ -15786,12 +19607,12 @@
    {
     "t": "38-44",
     "speaker": "CHANG",
-    "vo": "Bench, bed, or bus stop. Comment BREATH for the guided five minutes.",
-    "ost": "Comment BREATH",
+    "vo": "Save it for tonight before bed. Send it to whoever needs it. Comment BREATH.",
+    "ost": "Send it · Comment BREATH",
     "shot": "same | gulls lift off the railing behind him | wide"
    }
   ],
-  "spoken_word_count": 78,
+  "spoken_word_count": 80,
   "has_movement": false,
   "movement_tags": [
    "breathing"
@@ -15800,7 +19621,7 @@
   "regression": "",
   "cta_keyword": "BREATH",
   "cta_deliverable": "The 4-6 Breath (5 min)",
-  "cta_line": "Bench, bed, or bus stop. Comment BREATH for the guided five minutes.",
+  "cta_line": "Save it for tonight before bed. Send it to whoever needs it. Comment BREATH.",
   "caption": "Comment BREATH for the guided 5-minute 4-6 Breath.\nIn through the nose for 4, out through soft lips for 6, about 6 breaths a minute. A meta-analysis found slow breathing at that pace increases vagally-mediated heart-rate variability during and after practice.\nLight-headed? Breathe normally and stop.",
   "hashtags": {
    "ig": [
@@ -15826,6 +19647,27 @@
   "myth_bust": false,
   "music": "soft piano",
   "thumbnail_text": "LONGER OUT",
+  "demo": true,
+  "hook_object": "not",
+  "virality": {
+   "score": 88.7,
+   "gate": "PASS",
+   "top_decile": true,
+   "hook_class": "NOT_X",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 8.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": []
+  },
   "hook_grammar": [
    "DEMO",
    "TEST_NOW"
@@ -15932,6 +19774,29 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "EARN THE FLOOR",
+  "demo": true,
+  "hook_object": "floor",
+  "virality": {
+   "score": 90.0,
+   "gate": "PASS",
+   "top_decile": true,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "DEMO"
@@ -16039,6 +19904,31 @@
   "myth_bust": false,
   "music": "warm soul instrumental",
   "thumbnail_text": "FEEL IT SWITCH ON",
+  "demo": true,
+  "hook_object": "thigh",
+  "virality": {
+   "score": 69.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "DEMO"
@@ -16058,12 +19948,12 @@
   "hook_id": "H398",
   "title": "Not a doctor, not a real person",
   "target_seconds": 44,
-  "hook_line": "Not a doctor, not a real person. An AI welder. Here's what's real.",
+  "hook_line": "Not a doctor, not a real person. A seventy-four-year-old AI welder. Here's what's real.",
   "beats": [
    {
     "t": "0-3",
     "speaker": "CHANG",
-    "vo": "Not a doctor, not a real person. An AI welder. Here's what's real.",
+    "vo": "Not a doctor, not a real person. A seventy-four-year-old AI welder. Here's what's real.",
     "ost": "AI CHARACTER · HERE'S WHAT'S REAL",
     "shot": "SET-GARAGE | C-TRAIN-A | Chang lifts the old welding helmet off its nail and taps the burned-in AI tag | medium"
    },
@@ -16077,7 +19967,7 @@
    {
     "t": "11-20",
     "speaker": "CHANG",
-    "vo": "Every number we use comes from a published study. The study goes in the caption. Check me.",
+    "vo": "Every number we use comes from a published study. The study goes in the caption. Save this and check me.",
     "ost": "Studies in the caption",
     "shot": "same | points down to the caption area | medium"
    },
@@ -16098,12 +19988,12 @@
    {
     "t": "36-44",
     "speaker": "CHANG",
-    "vo": "Comment WAITLIST. It's free. Day one now, one email when we open.",
+    "vo": "Comment WAITLIST. It's free. Send this to the friend who asked about me.",
     "ost": "Comment WAITLIST · free",
     "shot": "same | hangs the helmet back on its nail | medium"
    }
   ],
-  "spoken_word_count": 95,
+  "spoken_word_count": 100,
   "has_movement": false,
   "movement_tags": [
    "disclosure"
@@ -16112,7 +20002,7 @@
   "regression": "",
   "cta_keyword": "WAITLIST",
   "cta_deliverable": "Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)",
-  "cta_line": "Comment WAITLIST. It's free. Day one now, one email when we open.",
+  "cta_line": "Comment WAITLIST. It's free. Send this to the friend who asked about me.",
   "caption": "Comment WAITLIST for the free waitlist link and Chang's day-1 session.\nChang Yin is an AI character made by a team of people; his story is fiction. What's real: the exercises (always with an easier version) and the studies, cited in every caption. Strong Years opens soon with a new session every morning, at your level.\nThe waitlist is free: one email when Strong Years opens, plus at most 3 launch emails in the 72 hours after. No card. Unsubscribe in one click.",
   "hashtags": {
    "ig": [
@@ -16136,6 +20026,27 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "AI. HERE'S WHAT'S REAL.",
+  "demo": false,
+  "hook_object": "not",
+  "virality": {
+   "score": 88.7,
+   "gate": "PASS",
+   "top_decile": true,
+   "hook_class": "NOT_X",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 8.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": []
+  },
   "hook_grammar": [
    "DEMO"
   ],
@@ -16241,6 +20152,30 @@
   "myth_bust": false,
   "music": "driving soul",
   "thumbnail_text": "MY NUMBER: 22",
+  "demo": true,
+  "hook_object": "chair",
+  "virality": {
+   "score": 81.6,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "WATCH",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 4.0,
+    "save": 3.5,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "WATCH",
@@ -16288,7 +20223,7 @@
    {
     "t": "21-31",
     "speaker": "SUN",
-    "vo": "Two kiwis, a spoon, done. Skin on is more fiber, if you can stand the fuzz. I can't.",
+    "vo": "Two kiwis, a spoon, done. Try it tomorrow morning. Skin on is more fiber, if you can stand the fuzz. I can't.",
     "ost": "Two kiwis, a spoon, done",
     "shot": "same | she scoops one, wrinkles her nose at the skin | CU"
    },
@@ -16309,12 +20244,12 @@
    {
     "t": "42-46",
     "speaker": "SUN",
-    "vo": "Comment GUT. I'll send my seven-day fiber ladder.",
+    "vo": "Comment GUT for my seven-day fiber ladder. Send this to the prune buyer.",
     "ost": "Comment GUT",
-    "shot": "same | taps the board | medium"
+    "shot": "same | taps the board, slides a prune bowl at camera | medium"
    }
   ],
-  "spoken_word_count": 93,
+  "spoken_word_count": 102,
   "has_movement": false,
   "movement_tags": [
    "fiber"
@@ -16323,7 +20258,7 @@
   "regression": "",
   "cta_keyword": "GUT",
   "cta_deliverable": "Sun Yoon's 7-Day Fiber Ladder (NEW flow, clone SOUP flow)",
-  "cta_line": "Comment GUT. I'll send my seven-day fiber ladder.",
+  "cta_line": "Comment GUT for my seven-day fiber ladder. Send this to the prune buyer.",
   "caption": "Comment GUT for Sun Yoon's 7-Day Fiber Ladder.\nIn a 4-week trial of 75 adults with chronic constipation, 2 green kiwis a day, 100 g prunes and 12 g psyllium improved bowel movements similarly; kiwi had the fewest side effects and the highest satisfaction (Chey et al., 2021; exploratory).\nKiwi allergy or a low-potassium diet? Skip it. Add fiber slowly, with water.",
   "hashtags": {
    "ig": [
@@ -16349,6 +20284,27 @@
   "myth_bust": false,
   "music": "playful pizzicato",
   "thumbnail_text": "2 KIWIS A DAY?",
+  "demo": true,
+  "hook_object": "kiwis",
+  "virality": {
+   "score": 96.2,
+   "gate": "PASS",
+   "top_decile": true,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 8.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": []
+  },
   "hook_grammar": [
    "IF_EVERY",
    "KITCHEN_SERIES",
@@ -16395,7 +20351,7 @@
    {
     "t": "20-31",
     "speaker": "SUN",
-    "vo": "So why do I make it? Warm, salty, easy to swallow, and it gets protein into a tired person. That's real.",
+    "vo": "So why do I make it? Warm, salty, easy to swallow, and it gets protein into a tired person. That's real. Save this for the next cold.",
     "ost": "Warm · easy · protein",
     "shot": "same | ladles chicken, radish, scallion into a bowl | overhead"
    },
@@ -16416,12 +20372,12 @@
    {
     "t": "43-47",
     "speaker": "SUN",
-    "vo": "Comment SOUP. Three of my soups, with grams.",
+    "vo": "Comment SOUP. Three soups, with grams. Send this to whoever swears by it.",
     "ost": "Comment SOUP",
     "shot": "same | sets the bowl down | medium"
    }
   ],
-  "spoken_word_count": 99,
+  "spoken_word_count": 110,
   "has_movement": false,
   "movement_tags": [
    "soup",
@@ -16431,7 +20387,7 @@
   "regression": "",
   "cta_keyword": "SOUP",
   "cta_deliverable": "Sun Yoon's Three Soups",
-  "cta_line": "Comment SOUP. Three of my soups, with grams.",
+  "cta_line": "Comment SOUP. Three soups, with grams. Send this to whoever swears by it.",
   "caption": "Comment SOUP for Sun Yoon's Three Soups.\nThe famous chicken-soup study (Rennard et al., Chest 2000) was in a lab dish: soup slowed white-blood-cell movement, and the authors said benefit in people remains untested. Make it because it's warm, easy and carries protein.\nWatching salt? Use half. Fever over 3 days or trouble breathing? Call your doctor.",
   "hashtags": {
    "ig": [
@@ -16457,6 +20413,27 @@
   "myth_bust": true,
   "music": "playful pizzicato",
   "thumbnail_text": "LAB DISH. NOT YOU.",
+  "demo": true,
+  "hook_object": "chicken",
+  "virality": {
+   "score": 88.7,
+   "gate": "PASS",
+   "top_decile": true,
+   "hook_class": "MYTH",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 8.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": []
+  },
   "hook_grammar": [
    "OBJ3",
    "MYTH",
@@ -16559,6 +20536,31 @@
   "myth_bust": false,
   "music": "playful pizzicato",
   "thumbnail_text": "READ THE IODINE",
+  "demo": true,
+  "hook_object": "seaweed",
+  "virality": {
+   "score": 70.7,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "NOT_X",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "DEBUNK",
    "KITCHEN_SERIES"
@@ -16578,14 +20580,14 @@
   "hook_id": "H403",
   "title": "One can of chickpeas, three meals of fiber",
   "target_seconds": 46,
-  "hook_line": "One can of chickpeas. Three meals. Here's the fiber math, out loud.",
+  "hook_line": "One can of chickpeas. Three meals. Watch the fiber math, out loud. Grams, not vibes.",
   "beats": [
    {
     "t": "0-3",
     "speaker": "SUN",
-    "vo": "One can of chickpeas. Three meals. Here's the fiber math, out loud.",
+    "vo": "One can of chickpeas. Three meals. Watch the fiber math, out loud. Grams, not vibes.",
     "ost": "1 CAN = 3 MEALS",
-    "shot": "SET-KITCHEN | S-KITCHEN | Sun drains a can of chickpeas into a colander under the tap | CU"
+    "shot": "SET-KITCHEN | S-KITCHEN | Sun pours a can of chickpeas into a colander under the tap | CU"
    },
    {
     "t": "3-12",
@@ -16618,12 +20620,12 @@
    {
     "t": "38-46",
     "speaker": "SUN",
-    "vo": "Doors open soon. Comment WAITLIST. Free, and my day-one recipe comes now.",
+    "vo": "Send this to the can opener in your house. Comment WAITLIST. It's free.",
     "ost": "Comment WAITLIST · free",
     "shot": "same | lifts the colander | medium"
    }
   ],
-  "spoken_word_count": 86,
+  "spoken_word_count": 90,
   "has_movement": false,
   "movement_tags": [
    "fiber",
@@ -16633,7 +20635,7 @@
   "regression": "",
   "cta_keyword": "WAITLIST",
   "cta_deliverable": "Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)",
-  "cta_line": "Doors open soon. Comment WAITLIST. Free, and my day-one recipe comes now.",
+  "cta_line": "Send this to the can opener in your house. Comment WAITLIST. It's free.",
   "caption": "Comment WAITLIST for the free waitlist link and Sun Yoon's day-1 recipe.\nA Lancet review linked 25–29 g fiber a day with better health outcomes than lower intakes. One can of chickpeas = about 3 half-cups at ~6 g fiber each (USDA): salad, soup, roasted.\nNew to beans? Start with two spoons a day and go up slowly, with water.\nThe waitlist is free: one email when Strong Years opens, plus at most 3 launch emails in the 72 hours after. No card. Unsubscribe in one click.",
   "hashtags": {
    "ig": [
@@ -16660,8 +20662,32 @@
   "myth_bust": false,
   "music": "playful pizzicato",
   "thumbnail_text": "1 CAN. 18 GRAMS.",
+  "demo": true,
+  "hook_object": "can",
+  "virality": {
+   "score": 78.3,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "WATCH",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
+   "WATCH",
    "KITCHEN_SERIES",
    "DEMO"
   ],
@@ -16761,6 +20787,31 @@
   "myth_bust": false,
   "music": "playful pizzicato",
   "thumbnail_text": "4 GRAMS. NO.",
+  "demo": true,
+  "hook_object": "toast",
+  "virality": {
+   "score": 78.5,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 1.0,
+    "cta_friction": 1.2
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)",
+    "CTA is long or asks for more than one keyword"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "DEMO"
@@ -16868,6 +20919,30 @@
   "myth_bust": false,
   "music": "driving soul",
   "thumbnail_text": "TOO COMFORTABLE.",
+  "demo": true,
+  "hook_object": "seventy-six",
+  "virality": {
+   "score": 79.5,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "NOT_X",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "DEMO"
   ],
@@ -16975,6 +21050,30 @@
   "myth_bust": false,
   "music": "playful pizzicato",
   "thumbnail_text": "TOFU. 30 GRAMS.",
+  "demo": true,
+  "hook_object": "tofu",
+  "virality": {
+   "score": 70.3,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "WATCH",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "WATCH",
@@ -17003,7 +21102,7 @@
     "speaker": "SUN",
     "vo": "'Are you even real?' No. I'm AI. My opinion of your breakfast is real.",
     "ost": "'ARE YOU EVEN REAL?' NO.",
-    "shot": "SET-TABLE | S-CARDI-JADE | Sun reads a printed comment card through her glasses | CU"
+    "shot": "SET-TABLE | S-CARDI-JADE | Sun taps a printed comment card on the table and reads it through her glasses | CU"
    },
    {
     "t": "3-11",
@@ -17027,21 +21126,28 @@
     "shot": "same | phone inset: a recipe card with grams | insert"
    },
    {
-    "t": "29-35",
+    "t": "29-33",
     "speaker": "SUN",
     "vo": "Food allergy or a special diet from your doctor? Their plan comes first. Always.",
     "ost": "Special diet? Doctor's plan first.",
     "shot": "same | CU | CU"
    },
    {
-    "t": "35-45",
+    "t": "33-38",
     "speaker": "SUN",
-    "vo": "Comment WAITLIST. It's free. One email when we open. I don't spam. The team won't let me.",
+    "vo": "Show this to whoever asked you about me. Save it for the next one who asks.",
+    "ost": "Show them this",
+    "shot": "same | holds the card to camera, smirk | CU"
+   },
+   {
+    "t": "38-45",
+    "speaker": "SUN",
+    "vo": "Comment WAITLIST. It's free. One email when we open. No spam.",
     "ost": "Comment WAITLIST · free",
-    "shot": "same | sets the card down, smirk | medium"
+    "shot": "same | sets the card down | medium"
    }
   ],
-  "spoken_word_count": 95,
+  "spoken_word_count": 105,
   "has_movement": false,
   "movement_tags": [
    "disclosure"
@@ -17050,7 +21156,7 @@
   "regression": "",
   "cta_keyword": "WAITLIST",
   "cta_deliverable": "Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)",
-  "cta_line": "Comment WAITLIST. It's free. One email when we open. I don't spam. The team won't let me.",
+  "cta_line": "Comment WAITLIST. It's free. One email when we open. No spam.",
   "caption": "Comment WAITLIST for the free waitlist link and Sun Yoon's day-1 recipe.\nSun Yoon is an AI character made by a team of people; her story is fiction (she still kept her own family name). What's real: the recipes, the grams (USDA values) and the study cited in each caption.\nThe waitlist is free: one email when Strong Years opens, plus at most 3 launch emails in the 72 hours after. No card. Unsubscribe in one click.",
   "hashtags": {
    "ig": [
@@ -17074,6 +21180,27 @@
   "myth_bust": false,
   "music": "playful pizzicato",
   "thumbnail_text": "NO. I'M AI.",
+  "demo": false,
+  "hook_object": "are",
+  "virality": {
+   "score": 90.7,
+   "gate": "PASS",
+   "top_decile": true,
+   "hook_class": "MYTH",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 8.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": []
+  },
   "hook_grammar": [
    "DEMO"
   ],
@@ -17186,6 +21313,30 @@
   "myth_bust": false,
   "music": "playful swing",
   "thumbnail_text": "LOSER DOES DISHES",
+  "demo": true,
+  "hook_object": "thirty-second",
+  "virality": {
+   "score": 74.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "WATCH",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "WATCH",
@@ -17292,6 +21443,32 @@
   "myth_bust": false,
   "music": "playful swing",
   "thumbnail_text": "HE FLEXES IN EVERYTHING",
+  "demo": false,
+  "hook_object": "shiny",
+  "virality": {
+   "score": 62.5,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "STATEMENT",
+   "parts": {
+    "hook_class": 10.2,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 11.25,
+    "open_loop": 3.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "hook class STATEMENT is a bottom-tier opener (POSTDB §3b)",
+    "no concrete number in the hook or re-hook",
+    "no open loop / re-hook by second 3–6",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "SHARE"
   ],
@@ -17397,6 +21574,30 @@
   "myth_bust": false,
   "music": "playful swing",
   "thumbnail_text": "DISHES ON ONE LEG",
+  "demo": true,
+  "hook_object": "dishes",
+  "virality": {
+   "score": 84.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "DEMO",
@@ -17497,6 +21698,31 @@
   "myth_bust": false,
   "music": "soft piano",
   "thumbnail_text": "CALL ONE PERSON",
+  "demo": false,
+  "hook_object": "not",
+  "virality": {
+   "score": 71.2,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "NOT_X",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 6.75,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "SHARE"
   ],
@@ -17527,7 +21753,7 @@
    {
     "t": "3-10",
     "speaker": "CHANG",
-    "vo": "Twelve. I counted.",
+    "vo": "Twelve. I counted. Wait for her math.",
     "ost": "Chang: 12",
     "shot": "same | innocent face | CU"
    },
@@ -17562,12 +21788,12 @@
    {
     "t": "41-46",
     "speaker": "SUN",
-    "vo": "Comment SOUP. My dumpling soup is in there. Fourteen max.",
+    "vo": "Comment SOUP for my dumpling soup. Send this to the one who counts.",
     "ost": "Comment SOUP",
     "shot": "same | she eats one; he counts on his fingers | two-shot"
    }
   ],
-  "spoken_word_count": 77,
+  "spoken_word_count": 84,
   "has_movement": false,
   "movement_tags": [
    "high_protein",
@@ -17577,7 +21803,7 @@
   "regression": "",
   "cta_keyword": "SOUP",
   "cta_deliverable": "Sun Yoon's Three Soups",
-  "cta_line": "Comment SOUP. My dumpling soup is in there. Fourteen max.",
+  "cta_line": "Comment SOUP for my dumpling soup. Send this to the one who counts.",
   "caption": "Comment SOUP for Sun Yoon's Three Soups.\nPork dumplings carry roughly 2–3 g protein each (USDA, approximate). PROT-AGE suggests about 25–30 g protein per meal for adults over 65, so the honest count was about 12, plus greens. Dumplings are salty: dip once.\nKidney disease? Ask your doctor for your protein number.",
   "hashtags": {
    "ig": [
@@ -17604,6 +21830,29 @@
   "myth_bust": false,
   "music": "playful swing",
   "thumbnail_text": "14. HE SAYS 12.",
+  "demo": true,
+  "hook_object": "fourteen",
+  "virality": {
+   "score": 78.3,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "DEMO"
@@ -17710,6 +21959,30 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "SUNDAY CALL TEST",
+  "demo": true,
+  "hook_object": "sunday",
+  "virality": {
+   "score": 79.1,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 8.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "SHARE",
    "TEST_NOW"
@@ -17814,6 +22087,30 @@
   "myth_bust": false,
   "music": "playful swing",
   "thumbnail_text": "ANOTHER COURSE? NO.",
+  "demo": false,
+  "hook_object": "is",
+  "virality": {
+   "score": 73.7,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "MYTH",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "SHARE"
   ],
@@ -17919,6 +22216,29 @@
   "myth_bust": false,
   "music": "soft acoustic",
   "thumbnail_text": "COFFEE MINUTE",
+  "demo": true,
+  "hook_object": "coffee",
+  "virality": {
+   "score": 90.0,
+   "gate": "PASS",
+   "top_decile": true,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "DEMO"
@@ -18023,6 +22343,31 @@
   "myth_bust": false,
   "music": "warm soul instrumental",
   "thumbnail_text": "START HERE",
+  "demo": true,
+  "hook_object": "doors",
+  "virality": {
+   "score": 63.3,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "LAUNCH",
@@ -18135,6 +22480,32 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "EVERY TERM. OUT LOUD.",
+  "demo": false,
+  "hook_object": "founding",
+  "virality": {
+   "score": 60.8,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 6.75,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "LAUNCH"
@@ -18242,6 +22613,29 @@
   "myth_bust": false,
   "music": "warm soul instrumental",
   "thumbnail_text": "DAY ONE. FREE.",
+  "demo": true,
+  "hook_object": "not",
+  "virality": {
+   "score": 84.5,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "NOT_X",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)"
+   ]
+  },
   "hook_grammar": [
    "LAUNCH",
    "DEMO"
@@ -18348,6 +22742,30 @@
   "myth_bust": false,
   "music": "warm soul instrumental",
   "thumbnail_text": "DAY 4: ONE STAIR",
+  "demo": true,
+  "hook_object": "stairs",
+  "virality": {
+   "score": 83.0,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 15.0,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "LAUNCH",
@@ -18460,6 +22878,31 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "THE REAL COUNT",
+  "demo": false,
+  "hook_object": "why",
+  "virality": {
+   "score": 66.8,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 6.75,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 1.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "LAUNCH"
   ],
@@ -18566,6 +23009,31 @@
   "myth_bust": false,
   "music": "playful pizzicato",
   "thumbnail_text": "GRAMS. NOT VIBES.",
+  "demo": true,
+  "hook_object": "my",
+  "virality": {
+   "score": 63.3,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "LAUNCH",
@@ -18675,6 +23143,30 @@
   "myth_bust": false,
   "music": "playful pizzicato",
   "thumbnail_text": "PAGE 14: 30 GRAMS",
+  "demo": true,
+  "hook_object": "egg",
+  "virality": {
+   "score": 70.3,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "WATCH",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "WATCH",
@@ -18784,6 +23276,31 @@
   "myth_bust": false,
   "music": "playful pizzicato",
   "thumbnail_text": "NOT A DIET BOOK",
+  "demo": false,
+  "hook_object": "not",
+  "virality": {
+   "score": 70.7,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "NOT_X",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "LAUNCH"
   ],
@@ -18894,6 +23411,30 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "ONLY IF YOU USE IT",
+  "demo": false,
+  "hook_object": "is",
+  "virality": {
+   "score": 73.7,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "MYTH",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "LAUNCH"
   ],
@@ -18997,6 +23538,30 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "A GIFT THAT ENDS",
+  "demo": false,
+  "hook_object": "buying",
+  "virality": {
+   "score": 72.3,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 2.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "LAUNCH",
@@ -19109,6 +23674,30 @@
   "myth_bust": false,
   "music": "playful swing",
   "thumbnail_text": "THE HONEST VERSION",
+  "demo": false,
+  "hook_object": "doors",
+  "virality": {
+   "score": 71.3,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 1.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "LAUNCH"
@@ -19213,6 +23802,32 @@
   "myth_bust": false,
   "music": "playful swing",
   "thumbnail_text": "DON'T BUY THIS IF…",
+  "demo": false,
+  "hook_object": "if",
+  "virality": {
+   "score": 67.8,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "IF_EVERY",
+   "parts": {
+    "hook_class": 25.0,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 6.75,
+    "open_loop": 3.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no open loop / re-hook by second 3–6",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "IF_EVERY",
    "LAUNCH"
@@ -19324,6 +23939,32 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "LOCKED HOW?",
+  "demo": false,
+  "hook_object": "locked",
+  "virality": {
+   "score": 64.2,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "MYTH",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 5.0,
+    "demo_on_self": 6.75,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no concrete number in the hook or re-hook",
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "LAUNCH"
@@ -19436,6 +24077,31 @@
   "myth_bust": false,
   "music": "playful swing",
   "thumbnail_text": "YOUR QUESTIONS",
+  "demo": false,
+  "hook_object": "your",
+  "virality": {
+   "score": 65.8,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 6.75,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72)",
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "OBJ3",
    "LAUNCH"
@@ -19540,6 +24206,30 @@
   "myth_bust": false,
   "music": "warm acoustic",
   "thumbnail_text": "NO COUNTDOWN",
+  "demo": false,
+  "hook_object": "not",
+  "virality": {
+   "score": 73.7,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "NOT_X",
+   "parts": {
+    "hook_class": 19.48,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 0.0,
+    "length": 10.0,
+    "emotion": 0.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)",
+    "no save trigger (a routine / day N / tonight / write it down)"
+   ]
+  },
   "hook_grammar": [
    "LAUNCH"
   ],

@@ -201,3 +201,16 @@ def test_text_native_formats_only_short_on_threads_and_x(cfg):
 
 def test_tomorrow_helper():
     assert AL.tomorrow(NOW) == "2026-10-02"
+
+
+# ---------- VIRALITY_SYSTEM.md §4: hook-family arm, exploration floor unchanged ----------
+def test_hook_family_arm_learns_across_arms_and_keeps_floor(cfg):
+    page = {"id": "p1", "slug": "changyin", "daily_post_target": 9}
+    arms = AL.eligible_arms(page, "instagram", cfg)
+    g = sorted({a["grammar"] for a in arms})[-1]
+    wins = [obs(a, 0.95, 1) for a in [x for x in arms if x["grammar"] == g][:15]]
+    fam = AL.hook_family_posterior(wins, cfg, NOW)
+    assert fam[g]["mean"] == max(f["mean"] for f in fam.values()) and fam[g]["n"] > 10
+    plan = AL.plan_day(page, "instagram", "2026-10-02", wins, cfg, seed=7, now=NOW)
+    assert plan["explore_share"] >= 0.2 and next(iter(plan["hook_families"])) == g
+    assert sum(1 for s in plan["slots"] if s["grammar"] == g) >= 2

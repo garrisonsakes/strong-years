@@ -177,3 +177,22 @@ def test_config_validation_guards_class_order():
         G.load({"allocator": {"explore_floor": 0.1}})
     with pytest.raises(ValueError):
         G.load({"governor": {"max_boost_daily_usd": float("nan")}})
+
+
+# ---------- VIRALITY_SYSTEM.md §4: shares+saves per view is the primary reward; 1 h / 3 h retention proxy ----------
+def test_share_save_rate_drives_reward(cfg):
+    hi = SC.score_post([snap(5000, shares=150, saves=200, kw=0, h=24)], {}, cfg)
+    lo = SC.score_post([snap(5000, shares=2, saves=3, kw=60, h=24)], {}, cfg)     # keyword bait, no shares/saves
+    assert hi["share_save_z"] > 0 > lo["share_save_z"]
+    assert hi["reward"] > lo["reward"] + 0.2
+    w = cfg["scoring"]["weights"]
+    assert w["share_save_rate"] == max(w.values())
+
+
+def test_retention_proxy_uses_1h_and_3h_only(cfg):
+    s1 = {**snap(400, shares=4, saves=4, kw=0, h=1), "avg_watch_s": 18, "duration_s": 40}
+    s3 = {**snap(1200, shares=12, saves=12, kw=0, h=3), "avg_watch_pct": 55}
+    s24 = {**snap(3000, shares=30, saves=30, kw=0, h=24), "avg_watch_pct": 0.9}
+    r = SC.score_post([s1, s3, s24], {}, cfg)
+    assert r["retention_proxy"] == round((0.45 + 0.55) / 2, 4)
+    assert "retention" in r["history"][0]["components_used"] and "retention" not in r["components_used"]

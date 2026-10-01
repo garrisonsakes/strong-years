@@ -106,12 +106,12 @@ dict(id="S36", page="@sunyoon.kitchen", speaker="SUN", format="F31", pillar="P11
 
 dict(id="S37", page="@sunyoon.kitchen", speaker="SUN", format="F31", pillar="P11", hook_id="H185", title="Seaweed birthday soup", secs=41,
  beats=[
-  ("0-3","SUN","Seaweed soup. The Korean birthday soup. Everyone in this house gets it.","MIYEOK-GUK · BIRTHDAY SOUP",f"{K} | steaming pot; Chang in a paper party hat at the table | medium"),
+  ("0-3","SUN","Seaweed soup. The Korean birthday soup, thirty grams of protein a bowl. Everyone in this house gets it. Watch.","MIYEOK-GUK · BIRTHDAY SOUP",f"{K} | steaming pot; Chang in a paper party hat at the table | medium"),
   ("3-18","SUN","Soak a handful of dried seaweed, ten minutes. Sesame oil in the pot. 150 grams of beef or tofu. Garlic. Add the seaweed, then water. A little soy sauce. Simmer twenty minutes.","Soak · sesame oil · beef/tofu · garlic · simmer 20","same | steps | overhead quick cuts"),
   ("18-25","SUN","150 grams of lean beef is about thirty grams of protein. Tofu, about twelve.","Beef ≈ 30 g · tofu ≈ 12 g","same | gram labels | overhead"),
   ("25-31","SUN","Thyroid condition? Ask your doctor about seaweed. It's very high in iodine.","Thyroid? Ask about seaweed","same | CU | CU"),
   ("31-35","CHANG","I've been 74 for a while now.","","same | Chang CU, deadpan | CU"),
-  ("35-40","SUN","AI birthdays. Very cheap. Comment SOUP for three of my soups.","Comment SOUP","same | ladles bowl | two-shot"),
+  ("35-40","SUN","AI birthdays. Very cheap. Send this to the birthday person. Comment SOUP for my soups.","Comment SOUP","same | ladles bowl | two-shot"),
  ],
  move=False, tags=["high_protein","seaweed_iodine"], safety="Iodine/thyroid caution; kidney note in caption for protein.",
  regression="", cta="SOUP",
@@ -171,12 +171,12 @@ dict(id="S40", page="@sunyoon", speaker="SUN", format="F07", pillar="P16", hook_
 
 dict(id="S41", page="@sunyoon", speaker="SUN", format="F07", pillar="P16", hook_id="H245", title="Loneliness: call someone today", secs=41,
  beats=[
-  ("0-3","SUN","Loneliness is a health problem. Call someone. Today.","CALL SOMEONE. TODAY.",f"{T} | slides her phone across the table toward camera | CU"),
+  ("0-3","SUN","Loneliness is a health problem, and here's the study that says so. Call someone. Today.","CALL SOMEONE. TODAY.",f"{T} | slides her phone across the table toward camera | CU"),
   ("3-12","SUN","In 148 studies of 308,849 people, those with strong social ties tended to have longer lives. A link as strong as smoking's.","148 studies · 308,849 people","same | study card inset (Holt-Lunstad, PLoS Med 2010) | medium"),
   ("12-21","SUN","So. Not a text. A call. Your cousin. Your old coworker. The neighbor whose name you forgot.","Not a text. A call.","same | scrolls old address book | CU"),
   ("21-29","SUN","When Frank's wife passed, Chang called him every day for a month. Now they complain about their knees together.","",f"{L} | through window: Chang and Frank on the stoop laughing | wide"),
   ("29-35","SUN","Nobody to call? Go where people are. Library. Walking group. Senior center. Say hello first.","Library · walking group · senior center",f"{T} | CU | CU"),
-  ("35-40","SUN","Tell me who you called. Comment BEGIN, and we'll send where to start.","Comment BEGIN","same | warm smile | medium"),
+  ("35-40","SUN","Send this to the one you're calling. Comment BEGIN for where to start.","Comment BEGIN","same | warm smile | medium"),
  ],
  move=False, tags=["social_connection"], safety="Warm, non-clinical; no companion-replacement language. Crisis protocol applies to replies.",
  regression="", cta="BEGIN",
@@ -220,12 +220,12 @@ dict(id="S43", page="@sunyoon", speaker="SUN", format="F28", pillar="P15", hook_
 
 dict(id="S44", page="@sunyoon.kitchen", speaker="SUN", format="F18", pillar="P13", hook_id="H280", title="72 grams of protein: a day on three plates", secs=40,
  beats=[
-  ("0-3","SUN","1.2 grams of protein per kilo. For a 60 kilo woman, that's 72 grams.","60 kg × 1.2 = 72 g",f"{K} | three plates lined up on counter | overhead"),
+  ("0-3","SUN","1.2 grams of protein per kilo. For a 60 kilo woman, that's 72 grams. Watch where it goes.","60 kg × 1.2 = 72 g",f"{K} | three plates lined up on counter | overhead"),
   ("3-10","SUN","Experts say one to 1.2 grams per kilo over 65. More if you're active.","65+: 1.0–1.2 g/kg · active: more","same | study card inset (PROT-AGE) | medium"),
   ("10-23","SUN","Breakfast: Greek yogurt and nuts, twenty-five. Lunch: tofu and rice, twenty. Dinner: salmon and vegetables, twenty-seven. Seventy-two.","25 + 20 + 27 = 72 g","same | taps each plate, totals animate | overhead"),
   ("23-29","SUN","Weigh in pounds? Multiply by a little more than half.","Pounds × ~0.55 = grams","same | calculator | CU"),
   ("29-34","SUN","Kidney disease? Your doctor sets your number. Not me.","Kidney disease? Doctor sets it.","same | CU | CU"),
-  ("34-39","SUN","Grams, not vibes. Comment SOUP for three high-protein soups.","Comment SOUP","same | hands plate toward camera | medium"),
+  ("34-39","SUN","Grams, not vibes. Show this to whoever cooks. Comment SOUP for three soups.","Comment SOUP","same | hands plate toward camera | medium"),
  ],
  move=False, tags=["high_protein"], safety="Kidney caution.",
  regression="", cta="SOUP",

@@ -131,6 +131,37 @@ def posterior(observations: list[dict], arms: list[dict], cfg: dict, now: dateti
     return out
 
 
+def hook_family_posterior(observations: list[dict], cfg: dict, now: datetime) -> dict[str, dict]:
+    """Hook-family arm (VIRALITY_SYSTEM.md §4): one Beta per hook grammar pooled across every pillar/format/speaker/length,
+    so a hook family that wins anywhere on the page is pulled forward everywhere within a day or two. Proven families
+    (POSTDB §3/§8 rule 3) start slightly warm; everything else starts neutral."""
+    a = cfg["allocator"]
+    hl, k0 = float(a["half_life_days"]), float(a.get("hook_family_prior_strength", 10.0))
+    neutral, bonus = float(a.get("prior_mean", 0.5)), float(a.get("hook_family_proven_bonus", 0.05))
+    stats: dict[str, list[float]] = {g: [0.0, 0.0] for g in CAT.GRAMMARS}
+    for o in observations or []:
+        key = o.get("arm_key") or (arm_key(o["arm"]) if o.get("arm") else None)
+        r = G.num(o.get("reward"), lo=0, hi=1)
+        if not key or r is None:
+            continue
+        g = parse_arm_key(key).get("grammar")
+        try:
+            t = datetime.fromisoformat(str(o.get("at")).replace("Z", "+00:00")) if o.get("at") else now
+            t = t if t.tzinfo else t.replace(tzinfo=timezone.utc)
+        except ValueError:
+            t = now
+        w = decay_weight((now - t).total_seconds() / 86400.0, hl) * float(G.num(o.get("weight"), lo=0, hi=10) or 1.0)
+        st = stats.setdefault(g, [0.0, 0.0])
+        st[0] += w * r
+        st[1] += w * (1.0 - r)
+    out = {}
+    for g, (succ, fail) in stats.items():
+        m0 = neutral + (bonus if g in CAT.PROVEN_GRAMMARS else 0.0)
+        al, be = 1.0 + succ + m0 * k0, 1.0 + fail + (1.0 - m0) * k0
+        out[g] = {"alpha": al, "beta": be, "n": round(succ + fail, 3), "mean": round(al / (al + be), 4)}
+    return out
+
+
 def _bit_for(slot_i: int, speaker: str, used: list[str], cfg: dict, rng: random.Random, solo_count: int) -> str | None:
     a = cfg["allocator"]
     need = speaker == "DUO" or (solo_count % int(a["solo_bit_every"]) == 0)
@@ -165,6 +196,9 @@ def plan_day(page: dict, platform: str, date: str, observations: list[dict], cfg
     if not arms:
         raise ValueError("no eligible arms for this page/platform")
     post = posterior(observations, arms, cfg, now)
+    fam = hook_family_posterior(observations, cfg, now)
+    fam_theta = {g: rng.betavariate(f["alpha"], f["beta"]) for g, f in sorted(fam.items())}
+    fam_w = float(a.get("hook_family_weight", 0.35))
     n = max(1, min(int(a["max_cadence"]), int(cadence or page.get("daily_post_target") or a["max_cadence"])))
     explore_floor = max(G.MIN_EXPLORE_FLOOR, float(a["explore_floor"]))
     n_explore = max(1, int(math.ceil(n * explore_floor))) if n > 1 else (1 if rng.random() < explore_floor else 0)
@@ -204,7 +238,9 @@ def plan_day(page: dict, platform: str, date: str, observations: list[dict], cfg
     # and arms with evidence of being below baseline must never outrank an unseen one.
     min_direct = float(a.get("exploit_min_direct", 1.0))
     min_factors = int(a.get("exploit_min_factors", 3))
-    draws = [(rng.betavariate(post[arm_key(x)]["alpha"], post[arm_key(x)]["beta"]), i, x) for i, x in enumerate(arms)]
+    # each arm's Thompson draw is blended with its hook family's draw (the hook-family arm)
+    draws = [((1 - fam_w) * rng.betavariate(post[arm_key(x)]["alpha"], post[arm_key(x)]["beta"])
+              + fam_w * fam_theta.get(x["grammar"], 0.5), i, x) for i, x in enumerate(arms)]
     draws.sort(key=lambda d: (-d[0], d[1]))
     neutral = float(a.get("prior_mean", 0.5))
     tiers = (lambda p: p["n"] >= min_direct and p["mean"] >= neutral,            # proven, not below baseline
@@ -217,8 +253,10 @@ def plan_day(page: dict, platform: str, date: str, observations: list[dict], cfg
                 break
             if pool(arm) and ok(arm):
                 take(arm, "exploit", round(theta, 4))
-    # explore: least-observed arms (seeded tie-break), proven grammars first among the unseen
-    unseen = sorted(arms, key=lambda x: (post[arm_key(x)]["n"], 0 if x["grammar"] in CAT.PROVEN_GRAMMARS else 1, rng.random()))
+    # explore: least-observed arms (seeded tie-break); among the unseen, the best hook family (posterior mean) first,
+    # which with no data is the proven grammars (warm prior) and afterwards whatever family is winning on the page
+    unseen = sorted(arms, key=lambda x: (post[arm_key(x)]["n"], -fam.get(x["grammar"], {"mean": 0.5})["mean"],
+                                         0 if x["grammar"] in CAT.PROVEN_GRAMMARS else 1, rng.random()))
     for arm in unseen:
         if len(chosen) >= n:
             break
@@ -255,6 +293,7 @@ def plan_day(page: dict, platform: str, date: str, observations: list[dict], cfg
     return {"page_id": page.get("id"), "page_slug": page.get("slug"), "platform": platform, "date": date,
             "cadence": n, "slots": slots, "explore_share": round(explore_share, 3),
             "explore_floor": explore_floor, "arms_considered": len(arms), "config_version": cfg.get("version"),
+            "hook_families": {g: {"mean": f["mean"], "n": f["n"]} for g, f in sorted(fam.items(), key=lambda kv: -kv[1]["mean"])},
             "seed": seed, "used_bits": bits_used[-int(a["bit_cooldown"]):]}
 
 

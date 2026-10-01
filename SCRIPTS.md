@@ -58,30 +58,30 @@ Machine-readable copy: `data/content/scripts.json` (CHARACTERS.md §12.4 schema,
 | S34 | @sunyoon.kitchen | SUN | F04 | P15 | H066 | 39 | 82 | GUT | E24 | — |
 | S35 | @sunyoon.kitchen | SUN | F06 | P10 | H207 | 41 | 81 | GUT | E23 | — |
 | S36 | @sunyoon.kitchen | SUN | F31 | P11 | H184 | 43 | 102 | GUT | E26 | — |
-| S37 | @sunyoon.kitchen | SUN | F31 | P11 | H185 | 41 | 88 | SOUP | E28 | — |
+| S37 | @sunyoon.kitchen | SUN | F31 | P11 | H185 | 41 | 99 | SOUP | E28 | — |
 | S38 | @sunyoon.kitchen | SUN | F06 | P12 | H188 | 41 | 103 | GUT | E27 | — |
 | S39 | @sunyoon.kitchen | SUN | F06 | P12 | H166 | 38 | 87 | SOUP | E32 | — |
 | S40 | @sunyoon | SUN | F07 | P16 | H241 | 41 | 88 | KNEES | E01 | — |
-| S41 | @sunyoon | SUN | F07 | P16 | H245 | 41 | 94 | BEGIN | E37 | — |
+| S41 | @sunyoon | SUN | F07 | P16 | H245 | 41 | 101 | BEGIN | E37 | — |
 | S42 | @sunyoon | SUN | F07 | P16 | H127 | 38 | 85 | STRONG | E07 | — |
 | S43 | @sunyoon | SUN | F28 | P15 | H079 | 41 | 89 | STRONG | E29, E40 | — |
-| S44 | @sunyoon.kitchen | SUN | F18 | P13 | H280 | 40 | 73 | SOUP | E28 | — |
+| S44 | @sunyoon.kitchen | SUN | F18 | P13 | H280 | 40 | 81 | SOUP | E28 | — |
 | S45 | @sunyoon.kitchen | SUN | F06 | P10 | H190 | 40 | 103 | GUT | E24 | — |
 | S46 | @sunyoon | SUN | F35 | P16 | H263 | 38 | 83 | BEGIN | none (opinion/offer) | — |
 | S47 | @sunyoon.kitchen | SUN | F07 | P15 | H243 | 38 | 77 | BEGIN | E20 | — |
 | S48 | @sunyoon.kitchen | SUN | F18 | P13 | H202 | 39 | 86 | SOUP | E28 | — |
 | S49 | @sunyoon | SUN | F31 | P11 | H139 | 41 | 99 | SOUP | E28, E37 | — |
 | S50 | @sunyoon | SUN | F07 | P03 | H268 | 40 | 77 | BALANCE | E12 | — |
-| S51 | @changandsun | DUO | F08 | P17 | H211 | 40 | 69 | STRONG | E21 | — |
+| S51 | @changandsun | DUO | F08 | P17 | H211 | 40 | 77 | STRONG | E21 | — |
 | S52 | @changandsun | DUO | F34 | P17 | H212 | 40 | 77 | BALANCE | E09 | — |
 | S53 | @changandsun | DUO | F33 | P17 | H213 | 41 | 82 | FAMILY | E12 | — |
 | S54 | @changandsun | DUO | F08 | P17 | H214 | 39 | 76 | BACK | E30 | — |
-| S55 | @changandsun | DUO | F18 | P13 | H215 | 40 | 68 | SOUP | E28 | — |
+| S55 | @changandsun | DUO | F18 | P13 | H215 | 40 | 80 | SOUP | E28 | — |
 | S56 | @changandsun | DUO | F34 | P17 | H229 | 41 | 66 | STRONG | E01 | — |
-| S57 | @changandsun | DUO | F08 | P17 | H232 | 38 | 64 | SLEEP | E48 | — |
-| S58 | @changandsun | DUO | F35 | P17 | H237 | 39 | 78 | BREATH | E19, E18 | — |
-| S59 | @changandsun | DUO | F08 | P20 | H239 | 40 | 95 | TEST | E11, E09, E08 | — |
-| S60 | @changandsun | DUO | F27 | P17 | H235 | 41 | 76 | BEGIN | E37 | — |
+| S57 | @changandsun | DUO | F08 | P17 | H232 | 38 | 74 | SLEEP | E48 | — |
+| S58 | @changandsun | DUO | F35 | P17 | H237 | 39 | 91 | BREATH | E19, E18 | — |
+| S59 | @changandsun | DUO | F08 | P20 | H239 | 40 | 104 | TEST | E11, E09, E08 | — |
+| S60 | @changandsun | DUO | F27 | P17 | H235 | 41 | 85 | BEGIN | E37 | — |
 | S61 | @changyin | CHANG | F02 | P04 | H301 | 46 | 94 | TEST | E07 | OBJ3 TEST_NOW DEMO KITCHEN_SERIES · Kitchen Gym #1 |
 | S62 | @changyin | CHANG | F32 | P02 | H302 | 45 | 104 | STRONG | E01, E46 | IF_EVERY SHARE DEMO |
 | S63 | @changyin | CHANG | F02 | P03 | H303 | 45 | 98 | BALANCE | E09 | OBJ3 WATCH TEST_NOW DEMO |
@@ -148,9 +148,9 @@ Machine-readable copy: `data/content/scripts.json` (CHARACTERS.md §12.4 schema,
 | S124 | @sunyoon | SUN | F07 | P16 | H364 | 46 | 94 | STRONG | E01 | IF_EVERY SHARE DEMO |
 | S125 | @changandsun | DUO | F34 | P17 | H365 | 46 | 86 | BALANCE | E13 | OBJ3 TEST_NOW DEMO · Loser Does Dishes |
 | S126 | @changandsun | DUO | F08 | P17 | H366 | 46 | 76 | BACK | E02 | OBJ3 DEMO |
-| S127 | @changandsun | DUO | F31 | P17 | H367 | 47 | 89 | GUT | E26 | OBJ3 DEMO · Jajangmyeon Sunday |
+| S127 | @changandsun | DUO | F31 | P17 | H367 | 47 | 107 | GUT | E26 | OBJ3 WATCH SHARE DEMO · Jajangmyeon Sunday |
 | S128 | @changandsun | DUO | F34 | P17 | H368 | 48 | 117 | TEST | E45 | OBJ3 TEST_NOW DEMO |
-| S129 | @changandsun | DUO | F28 | P17 | H369 | 47 | 83 | BEGIN | E37 | OBJ3 |
+| S129 | @changandsun | DUO | F28 | P17 | H369 | 47 | 93 | BEGIN | E37 | OBJ3 SHARE |
 | S130 | @changandsun | DUO | F25 | P17 | H370 | 47 | 90 | KNEES | E01 | WATCH OBJ3 DEMO · Frank's Comeback |
 | S131 | @changandsun | DUO | F08 | P17 | H371 | 46 | 91 | BACK | E30, E41 | OBJ3 DEMO |
 | S132 | @changandsun | DUO | F27 | P17 | H372 | 47 | 99 | STRONG | E01 | OBJ3 DEMO |
@@ -167,7 +167,7 @@ Machine-readable copy: `data/content/scripts.json` (CHARACTERS.md §12.4 schema,
 | S143 | @sunyoon.kitchen | SUN | F07 | P20 | H383 | 46 | 114 | JOIN | none (opinion/offer) | OBJ3 LAUNCH DEMO |
 | S144 | @sunyoon.kitchen | SUN | F39 | P20 | H384 | 46 | 102 | BEGIN | none (opinion/offer) | OBJ3 LAUNCH |
 | S145 | @changandsun | DUO | F38 | P20 | H385 | 50 | 109 | JOIN | none (opinion/offer) | OBJ3 LAUNCH |
-| S146 | @changandsun | DUO | F39 | P20 | H386 | 46 | 109 | JOIN | none (opinion/offer) | LAUNCH |
+| S146 | @changandsun | DUO | F39 | P20 | H386 | 46 | 121 | JOIN | none (opinion/offer) | LAUNCH WATCH |
 | S147 | @changandsun | DUO | F11 | P19 | H387 | 48 | 105 | STRONG | E01 | OBJ3 LAUNCH DEMO TEST_NOW · 7-Day Strong (couples kickoff) |
 | S148 | @changandsun | DUO | F33 | P16 | H388 | 47 | 117 | FAMILY | none (opinion/offer) | SHARE LAUNCH |
 | S149 | @changandsun | DUO | F38 | P20 | H389 | 47 | 84 | JOIN | none (opinion/offer) | OBJ3 LAUNCH |
@@ -175,25 +175,25 @@ Machine-readable copy: `data/content/scripts.json` (CHARACTERS.md §12.4 schema,
 | S151 | @changyin | CHANG | F15 | P04 | H391 | 46 | 102 | STRONG | E01, E02 | OBJ3 WATCH DEMO · Kitchen Gym #4 |
 | S152 | @changyin | CHANG | F32 | P02 | H392 | 45 | 102 | STRONG | E47 | IF_EVERY DEMO |
 | S153 | @changyin | CHANG | F32 | P03 | H393 | 48 | 102 | WAITLIST | E50 | IF_EVERY DEMO TEST_NOW |
-| S154 | @changyin | CHANG | F04 | P15 | H394 | 47 | 98 | TEST | E02, E43 | MYTH WATCH DEMO |
-| S155 | @changyin | CHANG | F21 | P07 | H395 | 44 | 78 | BREATH | E19 | DEMO TEST_NOW |
+| S154 | @changyin | CHANG | F04 | P15 | H394 | 47 | 104 | TEST | E02, E43 | MYTH WATCH DEMO |
+| S155 | @changyin | CHANG | F21 | P07 | H395 | 44 | 80 | BREATH | E19 | DEMO TEST_NOW |
 | S156 | @changyin | CHANG | F17 | P01 | H396 | 47 | 104 | WAITLIST | E45 | IF_EVERY DEMO |
 | S157 | @changyin | CHANG | F13 | P14 | H397 | 45 | 91 | KNEES | E04, E01 | OBJ3 DEMO |
-| S158 | @changyin | CHANG | F08 | P20 | H398 | 44 | 95 | WAITLIST | none (opinion/offer) | DEMO |
+| S158 | @changyin | CHANG | F08 | P20 | H398 | 44 | 100 | WAITLIST | none (opinion/offer) | DEMO |
 | S159 | @changyin | CHANG | F02 | P01 | H399 | 47 | 94 | TEST | E49 | OBJ3 WATCH TEST_NOW DEMO |
-| S160 | @sunyoon.kitchen | SUN | F06 | P10 | H400 | 46 | 93 | GUT | E25 | IF_EVERY KITCHEN_SERIES DEMO · Sun Checks Your Kitchen #17: kiwi |
-| S161 | @sunyoon.kitchen | SUN | F28 | P15 | H401 | 47 | 99 | SOUP | E57 | OBJ3 MYTH DEBUNK KITCHEN_SERIES · Sun Checks Your Kitchen #18: chicken soup |
+| S160 | @sunyoon.kitchen | SUN | F06 | P10 | H400 | 46 | 102 | GUT | E25 | IF_EVERY KITCHEN_SERIES DEMO · Sun Checks Your Kitchen #17: kiwi |
+| S161 | @sunyoon.kitchen | SUN | F28 | P15 | H401 | 47 | 110 | SOUP | E57 | OBJ3 MYTH DEBUNK KITCHEN_SERIES · Sun Checks Your Kitchen #18: chicken soup |
 | S162 | @sunyoon.kitchen | SUN | F04 | P12 | H402 | 45 | 84 | BEGIN | E58 | DEBUNK KITCHEN_SERIES · Sun Checks Your Kitchen #19: seaweed |
-| S163 | @sunyoon.kitchen | SUN | F18 | P10 | H403 | 46 | 86 | WAITLIST | E24, E52 | OBJ3 KITCHEN_SERIES DEMO · Sun Checks Your Kitchen #20: canned beans |
+| S163 | @sunyoon.kitchen | SUN | F18 | P10 | H403 | 46 | 90 | WAITLIST | E24, E52 | OBJ3 WATCH KITCHEN_SERIES DEMO · Sun Checks Your Kitchen #20: canned beans |
 | S164 | @sunyoon.kitchen | SUN | F12 | P13 | H404 | 46 | 89 | WAITLIST | E28, E52 | IF_EVERY DEMO |
 | S165 | @sunyoon.kitchen | SUN | F07 | P16 | H405 | 46 | 95 | BEGIN | E29, E40 | DEMO |
 | S166 | @sunyoon.kitchen | SUN | F31 | P11 | H406 | 47 | 92 | SOUP | E28, E52 | OBJ3 WATCH DEMO KITCHEN_SERIES · Sun Checks Your Kitchen #21: tofu |
-| S167 | @sunyoon.kitchen | SUN | F26 | P20 | H407 | 45 | 95 | WAITLIST | none (opinion/offer) | DEMO |
+| S167 | @sunyoon.kitchen | SUN | F26 | P20 | H407 | 45 | 105 | WAITLIST | none (opinion/offer) | DEMO |
 | S168 | @changandsun | DUO | F34 | P01 | H408 | 48 | 94 | TEST | E49 | OBJ3 WATCH TEST_NOW DEMO · Loser Does Dishes |
 | S169 | @changandsun | DUO | F08 | P17 | H409 | 44 | 78 | BEGIN | none (opinion/offer) | SHARE |
 | S170 | @changandsun | DUO | F23 | P03 | H410 | 47 | 102 | BALANCE | E50 | IF_EVERY DEMO SHARE |
 | S171 | @changandsun | DUO | F35 | P16 | H411 | 45 | 86 | BEGIN | E37 | SHARE |
-| S172 | @changandsun | DUO | F18 | P13 | H412 | 46 | 77 | SOUP | E28, E52 | OBJ3 DEMO |
+| S172 | @changandsun | DUO | F18 | P13 | H412 | 46 | 84 | SOUP | E28, E52 | OBJ3 DEMO |
 | S173 | @changandsun | DUO | F33 | P01 | H413 | 46 | 91 | TEST | E49 | SHARE TEST_NOW |
 | S174 | @changandsun | DUO | F10 | P20 | H414 | 46 | 103 | WAITLIST | none (opinion/offer) | SHARE |
 | S175 | @changandsun | DUO | F22 | P08 | H415 | 47 | 93 | WAITLIST | E17 | IF_EVERY DEMO |
@@ -219,6 +219,8 @@ Machine-readable copy: `data/content/scripts.json` (CHARACTERS.md §12.4 schema,
 **Page** @changyin · **Speaker** CHANG · **Format** F02 · **Pillar** P01 (Strength proof & tests) · **Hook** H031 · **Target** 44 s · **Spoken words** 91 · **CTA** `STRONG` → 8-Minute Chair Builder
 
 **Hook line:** "If you use your hands every time you stand, try this. Thirty seconds. No hands."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 77.0 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
@@ -254,6 +256,8 @@ Below average at 70–74: men under 12, women under 10. It's a sign worth workin
 
 **Hook line:** "Stand on one leg next to the counter, and just watch what happens by second ten."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 74.1 · gate PASS · hook class WATCH · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | CHANG | Stand on one leg next to the counter, and just watch what happens by second ten. | 10-SECOND ONE-LEG TEST | SET-KITCHEN · C-CASUAL · walks into frame, fingertips hover over counter · eye-level medium-full |
@@ -286,6 +290,8 @@ In a study of 1,702 adults aged 51–75 (BJSM 2022), people who could stand on o
 **Page** @changyin · **Speaker** CHANG · **Format** F02 · **Pillar** P01 (Strength proof & tests) · **Hook** H033 · **Target** 44 s · **Spoken words** 103 · **CTA** `TEST` → Strength Age test (quiz)
 
 **Hook line:** "Sit on the floor and get up without hands. Score yourself out of ten."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 81.1 · gate PASS · hook class COMMAND · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
@@ -320,6 +326,8 @@ In 2,002 adults aged 51–80, people who scored higher, getting up with less hel
 
 **Hook line:** "Your handshake is telling your future. Here's what it says."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 70.2 · gate PASS · hook class STATEMENT · needs: hook class STATEMENT is a bottom-tier opener (POSTDB §3b); no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | CHANG | Your handshake is telling your future. Here's what it says. | GRIP = A SIGNAL | SET-GARAGE · C-TRAIN-A · CU calloused hand crushing a stubborn jar lid open with a pop · CU macro |
@@ -352,6 +360,8 @@ Train it: towel wrings, carrying groceries, ball squeezes. Gentle on flare days.
 **Page** @changyin · **Speaker** CHANG · **Format** F16 · **Pillar** P14 (Physiology in 30s) · **Hook** H091 · **Target** 43 s · **Spoken words** 102 · **CTA** `STRONG` → 8-Minute Chair Builder
 
 **Hook line:** "If you spend ten days in bed, watch what happens to your legs."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 74.1 · gate PASS · hook class WATCH · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
@@ -386,6 +396,8 @@ If you're sick or recovering and your doctor says it's OK, small daily movement 
 
 **Hook line:** "'Too old to build muscle.' Ten 90-year-olds would disagree."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 72.5 · gate PASS · hook class MYTH · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | CHANG | 'Too old to build muscle.' Ten 90-year-olds would disagree. | MYTH: 'TOO OLD' | SET-TABLE · C-CASUAL · pulls folded study card from shorts pocket, unfolds it · medium CU |
@@ -417,6 +429,8 @@ Comment STRONG for the 8-minute Chair Builder.
 **Page** @changyin · **Speaker** CHANG · **Format** F28 · **Pillar** P15 (Myth-busting) · **Hook** H062 · **Target** 42 s · **Spoken words** 88 · **CTA** `STRONG` → 8-Minute Chair Builder
 
 **Hook line:** "'Lifting is dangerous after 60.' Here's what 121 trials found."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 78.5 · gate PASS · hook class MYTH · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
@@ -451,6 +465,8 @@ Start light, go slow, breathe out on effort.
 
 **Hook line:** "Vitamin D pills for steady feet? Not the answer, not the plan. Practice is."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 72.5 · gate PASS · hook class NOT_X · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | CHANG | Vitamin D pills for steady feet? Not the answer, not the plan. Practice is. | MYTH ✗ VITAMIN D PILLS | SET-KITCHEN · C-CASUAL · sets an unbranded supplement bottle down, drags chair to counter · medium |
@@ -483,6 +499,8 @@ If your doctor prescribed vitamin D for another reason, keep following their adv
 **Page** @changyin.mobility · **Speaker** CHANG · **Format** F22 · **Pillar** P08 (Tai chi / qigong / gentle yoga) · **Hook** H075 · **Target** 42 s · **Spoken words** 92 · **CTA** `BALANCE` → Steady Feet + the 10-second test
 
 **Hook line:** "The move I'd start with is not a machine, not a gym class. It's tai chi."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 70.5 · gate PASS · hook class NOT_X · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
@@ -517,6 +535,8 @@ Tai chi here is practiced as exercise. Try the weight shift holding a counter or
 
 **Hook line:** "If you sigh out slowly every day for five minutes, your mood may follow."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 61.0 · gate PASS · hook class IF_EVERY · needs: no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | CHANG | If you sigh out slowly every day for five minutes, your mood may follow. | CYCLIC SIGH | SET-BED · C-BED · lying on back, one hand on belly, lamp low · overhead soft |
@@ -546,6 +566,8 @@ No breath holds. If you feel lightheaded, go back to normal breathing.
 **Page** @changyin.mobility · **Speaker** CHANG · **Format** F05 · **Pillar** P09 (Sleep & evening) · **Hook** H151 · **Target** 45 s · **Spoken words** 92 · **CTA** `SLEEP` → Sleep Wind-Down (10 min)
 
 **Hook line:** "If you do this every night before sleep, it takes ninety seconds. Lying down."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 81.2 · gate PASS · hook class IF_EVERY · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down); CTA is long or asks for more than one keyword
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
@@ -580,6 +602,8 @@ Osteoporosis: keep the knee rocks small and comfortable. Getting up at night? Si
 
 **Hook line:** "If you get up every night to use the bathroom, sit and count to ten first."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 84.0 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no save trigger (a routine / day N / tonight / write it down)
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | CHANG | If you get up every night to use the bathroom, sit and count to ten first. | NIGHT BATHROOM · 3 RULES | SET-BED · C-BED · night, sits up on edge, lamp on · eye-level medium |
@@ -611,6 +635,8 @@ If you're dizzy every time you stand, tell your doctor. Don't change your medici
 **Page** @changyin.mobility · **Speaker** CHANG · **Format** F03 · **Pillar** P15 (Myth-busting) · **Hook** H085 · **Target** 43 s · **Spoken words** 84 · **CTA** `BACK` → Morning Unlock (7 min, starts in bed)
 
 **Hook line:** "Curl-ups for a strong core? Not for older spines. Do this instead."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 72.5 · gate PASS · hook class MYTH · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
@@ -645,6 +671,8 @@ Known osteoporosis or a past spine fracture? Ask your doctor or a physio for you
 
 **Hook line:** "'Bend your knees, not your back.' Half true. Not the whole story. Learn the hinge."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 77.5 · gate PASS · hook class NOT_X · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | CHANG | 'Bend your knees, not your back.' Half true. Not the whole story. Learn the hinge. | THE HIP HINGE | SET-GARAGE · C-TRAIN-A · picks up laundry basket with rounded back, freezes; OST ✗ · medium-full side |
@@ -677,6 +705,8 @@ Exercise is one of the best-studied approaches to chronic low back pain (Cochran
 **Page** @changyin.strength · **Speaker** CHANG · **Format** F02 · **Pillar** P02 (Legs & chair strength) · **Hook** H045 · **Target** 41 s · **Spoken words** 89 · **CTA** `KNEES` → The Step Builder
 
 **Hook line:** "Bottom stair. Ten step-ups each leg, holding the rail. Easy?"
+
+**Virality (VIRALITY_SYSTEM.md §2):** 68.2 · gate PASS · hook class STATEMENT · needs: hook class STATEMENT is a bottom-tier opener (POSTDB §3b); no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
@@ -712,6 +742,8 @@ Pain rule: up to 3/10 is OK if it settles by the next morning.
 
 **Hook line:** "Push-ups on the kitchen counter. How many clean ones?"
 
+**Virality (VIRALITY_SYSTEM.md §2):** 76.6 · gate PASS · hook class COMMAND · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | CHANG | Push-ups on the kitchen counter. How many clean ones? | COUNTER PUSH-UP TEST | SET-KITCHEN · C-CASUAL · hands on counter edge, walks feet back · side medium-full |
@@ -744,6 +776,8 @@ Pushing strength helps with getting up from the floor, out of the bath and off t
 **Page** @changyin.strength · **Speaker** CHANG · **Format** F23 · **Pillar** P02 (Legs & chair strength) · **Hook** H039 · **Target** 41 s · **Spoken words** 91 · **CTA** `STRONG` → 8-Minute Chair Builder
 
 **Hook line:** "Wall sit next to me. I'm 74. Who stops first?"
+
+**Virality (VIRALITY_SYSTEM.md §2):** 83.6 · gate PASS · hook class COMMAND · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
@@ -778,6 +812,8 @@ Keep breathing. High blood pressure or a heart condition? Ask your doctor before
 
 **Hook line:** "If you fell right now, could you get up? Practice before you need it."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 63.2 · gate PASS · hook class STATEMENT · needs: hook class STATEMENT is a bottom-tier opener (POSTDB §3b); no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | CHANG | If you fell right now, could you get up? Practice before you need it. | GET UP FROM THE FLOOR | SET-LIVING · C-CASUAL · kneeling beside a sturdy armless chair on a wood floor · eye-level wide |
@@ -809,6 +845,8 @@ Practice only with someone home. Sit a moment in the chair, then stand slowly. I
 **Page** @changyin · **Speaker** CHANG · **Format** F11 · **Pillar** P19 (Challenges & series) · **Hook** H040 · **Target** 42 s · **Spoken words** 82 · **CTA** `STRONG` → 8-Minute Chair Builder
 
 **Hook line:** "Seven days. Ten minutes. Day one starts now. Stand up."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 75.2 · gate PASS · hook class STATEMENT · needs: hook class STATEMENT is a bottom-tier opener (POSTDB §3b); no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
@@ -842,6 +880,8 @@ Strength training 2–3×/week improves strength and chair-rise ability in older
 **Page** @changyin.mobility · **Speaker** CHANG · **Format** F03 · **Pillar** P06 (Back / knee / shoulder relief & rehab) · **Hook** H014 · **Target** 41 s · **Spoken words** 100 · **CTA** `BACK` → Morning Unlock (7 min, starts in bed)
 
 **Hook line:** "If you do dishes every night at a low sink, try this two-second back fix."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 83.0 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
@@ -877,6 +917,8 @@ Mild discomfort up to 3 out of 10 is okay if it settles by tomorrow; sharper, or
 
 **Hook line:** "If you sit for hours every afternoon, your calves take the afternoon off. Try this."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 71.0 · gate PASS · hook class IF_EVERY · needs: no concrete number in the hook or re-hook; no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | CHANG | If you sit for hours every afternoon, your calves take the afternoon off. Try this. | YOUR SECOND HEART | SET-STOOP · C-TRAIN-B · CU calves rising on bottom step, hand on rail · CU low angle |
@@ -910,6 +952,8 @@ One swollen, red, painful calf can mean a clot. See a doctor the same day.
 
 **Hook line:** "If you wake up stiff every morning, do this before your feet touch the floor."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 76.0 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | CHANG | If you wake up stiff every morning, do this before your feet touch the floor. | BEFORE FEET TOUCH FLOOR | SET-BED · C-BED · morning light, lying in bed · overhead |
@@ -941,6 +985,8 @@ Before standing: ankle circles, gentle knee rocks, log-roll to your side, push u
 **Page** @changyin · **Speaker** CHANG · **Format** F28 · **Pillar** P15 (Myth-busting) · **Hook** H072 · **Target** 41 s · **Spoken words** 91 · **CTA** `STRONG` → 8-Minute Chair Builder
 
 **Hook line:** "'Walking is enough.' Walking is wonderful. It isn't enough."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 70.5 · gate PASS · hook class MYTH · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
@@ -975,6 +1021,8 @@ Add a bench stop to your walk.
 
 **Hook line:** "If you brush your teeth every night, do this at the same time. Hold the sink."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 76.0 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | CHANG | If you brush your teeth every night, do this at the same time. Hold the sink. | BRUSH + BALANCE | SET-BATH · C-BED · toothbrush in mouth, hand on sink edge · mirror-side medium |
@@ -1007,6 +1055,8 @@ A Cochrane review pooled 108 trials (23,407 people) of balance and functional ex
 **Page** @changyin.mobility · **Speaker** CHANG · **Format** F14 · **Pillar** P06 (Back / knee / shoulder relief & rehab) · **Hook** H109 · **Target** 45 s · **Spoken words** 105 · **CTA** `KNEES` → The Step Builder
 
 **Hook line:** "Knee hurts, so you stopped walking. Now it hurts more. Break the loop."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 63.2 · gate PASS · hook class STATEMENT · needs: hook class STATEMENT is a bottom-tier opener (POSTDB §3b); no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
@@ -1041,6 +1091,8 @@ In the Cochrane review of 121 trials, strength training improved chair rising an
 
 **Hook line:** "Squats are bad for older knees? The research disagrees."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 77.5 · gate PASS · hook class MYTH · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | CHANG | Squats are bad for older knees? The research disagrees. | MYTH: SQUATS RUIN KNEES | SET-GARAGE · C-TRAIN-A · squats to lightly tap chair, stands · side medium-full |
@@ -1073,6 +1125,8 @@ Squat to a chair you can own. Knees follow toes. New knee: follow your surgeon.
 **Page** @changyin.strength · **Speaker** CHANG · **Format** F15 · **Pillar** P04 (Grip, upper body & carry) · **Hook** H096 · **Target** 40 s · **Spoken words** 80 · **CTA** `STRONG` → 8-Minute Chair Builder
 
 **Hook line:** "Can't open jars anymore? Don't buy the gadget yet."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 68.2 · gate PASS · hook class STATEMENT · needs: hook class STATEMENT is a bottom-tier opener (POSTDB §3b); no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
@@ -1107,6 +1161,8 @@ Grip strength is linked with overall health in large studies (PURE, 142,861 adul
 
 **Hook line:** "The muscle fibers you lose first are the ones that catch you."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 61.2 · gate PASS · hook class STATEMENT · needs: hook class STATEMENT is a bottom-tier opener (POSTDB §3b); no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | CHANG | The muscle fibers you lose first are the ones that catch you. | FAST FIBERS FADE FIRST | SET-GARAGE · C-TRAIN-A · quick recovery step off a floor tape line · medium-full |
@@ -1140,6 +1196,8 @@ Chair against the wall. Stay slow if your balance or knees are unsure.
 
 **Hook line:** "If you practice balance every day, three counter moves are enough to start."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 76.0 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | CHANG | If you practice balance every day, three counter moves are enough to start. | 3 MOVES · 3×/WEEK | SET-KITCHEN · C-CASUAL · at the counter, hand resting · eye-level medium-full |
@@ -1171,6 +1229,8 @@ Three Otago-style moves at the counter: side-steps, heel-to-toe stand, toe rises
 **Page** @changyin.mobility · **Speaker** CHANG · **Format** F22 · **Pillar** P08 (Tai chi / qigong / gentle yoga) · **Hook** H167 · **Target** 41 s · **Spoken words** 82 · **CTA** `SLEEP` → Sleep Wind-Down (10 min)
 
 **Hook line:** "The evening qigong move I learned at fourteen. Arms up. Arms down."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 68.2 · gate PASS · hook class STATEMENT · needs: hook class STATEMENT is a bottom-tier opener (POSTDB §3b); no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
@@ -1205,6 +1265,8 @@ Move 1, 'holding up the sky': inhale up, exhale down, ×8. Shoulder height is fi
 
 **Hook line:** "Onion in water? Not a remedy, not a tea. Put the onion in the soup."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 71.5 · gate PASS · hook class NOT_X · needs: no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | SUN | Onion in water? Not a remedy, not a tea. Put the onion in the soup. | MYTH ✗ ONION WATER | SET-TABLE · S-CARDI-JADE · lifts a glass with an onion in water, over-the-glasses look · medium CU |
@@ -1235,6 +1297,8 @@ Put the onion in the soup.
 **Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F18 · **Pillar** P13 (Protein & muscle food) · **Hook** H011 · **Target** 41 s · **Spoken words** 75 · **CTA** `SOUP` → Sun Yoon's Three Soups
 
 **Hook line:** "I weighed my husband's breakfast. He was twenty grams short."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 61.5 · gate PASS · hook class STORY · needs: no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
@@ -1268,6 +1332,8 @@ Kidney disease? Your doctor sets your number.
 
 **Hook line:** "If you eat two kiwis every day, here's what one small study found."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 84.0 · gate PASS · hook class IF_EVERY · needs: no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | SUN | If you eat two kiwis every day, here's what one small study found. | 2 KIWIS A DAY | SET-KITCHEN · S-KITCHEN · halves a kiwi with a knife on a board; Chang eats with a spoon · CU |
@@ -1299,6 +1365,8 @@ More fiber? Go up slowly and drink water. New bowel changes or blood in the stoo
 
 **Hook line:** "That 'liver tea'? No. Your liver already has a job."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 66.5 · gate PASS · hook class MYTH · needs: no concrete number in the hook or re-hook; no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | SUN | That 'liver tea'? No. Your liver already has a job. | MYTH ✗ 'LIVER TEA' | SET-TABLE · S-CARDI-JADE · drops an unbranded tea bag into the trash under the table · medium CU |
@@ -1329,6 +1397,8 @@ Increase slowly, with water.
 **Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F06 · **Pillar** P10 (Digestion & gut) · **Hook** H207 · **Target** 41 s · **Spoken words** 81 · **CTA** `GUT` → Sun Yoon's 7-Day Fiber Ladder (NEW flow, clone SOUP flow)
 
 **Hook line:** "If you walk after dinner every night, even five minutes, here's the glucose study."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 83.0 · gate PASS · hook class IF_EVERY · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
@@ -1364,6 +1434,8 @@ On diabetes medicine? Keep taking it. This goes on top, not instead.
 
 **Hook line:** "My mother's easy kimchi. No special jar. Ten minutes of work."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 61.5 · gate PASS · hook class STORY · needs: no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | SUN | My mother's easy kimchi. No special jar. Ten minutes of work. | EASY KIMCHI · 10 MIN WORK | SET-KITCHEN · S-KITCHEN · chops half a napa cabbage · overhead |
@@ -1391,20 +1463,22 @@ Stanford 2021 (36 adults, 10 weeks): a high-fermented-food diet increased microb
 ---
 
 ## S37: Seaweed birthday soup
-**Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F31 · **Pillar** P11 (Sun's kitchen: recipes) · **Hook** H185 · **Target** 41 s · **Spoken words** 88 · **CTA** `SOUP` → Sun Yoon's Three Soups
+**Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F31 · **Pillar** P11 (Sun's kitchen: recipes) · **Hook** H185 · **Target** 41 s · **Spoken words** 99 · **CTA** `SOUP` → Sun Yoon's Three Soups
 
-**Hook line:** "Seaweed soup. The Korean birthday soup. Everyone in this house gets it."
+**Hook line:** "Seaweed soup. The Korean birthday soup, thirty grams of protein a bowl. Everyone in this house gets it. Watch."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 59.4 · gate REWRITE · hook class STATEMENT · needs: hook class STATEMENT is a bottom-tier opener (POSTDB §3b); no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no save trigger (a routine / day N / tonight / write it down); CTA is long or asks for more than one keyword
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
-| 0-3 | SUN | Seaweed soup. The Korean birthday soup. Everyone in this house gets it. | MIYEOK-GUK · BIRTHDAY SOUP | SET-KITCHEN · S-KITCHEN · steaming pot; Chang in a paper party hat at the table · medium |
+| 0-3 | SUN | Seaweed soup. The Korean birthday soup, thirty grams of protein a bowl. Everyone in this house gets it. Watch. | MIYEOK-GUK · BIRTHDAY SOUP | SET-KITCHEN · S-KITCHEN · steaming pot; Chang in a paper party hat at the table · medium |
 | 3-18 | SUN | Soak a handful of dried seaweed, ten minutes. Sesame oil in the pot. 150 grams of beef or tofu. Garlic. Add the seaweed, then water. A little soy sauce. Simmer twenty minutes. | Soak · sesame oil · beef/tofu · garlic · simmer 20 | same · steps · overhead quick cuts |
 | 18-25 | SUN | 150 grams of lean beef is about thirty grams of protein. Tofu, about twelve. | Beef ≈ 30 g · tofu ≈ 12 g | same · gram labels · overhead |
 | 25-31 | SUN | Thyroid condition? Ask your doctor about seaweed. It's very high in iodine. | Thyroid? Ask about seaweed | same · CU · CU |
 | 31-35 | CHANG | I've been 74 for a while now. | — | same · Chang CU, deadpan · CU |
-| 35-40 | SUN | AI birthdays. Very cheap. Comment SOUP for three of my soups. | Comment SOUP | same · ladles bowl · two-shot |
+| 35-40 | SUN | AI birthdays. Very cheap. Send this to the birthday person. Comment SOUP for my soups. | Comment SOUP | same · ladles bowl · two-shot |
 
-**Full spoken script (88 words):** Seaweed soup. The Korean birthday soup. Everyone in this house gets it. Soak a handful of dried seaweed, ten minutes. Sesame oil in the pot. 150 grams of beef or tofu. Garlic. Add the seaweed, then water. A little soy sauce. Simmer twenty minutes. 150 grams of lean beef is about thirty grams of protein. Tofu, about twelve. Thyroid condition? Ask your doctor about seaweed. It's very high in iodine. I've been 74 for a while now. AI birthdays. Very cheap. Comment SOUP for three of my soups.
+**Full spoken script (99 words):** Seaweed soup. The Korean birthday soup, thirty grams of protein a bowl. Everyone in this house gets it. Watch. Soak a handful of dried seaweed, ten minutes. Sesame oil in the pot. 150 grams of beef or tofu. Garlic. Add the seaweed, then water. A little soy sauce. Simmer twenty minutes. 150 grams of lean beef is about thirty grams of protein. Tofu, about twelve. Thyroid condition? Ask your doctor about seaweed. It's very high in iodine. I've been 74 for a while now. AI birthdays. Very cheap. Send this to the birthday person. Comment SOUP for my soups.
 
 **Safety / cautions:** Iodine/thyroid caution; kidney note in caption for protein.
 
@@ -1425,6 +1499,8 @@ Thyroid condition? Seaweed is very high in iodine, so ask your doctor. Kidney di
 **Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F06 · **Pillar** P12 (Kitchen remedies with evidence) · **Hook** H188 · **Target** 41 s · **Spoken words** 103 · **CTA** `GUT` → Sun Yoon's 7-Day Fiber Ladder (NEW flow, clone SOUP flow)
 
 **Hook line:** "If you eat five prunes every day for a year, here's what one bone study found."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 68.0 · gate PASS · hook class IF_EVERY · needs: no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
@@ -1458,6 +1534,8 @@ Prunes are sweet (count them with diabetes) and they're a natural laxative, so s
 
 **Hook line:** "If you hear him cough every night, try a spoon of honey. There's a study."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 65.0 · gate PASS · hook class IF_EVERY · needs: no concrete number in the hook or re-hook; no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | SUN | If you hear him cough every night, try a spoon of honey. There's a study. | HONEY FOR COUGH | SET-BED · S-BED · Chang coughing in bed; Sun with a spoon of honey · medium two-shot |
@@ -1489,6 +1567,8 @@ Never give honey to babies under 1. Cough for more than 3 weeks, coughing blood,
 
 **Hook line:** "Nobody is coming to save your knees. You are."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 85.2 · gate PASS · hook class STATEMENT · needs: hook class STATEMENT is a bottom-tier opener (POSTDB §3b)
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | SUN | Nobody is coming to save your knees. You are. | NOBODY IS COMING FOR YOUR KNEES | SET-LIVING · S-CARDI-MUSTARD · stands up from an armless chair against the wall, arms crossed · medium-full |
@@ -1518,20 +1598,22 @@ Cochrane (121 trials): strength training substantially improves chair rising in 
 ---
 
 ## S41: Loneliness: call someone today
-**Page** @sunyoon · **Speaker** SUN · **Format** F07 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** H245 · **Target** 41 s · **Spoken words** 94 · **CTA** `BEGIN` → Where should I begin? start menu
+**Page** @sunyoon · **Speaker** SUN · **Format** F07 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** H245 · **Target** 41 s · **Spoken words** 101 · **CTA** `BEGIN` → Where should I begin? start menu
 
-**Hook line:** "Loneliness is a health problem. Call someone. Today."
+**Hook line:** "Loneliness is a health problem, and here's the study that says so. Call someone. Today."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 71.2 · gate PASS · hook class STATEMENT · needs: hook class STATEMENT is a bottom-tier opener (POSTDB §3b); no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
-| 0-3 | SUN | Loneliness is a health problem. Call someone. Today. | CALL SOMEONE. TODAY. | SET-TABLE · S-CARDI-JADE · slides her phone across the table toward camera · CU |
+| 0-3 | SUN | Loneliness is a health problem, and here's the study that says so. Call someone. Today. | CALL SOMEONE. TODAY. | SET-TABLE · S-CARDI-JADE · slides her phone across the table toward camera · CU |
 | 3-12 | SUN | In 148 studies of 308,849 people, those with strong social ties tended to have longer lives. A link as strong as smoking's. | 148 studies · 308,849 people | same · study card inset (Holt-Lunstad, PLoS Med 2010) · medium |
 | 12-21 | SUN | So. Not a text. A call. Your cousin. Your old coworker. The neighbor whose name you forgot. | Not a text. A call. | same · scrolls old address book · CU |
 | 21-29 | SUN | When Frank's wife passed, Chang called him every day for a month. Now they complain about their knees together. | — | SET-LIVING · S-CARDI-MUSTARD · through window: Chang and Frank on the stoop laughing · wide |
 | 29-35 | SUN | Nobody to call? Go where people are. Library. Walking group. Senior center. Say hello first. | Library · walking group · senior center | SET-TABLE · S-CARDI-JADE · CU · CU |
-| 35-40 | SUN | Tell me who you called. Comment BEGIN, and we'll send where to start. | Comment BEGIN | same · warm smile · medium |
+| 35-40 | SUN | Send this to the one you're calling. Comment BEGIN for where to start. | Comment BEGIN | same · warm smile · medium |
 
-**Full spoken script (94 words):** Loneliness is a health problem. Call someone. Today. In 148 studies of 308,849 people, those with strong social ties tended to have longer lives. A link as strong as smoking's. So. Not a text. A call. Your cousin. Your old coworker. The neighbor whose name you forgot. When Frank's wife passed, Chang called him every day for a month. Now they complain about their knees together. Nobody to call? Go where people are. Library. Walking group. Senior center. Say hello first. Tell me who you called. Comment BEGIN, and we'll send where to start.
+**Full spoken script (101 words):** Loneliness is a health problem, and here's the study that says so. Call someone. Today. In 148 studies of 308,849 people, those with strong social ties tended to have longer lives. A link as strong as smoking's. So. Not a text. A call. Your cousin. Your old coworker. The neighbor whose name you forgot. When Frank's wife passed, Chang called him every day for a month. Now they complain about their knees together. Nobody to call? Go where people are. Library. Walking group. Senior center. Say hello first. Send this to the one you're calling. Comment BEGIN for where to start.
 
 **Safety / cautions:** Warm, non-clinical; no companion-replacement language. Crisis protocol applies to replies.
 
@@ -1553,6 +1635,8 @@ If you're struggling or thinking of harming yourself, in the US call or text 988
 **Page** @sunyoon · **Speaker** SUN · **Format** F07 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** H127 · **Target** 38 s · **Spoken words** 85 · **CTA** `STRONG` → 8-Minute Chair Builder
 
 **Hook line:** "I'm 76. I don't want to look young. I want to open my own jars."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 71.3 · gate PASS · hook class AUTHORITY · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
@@ -1588,6 +1672,8 @@ I'm not anti-aging. I'm pro-living.
 
 **Hook line:** "'Women shouldn't lift heavy after menopause.' One trial says otherwise."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 70.5 · gate PASS · hook class MYTH · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | SUN | 'Women shouldn't lift heavy after menopause.' One trial says otherwise. | MYTH ✗ 'TOO FRAGILE TO LIFT' | SET-GARAGE · S-TRAIN · lifts an 8 kg kettlebell off a box with a clean hinge · side medium-full |
@@ -1617,20 +1703,22 @@ Osteoporosis: avoid curl-ups and heavy twisting, and get an individual plan from
 ---
 
 ## S44: 72 grams of protein: a day on three plates
-**Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F18 · **Pillar** P13 (Protein & muscle food) · **Hook** H280 · **Target** 40 s · **Spoken words** 73 · **CTA** `SOUP` → Sun Yoon's Three Soups
+**Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F18 · **Pillar** P13 (Protein & muscle food) · **Hook** H280 · **Target** 40 s · **Spoken words** 81 · **CTA** `SOUP` → Sun Yoon's Three Soups
 
-**Hook line:** "1.2 grams of protein per kilo. For a 60 kilo woman, that's 72 grams."
+**Hook line:** "1.2 grams of protein per kilo. For a 60 kilo woman, that's 72 grams. Watch where it goes."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 61.2 · gate PASS · hook class STATEMENT · needs: hook class STATEMENT is a bottom-tier opener (POSTDB §3b); no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
-| 0-3 | SUN | 1.2 grams of protein per kilo. For a 60 kilo woman, that's 72 grams. | 60 kg × 1.2 = 72 g | SET-KITCHEN · S-KITCHEN · three plates lined up on counter · overhead |
+| 0-3 | SUN | 1.2 grams of protein per kilo. For a 60 kilo woman, that's 72 grams. Watch where it goes. | 60 kg × 1.2 = 72 g | SET-KITCHEN · S-KITCHEN · three plates lined up on counter · overhead |
 | 3-10 | SUN | Experts say one to 1.2 grams per kilo over 65. More if you're active. | 65+: 1.0–1.2 g/kg · active: more | same · study card inset (PROT-AGE) · medium |
 | 10-23 | SUN | Breakfast: Greek yogurt and nuts, twenty-five. Lunch: tofu and rice, twenty. Dinner: salmon and vegetables, twenty-seven. Seventy-two. | 25 + 20 + 27 = 72 g | same · taps each plate, totals animate · overhead |
 | 23-29 | SUN | Weigh in pounds? Multiply by a little more than half. | Pounds × ~0.55 = grams | same · calculator · CU |
 | 29-34 | SUN | Kidney disease? Your doctor sets your number. Not me. | Kidney disease? Doctor sets it. | same · CU · CU |
-| 34-39 | SUN | Grams, not vibes. Comment SOUP for three high-protein soups. | Comment SOUP | same · hands plate toward camera · medium |
+| 34-39 | SUN | Grams, not vibes. Show this to whoever cooks. Comment SOUP for three soups. | Comment SOUP | same · hands plate toward camera · medium |
 
-**Full spoken script (73 words):** 1.2 grams of protein per kilo. For a 60 kilo woman, that's 72 grams. Experts say one to 1.2 grams per kilo over 65. More if you're active. Breakfast: Greek yogurt and nuts, twenty-five. Lunch: tofu and rice, twenty. Dinner: salmon and vegetables, twenty-seven. Seventy-two. Weigh in pounds? Multiply by a little more than half. Kidney disease? Your doctor sets your number. Not me. Grams, not vibes. Comment SOUP for three high-protein soups.
+**Full spoken script (81 words):** 1.2 grams of protein per kilo. For a 60 kilo woman, that's 72 grams. Watch where it goes. Experts say one to 1.2 grams per kilo over 65. More if you're active. Breakfast: Greek yogurt and nuts, twenty-five. Lunch: tofu and rice, twenty. Dinner: salmon and vegetables, twenty-seven. Seventy-two. Weigh in pounds? Multiply by a little more than half. Kidney disease? Your doctor sets your number. Not me. Grams, not vibes. Show this to whoever cooks. Comment SOUP for three soups.
 
 **Safety / cautions:** Kidney caution.
 
@@ -1651,6 +1739,8 @@ Example day: Greek yogurt + nuts (~25 g), tofu rice bowl (~20 g), salmon + veget
 **Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F06 · **Pillar** P10 (Digestion & gut) · **Hook** H190 · **Target** 40 s · **Spoken words** 103 · **CTA** `GUT` → Sun Yoon's 7-Day Fiber Ladder (NEW flow, clone SOUP flow)
 
 **Hook line:** "If you add fiber every day too fast, you'll feel it. Five grams at a time."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 69.0 · gate PASS · hook class IF_EVERY · needs: no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
@@ -1683,6 +1773,8 @@ Persistent bloating, or blood in the stool: see your doctor.
 
 **Hook line:** "He cheated thirty years ago and you still bring it up? Did you forgive?"
 
+**Virality (VIRALITY_SYSTEM.md §2):** 61.4 · gate PASS · hook class STATEMENT · needs: hook class STATEMENT is a bottom-tier opener (POSTDB §3b); no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down); CTA is long or asks for more than one keyword
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | SUN | He cheated thirty years ago and you still bring it up? Did you forgive? | FORGIVE, OR NOT? | SET-TABLE · S-CARDI-JADE · pours tea slowly, looks up over glasses · CU |
@@ -1713,6 +1805,8 @@ If you're in a relationship where you feel unsafe, in the US call 1-800-799-7233
 **Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F07 · **Pillar** P15 (Myth-busting) · **Hook** H243 · **Target** 38 s · **Spoken words** 77 · **CTA** `BEGIN` → Where should I begin? start menu
 
 **Hook line:** "If a video says 'instantly,' close it. Not a study, not a plan."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 59.5 · gate REWRITE · hook class NOT_X · needs: no concrete number in the hook or re-hook; no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
@@ -1745,6 +1839,8 @@ Red-flag words in health videos: 'instantly', 'secret', 'overnight'. Our rule: t
 
 **Hook line:** "If you buy canned fish every week, that's thirty grams of protein for pocket change."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 61.0 · gate PASS · hook class IF_EVERY · needs: no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | SUN | If you buy canned fish every week, that's thirty grams of protein for pocket change. | CANNED FISH = CHEAP PROTEIN | SET-KITCHEN · S-KITCHEN · stacks three unbranded cans · CU |
@@ -1775,6 +1871,8 @@ Choose low-sodium, and light tuna more often than albacore (lower mercury, per F
 **Page** @sunyoon · **Speaker** SUN · **Format** F31 · **Pillar** P11 (Sun's kitchen: recipes) · **Hook** H139 · **Target** 41 s · **Spoken words** 99 · **CTA** `SOUP` → Sun Yoon's Three Soups
 
 **Hook line:** "Widowed and eating standing at the counter? Sit down. Let's cook for one."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 55.2 · gate REWRITE · hook class STATEMENT · needs: hook class STATEMENT is a bottom-tier opener (POSTDB §3b); no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
@@ -1807,6 +1905,8 @@ Eat at the table. Better still, invite someone. People with strong social connec
 
 **Hook line:** "You're not lazy. You're scared of falling. Let's fix the scared part."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 63.2 · gate PASS · hook class STATEMENT · needs: hook class STATEMENT is a bottom-tier opener (POSTDB §3b); no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | SUN | You're not lazy. You're scared of falling. Let's fix the scared part. | NOT LAZY. SCARED. | SET-KITCHEN · S-TRAIN · both hands on the counter · medium-full |
@@ -1836,13 +1936,15 @@ If you've fallen recently or feel dizzy, tell your doctor first. Falls can have 
 ---
 
 ## S51: Microwave flexing / the sign
-**Page** @changandsun · **Speaker** DUO · **Format** F08 · **Pillar** P17 (Couple life & relationships) · **Hook** H211 · **Target** 40 s · **Spoken words** 69 · **CTA** `STRONG` → 8-Minute Chair Builder
+**Page** @changandsun · **Speaker** DUO · **Format** F08 · **Pillar** P17 (Couple life & relationships) · **Hook** H211 · **Target** 40 s · **Spoken words** 77 · **CTA** `STRONG` → 8-Minute Chair Builder
 
-**Hook line:** "He flexes in the microwave. So I made a sign."
+**Hook line:** "He flexes in the microwave every morning at seventy-four. So I made a sign. Watch him find it."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 72.7 · gate PASS · hook class STORY · needs: no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no save trigger (a routine / day N / tonight / write it down); CTA is long or asks for more than one keyword
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
-| 0-3 | SUN | He flexes in the microwave. So I made a sign. | NO MIRROR FLEXING | SET-KITCHEN · C-CASUAL + S-KITCHEN · Chang flexing at his reflection in the microwave door; cut to taped sign 'NO MIRROR FLEXING — S.Y.' · medium, then insert |
+| 0-3 | SUN | He flexes in the microwave every morning at seventy-four. So I made a sign. Watch him find it. | NO MIRROR FLEXING | SET-KITCHEN · C-CASUAL + S-KITCHEN · Chang flexing at his reflection in the microwave door; cut to taped sign 'NO MIRROR FLEXING — S.Y.' · medium, then insert |
 | 3-6 | CHANG | I'm checking the popcorn. | — | same · Chang, caught · CU |
 | 6-8 | SUN | There's no popcorn. | — | same · Sun, deadpan · CU |
 | 8-15 | CHANG | Muscle is a savings account. Adults doing thirty to sixty minutes of strength a week tended to have longer lives. | 30–60 min/week strength | same · Chang turns to camera · medium |
@@ -1851,9 +1953,9 @@ If you've fallen recently or feel dizzy, tell your doctor first. Falls can have 
 | 22-30 | CHANG | Three twenty-minute sessions. Chair stands, counter push-ups, carrying things. | 3 × 20 min: stands · push-ups · carries | same · quick demo cuts · quick cuts |
 | 30-33 | SUN | And the microwave? | — | same · two-shot |
 | 33-35 | CHANG | Recovery. | — | same · flex, grin · CU |
-| 35-40 | SUN | Seven out of ten. The arms get an eight. Comment STRONG for his chair builder. | Comment STRONG | same · pats his arm, walks off · two-shot |
+| 35-40 | SUN | Seven out of ten. Send this to your flexer. Comment STRONG for his chair builder. | Comment STRONG | same · pats his arm, walks off · two-shot |
 
-**Full spoken script (69 words):** He flexes in the microwave. So I made a sign. I'm checking the popcorn. There's no popcorn. Muscle is a savings account. Adults doing thirty to sixty minutes of strength a week tended to have longer lives. Show me the study. Three twenty-minute sessions. Chair stands, counter push-ups, carrying things. And the microwave? Recovery. Seven out of ten. The arms get an eight. Comment STRONG for his chair builder.
+**Full spoken script (77 words):** He flexes in the microwave every morning at seventy-four. So I made a sign. Watch him find it. I'm checking the popcorn. There's no popcorn. Muscle is a savings account. Adults doing thirty to sixty minutes of strength a week tended to have longer lives. Show me the study. Three twenty-minute sessions. Chair stands, counter push-ups, carrying things. And the microwave? Recovery. Seven out of ten. Send this to your flexer. Comment STRONG for his chair builder.
 
 **Safety / cautions:** No demonstration beyond quick cuts; caption add-on stop rule included since exercises named.
 
@@ -1874,6 +1976,8 @@ The microwave is not part of the program.
 **Page** @changandsun · **Speaker** DUO · **Format** F34 · **Pillar** P17 (Couple life & relationships) · **Hook** H212 · **Target** 40 s · **Spoken words** 77 · **CTA** `BALANCE` → Steady Feet + the 10-second test
 
 **Hook line:** "Fifty years married. I still beat him at balance."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 71.3 · gate PASS · hook class AUTHORITY · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
@@ -1910,6 +2014,8 @@ Current fridge score: Sun 28 s, Chang 24 s.
 
 **Hook line:** "Our daughter called. She thinks we train too much."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 76.5 · gate PASS · hook class STORY · needs: no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no save trigger (a routine / day N / tonight / write it down)
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | SUN | Our daughter called. She thinks we train too much. | OUR DAUGHTER CALLED… | SET-LIVING · C-CASUAL + S-CARDI-JADE · tablet on a stand, video call with Mina (face blurred/soft, voice only) · two-shot |
@@ -1943,6 +2049,8 @@ For grown kids: don't tell your parents to sit down. Sit down with them, then st
 
 **Hook line:** "He says he stretched. The kettlebell is still hidden."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 60.5 · gate PASS · hook class STORY · needs: no concrete number in the hook or re-hook; no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | SUN | He says he stretched. The kettlebell is still hidden. | THE KETTLEBELL IS HIDDEN | SET-GARAGE · C-TRAIN-A + S-CARDI-MUSTARD · Chang staring at an empty spot on the rack · medium two-shot |
@@ -1974,13 +2082,15 @@ New hip replacement? Follow your surgeon's precautions first.
 ---
 
 ## S55: Dumpling count = protein count
-**Page** @changandsun · **Speaker** DUO · **Format** F18 · **Pillar** P13 (Protein & muscle food) · **Hook** H215 · **Target** 40 s · **Spoken words** 68 · **CTA** `SOUP` → Sun Yoon's Three Soups
+**Page** @changandsun · **Speaker** DUO · **Format** F18 · **Pillar** P13 (Protein & muscle food) · **Hook** H215 · **Target** 40 s · **Spoken words** 80 · **CTA** `SOUP` → Sun Yoon's Three Soups
 
-**Hook line:** "He counts reps. I count dumplings. That's fourteen."
+**Hook line:** "He counts reps. I count dumplings. That's fourteen, and here's what fourteen is in protein."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 61.2 · gate PASS · hook class STATEMENT · needs: hook class STATEMENT is a bottom-tier opener (POSTDB §3b); no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
-| 0-3 | SUN | He counts reps. I count dumplings. That's fourteen. | THAT'S FOURTEEN | SET-TABLE · C-CASUAL + S-CARDI-JADE · plate of dumplings, Chang reaching · overhead then two-shot |
+| 0-3 | SUN | He counts reps. I count dumplings. That's fourteen, and here's what fourteen is in protein. | THAT'S FOURTEEN | SET-TABLE · C-CASUAL + S-CARDI-JADE · plate of dumplings, Chang reaching · overhead then two-shot |
 | 3-6 | CHANG | Twelve. | — | same · CU · CU |
 | 6-7 | SUN | Fourteen, Chang. | — | same · CU · CU |
 | 7-16 | SUN | Protein check. Pork dumplings, about two grams each. Twelve is twenty-four grams, and a lot of wrapper. | ~2 g protein per dumpling | same · gram labels on dumplings · overhead |
@@ -1989,9 +2099,9 @@ New hip replacement? Follow your surgeon's precautions first.
 | 28-30 | CHANG | Eight. | — | same · CU, sad · CU |
 | 30-33 | SUN | You heard me. | — | same · CU · CU |
 | 33-37 | SUN | Kidney disease? Your doctor sets your protein. Not us. | Kidney disease? Ask your doctor. | same · CU · CU |
-| 37-40 | CHANG | Comment SOUP. She'll send three soups. | Comment SOUP | same · eats dumpling #8 slowly · medium |
+| 37-40 | CHANG | Comment SOUP for three soups. Send this to your dumpling counter. | Comment SOUP | same · eats dumpling #8 slowly · medium |
 
-**Full spoken script (68 words):** He counts reps. I count dumplings. That's fourteen. Twelve. Fourteen, Chang. Protein check. Pork dumplings, about two grams each. Twelve is twenty-four grams, and a lot of wrapper. After sixty-five, twenty-five to thirty grams a meal. So add egg-drop soup. Now you're past thirty. And stop at eight dumplings. Eight. You heard me. Kidney disease? Your doctor sets your protein. Not us. Comment SOUP. She'll send three soups.
+**Full spoken script (80 words):** He counts reps. I count dumplings. That's fourteen, and here's what fourteen is in protein. Twelve. Fourteen, Chang. Protein check. Pork dumplings, about two grams each. Twelve is twenty-four grams, and a lot of wrapper. After sixty-five, twenty-five to thirty grams a meal. So add egg-drop soup. Now you're past thirty. And stop at eight dumplings. Eight. You heard me. Kidney disease? Your doctor sets your protein. Not us. Comment SOUP for three soups. Send this to your dumpling counter.
 
 **Safety / cautions:** Kidney caution.
 
@@ -2012,6 +2122,8 @@ Kidney disease? Your doctor sets your protein target.
 **Page** @changandsun · **Speaker** DUO · **Format** F34 · **Pillar** P17 (Couple life & relationships) · **Hook** H229 · **Target** 41 s · **Spoken words** 66 · **CTA** `STRONG` → 8-Minute Chair Builder
 
 **Hook line:** "A couples workout where nobody gets divorced."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 65.2 · gate PASS · hook class STATEMENT · needs: hook class STATEMENT is a bottom-tier opener (POSTDB §3b); no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
@@ -2043,22 +2155,24 @@ Strength training 2–3×/week improves strength and chair rising in older adult
 ---
 
 ## S57: He snores: the study says see the doctor
-**Page** @changandsun · **Speaker** DUO · **Format** F08 · **Pillar** P17 (Couple life & relationships) · **Hook** H232 · **Target** 38 s · **Spoken words** 64 · **CTA** `SLEEP` → Sleep Wind-Down (10 min)
+**Page** @changandsun · **Speaker** DUO · **Format** F08 · **Pillar** P17 (Couple life & relationships) · **Hook** H232 · **Target** 38 s · **Spoken words** 74 · **CTA** `SLEEP` → Sleep Wind-Down (10 min)
 
-**Hook line:** "He snores. I found a study. The study says: see the doctor."
+**Hook line:** "He snores. I found a study, one page, and the study says: see the doctor. Watch his face."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 76.1 · gate PASS · hook class WATCH · needs: no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
-| 0-3 | SUN | He snores. I found a study. The study says: see the doctor. | SNORING → SEE THE DOCTOR | SET-BED · C-BED + S-BED · night, Chang snoring, Sun sitting up with phone · medium two-shot |
+| 0-3 | SUN | He snores. I found a study, one page, and the study says: see the doctor. Watch his face. | SNORING → SEE THE DOCTOR | SET-BED · C-BED + S-BED · night, Chang snoring, Sun sitting up with phone · medium two-shot |
 | 3-5 | CHANG | I don't snore. | — | same · Chang wakes · CU |
 | 5-8 | SUN | (no line; action) | — | same · Sun plays a recording on her phone (snoring sound) · CU phone |
 | 8-18 | SUN | Loud snoring, gasping, stopping breathing in your sleep, and tired all day? Sleep doctors say get checked for sleep apnea. | Snoring + gasping + tired all day → get checked | same · study card inset (AASM guideline) · medium |
 | 18-24 | CHANG | No breathing trick fixes that. That's a doctor visit. | Not a breathing-trick problem | same · CU · CU |
 | 24-28 | SUN | He's going Tuesday. I'm driving. | — | same · Sun, smug · CU |
-| 28-34 | CHANG | Want to wind down better at night? Comment SLEEP. | Comment SLEEP | same · Chang to camera · medium |
+| 28-34 | CHANG | Send this to the snorer in your bed. Comment SLEEP for the wind-down. | Comment SLEEP | same · Chang to camera · medium |
 | 34-37 | SUN | And sleep on your side, Chang. | — | same · pushes him to roll over · two-shot |
 
-**Full spoken script (64 words):** He snores. I found a study. The study says: see the doctor. I don't snore. Loud snoring, gasping, stopping breathing in your sleep, and tired all day? Sleep doctors say get checked for sleep apnea. No breathing trick fixes that. That's a doctor visit. He's going Tuesday. I'm driving. Want to wind down better at night? Comment SLEEP. And sleep on your side, Chang.
+**Full spoken script (74 words):** He snores. I found a study, one page, and the study says: see the doctor. Watch his face. I don't snore. Loud snoring, gasping, stopping breathing in your sleep, and tired all day? Sleep doctors say get checked for sleep apnea. No breathing trick fixes that. That's a doctor visit. He's going Tuesday. I'm driving. Send this to the snorer in your bed. Comment SLEEP for the wind-down. And sleep on your side, Chang.
 
 **Safety / cautions:** Red-flag referral; no treatment claim.
 
@@ -2075,22 +2189,24 @@ Loud snoring plus gasping, pauses in breathing or daytime sleepiness should be c
 ---
 
 ## S58: When we fight, we exhale
-**Page** @changandsun · **Speaker** DUO · **Format** F35 · **Pillar** P17 (Couple life & relationships) · **Hook** H237 · **Target** 39 s · **Spoken words** 78 · **CTA** `BREATH` → The 4-6 Breath (5 min)
+**Page** @changandsun · **Speaker** DUO · **Format** F35 · **Pillar** P17 (Couple life & relationships) · **Hook** H237 · **Target** 39 s · **Spoken words** 91 · **CTA** `BREATH` → The 4-6 Breath (5 min)
 
-**Hook line:** "When we fight, one of us says 'exhale.' Here's why."
+**Hook line:** "When we fight, one of us says 'exhale,' in for four, out for six. Here's why it works."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 62.2 · gate PASS · hook class STATEMENT · needs: hook class STATEMENT is a bottom-tier opener (POSTDB §3b); no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
-| 0-3 | SUN | When we fight, one of us says 'exhale.' Here's why. | WHEN WE FIGHT: EXHALE | SET-LIVING · C-CASUAL + S-CARDI-JADE · mid-argument by the thermostat · medium two-shot |
+| 0-3 | SUN | When we fight, one of us says 'exhale,' in for four, out for six. Here's why it works. | WHEN WE FIGHT: EXHALE | SET-LIVING · C-CASUAL + S-CARDI-JADE · mid-argument by the thermostat · medium two-shot |
 | 3-11 | CHANG | A long exhale works like a brake. Slow breathing raises heart-rate variability. That's the calm side of your nervous system. | Slow breathing ↑ HRV | same · study card inset (Laborde 2022) · medium |
 | 11-20 | SUN | So when he says the thermostat is fine and it's freezing: in for four, out for six. | In 4 · Out 6 | same · both breathing, a timer ring · medium two-shot |
 | 20-25 | CHANG | Three times. Then talk. | 3 breaths. Then talk. | same · CU · CU |
 | 25-27 | SUN | Then I win. | — | same · CU smirk · CU |
 | 27-33 | CHANG | It doesn't solve the fight. It stops the fight from driving the car. | It stops the fight from driving | same · medium · medium |
 | 33-35 | SUN | Fifty years. Still married. | — | same · turns thermostat up · two-shot |
-| 35-39 | CHANG | Comment BREATH. I'll send the 4-6 breath. | Comment BREATH | same · to camera · medium CU |
+| 35-39 | CHANG | Send this to your sparring partner. Comment BREATH for the 4-6 breath. | Comment BREATH | same · to camera · medium CU |
 
-**Full spoken script (78 words):** When we fight, one of us says 'exhale.' Here's why. A long exhale works like a brake. Slow breathing raises heart-rate variability. That's the calm side of your nervous system. So when he says the thermostat is fine and it's freezing: in for four, out for six. Three times. Then talk. Then I win. It doesn't solve the fight. It stops the fight from driving the car. Fifty years. Still married. Comment BREATH. I'll send the 4-6 breath.
+**Full spoken script (91 words):** When we fight, one of us says 'exhale,' in for four, out for six. Here's why it works. A long exhale works like a brake. Slow breathing raises heart-rate variability. That's the calm side of your nervous system. So when he says the thermostat is fine and it's freezing: in for four, out for six. Three times. Then talk. Then I win. It doesn't solve the fight. It stops the fight from driving the car. Fifty years. Still married. Send this to your sparring partner. Comment BREATH for the 4-6 breath.
 
 **Safety / cautions:** Crisis resource in caption (relationship conflict topic); no breath holds.
 
@@ -2108,21 +2224,23 @@ If arguments at home ever make you feel unsafe, in the US call 1-800-799-7233.
 ---
 
 ## S59: We're AI. The advice isn't fake.
-**Page** @changandsun · **Speaker** DUO · **Format** F08 · **Pillar** P20 (Behind the AI / trust) · **Hook** H239 · **Target** 40 s · **Spoken words** 95 · **CTA** `TEST` → Strength Age test (quiz)
+**Page** @changandsun · **Speaker** DUO · **Format** F08 · **Pillar** P20 (Behind the AI / trust) · **Hook** H239 · **Target** 40 s · **Spoken words** 104 · **CTA** `TEST` → Strength Age test (quiz)
 
-**Hook line:** "We're AI. The marriage is fictional. The advice isn't."
+**Hook line:** "We're AI. The marriage is fictional. The advice isn't. Watch the three tests that are real."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 67.1 · gate PASS · hook class WATCH · needs: no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
-| 0-3 | SUN | We're AI. The marriage is fictional. The advice isn't. | WE'RE AI. | SET-LIVING · C-CASUAL + S-CARDI-JADE · both on sofa, Mandu between them · medium two-shot |
+| 0-3 | SUN | We're AI. The marriage is fictional. The advice isn't. Watch the three tests that are real. | WE'RE AI. | SET-LIVING · C-CASUAL + S-CARDI-JADE · both on sofa, Mandu between them · medium two-shot |
 | 3-8 | CHANG | A team made us. Real people check every video against the research. | Checked against real research | same · CU · CU |
 | 8-12 | SUN | He's not real. His arms are also not real. | — | same · pokes his bicep · two-shot |
 | 12-23 | CHANG | What is real: three tests. Chair stands in thirty seconds. Ten seconds on one leg. Sitting on the floor and getting up. | Chair · one leg · floor | same · quick inserts of S01/S02/S03 demos · quick cuts |
 | 23-29 | SUN | Each one comes from a real study. The links are in the caption. I read them. Well, they read them to me. | Studies in the caption | same · holds up study cards · medium |
 | 29-34 | CHANG | Do the tests today. Write your numbers. Come back in thirty days. | Test today · retest in 30 days | same · CU · CU |
-| 34-39 | SUN | Comment TEST. We'll help you find your strength age. | Comment TEST | same · Mandu yawns · two-shot |
+| 34-39 | SUN | Comment TEST for your strength age. Send this to your person. | Comment TEST | same · Mandu yawns · two-shot |
 
-**Full spoken script (95 words):** We're AI. The marriage is fictional. The advice isn't. A team made us. Real people check every video against the research. He's not real. His arms are also not real. What is real: three tests. Chair stands in thirty seconds. Ten seconds on one leg. Sitting on the floor and getting up. Each one comes from a real study. The links are in the caption. I read them. Well, they read them to me. Do the tests today. Write your numbers. Come back in thirty days. Comment TEST. We'll help you find your strength age.
+**Full spoken script (104 words):** We're AI. The marriage is fictional. The advice isn't. Watch the three tests that are real. A team made us. Real people check every video against the research. He's not real. His arms are also not real. What is real: three tests. Chair stands in thirty seconds. Ten seconds on one leg. Sitting on the floor and getting up. Each one comes from a real study. The links are in the caption. I read them. Well, they read them to me. Do the tests today. Write your numbers. Come back in thirty days. Comment TEST for your strength age. Send this to your person.
 
 **Safety / cautions:** Disclosure content; tests demonstrated in linked videos with full safety cues. Reviewer gate: [ONLY PUBLISH ONCE A SIGNED, CREDENTIALED REVIEWER EXISTS: beat 3-8 review-claim line, on-screen review badge and caption review line as written in SAFETY_RULES.md §7 (reviewer-gated strings)] FALLBACK: the no-claim lines used in this script (ship these until a signed, credentialed reviewer exists).
 
@@ -2143,22 +2261,24 @@ Every video is checked by our team against published research before posting.
 ---
 
 ## S60: 50th anniversary in 23 days
-**Page** @changandsun · **Speaker** DUO · **Format** F27 · **Pillar** P17 (Couple life & relationships) · **Hook** H235 · **Target** 41 s · **Spoken words** 76 · **CTA** `BEGIN` → Where should I begin? start menu
+**Page** @changandsun · **Speaker** DUO · **Format** F27 · **Pillar** P17 (Couple life & relationships) · **Hook** H235 · **Target** 41 s · **Spoken words** 85 · **CTA** `BEGIN` → Where should I begin? start menu
 
-**Hook line:** "Fiftieth anniversary in twenty-three days. She still says the dumplings were over-salted."
+**Hook line:** "Fiftieth anniversary in twenty-three days, and she still says my wedding dumplings were over-salted. Watch her face."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 69.1 · gate PASS · hook class WATCH · needs: no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no save trigger (a routine / day N / tonight / write it down)
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
-| 0-3 | CHANG | Fiftieth anniversary in twenty-three days. She still says the dumplings were over-salted. | 50 YEARS IN 23 DAYS | SET-LIVING · C-CASUAL + S-CARDI-JADE · holding an illustrated vintage-style 1976 wedding portrait (clearly artwork) · medium two-shot |
+| 0-3 | CHANG | Fiftieth anniversary in twenty-three days, and she still says my wedding dumplings were over-salted. Watch her face. | 50 YEARS IN 23 DAYS | SET-LIVING · C-CASUAL + S-CARDI-JADE · holding an illustrated vintage-style 1976 wedding portrait (clearly artwork) · medium two-shot |
 | 3-7 | SUN | They were. Then you over-corrected. | — | same · CU smile · CU |
 | 7-12 | CHANG | People ask how we did fifty years. | — | same · medium · medium |
 | 12-20 | SUN | Short version: eat together. Walk together. Fight, then exhale. Then eat again. | Eat · walk · fight · exhale · eat | same · Sun counts on fingers · CU |
 | 20-29 | CHANG | In 148 studies, people with strong relationships tended to have longer lives. Friends, family, neighbors. Not only marriage. | 148 studies · 308,849 people | same · study card inset · medium |
-| 29-35 | SUN | Call your person tonight. Or be someone's person. | Be someone's person. | same · hand on his · CU hands, rings |
+| 29-35 | SUN | Call your person tonight. Or be someone's person. Send this to yours. | Be someone's person. | same · hand on his · CU hands, rings |
 | 35-38 | CHANG | Seven out of ten? | — | same · CU · CU |
 | 38-41 | SUN | Fifty years. Ten. Comment BEGIN if you're starting something together. | Comment BEGIN | same · she kisses his cheek · two-shot |
 
-**Full spoken script (76 words):** Fiftieth anniversary in twenty-three days. She still says the dumplings were over-salted. They were. Then you over-corrected. People ask how we did fifty years. Short version: eat together. Walk together. Fight, then exhale. Then eat again. In 148 studies, people with strong relationships tended to have longer lives. Friends, family, neighbors. Not only marriage. Call your person tonight. Or be someone's person. Seven out of ten? Fifty years. Ten. Comment BEGIN if you're starting something together.
+**Full spoken script (85 words):** Fiftieth anniversary in twenty-three days, and she still says my wedding dumplings were over-salted. Watch her face. They were. Then you over-corrected. People ask how we did fifty years. Short version: eat together. Walk together. Fight, then exhale. Then eat again. In 148 studies, people with strong relationships tended to have longer lives. Friends, family, neighbors. Not only marriage. Call your person tonight. Or be someone's person. Send this to yours. Seven out of ten? Fifty years. Ten. Comment BEGIN if you're starting something together.
 
 **Safety / cautions:** No health outcome claim beyond association; tender beat.
 
@@ -2180,6 +2300,8 @@ How many years for you? Tell us below.
 **Page** @changyin · **Speaker** CHANG · **Format** F02 · **Pillar** P04 (Grip, upper body & carry) · **Hook** H301 · **Target** 46 s · **Spoken words** 94 · **CTA** `TEST` → Strength Age test (quiz)
 
 **Hook line:** "Two gallon milk jugs. Walk to the fence and back. Can you?"
+
+**Virality (VIRALITY_SYSTEM.md §2):** 74.1 · gate PASS · hook class OBJ3 · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** OBJ3, TEST_NOW, DEMO, KITCHEN_SERIES · **Frame-1 prop:** two gallon milk jugs · **Series:** Kitchen Gym #1  
 **3-second skip/safety line:** "Hands sore or back cranky today? Skip it."
@@ -2218,6 +2340,8 @@ Sore hands or back today? Skip it, or use half-full jugs.
 
 **Hook line:** "If you stand up every time the ads come on, that's sixty stands a night."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 84.0 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** IF_EVERY, SHARE, DEMO · **Frame-1 prop:** TV remote  
 **3-second skip/safety line:** "Dizzy when you stand? Stand slower, and tell your doctor."
 
@@ -2254,6 +2378,8 @@ Dizzy when you stand up? Rise slowly and mention it to your doctor.
 **Page** @changyin · **Speaker** CHANG · **Format** F02 · **Pillar** P03 (Balance & steady feet) · **Hook** H303 · **Target** 45 s · **Spoken words** 98 · **CTA** `BALANCE` → Steady Feet + the 10-second test
 
 **Hook line:** "Glass of water, full to the top. Stand on one leg and watch it."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 81.1 · gate PASS · hook class WATCH · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)
 
 **Grammar:** OBJ3, WATCH, TEST_NOW, DEMO · **Frame-1 prop:** full glass of water  
 **3-second skip/safety line:** "Dizzy spells or a new hip? Keep both feet down for now."
@@ -2292,6 +2418,8 @@ Fingers over the counter. Dizzy spells or a new hip? Keep both feet down.
 
 **Hook line:** "If you march in place every time the microwave runs, that's balance practice all day."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 71.0 · gate PASS · hook class IF_EVERY · needs: no concrete number in the hook or re-hook; no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** IF_EVERY, DEMO · **Frame-1 prop:** microwave timer  
 **3-second skip/safety line:** "Hip or knee just replaced? Ask your PT for your version."
 
@@ -2329,6 +2457,8 @@ New hip or knee? Your PT sets your version.
 
 **Hook line:** "Your heart's best friend isn't only the treadmill. Not only the bike. Muscles get a vote."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 66.7 · gate PASS · hook class MYTH · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** MYTH, OBJ3 · **Frame-1 prop:** printed AHA study card  
 **3-second skip/safety line:** "Heart condition, chest pain, or new breathlessness? Get cleared by your doctor first."
 
@@ -2362,6 +2492,8 @@ Heart condition or chest symptoms? Get individual clearance first.
 **Page** @changyin · **Speaker** CHANG · **Format** F03 · **Pillar** P06 (Back / knee / shoulder relief & rehab) · **Hook** H306 · **Target** 47 s · **Spoken words** 112 · **CTA** `BACK` → Morning Unlock (7 min, starts in bed)
 
 **Hook line:** "Bottom shelf of the fridge. Don't fold in half. Watch how I get down there."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 74.1 · gate PASS · hook class WATCH · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** WATCH, OBJ3, DEMO · **Frame-1 prop:** fridge bottom drawer  
 **3-second skip/safety line:** "Knees don't like kneeling? Sit on a low stool instead."
@@ -2400,6 +2532,8 @@ Up to 3/10 discomfort is okay if it settles by morning. Sharper or worse the nex
 
 **Hook line:** "If you walk down your hallway every day, time it once. Four meters. Painter's tape."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 76.0 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** IF_EVERY, TEST_NOW, DEMO · **Frame-1 prop:** painter's tape in the hallway  
 **3-second skip/safety line:** "Dizzy or short of breath walking? That's for your doctor first."
 
@@ -2436,6 +2570,8 @@ Clear the rugs, shoes on, wall beside you.
 **Page** @changyin · **Speaker** CHANG · **Format** F17 · **Pillar** P02 (Legs & chair strength) · **Hook** H308 · **Target** 46 s · **Spoken words** 95 · **CTA** `STRONG` → 8-Minute Chair Builder
 
 **Hook line:** "If you push on the armrests every time you stand, your legs skip their job."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 76.0 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** IF_EVERY, DEMO · **Frame-1 prop:** armchair with armrests  
 **3-second skip/safety line:** "New hip? Follow your surgeon's rules on chair height first."
@@ -2474,6 +2610,8 @@ New hip? Follow your surgeon's precautions on chair height.
 
 **Hook line:** "Send this to your mom. Then do this chair test with her on the phone tonight."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 84.1 · gate PASS · hook class OBJ3 · needs: no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** SHARE, TEST_NOW, DEMO · **Frame-1 prop:** phone on a stand, video call  
 **3-second skip/safety line:** "Chest pain or dizzy? Stop. Call her doctor, not me."
 
@@ -2511,6 +2649,8 @@ Chest pain or dizziness: stop and call her doctor.
 
 **Hook line:** "The number one thing to test is not thigh size, not the scale. It's strength."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 70.5 · gate PASS · hook class NOT_X · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** MYTH, DEMO · **Frame-1 prop:** tape measure around the thigh  
 **3-second skip/safety line:** "Joints cranky? Take the speed out."
 
@@ -2546,6 +2686,8 @@ Cranky joints: slow both ways.
 **Page** @changyin · **Speaker** CHANG · **Format** F01 · **Pillar** P02 (Legs & chair strength) · **Hook** H311 · **Target** 52 s · **Spoken words** 83 · **CTA** `STRONG` → 8-Minute Chair Builder
 
 **Hook line:** "If you make coffee every morning, set this timer for sixty seconds and stand with me."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 76.0 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** IF_EVERY, TEST_NOW, DEMO · **Frame-1 prop:** wind-up kitchen timer  
 **3-second skip/safety line:** "Stop if anything hurts sharp."
@@ -2584,6 +2726,8 @@ Hands on the counter the whole time. Stop if anything hurts sharp.
 
 **Hook line:** "If you drop your keys every week like me, pick them up like a golfer."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 76.0 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** IF_EVERY, DEMO · **Frame-1 prop:** car keys on the floor  
 **3-second skip/safety line:** "Back surgery this year? Squat version only."
 
@@ -2620,6 +2764,8 @@ Wobbly? Back toe stays down. Back surgery this year? Use the squat version.
 **Page** @changyin · **Speaker** CHANG · **Format** F15 · **Pillar** P03 (Balance & steady feet) · **Hook** H313 · **Target** 48 s · **Spoken words** 99 · **CTA** `BALANCE` → Steady Feet + the 10-second test
 
 **Hook line:** "If you walk past a curled rug corner every day, fix it tonight. Then practice this."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 91.0 · gate PASS · hook class IF_EVERY · needs: no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** IF_EVERY, DEMO, SHARE · **Frame-1 prop:** curled rug corner  
 **3-second skip/safety line:** "Fallen recently or hit your head? Tell your doctor this week."
@@ -2658,6 +2804,8 @@ Recent fall or a head bump? Tell your doctor this week.
 
 **Hook line:** "Red face. Chair arms. Same weight for years. Three mistakes I see after 60."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 67.1 · gate PASS · hook class OBJ3 · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** MYTH, DEMO · **Frame-1 prop:** red-faced lifter on a phone screen  
 **3-second skip/safety line:** "Heart condition? Get cleared before heavier weights."
 
@@ -2694,6 +2842,8 @@ Heart condition? Get individual clearance before heavier weights.
 **Page** @changyin · **Speaker** CHANG · **Format** F02 · **Pillar** P01 (Strength proof & tests) · **Hook** H315 · **Target** 48 s · **Spoken words** 92 · **CTA** `TEST` → Strength Age test (quiz)
 
 **Hook line:** "Notebook. Three numbers. Chair, one leg, walking speed. Write them tonight."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 67.1 · gate PASS · hook class OBJ3 · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** OBJ3, TEST_NOW, DEMO · **Frame-1 prop:** spiral notebook and pencil  
 **3-second skip/safety line:** "Dizzy, chest pain, or a recent fall? Skip the tests and call your doctor."
@@ -2732,6 +2882,8 @@ Dizzy, chest pain or a recent fall? Skip the tests and call your doctor.
 
 **Hook line:** "If you lift every week, breakfast needs protein. Twenty-eight grams. Sun counted."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 72.2 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** IF_EVERY, DEMO · **Frame-1 prop:** kitchen scale with breakfast plate  
 **3-second skip/safety line:** "Kidney disease? Ask your doctor for your protein number."
 
@@ -2766,6 +2918,8 @@ Kidney disease? Your doctor sets your number.
 **Page** @changyin.strength · **Speaker** CHANG · **Format** F15 · **Pillar** P04 (Grip, upper body & carry) · **Hook** H317 · **Target** 47 s · **Spoken words** 101 · **CTA** `STRONG` → 8-Minute Chair Builder
 
 **Hook line:** "Soup cans. Curl them slowly, and just watch my forearms work."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 74.1 · gate PASS · hook class WATCH · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** WATCH, OBJ3, DEMO, KITCHEN_SERIES · **Frame-1 prop:** two soup cans · **Series:** Kitchen Gym #2  
 **3-second skip/safety line:** "Shoulder pain lifting forward? Skip move two."
@@ -2805,6 +2959,8 @@ Shoulder pain lifting forward? Skip the raises.
 
 **Hook line:** "Twenty-pound bag of rice. Hug it. Squat to the chair. How many clean ones?"
 
+**Virality (VIRALITY_SYSTEM.md §2):** 81.6 · gate PASS · hook class OBJ3 · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** OBJ3, TEST_NOW, DEMO, KITCHEN_SERIES · **Frame-1 prop:** 20-lb bag of rice · **Series:** Kitchen Gym #3  
 **3-second skip/safety line:** "Hernia or recent surgery? No loaded squats until your doctor says so."
 
@@ -2841,6 +2997,8 @@ Hernia or recent surgery? Wait for your doctor's OK.
 **Page** @changyin.strength · **Speaker** CHANG · **Format** F15 · **Pillar** P02 (Legs & chair strength) · **Hook** H319 · **Target** 45 s · **Spoken words** 90 · **CTA** `BALANCE` → Steady Feet + the 10-second test
 
 **Hook line:** "If you shuffle every time you walk, try fast feet at the counter. Three each way."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 76.0 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** IF_EVERY, DEMO · **Frame-1 prop:** masking-tape lines on the kitchen floor  
 **3-second skip/safety line:** "Balance problems or dizziness? Keep both hands on and go slow."
@@ -2879,6 +3037,8 @@ Hands on the counter. New at this? Slow first, speed later.
 
 **Hook line:** "Two-pound dumbbells for years? The guidelines for older adults go heavier. Slowly."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 77.5 · gate PASS · hook class MYTH · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** MYTH, OBJ3, DEMO · **Frame-1 prop:** pair of 2-lb dumbbells  
 **3-second skip/safety line:** "Heart or blood-pressure condition? Get cleared before heavier weights."
 
@@ -2915,6 +3075,8 @@ Heart or blood-pressure condition? Get clearance before going heavier.
 **Page** @changyin.strength · **Speaker** CHANG · **Format** F25 · **Pillar** P01 (Strength proof & tests) · **Hook** H321 · **Target** 46 s · **Spoken words** 94 · **CTA** `STRONG` → 8-Minute Chair Builder
 
 **Hook line:** "Eighty kilos. Five reps. I'm 74. Here's where you start instead."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 76.1 · gate PASS · hook class OBJ3 · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** OBJ3, DEMO · **Frame-1 prop:** loaded trap bar  
 **3-second skip/safety line:** "Back injury or hernia? Ask your doctor before lifting from low."
@@ -2953,6 +3115,8 @@ Back injury or hernia? Ask your doctor before lifting from low.
 
 **Hook line:** "Hammer. Hold the very end of the handle, turn it slowly, and watch your forearm."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 69.1 · gate PASS · hook class WATCH · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** WATCH, OBJ3, DEMO · **Frame-1 prop:** claw hammer  
 **3-second skip/safety line:** "Wrist or thumb arthritis flaring? Gentle turns only, or skip today."
 
@@ -2990,6 +3154,8 @@ Arthritis flaring? Gentle turns or skip today.
 
 **Hook line:** "If you haul yourself out by the door frame every time, your legs skip practice."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 71.0 · gate PASS · hook class IF_EVERY · needs: no concrete number in the hook or re-hook; no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** IF_EVERY, DEMO · **Frame-1 prop:** open car door  
 **3-second skip/safety line:** "New hip? Follow your surgeon's car rules first."
 
@@ -3026,6 +3192,8 @@ New hip? Follow your surgeon's precautions for cars.
 **Page** @changyin.strength · **Speaker** CHANG · **Format** F25 · **Pillar** P04 (Grip, upper body & carry) · **Hook** H324 · **Target** 45 s · **Spoken words** 81 · **CTA** `STRONG` → 8-Minute Chair Builder
 
 **Hook line:** "Cooler full of ice. Frank carries it one way. I carry it another. Both count."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 67.1 · gate PASS · hook class OBJ3 · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** OBJ3, DEMO · **Frame-1 prop:** loaded picnic cooler  
 **3-second skip/safety line:** "New knee or back? Frank's way. Short trips. Ask your PT first."
@@ -3065,6 +3233,8 @@ New knee or back? Start with Frank's way and ask your PT.
 
 **Hook line:** "Tape on your shoe. Point your knee at it every rep, and watch what happens."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 76.1 · gate PASS · hook class WATCH · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)
+
 **Grammar:** WATCH, OBJ3, DEMO · **Frame-1 prop:** strip of tape on a shoe  
 **3-second skip/safety line:** "Hot, swollen knee? No exercise. Call your doctor."
 
@@ -3101,6 +3271,8 @@ Up to 3/10 discomfort is fine if it settles by tomorrow. Hot, swollen knee: no e
 **Page** @changyin.strength · **Speaker** CHANG · **Format** F15 · **Pillar** P04 (Grip, upper body & carry) · **Hook** H326 · **Target** 45 s · **Spoken words** 103 · **CTA** `BACK` → Morning Unlock (7 min, starts in bed)
 
 **Hook line:** "If you push and reach every day, pull once. Door anchor, band, ribs."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 76.0 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** IF_EVERY, DEMO · **Frame-1 prop:** resistance band in a door anchor  
 **3-second skip/safety line:** "Shoulder pain that wakes you at night? That one's for your doctor, today."
@@ -3139,6 +3311,8 @@ Night shoulder pain that wakes you? See your doctor first.
 
 **Hook line:** "Carry-on bag, overhead bin. Practice it at home before the airport tests you."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 67.1 · gate PASS · hook class COMMAND · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** OBJ3, DEMO · **Frame-1 prop:** carry-on suitcase  
 **3-second skip/safety line:** "Shoulder pain overhead? Stop at chest height."
 
@@ -3175,6 +3349,8 @@ Shoulder pain overhead? Stop at chest height, and asking for help is allowed.
 **Page** @changyin.mobility · **Speaker** CHANG · **Format** F20 · **Pillar** P05 (Mobility & stretching) · **Hook** H328 · **Target** 44 s · **Spoken words** 102 · **CTA** `BACK` → Morning Unlock (7 min, starts in bed)
 
 **Hook line:** "If you wait for the coffee every morning, write the alphabet with your ankles."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 83.0 · gate PASS · hook class IF_EVERY · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** IF_EVERY, DEMO · **Frame-1 prop:** coffee maker brewing  
 **3-second skip/safety line:** "One calf red, swollen and painful? No exercise. Call your doctor."
@@ -3213,6 +3389,8 @@ One calf red, swollen and painful? That's for your doctor, not exercise.
 
 **Hook line:** "Knee pain, zero to ten. Here's the number where you keep going."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 74.1 · gate PASS · hook class OBJ3 · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** OBJ3, DEMO · **Frame-1 prop:** 0–10 pain scale card  
 **3-second skip/safety line:** "Hot, swollen knee, or pain at night that won't settle? No exercise. Doctor."
 
@@ -3249,6 +3427,8 @@ Hot swollen knee or night pain that won't settle: see your doctor, no exercise.
 **Page** @changyin.mobility · **Speaker** CHANG · **Format** F22 · **Pillar** P08 (Tai chi / qigong / gentle yoga) · **Hook** H330 · **Target** 48 s · **Spoken words** 92 · **CTA** `BALANCE` → Steady Feet + the 10-second test
 
 **Hook line:** "Fence. One hand on it. Cloud hands, slowly, and watch your weight shift."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 74.1 · gate PASS · hook class WATCH · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** WATCH, OBJ3, DEMO · **Frame-1 prop:** backyard fence at dusk  
 **3-second skip/safety line:** "Dizzy turning? Keep your eyes on the far hand, move smaller."
@@ -3287,6 +3467,8 @@ Dizzy turning? Smaller moves, eyes on the far hand.
 
 **Hook line:** "Drinking straw. Breathe out through it slowly. Watch what happens to my shoulders."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 70.3 · gate PASS · hook class WATCH · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** OBJ3, WATCH, DEMO · **Frame-1 prop:** bendy drinking straw  
 **3-second skip/safety line:** "Lightheaded? Stop, breathe normally."
 
@@ -3321,6 +3503,8 @@ Lightheaded? Stop and breathe normally. Lung condition? Ask your doctor first.
 
 **Hook line:** "If you put a paperback on your belly every night, watch how your breathing slows."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 79.2 · gate PASS · hook class IF_EVERY · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** IF_EVERY, WATCH, DEMO · **Frame-1 prop:** paperback book on belly  
 **3-second skip/safety line:** "Snoring with pauses in breathing? That's for your doctor, not a book."
 
@@ -3354,6 +3538,8 @@ Loud snoring with pauses or gasping? Get evaluated for sleep apnea (AASM guideli
 **Page** @changyin.mobility · **Speaker** CHANG · **Format** F14 · **Pillar** P06 (Back / knee / shoulder relief & rehab) · **Hook** H333 · **Target** 47 s · **Spoken words** 113 · **CTA** `BACK` → Morning Unlock (7 min, starts in bed)
 
 **Hook line:** "Top shelf. Reach for the mug and watch your shoulder. Did it climb to your ear?"
+
+**Virality (VIRALITY_SYSTEM.md §2):** 81.1 · gate PASS · hook class WATCH · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)
 
 **Grammar:** WATCH, OBJ3, TEST_NOW, DEMO · **Frame-1 prop:** top kitchen shelf with a mug  
 **3-second skip/safety line:** "Arm weak or numb, or pain that wakes you? That's for your doctor, today."
@@ -3392,6 +3578,8 @@ Weakness, numbness or night pain: see your doctor.
 
 **Hook line:** "If you watch TV every evening, sit on the sofa's edge and draw the bow first."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 78.0 · gate PASS · hook class IF_EVERY · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** IF_EVERY, DEMO · **Frame-1 prop:** sofa edge in lamplight  
 **3-second skip/safety line:** "Shoulder won't lift? Keep the arms low."
 
@@ -3427,6 +3615,8 @@ Sore shoulder? Keep the arms low. Stand up slowly, holding the sofa arm.
 **Page** @changyin.mobility · **Speaker** CHANG · **Format** F03 · **Pillar** P06 (Back / knee / shoulder relief & rehab) · **Hook** H335 · **Target** 47 s · **Spoken words** 115 · **CTA** `BACK` → Morning Unlock (7 min, starts in bed)
 
 **Hook line:** "If you sit straight up every morning when the alarm rings, roll like a log instead."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 76.0 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** IF_EVERY, DEMO · **Frame-1 prop:** ringing alarm clock  
 **3-second skip/safety line:** "New numbness, weakness in a leg, or trouble with your bladder? No exercise. Doctor, today."
@@ -3465,6 +3655,8 @@ New leg numbness or weakness, or bladder/bowel changes: see a doctor today.
 
 **Hook line:** "If you stand heel-to-toe every time you do the dishes, that's balance practice every night."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 71.0 · gate PASS · hook class IF_EVERY · needs: no concrete number in the hook or re-hook; no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** IF_EVERY, DEMO · **Frame-1 prop:** sink full of dishes  
 **3-second skip/safety line:** "Wet floor? Mat down first, and shoes on."
 
@@ -3501,6 +3693,8 @@ Mat down and shoes on. Too wobbly? Feet side by side.
 **Page** @changyin.mobility · **Speaker** CHANG · **Format** F33 · **Pillar** P05 (Mobility & stretching) · **Hook** H337 · **Target** 48 s · **Spoken words** 103 · **CTA** `BACK` → Morning Unlock (7 min, starts in bed)
 
 **Hook line:** "Send this to the man in your house who says stretching is a waste of time."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 65.1 · gate PASS · hook class OBJ3 · needs: first spoken clause 16 words / sentence 16 (max 12 / 22); no concrete number in the hook or re-hook; no open loop / re-hook by second 3–6; no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** SHARE, DEMO · **Frame-1 prop:** kitchen chair and doorway  
 **3-second skip/safety line:** "Sharp pain means stop."
@@ -3539,6 +3733,8 @@ Sharp pain means stop.
 
 **Hook line:** "Knee osteoarthritis. 204 adults. Tai chi or physical therapy. Same improvement."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 72.3 · gate PASS · hook class OBJ3 · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); CTA is long or asks for more than one keyword
+
 **Grammar:** OBJ3, DEMO · **Frame-1 prop:** printed trial card on the promenade bench  
 **3-second skip/safety line:** "Hot, swollen knee? No class today. Call your doctor."
 
@@ -3575,6 +3771,8 @@ Up to 3/10 is fine if it settles by tomorrow. Hot, swollen knee: see your doctor
 
 **Hook line:** "If you drink warm water every morning on an empty stomach, here's what actually happens."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 74.2 · gate PASS · hook class IF_EVERY · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** IF_EVERY, MYTH, DEBUNK, KITCHEN_SERIES · **Frame-1 prop:** mug of warm water · **Series:** Sun Checks Your Kitchen #1: water  
 **3-second skip/safety line:** "Told to limit fluids for your heart or kidneys? Follow your doctor, not me."
 
@@ -3609,6 +3807,8 @@ Kidney disease or a fluid limit? Follow your doctor's numbers.
 **Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F04 · **Pillar** P15 (Myth-busting) · **Hook** H340 · **Target** 48 s · **Spoken words** 96 · **CTA** `SOUP` → Sun Yoon's Three Soups
 
 **Hook line:** "Garlic cloves in warm water every morning? Chop them into dinner instead."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 68.7 · gate PASS · hook class MYTH · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** OBJ3, MYTH, DEBUNK, KITCHEN_SERIES · **Frame-1 prop:** garlic cloves in a glass of water · **Series:** Sun Checks Your Kitchen #2: garlic  
 **3-second skip/safety line:** "Garlic pills plus a blood thinner? Ask your doctor first."
@@ -3645,6 +3845,8 @@ On a blood thinner and taking garlic pills? Ask your doctor. Doenjang is salty. 
 
 **Hook line:** "Honey on the tomato. Watch what happens."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 74.3 · gate PASS · hook class WATCH · needs: no concrete number in the hook or re-hook; no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** OBJ3, WATCH, MYTH, DEBUNK, KITCHEN_SERIES · **Frame-1 prop:** tomato slice drizzled with honey · **Series:** Sun Checks Your Kitchen #3: honey + tomato  
 **3-second skip/safety line:** "Never honey for babies under one. Diabetes? Honey counts as sugar."
 
@@ -3679,6 +3881,8 @@ Never honey for babies under 1. Diabetes: honey counts as sugar.
 **Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F06 · **Pillar** P10 (Digestion & gut) · **Hook** H342 · **Target** 46 s · **Spoken words** 102 · **CTA** `GUT` → Sun Yoon's 7-Day Fiber Ladder (NEW flow, clone SOUP flow)
 
 **Hook line:** "If you buy frozen peas every week, that's eight grams of fiber a cup."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 72.2 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** IF_EVERY, KITCHEN_SERIES, DEMO · **Frame-1 prop:** bag of frozen peas · **Series:** Sun Checks Your Kitchen #4: frozen peas  
 **3-second skip/safety line:** "Go up slowly and drink water, or you'll feel it."
@@ -3715,6 +3919,8 @@ Go up slowly and drink water. On a restricted kidney diet? Ask your dietitian.
 
 **Hook line:** "Cucumber, lemon, mint in water. Very pretty. Here's what it doesn't do."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 68.7 · gate PASS · hook class MYTH · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** OBJ3, MYTH, DEBUNK, KITCHEN_SERIES · **Frame-1 prop:** pitcher of cucumber lemon mint water · **Series:** Sun Checks Your Kitchen #5: cucumber + lemon  
 **3-second skip/safety line:** "On a fluid limit for heart or kidneys? Your doctor's number wins."
 
@@ -3749,6 +3955,8 @@ Fluid limit for heart or kidneys? Your doctor's number wins.
 **Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F31 · **Pillar** P10 (Digestion & gut) · **Hook** H344 · **Target** 46 s · **Spoken words** 100 · **CTA** `GUT` → Sun Yoon's 7-Day Fiber Ladder (NEW flow, clone SOUP flow)
 
 **Hook line:** "If you eat oats every morning, here's how to get fourteen grams of fiber by eight."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 79.2 · gate PASS · hook class IF_EVERY · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** IF_EVERY, KITCHEN_SERIES, DEMO · **Frame-1 prop:** canister of rolled oats · **Series:** Sun Checks Your Kitchen #6: oats  
 **3-second skip/safety line:** "New to fiber? Start with half this, and drink water, or you'll feel it."
@@ -3785,6 +3993,8 @@ New to fiber? Start with half and drink water.
 
 **Hook line:** "Cinnamon on everything for your blood sugar? It's a spice, not a plan."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 69.7 · gate PASS · hook class MYTH · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** OBJ3, MYTH, DEBUNK, KITCHEN_SERIES · **Frame-1 prop:** cinnamon shaker · **Series:** Sun Checks Your Kitchen #7: cinnamon  
 **3-second skip/safety line:** "Big doses of cinnamon from a bottle? Ask your pharmacist first."
 
@@ -3819,6 +4029,8 @@ Concentrated cinnamon from a bottle? Ask your pharmacist. On insulin or other su
 **Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F18 · **Pillar** P13 (Protein & muscle food) · **Hook** H346 · **Target** 47 s · **Spoken words** 85 · **CTA** `SOUP` → Sun Yoon's Three Soups
 
 **Hook line:** "If you eat two eggs every morning, that's twelve grams. Breakfast needs twenty-five."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 73.2 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** IF_EVERY, KITCHEN_SERIES, DEMO · **Frame-1 prop:** two eggs in a cast-iron pan · **Series:** Sun Checks Your Kitchen #8: eggs  
 **3-second skip/safety line:** "Kidney disease? Ask your doctor for your number."
@@ -3855,6 +4067,8 @@ Kidney disease? Your doctor sets your number. Canned beans: rinse to cut the sal
 
 **Hook line:** "Cabbage leaf on a sore back? Sweetheart, cabbage goes in the kimchi jar."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 68.7 · gate PASS · hook class MYTH · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** OBJ3, MYTH, DEBUNK, KITCHEN_SERIES · **Frame-1 prop:** whole napa cabbage leaf · **Series:** Sun Checks Your Kitchen #9: cabbage  
 **3-second skip/safety line:** "Leg numbness, or trouble with your bladder? No cabbage, no exercise. Doctor, today."
 
@@ -3888,6 +4102,8 @@ New leg numbness or weakness, or bladder/bowel changes: see a doctor today.
 **Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F19 · **Pillar** P10 (Digestion & gut) · **Hook** H348 · **Target** 48 s · **Spoken words** 103 · **CTA** `GUT` → Sun Yoon's 7-Day Fiber Ladder (NEW flow, clone SOUP flow)
 
 **Hook line:** "Canned sauerkraut? Usually not live. Not the same. Buy it from the fridge aisle."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 68.7 · gate PASS · hook class NOT_X · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** MYTH, OBJ3, KITCHEN_SERIES, DEMO · **Frame-1 prop:** refrigerated sauerkraut jar · **Series:** Sun Checks Your Kitchen #10: sauerkraut  
 **3-second skip/safety line:** "Sauerkraut and kimchi are salty. Watching sodium? A forkful, or rinse it."
@@ -3924,6 +4140,8 @@ Salty: watching sodium? Small portions or rinse.
 
 **Hook line:** "Standing on a tray of salt? Salt belongs in the pot. Maybe less of it."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 68.7 · gate PASS · hook class MYTH · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** MYTH, DEBUNK, KITCHEN_SERIES · **Frame-1 prop:** baking tray of coarse salt · **Series:** Sun Checks Your Kitchen #11: salt  
 **3-second skip/safety line:** "Kidney disease, or on blood-pressure pills like ACE inhibitors? Potassium salt can be dangerous. Ask your doctor first."
 
@@ -3957,6 +4175,8 @@ Kidney disease or on potassium-raising medicines (like ACE inhibitors)? Potassiu
 **Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F06 · **Pillar** P12 (Kitchen remedies with evidence) · **Hook** H350 · **Target** 46 s · **Spoken words** 90 · **CTA** `SOUP` → Sun Yoon's Three Soups
 
 **Hook line:** "Ginger every morning? Not magic, not useless. It may help a little."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 68.7 · gate PASS · hook class NOT_X · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** MYTH, OBJ3, KITCHEN_SERIES, DEMO · **Frame-1 prop:** knob of fresh ginger · **Series:** Sun Checks Your Kitchen #12: ginger  
 **3-second skip/safety line:** "On a blood thinner? Food amounts are usually fine. Big doses from a bottle, ask your doctor first."
@@ -3993,6 +4213,8 @@ On a blood thinner? Ask your doctor before concentrated doses.
 
 **Hook line:** "If you eat peanut butter every morning for protein, sweetheart, you're eating a sauce."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 72.2 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** IF_EVERY, KITCHEN_SERIES, DEMO · **Frame-1 prop:** jar of peanut butter on a scale · **Series:** Sun Checks Your Kitchen #13: peanut butter  
 **3-second skip/safety line:** "Peanut allergy in the house? Obviously skip."
 
@@ -4027,6 +4249,8 @@ Kidney disease? Your doctor sets your number.
 **Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F04 · **Pillar** P15 (Myth-busting) · **Hook** H352 · **Target** 45 s · **Spoken words** 89 · **CTA** `GUT` → Sun Yoon's 7-Day Fiber Ladder (NEW flow, clone SOUP flow)
 
 **Hook line:** "Blueberries in a glass of water. Watch what happens."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 65.3 · gate PASS · hook class WATCH · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** OBJ3, WATCH, MYTH, DEBUNK, KITCHEN_SERIES · **Frame-1 prop:** blueberries in a glass of water · **Series:** Sun Checks Your Kitchen #14: blueberries  
 **3-second skip/safety line:** "Adding lots of fiber fast? Go slowly, drink water."
@@ -4063,6 +4287,8 @@ Go up slowly and drink water.
 
 **Hook line:** "If you buy the little fruit yogurts every week, flip one. Read one number."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 73.2 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** IF_EVERY, KITCHEN_SERIES, DEMO · **Frame-1 prop:** tub of plain Greek yogurt · **Series:** Sun Checks Your Kitchen #15: yogurt  
 **3-second skip/safety line:** "Kidney disease? Ask your doctor for your number."
 
@@ -4097,6 +4323,8 @@ Kidney disease? Your doctor sets your number.
 **Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F06 · **Pillar** P10 (Digestion & gut) · **Hook** H354 · **Target** 45 s · **Spoken words** 109 · **CTA** `GUT` → Sun Yoon's 7-Day Fiber Ladder (NEW flow, clone SOUP flow)
 
 **Hook line:** "Popcorn is not junk, not a cheat. Three cups air-popped is a whole grain."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 66.7 · gate PASS · hook class NOT_X · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** MYTH, OBJ3, KITCHEN_SERIES, DEMO · **Frame-1 prop:** bowl of air-popped popcorn · **Series:** Sun Checks Your Kitchen #16: popcorn  
 **3-second skip/safety line:** "Trouble swallowing, or dental work? Skip popcorn."
@@ -4133,6 +4361,8 @@ Trouble swallowing or recent dental work? Skip it.
 
 **Hook line:** "Sesame oil behind your ears for sleep? It goes in the spinach."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 68.7 · gate PASS · hook class MYTH · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** OBJ3, MYTH, DEBUNK · **Frame-1 prop:** bottle of toasted sesame oil  
 **3-second skip/safety line:** "Loud snoring with pauses? That's for your doctor, not oil."
 
@@ -4167,6 +4397,8 @@ Loud snoring with pauses or gasping? Ask your doctor about sleep apnea.
 
 **Hook line:** "Your feet can't calm a racing mind. Your exhale can. Here's the study."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 66.9 · gate PASS · hook class MYTH · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down); CTA is long or asks for more than one keyword
+
 **Grammar:** OBJ3, MYTH, DEBUNK · **Frame-1 prop:** foot massage ball  
 **3-second skip/safety line:** "Chest pain, or can't catch your breath? Not a breathing drill. Call 911."
 
@@ -4200,6 +4432,8 @@ Chest pain or can't catch your breath: call 911. Worry that won't lift: talk to 
 **Page** @sunyoon · **Speaker** SUN · **Format** F07 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** H357 · **Target** 46 s · **Spoken words** 90 · **CTA** `TEST` → Strength Age test (quiz)
 
 **Hook line:** "If you let the bagger carry your groceries every week, your hands miss the work."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 85.0 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** IF_EVERY, SHARE, TEST_NOW, DEMO · **Frame-1 prop:** two paper grocery bags  
 **3-second skip/safety line:** "Hernia, new shoulder, or hand surgery? Light bags only until your doctor says so."
@@ -4238,6 +4472,8 @@ Hernia or recent shoulder/hand surgery? Light bags until your doctor says so.
 
 **Hook line:** "Your friend who stopped coming to church. Or cards. Or walking. Call her today."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 66.3 · gate PASS · hook class OBJ3 · needs: no concrete number in the hook or re-hook; no open loop / re-hook by second 3–6; no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** SHARE · **Frame-1 prop:** landline phone with a paper address book  
 **3-second skip/safety line:** "Can't reach her for days and you're worried? Call her family, or ask for a wellness check."
 
@@ -4272,6 +4508,8 @@ Can't reach her for days and you're worried? Call her family or ask for a wellne
 **Page** @sunyoon · **Speaker** SUN · **Format** F14 · **Pillar** P01 (Strength proof & tests) · **Hook** H359 · **Target** 48 s · **Spoken words** 115 · **CTA** `STRONG` → 8-Minute Chair Builder
 
 **Hook line:** "Grandkids play on the floor. Can you get down there, and back up?"
+
+**Virality (VIRALITY_SYSTEM.md §2):** 71.1 · gate PASS · hook class OBJ3 · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** OBJ3, TEST_NOW, DEMO · **Frame-1 prop:** toy blocks on the living-room floor  
 **3-second skip/safety line:** "New hip or knee? Skip this and ask your surgeon."
@@ -4310,6 +4548,8 @@ New hip or knee? Skip it and ask your surgeon. Dizzy after? Sit a moment, then s
 
 **Hook line:** "If you wear socks on a wood floor every day, sweetheart, that's an ice rink."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 80.0 · gate PASS · hook class IF_EVERY · needs: no concrete number in the hook or re-hook; no open loop / re-hook by second 3–6; no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** IF_EVERY, SHARE, DEMO · **Frame-1 prop:** socked feet on a polished wood floor  
 **3-second skip/safety line:** "Fallen recently, or scared of falling? Tell your doctor."
 
@@ -4347,6 +4587,8 @@ Fallen recently? Tell your doctor and ask about a balance class.
 
 **Hook line:** "Three knee questions from you. Three blunt answers from me."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 73.0 · gate PASS · hook class OBJ3 · needs: no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); CTA is long or asks for more than one keyword
+
 **Grammar:** DEMO · **Frame-1 prop:** printed comment cards  
 **3-second skip/safety line:** "Hot, swollen knee? No exercise. Doctor."
 
@@ -4381,6 +4623,8 @@ Hot, swollen knee: see your doctor. (Comments shown with permission; handles hid
 **Page** @sunyoon · **Speaker** SUN · **Format** F07 · **Pillar** P09 (Sleep & evening) · **Hook** H362 · **Target** 45 s · **Spoken words** 99 · **CTA** `BALANCE` → Steady Feet + the 10-second test
 
 **Hook line:** "If you jump up from the couch every time the show ends, the room spins."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 76.0 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** IF_EVERY, DEMO · **Frame-1 prop:** deep couch  
 **3-second skip/safety line:** "Fainted, or hit your head? That's today, not a video."
@@ -4419,6 +4663,8 @@ Fainted or hit your head? Get checked today.
 
 **Hook line:** "If you eat crackers and tea every lunch, look at this plate. Three grams."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 72.2 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** IF_EVERY, DEMO · **Frame-1 prop:** IG question sticker on screen  
 **3-second skip/safety line:** "Tired every afternoon, and it's new? Could be sleep, medicines, many things. Ask your doctor."
 
@@ -4453,6 +4699,8 @@ Kidney disease? Your doctor sets your number.
 **Page** @sunyoon · **Speaker** SUN · **Format** F07 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** H364 · **Target** 46 s · **Spoken words** 94 · **CTA** `STRONG` → 8-Minute Chair Builder
 
 **Hook line:** "If you buy eighty-dollar face cream every month, add ten free chair stands."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 84.0 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** IF_EVERY, SHARE, DEMO · **Frame-1 prop:** jar of face cream next to a chair  
 **3-second skip/safety line:** "Chest pain or dizziness? Stop."
@@ -4490,6 +4738,8 @@ Need your hands? Hands on thighs still counts. Chest pain or dizziness: stop.
 **Page** @changandsun · **Speaker** DUO · **Format** F34 · **Pillar** P17 (Couple life & relationships) · **Hook** H365 · **Target** 46 s · **Spoken words** 86 · **CTA** `BALANCE` → Steady Feet + the 10-second test
 
 **Hook line:** "Walk backwards along the counter. Ten steps. Loser does the dishes."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 68.1 · gate PASS · hook class COMMAND · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** OBJ3, TEST_NOW, DEMO · **Frame-1 prop:** fridge whiteboard leaderboard · **Series:** Loser Does Dishes  
 **3-second skip/safety line:** "Dizzy turning around? Keep both hands on the counter. Tiny steps."
@@ -4529,6 +4779,8 @@ Dizzy turning? Both hands on and tiny steps. (The fridge says it was a tie. Sun 
 
 **Hook line:** "Forty-one degrees in the garage. He's in the tank top again."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 67.1 · gate PASS · hook class OBJ3 · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** OBJ3, DEMO · **Frame-1 prop:** garage thermometer reading 41°F  
 **3-second skip/safety line:** "Chest pain in the cold? Stop. That's for your doctor."
 
@@ -4563,25 +4815,27 @@ Chest pain in the cold: stop and call your doctor.
 ---
 
 ## S127: Jajangmyeon Sunday: I brought the kimchi
-**Page** @changandsun · **Speaker** DUO · **Format** F31 · **Pillar** P17 (Couple life & relationships) · **Hook** H367 · **Target** 47 s · **Spoken words** 89 · **CTA** `GUT` → Sun Yoon's 7-Day Fiber Ladder (NEW flow, clone SOUP flow)
+**Page** @changandsun · **Speaker** DUO · **Format** F31 · **Pillar** P17 (Couple life & relationships) · **Hook** H367 · **Target** 47 s · **Spoken words** 107 · **CTA** `GUT` → Sun Yoon's 7-Day Fiber Ladder (NEW flow, clone SOUP flow)
 
-**Hook line:** "Jajangmyeon Sunday. He cooked. I brought the kimchi and a cucumber."
+**Hook line:** "Jajangmyeon Sunday. He cooked. I brought the kimchi. Watch what the kimchi does that the sauce can't."
 
-**Grammar:** OBJ3, DEMO · **Frame-1 prop:** bowl of jajangmyeon with a kimchi side · **Series:** Jajangmyeon Sunday  
+**Virality (VIRALITY_SYSTEM.md §2):** 76.5 · gate PASS · hook class WATCH · needs: no save trigger (a routine / day N / tonight / write it down); CTA is long or asks for more than one keyword
+
+**Grammar:** OBJ3, WATCH, SHARE, DEMO · **Frame-1 prop:** bowl of jajangmyeon with a kimchi side · **Series:** Jajangmyeon Sunday  
 **3-second skip/safety line:** "Kimchi and black-bean sauce are both salty. Watching sodium? Small portions."
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
-| 0-3 | SUN | Jajangmyeon Sunday. He cooked. I brought the kimchi and a cucumber. | JAJANGMYEON SUNDAY | SET-KITCHEN · C-KITCHEN + S-KITCHEN · glossy black-bean noodles set down; Sun places a kimchi dish and julienned cucumber beside it · overhead |
-| 3-8 | CHANG | The sauce is perfect. | — | same · Chang in the pink floral apron · CU |
+| 0-3 | SUN | Jajangmyeon Sunday. He cooked. I brought the kimchi. Watch what the kimchi does that the sauce can't. | JAJANGMYEON SUNDAY | SET-KITCHEN · C-KITCHEN + S-KITCHEN · glossy black-bean noodles set down; Sun places a kimchi dish and julienned cucumber beside it · overhead |
+| 3-8 | CHANG | The sauce is perfect. Ten out of ten. | — | same · Chang in the pink floral apron · CU |
 | 8-11 | SUN | The sauce is salty. Seven out of ten. | — | same · tastes · CU |
 | 11-22 | SUN | Kimchi is fermented. One small study: 36 adults, lots of fermented food for ten weeks. Gut bacteria got more diverse and 19 inflammation markers went down. | 36 adults · 10 wks · 19 markers ↓ | same · study card inset (Wastyk, Cell 2021) · medium |
 | 22-32 | CHANG | So: smaller noodle pile. Cucumber on top. Kimchi on the side. More vegetables in the sauce next week. | Smaller pile · cucumber · kimchi side | same · Chang rebuilds his bowl · overhead |
 | 32-38 | SUN | Kimchi and black-bean sauce are both salty. Watching sodium? Small portions. | Salty. Small portions. | same · CU · CU |
 | 38-42 | CHANG | Eight out of ten? | — | same · hopeful · CU |
-| 42-47 | SUN | Seven. Comment GUT for my fiber ladder. | Comment GUT | same · Sun steals his cucumber · two-shot |
+| 42-47 | SUN | Seven. Send this to the cook in your house. Comment GUT for my fiber ladder. | Comment GUT | same · Sun steals his cucumber · two-shot |
 
-**Full spoken script (89 words):** Jajangmyeon Sunday. He cooked. I brought the kimchi and a cucumber. The sauce is perfect. The sauce is salty. Seven out of ten. Kimchi is fermented. One small study: 36 adults, lots of fermented food for ten weeks. Gut bacteria got more diverse and 19 inflammation markers went down. So: smaller noodle pile. Cucumber on top. Kimchi on the side. More vegetables in the sauce next week. Kimchi and black-bean sauce are both salty. Watching sodium? Small portions. Eight out of ten? Seven. Comment GUT for my fiber ladder.
+**Full spoken script (107 words):** Jajangmyeon Sunday. He cooked. I brought the kimchi. Watch what the kimchi does that the sauce can't. The sauce is perfect. Ten out of ten. The sauce is salty. Seven out of ten. Kimchi is fermented. One small study: 36 adults, lots of fermented food for ten weeks. Gut bacteria got more diverse and 19 inflammation markers went down. So: smaller noodle pile. Cucumber on top. Kimchi on the side. More vegetables in the sauce next week. Kimchi and black-bean sauce are both salty. Watching sodium? Small portions. Eight out of ten? Seven. Send this to the cook in your house. Comment GUT for my fiber ladder.
 
 **Safety / cautions:** Sodium caution (§5); small-study size stated.
 
@@ -4602,6 +4856,8 @@ Kimchi and black-bean sauce are salty: small portions if you watch sodium. Still
 **Page** @changandsun · **Speaker** DUO · **Format** F34 · **Pillar** P17 (Couple life & relationships) · **Hook** H368 · **Target** 48 s · **Spoken words** 117 · **CTA** `TEST` → Strength Age test (quiz)
 
 **Hook line:** "Toy truck under the couch. Who gets down, grabs it, and gets back up first?"
+
+**Virality (VIRALITY_SYSTEM.md §2):** 70.1 · gate PASS · hook class OBJ3 · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** OBJ3, TEST_NOW, DEMO · **Frame-1 prop:** toy truck under the sofa  
 **3-second skip/safety line:** "New hip or knee? Skip the floor. Ask your surgeon."
@@ -4636,25 +4892,27 @@ New hip or knee? Skip the floor and ask your surgeon. Dizzy after? Sit a moment,
 ---
 
 ## S129: Printer ink: the friendship study
-**Page** @changandsun · **Speaker** DUO · **Format** F28 · **Pillar** P17 (Couple life & relationships) · **Hook** H369 · **Target** 47 s · **Spoken words** 83 · **CTA** `BEGIN` → Where should I begin? start menu
+**Page** @changandsun · **Speaker** DUO · **Format** F28 · **Pillar** P17 (Couple life & relationships) · **Hook** H369 · **Target** 47 s · **Spoken words** 93 · **CTA** `BEGIN` → Where should I begin? start menu
 
-**Hook line:** "Printer's out of ink again. Thirty pages. One study. About friends."
+**Hook line:** "Printer's out of ink again. Thirty pages, one study, and it's about your friends, not your pills."
 
-**Grammar:** OBJ3 · **Frame-1 prop:** stack of freshly printed pages  
+**Virality (VIRALITY_SYSTEM.md §2):** 79.3 · gate PASS · hook class OBJ3 · needs: no save trigger (a routine / day N / tonight / write it down)
+
+**Grammar:** OBJ3, SHARE · **Frame-1 prop:** stack of freshly printed pages  
 **3-second skip/safety line:** "Feeling alone most days, for weeks? Tell your doctor."
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
-| 0-3 | SUN | Printer's out of ink again. Thirty pages. One study. About friends. | THE PRINTER IS TIRED | SET-TABLE · C-CASUAL + S-CARDI-JADE · the printer wheezes out a last page; Sun holds up a thick stack · medium |
-| 3-7 | CHANG | It's a meta-analysis. | — | same · Chang, proud · CU |
+| 0-3 | SUN | Printer's out of ink again. Thirty pages, one study, and it's about your friends, not your pills. | THE PRINTER IS TIRED | SET-TABLE · C-CASUAL + S-CARDI-JADE · the printer wheezes out a last page; Sun holds up a thick stack · medium |
+| 3-7 | CHANG | It's a meta-analysis. Wait for the last line. | — | same · Chang, proud · CU |
 | 7-10 | SUN | It's a tree. | — | same · CU |
 | 10-21 | CHANG | In 148 studies of 308,849 people, those with strong social ties tended to have longer lives. | 148 studies · 308,849 people · linked | same · study card inset (Holt-Lunstad, PLoS Med 2010) · medium |
 | 21-29 | SUN | Short version: invite someone to dinner. We invite Frank every Tuesday. He brings nothing. We love him. | Short version: invite someone | same · cut to Frank at the door with empty hands, grinning · medium |
 | 29-36 | CHANG | Your turn. One name. One night this week. | One name · one night | same · Chang writes 'FRANK - TUE' on the fridge whiteboard · CU |
 | 36-41 | SUN | Feeling alone most days, for weeks? Tell your doctor. That's a health thing too. | Alone for weeks? Tell your doctor. | same · CU · CU |
-| 41-47 | SUN | Comment BEGIN. And tell us who you're inviting. First names only. | Comment BEGIN | same · hands Chang one page, recycles the rest · two-shot |
+| 41-47 | SUN | Comment BEGIN. Then send this to the one you're inviting. | Comment BEGIN | same · hands Chang one page, recycles the rest · two-shot |
 
-**Full spoken script (83 words):** Printer's out of ink again. Thirty pages. One study. About friends. It's a meta-analysis. It's a tree. In 148 studies of 308,849 people, those with strong social ties tended to have longer lives. Short version: invite someone to dinner. We invite Frank every Tuesday. He brings nothing. We love him. Your turn. One name. One night this week. Feeling alone most days, for weeks? Tell your doctor. That's a health thing too. Comment BEGIN. And tell us who you're inviting. First names only.
+**Full spoken script (93 words):** Printer's out of ink again. Thirty pages, one study, and it's about your friends, not your pills. It's a meta-analysis. Wait for the last line. It's a tree. In 148 studies of 308,849 people, those with strong social ties tended to have longer lives. Short version: invite someone to dinner. We invite Frank every Tuesday. He brings nothing. We love him. Your turn. One name. One night this week. Feeling alone most days, for weeks? Tell your doctor. That's a health thing too. Comment BEGIN. Then send this to the one you're inviting.
 
 **Safety / cautions:** No crisis content; doctor line for persistent loneliness; no companion-replacement promise.
 
@@ -4675,6 +4933,8 @@ Feeling alone most days for weeks? Tell your doctor.
 **Page** @changandsun · **Speaker** DUO · **Format** F25 · **Pillar** P17 (Couple life & relationships) · **Hook** H370 · **Target** 47 s · **Spoken words** 90 · **CTA** `KNEES` → The Step Builder
 
 **Hook line:** "Frank's porch steps. Going down is the hard part. Watch his knee."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 69.1 · gate PASS · hook class WATCH · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** WATCH, OBJ3, DEMO · **Frame-1 prop:** Frank's porch steps and rail · **Series:** Frank's Comeback  
 **3-second skip/safety line:** "New knee? Your surgeon and PT set the plan."
@@ -4715,6 +4975,8 @@ New knee? Your surgeon and PT set your plan first.
 
 **Hook line:** "Hips. Now. I don't care that the cat is on the mat."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 69.1 · gate PASS · hook class OBJ3 · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** OBJ3, DEMO · **Frame-1 prop:** yoga mat with the cat on it  
 **3-second skip/safety line:** "Sharp? Stop."
 
@@ -4752,6 +5014,8 @@ Up to 3/10 is okay if it settles by morning. Sharp: stop. The kettlebell stays h
 **Page** @changandsun · **Speaker** DUO · **Format** F27 · **Pillar** P17 (Couple life & relationships) · **Hook** H372 · **Target** 47 s · **Spoken words** 99 · **CTA** `STRONG` → 8-Minute Chair Builder
 
 **Hook line:** "1976. He carried me over the threshold. He still wants to. Absolutely not."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 68.1 · gate PASS · hook class OBJ3 · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** OBJ3, DEMO · **Frame-1 prop:** illustrated 1976 wedding photo  
 **3-second skip/safety line:** "Hernia or back injury? No heavy lifting until your doctor says so."
@@ -4791,6 +5055,8 @@ Hernia or back injury? Wait for your doctor's OK. (Fifty years, fictional. The h
 
 **Hook line:** "If you walk every evening, six to eight thousand steps is the number that mattered."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 76.0 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** IF_EVERY, DEMO · **Frame-1 prop:** wide-brim sun visor  
 **3-second skip/safety line:** "Chest pain or breathless walking? Stop. That's for your doctor first."
 
@@ -4828,6 +5094,8 @@ Chest pain or unusual breathlessness walking: stop and see your doctor.
 **Page** @changandsun · **Speaker** DUO · **Format** F08 · **Pillar** P17 (Couple life & relationships) · **Hook** H374 · **Target** 46 s · **Spoken words** 103 · **CTA** `STRONG` → 8-Minute Chair Builder
 
 **Hook line:** "Page one of my training log. 2012. My first deadlift. It was a cold morning—"
+
+**Virality (VIRALITY_SYSTEM.md §2):** 67.1 · gate PASS · hook class OBJ3 · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** OBJ3, DEMO · **Frame-1 prop:** old garage clipboard log, page one  
 **3-second skip/safety line:** "Heart condition or new chest symptoms? Get cleared first."
@@ -4867,6 +5135,8 @@ Heart condition or new chest symptoms? Get cleared first.
 
 **Hook line:** "Garage door's open. So is Strong Years. Founding members, first 5,000."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 63.3 · gate PASS · hook class OBJ3 · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** OBJ3, LAUNCH · **Frame-1 prop:** garage door rolling open at sunrise · **Founding launch week**  
 **3-second skip/safety line:** "Check with your doctor before starting."
 
@@ -4903,6 +5173,8 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 
 **Hook line:** "I'm Chang. I'm AI. Here's what's real on this page."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 67.3 · gate PASS · hook class OBJ3 · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)
+
 **Grammar:** LAUNCH · **Frame-1 prop:** printed study card taped to the garage wall · **Founding launch week**  
 **3-second skip/safety line:** "New to exercise, or a heart condition? Check with your doctor first."
 
@@ -4937,6 +5209,8 @@ New to exercise or have a heart condition? Check with your doctor first.
 **Page** @changyin · **Speaker** CHANG · **Format** F11 · **Pillar** P19 (Challenges & series) · **Hook** H377 · **Target** 47 s · **Spoken words** 104 · **CTA** `BALANCE` → Steady Feet + the 10-second test
 
 **Hook line:** "Thirty days of balance. One minute a day. Day one is tomorrow. Chart's on the fridge."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 81.1 · gate PASS · hook class OBJ3 · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)
 
 **Grammar:** OBJ3, LAUNCH, DEMO, TEST_NOW · **Frame-1 prop:** 30-day paper chart on the fridge · **Series:** 30-Day Balance (kickoff) · **Founding launch week**  
 **3-second skip/safety line:** "Dizzy spells or a recent fall? Tell your doctor before day one."
@@ -4975,6 +5249,8 @@ Dizzy spells or a recent fall? Tell your doctor before day one.
 
 **Hook line:** "'Founding member.' Sounds fancy. Here's exactly what it means. Four things."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 73.7 · gate PASS · hook class MYTH · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** OBJ3, LAUNCH · **Frame-1 prop:** index card titled FOUNDING · **Founding launch week**  
 **3-second skip/safety line:** "Heart condition or new to exercise? Check with your doctor first."
 
@@ -5010,6 +5286,8 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Page** @changyin · **Speaker** CHANG · **Format** F33 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** H379 · **Target** 46 s · **Spoken words** 103 · **CTA** `FAMILY` → Give Mom & Dad gift page
 
 **Hook line:** "Your dad won't buy this for himself. He'll use it if you give it to him."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 75.3 · gate PASS · hook class OBJ3 · needs: no concrete number in the hook or re-hook; no open loop / re-hook by second 3–6
 
 **Grammar:** SHARE, LAUNCH · **Frame-1 prop:** gift card in an envelope · **Founding launch week**  
 **3-second skip/safety line:** "Heart condition or dizzy spells? He checks with his doctor first."
@@ -5047,6 +5325,8 @@ Heart condition or dizzy spells? Your parent checks with their doctor first.
 
 **Hook line:** "Phone on the counter. This is what tomorrow morning looks like as a member."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 77.3 · gate PASS · hook class OBJ3 · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)
+
 **Grammar:** OBJ3, LAUNCH, DEMO · **Frame-1 prop:** phone showing today's session screen · **Founding launch week**  
 **3-second skip/safety line:** "Heart condition, or new to exercise? Ask your doctor first."
 
@@ -5082,6 +5362,8 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 
 **Hook line:** "Recipe card, every Sunday, with a grade on the remedy. Doors are open."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 61.5 · gate PASS · hook class OBJ3 · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down); CTA is long or asks for more than one keyword
+
 **Grammar:** OBJ3, LAUNCH, DEMO · **Frame-1 prop:** Sunday recipe card with an evidence grade · **Founding launch week**  
 **3-second skip/safety line:** "Food allergies or a kidney diet? Every recipe says who should skip it."
 
@@ -5116,6 +5398,8 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F33 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** H382 · **Target** 46 s · **Spoken words** 108 · **CTA** `FAMILY` → Give Mom & Dad gift page
 
 **Hook line:** "Send this to your daughter. Tell her what you want for your birthday. For once."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 75.3 · gate PASS · hook class OBJ3 · needs: no concrete number in the hook or re-hook; no open loop / re-hook by second 3–6
 
 **Grammar:** SHARE, LAUNCH · **Frame-1 prop:** phone with a text draft to 'Mina' · **Founding launch week**  
 **3-second skip/safety line:** "New to exercise, or a heart condition? Talk to your doctor before you start."
@@ -5153,6 +5437,8 @@ New to exercise or a heart condition? Talk to your doctor before starting.
 
 **Hook line:** "Cancel button. I made them put it where you can find it. Watch."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 68.5 · gate PASS · hook class OBJ3 · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down); CTA is long or asks for more than one keyword
+
 **Grammar:** OBJ3, LAUNCH, DEMO · **Frame-1 prop:** phone showing the cancel screen · **Founding launch week**  
 **3-second skip/safety line:** "Heart condition or new to exercise? Ask your doctor first."
 
@@ -5188,6 +5474,8 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 
 **Hook line:** "Rules of my kitchen page. Four of them. Read before you follow."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 63.3 · gate PASS · hook class OBJ3 · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** OBJ3, LAUNCH · **Frame-1 prop:** handwritten rules card on the fridge · **Founding launch week**  
 **3-second skip/safety line:** "Medicines are your doctor's decision. Not mine. Not the internet's."
 
@@ -5222,6 +5510,8 @@ Sun's four rules: 1) she's an AI character with a fictional story, 2) every numb
 
 **Hook line:** "Fifty years married. Fictional. Founding members: real. Doors are open."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 67.6 · gate PASS · hook class AUTHORITY · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** OBJ3, LAUNCH · **Frame-1 prop:** anniversary countdown whiteboard · **Founding launch week**  
 **3-second skip/safety line:** "Heart condition, or new to exercise? Doctor first."
 
@@ -5254,17 +5544,19 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 ---
 
 ## S146: PIN 1-D (founding week): Hi, we're AI. Doors are open.
-**Page** @changandsun · **Speaker** DUO · **Format** F39 · **Pillar** P20 (Behind the AI / trust) · **Hook** H386 · **Target** 46 s · **Spoken words** 109 · **CTA** `JOIN` → Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)
+**Page** @changandsun · **Speaker** DUO · **Format** F39 · **Pillar** P20 (Behind the AI / trust) · **Hook** H386 · **Target** 46 s · **Spoken words** 121 · **CTA** `JOIN` → Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)
 
-**Hook line:** "Before you follow us, or join us: we're AI."
+**Hook line:** "Before you follow us, or join us: we're AI. Not real, not doctors. Watch what is real."
 
-**Grammar:** LAUNCH · **Frame-1 prop:** the sofa, Mandu between them · **Founding launch week**  
+**Virality (VIRALITY_SYSTEM.md §2):** 69.4 · gate PASS · hook class NOT_X · needs: no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down); CTA is long or asks for more than one keyword
+
+**Grammar:** LAUNCH, WATCH · **Frame-1 prop:** the sofa, Mandu between them · **Founding launch week**  
 **3-second skip/safety line:** "Heart condition or new to exercise? Doctor first. Always."
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
-| 0-3 | SUN | Before you follow us, or join us: we're AI. | WE'RE AI | SET-LIVING · C-CASUAL + S-CARDI-JADE · both on the sofa, Mandu between them · two-shot |
-| 3-7 | CHANG | Made by a team of people who love their grandparents. | Made by a team | same · CU · CU |
+| 0-3 | SUN | Before you follow us, or join us: we're AI. Not real, not doctors. Watch what is real. | WE'RE AI. WATCH WHAT'S REAL. | SET-LIVING · C-CASUAL + S-CARDI-JADE · both on the sofa, Mandu between them · two-shot |
+| 3-7 | CHANG | Made by a team of people who love their grandparents. Fifty years married? Fiction. | Made by a team · 50 years = fiction | same · CU · CU |
 | 7-11 | SUN | He is not real. His arms are also not real. | — | same · pokes his bicep · CU |
 | 11-19 | CHANG | The science is real. Every video is built on published research, and the sources are in the caption. | Real research · sources in the caption | same · study card inset · medium |
 | 19-28 | SUN | This week the membership opened. {{FOUNDING_PRICE}} a month, first month today, renews monthly, cancel online anytime. Fourteen-day refund. | {{FOUNDING_PRICE}}/mo · renews · cancel online · 14 days | same · price card · medium |
@@ -5272,7 +5564,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 | 34-39 | SUN | Heart condition or new to exercise? Doctor first. Always. | Doctor first. Always. | same · CU · CU |
 | 39-46 | SUN | Comment JOIN for the link and terms. Or just follow. I'll be disappointed either way. I'm AI. I don't get tired. | Comment JOIN | same · deadpan; Chang laughs · two-shot |
 
-**Full spoken script (109 words):** Before you follow us, or join us: we're AI. Made by a team of people who love their grandparents. He is not real. His arms are also not real. The science is real. Every video is built on published research, and the sources are in the caption. This week the membership opened. {{FOUNDING_PRICE}} a month, first month today, renews monthly, cancel online anytime. Fourteen-day refund. You don't have to join to learn. The free videos stay free. Every day. Heart condition or new to exercise? Doctor first. Always. Comment JOIN for the link and terms. Or just follow. I'll be disappointed either way. I'm AI. I don't get tired.
+**Full spoken script (121 words):** Before you follow us, or join us: we're AI. Not real, not doctors. Watch what is real. Made by a team of people who love their grandparents. Fifty years married? Fiction. He is not real. His arms are also not real. The science is real. Every video is built on published research, and the sources are in the caption. This week the membership opened. {{FOUNDING_PRICE}} a month, first month today, renews monthly, cancel online anytime. Fourteen-day refund. You don't have to join to learn. The free videos stay free. Every day. Heart condition or new to exercise? Doctor first. Always. Comment JOIN for the link and terms. Or just follow. I'll be disappointed either way. I'm AI. I don't get tired.
 
 **Safety / cautions:** Pinned 'Hi, we're AI' variant using the FALLBACK (no review claim); S-02 terms; no pressure (free videos stay free).
 
@@ -5293,6 +5585,8 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Page** @changandsun · **Speaker** DUO · **Format** F11 · **Pillar** P19 (Challenges & series) · **Hook** H387 · **Target** 48 s · **Spoken words** 105 · **CTA** `STRONG` → 8-Minute Chair Builder
 
 **Hook line:** "Two chairs. Seven days. Ten minutes. Loser does dishes all week."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 76.1 · gate PASS · hook class OBJ3 · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)
 
 **Grammar:** OBJ3, LAUNCH, DEMO, TEST_NOW · **Frame-1 prop:** two chairs against the garage wall · **Series:** 7-Day Strong (couples kickoff) · **Founding launch week**  
 **3-second skip/safety line:** "Chest pain or dizziness? Stop, and call your doctor."
@@ -5331,6 +5625,8 @@ Chest pain or dizziness: stop and call your doctor.
 
 **Hook line:** "To the kids who call on Sundays: here's a gift that shows up every morning."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 67.3 · gate PASS · hook class OBJ3 · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** SHARE, LAUNCH · **Frame-1 prop:** tablet on a stand, Sunday video call · **Founding launch week**  
 **3-second skip/safety line:** "Heart condition or dizzy spells? They check with their doctor first."
 
@@ -5365,6 +5661,8 @@ Gift: 3 months $49 or 12 months $119, prepaid. It starts the day they open it, e
 **Page** @changandsun · **Speaker** DUO · **Format** F38 · **Pillar** P20 (Behind the AI / trust) · **Hook** H389 · **Target** 47 s · **Spoken words** 84 · **CTA** `JOIN` → Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)
 
 **Hook line:** "'Founding price, locked.' Locked how? Show me the terms."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 69.7 · gate PASS · hook class MYTH · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** OBJ3, LAUNCH · **Frame-1 prop:** terms card pulled from his shorts pocket · **Founding launch week**  
 **3-second skip/safety line:** "Heart condition? Doctor first."
@@ -5403,6 +5701,8 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 
 **Hook line:** "'Is it a subscription?' Yes. Four more questions. Fast answers."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 67.4 · gate PASS · hook class MYTH · needs: no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down); CTA is long or asks for more than one keyword
+
 **Grammar:** LAUNCH · **Frame-1 prop:** IG question stickers on screen · **Founding launch week**  
 **3-second skip/safety line:** "Ask your doctor first. We can't answer that for you."
 
@@ -5437,6 +5737,8 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Page** @changyin · **Speaker** CHANG · **Format** F15 · **Pillar** P04 (Grip, upper body & carry) · **Hook** H391 · **Target** 46 s · **Spoken words** 102 · **CTA** `STRONG` → 8-Minute Chair Builder
 
 **Hook line:** "Laundry basket, full. Hug it close and watch your back stay tall."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 69.1 · gate PASS · hook class WATCH · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** OBJ3, WATCH, DEMO · **Frame-1 prop:** full laundry basket by the clothesline · **Series:** Kitchen Gym #4  
 **3-second skip/safety line:** "Back surgery this year, or sharp pain when you bend? Ask your doctor first."
@@ -5475,6 +5777,8 @@ Back surgery this year, or sharp pain when you bend? Ask your doctor first. Half
 
 **Hook line:** "If you brush your teeth every night, add ten slow heel raises at the sink."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 76.0 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** IF_EVERY, DEMO · **Frame-1 prop:** toothbrush with a blinking two-minute timer  
 **3-second skip/safety line:** "One calf swollen, red, or painful? Skip this and call your doctor today."
 
@@ -5512,6 +5816,8 @@ One calf swollen, red or painful? Skip it and call your doctor today.
 
 **Hook line:** "If you wait for the kettle every morning, stand heel to toe while it boils."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 88.2 · gate PASS · hook class IF_EVERY · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); CTA is long or asks for more than one keyword
+
 **Grammar:** IF_EVERY, DEMO, TEST_NOW · **Frame-1 prop:** whistling kettle on the gas  
 **3-second skip/safety line:** "Dizzy spells or a new hip? Keep both feet down and ask your doctor."
 
@@ -5546,9 +5852,11 @@ The waitlist is free: one email when Strong Years opens, plus at most 3 launch e
 ---
 
 ## S154: 'Lifting is dangerous after 70'
-**Page** @changyin · **Speaker** CHANG · **Format** F04 · **Pillar** P15 (Myth-busting) · **Hook** H394 · **Target** 47 s · **Spoken words** 98 · **CTA** `TEST` → Strength Age test (quiz)
+**Page** @changyin · **Speaker** CHANG · **Format** F04 · **Pillar** P15 (Myth-busting) · **Hook** H394 · **Target** 47 s · **Spoken words** 104 · **CTA** `TEST` → Strength Age test (quiz)
 
 **Hook line:** "'Lifting is dangerous after seventy.' Is it? Watch me pick up this eight-kilo bell."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 94.5 · gate PASS · hook class MYTH
 
 **Grammar:** MYTH, WATCH, DEMO · **Frame-1 prop:** dusty 8 kg kettlebell  
 **3-second skip/safety line:** "Heart condition or new chest pain? Get cleared by your doctor first."
@@ -5561,9 +5869,9 @@ The waitlist is free: one email when Strong Years opens, plus at most 3 launch e
 | 22-30 | CHANG | What's risky? Going heavy on day one. Straining with your breath held. Rounding your back under a load. | Risky: too heavy, too soon | same · CU · CU |
 | 30-37 | CHANG | Start with a backpack and two books. Then a light bell. Slow down. Again. | Start: a backpack + 2 books | same · Frank lifts a backpack, chair against the wall beside him · two-shot |
 | 37-42 | CHANG | Heart condition or new chest pain? Get cleared by your doctor first. | Heart condition? Get cleared first. | same · CU · CU |
-| 42-47 | CHANG | Comment TEST. I'll send the three-minute strength test. | Comment TEST | same · sets the bell down · medium |
+| 42-47 | CHANG | Comment TEST for the strength test. Send this to whoever says they're too old. | Comment TEST | same · sets the bell down · medium |
 
-**Full spoken script (98 words):** 'Lifting is dangerous after seventy.' Is it? Watch me pick up this eight-kilo bell. Feet wide. Bell between my feet. Hips back, chest proud. Breathe out and stand. The strength coaches' position statement says resistance training is safe and effective for older adults. Even frail adults. What's risky? Going heavy on day one. Straining with your breath held. Rounding your back under a load. Start with a backpack and two books. Then a light bell. Slow down. Again. Heart condition or new chest pain? Get cleared by your doctor first. Comment TEST. I'll send the three-minute strength test.
+**Full spoken script (104 words):** 'Lifting is dangerous after seventy.' Is it? Watch me pick up this eight-kilo bell. Feet wide. Bell between my feet. Hips back, chest proud. Breathe out and stand. The strength coaches' position statement says resistance training is safe and effective for older adults. Even frail adults. What's risky? Going heavy on day one. Straining with your breath held. Rounding your back under a load. Start with a backpack and two books. Then a light bell. Slow down. Again. Heart condition or new chest pain? Get cleared by your doctor first. Comment TEST for the strength test. Send this to whoever says they're too old.
 
 **Safety cue:** MB-EX (myth quoted and answered with the NSCA statement); breathe out on the lift; backpack regression; cardiac clearance line (E43).  
 **Regression:** A backpack with two books instead of a kettlebell.  
@@ -5583,9 +5891,11 @@ Heart condition or new chest pain? Get medical clearance first (ACSM).
 ---
 
 ## S155: Longer out, not deeper
-**Page** @changyin · **Speaker** CHANG · **Format** F21 · **Pillar** P07 (Breathwork & nervous system) · **Hook** H395 · **Target** 44 s · **Spoken words** 78 · **CTA** `BREATH` → The 4-6 Breath (5 min)
+**Page** @changyin · **Speaker** CHANG · **Format** F21 · **Pillar** P07 (Breathwork & nervous system) · **Hook** H395 · **Target** 44 s · **Spoken words** 80 · **CTA** `BREATH` → The 4-6 Breath (5 min)
 
 **Hook line:** "Not faster, not deeper. Longer breaths out. Try it right now with me."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 88.7 · gate PASS · hook class NOT_X
 
 **Grammar:** DEMO, TEST_NOW · **Frame-1 prop:** small sand timer on the promenade bench  
 **3-second skip/safety line:** "Feel light-headed? Breathe normally and stop."
@@ -5597,9 +5907,9 @@ Heart condition or new chest pain? Get medical clearance first (ACSM).
 | 12-22 | CHANG | In, two, three, four. Out, two, three, four, five, six. Again. | 4 in · 6 out | same · the ring fills and empties · CU |
 | 22-32 | CHANG | Slow breathing, around six breaths a minute, raises heart-rate variability. Your calm-down system gets a vote. | ~6 breaths a minute | same · study card inset (Laborde et al., 2022) · medium |
 | 32-38 | CHANG | Feel light-headed? Breathe normally and stop. Keep it easy, no straining. | Light-headed? Stop. | same · CU · CU |
-| 38-44 | CHANG | Bench, bed, or bus stop. Comment BREATH for the guided five minutes. | Comment BREATH | same · gulls lift off the railing behind him · wide |
+| 38-44 | CHANG | Save it for tonight before bed. Send it to whoever needs it. Comment BREATH. | Send it · Comment BREATH | same · gulls lift off the railing behind him · wide |
 
-**Full spoken script (78 words):** Not faster, not deeper. Longer breaths out. Try it right now with me. Sit tall. Breathe in through your nose for four. Out through soft lips for six. In, two, three, four. Out, two, three, four, five, six. Again. Slow breathing, around six breaths a minute, raises heart-rate variability. Your calm-down system gets a vote. Feel light-headed? Breathe normally and stop. Keep it easy, no straining. Bench, bed, or bus stop. Comment BREATH for the guided five minutes.
+**Full spoken script (80 words):** Not faster, not deeper. Longer breaths out. Try it right now with me. Sit tall. Breathe in through your nose for four. Out through soft lips for six. In, two, three, four. Out, two, three, four, five, six. Again. Slow breathing, around six breaths a minute, raises heart-rate variability. Your calm-down system gets a vote. Feel light-headed? Breathe normally and stop. Keep it easy, no straining. Save it for tonight before bed. Send it to whoever needs it. Comment BREATH.
 
 **Safety / cautions:** No breath-holds; light-headed stop line; seated.
 
@@ -5620,6 +5930,8 @@ Light-headed? Breathe normally and stop.
 **Page** @changyin · **Speaker** CHANG · **Format** F17 · **Pillar** P01 (Strength proof & tests) · **Hook** H396 · **Target** 47 s · **Spoken words** 104 · **CTA** `WAITLIST` → Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)
 
 **Hook line:** "If you sit on the floor every evening for the news, getting up stops being scary."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 90.0 · gate PASS · hook class IF_EVERY · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)
 
 **Grammar:** IF_EVERY, DEMO · **Frame-1 prop:** floor cushion beside the sofa  
 **3-second skip/safety line:** "Hip replacement or dizziness? Ask your doctor before floor work."
@@ -5659,6 +5971,8 @@ The waitlist is free: one email when Strong Years opens, plus at most 3 launch e
 
 **Hook line:** "Thigh muscles do most of the work when you stand up. Feel them switch on."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 69.1 · gate PASS · hook class OBJ3 · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** OBJ3, DEMO · **Frame-1 prop:** palm flat on his thigh at the walnut table  
 **3-second skip/safety line:** "Knee replacement recently? Follow your surgeon's plan first."
 
@@ -5692,23 +6006,25 @@ Recent knee replacement? Follow your surgeon's plan first.
 ---
 
 ## S158: Not a doctor, not a real person
-**Page** @changyin · **Speaker** CHANG · **Format** F08 · **Pillar** P20 (Behind the AI / trust) · **Hook** H398 · **Target** 44 s · **Spoken words** 95 · **CTA** `WAITLIST` → Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)
+**Page** @changyin · **Speaker** CHANG · **Format** F08 · **Pillar** P20 (Behind the AI / trust) · **Hook** H398 · **Target** 44 s · **Spoken words** 100 · **CTA** `WAITLIST` → Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)
 
-**Hook line:** "Not a doctor, not a real person. An AI welder. Here's what's real."
+**Hook line:** "Not a doctor, not a real person. A seventy-four-year-old AI welder. Here's what's real."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 88.7 · gate PASS · hook class NOT_X
 
 **Grammar:** DEMO · **Frame-1 prop:** welding helmet on a nail  
 **3-second skip/safety line:** "New to exercise, or living with a heart condition? Talk to your doctor first."
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
-| 0-3 | CHANG | Not a doctor, not a real person. An AI welder. Here's what's real. | AI CHARACTER · HERE'S WHAT'S REAL | SET-GARAGE · C-TRAIN-A · Chang lifts the old welding helmet off its nail and taps the burned-in AI tag · medium |
+| 0-3 | CHANG | Not a doctor, not a real person. A seventy-four-year-old AI welder. Here's what's real. | AI CHARACTER · HERE'S WHAT'S REAL | SET-GARAGE · C-TRAIN-A · Chang lifts the old welding helmet off its nail and taps the burned-in AI tag · medium |
 | 3-11 | CHANG | A team of people made me. My story is fiction. The exercises are real, with an easier version every time. | Made by a team · story = fiction | same · medium CU · medium CU |
-| 11-20 | CHANG | Every number we use comes from a published study. The study goes in the caption. Check me. | Studies in the caption | same · points down to the caption area · medium |
+| 11-20 | CHANG | Every number we use comes from a published study. The study goes in the caption. Save this and check me. | Studies in the caption | same · points down to the caption area · medium |
 | 20-30 | CHANG | Soon we open Strong Years. A new session with me every morning, at your level, with a chair version. | Opening soon · daily sessions | same · phone inset: a session screen with the level switch · insert |
 | 30-36 | CHANG | New to exercise, or living with a heart condition? Talk to your doctor first. | New to exercise? Doctor first. | same · CU · CU |
-| 36-44 | CHANG | Comment WAITLIST. It's free. Day one now, one email when we open. | Comment WAITLIST · free | same · hangs the helmet back on its nail · medium |
+| 36-44 | CHANG | Comment WAITLIST. It's free. Send this to the friend who asked about me. | Comment WAITLIST · free | same · hangs the helmet back on its nail · medium |
 
-**Full spoken script (95 words):** Not a doctor, not a real person. An AI welder. Here's what's real. A team of people made me. My story is fiction. The exercises are real, with an easier version every time. Every number we use comes from a published study. The study goes in the caption. Check me. Soon we open Strong Years. A new session with me every morning, at your level, with a chair version. New to exercise, or living with a heart condition? Talk to your doctor first. Comment WAITLIST. It's free. Day one now, one email when we open.
+**Full spoken script (100 words):** Not a doctor, not a real person. A seventy-four-year-old AI welder. Here's what's real. A team of people made me. My story is fiction. The exercises are real, with an easier version every time. Every number we use comes from a published study. The study goes in the caption. Save this and check me. Soon we open Strong Years. A new session with me every morning, at your level, with a chair version. New to exercise, or living with a heart condition? Talk to your doctor first. Comment WAITLIST. It's free. Send this to the friend who asked about me.
 
 **Safety / cautions:** Disclosure post (D-04/D-05 respected: denies being real or a doctor); reviewer-gate FALLBACK wording only; no price or subscription terms (runway).
 
@@ -5729,6 +6045,8 @@ The waitlist is free: one email when Strong Years opens, plus at most 3 launch e
 **Page** @changyin · **Speaker** CHANG · **Format** F02 · **Pillar** P01 (Strength proof & tests) · **Hook** H399 · **Target** 47 s · **Spoken words** 94 · **CTA** `TEST` → Strength Age test (quiz)
 
 **Hook line:** "Chair, wall, thirty seconds. Watch how many I do, then you go."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 81.6 · gate PASS · hook class WATCH · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** OBJ3, WATCH, TEST_NOW, DEMO · **Frame-1 prop:** big garage wall clock  
 **3-second skip/safety line:** "Chest pain or dizziness? Stop, sit, and call your doctor."
@@ -5763,9 +6081,11 @@ Chest pain or dizziness? Stop, sit and call your doctor. Tell me your number bel
 ---
 
 ## S160: Two kiwis every morning
-**Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F06 · **Pillar** P10 (Digestion & gut) · **Hook** H400 · **Target** 46 s · **Spoken words** 93 · **CTA** `GUT` → Sun Yoon's 7-Day Fiber Ladder (NEW flow, clone SOUP flow)
+**Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F06 · **Pillar** P10 (Digestion & gut) · **Hook** H400 · **Target** 46 s · **Spoken words** 102 · **CTA** `GUT` → Sun Yoon's 7-Day Fiber Ladder (NEW flow, clone SOUP flow)
 
 **Hook line:** "If you eat two green kiwis every morning, here's what a real study found."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 96.2 · gate PASS · hook class IF_EVERY
 
 **Grammar:** IF_EVERY, KITCHEN_SERIES, DEMO · **Frame-1 prop:** two green kiwis halved on a cutting board · **Series:** Sun Checks Your Kitchen #17: kiwi  
 **3-second skip/safety line:** "Kiwi allergy, or on a low-potassium diet? Skip this one."
@@ -5775,12 +6095,12 @@ Chest pain or dizziness? Stop, sit and call your doctor. Tell me your number bel
 | 0-3 | SUN | If you eat two green kiwis every morning, here's what a real study found. | 2 KIWIS: THE REAL STUDY | SET-KITCHEN · S-KITCHEN · Sun halves two green kiwis on a cutting board, over-the-glasses look · CU |
 | 3-12 | SUN | Seventy-five adults with slow, stubborn bathrooms. Kiwis, prunes, or psyllium for four weeks. | 75 adults · 4 weeks | same · study card inset (Chey et al., 2021) · medium |
 | 12-21 | SUN | All three helped about the same. The kiwis had the fewest side effects. People liked them best. | All 3 helped · kiwi: fewest side effects | same · three bowls side by side · overhead |
-| 21-31 | SUN | Two kiwis, a spoon, done. Skin on is more fiber, if you can stand the fuzz. I can't. | Two kiwis, a spoon, done | same · she scoops one, wrinkles her nose at the skin · CU |
+| 21-31 | SUN | Two kiwis, a spoon, done. Try it tomorrow morning. Skin on is more fiber, if you can stand the fuzz. I can't. | Two kiwis, a spoon, done | same · she scoops one, wrinkles her nose at the skin · CU |
 | 31-38 | SUN | Add fiber slowly and drink more water with it. Your belly needs time. | Slowly · more water | same · pours water · medium |
 | 38-42 | SUN | Kiwi allergy, or on a low-potassium diet? Skip this one. | Kiwi allergy? Low potassium? Skip. | same · CU · CU |
-| 42-46 | SUN | Comment GUT. I'll send my seven-day fiber ladder. | Comment GUT | same · taps the board · medium |
+| 42-46 | SUN | Comment GUT for my seven-day fiber ladder. Send this to the prune buyer. | Comment GUT | same · taps the board, slides a prune bowl at camera · medium |
 
-**Full spoken script (93 words):** If you eat two green kiwis every morning, here's what a real study found. Seventy-five adults with slow, stubborn bathrooms. Kiwis, prunes, or psyllium for four weeks. All three helped about the same. The kiwis had the fewest side effects. People liked them best. Two kiwis, a spoon, done. Skin on is more fiber, if you can stand the fuzz. I can't. Add fiber slowly and drink more water with it. Your belly needs time. Kiwi allergy, or on a low-potassium diet? Skip this one. Comment GUT. I'll send my seven-day fiber ladder.
+**Full spoken script (102 words):** If you eat two green kiwis every morning, here's what a real study found. Seventy-five adults with slow, stubborn bathrooms. Kiwis, prunes, or psyllium for four weeks. All three helped about the same. The kiwis had the fewest side effects. People liked them best. Two kiwis, a spoon, done. Try it tomorrow morning. Skin on is more fiber, if you can stand the fuzz. I can't. Add fiber slowly and drink more water with it. Your belly needs time. Kiwi allergy, or on a low-potassium diet? Skip this one. Comment GUT for my seven-day fiber ladder. Send this to the prune buyer.
 
 **Safety / cautions:** Kiwi allergy and low-potassium-diet skip line; increase fiber slowly with water.
 
@@ -5798,9 +6118,11 @@ Kiwi allergy or a low-potassium diet? Skip it. Add fiber slowly, with water.
 ---
 
 ## S161: Chicken soup for a cold: show me the study
-**Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F28 · **Pillar** P15 (Myth-busting) · **Hook** H401 · **Target** 47 s · **Spoken words** 99 · **CTA** `SOUP` → Sun Yoon's Three Soups
+**Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F28 · **Pillar** P15 (Myth-busting) · **Hook** H401 · **Target** 47 s · **Spoken words** 110 · **CTA** `SOUP` → Sun Yoon's Three Soups
 
 **Hook line:** "Chicken soup for a cold? Show me the study. Okay. Here it is."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 88.7 · gate PASS · hook class MYTH
 
 **Grammar:** OBJ3, MYTH, DEBUNK, KITCHEN_SERIES · **Frame-1 prop:** steaming pot of chicken and radish soup · **Series:** Sun Checks Your Kitchen #18: chicken soup  
 **3-second skip/safety line:** "Watching salt for your heart or kidneys? Use half the salt and more water."
@@ -5810,12 +6132,12 @@ Kiwi allergy or a low-potassium diet? Skip it. Add fiber slowly, with water.
 | 0-3 | SUN | Chicken soup for a cold? Show me the study. Okay. Here it is. | MYTH? CHICKEN SOUP | SET-KITCHEN · S-KITCHEN · Sun lifts the lid off a steaming pot of chicken and radish soup · CU |
 | 3-12 | SUN | Year 2000. Scientists put soup on white blood cells in a lab dish. The cells slowed down. | Lab dish. Not people. | same · study card inset (Rennard et al., Chest 2000) · medium |
 | 12-20 | SUN | A dish is not a person. The authors said so. Benefit in people? Untested. | Benefit in people: untested | same · she taps the card · CU |
-| 20-31 | SUN | So why do I make it? Warm, salty, easy to swallow, and it gets protein into a tired person. That's real. | Warm · easy · protein | same · ladles chicken, radish, scallion into a bowl · overhead |
+| 20-31 | SUN | So why do I make it? Warm, salty, easy to swallow, and it gets protein into a tired person. That's real. Save this for the next cold. | Warm · easy · protein | same · ladles chicken, radish, scallion into a bowl · overhead |
 | 31-38 | SUN | Watching salt for your heart or kidneys? Use half the salt and more water. | Watching salt? Half the salt. | same · CU · CU |
 | 38-43 | SUN | Fever over three days or trouble breathing? No soup. Call your doctor. | Fever 3+ days? Call your doctor. | same · CU · CU |
-| 43-47 | SUN | Comment SOUP. Three of my soups, with grams. | Comment SOUP | same · sets the bowl down · medium |
+| 43-47 | SUN | Comment SOUP. Three soups, with grams. Send this to whoever swears by it. | Comment SOUP | same · sets the bowl down · medium |
 
-**Full spoken script (99 words):** Chicken soup for a cold? Show me the study. Okay. Here it is. Year 2000. Scientists put soup on white blood cells in a lab dish. The cells slowed down. A dish is not a person. The authors said so. Benefit in people? Untested. So why do I make it? Warm, salty, easy to swallow, and it gets protein into a tired person. That's real. Watching salt for your heart or kidneys? Use half the salt and more water. Fever over three days or trouble breathing? No soup. Call your doctor. Comment SOUP. Three of my soups, with grams.
+**Full spoken script (110 words):** Chicken soup for a cold? Show me the study. Okay. Here it is. Year 2000. Scientists put soup on white blood cells in a lab dish. The cells slowed down. A dish is not a person. The authors said so. Benefit in people? Untested. So why do I make it? Warm, salty, easy to swallow, and it gets protein into a tired person. That's real. Save this for the next cold. Watching salt for your heart or kidneys? Use half the salt and more water. Fever over three days or trouble breathing? No soup. Call your doctor. Comment SOUP. Three soups, with grams. Send this to whoever swears by it.
 
 **Safety / cautions:** MB-EX (lab-only claim labeled as untested in people); sodium line; fever/breathing red flag (SAFETY §4.3).
 
@@ -5836,6 +6158,8 @@ Watching salt? Use half. Fever over 3 days or trouble breathing? Call your docto
 **Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F04 · **Pillar** P12 (Kitchen remedies with evidence) · **Hook** H402 · **Target** 45 s · **Spoken words** 84 · **CTA** `BEGIN` → Where should I begin? start menu
 
 **Hook line:** "Not a superfood, not poison. Seaweed snacks, every day? Read the iodine first."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 70.7 · gate PASS · hook class NOT_X · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** DEBUNK, KITCHEN_SERIES · **Frame-1 prop:** stack of roasted seaweed snack packs · **Series:** Sun Checks Your Kitchen #19: seaweed  
 **3-second skip/safety line:** "Thyroid condition, or on thyroid medicine? Ask your doctor before eating seaweed daily."
@@ -5867,23 +6191,25 @@ Thyroid condition or thyroid medicine? Ask your doctor before eating seaweed dai
 ---
 
 ## S163: One can of chickpeas, three meals of fiber
-**Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F18 · **Pillar** P10 (Digestion & gut) · **Hook** H403 · **Target** 46 s · **Spoken words** 86 · **CTA** `WAITLIST` → Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)
+**Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F18 · **Pillar** P10 (Digestion & gut) · **Hook** H403 · **Target** 46 s · **Spoken words** 90 · **CTA** `WAITLIST` → Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)
 
-**Hook line:** "One can of chickpeas. Three meals. Here's the fiber math, out loud."
+**Hook line:** "One can of chickpeas. Three meals. Watch the fiber math, out loud. Grams, not vibes."
 
-**Grammar:** OBJ3, KITCHEN_SERIES, DEMO · **Frame-1 prop:** open can of chickpeas in a colander · **Series:** Sun Checks Your Kitchen #20: canned beans  
+**Virality (VIRALITY_SYSTEM.md §2):** 78.3 · gate PASS · hook class WATCH · needs: no save trigger (a routine / day N / tonight / write it down)
+
+**Grammar:** OBJ3, WATCH, KITCHEN_SERIES, DEMO · **Frame-1 prop:** open can of chickpeas in a colander · **Series:** Sun Checks Your Kitchen #20: canned beans  
 **3-second skip/safety line:** "Beans make you gassy? Start with two spoons a day."
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
-| 0-3 | SUN | One can of chickpeas. Three meals. Here's the fiber math, out loud. | 1 CAN = 3 MEALS | SET-KITCHEN · S-KITCHEN · Sun drains a can of chickpeas into a colander under the tap · CU |
+| 0-3 | SUN | One can of chickpeas. Three meals. Watch the fiber math, out loud. Grams, not vibes. | 1 CAN = 3 MEALS | SET-KITCHEN · S-KITCHEN · Sun pours a can of chickpeas into a colander under the tap · CU |
 | 3-12 | SUN | The big fiber review: people eating twenty-five to twenty-nine grams a day had better health outcomes. | 25–29 g fiber a day | same · study card inset (Reynolds et al., Lancet 2019) · medium |
 | 12-23 | SUN | Half a cup of chickpeas, about six grams. On a salad, in soup, roasted with salt. Three meals, eighteen grams. | ½ cup ≈ 6 g · 3 meals ≈ 18 g | same · three bowls: salad, soup, roasted · overhead |
 | 23-31 | SUN | Add a kiwi and oatmeal and you're close. Grams, not vibes. | Grams, not vibes. | same · she writes the total on a card · CU |
 | 31-38 | SUN | Beans make you gassy? Start with two spoons a day. Go up slowly. Drink water. | Gassy? Two spoons. Go slow. | same · tiny spoonful · CU |
-| 38-46 | SUN | Doors open soon. Comment WAITLIST. Free, and my day-one recipe comes now. | Comment WAITLIST · free | same · lifts the colander · medium |
+| 38-46 | SUN | Send this to the can opener in your house. Comment WAITLIST. It's free. | Comment WAITLIST · free | same · lifts the colander · medium |
 
-**Full spoken script (86 words):** One can of chickpeas. Three meals. Here's the fiber math, out loud. The big fiber review: people eating twenty-five to twenty-nine grams a day had better health outcomes. Half a cup of chickpeas, about six grams. On a salad, in soup, roasted with salt. Three meals, eighteen grams. Add a kiwi and oatmeal and you're close. Grams, not vibes. Beans make you gassy? Start with two spoons a day. Go up slowly. Drink water. Doors open soon. Comment WAITLIST. Free, and my day-one recipe comes now.
+**Full spoken script (90 words):** One can of chickpeas. Three meals. Watch the fiber math, out loud. Grams, not vibes. The big fiber review: people eating twenty-five to twenty-nine grams a day had better health outcomes. Half a cup of chickpeas, about six grams. On a salad, in soup, roasted with salt. Three meals, eighteen grams. Add a kiwi and oatmeal and you're close. Grams, not vibes. Beans make you gassy? Start with two spoons a day. Go up slowly. Drink water. Send this to the can opener in your house. Comment WAITLIST. It's free.
 
 **Safety / cautions:** Slow fiber increase with water (gas/bloating framed kindly); no condition claim.
 
@@ -5905,6 +6231,8 @@ The waitlist is free: one email when Strong Years opens, plus at most 3 launch e
 **Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F12 · **Pillar** P13 (Protein & muscle food) · **Hook** H404 · **Target** 46 s · **Spoken words** 89 · **CTA** `WAITLIST` → Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)
 
 **Hook line:** "If you eat toast and coffee every morning, you're short on protein. Let's fix breakfast."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 78.5 · gate PASS · hook class IF_EVERY · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down); CTA is long or asks for more than one keyword
 
 **Grammar:** IF_EVERY, DEMO · **Frame-1 prop:** plate with one slice of toast and a coffee  
 **3-second skip/safety line:** "Kidney disease? Ask your doctor for your protein number first."
@@ -5940,6 +6268,8 @@ The waitlist is free: one email when Strong Years opens, plus at most 3 launch e
 **Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F07 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** H405 · **Target** 46 s · **Spoken words** 95 · **CTA** `BEGIN` → Where should I begin? start menu
 
 **Hook line:** "Seventy-six, too old to lift? Not too old, not too late. Too comfortable."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 79.5 · gate PASS · hook class NOT_X · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** DEMO · **Frame-1 prop:** purple resistance band around a cabinet handle  
 **3-second skip/safety line:** "Osteoporosis? Ask your doctor what to avoid."
@@ -5978,6 +6308,8 @@ Osteoporosis? Ask your doctor what to avoid (no loaded forward bending).
 
 **Hook line:** "Firm tofu, crumbled. Watch it turn into breakfast with thirty grams of protein."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 70.3 · gate PASS · hook class WATCH · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** OBJ3, WATCH, DEMO, KITCHEN_SERIES · **Frame-1 prop:** block of firm tofu crumbling into a pan · **Series:** Sun Checks Your Kitchen #21: tofu  
 **3-second skip/safety line:** "Soy allergy, or kidney disease? Skip the tofu or ask your doctor."
 
@@ -6009,23 +6341,26 @@ Soy allergy or kidney disease? Skip it or ask your doctor. Soy sauce is salty: u
 ---
 
 ## S167: 'Are you even real?'
-**Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F26 · **Pillar** P20 (Behind the AI / trust) · **Hook** H407 · **Target** 45 s · **Spoken words** 95 · **CTA** `WAITLIST` → Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)
+**Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F26 · **Pillar** P20 (Behind the AI / trust) · **Hook** H407 · **Target** 45 s · **Spoken words** 105 · **CTA** `WAITLIST` → Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)
 
 **Hook line:** "'Are you even real?' No. I'm AI. My opinion of your breakfast is real."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 90.7 · gate PASS · hook class MYTH
 
 **Grammar:** DEMO · **Frame-1 prop:** printed comment card reading 'are you even real?'  
 **3-second skip/safety line:** "Food allergy or a special diet from your doctor? Their plan comes first."
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
-| 0-3 | SUN | 'Are you even real?' No. I'm AI. My opinion of your breakfast is real. | 'ARE YOU EVEN REAL?' NO. | SET-TABLE · S-CARDI-JADE · Sun reads a printed comment card through her glasses · CU |
+| 0-3 | SUN | 'Are you even real?' No. I'm AI. My opinion of your breakfast is real. | 'ARE YOU EVEN REAL?' NO. | SET-TABLE · S-CARDI-JADE · Sun taps a printed comment card on the table and reads it through her glasses · CU |
 | 3-11 | SUN | A team of people made me. Chang too. Our story is fiction. Our fifty years? Also fiction. Still exhausting. | Made by a team · story = fiction | same · the slow blink · CU |
 | 11-20 | SUN | What's real: the recipes, the grams, and the study in every caption. Go check. I would. | Real: recipes · grams · studies | same · she points at the caption area · medium |
 | 20-29 | SUN | Soon we open Strong Years. A recipe every Sunday, a session with him every morning. | Opening soon | same · phone inset: a recipe card with grams · insert |
-| 29-35 | SUN | Food allergy or a special diet from your doctor? Their plan comes first. Always. | Special diet? Doctor's plan first. | same · CU · CU |
-| 35-45 | SUN | Comment WAITLIST. It's free. One email when we open. I don't spam. The team won't let me. | Comment WAITLIST · free | same · sets the card down, smirk · medium |
+| 29-33 | SUN | Food allergy or a special diet from your doctor? Their plan comes first. Always. | Special diet? Doctor's plan first. | same · CU · CU |
+| 33-38 | SUN | Show this to whoever asked you about me. Save it for the next one who asks. | Show them this | same · holds the card to camera, smirk · CU |
+| 38-45 | SUN | Comment WAITLIST. It's free. One email when we open. No spam. | Comment WAITLIST · free | same · sets the card down · medium |
 
-**Full spoken script (95 words):** 'Are you even real?' No. I'm AI. My opinion of your breakfast is real. A team of people made me. Chang too. Our story is fiction. Our fifty years? Also fiction. Still exhausting. What's real: the recipes, the grams, and the study in every caption. Go check. I would. Soon we open Strong Years. A recipe every Sunday, a session with him every morning. Food allergy or a special diet from your doctor? Their plan comes first. Always. Comment WAITLIST. It's free. One email when we open. I don't spam. The team won't let me.
+**Full spoken script (105 words):** 'Are you even real?' No. I'm AI. My opinion of your breakfast is real. A team of people made me. Chang too. Our story is fiction. Our fifty years? Also fiction. Still exhausting. What's real: the recipes, the grams, and the study in every caption. Go check. I would. Soon we open Strong Years. A recipe every Sunday, a session with him every morning. Food allergy or a special diet from your doctor? Their plan comes first. Always. Show this to whoever asked you about me. Save it for the next one who asks. Comment WAITLIST. It's free. One email when we open. No spam.
 
 **Safety / cautions:** Disclosure post; D-04 respected (states she is AI); no subscription terms (runway).
 
@@ -6046,6 +6381,8 @@ The waitlist is free: one email when Strong Years opens, plus at most 3 launch e
 **Page** @changandsun · **Speaker** DUO · **Format** F34 · **Pillar** P01 (Strength proof & tests) · **Hook** H408 · **Target** 48 s · **Spoken words** 94 · **CTA** `TEST` → Strength Age test (quiz)
 
 **Hook line:** "Thirty-second chair test. Him versus me. Watch his face when I win."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 74.1 · gate PASS · hook class WATCH · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** OBJ3, WATCH, TEST_NOW, DEMO · **Frame-1 prop:** yellow dish gloves on the dish rack · **Series:** Loser Does Dishes  
 **3-second skip/safety line:** "Chest pain or dizzy? Stop and sit."
@@ -6085,6 +6422,8 @@ Chest pain or dizziness? Stop, sit and call your doctor. Tell us both your numbe
 
 **Hook line:** "If your husband flexes in every shiny surface, you're married to this man."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 62.5 · gate PASS · hook class STATEMENT · needs: hook class STATEMENT is a bottom-tier opener (POSTDB §3b); no concrete number in the hook or re-hook; no open loop / re-hook by second 3–6; no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** SHARE · **Frame-1 prop:** handwritten sign taped to the oven door  
 **3-second skip/safety line:** "Hand on the counter."
 
@@ -6119,6 +6458,8 @@ Chang & Sun are AI characters; the sign on the oven is very real.
 **Page** @changandsun · **Speaker** DUO · **Format** F23 · **Pillar** P03 (Balance & steady feet) · **Hook** H410 · **Target** 47 s · **Spoken words** 102 · **CTA** `BALANCE` → Steady Feet + the 10-second test
 
 **Hook line:** "If you do the dishes every night, take turns standing on one leg at the sink."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 84.0 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** IF_EVERY, DEMO, SHARE · **Frame-1 prop:** double sink full of soapy dishes  
 **3-second skip/safety line:** "Dizzy spells or a new hip? Keep both feet down and tell your doctor."
@@ -6157,6 +6498,8 @@ Dizzy spells or a new hip? Keep both feet down and tell your doctor. Send this t
 
 **Hook line:** "Not an app, not a gym. Call one person before dinner tonight."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 71.2 · gate PASS · hook class NOT_X · needs: no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** SHARE · **Frame-1 prop:** landline phone with a long curly cord  
 **3-second skip/safety line:** "Feeling alone most days? Tell your doctor."
 
@@ -6187,9 +6530,11 @@ Feeling alone most days? Tell your doctor; it counts as health. Type a first nam
 ---
 
 ## S172: Fourteen dumplings: the protein count
-**Page** @changandsun · **Speaker** DUO · **Format** F18 · **Pillar** P13 (Protein & muscle food) · **Hook** H412 · **Target** 46 s · **Spoken words** 77 · **CTA** `SOUP` → Sun Yoon's Three Soups
+**Page** @changandsun · **Speaker** DUO · **Format** F18 · **Pillar** P13 (Protein & muscle food) · **Hook** H412 · **Target** 46 s · **Spoken words** 84 · **CTA** `SOUP` → Sun Yoon's Three Soups
 
 **Hook line:** "Fourteen dumplings. He says twelve. Let's count the protein, not the dumplings."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 78.3 · gate PASS · hook class OBJ3 · needs: no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** OBJ3, DEMO · **Frame-1 prop:** steamer basket of pork dumplings  
 **3-second skip/safety line:** "Kidney disease? Ask your doctor for your protein number."
@@ -6197,14 +6542,14 @@ Feeling alone most days? Tell your doctor; it counts as health. Type a first nam
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
 | 0-3 | SUN | Fourteen dumplings. He says twelve. Let's count the protein, not the dumplings. | 14 DUMPLINGS (HE SAYS 12) | SET-TABLE · C-CASUAL + S-CARDI-MUSTARD · Sun lifts the lid on a steamer basket of pork dumplings; Chang reaches, she slaps his hand · medium |
-| 3-10 | CHANG | Twelve. I counted. | Chang: 12 | same · innocent face · CU |
+| 3-10 | CHANG | Twelve. I counted. Wait for her math. | Chang: 12 | same · innocent face · CU |
 | 10-19 | SUN | Fourteen. Each one, about two to three grams of protein. Fourteen is roughly thirty-five grams. | 14 × ~2.5 g ≈ 35 g | same · she lines them up, numbers pop on screen · overhead |
 | 19-28 | CHANG | Over sixty-five, twenty-five to thirty a meal. So I needed twelve. Thank you. | Target: 25–30 g a meal | same · study card inset (PROT-AGE) · medium |
 | 28-36 | SUN | He needed twelve and a plate of greens. Dumplings are salty. Dip once, not twice. | Salty. Dip once. | same · she pushes the greens to him · two-shot |
 | 36-41 | CHANG | Kidney disease? Ask your doctor for your protein number. | Kidney disease? Ask your number. | same · CU · CU |
-| 41-46 | SUN | Comment SOUP. My dumpling soup is in there. Fourteen max. | Comment SOUP | same · she eats one; he counts on his fingers · two-shot |
+| 41-46 | SUN | Comment SOUP for my dumpling soup. Send this to the one who counts. | Comment SOUP | same · she eats one; he counts on his fingers · two-shot |
 
-**Full spoken script (77 words):** Fourteen dumplings. He says twelve. Let's count the protein, not the dumplings. Twelve. I counted. Fourteen. Each one, about two to three grams of protein. Fourteen is roughly thirty-five grams. Over sixty-five, twenty-five to thirty a meal. So I needed twelve. Thank you. He needed twelve and a plate of greens. Dumplings are salty. Dip once, not twice. Kidney disease? Ask your doctor for your protein number. Comment SOUP. My dumpling soup is in there. Fourteen max.
+**Full spoken script (84 words):** Fourteen dumplings. He says twelve. Let's count the protein, not the dumplings. Twelve. I counted. Wait for her math. Fourteen. Each one, about two to three grams of protein. Fourteen is roughly thirty-five grams. Over sixty-five, twenty-five to thirty a meal. So I needed twelve. Thank you. He needed twelve and a plate of greens. Dumplings are salty. Dip once, not twice. Kidney disease? Ask your doctor for your protein number. Comment SOUP for my dumpling soup. Send this to the one who counts.
 
 **Safety / cautions:** Sodium line; kidney-disease protein caution.
 
@@ -6225,6 +6570,8 @@ Kidney disease? Ask your doctor for your protein number.
 **Page** @changandsun · **Speaker** DUO · **Format** F33 · **Pillar** P01 (Strength proof & tests) · **Hook** H413 · **Target** 46 s · **Spoken words** 91 · **CTA** `TEST` → Strength Age test (quiz)
 
 **Hook line:** "Sunday video call with your mom? Do the chair test together. She'll say she's fine."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 79.1 · gate PASS · hook class OBJ3 · needs: no concrete number in the hook or re-hook; no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** SHARE, TEST_NOW · **Frame-1 prop:** tablet propped on the table for a Sunday video call  
 **3-second skip/safety line:** "Chest pain or dizziness? Stop and sit."
@@ -6263,6 +6610,8 @@ Chest pain or dizziness? Stop, sit and call the doctor. Send this to your mom.
 
 **Hook line:** "'Is it another course I'll never open?' Short version: no. Here's what it is."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 73.7 · gate PASS · hook class MYTH · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** SHARE · **Frame-1 prop:** pile of unopened course binders  
 **3-second skip/safety line:** "New to exercise? Check with your doctor first, and start on the gentle level."
 
@@ -6297,6 +6646,8 @@ The waitlist is free: one email when Strong Years opens, plus at most 3 launch e
 **Page** @changandsun · **Speaker** DUO · **Format** F22 · **Pillar** P08 (Tai chi / qigong / gentle yoga) · **Hook** H415 · **Target** 47 s · **Spoken words** 93 · **CTA** `WAITLIST` → Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)
 
 **Hook line:** "If you wait for the coffee every morning, give me one minute of tai chi."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 90.0 · gate PASS · hook class IF_EVERY · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)
 
 **Grammar:** IF_EVERY, DEMO · **Frame-1 prop:** French press steeping on the yard bench  
 **3-second skip/safety line:** "Dizzy spells or a recent hip surgery? Ask your doctor first."
@@ -6336,6 +6687,8 @@ The waitlist is free: one email when Strong Years opens, plus at most 3 launch e
 
 **Hook line:** "Doors are open. Two little books. Start here, not with a big program."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 63.3 · gate PASS · hook class OBJ3 · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** OBJ3, LAUNCH, DEMO · **Frame-1 prop:** two printed books on the workbench · **Founding launch week**  
 **3-second skip/safety line:** "New to exercise? Check with your doctor."
 
@@ -6370,6 +6723,8 @@ The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's St
 **Page** @changyin · **Speaker** CHANG · **Format** F38 · **Pillar** P20 (Behind the AI / trust) · **Hook** H417 · **Target** 52 s · **Spoken words** 111 · **CTA** `JOIN` → Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)
 
 **Hook line:** "Founding membership. I'll read you the terms out loud. All of them."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 60.8 · gate PASS · hook class OBJ3 · needs: no concrete number in the hook or re-hook; no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** OBJ3, LAUNCH · **Frame-1 prop:** terms card clipped to the training log · **Founding launch week**  
 **3-second skip/safety line:** "Check with your doctor before starting."
@@ -6407,6 +6762,8 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 
 **Hook line:** "Not a course, not a challenge. Seven mornings, one chair. Here's day one, free."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 84.5 · gate PASS · hook class NOT_X · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)
+
 **Grammar:** LAUNCH, DEMO · **Frame-1 prop:** the Reset open to day one on the garage chair · **Founding launch week**  
 **3-second skip/safety line:** "Dizzy or short of breath? Stop, sit, and call your doctor."
 
@@ -6443,6 +6800,8 @@ The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's St
 **Page** @changyin · **Speaker** CHANG · **Format** F14 · **Pillar** P06 (Back / knee / shoulder relief & rehab) · **Hook** H419 · **Target** 50 s · **Spoken words** 104 · **CTA** `BOOK` → Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)
 
 **Hook line:** "If you climb the same three stairs every day, day four is for you."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 83.0 · gate PASS · hook class IF_EVERY · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)
 
 **Grammar:** IF_EVERY, LAUNCH, DEMO · **Frame-1 prop:** tape mark on the bottom stoop step · **Founding launch week**  
 **3-second skip/safety line:** "Knee surgery recently? Follow your surgeon's plan first."
@@ -6482,6 +6841,8 @@ The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's St
 
 **Hook line:** "Why only 5,000 founding members? Because that's how many we can welcome properly."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 66.8 · gate PASS · hook class OBJ3 · needs: no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** LAUNCH · **Frame-1 prop:** tally marks chalked on the garage door · **Founding launch week**  
 **3-second skip/safety line:** "Check with your doctor before starting."
 
@@ -6519,6 +6880,8 @@ After checkout you'll see one optional offer, the Founding Membership: {{FOUNDIN
 
 **Hook line:** "My Strong Kitchen book is out. Grams in every recipe. No vibes."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 63.3 · gate PASS · hook class OBJ3 · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** OBJ3, LAUNCH, DEMO · **Frame-1 prop:** Strong Kitchen book propped against the rice cooker · **Founding launch week**  
 **3-second skip/safety line:** "Special diet from your doctor? Their plan comes first."
 
@@ -6553,6 +6916,8 @@ The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's St
 **Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F31 · **Pillar** P11 (Sun's kitchen: recipes) · **Hook** H422 · **Target** 48 s · **Spoken words** 93 · **CTA** `BOOK` → Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)
 
 **Hook line:** "Egg, tofu, scallion. Watch me make thirty grams of breakfast from my book."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 70.3 · gate PASS · hook class WATCH · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** OBJ3, WATCH, LAUNCH, DEMO, KITCHEN_SERIES · **Frame-1 prop:** the book open to page 14 beside a cracked egg · **Founding launch week**  
 **3-second skip/safety line:** "Soy allergy or kidney disease? Skip it, or ask your doctor first."
@@ -6590,6 +6955,8 @@ The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's St
 
 **Hook line:** "Not a diet book, not a meal plan. A cookbook with the grams written in."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 70.7 · gate PASS · hook class NOT_X · needs: no concrete number in the hook or re-hook; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** LAUNCH · **Frame-1 prop:** the book on top of a stack of diet books, red pen · **Founding launch week**  
 **3-second skip/safety line:** "Kidney disease? Ask your doctor for your protein number first."
 
@@ -6625,6 +6992,8 @@ The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's St
 **Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F10 · **Pillar** P20 (Behind the AI / trust) · **Hook** H424 · **Target** 54 s · **Spoken words** 117 · **CTA** `JOIN` → Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)
 
 **Hook line:** "'Is the membership worth it?' Short version: only if you'll use it. Here's how to know."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 73.7 · gate PASS · hook class MYTH · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** LAUNCH · **Frame-1 prop:** index card titled SHORT VERSION · **Founding launch week**  
 **3-second skip/safety line:** "New to exercise? Check with your doctor first."
@@ -6662,6 +7031,8 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 
 **Hook line:** "Buying for your mother? Don't sign her up for something that renews forever."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 72.3 · gate PASS · hook class OBJ3 · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** OBJ3, LAUNCH, SHARE · **Frame-1 prop:** gift envelope with a handwritten card from Sun · **Founding launch week**  
 **3-second skip/safety line:** "New to exercise? She checks with her doctor first."
 
@@ -6696,6 +7067,8 @@ Gift: 3 months $49 or 12 months $119, prepaid. It starts the day they open it, e
 **Page** @changandsun · **Speaker** DUO · **Format** F38 · **Pillar** P20 (Behind the AI / trust) · **Hook** H426 · **Target** 57 s · **Spoken words** 119 · **CTA** `BOOK` → Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)
 
 **Hook line:** "Doors open today. Here's the honest version, because he talks too slowly."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 71.3 · gate PASS · hook class OBJ3 · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** OBJ3, LAUNCH · **Frame-1 prop:** two books and a terms card on the coffee table · **Founding launch week**  
 **3-second skip/safety line:** "New to exercise? Check with your doctor."
@@ -6734,6 +7107,8 @@ After checkout you'll see one optional offer, the Founding Membership: {{FOUNDIN
 
 **Hook line:** "If you already lift three times every week, don't buy our books. Really."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 67.8 · gate PASS · hook class IF_EVERY · needs: no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** IF_EVERY, LAUNCH · **Frame-1 prop:** red NO stamp and the two books · **Founding launch week**  
 **3-second skip/safety line:** "Heart condition or new to exercise? Check with your doctor first."
 
@@ -6768,6 +7143,8 @@ The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's St
 **Page** @changandsun · **Speaker** DUO · **Format** F38 · **Pillar** P20 (Behind the AI / trust) · **Hook** H428 · **Target** 55 s · **Spoken words** 107 · **CTA** `JOIN` → Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)
 
 **Hook line:** "'Locked' price. Locked how? She made me explain it properly."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 64.2 · gate PASS · hook class MYTH · needs: no concrete number in the hook or re-hook; no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** OBJ3, LAUNCH · **Frame-1 prop:** padlock on the garage pegboard · **Founding launch week**  
 **3-second skip/safety line:** "New to exercise? Check with your doctor."
@@ -6805,6 +7182,8 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 
 **Hook line:** "Your questions from launch week. Real questions. No fake reviews. Let's go."
 
+**Virality (VIRALITY_SYSTEM.md §2):** 65.8 · gate PASS · hook class OBJ3 · needs: no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+
 **Grammar:** OBJ3, LAUNCH · **Frame-1 prop:** shoebox of printed question cards · **Founding launch week**  
 **3-second skip/safety line:** "New to exercise? Check with your doctor before starting."
 
@@ -6841,6 +7220,8 @@ After checkout you'll see one optional offer, the Founding Membership: {{FOUNDIN
 **Page** @changandsun · **Speaker** DUO · **Format** F39 · **Pillar** P20 (Behind the AI / trust) · **Hook** H430 · **Target** 50 s · **Spoken words** 92 · **CTA** `BOOK` → Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)
 
 **Hook line:** "Not a countdown, not a midnight price jump. Launch week ends. Here's what changes."
+
+**Virality (VIRALITY_SYSTEM.md §2):** 73.7 · gate PASS · hook class NOT_X · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** LAUNCH · **Frame-1 prop:** wall calendar with no circled date · **Founding launch week**  
 **3-second skip/safety line:** "New to exercise? Check with your doctor first."

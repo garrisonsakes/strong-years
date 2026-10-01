@@ -63,15 +63,17 @@ DEFAULTS: dict = {
         # the horizon curve relative to 24 h, rate priors, and spreads in natural-log units.
         "prior_views_24h": {"instagram": 1500, "facebook": 1500, "tiktok": 800, "youtube": 500, "threads": 150, "x": 300},
         "horizon_curve": {"1": 0.10, "3": 0.30, "6": 0.50, "24": 1.0, "72": 1.6},
-        "prior_rates": {"share_rate": 0.004, "save_rate": 0.006, "keyword_rate": 0.002,
+        "prior_rates": {"share_save_rate": 0.010, "retention": 0.35, "share_rate": 0.004, "save_rate": 0.006, "keyword_rate": 0.002,
                         "click_through": 0.15, "conv_per_1k": 0.5},
-        "prior_spread": {"views": 0.9, "share_rate": 0.6, "save_rate": 0.6, "keyword_rate": 0.7,
+        "prior_spread": {"views": 0.9, "share_save_rate": 0.6, "retention": 0.4, "share_rate": 0.6, "save_rate": 0.6, "keyword_rate": 0.7,
                          "click_through": 0.5, "conv_per_1k": 0.8},
     },
     # ---------------------------------------------------------------- scoring
     "scoring": {
-        "weights": {"views": 0.35, "share_rate": 0.15, "save_rate": 0.15, "keyword_rate": 0.15,
-                    "click_through": 0.05, "conv_per_1k": 0.15},
+        # VIRALITY_SYSTEM.md §4: (shares + saves) per view leads; retention is the 1 h / 3 h watch-through proxy;
+        # keyword comments are down-weighted (POSTDB §4: keyword bait inflates comments 2.7-3.4x with no like lift)
+        "weights": {"share_save_rate": 0.35, "retention": 0.15, "views": 0.15, "share_rate": 0.05, "save_rate": 0.05,
+                    "keyword_rate": 0.05, "click_through": 0.05, "conv_per_1k": 0.15},
         "z_clip": 4.0,
         "optin_weight": 1.0, "buyer_weight": 4.0, "member_weight": 10.0,   # conv_per_1k = (optins + 4 x ebook buyers
                                                                            # + 10 x members) per 1,000 views [A]
@@ -86,7 +88,8 @@ DEFAULTS: dict = {
             "breakout_min_horizon_h": 3,
         },
         # bandit reward = clip(w_v * Phi(score / scale) + w_c * conversion_norm, 0, 1)
-        "reward": {"velocity_weight": 0.6, "conversion_weight": 0.4, "score_scale": 1.5,
+        # VIRALITY_SYSTEM.md §4: reward = w_ss * Phi(z_share_save / scale) + w_v * Phi(score / scale) + w_c * conversion
+        "reward": {"share_save_weight": 0.45, "velocity_weight": 0.25, "conversion_weight": 0.3, "score_scale": 1.5,
                    "target_optins_per_1k": 2.0, "target_buyers_per_1k": 0.5, "target_members_per_1k": 0.2},
     },
     # ---------------------------------------------------------------- winner actions
@@ -115,6 +118,9 @@ DEFAULTS: dict = {
     # ---------------------------------------------------------------- allocator
     "allocator": {
         "explore_floor": 0.20,            # hard minimum 0.20 (MIN_EXPLORE_FLOOR)
+        "hook_family_weight": 0.35,       # VIRALITY_SYSTEM.md §4: share of each exploit draw taken from the hook-family arm [A]
+        "hook_family_prior_strength": 10.0,
+        "hook_family_proven_bonus": 0.05, # proven grammars (POSTDB §8 rule 3) start at 0.55 instead of 0.5 [A]
         "half_life_days": 14,             # arm-level decay: evidence halves every 14 days [A]
         "prior_mean": 0.5,                # neutral reward: a baseline post scores ~0.5 (growth/scoring.reward)
         "prior_strength": 20.0,           # neutral pseudo-observations on every arm (~1,000 arms per page x platform:

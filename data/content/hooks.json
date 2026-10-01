@@ -2587,7 +2587,7 @@
    "E28"
   ],
   "test_first": false,
-  "hook": "Seaweed soup. The Korean birthday soup. Everyone in this house gets it."
+  "hook": "Seaweed soup. The Korean birthday soup, thirty grams of protein a bowl. Watch."
  },
  {
   "id": "H186",
@@ -2951,7 +2951,7 @@
    "E21"
   ],
   "test_first": true,
-  "hook": "He flexes in the microwave. So I made a sign."
+  "hook": "He flexes in the microwave every morning at seventy-four. So I made a sign."
  },
  {
   "id": "H212",
@@ -3245,7 +3245,7 @@
    "E43"
   ],
   "test_first": false,
-  "hook": "He snores. I found a study. The study says: see the doctor."
+  "hook": "He snores. I found a study, one page. It says: see the doctor."
  },
  {
   "id": "H233",
@@ -3343,7 +3343,7 @@
    "E37"
   ],
   "test_first": false,
-  "hook": "We're AI. The marriage is fictional. The advice isn't."
+  "hook": "We're AI. The marriage is fictional. The advice isn't. Watch the three real tests."
  },
  {
   "id": "H240",
@@ -3427,7 +3427,7 @@
    "E37"
   ],
   "test_first": false,
-  "hook": "Loneliness is a health problem. Call someone. Today."
+  "hook": "Loneliness is a health problem, and here's the study that says so. Call someone."
  },
  {
   "id": "H246",
@@ -5158,7 +5158,7 @@
    "E26"
   ],
   "test_first": false,
-  "hook": "Jajangmyeon Sunday. He cooked. I brought the kimchi and a cucumber."
+  "hook": "Jajangmyeon Sunday. He cooked. I brought the kimchi. Watch what it does that the sauce can't."
  },
  {
   "id": "H368",
@@ -5186,7 +5186,7 @@
    "E37"
   ],
   "test_first": false,
-  "hook": "Printer's out of ink again. Thirty pages. One study. About friends."
+  "hook": "Printer's out of ink again. Thirty pages, one study, about your friends, not your pills."
  },
  {
   "id": "H370",
@@ -5404,7 +5404,7 @@
   "speaker": "DUO",
   "evidence": [],
   "test_first": false,
-  "hook": "Before you follow us, or join us: we're AI."
+  "hook": "Before you follow us, or join us: we're AI. Not real, not doctors. Watch what's real."
  },
  {
   "id": "H387",
@@ -5567,7 +5567,7 @@
   "speaker": "CHANG",
   "evidence": [],
   "test_first": false,
-  "hook": "Not a doctor, not a real person. An AI welder. Here's what's real."
+  "hook": "Not a doctor, not a real person. A seventy-four-year-old AI welder. Here's what's real."
  },
  {
   "id": "H399",
@@ -5638,7 +5638,7 @@
    "E52"
   ],
   "test_first": false,
-  "hook": "One can of chickpeas. Three meals. Here's the fiber math, out loud."
+  "hook": "One can of chickpeas. Three meals. Watch the fiber math, out loud. Grams, not vibes."
  },
  {
   "id": "H404",

@@ -11,7 +11,7 @@ from pathlib import Path
 
 from PIL import Image
 
-from assemble import c2pa_sign
+from assemble import c2pa_sign, virality_gate
 from assemble.layout import H, W, safe_zone
 from assemble.overlay import draw_ai_tag, draw_text_block
 from common import config, media, storage, supabase
@@ -67,6 +67,13 @@ def render_variants(req: dict, workdir: Path | None = None) -> dict:
             results.append({"platform": pl, "rendered": False, "asset_id": None, "reason": "text-only post"})
             continue
         safe = v.get("safe_zone") or None
+        # VIRALITY_SYSTEM.md §3 R1/R6: variant hook <= 7 words; cover restates the hook in <= 6 words
+        cover_text = v.get("cover_text") or v.get("on_screen_hook")
+        bad = virality_gate.cover_text_ok(cover_text)
+        if v.get("on_screen_hook") and len(v["on_screen_hook"].split()) > virality_gate.HOOK_MAX_WORDS:
+            bad.append(f"R1 variant hook is {len(v['on_screen_hook'].split())} words (max {virality_gate.HOOK_MAX_WORDS})")
+        if bad:
+            raise ValueError(f"{pl}: " + "; ".join(bad))
         dur = min(master_dur, float(v.get("max_s") or master_dur))
         out_raw = jobdir / f"{pl}_raw.mp4"
         args = ["-i", str(src)]
@@ -86,7 +93,7 @@ def render_variants(req: dict, workdir: Path | None = None) -> dict:
         final = signed if signed.exists() else out_raw
         asset_id = storage.new_id()
         pub = storage.publish(final, f"variants/{vid}/{pl}_{asset_id}.mp4", "video/mp4")
-        cv = cover(final, v.get("cover_text"), pl, safe, jobdir / f"{pl}_cover.jpg")
+        cv = cover(final, cover_text, pl, safe, jobdir / f"{pl}_cover.jpg")
         cpub = storage.publish(cv, f"variants/{vid}/{pl}_{asset_id}_cover.jpg", "image/jpeg")
         registered = False
         if supabase.enabled():  # pragma: no cover - variants.asset_id is an FK to assets(id)

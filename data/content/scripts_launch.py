@@ -240,10 +240,10 @@ dict(id="S145", page="@changandsun", speaker="DUO", format="F38", pillar="P20", 
  note="Offer facts per BLITZ.md §3.", bit="Seven out of ten; anniversary whiteboard", wink=False, thumb="DOORS OPEN", music="playful jazz"),
 
 dict(id="S146", page="@changandsun", speaker="DUO", format="F39", pillar="P20", hook_id="H386", hcat="LCH", title="PIN 1-D (founding week): Hi, we're AI. Doors are open.", secs=46, launch=True,
- prop="the sofa, Mandu between them", obj="before", grammar=["LAUNCH"], demo=False,
+ prop="the sofa, Mandu between them", obj="before", grammar=["LAUNCH","WATCH"], demo=False,
  beats=[
-  ("0-3","SUN","Before you follow us, or join us: we're AI.","WE'RE AI",f"{DL} | both on the sofa, Mandu between them | two-shot"),
-  ("3-7","CHANG","Made by a team of people who love their grandparents.","Made by a team","same | CU | CU"),
+  ("0-3","SUN","Before you follow us, or join us: we're AI. Not real, not doctors. Watch what is real.","WE'RE AI. WATCH WHAT'S REAL.",f"{DL} | both on the sofa, Mandu between them | two-shot"),
+  ("3-7","CHANG","Made by a team of people who love their grandparents. Fifty years married? Fiction.","Made by a team · 50 years = fiction","same | CU | CU"),
   ("7-11","SUN","He is not real. His arms are also not real.","","same | pokes his bicep | CU"),
   ("11-19","CHANG","The science is real. Every video is built on published research, and the sources are in the caption.","Real research · sources in the caption","same | study card inset | medium"),
   ("19-28","SUN","This week the membership opened. {{FOUNDING_PRICE}} a month, first month today, renews monthly, cancel online anytime. Fourteen-day refund.","{{FOUNDING_PRICE}}/mo · renews · cancel online · 14 days","same | price card | medium"),

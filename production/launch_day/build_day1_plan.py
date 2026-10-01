@@ -173,6 +173,10 @@ def build() -> tuple[dict, list[str]]:
         page = PAGES[spk]
         if s["page"] != page["handle"]:
             problems.append(f"{pid}: script page {s['page']} != {page['handle']}")
+        # VIRALITY_SYSTEM.md §2: launch-day posts must score top-decile on the rubric (re-scored here on the edited text)
+        vir = BC.VIR.score(src[s["id"]])
+        if vir["score"] < BC.VIR.TOP_DECILE:
+            problems.append(f"{pid}: virality {vir['score']} < top-decile {BC.VIR.TOP_DECILE}: " + "; ".join(vir["why"]))
         if s["cta_keyword"] == "WAITLIST":
             per_page_waitlist[page["handle"]] = per_page_waitlist.get(page["handle"], 0) + 1
         wins = beat_windows(s)
@@ -236,9 +240,16 @@ def build() -> tuple[dict, list[str]]:
                        "study_cards": [{"beat": k, "evidence_id": s["evidence"][0], "title": b["ost"]}
                                        for k, b in enumerate(s["beats"]) if re.search(r"study card", b["shot"], re.I) and s["evidence"]]},
             "variants": variants, "first_comment": fc,
+            "virality": {"score": vir["score"], "top_decile": vir["top_decile"], "hook_class": vir["hook_class"], "parts": vir["parts"],
+                         "frame1_text": s["beats"][0]["ost"], "frame1_words": len(s["beats"][0]["ost"].split()),
+                         "ig_trial_reel": True,
+                         "trial_note": "VIRALITY_SYSTEM.md §5: every IG reel in a page's first 14 days goes out as a Trial Reel "
+                                       "(non-followers first; share to followers if it beats the page median at 24 h). "
+                                       "Professional account required; if the toggle is missing, post normally and log it."},
             "ai_label_reminder": "Turn ON the AI label on BOTH posts (IG 'AI info', FB 'AI info'); the burned-in 'AI character' tag and the caption footer stay as rendered.",
             "fallback_window": WINDOW_NOTE,
-            "validation": {"build_content_rules": "pass", "compliance_pass1": v1, "compliance_pass2": v2r["verdict"],
+            "validation": {"build_content_rules": "pass", "virality_gate": "top-decile" if vir["top_decile"] else "below top-decile",
+                           "compliance_pass1": v1, "compliance_pass2": v2r["verdict"],
                            "first_comment_scan": v3, "llm_judge": "pending: runs in the pipeline (/compliance/scan, mandatory) or a human reviews before posting"},
         })
     from uniqueness import guard

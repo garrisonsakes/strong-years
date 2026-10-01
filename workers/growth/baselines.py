@@ -22,7 +22,8 @@ import statistics
 
 from growth import config as G
 
-COMPONENTS = ("views", "share_rate", "save_rate", "keyword_rate", "click_through", "conv_per_1k")
+COMPONENTS = ("views", "share_save_rate", "retention", "share_rate", "save_rate", "keyword_rate", "click_through", "conv_per_1k")
+RETENTION_HORIZONS = (1, 3)   # VIRALITY_SYSTEM.md §4: the early (1 h / 3 h) watch-through proxy
 
 
 def smoothed_rate(x, denom, prior: float, k: float) -> float | None:
@@ -30,6 +31,17 @@ def smoothed_rate(x, denom, prior: float, k: float) -> float | None:
     if x is None or denom is None:
         return None
     return (x + prior * k) / (denom + k)
+
+
+def retention_value(snapshot: dict) -> float | None:
+    """Watch-through fraction in (0, 1.5]: avg_watch_pct (0-1 or 0-100, replays can exceed 1) or avg_watch_s / duration_s."""
+    pct = G.num(snapshot.get("avg_watch_pct"), lo=0)
+    if pct is not None:
+        pct = pct / 100.0 if pct > 1.5 else pct
+    else:
+        aw, du = G.num(snapshot.get("avg_watch_s"), lo=0), G.num(snapshot.get("duration_s"), lo=0.1)
+        pct = None if aw is None or du is None else aw / du
+    return None if not pct else max(0.01, min(1.5, pct))
 
 
 def components(snapshot: dict, cfg: dict) -> dict[str, float]:
@@ -43,11 +55,21 @@ def components(snapshot: dict, cfg: dict) -> dict[str, float]:
     out["views"] = math.log1p(views)
     if views < float(s["min_views_for_rates"]):
         return out
+    # VIRALITY_SYSTEM.md §4: (shares + saves) per view is the primary reach signal (sends per reach, Mosseri 2025-26;
+    # POSTDB §3c share rate is the engagement metric most correlated with outperformance)
+    if snapshot.get("shares") is not None or snapshot.get("saves") is not None:
+        ss = (G.num(snapshot.get("shares"), lo=0) or 0) + (G.num(snapshot.get("saves"), lo=0) or 0)
+        r = smoothed_rate(ss, views, pr["share_save_rate"], k)
+        if r is not None and r > 0:
+            out["share_save_rate"] = math.log(r)
     for comp, field in (("share_rate", "shares"), ("save_rate", "saves"), ("keyword_rate", "keyword_comments")):
         if snapshot.get(field) is not None:
             r = smoothed_rate(snapshot[field], views, pr[comp], k)
             if r is not None and r > 0:
                 out[comp] = math.log(r)
+    ret = retention_value(snapshot)
+    if ret is not None and int(snapshot.get("horizon_h") or 0) in RETENTION_HORIZONS:
+        out["retention"] = math.log(ret)
     pv = G.num(snapshot.get("profile_visits"), lo=0)
     if pv is not None and snapshot.get("link_clicks") is not None and pv >= float(s["min_profile_visits_for_ctr"]):
         r = smoothed_rate(snapshot["link_clicks"], pv, pr["click_through"], float(s["min_profile_visits_for_ctr"]))
@@ -68,7 +90,7 @@ def cold_prior(platform: str, horizon_h: int, cfg: dict) -> dict[str, dict]:
     pv = float(b["prior_views_24h"].get(platform, 500)) * float(b["horizon_curve"][str(horizon_h)])
     pr, sp = b["prior_rates"], b["prior_spread"]
     out = {"views": {"center": math.log1p(pv), "spread": float(sp["views"])}}
-    for comp in ("share_rate", "save_rate", "keyword_rate", "click_through"):
+    for comp in ("share_save_rate", "retention", "share_rate", "save_rate", "keyword_rate", "click_through"):
         out[comp] = {"center": math.log(float(pr[comp])), "spread": float(sp[comp])}
     out["conv_per_1k"] = {"center": math.log1p(float(pr["conv_per_1k"])), "spread": float(sp["conv_per_1k"])}
     return out
