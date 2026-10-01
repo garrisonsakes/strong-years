@@ -1,0 +1,115 @@
+{
+  "keyword": "WAITLIST",
+  "flow_id": "waitlist",
+  "mode": "runway",
+  "speaker": "team",
+  "title": "Free waitlist",
+  "variants": [
+    "waitlist",
+    "wait list",
+    "waiting list",
+    "waitlst",
+    "watilist",
+    "list",
+    "first access",
+    "early access",
+    "notify me",
+    "🔔"
+  ],
+  "tags": [
+    "kw_waitlist",
+    "runway"
+  ],
+  "reply": [
+    "Sent. It's free, and day one is in there.",
+    "In your messages. One email when doors open, that's it."
+  ],
+  "start": "dm1",
+  "states": {
+    "dm1": {
+      "dm": [
+        "Hi {first_name}! This is the Strong Years team assistant (automated). Chang Yin and Sun Yoon are AI characters, not real people. Reply STOP anytime.\n\nThe waitlist is free. You get:\n• Day 1 of Chang Yin's 7-Day Strength Reset, right now (8 minutes, one chair).\n• One email when Strong Years opens, plus at most 3 launch emails in the 72 hours after. Nothing else.\nNo card. Unsubscribe in one click."
+      ],
+      "buttons": [
+        {
+          "label": "Get first access (free)",
+          "next": "dm2"
+        },
+        {
+          "label": "What is Strong Years?",
+          "next": "what"
+        }
+      ]
+    },
+    "what": {
+      "dm": [
+        "A new 8 to 12 minute session with Chang Yin every morning, with a chair version of everything, Sun Yoon's recipes every Sunday, and a strength number you retest each month. Every price and term goes on one page before checkout, when doors open."
+      ],
+      "buttons": [
+        {
+          "label": "Get first access (free)",
+          "next": "dm2"
+        }
+      ]
+    },
+    "dm2": {
+      "dm": [
+        "Here it is: {{B_LINK}}\n\nType your email on the page and tick the box. Then confirm from your inbox. Day 1 unlocks when you confirm."
+      ],
+      "end": true
+    },
+    "checkin": {
+      "dm": [
+        "Did you get Day 1?"
+      ],
+      "buttons": [
+        {
+          "label": "Yes, did it",
+          "next": "ck1"
+        },
+        {
+          "label": "Not yet",
+          "next": "ck2"
+        },
+        {
+          "label": "I have a question",
+          "next": "human"
+        }
+      ]
+    },
+    "ck1": {
+      "dm": [
+        "Good. Write your number down: how many stands, and did you need your hands?"
+      ],
+      "end": true
+    },
+    "ck2": {
+      "dm": [
+        "Here it is again: {{B_LINK}}. Three minutes still counts."
+      ],
+      "end": true
+    },
+    "human": {
+      "dm": [
+        "Got it. A real person on our team will reply here, usually within a day (Mon to Fri)."
+      ],
+      "end": true,
+      "handoff": true
+    }
+  },
+  "followups": [
+    {
+      "id": "nudge",
+      "after_minutes": 20,
+      "unless": "link_clicked",
+      "dm": [
+        "Day 1 is 8 minutes and free, {first_name}: {{B_LINK}}. Chair against the wall first."
+      ]
+    },
+    {
+      "id": "checkin",
+      "after_minutes": 1320,
+      "state": "checkin"
+    }
+  ]
+}

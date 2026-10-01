@@ -1,0 +1,137 @@
+{
+  "keyword": "BACK",
+  "flow_id": "back",
+  "mode": "always",
+  "speaker": "chang",
+  "title": "Morning Unlock",
+  "variants": [
+    "back",
+    "my back",
+    "back pain",
+    "stiff back",
+    "bak",
+    "bck",
+    "bakc"
+  ],
+  "tags": [
+    "kw_back"
+  ],
+  "reply": [
+    "Sent. Try it before breakfast tomorrow.",
+    "In your DMs. Gentle first, always."
+  ],
+  "start": "dm1",
+  "states": {
+    "dm1": {
+      "dm": [
+        "Hi {first_name}! This is Chang Yin's team assistant (automated). Quick note before anything: Chang Yin is an AI character, not a real person. Our sessions are real and built on published exercise guidelines for older adults. Reply STOP anytime.\n\nYou asked for Morning Unlock, the 7-minute routine for a stiff back first thing in the morning. It starts in bed. Send it?"
+      ],
+      "buttons": [
+        {
+          "label": "Yes, send it",
+          "next": "dm2"
+        }
+      ]
+    },
+    "dm2": {
+      "dm": [
+        "Here it is: {{L:/s/l2}}\n\nPart 1 is done lying in bed, part 2 standing at your kitchen counter. Move in a range that feels easy.\nPlease see a doctor promptly, rather than exercising, if back pain comes with numbness in your groin or inner thighs, trouble controlling your bladder or bowels, fever, weakness in a leg, or started after a fall or accident.\n\nSafety: stop if anything hurts sharply or you feel dizzy or short of breath. If you've had a recent fall, surgery or heart problem, check with your doctor first.\n\nWant the large-print card by email too?"
+      ],
+      "quick_replies": [
+        {
+          "label": "Yes, email it",
+          "next": "email_ask"
+        },
+        {
+          "label": "No thanks",
+          "next": "no_thanks"
+        }
+      ]
+    },
+    "email_ask": {
+      "dm": [
+        "What's your email? (Tap it below if Instagram suggests it.)"
+      ],
+      "expect": "email",
+      "next": "email_ok"
+    },
+    "email_ok": {
+      "dm": [
+        "Sent to {email}. By sharing your email you'll get emails from Strong Years, including your printable card and short tips. Unsubscribe anytime with one click."
+      ],
+      "end": true
+    },
+    "no_thanks": {
+      "dm": [
+        "No problem. It's all yours at the link above."
+      ],
+      "end": true
+    },
+    "checkin": {
+      "dm": [
+        "Did you try Morning Unlock? How's your back this morning?"
+      ],
+      "buttons": [
+        {
+          "label": "A bit looser",
+          "next": "ck1"
+        },
+        {
+          "label": "About the same",
+          "next": "ck2"
+        },
+        {
+          "label": "Haven't tried yet",
+          "next": "ck3"
+        }
+      ]
+    },
+    "ck1": {
+      "dm": [
+        "Good. The free Strength Age test builds your plan from where you are: {{L:/q/a}}"
+      ],
+      "buttons": [
+        {
+          "label_runway": "Get first access (free)",
+          "label_launch": "Get the starter books",
+          "link": "{{B_LINK}}"
+        }
+      ],
+      "end": true
+    },
+    "ck2": {
+      "dm": [
+        "That's common on day one. Try it three more mornings in a row. If it's getting worse, not better, check with your doctor or a physical therapist. Here's the link again: {{L:/s/l2}}"
+      ],
+      "end": true
+    },
+    "ck3": {
+      "dm": [
+        "Here's a 3-minute version you can do right now in your chair: {{L:/s/l2s}}"
+      ],
+      "end": true
+    },
+    "human": {
+      "dm": [
+        "Got it. A real person on our team will reply here, usually within a day (Mon to Fri)."
+      ],
+      "end": true,
+      "handoff": true
+    }
+  },
+  "followups": [
+    {
+      "id": "nudge",
+      "after_minutes": 20,
+      "unless": "link_clicked",
+      "dm": [
+        "{first_name}, Morning Unlock is here whenever you're ready: {{L:/s/l2}}"
+      ]
+    },
+    {
+      "id": "checkin",
+      "after_minutes": 1320,
+      "state": "checkin"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "keyword": "BREATH",
+  "flow_id": "breath",
+  "mode": "always",
+  "speaker": "chang",
+  "title": "The 4-6 Breath",
+  "variants": [
+    "breath",
+    "breathe",
+    "breathing",
+    "breth",
+    "breathh",
+    "🌬️"
+  ],
+  "tags": [
+    "kw_breath"
+  ],
+  "reply": [
+    "Sent. Four seconds in, six out.",
+    "In your messages. Try it right now."
+  ],
+  "start": "dm1",
+  "states": {
+    "dm1": {
+      "dm": [
+        "Hi {first_name}! This is Chang Yin's team assistant (automated). Quick note before anything: Chang Yin is an AI character, not a real person. Our sessions are real and built on published exercise guidelines for older adults. Reply STOP anytime.\n\nYou asked for the 4-6 Breath: one minute, sitting down, breathing in for four and out for six. Want it?"
+      ],
+      "buttons": [
+        {
+          "label": "Yes, send it",
+          "next": "dm2"
+        }
+      ]
+    },
+    "dm2": {
+      "dm": [
+        "Here it is: {{L:/s/l7}}\n\nWhat you need: a chair. That's it.\nChang Yin's note: \"Four seconds in, six out. Try it right now.\"\n\nIf you ever feel chest pain or can't catch your breath, stop and call 911.\n\nWant the large-print card by email too?"
+      ],
+      "quick_replies": [
+        {
+          "label": "Yes, email it",
+          "next": "email_ask"
+        },
+        {
+          "label": "No thanks",
+          "next": "no_thanks"
+        }
+      ]
+    },
+    "email_ask": {
+      "dm": [
+        "What's your email? (Tap it below if Instagram suggests it.)"
+      ],
+      "expect": "email",
+      "next": "email_ok"
+    },
+    "email_ok": {
+      "dm": [
+        "Sent to {email}. By sharing your email you'll get emails from Strong Years, including your printable card and short tips. Unsubscribe anytime with one click."
+      ],
+      "end": true
+    },
+    "no_thanks": {
+      "dm": [
+        "No problem. It's all yours at the link above."
+      ],
+      "end": true
+    },
+    "checkin": {
+      "dm": [
+        "Did you try the 4-6 Breath?"
+      ],
+      "buttons": [
+        {
+          "label": "Yes",
+          "next": "ck1"
+        },
+        {
+          "label": "It felt odd",
+          "next": "ck2"
+        },
+        {
+          "label": "Haven't tried yet",
+          "next": "ck3"
+        }
+      ]
+    },
+    "ck1": {
+      "dm": [
+        "Good. Now try it before getting up from a chair. The free Strength Age test: {{L:/q/a}}"
+      ],
+      "buttons": [
+        {
+          "label_runway": "Get first access (free)",
+          "label_launch": "Get the starter books",
+          "link": "{{B_LINK}}"
+        }
+      ],
+      "end": true
+    },
+    "ck2": {
+      "dm": [
+        "Normal at first. Here's a slower version with a timer: {{L:/s/l7t}}"
+      ],
+      "end": true
+    },
+    "ck3": {
+      "dm": [
+        "It's one minute: {{L:/s/l7}}"
+      ],
+      "end": true
+    },
+    "human": {
+      "dm": [
+        "Got it. A real person on our team will reply here, usually within a day (Mon to Fri)."
+      ],
+      "end": true,
+      "handoff": true
+    }
+  },
+  "followups": [
+    {
+      "id": "nudge",
+      "after_minutes": 20,
+      "unless": "link_clicked",
+      "dm": [
+        "{first_name}, the 4-6 Breath is here: {{L:/s/l7}}"
+      ]
+    },
+    {
+      "id": "checkin",
+      "after_minutes": 1320,
+      "state": "checkin"
+    }
+  ]
+}

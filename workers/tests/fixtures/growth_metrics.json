@@ -1,0 +1,66 @@
+{
+  "instagram": {
+    "duration_s": 32,
+    "raw": {"data": [
+      {"name": "views", "period": "lifetime", "values": [{"value": 125400}]},
+      {"name": "reach", "period": "lifetime", "values": [{"value": 98000}]},
+      {"name": "likes", "period": "lifetime", "values": [{"value": 4100}]},
+      {"name": "comments", "period": "lifetime", "values": [{"value": 612}]},
+      {"name": "shares", "period": "lifetime", "values": [{"value": 980}]},
+      {"name": "saved", "period": "lifetime", "values": [{"value": 1530}]},
+      {"name": "profile_visits", "period": "lifetime", "values": [{"value": 740}]},
+      {"name": "follows", "period": "lifetime", "values": [{"value": 210}]},
+      {"name": "ig_reels_avg_watch_time", "period": "lifetime", "values": [{"value": 14400}]},
+      {"name": "total_interactions", "period": "lifetime", "values": [{"value": 7222}]}
+    ]},
+    "expect": {"views": 125400, "reach": 98000, "likes": 4100, "comments": 612, "shares": 980, "saves": 1530,
+               "profile_visits": 740, "follows": 210, "avg_watch_pct": 45.0},
+    "expect_missing": ["link_clicks"]
+  },
+  "facebook": {
+    "duration_s": 40,
+    "raw": {"data": [
+      {"name": "fb_reels_total_plays", "values": [{"value": 56000}]},
+      {"name": "post_impressions_unique", "values": [{"value": 41000}]},
+      {"name": "post_video_avg_time_watched", "values": [{"value": 10000}]},
+      {"name": "post_video_social_actions", "values": [{"value": {"LIKE": 900, "COMMENT": 120, "SHARE": 310}}]},
+      {"name": "post_video_followers", "values": [{"value": 35}]}
+    ]},
+    "expect": {"views": 56000, "reach": 41000, "likes": 900, "comments": 120, "shares": 310, "follows": 35, "avg_watch_pct": 25.0},
+    "expect_missing": ["saves", "profile_visits", "link_clicks"]
+  },
+  "tiktok": {
+    "duration_s": 28,
+    "raw": {"data": {"videos": [{"id": "7300000000000000001", "view_count": 88000, "like_count": 5100, "comment_count": 300,
+                                 "share_count": 640, "duration": 28, "average_time_watched": 7.0}]}, "error": {"code": "ok"}},
+    "expect": {"views": 88000, "likes": 5100, "comments": 300, "shares": 640, "avg_watch_pct": 25.0},
+    "expect_missing": ["link_clicks", "follows", "reach", "saves", "profile_visits"]
+  },
+  "youtube": {
+    "duration_s": 45,
+    "raw": {"columnHeaders": [{"name": "views"}, {"name": "likes"}, {"name": "comments"}, {"name": "shares"},
+                              {"name": "subscribersGained"}, {"name": "averageViewPercentage"}, {"name": "averageViewDuration"}],
+            "rows": [[12000, 400, 35, 90, 60, 62.5, 28.1]]},
+    "expect": {"views": 12000, "likes": 400, "comments": 35, "shares": 90, "follows": 60, "avg_watch_pct": 62.5},
+    "expect_missing": ["reach", "saves", "profile_visits", "link_clicks"]
+  },
+  "threads": {
+    "raw": {"data": [
+      {"name": "views", "values": [{"value": 3400}]},
+      {"name": "likes", "values": [{"value": 120}]},
+      {"name": "replies", "values": [{"value": 14}]},
+      {"name": "reposts", "values": [{"value": 9}]},
+      {"name": "quotes", "values": [{"value": 2}]}
+    ]},
+    "expect": {"views": 3400, "likes": 120, "comments": 14, "shares": 11},
+    "expect_missing": ["reach", "saves", "profile_visits", "link_clicks", "follows"]
+  },
+  "x": {
+    "raw": {"data": {"id": "1840000000000000000",
+                     "public_metrics": {"impression_count": 15200, "like_count": 310, "reply_count": 22, "retweet_count": 40,
+                                        "quote_count": 6, "bookmark_count": 95},
+                     "non_public_metrics": {"user_profile_clicks": 180, "url_link_clicks": 33}}},
+    "expect": {"views": 15200, "likes": 310, "comments": 22, "shares": 46, "saves": 95, "profile_visits": 180, "link_clicks": 33},
+    "expect_missing": ["reach", "follows"]
+  }
+}

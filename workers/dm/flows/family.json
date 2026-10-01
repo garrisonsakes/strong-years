@@ -1,0 +1,53 @@
+{
+  "keyword": "FAMILY",
+  "flow_id": "family",
+  "mode": "always",
+  "speaker": "team",
+  "title": "Gift a membership",
+  "variants": [
+    "family",
+    "gift",
+    "mom",
+    "dad",
+    "parent",
+    "for my mom",
+    "for my dad",
+    "famly",
+    "🎁"
+  ],
+  "tags": [
+    "kw_family"
+  ],
+  "reply": [
+    "Sent you the family options.",
+    "In your messages. Sun Yoon writes the card."
+  ],
+  "start": "dm1",
+  "states": {
+    "dm1": {
+      "dm": [
+        "Hi {first_name}! This is the Strong Years team assistant (automated). Chang Yin and Sun Yoon are AI characters, not real people. Reply STOP anytime.\n\nYou asked about a gift for someone you love. Strong Years gifts are prepaid: $49 for 3 months or $119 for 12 months. They never renew and nobody is charged later. Sun Yoon writes the card. Want the link?"
+      ],
+      "buttons": [
+        {
+          "label": "Send the gift link",
+          "next": "dm2"
+        }
+      ]
+    },
+    "dm2": {
+      "dm": [
+        "Here it is: {{B_LINK}}\n\nYou'll see every term on the page before you pay. The person you gift gets a claim email with simple steps."
+      ],
+      "end": true
+    },
+    "human": {
+      "dm": [
+        "Got it. A real person on our team will reply here, usually within a day (Mon to Fri)."
+      ],
+      "end": true,
+      "handoff": true
+    }
+  },
+  "followups": []
+}

@@ -1,0 +1,66 @@
+{
+  "keyword": "JOIN",
+  "flow_id": "join",
+  "mode": "launch",
+  "speaker": "team",
+  "title": "Founding membership",
+  "variants": [
+    "join",
+    "joining",
+    "sign me up",
+    "member",
+    "membership",
+    "jion",
+    "jon"
+  ],
+  "tags": [
+    "kw_join"
+  ],
+  "reply": [
+    "Sent you the founding details and the full terms.",
+    "In your DMs. The seat count on the page is real."
+  ],
+  "start": "dm1",
+  "states": {
+    "dm1": {
+      "dm": [
+        "Hi {first_name}! This is the Strong Years team assistant (automated). Chang Yin and Sun Yoon are AI characters, not real people. Reply STOP anytime.\n\nThe founding membership, in plain words: $25 a month, charged when you join and then monthly until you cancel. The founding price stays the same for as long as you stay subscribed, for the first 5,000 members. 14-day money-back guarantee on the membership charge, once per person. Cancel online anytime in two screens."
+      ],
+      "buttons": [
+        {
+          "label": "Send me the link",
+          "next": "dm2"
+        },
+        {
+          "label": "What do I get?",
+          "next": "what"
+        }
+      ]
+    },
+    "what": {
+      "dm": [
+        "A new 8 to 12 minute session with Chang Yin every morning, an easier version of everything, Sun Yoon's recipes every Sunday, and a strength number you retest each month."
+      ],
+      "buttons": [
+        {
+          "label": "Send me the link",
+          "next": "dm2"
+        }
+      ]
+    },
+    "dm2": {
+      "dm": [
+        "Here it is: {{B_LINK}}\n\nThe page shows the price, what renews and when, and how to cancel, before you pay. Nothing is pre-ticked."
+      ],
+      "end": true
+    },
+    "human": {
+      "dm": [
+        "Got it. A real person on our team will reply here, usually within a day (Mon to Fri)."
+      ],
+      "end": true,
+      "handoff": true
+    }
+  },
+  "followups": []
+}

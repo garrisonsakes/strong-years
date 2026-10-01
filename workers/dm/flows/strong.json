@@ -1,0 +1,139 @@
+{
+  "keyword": "STRONG",
+  "flow_id": "strong",
+  "mode": "always",
+  "speaker": "chang",
+  "title": "The 8-Minute Chair Builder",
+  "variants": [
+    "strong",
+    "strength",
+    "stronger",
+    "strong!",
+    "strong please",
+    "💪",
+    "stong",
+    "strog",
+    "srong"
+  ],
+  "tags": [
+    "kw_strong"
+  ],
+  "reply": [
+    "Sent. Eight minutes, one chair.",
+    "In your messages. Arms crossed, stand tall."
+  ],
+  "start": "dm1",
+  "states": {
+    "dm1": {
+      "dm": [
+        "Hi {first_name}! This is Chang Yin's team assistant (automated). Quick note before anything: Chang Yin is an AI character, not a real person. Our sessions are real and built on published exercise guidelines for older adults. Reply STOP anytime.\n\nYou asked for the 8-minute Chair Builder, the routine that trains the muscles you use to stand up from a chair. Want it?"
+      ],
+      "buttons": [
+        {
+          "label": "Yes, send it",
+          "next": "dm2"
+        }
+      ]
+    },
+    "dm2": {
+      "dm": [
+        "Here it is: {{L:/s/l1}}\n\nWhat you need: a sturdy chair against a wall and a kitchen counter.\nChang Yin's note: \"Do it slowly the first time. If you need your hands, use your hands. That's where we start, not where we stay.\"\n\nSafety: stop if anything hurts sharply or you feel dizzy or short of breath. If you've had a recent fall, surgery or heart problem, check with your doctor first.\n\nWant the large-print card by email too?"
+      ],
+      "quick_replies": [
+        {
+          "label": "Yes, email it",
+          "next": "email_ask"
+        },
+        {
+          "label": "No thanks",
+          "next": "no_thanks"
+        }
+      ]
+    },
+    "email_ask": {
+      "dm": [
+        "What's your email? (Tap it below if Instagram suggests it.)"
+      ],
+      "expect": "email",
+      "next": "email_ok"
+    },
+    "email_ok": {
+      "dm": [
+        "Sent to {email}. By sharing your email you'll get emails from Strong Years, including your printable card and short tips. Unsubscribe anytime with one click."
+      ],
+      "end": true
+    },
+    "no_thanks": {
+      "dm": [
+        "No problem. It's all yours at the link above."
+      ],
+      "end": true
+    },
+    "checkin": {
+      "dm": [
+        "Did you try the Chair Builder? How did your legs feel?"
+      ],
+      "buttons": [
+        {
+          "label": "Easy",
+          "next": "ck1"
+        },
+        {
+          "label": "Hard",
+          "next": "ck2"
+        },
+        {
+          "label": "Haven't tried yet",
+          "next": "ck3"
+        }
+      ]
+    },
+    "ck1": {
+      "dm": [
+        "Good sign. Then you're ready for your Strength Age: a free 3-minute test with the same chair. {{L:/q/a}}"
+      ],
+      "buttons": [
+        {
+          "label_runway": "Get first access (free)",
+          "label_launch": "Get the starter books",
+          "link": "{{B_LINK}}"
+        }
+      ],
+      "end": true
+    },
+    "ck2": {
+      "dm": [
+        "That's honest, and very normal. Here's the fully seated version: {{L:/s/l1c}}. Chang Yin's note: \"Hard means we found the right place to start.\""
+      ],
+      "end": true
+    },
+    "ck3": {
+      "dm": [
+        "Here's the 3-minute version for today: {{L:/s/l1s}}. Three minutes is still a win."
+      ],
+      "end": true
+    },
+    "human": {
+      "dm": [
+        "Got it. A real person on our team will reply here, usually within a day (Mon to Fri)."
+      ],
+      "end": true,
+      "handoff": true
+    }
+  },
+  "followups": [
+    {
+      "id": "nudge",
+      "after_minutes": 20,
+      "unless": "link_clicked",
+      "dm": [
+        "{first_name}, the Chair Builder is here whenever you're ready: {{L:/s/l1}}\nIt's 8 minutes. You can do it in your pajamas."
+      ]
+    },
+    {
+      "id": "checkin",
+      "after_minutes": 1320,
+      "state": "checkin"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "keyword": "BOOK",
+  "flow_id": "book",
+  "mode": "launch",
+  "speaker": "team",
+  "title": "Starter books",
+  "variants": [
+    "book",
+    "books",
+    "ebook",
+    "e-book",
+    "the book",
+    "bok",
+    "boook",
+    "reset",
+    "kitchen",
+    "strong kitchen",
+    "📕",
+    "📖"
+  ],
+  "tags": [
+    "kw_book"
+  ],
+  "reply": [
+    "Sent you the link and what's inside.",
+    "In your messages. One-time price, yours to keep."
+  ],
+  "start": "dm1",
+  "states": {
+    "dm1": {
+      "dm": [
+        "Hi {first_name}! This is the Strong Years team assistant (automated). Chang Yin and Sun Yoon are AI characters, not real people. Reply STOP anytime.\n\nThe starter books, in plain words:\n• Chang Yin's 7-Day Strength Reset: seven mornings, one chair, about 8 minutes a day, an easier version of every move.\n• Sun Yoon's Strong Kitchen: recipes with the protein and fiber grams written in, and a who-should-skip box on every page.\n• $12 today. The page you land on says exactly what that $12 buys: for most people it's both books plus your first month of Strong Years (then $25 a month until you cancel, cancel online anytime); some people see the books alone, one-time. Either way the books are yours to keep."
+      ],
+      "buttons": [
+        {
+          "label": "Send me the link",
+          "next": "dm2"
+        },
+        {
+          "label": "Is it a subscription?",
+          "next": "sub"
+        }
+      ]
+    },
+    "sub": {
+      "dm": [
+        "It depends on the page you get, and the page says so before you pay. The starter offer is $12 today for both books and your first month of the Founding Membership, then $25 a month until you cancel. The books-only page is $12 once, not a subscription. Either way: cancel online anytime in two screens, 14-day money-back guarantee on the membership charge (once per person), founding price locked for as long as you stay subscribed."
+      ],
+      "buttons": [
+        {
+          "label": "Send me the link",
+          "next": "dm2"
+        }
+      ]
+    },
+    "dm2": {
+      "dm": [
+        "Here it is: {{B_LINK}}\n\nIt opens the offer page on our store. The price, what renews and when, and the cancel path are all on it before you pay. Nothing is pre-ticked."
+      ],
+      "end": true
+    },
+    "checkin": {
+      "dm": [
+        "Did you get the books?"
+      ],
+      "buttons": [
+        {
+          "label": "Yes, got them",
+          "next": "ck1"
+        },
+        {
+          "label": "Still deciding",
+          "next": "ck2"
+        },
+        {
+          "label": "I have a question",
+          "next": "human"
+        }
+      ]
+    },
+    "ck1": {
+      "dm": [
+        "Enjoy them. Day 1 is page 3. Chair against the wall first."
+      ],
+      "end": true,
+      "tags": [
+        "book_buyer_said"
+      ]
+    },
+    "ck2": {
+      "dm": [
+        "Fair. Try Day 1 free first: {{L:/s/l1}}. The book price doesn't change at midnight."
+      ],
+      "end": true
+    },
+    "human": {
+      "dm": [
+        "Got it. A real person on our team will reply here, usually within a day (Mon to Fri)."
+      ],
+      "end": true,
+      "handoff": true
+    }
+  },
+  "followups": [
+    {
+      "id": "nudge",
+      "after_minutes": 20,
+      "unless": "link_clicked",
+      "dm": [
+        "Here's the link again, {first_name}: {{B_LINK}}. Day 1 is free on our page if you'd rather try first: {{L:/s/l1}}"
+      ]
+    },
+    {
+      "id": "checkin",
+      "after_minutes": 1320,
+      "state": "checkin"
+    }
+  ]
+}

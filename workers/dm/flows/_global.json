@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "sender_label": "Strong Years team assistant (automated)",
+  "ai_disclosure_markers": [
+    "AI character",
+    "AI characters",
+    "(automated)"
+  ],
+  "dedup_hours": 24,
+  "window_hours": 24,
+  "human_agent_tag_days": 7,
+  "intents": [
+    {
+      "id": "stop",
+      "match": [
+        "stop",
+        "unsubscribe",
+        "stop all",
+        "end",
+        "quit",
+        "opt out",
+        "optout"
+      ],
+      "exact": true,
+      "dm": [
+        "Done. You won't get more automated messages from us here. Reply START anytime to turn them back on."
+      ],
+      "action": "opt_out"
+    },
+    {
+      "id": "start",
+      "match": [
+        "start",
+        "unstop"
+      ],
+      "exact": true,
+      "dm": [
+        "You're back on. Chang Yin and Sun Yoon are AI characters; this is our automated assistant. Reply STOP anytime."
+      ],
+      "action": "opt_in"
+    },
+    {
+      "id": "human",
+      "match": [
+        "human",
+        "person",
+        "agent",
+        "talk to someone",
+        "real person"
+      ],
+      "dm": [
+        "Got it. A real person on our team will reply here, usually within a day (Mon to Fri)."
+      ],
+      "action": "handoff"
+    },
+    {
+      "id": "real",
+      "match": [
+        "are you real",
+        "is he real",
+        "is she real",
+        "real?",
+        "are they real",
+        "is this ai",
+        "ai?"
+      ],
+      "dm": [
+        "Good question, and you deserve a straight answer: Chang Yin and Sun Yoon are AI characters our team created. They're not real people. What's real is the content: every session and recipe is built from published exercise and nutrition guidelines for older adults. How we make it: {{L:/how}}"
+      ]
+    },
+    {
+      "id": "price",
+      "match": [
+        "price",
+        "cost",
+        "how much"
+      ],
+      "dm_runway": [
+        "Strong Years isn't open yet. When it opens, every price and term is on one page before you pay anything. Want first access? It's free: {{B_LINK}}"
+      ],
+      "dm_launch": [
+        "The starter offer is $12 today for both books and your first month, then $25 a month until you cancel. Some pages show the books alone for $12, one-time. Cancel online anytime in two screens; 14-day money-back guarantee on the membership charge, once per person. Gifts from $49 never renew. Every term is on the page before you pay: {{B_LINK}}"
+      ]
+    },
+    {
+      "id": "cancel",
+      "match": [
+        "cancel",
+        "refund",
+        "stop charging"
+      ],
+      "dm": [
+        "You can cancel right now, online, in two screens at most: {{L:/account}}. If you'd like a refund, reply REFUND and a person will take care of it."
+      ],
+      "action": "handoff"
+    }
+  ],
+  "crisis": {
+    "self_harm": {
+      "match": [
+        "want to die",
+        "end it all",
+        "end my life",
+        "no reason to live",
+        "kill myself",
+        "hurt myself",
+        "suicide",
+        "suicidal",
+        "better off dead"
+      ],
+      "pause_days": 30,
+      "severity": "critical",
+      "safety_dm": [
+        "I'm an automated assistant, and I'm really glad you wrote. What you're feeling matters. Please reach out to someone right now: call or text 988 (Suicide & Crisis Lifeline, free, 24/7). If you're in danger, call 911. A person on our team reads messages from 7am to 11pm Eastern and will read yours (after 11pm, first thing in the morning)."
+      ]
+    },
+    "medical": {
+      "match": [
+        "chest pain",
+        "can't breathe",
+        "cant breathe",
+        "stroke",
+        "fell and can't get up",
+        "fell and cant get up",
+        "heart attack"
+      ],
+      "pause_days": 7,
+      "severity": "critical",
+      "safety_dm": [
+        "I'm an automated assistant. If this is happening now, please call 911 right away."
+      ]
+    },
+    "abuse": {
+      "match": [
+        "hits me",
+        "hurting me",
+        "abusing me",
+        "afraid of my son",
+        "afraid of my daughter",
+        "afraid of my husband"
+      ],
+      "pause_days": 30,
+      "severity": "critical",
+      "safety_dm": [
+        "I'm an automated assistant, so I'll pass your message to a real person on our team. If you're in danger right now, call 911. You can also call the Eldercare Locator at 1-800-677-1116 for local help."
+      ]
+    },
+    "grief": {
+      "match": [
+        "passed away",
+        "my husband passed",
+        "my wife passed",
+        "all alone",
+        "so lonely",
+        "my kids don't talk to me",
+        "my kids dont talk to me",
+        "lost my"
+      ],
+      "pause_days": 7,
+      "severity": "high",
+      "safety_dm": [
+        "Thank you for telling us this. I'm an automated assistant, so I'll pass your message to a real person on our team who reads these. You're not alone in feeling this way; many people in our community have written something similar."
+      ]
+    }
+  },
+  "crisis_note": "Crisis texts are the SAFETY_RULES / FUNNEL §4.14 protocol wording (key safety_dm). The compliance scanner routes any mention of suicide to a human by design, so these strings are pinned by tests (tests/test_dm_bot.py) instead of the template scan."
+}

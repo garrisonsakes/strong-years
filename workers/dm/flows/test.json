@@ -1,0 +1,136 @@
+{
+  "keyword": "TEST",
+  "flow_id": "test",
+  "mode": "always",
+  "speaker": "chang",
+  "title": "Strength Age test",
+  "variants": [
+    "test",
+    "strength age",
+    "quiz",
+    "tset",
+    "tets",
+    "age"
+  ],
+  "tags": [
+    "kw_test"
+  ],
+  "reply": [
+    "Sent. One chair, 30 seconds.",
+    "In your DMs. Chair against the wall first."
+  ],
+  "start": "dm1",
+  "states": {
+    "dm1": {
+      "dm": [
+        "Hi {first_name}! This is Chang Yin's team assistant (automated). Quick note before anything: Chang Yin is an AI character, not a real person. Our sessions are real and built on published exercise guidelines for older adults. Reply STOP anytime.\n\nYou asked for the Strength Age test: three tests at home with one chair, about four minutes. You get a number and a 7-day plan. Want it?"
+      ],
+      "buttons": [
+        {
+          "label": "Yes, send it",
+          "next": "dm2"
+        }
+      ]
+    },
+    "dm2": {
+      "dm": [
+        "Here it is: {{L:/q/a}}\n\nWhat you need: a sturdy chair against a wall and a timer.\nChang Yin's note: \"The number is where you start, not who you are.\"\n\nSafety: stop if anything hurts sharply or you feel dizzy or short of breath. If you've had a recent fall, surgery or heart problem, check with your doctor first.\n\nWant the large-print card by email too?"
+      ],
+      "quick_replies": [
+        {
+          "label": "Yes, email it",
+          "next": "email_ask"
+        },
+        {
+          "label": "No thanks",
+          "next": "no_thanks"
+        }
+      ]
+    },
+    "email_ask": {
+      "dm": [
+        "What's your email? (Tap it below if Instagram suggests it.)"
+      ],
+      "expect": "email",
+      "next": "email_ok"
+    },
+    "email_ok": {
+      "dm": [
+        "Sent to {email}. By sharing your email you'll get emails from Strong Years, including your printable card and short tips. Unsubscribe anytime with one click."
+      ],
+      "end": true
+    },
+    "no_thanks": {
+      "dm": [
+        "No problem. It's all yours at the link above."
+      ],
+      "end": true
+    },
+    "checkin": {
+      "dm": [
+        "Did you get your Strength Age?"
+      ],
+      "buttons": [
+        {
+          "label": "Yes",
+          "next": "ck1"
+        },
+        {
+          "label": "It was hard",
+          "next": "ck2"
+        },
+        {
+          "label": "Haven't tried yet",
+          "next": "ck3"
+        }
+      ]
+    },
+    "ck1": {
+      "dm": [
+        "Good. Write it down. You'll retest in four weeks."
+      ],
+      "buttons": [
+        {
+          "label_runway": "Get first access (free)",
+          "label_launch": "Get the starter books",
+          "link": "{{B_LINK}}"
+        }
+      ],
+      "end": true
+    },
+    "ck2": {
+      "dm": [
+        "That's useful to know. Start with the seated Chair Builder: {{L:/s/l1c}}"
+      ],
+      "end": true
+    },
+    "ck3": {
+      "dm": [
+        "Here it is again: {{L:/q/a}}. Chair against the wall first."
+      ],
+      "end": true
+    },
+    "human": {
+      "dm": [
+        "Got it. A real person on our team will reply here, usually within a day (Mon to Fri)."
+      ],
+      "end": true,
+      "handoff": true
+    }
+  },
+  "followups": [
+    {
+      "id": "nudge",
+      "after_minutes": 20,
+      "unless": "link_clicked",
+      "dm": [
+        "{first_name}, the test is here: {{L:/q/a}}"
+      ]
+    },
+    {
+      "id": "checkin",
+      "after_minutes": 1320,
+      "state": "checkin"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "keyword": "BALANCE",
+  "flow_id": "balance",
+  "mode": "always",
+  "speaker": "chang",
+  "title": "Steady Feet + the 10-second test",
+  "variants": [
+    "balance",
+    "balence",
+    "balanse",
+    "ballance",
+    "steady",
+    "wobbly"
+  ],
+  "tags": [
+    "kw_balance"
+  ],
+  "reply": [
+    "Sent. Stand by the counter for this one.",
+    "In your inbox. Kitchen counter, one hand hovering."
+  ],
+  "start": "dm1",
+  "states": {
+    "dm1": {
+      "dm": [
+        "Hi {first_name}! This is Chang Yin's team assistant (automated). Quick note before anything: Chang Yin is an AI character, not a real person. Our sessions are real and built on published exercise guidelines for older adults. Reply STOP anytime.\n\nYou asked for Steady Feet, the balance routine you do at the kitchen counter, plus a 10-second balance test. Want it?"
+      ],
+      "buttons": [
+        {
+          "label": "Yes, send it",
+          "next": "dm2"
+        }
+      ]
+    },
+    "dm2": {
+      "dm": [
+        "Here it is: {{L:/s/l5}}\n\nWhat you need: a kitchen counter. Stand close, one hand hovering over it.\nChang Yin's note: \"The counter is not cheating. The counter is the plan.\"\n\nSafety: stop if anything hurts sharply or you feel dizzy or short of breath. If you've had a recent fall, surgery or heart problem, check with your doctor first.\n\nWant the large-print card by email too?"
+      ],
+      "quick_replies": [
+        {
+          "label": "Yes, email it",
+          "next": "email_ask"
+        },
+        {
+          "label": "No thanks",
+          "next": "no_thanks"
+        }
+      ]
+    },
+    "email_ask": {
+      "dm": [
+        "What's your email? (Tap it below if Instagram suggests it.)"
+      ],
+      "expect": "email",
+      "next": "email_ok"
+    },
+    "email_ok": {
+      "dm": [
+        "Sent to {email}. By sharing your email you'll get emails from Strong Years, including your printable card and short tips. Unsubscribe anytime with one click."
+      ],
+      "end": true
+    },
+    "no_thanks": {
+      "dm": [
+        "No problem. It's all yours at the link above."
+      ],
+      "end": true
+    },
+    "checkin": {
+      "dm": [
+        "Did you try Steady Feet?"
+      ],
+      "buttons": [
+        {
+          "label": "Yes",
+          "next": "ck1"
+        },
+        {
+          "label": "Felt wobbly",
+          "next": "ck2"
+        },
+        {
+          "label": "Haven't tried yet",
+          "next": "ck3"
+        }
+      ]
+    },
+    "ck1": {
+      "dm": [
+        "Good. Write down your 10-second test result. Then try the free Strength Age test: {{L:/q/a}}"
+      ],
+      "buttons": [
+        {
+          "label_runway": "Get first access (free)",
+          "label_launch": "Get the starter books",
+          "link": "{{B_LINK}}"
+        }
+      ],
+      "end": true
+    },
+    "ck2": {
+      "dm": [
+        "Very normal. Here's the seated version: {{L:/s/l5s}}. Keep a hand on the counter every time."
+      ],
+      "end": true
+    },
+    "ck3": {
+      "dm": [
+        "Here it is again: {{L:/s/l5}}. Counter first."
+      ],
+      "end": true
+    },
+    "human": {
+      "dm": [
+        "Got it. A real person on our team will reply here, usually within a day (Mon to Fri)."
+      ],
+      "end": true,
+      "handoff": true
+    }
+  },
+  "followups": [
+    {
+      "id": "nudge",
+      "after_minutes": 20,
+      "unless": "link_clicked",
+      "dm": [
+        "{first_name}, Steady Feet is here: {{L:/s/l5}}"
+      ]
+    },
+    {
+      "id": "checkin",
+      "after_minutes": 1320,
+      "state": "checkin"
+    }
+  ]
+}

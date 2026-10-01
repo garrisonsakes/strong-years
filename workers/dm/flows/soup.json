@@ -1,0 +1,136 @@
+{
+  "keyword": "SOUP",
+  "flow_id": "soup",
+  "mode": "always",
+  "speaker": "sun",
+  "title": "Sun Yoon's Three Soups",
+  "variants": [
+    "soup",
+    "soups",
+    "soop",
+    "sop",
+    "recipe",
+    "🍲"
+  ],
+  "tags": [
+    "kw_soup"
+  ],
+  "reply": [
+    "Sun Yoon sent the recipe. Check your messages.",
+    "In your DMs. She says don't skip the garlic."
+  ],
+  "start": "dm1",
+  "states": {
+    "dm1": {
+      "dm": [
+        "Hi {first_name}! This is the Strong Years team assistant (automated). Sun Yoon is an AI character, not a real person. Her recipes are real and built on published nutrition guidelines for older adults. Reply STOP anytime.\n\nYou asked for Sun Yoon's Three Soups, with the protein grams written in. Want them?"
+      ],
+      "buttons": [
+        {
+          "label": "Yes, send it",
+          "next": "dm2"
+        }
+      ]
+    },
+    "dm2": {
+      "dm": [
+        "Here it is: {{L:/s/l4}}\n\nEach recipe has a box that says who should skip it (salt, kidney diets, allergies).\nSun Yoon's note: \"Make one pot on Sunday. Eat it twice. Don't skip the garlic.\"\n\nCheck the who-should-skip box on each recipe, especially if you're on a low-salt or kidney diet.\n\nWant the large-print card by email too?"
+      ],
+      "quick_replies": [
+        {
+          "label": "Yes, email it",
+          "next": "email_ask"
+        },
+        {
+          "label": "No thanks",
+          "next": "no_thanks"
+        }
+      ]
+    },
+    "email_ask": {
+      "dm": [
+        "What's your email? (Tap it below if Instagram suggests it.)"
+      ],
+      "expect": "email",
+      "next": "email_ok"
+    },
+    "email_ok": {
+      "dm": [
+        "Sent to {email}. By sharing your email you'll get emails from Strong Years, including your printable card and short tips. Unsubscribe anytime with one click."
+      ],
+      "end": true
+    },
+    "no_thanks": {
+      "dm": [
+        "No problem. It's all yours at the link above."
+      ],
+      "end": true
+    },
+    "checkin": {
+      "dm": [
+        "Did you make one of the soups?"
+      ],
+      "buttons": [
+        {
+          "label": "Yes",
+          "next": "ck1"
+        },
+        {
+          "label": "Not yet, need groceries",
+          "next": "ck2"
+        },
+        {
+          "label": "Not my kind of food",
+          "next": "ck3"
+        }
+      ]
+    },
+    "ck1": {
+      "dm": [
+        "Good. Sun Yoon has a 2-minute gut and energy check too: {{L:/q/b}}"
+      ],
+      "buttons": [
+        {
+          "label_runway": "Get first access (free)",
+          "label_launch": "Get the starter books",
+          "link": "{{B_LINK}}"
+        }
+      ],
+      "end": true
+    },
+    "ck2": {
+      "dm": [
+        "Here's the grocery list on its own: {{L:/s/l4b}}"
+      ],
+      "end": true
+    },
+    "ck3": {
+      "dm": [
+        "Fair. Sun Yoon says that's what the who-should-skip box is for. The Strength Age test might suit you better: {{L:/q/a}}"
+      ],
+      "end": true
+    },
+    "human": {
+      "dm": [
+        "Got it. A real person on our team will reply here, usually within a day (Mon to Fri)."
+      ],
+      "end": true,
+      "handoff": true
+    }
+  },
+  "followups": [
+    {
+      "id": "nudge",
+      "after_minutes": 20,
+      "unless": "link_clicked",
+      "dm": [
+        "{first_name}, the soups are here: {{L:/s/l4}}"
+      ]
+    },
+    {
+      "id": "checkin",
+      "after_minutes": 1320,
+      "state": "checkin"
+    }
+  ]
+}

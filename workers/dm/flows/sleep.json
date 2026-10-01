@@ -1,0 +1,136 @@
+{
+  "keyword": "SLEEP",
+  "flow_id": "sleep",
+  "mode": "always",
+  "speaker": "chang",
+  "title": "Sleep Wind-Down, Night 1",
+  "variants": [
+    "sleep",
+    "slep",
+    "sleeep",
+    "sleeping",
+    "wind down",
+    "😴"
+  ],
+  "tags": [
+    "kw_sleep"
+  ],
+  "reply": [
+    "Sent. Save it for tonight, 30 minutes before bed.",
+    "In your messages. Breathe out longer than in."
+  ],
+  "start": "dm1",
+  "states": {
+    "dm1": {
+      "dm": [
+        "Hi {first_name}! This is Chang Yin's team assistant (automated). Quick note before anything: Chang Yin is an AI character, not a real person. Our sessions are real and built on published exercise guidelines for older adults. Reply STOP anytime.\n\nYou asked for the Sleep Wind-Down: 10 minutes of slow stretches and breathing to do in bed before sleep. Want it?"
+      ],
+      "buttons": [
+        {
+          "label": "Yes, send it",
+          "next": "dm2"
+        }
+      ]
+    },
+    "dm2": {
+      "dm": [
+        "Here it is: {{L:/s/l3}}\n\nWhat you need: your bed and a pillow. Lights low.\nChang Yin's note: \"Breathe out longer than you breathe in. That's the whole trick.\"\n\nSafety: if you often wake up gasping or very short of breath, tell your doctor.\n\nWant the large-print card by email too?"
+      ],
+      "quick_replies": [
+        {
+          "label": "Yes, email it",
+          "next": "email_ask"
+        },
+        {
+          "label": "No thanks",
+          "next": "no_thanks"
+        }
+      ]
+    },
+    "email_ask": {
+      "dm": [
+        "What's your email? (Tap it below if Instagram suggests it.)"
+      ],
+      "expect": "email",
+      "next": "email_ok"
+    },
+    "email_ok": {
+      "dm": [
+        "Sent to {email}. By sharing your email you'll get emails from Strong Years, including your printable card and short tips. Unsubscribe anytime with one click."
+      ],
+      "end": true
+    },
+    "no_thanks": {
+      "dm": [
+        "No problem. It's all yours at the link above."
+      ],
+      "end": true
+    },
+    "checkin": {
+      "dm": [
+        "Did you try the wind-down last night?"
+      ],
+      "buttons": [
+        {
+          "label": "Yes",
+          "next": "ck1"
+        },
+        {
+          "label": "Not really my thing",
+          "next": "ck2"
+        },
+        {
+          "label": "Haven't tried yet",
+          "next": "ck3"
+        }
+      ]
+    },
+    "ck1": {
+      "dm": [
+        "Good. Do it again tonight, same time. Want your Strength Age too? Free, 3 minutes: {{L:/q/a}}"
+      ],
+      "buttons": [
+        {
+          "label_runway": "Get first access (free)",
+          "label_launch": "Get the starter books",
+          "link": "{{B_LINK}}"
+        }
+      ],
+      "end": true
+    },
+    "ck2": {
+      "dm": [
+        "Fair. The 4-6 breath on its own takes one minute: {{L:/s/l7}}"
+      ],
+      "end": true
+    },
+    "ck3": {
+      "dm": [
+        "Save it for tonight, 30 minutes before bed: {{L:/s/l3}}"
+      ],
+      "end": true
+    },
+    "human": {
+      "dm": [
+        "Got it. A real person on our team will reply here, usually within a day (Mon to Fri)."
+      ],
+      "end": true,
+      "handoff": true
+    }
+  },
+  "followups": [
+    {
+      "id": "nudge",
+      "after_minutes": 20,
+      "unless": "link_clicked",
+      "dm": [
+        "{first_name}, tonight's wind-down is here: {{L:/s/l3}}"
+      ]
+    },
+    {
+      "id": "checkin",
+      "after_minutes": 1320,
+      "state": "checkin"
+    }
+  ]
+}

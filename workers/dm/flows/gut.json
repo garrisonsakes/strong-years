@@ -1,0 +1,136 @@
+{
+  "keyword": "GUT",
+  "flow_id": "gut",
+  "mode": "always",
+  "speaker": "sun",
+  "title": "Gut & Energy Check",
+  "variants": [
+    "gut",
+    "energy",
+    "digestion",
+    "gutt",
+    "gut check",
+    "tummy"
+  ],
+  "tags": [
+    "kw_gut"
+  ],
+  "reply": [
+    "Sun Yoon sent her 2-minute check. Be honest with her.",
+    "In your messages. Kimchi is food, not magic."
+  ],
+  "start": "dm1",
+  "states": {
+    "dm1": {
+      "dm": [
+        "Hi {first_name}! This is the Strong Years team assistant (automated). Sun Yoon is an AI character, not a real person. Her recipes are real and built on published nutrition guidelines for older adults. Reply STOP anytime.\n\nYou asked for Sun Yoon's 2-minute Gut & Energy Check. Want it?"
+      ],
+      "buttons": [
+        {
+          "label": "Yes, send it",
+          "next": "dm2"
+        }
+      ]
+    },
+    "dm2": {
+      "dm": [
+        "Here it is: {{L:/q/b}}\n\nEight quick questions about meals, fiber and water. You get a short plan with recipes.\nSun Yoon's note: \"Be honest with me. Kimchi is food, not magic.\"\n\nIf you have ongoing stomach pain, blood in your stool or weight loss you can't explain, see your doctor.\n\nWant the large-print card by email too?"
+      ],
+      "quick_replies": [
+        {
+          "label": "Yes, email it",
+          "next": "email_ask"
+        },
+        {
+          "label": "No thanks",
+          "next": "no_thanks"
+        }
+      ]
+    },
+    "email_ask": {
+      "dm": [
+        "What's your email? (Tap it below if Instagram suggests it.)"
+      ],
+      "expect": "email",
+      "next": "email_ok"
+    },
+    "email_ok": {
+      "dm": [
+        "Sent to {email}. By sharing your email you'll get emails from Strong Years, including your printable card and short tips. Unsubscribe anytime with one click."
+      ],
+      "end": true
+    },
+    "no_thanks": {
+      "dm": [
+        "No problem. It's all yours at the link above."
+      ],
+      "end": true
+    },
+    "checkin": {
+      "dm": [
+        "Did you do the gut check?"
+      ],
+      "buttons": [
+        {
+          "label": "Yes",
+          "next": "ck1"
+        },
+        {
+          "label": "Not yet",
+          "next": "ck2"
+        },
+        {
+          "label": "I have a question",
+          "next": "ck3"
+        }
+      ]
+    },
+    "ck1": {
+      "dm": [
+        "Good. Sun Yoon's Three Soups go with your plan: {{L:/s/l4}}"
+      ],
+      "buttons": [
+        {
+          "label_runway": "Get first access (free)",
+          "label_launch": "Get the starter books",
+          "link": "{{B_LINK}}"
+        }
+      ],
+      "end": true
+    },
+    "ck2": {
+      "dm": [
+        "It takes two minutes: {{L:/q/b}}"
+      ],
+      "end": true
+    },
+    "ck3": {
+      "dm": [
+        "A real person on our team will reply here, usually within a day (Mon to Fri)."
+      ],
+      "end": true
+    },
+    "human": {
+      "dm": [
+        "Got it. A real person on our team will reply here, usually within a day (Mon to Fri)."
+      ],
+      "end": true,
+      "handoff": true
+    }
+  },
+  "followups": [
+    {
+      "id": "nudge",
+      "after_minutes": 20,
+      "unless": "link_clicked",
+      "dm": [
+        "{first_name}, the check is here: {{L:/q/b}}"
+      ]
+    },
+    {
+      "id": "checkin",
+      "after_minutes": 1320,
+      "state": "checkin"
+    }
+  ]
+}

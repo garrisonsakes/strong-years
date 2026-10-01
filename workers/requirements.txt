@@ -1,0 +1,10 @@
+# Runtime (Python 3.11+). System deps: ffmpeg (with libflite + chromaprint for the sample/fingerprints), tesseract-ocr.
+fastapi>=0.115,<1
+uvicorn[standard]>=0.30
+httpx>=0.27
+pydantic>=2.7
+numpy>=1.26
+pillow>=10.3
+cryptography>=42
+c2pa-python>=0.38        # C2PA signing/reading (Rust c2pa-rs bindings); falls back to c2patool, then a stub
+boto3>=1.34              # only used when R2_* env vars are set
