@@ -49,6 +49,12 @@ function emptyTables(): Tables {
     affiliates: new Map(),
     affiliate_referrals: new Map(),
     affiliate_commissions: new Map(),
+    coach_cohorts: new Map(),
+    coached_enrollments: new Map(),
+    coach_checkins: new Map(),
+    coach_notes: new Map(),
+    clinical_interest: new Map(),
+    ascension_exposures: new Map(),
   };
 }
 
@@ -77,6 +83,9 @@ const UNIQUE: Partial<Record<TableName, string[][]>> = {
   email_sends: [["email", "sequence", "step"]],
   email_prefs: [["email"]],
   affiliates: [["email"], ["code"]],
+  coached_enrollments: [["shopify_order_id"]],
+  coach_checkins: [["enrollment_id", "week"]],
+  ascension_exposures: [["member_id", "rung", "day"]],
   affiliate_referrals: [["member_id"]],
   affiliate_commissions: [["sy_order_id"]],
 };

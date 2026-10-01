@@ -155,7 +155,8 @@ export type OrderKind =
   | "upsell_kit"
   | "downsell_printables"
   | "gift"
-  | "membership_charge";
+  | "membership_charge"
+  | "coached_charge";
 
 export interface Order {
   id: string;
@@ -553,7 +554,7 @@ export interface ConversionOutboxRow {
  * (variant, selling plan) the store sells. Prices here mirror Shopify for display;
  * Shopify charges what Shopify charges, and nothing a visitor sends can pick a row.
  */
-export type ShopifyEntitlement = "ebook" | "founding" | "standard" | "essentials" | "annual" | "gift" | "bump";
+export type ShopifyEntitlement = "ebook" | "founding" | "standard" | "essentials" | "annual" | "gift" | "bump" | "coached";
 
 export interface ShopifyProductRow {
   id: string;
@@ -661,7 +662,9 @@ export type ExceptionType =
   | "crisis_escalation"
   | "boost_approval"
   | "affiliate_application"
-  | "affiliate_fraud";
+  | "affiliate_fraud"
+  | "coach_flag"
+  | "clinical_interest";
 
 export type ExceptionStatus = "open" | "approved" | "rejected" | "resolved";
 
@@ -789,6 +792,91 @@ export interface AffiliateCommission {
   created_at: string;
 }
 
+/* ------------------------------------------------------------------ ascension ladder (ASCENSION.md, CANON UPDATE 4) */
+
+/** R3: one coached group. The cap is honest: seats = active enrollments, counted from this DB. */
+export interface CoachCohort {
+  id: string;
+  name: string;
+  /** Null until a coach is hired; the page shows a placeholder and sells nothing. */
+  coach_name: string | null;
+  coach_credential: string | null;
+  coach_bio: string | null;
+  cap: number;
+  status: "draft" | "open" | "running" | "closed";
+  starts_on: string | null;
+  /** Weekly group call (video link) and its plain-words time, shown only to enrolled members. */
+  call_url: string | null;
+  call_time: string | null;
+  created_at: string;
+}
+
+export interface CoachedEnrollment {
+  id: string;
+  member_id: string;
+  cohort_id: string;
+  status: "active" | "ended" | "refunded";
+  /** Catalog sku the seat was bought on (coached_monthly, coached_97, coached_197). */
+  sku: string;
+  /** The FIRST coached order: one seat per order, replay-safe. */
+  shopify_order_id: string;
+  started_at: string;
+  /** Extended by one month per paid coached order (renewals included). */
+  paid_through: string;
+  created_at: string;
+}
+
+export interface CoachCheckin {
+  id: string;
+  enrollment_id: string;
+  member_id: string;
+  cohort_id: string;
+  week: number;
+  sessions_done: number;
+  /** 1 (very easy) to 5 (very hard). */
+  effort: number;
+  /** "Something hurt or worried me": goes to the coach, and to the exceptions queue as a coach_flag. */
+  concern: boolean;
+  win: string;
+  question: string;
+  created_at: string;
+}
+
+export interface CoachNote {
+  id: string;
+  enrollment_id: string;
+  member_id: string;
+  author: string;
+  body: string;
+  visible_to_member: boolean;
+  created_at: string;
+}
+
+/** R4: interest capture only. Name, email, state, consent; filed to the exceptions queue for the client's clinical team. */
+export interface ClinicalInterest {
+  id: string;
+  member_id: string | null;
+  name: string;
+  email: string;
+  state: string;
+  consent: boolean;
+  consent_text: string;
+  exception_id: string | null;
+  status: "new" | "sent_to_clinical_team" | "closed";
+  created_at: string;
+}
+
+/** Every time an in-app trigger showed a rung offer (honest measurement of the ladder). */
+export interface AscensionExposure {
+  id: string;
+  member_id: string;
+  rung: "R3" | "R4" | "R5";
+  triggers: string[];
+  cell: string | null;
+  day: string;
+  created_at: string;
+}
+
 export interface Rows {
   members: Member;
   memberships: Membership;
@@ -834,6 +922,12 @@ export interface Rows {
   affiliates: Affiliate;
   affiliate_referrals: AffiliateReferral;
   affiliate_commissions: AffiliateCommission;
+  coach_cohorts: CoachCohort;
+  coached_enrollments: CoachedEnrollment;
+  coach_checkins: CoachCheckin;
+  coach_notes: CoachNote;
+  clinical_interest: ClinicalInterest;
+  ascension_exposures: AscensionExposure;
 }
 
 export type TableName = keyof Rows;

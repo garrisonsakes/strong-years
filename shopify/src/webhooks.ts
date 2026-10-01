@@ -90,6 +90,7 @@ export const SKU_ROLE: Record<string, string> = {
   "SY-GIFT-3M": "gift_3m", "SY-GIFT-12M": "gift_12m",
   "SY-WALLPLAN-9": "bump_wallplan",
   "SY-KIT-29": "bump_kit",
+  "SY-COACHED-147": "coached", "SY-COACHED-97": "coached", "SY-COACHED-197": "coached",
 };
 
 export interface OrderLike {
@@ -106,7 +107,7 @@ export interface OrderLike {
 }
 
 export interface MembershipGrant {
-  kind: "ebook" | "membership" | "gift" | "addon";
+  kind: "ebook" | "membership" | "gift" | "addon" | "coached";
   role: string;
   /** Access length implied by this paid order (membership: one billing period; gift: prepaid length). */
   months?: number;
@@ -127,6 +128,7 @@ export function classifyOrder(order: OrderLike): MembershipGrant[] {
     const props = new Map((li.properties || []).map((p) => [p.name, p.value]));
     if (role === "ebook") grants.push({ kind: "ebook", role });
     else if (role === "founding" || role === "standard" || role === "essentials") grants.push({ kind: "membership", role, months: 1 });
+    else if (role === "coached") grants.push({ kind: "coached", role, months: 1 });
     else if (role === "annual") grants.push({ kind: "membership", role, months: 12 });
     else if (role === "gift_3m" || role === "gift_12m") grants.push({ kind: "gift", role, months: role === "gift_3m" ? 3 : 12, recipientEmail: props.get("Recipient email") || undefined, giftStart: props.get("Start date") || undefined });
     else grants.push({ kind: "addon", role });

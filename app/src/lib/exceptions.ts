@@ -22,6 +22,8 @@ export const EXCEPTION_TYPES: readonly ExceptionType[] = [
   "boost_approval",
   "affiliate_application",
   "affiliate_fraud",
+  "coach_flag",
+  "clinical_interest",
 ] as const;
 
 export const TYPE_LABEL: Record<ExceptionType, string> = {
@@ -36,6 +38,8 @@ export const TYPE_LABEL: Record<ExceptionType, string> = {
   boost_approval: "Boost approval",
   affiliate_application: "Affiliate application",
   affiliate_fraud: "Affiliate fraud check",
+  coach_flag: "Coach flag",
+  clinical_interest: "Labs + clinician interest (client clinical team)",
 };
 
 /** Which decisions each type offers. Approve/reject are for requests; resolve closes a review. */

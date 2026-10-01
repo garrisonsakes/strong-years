@@ -314,7 +314,7 @@ export function discountInput(d: (typeof DISCOUNTS)[number], nowIso: string, pro
 async function createAppSellingPlans(gql: GraphQLRunner, productIds: Record<string, string>, r: PlanReport) {
   const groups = [
     { code: "sy-founding", name: "Founding membership", plans: ["monthly", "starter_b"], products: ["founding-membership"] },
-    { code: "sy-monthly", name: "Membership", plans: ["monthly"], products: ["strong-years-membership", "essentials-membership"] },
+    { code: "sy-monthly", name: "Membership", plans: ["monthly"], products: ["strong-years-membership", "essentials-membership", "coached-12-week", "coached-12-week-c97", "coached-12-week-c197"] },
     { code: "sy-yearly", name: "Yearly membership", plans: ["yearly"], products: ["founding-annual"] },
   ];
   for (const g of groups) {
@@ -412,6 +412,8 @@ async function verifyPhase(gql: GraphQLRunner, o: PlanOptions, r: PlanReport, on
         case "gift": rows.push(mk({ sku: spec.sku.endsWith("12M") ? "gift12" : "gift3", entitlement: "gift", gift_months: spec.sku.endsWith("12M") ? 12 : 3 })); break;
         case "bump_wallplan": rows.push(mk({ sku: "wallplan", entitlement: "bump" })); break;
         case "bump_kit": rows.push(mk({ sku: "kit", entitlement: "bump" })); break;
+        // R3 coached cells (ASCENSION.md): c147 is the default row; c97 / c197 are the price-test rows.
+        case "coached": rows.push(mk({ sku: p.cell === "c147" ? "coached_monthly" : `coached_${p.cell!.slice(1)}`, entitlement: "coached", cell: p.cell! })); break;
       }
     });
   }

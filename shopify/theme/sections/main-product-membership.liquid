@@ -1,7 +1,7 @@
 {%- comment -%}
   Membership offer page (FUNNEL.md §5.6 /join layout). One page, one offer, terms directly above the button,
   separate unticked consent checkbox, no express-checkout buttons (they would skip the consent record).
-  Roles: founding | standard | annual | essentials. Template product.starter.json sets offer = starter (cell B):
+  Roles: founding | standard | annual | essentials | coached (R3, ASCENSION.md; template product.coached.json). Template product.starter.json sets offer = starter (cell B):
   "$12 today = books + first month, then $25/mo".
   Selling plan: in the app engine the founding product has a "$12 first month" plan (fixed first-cycle price);
   in the Shopify Subscriptions engine (launch) the $12 comes from STARTER12 / STARTER12S (first payment only,
@@ -50,7 +50,18 @@
       assign app_sku = 'essentials_monthly'
     when 'annual'
       assign app_sku = 'annual_founding'
+    when 'coached'
+      assign cell = product.metafields.strong_years.cell.value
+      if cell == 'c147'
+        assign app_sku = 'coached_monthly'
+      else
+        assign app_sku = cell | replace_first: 'c', 'coached_'
+      endif
   endcase
+  assign coached_full = false
+  if role == 'coached' and product.available == false
+    assign coached_full = true
+  endif
   assign recurring = v.price | money_without_trailing_zeros
   assign today = recurring
   assign discount = ''
@@ -77,7 +88,10 @@
   endif
 -%}
 <section class="wrap stack" aria-labelledby="join-h">
-  {%- if closed -%}
+  {%- if coached_full -%}
+    <h1 id="join-h">This coached group is full.</h1>
+    <div class="cohort"><p><strong>Every seat in the current group is taken.</strong> Groups are capped so your coach knows your name. The members area shows when the next group opens; nothing is charged until you join one.</p></div>
+  {%- elsif closed -%}
     {%- assign std = all_products['strong-years-membership'] -%}
     <h1 id="join-h">Join Strong Years: {{ std.price | money_without_trailing_zeros }} today.</h1>
     <div class="cohort"><p><strong>The founding group is full.</strong> New members join at the standard price of {{ std.price | money_without_trailing_zeros }} a month.</p></div>
@@ -91,11 +105,17 @@
       <h1 id="join-h">Founding annual: {{ today }} a year.</h1>
     {%- elsif role == 'essentials' -%}
       <h1 id="join-h">Strong Years Essentials: {{ today }} a month.</h1>
+    {%- elsif role == 'coached' -%}
+      <h1 id="join-h">Strong Years Coached: 12 weeks with a real coach, {{ today }} a month.</h1>
     {%- else -%}
       <h1 id="join-h">Join Strong Years: {{ today }} today.</h1>
     {%- endif -%}
 
+    {%- if role == 'coached' -%}
+    <p>Twelve weeks in a small group with a certified older-adult fitness trainer, a real person. One live video call a week, a weekly check-in your coach reads, and Chang Yin's session plan in between.</p>
+    {%- else -%}
     <p>Your Daily Practice with Chang Yin, 8 to 12 minutes a day at your level, with a chair-based version of everything. Sun Yoon's recipes every Sunday. A Strength Age you retest every month.</p>
+    {%- endif -%}
 
     <ul class="checklist jade bold">
       {%- if starter -%}
@@ -104,8 +124,14 @@
         <li>{{ today }} today for your first {{ interval }}, then {{ recurring }} a {{ interval }} until you cancel</li>
       {%- endif -%}
       {%- if founding -%}<li>Founding price locked for as long as you stay subscribed</li>{%- endif -%}
+      {%- if role == 'coached' -%}
+      <li>The program is 12 weeks: three monthly payments. We email you before a fourth; cancel online anytime</li>
+      <li>14-day money-back guarantee on your first coached payment</li>
+      <li>Chang Yin is an AI character. Your coach is a real person.</li>
+      {%- else -%}
       <li>14-day money-back guarantee</li>
       <li>Chang Yin and Sun Yoon are AI characters. The practices are real.</li>
+      {%- endif -%}
     </ul>
 
     {%- if founding -%}{% render 'sy-count-line', variant: v %}{%- endif -%}
@@ -125,7 +151,7 @@
       <input type="hidden" name="attributes[sy_consent_v]" value="nojs">
       <input type="hidden" name="attributes[sy_sku]" value="{{ app_sku }}">
       <input type="hidden" name="attributes[sy_entry]" value="{% if starter %}starter{% else %}join{% endif %}">
-      {%- unless role == 'annual' or role == 'essentials' -%}{% render 'sy-bumps' %}{%- endunless -%}
+      {%- unless role == 'annual' or role == 'essentials' or role == 'coached' -%}{% render 'sy-bumps' %}{%- endunless -%}
       {% render 'sy-terms', today: today, recurring: recurring, interval: interval, founding: founding, starter: starter %}
       <label class="tick">
         <input type="checkbox" name="sy_consent" value="yes" required>
@@ -133,7 +159,7 @@
       </label>
       <p class="small"><a href="/pages/membership-and-cancellation">Membership and cancellation policy</a> · <a href="/policies/terms-of-service">Terms</a></p>
       <p class="alert" data-sy-error role="alert" hidden></p>
-      <button type="submit" class="btn">{% if starter %}Start for $12 today{% elsif founding %}Join for {{ today }} today{% else %}Join for {{ today }}{% endif %}</button>
+      <button type="submit" class="btn">{% if starter %}Start for $12 today{% elsif role == 'coached' %}Join the group for {{ today }} today{% elsif founding %}Join for {{ today }} today{% else %}Join for {{ today }}{% endif %}</button>
       <p class="under">Renews at {{ recurring }}/{{ interval }} on <span data-sy-renew="{% if interval == 'year' %}12{% else %}1{% endif %}">the same date next {{ interval }}</span>. Cancel online anytime.</p>
     </form>
     <p class="small"><strong>General fitness and nutrition education, not medical advice.</strong> Check with your doctor before starting new exercise. On your statement: STRONGYEARS MEMBER.</p>

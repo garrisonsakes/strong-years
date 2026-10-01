@@ -74,7 +74,7 @@ exports[`provisioning plan (DRY_RUN snapshot) > core phase, Shopify Subscription
         "access": {
           "storefront": "PUBLIC_READ",
         },
-        "description": "ebook | founding | standard | annual | essentials | gift | bump_wallplan | bump_kit",
+        "description": "ebook | founding | standard | annual | essentials | gift | bump_wallplan | bump_kit | coached",
         "key": "role",
         "name": "Strong Years role",
         "namespace": "strong_years",
@@ -90,7 +90,7 @@ exports[`provisioning plan (DRY_RUN snapshot) > core phase, Shopify Subscription
         "access": {
           "storefront": "PUBLIC_READ",
         },
-        "description": "Price cell this product sells (e7, e12, e15).",
+        "description": "Price cell this product sells (e7, e12, e15, c147, c97, c197).",
         "key": "cell",
         "name": "Price cell",
         "namespace": "strong_years",
@@ -1198,6 +1198,273 @@ exports[`provisioning plan (DRY_RUN snapshot) > core phase, Shopify Subscription
     },
   },
   {
+    "op": "ProductByHandle",
+    "variables": {
+      "handle": "coached-12-week",
+    },
+  },
+  {
+    "op": "ProductUpsert",
+    "variables": {
+      "identifier": {
+        "handle": "coached-12-week",
+      },
+      "input": {
+        "collections": [
+          "gid://shopify/Collection/DRYRUN-membership",
+        ],
+        "descriptionHtml": "<p>Twelve weeks in a small group with a <strong>certified older-adult fitness trainer, a real person</strong>. One live video call a week, a weekly check-in your coach reads, and Chang Yin's session plan in between.</p>
+<p><strong>$147 today, then $147 a month until you cancel.</strong> The program is 12 weeks (three monthly payments). We email you before a fourth payment; cancel online anytime in your account. 14-day money-back guarantee on your first coached payment.</p>
+<p>Groups are capped so your coach knows your name. When a group is full, the page says so.</p>
+<p><strong>Chang Yin is an AI character; your coach is a real person.</strong> Coaching is general fitness instruction, not medical care or physical therapy. Check with your doctor before starting new exercise.</p>",
+        "handle": "coached-12-week",
+        "metafields": [
+          {
+            "key": "role",
+            "namespace": "strong_years",
+            "type": "single_line_text_field",
+            "value": "coached",
+          },
+          {
+            "key": "cell",
+            "namespace": "strong_years",
+            "type": "single_line_text_field",
+            "value": "c147",
+          },
+        ],
+        "productOptions": [
+          {
+            "name": "Plan",
+            "values": [
+              {
+                "name": "Monthly",
+              },
+            ],
+          },
+        ],
+        "productType": "Coached program",
+        "seo": {
+          "description": "A 12-week small-group program with a certified older-adult trainer: one live video call a week and a weekly check-in. $147 a month, cancel online anytime.",
+          "title": "Strong Years Coached | 12 weeks with a certified coach",
+        },
+        "status": "UNLISTED",
+        "tags": [
+          "sy-coached",
+          "sy-cell-c147",
+          "subscription",
+        ],
+        "templateSuffix": "coached",
+        "title": "Strong Years Coached: 12 weeks with a real coach",
+        "variants": [
+          {
+            "inventoryItem": {
+              "requiresShipping": false,
+              "sku": "SY-COACHED-147",
+              "tracked": true,
+            },
+            "inventoryPolicy": "DENY",
+            "inventoryQuantities": [
+              {
+                "locationId": "gid://shopify/Location/DRYRUN-1",
+                "name": "available",
+                "quantity": 0,
+              },
+            ],
+            "optionValues": [
+              {
+                "name": "Monthly",
+                "optionName": "Plan",
+              },
+            ],
+            "position": 1,
+            "price": "147.00",
+            "sku": "SY-COACHED-147",
+            "taxable": true,
+          },
+        ],
+        "vendor": "Strong Years",
+      },
+    },
+  },
+  {
+    "op": "ProductByHandle",
+    "variables": {
+      "handle": "coached-12-week-c97",
+    },
+  },
+  {
+    "op": "ProductUpsert",
+    "variables": {
+      "identifier": {
+        "handle": "coached-12-week-c97",
+      },
+      "input": {
+        "collections": [
+          "gid://shopify/Collection/DRYRUN-membership",
+        ],
+        "descriptionHtml": "<p>Twelve weeks in a small group with a <strong>certified older-adult fitness trainer, a real person</strong>. One live video call a week, a weekly check-in your coach reads, and Chang Yin's session plan in between.</p>
+<p><strong>$97 today, then $97 a month until you cancel.</strong> The program is 12 weeks (three monthly payments). We email you before a fourth payment; cancel online anytime in your account. 14-day money-back guarantee on your first coached payment.</p>
+<p>Groups are capped so your coach knows your name. When a group is full, the page says so.</p>
+<p><strong>Chang Yin is an AI character; your coach is a real person.</strong> Coaching is general fitness instruction, not medical care or physical therapy. Check with your doctor before starting new exercise.</p>",
+        "handle": "coached-12-week-c97",
+        "metafields": [
+          {
+            "key": "role",
+            "namespace": "strong_years",
+            "type": "single_line_text_field",
+            "value": "coached",
+          },
+          {
+            "key": "cell",
+            "namespace": "strong_years",
+            "type": "single_line_text_field",
+            "value": "c97",
+          },
+        ],
+        "productOptions": [
+          {
+            "name": "Plan",
+            "values": [
+              {
+                "name": "Monthly",
+              },
+            ],
+          },
+        ],
+        "productType": "Coached program",
+        "seo": {
+          "description": "A 12-week small-group program with a certified older-adult trainer: one live video call a week and a weekly check-in. $97 a month, cancel online anytime.",
+          "title": "Strong Years Coached | 12 weeks with a certified coach",
+        },
+        "status": "UNLISTED",
+        "tags": [
+          "sy-coached",
+          "sy-cell-c97",
+          "subscription",
+        ],
+        "templateSuffix": "coached",
+        "title": "Strong Years Coached: 12 weeks with a real coach",
+        "variants": [
+          {
+            "inventoryItem": {
+              "requiresShipping": false,
+              "sku": "SY-COACHED-97",
+              "tracked": true,
+            },
+            "inventoryPolicy": "DENY",
+            "inventoryQuantities": [
+              {
+                "locationId": "gid://shopify/Location/DRYRUN-1",
+                "name": "available",
+                "quantity": 0,
+              },
+            ],
+            "optionValues": [
+              {
+                "name": "Monthly",
+                "optionName": "Plan",
+              },
+            ],
+            "position": 1,
+            "price": "97.00",
+            "sku": "SY-COACHED-97",
+            "taxable": true,
+          },
+        ],
+        "vendor": "Strong Years",
+      },
+    },
+  },
+  {
+    "op": "ProductByHandle",
+    "variables": {
+      "handle": "coached-12-week-c197",
+    },
+  },
+  {
+    "op": "ProductUpsert",
+    "variables": {
+      "identifier": {
+        "handle": "coached-12-week-c197",
+      },
+      "input": {
+        "collections": [
+          "gid://shopify/Collection/DRYRUN-membership",
+        ],
+        "descriptionHtml": "<p>Twelve weeks in a small group with a <strong>certified older-adult fitness trainer, a real person</strong>. One live video call a week, a weekly check-in your coach reads, and Chang Yin's session plan in between.</p>
+<p><strong>$197 today, then $197 a month until you cancel.</strong> The program is 12 weeks (three monthly payments). We email you before a fourth payment; cancel online anytime in your account. 14-day money-back guarantee on your first coached payment.</p>
+<p>Groups are capped so your coach knows your name. When a group is full, the page says so.</p>
+<p><strong>Chang Yin is an AI character; your coach is a real person.</strong> Coaching is general fitness instruction, not medical care or physical therapy. Check with your doctor before starting new exercise.</p>",
+        "handle": "coached-12-week-c197",
+        "metafields": [
+          {
+            "key": "role",
+            "namespace": "strong_years",
+            "type": "single_line_text_field",
+            "value": "coached",
+          },
+          {
+            "key": "cell",
+            "namespace": "strong_years",
+            "type": "single_line_text_field",
+            "value": "c197",
+          },
+        ],
+        "productOptions": [
+          {
+            "name": "Plan",
+            "values": [
+              {
+                "name": "Monthly",
+              },
+            ],
+          },
+        ],
+        "productType": "Coached program",
+        "seo": {
+          "description": "A 12-week small-group program with a certified older-adult trainer: one live video call a week and a weekly check-in. $197 a month, cancel online anytime.",
+          "title": "Strong Years Coached | 12 weeks with a certified coach",
+        },
+        "status": "UNLISTED",
+        "tags": [
+          "sy-coached",
+          "sy-cell-c197",
+          "subscription",
+        ],
+        "templateSuffix": "coached",
+        "title": "Strong Years Coached: 12 weeks with a real coach",
+        "variants": [
+          {
+            "inventoryItem": {
+              "requiresShipping": false,
+              "sku": "SY-COACHED-197",
+              "tracked": true,
+            },
+            "inventoryPolicy": "DENY",
+            "inventoryQuantities": [
+              {
+                "locationId": "gid://shopify/Location/DRYRUN-1",
+                "name": "available",
+                "quantity": 0,
+              },
+            ],
+            "optionValues": [
+              {
+                "name": "Monthly",
+                "optionName": "Plan",
+              },
+            ],
+            "position": 1,
+            "price": "197.00",
+            "sku": "SY-COACHED-197",
+            "taxable": true,
+          },
+        ],
+        "vendor": "Strong Years",
+      },
+    },
+  },
+  {
     "op": "DiscountByCode",
     "variables": {
       "code": "STARTER12",
@@ -2051,6 +2318,12 @@ exports[`provisioning plan (DRY_RUN snapshot) > core phase, Shopify Subscription
   "query    ProductByHandle            Find product strong-years-kit",
   "mutation ProductUpsert              Create product strong-years-kit (bump_kit)",
   "mutation PublishToOnlineStore       Publish strong-years-kit to Online Store",
+  "query    ProductByHandle            Find product coached-12-week",
+  "mutation ProductUpsert              Create product coached-12-week (coached, cell c147)",
+  "query    ProductByHandle            Find product coached-12-week-c97",
+  "mutation ProductUpsert              Create product coached-12-week-c97 (coached, cell c97)",
+  "query    ProductByHandle            Find product coached-12-week-c197",
+  "mutation ProductUpsert              Create product coached-12-week-c197 (coached, cell c197)",
   "query    DiscountByCode             Find discount STARTER12",
   "mutation DiscountCodeCreate         Create discount STARTER12 (cell-B)",
   "query    DiscountByCode             Find discount STARTER12S",
@@ -2162,6 +2435,12 @@ exports[`provisioning plan (DRY_RUN snapshot) > core phase, app engine: creates 
   "query    ProductByHandle            Find product strong-years-kit",
   "mutation ProductUpsert              Create product strong-years-kit (bump_kit)",
   "mutation PublishToOnlineStore       Publish strong-years-kit to Online Store",
+  "query    ProductByHandle            Find product coached-12-week",
+  "mutation ProductUpsert              Create product coached-12-week (coached, cell c147)",
+  "query    ProductByHandle            Find product coached-12-week-c97",
+  "mutation ProductUpsert              Create product coached-12-week-c97 (coached, cell c97)",
+  "query    ProductByHandle            Find product coached-12-week-c197",
+  "mutation ProductUpsert              Create product coached-12-week-c197 (coached, cell c197)",
   "query    ProductByHandle            Check selling plan groups on founding-membership",
   "mutation SellingPlanGroupCreate     Create selling plan group sy-founding (app-owned)",
   "query    ProductByHandle            Check selling plan groups on strong-years-membership",
@@ -2482,6 +2761,63 @@ exports[`provisioning plan (DRY_RUN snapshot) > verify phase snapshot (after the
     "sku": "kit",
     "title": "The Strong Years Kit",
   },
+  {
+    "active": true,
+    "cell": "c147",
+    "cohort": null,
+    "discount_code": null,
+    "entitlement": "coached",
+    "gift_months": null,
+    "includes_ebook": false,
+    "interval": "month",
+    "inventory_item_id": "DRYRUN-coached-12-week-1",
+    "price_cents": 14700,
+    "product_handle": "coached-12-week",
+    "recurring_cents": 14700,
+    "selling_plan_id": "DRYRUN-coached-12-week-monthly",
+    "shopify_product_id": "DRYRUN-coached-12-week",
+    "shopify_variant_id": "DRYRUN-coached-12-week-1",
+    "sku": "coached_monthly",
+    "title": "Strong Years Coached: 12 weeks with a real coach",
+  },
+  {
+    "active": true,
+    "cell": "c97",
+    "cohort": null,
+    "discount_code": null,
+    "entitlement": "coached",
+    "gift_months": null,
+    "includes_ebook": false,
+    "interval": "month",
+    "inventory_item_id": "DRYRUN-coached-12-week-c97-1",
+    "price_cents": 9700,
+    "product_handle": "coached-12-week-c97",
+    "recurring_cents": 9700,
+    "selling_plan_id": "DRYRUN-coached-12-week-c97-monthly",
+    "shopify_product_id": "DRYRUN-coached-12-week-c97",
+    "shopify_variant_id": "DRYRUN-coached-12-week-c97-1",
+    "sku": "coached_97",
+    "title": "Strong Years Coached: 12 weeks with a real coach",
+  },
+  {
+    "active": true,
+    "cell": "c197",
+    "cohort": null,
+    "discount_code": null,
+    "entitlement": "coached",
+    "gift_months": null,
+    "includes_ebook": false,
+    "interval": "month",
+    "inventory_item_id": "DRYRUN-coached-12-week-c197-1",
+    "price_cents": 19700,
+    "product_handle": "coached-12-week-c197",
+    "recurring_cents": 19700,
+    "selling_plan_id": "DRYRUN-coached-12-week-c197-monthly",
+    "shopify_product_id": "DRYRUN-coached-12-week-c197",
+    "shopify_variant_id": "DRYRUN-coached-12-week-c197-1",
+    "sku": "coached_197",
+    "title": "Strong Years Coached: 12 weeks with a real coach",
+  },
 ]
 `;
 
@@ -2502,6 +2838,12 @@ exports[`provisioning plan (DRY_RUN snapshot) > verify phase snapshot (after the
   "query    ProductByHandle            Verify gift-strong-years",
   "query    ProductByHandle            Verify the-wall-plan",
   "query    ProductByHandle            Verify strong-years-kit",
+  "query    ProductByHandle            Verify coached-12-week (selling plans)",
+  "mutation ProductUpdate              Make coached-12-week subscription-only",
+  "query    ProductByHandle            Verify coached-12-week-c97 (selling plans)",
+  "mutation ProductUpdate              Make coached-12-week-c97 subscription-only",
+  "query    ProductByHandle            Verify coached-12-week-c197 (selling plans)",
+  "mutation ProductUpdate              Make coached-12-week-c197 subscription-only",
   "query    DiscountByCode             Verify STARTER12 discount exists",
   "query    DiscountByCode             Verify STARTER12S discount exists",
 ]

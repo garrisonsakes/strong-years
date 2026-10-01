@@ -125,8 +125,16 @@ describe("plan invariants", () => {
     const kit = PRODUCTS.find((p) => p.role === "bump_kit")!;
     expect(kit.variants[0].requiresShipping).toBe(true);
     expect(kit.variants[0].initialQuantity).toBe(0);
-    const prices = Object.fromEntries(PRODUCTS.filter((p) => p.subscriptionOnly).map((p) => [p.role, p.variants[0].price]));
+    const prices = Object.fromEntries(PRODUCTS.filter((p) => p.subscriptionOnly && p.role !== "coached").map((p) => [p.role, p.variants[0].price]));
     expect(prices).toEqual({ founding: "25.00", standard: "35.00", annual: "249.00", essentials: "12.00" });
+    // R3 coached cells (ASCENSION.md): one product per price, unlisted, honest cap = real inventory starting at 0.
+    const coached = PRODUCTS.filter((p) => p.role === "coached");
+    expect(coached.map((p) => [p.cell, p.variants[0].price])).toEqual([["c147", "147.00"], ["c97", "97.00"], ["c197", "197.00"]]);
+    for (const p of coached) {
+      expect(p.status).toBe("UNLISTED");
+      expect(p.variants[0]).toMatchObject({ tracked: true, initialQuantity: 0, inventoryPolicy: "DENY" });
+      expect(p.descriptionHtml).toMatch(/real person/);
+    }
   });
 
   it("refuses the K9SUPPS store by domain or name", () => {

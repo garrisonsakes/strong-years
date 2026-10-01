@@ -1,0 +1,59 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product-membership",
+      "settings": {
+        "offer": "standard"
+      }
+    },
+    "included": {
+      "type": "sy-rich",
+      "settings": {
+        "heading": "What the 12 weeks include"
+      },
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "text": "A certified older-adult fitness trainer (a real person) leads your group of 30 to 50"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "text": "One live video call a week, recorded for the group if you miss it"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "text": "A weekly check-in your coach reads, and coach notes you can see in your members area"
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "text": "Chang Yin's 12-week session plan between calls (Chang is an AI character)"
+          }
+        },
+        "b5": {
+          "type": "item",
+          "settings": {
+            "text": "General fitness instruction, not medical care or physical therapy"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ]
+    }
+  },
+  "order": [
+    "main",
+    "included"
+  ]
+}

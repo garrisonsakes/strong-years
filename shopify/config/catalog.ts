@@ -18,7 +18,8 @@ export type ProductRole =
   | "essentials"       // $12 save offer
   | "gift"             // prepaid gift, no auto-renew
   | "bump_wallplan"    // $9 digital bump
-  | "bump_kit";        // $29 physical bump
+  | "bump_kit"         // $29 physical bump
+  | "coached";         // R3: 12-week coached group program (ASCENSION.md), $147/mo default, $97/$197 test cells
 
 export interface VariantSpec {
   /** Value for the single option (Shopify always needs one option). */
@@ -41,7 +42,7 @@ export interface ProductSpec {
   /** ACTIVE = listed; UNLISTED = reachable only by direct link (cells, save offers); DRAFT = not sellable yet. */
   status: "ACTIVE" | "UNLISTED" | "DRAFT";
   /** Online Store 2.0 template suffix (theme/templates/product.<suffix>.json). */
-  templateSuffix: "ebook" | "membership" | "gift" | "bump" | "";
+  templateSuffix: "ebook" | "membership" | "gift" | "bump" | "coached" | "";
   productType: string;
   tags: string[];
   optionName: string;
@@ -136,6 +137,47 @@ export const FUNNEL_ARMS = [
   { id: "A", weight: 0.5, default: false },
 ] as const;
 /** Cell ids match the members app catalog (app/src/lib/billing/shopify.ts: e7, e12, e15, m12). */
+
+/**
+ * R3 (BRIEF.md CANON UPDATE 4, ASCENSION.md): the 12-week coached group program, delivered by a certified
+ * older-adult trainer (a real person), weekly video call, Chang's curriculum. Sold ONLY from inside the members app
+ * (in-app triggers, never cold ads), on the Subscriptions app's monthly plan. One product per price cell, like the
+ * ebook cells: each member sees exactly one real price. The honest cohort cap is real inventory: 0 until a coach is
+ * hired and a cohort opens (RUNBOOK: set it to the cohort cap, 30–50), DENY when out, so nobody can buy a seat that
+ * does not exist. The members app mirrors the count from its own enrollments table.
+ */
+export const COACHED_PRICE = "147.00";
+export const COACHED_CELLS = [
+  { id: "c147", price: "147.00", handle: "coached-12-week", sku: "SY-COACHED-147", default: true },
+  { id: "c97", price: "97.00", handle: "coached-12-week-c97", sku: "SY-COACHED-97", default: false },
+  { id: "c197", price: "197.00", handle: "coached-12-week-c197", sku: "SY-COACHED-197", default: false },
+] as const;
+
+function coachedCell(c: (typeof COACHED_CELLS)[number]): ProductSpec {
+  const dollars = c.price.replace(/\.00$/, "");
+  return {
+    handle: c.handle,
+    role: "coached",
+    title: "Strong Years Coached: 12 weeks with a real coach",
+    status: "UNLISTED",
+    templateSuffix: "coached",
+    productType: "Coached program",
+    tags: ["sy-coached", `sy-cell-${c.id}`, "subscription"],
+    optionName: "Plan",
+    variants: [{ option: "Monthly", price: c.price, sku: c.sku, requiresShipping: false, tracked: true, initialQuantity: 0, inventoryPolicy: "DENY", taxable: true }],
+    collections: ["membership"],
+    subscriptionOnly: true,
+    sellingPlans: ["monthly"],
+    cell: c.id,
+    seoTitle: "Strong Years Coached | 12 weeks with a certified coach",
+    seoDescription: `A 12-week small-group program with a certified older-adult trainer: one live video call a week and a weekly check-in. $${dollars} a month, cancel online anytime.`,
+    descriptionHtml: `<p>Twelve weeks in a small group with a <strong>certified older-adult fitness trainer, a real person</strong>. One live video call a week, a weekly check-in your coach reads, and Chang Yin's session plan in between.</p>
+<p><strong>$${dollars} today, then $${dollars} a month until you cancel.</strong> The program is 12 weeks (three monthly payments). We email you before a fourth payment; cancel online anytime in your account. 14-day money-back guarantee on your first coached payment.</p>
+<p>Groups are capped so your coach knows your name. When a group is full, the page says so.</p>
+<p><strong>Chang Yin is an AI character; your coach is a real person.</strong> Coaching is general fitness instruction, not medical care or physical therapy. Check with your doctor before starting new exercise.</p>`,
+    publishToOnlineStore: false,
+  };
+}
 
 export const PRODUCTS: ProductSpec[] = [
   ebookCell("e12", "12.00", "", "ACTIVE"),
@@ -290,6 +332,7 @@ ${DISCLOSURE_P}`,
     descriptionHtml: `<p>You don't need equipment to start. Inside: 3 resistance loops (light, medium, heavy), a door anchor and a grip trainer, with a large-print card showing how Chang Yin uses each one. One payment, shipped to you. 30-day refund, no return needed.</p>${DISCLOSURE_P}`,
     publishToOnlineStore: true,
   },
+  ...COACHED_CELLS.map(coachedCell),
 ];
 
 export interface CollectionSpec { handle: string; title: string; descriptionHtml: string; }
@@ -396,8 +439,8 @@ export const METAFIELD_DEFINITIONS: MetafieldDefSpec[] = [
   { ownerType: "SHOP", key: "cells", name: "Pricing cells", type: "json", description: "Ebook price cells and funnel arms with weights. The theme assigns one per visitor (sticky).", storefront: "PUBLIC_READ" },
   { ownerType: "SHOP", key: "founding", name: "Founding cohort", type: "json", description: "Cap, close date, standard price, closed flag. The seat count itself is the founding variant's real inventory.", storefront: "PUBLIC_READ" },
   { ownerType: "SHOP", key: "links", name: "Links and company", type: "json", description: "Members app URL, support email, billing phone, company legal name and mailing address.", storefront: "PUBLIC_READ" },
-  { ownerType: "PRODUCT", key: "role", name: "Strong Years role", type: "single_line_text_field", description: "ebook | founding | standard | annual | essentials | gift | bump_wallplan | bump_kit", storefront: "PUBLIC_READ" },
-  { ownerType: "PRODUCT", key: "cell", name: "Price cell", type: "single_line_text_field", description: "Price cell this product sells (e7, e12, e15).", storefront: "PUBLIC_READ" },
+  { ownerType: "PRODUCT", key: "role", name: "Strong Years role", type: "single_line_text_field", description: "ebook | founding | standard | annual | essentials | gift | bump_wallplan | bump_kit | coached", storefront: "PUBLIC_READ" },
+  { ownerType: "PRODUCT", key: "cell", name: "Price cell", type: "single_line_text_field", description: "Price cell this product sells (e7, e12, e15, c147, c97, c197).", storefront: "PUBLIC_READ" },
   { ownerType: "ORDER", key: "cell", name: "Cell and arm", type: "single_line_text_field", description: "Written by the members app from note attributes (_sy_cell, _sy_arm).", storefront: "NONE" },
   { ownerType: "ORDER", key: "attribution", name: "Attribution", type: "json", description: "First and last touch: utm_*, post_id, page, keyword, character. Written by the members app from note attributes.", storefront: "NONE" },
   { ownerType: "ORDER", key: "consent", name: "Auto-renewal consent record", type: "json", description: "Exact terms text hash, timestamp, price, cell. Kept 3+ years (California ARL).", storefront: "NONE" },
