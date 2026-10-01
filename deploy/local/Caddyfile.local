@@ -1,0 +1,10 @@
+{
+	auto_https off
+	admin off
+}
+:8000 {
+	handle_path /rest/v1/* {
+		reverse_proxy postgrest:3000
+	}
+	respond "local gateway: only /rest/v1 is served" 404
+}

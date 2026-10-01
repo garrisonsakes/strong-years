@@ -1,0 +1,35 @@
+# Local prelaunch stack for the members app (make prelaunch-local): Postgres 16 + PostgREST behind a /rest/v1 gateway,
+# so the app's real SupabaseStore code path runs against a real, migrated, seeded database. Local only: fixed dev
+# passwords, bound to 127.0.0.1, nothing here talks to the internet.
+name: sy-prelaunch-local
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_PASSWORD: ${LOCAL_PG_PASSWORD:-sy-local-only}
+      POSTGRES_DB: postgres
+    ports: ["127.0.0.1:${LOCAL_PG_PORT:-54329}:5432"]
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck: {test: ["CMD-SHELL", "pg_isready -U postgres"], interval: 2s, retries: 30}
+
+  postgrest:
+    image: postgrest/postgrest:v12.2.3
+    depends_on: {postgres: {condition: service_healthy}}
+    environment:
+      PGRST_DB_URI: postgres://authenticator:${LOCAL_PG_PASSWORD:-sy-local-only}@postgres:5432/postgres
+      PGRST_DB_SCHEMAS: public
+      PGRST_DB_ANON_ROLE: anon
+      PGRST_JWT_SECRET: ${LOCAL_JWT_SECRET:-sy-local-only-jwt-secret-0123456789abcdef}
+      PGRST_DB_CHANNEL_ENABLED: "true"
+    restart: unless-stopped
+
+  gateway:   # supabase-js calls <SUPABASE_URL>/rest/v1/<table>; PostgREST serves at /
+    image: caddy:2-alpine
+    depends_on: [postgrest]
+    command: ["caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"]
+    volumes: ["./Caddyfile.local:/etc/caddy/Caddyfile:ro"]
+    ports: ["127.0.0.1:${LOCAL_REST_PORT:-54321}:8000"]
+
+volumes:
+  pgdata:

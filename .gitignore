@@ -51,3 +51,4 @@ app/screenshots/
 # local tool output
 *.log
 prototype/shots/
+deploy/.prelaunch-generated.env

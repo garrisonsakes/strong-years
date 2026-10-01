@@ -66,7 +66,7 @@ export default async function Go({ searchParams }: { searchParams: Promise<Recor
       <ul className="grid gap-4">
         {tiles.map((t) => (
           <li key={t.testId}>
-            <Link href={t.href} className={`${t.primary ? "btn" : "btn-outline"} block w-full text-left`} data-testid={t.testId}>
+            <Link href={t.href} className={`${t.primary ? "btn-primary" : "btn-outline"} block w-full text-left`} data-testid={t.testId}>
               <span className="block text-xl font-bold">{t.title}</span>
               <span className="block text-base font-normal">{t.note}</span>
             </Link>

@@ -4,11 +4,12 @@ DRY_RUN ?= 0
 BOOTSTRAP ?= 0
 TARGET ?= all
 
-.PHONY: help up down logs ps db-migrate db-verify n8n-import check-secrets test test-app test-workers test-shopify validate-content
+.PHONY: help up down logs ps db-migrate db-verify n8n-import check-secrets test test-app test-workers test-shopify validate-content prelaunch-local prelaunch-local-down prelaunch-deploy
 
 help:
 	@echo "make up | down | logs | ps | db-migrate [DRY_RUN=1] [BOOTSTRAP=1] [TARGET=all|pipeline|app] | db-verify"
 	@echo "make n8n-import [APPLY=1] | check-secrets [SECRETS=deploy/secrets.env] | test | validate-content"
+	@echo "make prelaunch-local [EXIT=1] [NO_BUILD=1] [SMOKE=1] | prelaunch-local-down | prelaunch-deploy [APPLY=1]"
 
 up: n8n-import          ## build the workers image and start postgres, redis, n8n (main + worker), workers, assembly, caddy
 	$(COMPOSE) up -d --build
@@ -48,3 +49,12 @@ test-shopify:
 validate-content:
 	python3 tools/build_content.py
 	cd workers && python3 -m compliance templates ../app/content/lifecycle/sequences.json dm/flows/*.json
+
+prelaunch-local:        ## members app in LAUNCH_MODE=prelaunch on a migrated + seeded local Postgres; 390px /go + /waitlist screenshots + checks
+	deploy/scripts/prelaunch_local.sh $(if $(filter 1,$(EXIT)),--exit) $(if $(filter 1,$(NO_BUILD)),--no-build) $(if $(filter 1,$(NO_SCREENS)),--no-screens) $(if $(filter 1,$(SMOKE)),--smoke)
+
+prelaunch-local-down:   ## remove the local prelaunch containers and their DB volume
+	deploy/scripts/prelaunch_local.sh --down
+
+prelaunch-deploy:       ## Vercel prelaunch deploy; prints every step unless APPLY=1 (deploy/vercel_prelaunch.sh)
+	$(if $(filter 1,$(APPLY)),DRY_RUN=0) deploy/vercel_prelaunch.sh

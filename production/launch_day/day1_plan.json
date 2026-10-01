@@ -1,0 +1,828 @@
+{
+ "day": "2026-10-01",
+ "timezone": "America/New_York (EDT, UTC-4)",
+ "generated_by": "production/launch_day/build_day1_plan.py",
+ "constraint": "No performer footage: talking head (Kling AI Avatar v2 lip-sync from a locked Nano Banana keyframe) + 2 no-face inserts (Veo 3.1 Fast i2v) per post.",
+ "cadence_note": "PIPELINE §5.4 week-1 ramp is 2 videos/page/platform; day 1 runs 3 per page by client decision.",
+ "platforms": [
+  "Instagram Reel",
+  "Facebook Reel"
+ ],
+ "posts": [
+  {
+   "post_id": "D1-CY-1",
+   "page": "@changyin",
+   "page_code": "cy",
+   "speaker": "CHANG",
+   "script_id": "S158",
+   "title": "Not a doctor, not a real person",
+   "vo_edits": [],
+   "caption_edits": [],
+   "cta_keyword": "WAITLIST",
+   "cta_deliverable": "Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)",
+   "format": "talking_head + 2 no-face inserts",
+   "music": "warm acoustic",
+   "evidence": [],
+   "has_movement": false,
+   "target_seconds": 44,
+   "hook_line": "Not a doctor, not a real person. An AI welder. Here's what's real.",
+   "skip_line": "New to exercise, or living with a heart condition? Talk to your doctor first.",
+   "beats": [
+    {
+     "t": "0-3",
+     "vo": "Not a doctor, not a real person. An AI welder. Here's what's real.",
+     "ost": "AI CHARACTER · HERE'S WHAT'S REAL",
+     "route": "talk",
+     "study_card": false
+    },
+    {
+     "t": "3-11",
+     "vo": "A team of people made me. My story is fiction. The exercises are real, with an easier version every time.",
+     "ost": "Made by a team · story = fiction",
+     "route": "insert",
+     "study_card": false
+    },
+    {
+     "t": "11-20",
+     "vo": "Every number we use comes from a published study. The study goes in the caption. Check me.",
+     "ost": "Studies in the caption",
+     "route": "talk",
+     "study_card": false
+    },
+    {
+     "t": "20-30",
+     "vo": "Soon we open Strong Years. A new session with me every morning, at your level, with a chair version.",
+     "ost": "Opening soon · daily sessions",
+     "route": "insert",
+     "study_card": false
+    },
+    {
+     "t": "30-36",
+     "vo": "New to exercise, or living with a heart condition? Talk to your doctor first.",
+     "ost": "New to exercise? Doctor first.",
+     "route": "talk",
+     "study_card": false
+    },
+    {
+     "t": "36-44",
+     "vo": "Comment WAITLIST. It's free. Day one now, one email when we open.",
+     "ost": "Comment WAITLIST · free",
+     "route": "talk",
+     "study_card": false
+    }
+   ],
+   "render": {
+    "keyframe": {
+     "set": "SET-GARAGE",
+     "framing": "medium close-up, chest up, the old welding helmet on a nail on the pegboard behind his right shoulder"
+    },
+    "inserts": [
+     {
+      "beat": 1,
+      "still": "Close-up of an old, scuffed welding helmet hanging on a nail on a garage pegboard, warm morning light from the open garage door, dust in the air, shallow depth of field. No people, no text, no logos.",
+      "motion": "Very slow push-in on the welding helmet on its nail; dust drifts in the light. Static otherwise. No people."
+     },
+     {
+      "beat": 3,
+      "still": "Wide garage interior at morning: a sturdy wooden chair pushed against the wall, a rubber floor mat, an 8 kg kettlebell beside the chair, a folded towel on the seat, pegboard with hand tools. No people, no text, no logos, no screens.",
+      "motion": "Slow lateral dolly left to right across the chair and kettlebell; morning light shifts slightly. No people."
+     }
+    ],
+    "study_cards": []
+   },
+   "variants": {
+    "ig": {
+     "platform": "Instagram Reel",
+     "caption": "Comment WAITLIST for the free waitlist link and Chang's day-1 session.\nChang Yin is an AI character made by a team of people; his story is fiction. What's real: the exercises (always with an easier version) and the studies, cited in every caption. Strong Years opens soon with a new session every morning, at your level.\nThe waitlist is free: one email when Strong Years opens, plus at most 3 launch emails in the 72 hours after. No card. Unsubscribe in one click.\n\n#aicharacter #changyin #strongyears #over60\n\nChang & Sun are AI characters. Content is educational, built on published research, and not medical advice. Check with your doctor before starting new exercise.",
+     "hashtags": [
+      "#aicharacter",
+      "#changyin",
+      "#strongyears",
+      "#over60"
+     ],
+     "scheduled_at": "2026-10-01T19:00:00-04:00",
+     "file": "out/day1/@changyin/D1-CY-1/ig.mp4",
+     "cover": "out/day1/@changyin/D1-CY-1/ig_cover.jpg",
+     "on_screen_hook": "AI CHARACTER · HERE'S WHAT'S REAL",
+     "cover_text": "AI. HERE'S WHAT'S REAL.",
+     "ai_label": "Instagram: Share screen → Advanced settings → 'AI info' / Add AI label: ON (account-level 'AI-generated profile' must already be on). Instagram: tap 'Advanced settings' → turn ON 'AI info' (Add AI label). The account bio already says AI characters."
+    },
+    "fb": {
+     "platform": "Facebook Reel",
+     "caption": "Comment WAITLIST for the free waitlist link and Chang's day-1 session.\nChang Yin is an AI character made by a team of people; his story is fiction. What's real: the exercises (always with an easier version) and the studies, cited in every caption. Strong Years opens soon with a new session every morning, at your level.\nThe waitlist is free: one email when Strong Years opens, plus at most 3 launch emails in the 72 hours after. No card. Unsubscribe in one click.\n\n#changyin #aicharacter\n\nChang & Sun are AI characters. Content is educational, built on published research, and not medical advice. Check with your doctor before starting new exercise.",
+     "hashtags": [
+      "#changyin",
+      "#aicharacter"
+     ],
+     "scheduled_at": "2026-10-01T18:30:00-04:00",
+     "file": "out/day1/@changyin/D1-CY-1/fb.mp4",
+     "cover": "out/day1/@changyin/D1-CY-1/fb_cover.jpg",
+     "on_screen_hook": "AI CHARACTER · HERE'S WHAT'S REAL",
+     "cover_text": "AI. HERE'S WHAT'S REAL.",
+     "ai_label": "Facebook: in the composer turn ON 'AI info' / 'Made with AI'. Keep the AI-character line in the caption. Facebook Reels composer: 'AI info' toggle sits under the caption field's settings [verify on device]."
+    }
+   },
+   "first_comment": "Chang Yin is an AI character made by a team of people; the story is fiction.\nComment WAITLIST and the team sends the free link by DM. No card, one email when we open.",
+   "ai_label_reminder": "Turn ON the AI label on BOTH posts (IG 'AI info', FB 'AI info'); the burned-in 'AI character' tag and the caption footer stay as rendered.",
+   "fallback_window": "If a file is not QA-passed 30 min before its slot, do not rush it: post it at tomorrow's 08:30 IG / 08:00 FB slot instead.",
+   "validation": {
+    "build_content_rules": "pass",
+    "compliance_pass1": "pass",
+    "compliance_pass2": "pass",
+    "first_comment_scan": "pass",
+    "llm_judge": "pending: runs in the pipeline (/compliance/scan, mandatory) or a human reviews before posting",
+    "uniqueness_guard": "allow"
+   }
+  },
+  {
+   "post_id": "D1-CY-2",
+   "page": "@changyin",
+   "page_code": "cy",
+   "speaker": "CHANG",
+   "script_id": "S154",
+   "title": "'Lifting is dangerous after 70'",
+   "vo_edits": [],
+   "caption_edits": [
+    "Heart condition? Get medical clearance first (ACSM). New chest pain isn't for exercise. That's for your doctor, today."
+   ],
+   "cta_keyword": "TEST",
+   "cta_deliverable": "Strength Age test (quiz)",
+   "format": "talking_head + 2 no-face inserts",
+   "music": "driving soul",
+   "evidence": [
+    "E02",
+    "E43"
+   ],
+   "has_movement": true,
+   "target_seconds": 47,
+   "hook_line": "'Lifting is dangerous after seventy.' Is it? Watch me pick up this eight-kilo bell.",
+   "skip_line": "Heart condition or new chest pain? Get cleared by your doctor first.",
+   "beats": [
+    {
+     "t": "0-3",
+     "vo": "'Lifting is dangerous after seventy.' Is it? Watch me pick up this eight-kilo bell.",
+     "ost": "MYTH ✗ 'TOO OLD TO LIFT'",
+     "route": "talk",
+     "study_card": false
+    },
+    {
+     "t": "3-12",
+     "vo": "Feet wide. Bell between my feet. Hips back, chest proud. Breathe out and stand.",
+     "ost": "Hips back · chest proud · breathe out",
+     "route": "insert",
+     "study_card": false
+    },
+    {
+     "t": "12-22",
+     "vo": "The strength coaches' position statement says resistance training is safe and effective for older adults. Even frail adults.",
+     "ost": "NSCA: safe + effective for older adults",
+     "route": "talk",
+     "study_card": true
+    },
+    {
+     "t": "22-30",
+     "vo": "What's risky? Going heavy on day one. Straining with your breath held. Rounding your back under a load.",
+     "ost": "Risky: too heavy, too soon",
+     "route": "talk",
+     "study_card": false
+    },
+    {
+     "t": "30-37",
+     "vo": "Start with a backpack and two books. Then a light bell. Slow down. Again.",
+     "ost": "Start: a backpack + 2 books",
+     "route": "insert",
+     "study_card": false
+    },
+    {
+     "t": "37-42",
+     "vo": "Heart condition or new chest pain? Get cleared by your doctor first.",
+     "ost": "Heart condition? Get cleared first.",
+     "route": "talk",
+     "study_card": false
+    },
+    {
+     "t": "42-47",
+     "vo": "Comment TEST. I'll send the three-minute strength test.",
+     "ost": "Comment TEST",
+     "route": "talk",
+     "study_card": false
+    }
+   ],
+   "render": {
+    "keyframe": {
+     "set": "SET-GARAGE",
+     "framing": "medium shot, waist up, a dusty 8 kg kettlebell held low in front of him with both hands"
+    },
+    "inserts": [
+     {
+      "beat": 1,
+      "still": "Side view, framed from the shoulders down (no head or face in frame), an older man in a white tee and dark jeans in a garage doing a kettlebell deadlift: feet wide, 8 kg kettlebell between his feet, hips pushed back, flat back, chest proud, a wooden chair against the wall beside him. Natural light. No text.",
+      "motion": "The man slowly stands up with the kettlebell held close, hips forward, flat back, then lowers it with hips back. One slow rep. Camera static at hip height, framing stays below the shoulders; the head never enters the frame."
+     },
+     {
+      "beat": 4,
+      "still": "Close-up on a rubber garage mat: a canvas backpack with two plain hardcover books (blank spines, no titles) being slid into it by weathered older hands, a plain gold wedding band on the left hand. No face, no text.",
+      "motion": "The hands slide the second book into the backpack and zip it halfway. Camera static, close-up, hands only."
+     }
+    ],
+    "study_cards": [
+     {
+      "beat": 2,
+      "evidence_id": "E02",
+      "title": "NSCA: safe + effective for older adults"
+     }
+    ]
+   },
+   "variants": {
+    "ig": {
+     "platform": "Instagram Reel",
+     "caption": "Comment TEST for the free 3-minute Strength Age test.\nMyth: lifting is dangerous after 70. The NSCA position statement: resistance training is safe and effective for older adults, frail adults included, when it starts light and progresses gradually. The risky part is too heavy, too soon, with a straining breath.\nHeart condition? Get medical clearance first (ACSM). New chest pain isn't for exercise. That's for your doctor, today.\n\n#mythbusting #strengthafter60 #liftingover60 #changyin\n\nGo at your own pace. Hold a counter or chair. Stop if you feel chest pain, dizziness, or sharp pain.\n\nChang & Sun are AI characters. Content is educational, built on published research, and not medical advice. Check with your doctor before starting new exercise.",
+     "hashtags": [
+      "#mythbusting",
+      "#strengthafter60",
+      "#liftingover60",
+      "#changyin"
+     ],
+     "scheduled_at": "2026-10-01T20:00:00-04:00",
+     "file": "out/day1/@changyin/D1-CY-2/ig.mp4",
+     "cover": "out/day1/@changyin/D1-CY-2/ig_cover.jpg",
+     "on_screen_hook": "MYTH ✗ 'TOO OLD TO LIFT'",
+     "cover_text": "TOO OLD TO LIFT?",
+     "ai_label": "Instagram: Share screen → Advanced settings → 'AI info' / Add AI label: ON (account-level 'AI-generated profile' must already be on). Instagram: tap 'Advanced settings' → turn ON 'AI info' (Add AI label). The account bio already says AI characters."
+    },
+    "fb": {
+     "platform": "Facebook Reel",
+     "caption": "Comment TEST for the free 3-minute Strength Age test.\nMyth: lifting is dangerous after 70. The NSCA position statement: resistance training is safe and effective for older adults, frail adults included, when it starts light and progresses gradually. The risky part is too heavy, too soon, with a straining breath.\nHeart condition? Get medical clearance first (ACSM). New chest pain isn't for exercise. That's for your doctor, today.\n\n#changyin #mythbusting\n\nGo at your own pace. Hold a counter or chair. Stop if you feel chest pain, dizziness, or sharp pain.\n\nChang & Sun are AI characters. Content is educational, built on published research, and not medical advice. Check with your doctor before starting new exercise.",
+     "hashtags": [
+      "#changyin",
+      "#mythbusting"
+     ],
+     "scheduled_at": "2026-10-01T20:00:00-04:00",
+     "file": "out/day1/@changyin/D1-CY-2/fb.mp4",
+     "cover": "out/day1/@changyin/D1-CY-2/fb_cover.jpg",
+     "on_screen_hook": "MYTH ✗ 'TOO OLD TO LIFT'",
+     "cover_text": "TOO OLD TO LIFT?",
+     "ai_label": "Facebook: in the composer turn ON 'AI info' / 'Made with AI'. Keep the AI-character line in the caption. Facebook Reels composer: 'AI info' toggle sits under the caption field's settings [verify on device]."
+    }
+   },
+   "first_comment": "Sources: Fragala et al., J Strength Cond Res 2019; Riebe et al., Med Sci Sports Exerc 2015.\nComment TEST and the team sends the free 3-minute Strength Age test by DM.\nChang Yin is an AI character made by the Strong Years team.",
+   "ai_label_reminder": "Turn ON the AI label on BOTH posts (IG 'AI info', FB 'AI info'); the burned-in 'AI character' tag and the caption footer stay as rendered.",
+   "fallback_window": "If a file is not QA-passed 30 min before its slot, do not rush it: post it at tomorrow's 08:30 IG / 08:00 FB slot instead.",
+   "validation": {
+    "build_content_rules": "pass",
+    "compliance_pass1": "pass",
+    "compliance_pass2": "pass",
+    "first_comment_scan": "pass",
+    "llm_judge": "pending: runs in the pipeline (/compliance/scan, mandatory) or a human reviews before posting",
+    "uniqueness_guard": "allow"
+   }
+  },
+  {
+   "post_id": "D1-CY-3",
+   "page": "@changyin",
+   "page_code": "cy",
+   "speaker": "CHANG",
+   "script_id": "S155",
+   "title": "Longer out, not deeper",
+   "vo_edits": [],
+   "caption_edits": [],
+   "cta_keyword": "BREATH",
+   "cta_deliverable": "The 4-6 Breath (5 min)",
+   "format": "talking_head + 2 no-face inserts",
+   "music": "soft piano",
+   "evidence": [
+    "E19"
+   ],
+   "has_movement": false,
+   "target_seconds": 44,
+   "hook_line": "Not faster, not deeper. Longer breaths out. Try it right now with me.",
+   "skip_line": "Feel light-headed? Breathe normally and stop.",
+   "beats": [
+    {
+     "t": "0-3",
+     "vo": "Not faster, not deeper. Longer breaths out. Try it right now with me.",
+     "ost": "LONGER OUT, NOT DEEPER",
+     "route": "talk",
+     "study_card": false
+    },
+    {
+     "t": "3-12",
+     "vo": "Sit tall. Breathe in through your nose for four. Out through soft lips for six.",
+     "ost": "In 4 · out 6",
+     "route": "talk",
+     "study_card": false
+    },
+    {
+     "t": "12-22",
+     "vo": "In, two, three, four. Out, two, three, four, five, six. Again.",
+     "ost": "4 in · 6 out",
+     "route": "insert",
+     "study_card": false
+    },
+    {
+     "t": "22-32",
+     "vo": "Slow breathing, around six breaths a minute, raises heart-rate variability. Your calm-down system gets a vote.",
+     "ost": "~6 breaths a minute",
+     "route": "insert",
+     "study_card": true
+    },
+    {
+     "t": "32-38",
+     "vo": "Feel light-headed? Breathe normally and stop. Keep it easy, no straining.",
+     "ost": "Light-headed? Stop.",
+     "route": "talk",
+     "study_card": false
+    },
+    {
+     "t": "38-44",
+     "vo": "Bench, bed, or bus stop. Comment BREATH for the guided five minutes.",
+     "ost": "Comment BREATH",
+     "route": "talk",
+     "study_card": false
+    }
+   ],
+   "render": {
+    "keyframe": {
+     "set": "SET-PROM",
+     "framing": "medium shot, seated on a promenade bench by a steel railing, foggy sea behind, a small sand timer on the bench beside him"
+    },
+    "inserts": [
+     {
+      "beat": 2,
+      "still": "Close-up of a small wooden sand timer on a weathered promenade bench, fog over grey water behind, steel railing out of focus. No people, no text.",
+      "motion": "The sand flows steadily through the timer; fog drifts slowly behind. Static close-up. No people."
+     },
+     {
+      "beat": 3,
+      "still": "Foggy seaside promenade at dusk: a steel railing with three gulls perched on it, calm grey water, soft light. No people, no text.",
+      "motion": "The gulls lift off the railing one by one and glide away into the fog. Slow, calm. Static camera."
+     }
+    ],
+    "study_cards": [
+     {
+      "beat": 3,
+      "evidence_id": "E19",
+      "title": "~6 breaths a minute"
+     }
+    ]
+   },
+   "variants": {
+    "ig": {
+     "platform": "Instagram Reel",
+     "caption": "Comment BREATH for the guided 5-minute 4-6 Breath.\nIn through the nose for 4, out through soft lips for 6, about 6 breaths a minute. A meta-analysis found slow breathing at that pace increases vagally-mediated heart-rate variability during and after practice.\nLight-headed? Breathe normally and stop.\n\n#breathwork #slowbreathing #over60 #changyin\n\nChang & Sun are AI characters. Content is educational, built on published research, and not medical advice. Check with your doctor before starting new exercise.",
+     "hashtags": [
+      "#breathwork",
+      "#slowbreathing",
+      "#over60",
+      "#changyin"
+     ],
+     "scheduled_at": "2026-10-01T21:00:00-04:00",
+     "file": "out/day1/@changyin/D1-CY-3/ig.mp4",
+     "cover": "out/day1/@changyin/D1-CY-3/ig_cover.jpg",
+     "on_screen_hook": "LONGER OUT, NOT DEEPER",
+     "cover_text": "LONGER OUT",
+     "ai_label": "Instagram: Share screen → Advanced settings → 'AI info' / Add AI label: ON (account-level 'AI-generated profile' must already be on). Instagram: tap 'Advanced settings' → turn ON 'AI info' (Add AI label). The account bio already says AI characters."
+    },
+    "fb": {
+     "platform": "Facebook Reel",
+     "caption": "Comment BREATH for the guided 5-minute 4-6 Breath.\nIn through the nose for 4, out through soft lips for 6, about 6 breaths a minute. A meta-analysis found slow breathing at that pace increases vagally-mediated heart-rate variability during and after practice.\nLight-headed? Breathe normally and stop.\n\n#changyin #breathwork\n\nChang & Sun are AI characters. Content is educational, built on published research, and not medical advice. Check with your doctor before starting new exercise.",
+     "hashtags": [
+      "#changyin",
+      "#breathwork"
+     ],
+     "scheduled_at": "2026-10-01T21:30:00-04:00",
+     "file": "out/day1/@changyin/D1-CY-3/fb.mp4",
+     "cover": "out/day1/@changyin/D1-CY-3/fb_cover.jpg",
+     "on_screen_hook": "LONGER OUT, NOT DEEPER",
+     "cover_text": "LONGER OUT",
+     "ai_label": "Facebook: in the composer turn ON 'AI info' / 'Made with AI'. Keep the AI-character line in the caption. Facebook Reels composer: 'AI info' toggle sits under the caption field's settings [verify on device]."
+    }
+   },
+   "first_comment": "Sources: Laborde et al., Neurosci Biobehav Rev 2022.\nComment BREATH and the team sends the guided 5-minute 4-6 Breath by DM.\nChang Yin is an AI character made by the Strong Years team.",
+   "ai_label_reminder": "Turn ON the AI label on BOTH posts (IG 'AI info', FB 'AI info'); the burned-in 'AI character' tag and the caption footer stay as rendered.",
+   "fallback_window": "If a file is not QA-passed 30 min before its slot, do not rush it: post it at tomorrow's 08:30 IG / 08:00 FB slot instead.",
+   "validation": {
+    "build_content_rules": "pass",
+    "compliance_pass1": "pass",
+    "compliance_pass2": "pass",
+    "first_comment_scan": "pass",
+    "llm_judge": "pending: runs in the pipeline (/compliance/scan, mandatory) or a human reviews before posting",
+    "uniqueness_guard": "allow"
+   }
+  },
+  {
+   "post_id": "D1-SK-1",
+   "page": "@sunyoon.kitchen",
+   "page_code": "sk",
+   "speaker": "SUN",
+   "script_id": "S167",
+   "title": "'Are you even real?'",
+   "vo_edits": [
+    "Real people on a team made me. Chang too."
+   ],
+   "caption_edits": [],
+   "cta_keyword": "WAITLIST",
+   "cta_deliverable": "Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)",
+   "format": "talking_head + 2 no-face inserts",
+   "music": "playful pizzicato",
+   "evidence": [],
+   "has_movement": false,
+   "target_seconds": 45,
+   "hook_line": "'Are you even real?' No. I'm AI. My opinion of your breakfast is real.",
+   "skip_line": "Food allergy or a special diet from your doctor? Their plan comes first.",
+   "beats": [
+    {
+     "t": "0-3",
+     "vo": "'Are you even real?' No. I'm AI. My opinion of your breakfast is real.",
+     "ost": "'ARE YOU EVEN REAL?' NO.",
+     "route": "talk",
+     "study_card": false
+    },
+    {
+     "t": "3-11",
+     "vo": "Real people on a team made me. Chang too. Our story is fiction. Our fifty years? Also fiction. Still exhausting.",
+     "ost": "Made by a team · story = fiction",
+     "route": "talk",
+     "study_card": false
+    },
+    {
+     "t": "11-20",
+     "vo": "What's real: the recipes, the grams, and the study in every caption. Go check. I would.",
+     "ost": "Real: recipes · grams · studies",
+     "route": "insert",
+     "study_card": false
+    },
+    {
+     "t": "20-29",
+     "vo": "Soon we open Strong Years. A recipe every Sunday, a session with him every morning.",
+     "ost": "Opening soon",
+     "route": "insert",
+     "study_card": false
+    },
+    {
+     "t": "29-35",
+     "vo": "Food allergy or a special diet from your doctor? Their plan comes first. Always.",
+     "ost": "Special diet? Doctor's plan first.",
+     "route": "talk",
+     "study_card": false
+    },
+    {
+     "t": "35-45",
+     "vo": "Comment WAITLIST. It's free. One email when we open. I don't spam. The team won't let me.",
+     "ost": "Comment WAITLIST · free",
+     "route": "talk",
+     "study_card": false
+    }
+   ],
+   "render": {
+    "keyframe": {
+     "set": "SET-TABLE",
+     "framing": "medium close-up at the walnut table, reading glasses on, a printed index card held low in one hand (blank side to camera)"
+    },
+    "inserts": [
+     {
+      "beat": 2,
+      "still": "Warm home kitchen counter still life: three real glass jars of napa-cabbage kimchi (red chili visible through the glass, plain metal lids, no labels), a wooden cutting board with sliced scallions, a digital kitchen scale with a blank display. No people, no text, no logos.",
+      "motion": "Slow push-in across the kimchi jars toward the cutting board; steam drifts from a pot out of frame. No people."
+     },
+     {
+      "beat": 3,
+      "still": "Overhead of a walnut table: a steaming bowl of soup with tofu and scallion, chopsticks and a spoon, an older woman's hands setting the bowl down, a jade bangle on the left wrist and a plain gold band. No face, no text.",
+      "motion": "The hands set the bowl down gently and withdraw; steam rises. Static overhead camera, hands only."
+     }
+    ],
+    "study_cards": []
+   },
+   "variants": {
+    "ig": {
+     "platform": "Instagram Reel",
+     "caption": "Comment WAITLIST for the free waitlist link and Sun Yoon's day-1 recipe.\nSun Yoon is an AI character made by a team of people; her story is fiction (she still kept her own family name). What's real: the recipes, the grams (USDA values) and the study cited in each caption.\nThe waitlist is free: one email when Strong Years opens, plus at most 3 launch emails in the 72 hours after. No card. Unsubscribe in one click.\n\n#aicharacter #sunyoon #strongyears #koreangrandma\n\nChang & Sun are AI characters. Content is educational, built on published research, and not medical advice. Check with your doctor before starting new exercise.",
+     "hashtags": [
+      "#aicharacter",
+      "#sunyoon",
+      "#strongyears",
+      "#koreangrandma"
+     ],
+     "scheduled_at": "2026-10-01T19:15:00-04:00",
+     "file": "out/day1/@sunyoon.kitchen/D1-SK-1/ig.mp4",
+     "cover": "out/day1/@sunyoon.kitchen/D1-SK-1/ig_cover.jpg",
+     "on_screen_hook": "'ARE YOU EVEN REAL?' NO.",
+     "cover_text": "NO. I'M AI.",
+     "ai_label": "Instagram: Share screen → Advanced settings → 'AI info' / Add AI label: ON (account-level 'AI-generated profile' must already be on). Instagram: tap 'Advanced settings' → turn ON 'AI info' (Add AI label). The account bio already says AI characters."
+    },
+    "fb": {
+     "platform": "Facebook Reel",
+     "caption": "Comment WAITLIST for the free waitlist link and Sun Yoon's day-1 recipe.\nSun Yoon is an AI character made by a team of people; her story is fiction (she still kept her own family name). What's real: the recipes, the grams (USDA values) and the study cited in each caption.\nThe waitlist is free: one email when Strong Years opens, plus at most 3 launch emails in the 72 hours after. No card. Unsubscribe in one click.\n\n#sunyoon #aicharacter\n\nChang & Sun are AI characters. Content is educational, built on published research, and not medical advice. Check with your doctor before starting new exercise.",
+     "hashtags": [
+      "#sunyoon",
+      "#aicharacter"
+     ],
+     "scheduled_at": "2026-10-01T18:45:00-04:00",
+     "file": "out/day1/@sunyoon.kitchen/D1-SK-1/fb.mp4",
+     "cover": "out/day1/@sunyoon.kitchen/D1-SK-1/fb_cover.jpg",
+     "on_screen_hook": "'ARE YOU EVEN REAL?' NO.",
+     "cover_text": "NO. I'M AI.",
+     "ai_label": "Facebook: in the composer turn ON 'AI info' / 'Made with AI'. Keep the AI-character line in the caption. Facebook Reels composer: 'AI info' toggle sits under the caption field's settings [verify on device]."
+    }
+   },
+   "first_comment": "Sun Yoon is an AI character made by a team of people; the story is fiction.\nComment WAITLIST and the team sends the free link by DM. No card, one email when we open.",
+   "ai_label_reminder": "Turn ON the AI label on BOTH posts (IG 'AI info', FB 'AI info'); the burned-in 'AI character' tag and the caption footer stay as rendered.",
+   "fallback_window": "If a file is not QA-passed 30 min before its slot, do not rush it: post it at tomorrow's 08:30 IG / 08:00 FB slot instead.",
+   "validation": {
+    "build_content_rules": "pass",
+    "compliance_pass1": "pass",
+    "compliance_pass2": "pass",
+    "first_comment_scan": "pass",
+    "llm_judge": "pending: runs in the pipeline (/compliance/scan, mandatory) or a human reviews before posting",
+    "uniqueness_guard": "allow"
+   }
+  },
+  {
+   "post_id": "D1-SK-2",
+   "page": "@sunyoon.kitchen",
+   "page_code": "sk",
+   "speaker": "SUN",
+   "script_id": "S160",
+   "title": "Two kiwis every morning",
+   "vo_edits": [],
+   "caption_edits": [
+    "75 adults with slow, stubborn bathrooms"
+   ],
+   "cta_keyword": "GUT",
+   "cta_deliverable": "Sun Yoon's 7-Day Fiber Ladder (NEW flow, clone SOUP flow)",
+   "format": "talking_head + 2 no-face inserts",
+   "music": "playful pizzicato",
+   "evidence": [
+    "E25"
+   ],
+   "has_movement": false,
+   "target_seconds": 46,
+   "hook_line": "If you eat two green kiwis every morning, here's what a real study found.",
+   "skip_line": "Kiwi allergy, or on a low-potassium diet? Skip this one.",
+   "beats": [
+    {
+     "t": "0-3",
+     "vo": "If you eat two green kiwis every morning, here's what a real study found.",
+     "ost": "2 KIWIS: THE REAL STUDY",
+     "route": "talk",
+     "study_card": false
+    },
+    {
+     "t": "3-12",
+     "vo": "Seventy-five adults with slow, stubborn bathrooms. Kiwis, prunes, or psyllium for four weeks.",
+     "ost": "75 adults · 4 weeks",
+     "route": "talk",
+     "study_card": true
+    },
+    {
+     "t": "12-21",
+     "vo": "All three helped about the same. The kiwis had the fewest side effects. People liked them best.",
+     "ost": "All 3 helped · kiwi: fewest side effects",
+     "route": "insert",
+     "study_card": false
+    },
+    {
+     "t": "21-31",
+     "vo": "Two kiwis, a spoon, done. Skin on is more fiber, if you can stand the fuzz. I can't.",
+     "ost": "Two kiwis, a spoon, done",
+     "route": "insert",
+     "study_card": false
+    },
+    {
+     "t": "31-38",
+     "vo": "Add fiber slowly and drink more water with it. Your belly needs time.",
+     "ost": "Slowly · more water",
+     "route": "talk",
+     "study_card": false
+    },
+    {
+     "t": "38-42",
+     "vo": "Kiwi allergy, or on a low-potassium diet? Skip this one.",
+     "ost": "Kiwi allergy? Low potassium? Skip.",
+     "route": "talk",
+     "study_card": false
+    },
+    {
+     "t": "42-46",
+     "vo": "Comment GUT. I'll send my seven-day fiber ladder.",
+     "ost": "Comment GUT",
+     "route": "talk",
+     "study_card": false
+    }
+   ],
+   "render": {
+    "keyframe": {
+     "set": "SET-KITCHEN",
+     "framing": "medium close-up at the kitchen counter, over-the-glasses look, two green kiwis halved on a cutting board in front of her, glass kimchi jars on the shelf behind"
+    },
+    "inserts": [
+     {
+      "beat": 2,
+      "still": "Overhead of three small white bowls side by side on a wooden counter: two halved green kiwis, a few dried prunes, a spoonful of psyllium husk. Natural window light. No people, no text.",
+      "motion": "Very slow overhead drift across the three bowls from left to right. No people."
+     },
+     {
+      "beat": 3,
+      "still": "Close-up of an older woman's hand (jade bangle on the left wrist, plain gold band) scooping green kiwi flesh out of a halved kiwi with a teaspoon over a cutting board. No face, no text.",
+      "motion": "The spoon scoops the kiwi half clean in one smooth motion, hand only, static close-up."
+     }
+    ],
+    "study_cards": [
+     {
+      "beat": 1,
+      "evidence_id": "E25",
+      "title": "75 adults · 4 weeks"
+     }
+    ]
+   },
+   "variants": {
+    "ig": {
+     "platform": "Instagram Reel",
+     "caption": "Comment GUT for Sun Yoon's 7-Day Fiber Ladder.\nIn a 4-week trial of 75 adults with slow, stubborn bathrooms, 2 green kiwis a day, 100 g prunes and 12 g psyllium improved bowel movements similarly; kiwi had the fewest side effects and the highest satisfaction (Chey et al., 2021; exploratory).\nKiwi allergy or a low-potassium diet? Skip it. Add fiber slowly, with water.\n\n#highfiber #kiwi #koreangrandma #sunyoon\n\nChang & Sun are AI characters. Content is educational, built on published research, and not medical advice. Check with your doctor before starting new exercise.",
+     "hashtags": [
+      "#highfiber",
+      "#kiwi",
+      "#koreangrandma",
+      "#sunyoon"
+     ],
+     "scheduled_at": "2026-10-01T20:15:00-04:00",
+     "file": "out/day1/@sunyoon.kitchen/D1-SK-2/ig.mp4",
+     "cover": "out/day1/@sunyoon.kitchen/D1-SK-2/ig_cover.jpg",
+     "on_screen_hook": "2 KIWIS: THE REAL STUDY",
+     "cover_text": "2 KIWIS A DAY?",
+     "ai_label": "Instagram: Share screen → Advanced settings → 'AI info' / Add AI label: ON (account-level 'AI-generated profile' must already be on). Instagram: tap 'Advanced settings' → turn ON 'AI info' (Add AI label). The account bio already says AI characters."
+    },
+    "fb": {
+     "platform": "Facebook Reel",
+     "caption": "Comment GUT for Sun Yoon's 7-Day Fiber Ladder.\nIn a 4-week trial of 75 adults with slow, stubborn bathrooms, 2 green kiwis a day, 100 g prunes and 12 g psyllium improved bowel movements similarly; kiwi had the fewest side effects and the highest satisfaction (Chey et al., 2021; exploratory).\nKiwi allergy or a low-potassium diet? Skip it. Add fiber slowly, with water.\n\n#sunyoon #highfiber\n\nChang & Sun are AI characters. Content is educational, built on published research, and not medical advice. Check with your doctor before starting new exercise.",
+     "hashtags": [
+      "#sunyoon",
+      "#highfiber"
+     ],
+     "scheduled_at": "2026-10-01T20:15:00-04:00",
+     "file": "out/day1/@sunyoon.kitchen/D1-SK-2/fb.mp4",
+     "cover": "out/day1/@sunyoon.kitchen/D1-SK-2/fb_cover.jpg",
+     "on_screen_hook": "2 KIWIS: THE REAL STUDY",
+     "cover_text": "2 KIWIS A DAY?",
+     "ai_label": "Facebook: in the composer turn ON 'AI info' / 'Made with AI'. Keep the AI-character line in the caption. Facebook Reels composer: 'AI info' toggle sits under the caption field's settings [verify on device]."
+    }
+   },
+   "first_comment": "Sources: Chey et al., Am J Gastroenterol 2021.\nComment GUT and the team sends Sun Yoon's 7-Day Fiber Ladder by DM.\nSun Yoon is an AI character made by the Strong Years team.",
+   "ai_label_reminder": "Turn ON the AI label on BOTH posts (IG 'AI info', FB 'AI info'); the burned-in 'AI character' tag and the caption footer stay as rendered.",
+   "fallback_window": "If a file is not QA-passed 30 min before its slot, do not rush it: post it at tomorrow's 08:30 IG / 08:00 FB slot instead.",
+   "validation": {
+    "build_content_rules": "pass",
+    "compliance_pass1": "pass",
+    "compliance_pass2": "pass",
+    "first_comment_scan": "pass",
+    "llm_judge": "pending: runs in the pipeline (/compliance/scan, mandatory) or a human reviews before posting",
+    "uniqueness_guard": "allow"
+   }
+  },
+  {
+   "post_id": "D1-SK-3",
+   "page": "@sunyoon.kitchen",
+   "page_code": "sk",
+   "speaker": "SUN",
+   "script_id": "S161",
+   "title": "Chicken soup for a cold: show me the study",
+   "vo_edits": [],
+   "caption_edits": [],
+   "cta_keyword": "SOUP",
+   "cta_deliverable": "Sun Yoon's Three Soups",
+   "format": "talking_head + 2 no-face inserts",
+   "music": "playful pizzicato",
+   "evidence": [
+    "E57"
+   ],
+   "has_movement": false,
+   "target_seconds": 47,
+   "hook_line": "Chicken soup for a cold? Show me the study. Okay. Here it is.",
+   "skip_line": "Watching salt for your heart or kidneys? Use half the salt and more water.",
+   "beats": [
+    {
+     "t": "0-3",
+     "vo": "Chicken soup for a cold? Show me the study. Okay. Here it is.",
+     "ost": "MYTH? CHICKEN SOUP",
+     "route": "talk",
+     "study_card": false
+    },
+    {
+     "t": "3-12",
+     "vo": "Year 2000. Scientists put soup on white blood cells in a lab dish. The cells slowed down.",
+     "ost": "Lab dish. Not people.",
+     "route": "talk",
+     "study_card": true
+    },
+    {
+     "t": "12-20",
+     "vo": "A dish is not a person. The authors said so. Benefit in people? Untested.",
+     "ost": "Benefit in people: untested",
+     "route": "insert",
+     "study_card": false
+    },
+    {
+     "t": "20-31",
+     "vo": "So why do I make it? Warm, salty, easy to swallow, and it gets protein into a tired person. That's real.",
+     "ost": "Warm · easy · protein",
+     "route": "insert",
+     "study_card": false
+    },
+    {
+     "t": "31-38",
+     "vo": "Watching salt for your heart or kidneys? Use half the salt and more water.",
+     "ost": "Watching salt? Half the salt.",
+     "route": "talk",
+     "study_card": false
+    },
+    {
+     "t": "38-43",
+     "vo": "Fever over three days or trouble breathing? No soup. Call your doctor.",
+     "ost": "Fever 3+ days? Call your doctor.",
+     "route": "talk",
+     "study_card": false
+    },
+    {
+     "t": "43-47",
+     "vo": "Comment SOUP. Three of my soups, with grams.",
+     "ost": "Comment SOUP",
+     "route": "talk",
+     "study_card": false
+    }
+   ],
+   "render": {
+    "keyframe": {
+     "set": "SET-KITCHEN",
+     "framing": "medium close-up by the gas stove, a steaming pot of chicken and radish soup beside her, glass kimchi jars on the shelf behind"
+    },
+    "inserts": [
+     {
+      "beat": 2,
+      "still": "Close-up of a clear glass laboratory petri dish on a white lab bench beside a small cup of golden broth, cool clinical light. No people, no text, no labels.",
+      "motion": "Slow push-in on the petri dish; faint steam rises from the broth cup. No people."
+     },
+     {
+      "beat": 3,
+      "still": "Overhead of a stove-top: a ladle lifting chicken, white radish and scallion from a steaming pot into a ceramic bowl, an older woman's hand with a jade bangle. No face, no text.",
+      "motion": "The ladle pours the soup into the bowl, steam rising; hands only; static overhead camera."
+     }
+    ],
+    "study_cards": [
+     {
+      "beat": 1,
+      "evidence_id": "E57",
+      "title": "Lab dish. Not people."
+     }
+    ]
+   },
+   "variants": {
+    "ig": {
+     "platform": "Instagram Reel",
+     "caption": "Comment SOUP for Sun Yoon's Three Soups.\nThe famous chicken-soup study (Rennard et al., Chest 2000) was in a lab dish: soup slowed white-blood-cell movement, and the authors said benefit in people remains untested. Make it because it's warm, easy and carries protein.\nWatching salt? Use half. Fever over 3 days or trouble breathing? Call your doctor.\n\n#mythbusting #chickensoup #koreanfood #sunyoon\n\nChang & Sun are AI characters. Content is educational, built on published research, and not medical advice. Check with your doctor before starting new exercise.",
+     "hashtags": [
+      "#mythbusting",
+      "#chickensoup",
+      "#koreanfood",
+      "#sunyoon"
+     ],
+     "scheduled_at": "2026-10-01T21:15:00-04:00",
+     "file": "out/day1/@sunyoon.kitchen/D1-SK-3/ig.mp4",
+     "cover": "out/day1/@sunyoon.kitchen/D1-SK-3/ig_cover.jpg",
+     "on_screen_hook": "MYTH? CHICKEN SOUP",
+     "cover_text": "LAB DISH. NOT YOU.",
+     "ai_label": "Instagram: Share screen → Advanced settings → 'AI info' / Add AI label: ON (account-level 'AI-generated profile' must already be on). Instagram: tap 'Advanced settings' → turn ON 'AI info' (Add AI label). The account bio already says AI characters."
+    },
+    "fb": {
+     "platform": "Facebook Reel",
+     "caption": "Comment SOUP for Sun Yoon's Three Soups.\nThe famous chicken-soup study (Rennard et al., Chest 2000) was in a lab dish: soup slowed white-blood-cell movement, and the authors said benefit in people remains untested. Make it because it's warm, easy and carries protein.\nWatching salt? Use half. Fever over 3 days or trouble breathing? Call your doctor.\n\n#sunyoon #mythbusting\n\nChang & Sun are AI characters. Content is educational, built on published research, and not medical advice. Check with your doctor before starting new exercise.",
+     "hashtags": [
+      "#sunyoon",
+      "#mythbusting"
+     ],
+     "scheduled_at": "2026-10-01T21:45:00-04:00",
+     "file": "out/day1/@sunyoon.kitchen/D1-SK-3/fb.mp4",
+     "cover": "out/day1/@sunyoon.kitchen/D1-SK-3/fb_cover.jpg",
+     "on_screen_hook": "MYTH? CHICKEN SOUP",
+     "cover_text": "LAB DISH. NOT YOU.",
+     "ai_label": "Facebook: in the composer turn ON 'AI info' / 'Made with AI'. Keep the AI-character line in the caption. Facebook Reels composer: 'AI info' toggle sits under the caption field's settings [verify on device]."
+    }
+   },
+   "first_comment": "Sources: Rennard et al., Chest 2000.\nComment SOUP and the team sends Sun Yoon's Three Soups (with grams) by DM.\nSun Yoon is an AI character made by the Strong Years team.",
+   "ai_label_reminder": "Turn ON the AI label on BOTH posts (IG 'AI info', FB 'AI info'); the burned-in 'AI character' tag and the caption footer stay as rendered.",
+   "fallback_window": "If a file is not QA-passed 30 min before its slot, do not rush it: post it at tomorrow's 08:30 IG / 08:00 FB slot instead.",
+   "validation": {
+    "build_content_rules": "pass",
+    "compliance_pass1": "pass",
+    "compliance_pass2": "pass",
+    "first_comment_scan": "pass",
+    "llm_judge": "pending: runs in the pipeline (/compliance/scan, mandatory) or a human reviews before posting",
+    "uniqueness_guard": "allow"
+   }
+  }
+ ],
+ "validation_summary": {
+  "posts": 6,
+  "problems": [],
+  "all_pass": true
+ }
+}

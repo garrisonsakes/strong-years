@@ -59,6 +59,15 @@ async function main() {
     check("growth endpoint returns per-post rows", growth.status === 200 && Array.isArray(g.first_touch) && Array.isArray(g.last_touch), String(growth.status));
   } else check("growth endpoint closed without a token", growth.status === 404 || growth.status === 401, String(growth.status));
 
+  const go = await req("/go?p=cy");
+  const goHtml = await go.text();
+  check("/go bio hub renders", go.status === 200 && goHtml.includes("/waitlist"), String(go.status));
+  if (!expectLive) check("/go leads with the free waitlist (prelaunch)", goHtml.indexOf("/waitlist") > -1 && (goHtml.indexOf("/waitlist") < goHtml.indexOf("myshopify.com") || !goHtml.includes("myshopify.com")));
+  const b = await req("/b?t=STRONG&p=cy&pid=SMOKE_TEST");
+  const bLoc = b.headers.get("location") ?? "";
+  if (expectLive) check("/b keyword redirect goes to the store or /join", b.status === 302 && /myshopify\.com|\/join/.test(bLoc), bLoc);
+  else check("/b keyword redirect goes to the waitlist with attribution (prelaunch)", b.status === 302 && bLoc.includes("/waitlist") && bLoc.includes("keyword=STRONG") && bLoc.includes("post_id=SMOKE_TEST"), bLoc);
+
   const admin = await req("/admin");
   check("/admin requires auth", admin.status === 401, String(admin.status));
   const app = await req("/app");

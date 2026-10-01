@@ -32,7 +32,7 @@ def _print_result(sid: str, r: dict, final: dict) -> None:
     print(f"{sid:<6} {final['verdict']:<7} {' | '.join(parts) if parts else 'clean'}")
 
 
-TEMPLATE_KEYS = {"subject", "body", "text", "dm", "message", "caption", "first_comment", "reply", "prompt", "line",
+TEMPLATE_KEYS = {"subject", "preview", "body", "text", "dm", "message", "caption", "first_comment", "reply", "prompt", "line",
                  "hook_line", "vo", "ost", "title"}
 
 

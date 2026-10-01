@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { copy } from "@/lib/copy";
 import { env, mode } from "@/lib/config";
+import { isShopify } from "@/lib/billing/provider";
 
 export function DisclosureStrip() {
   return (
@@ -16,8 +17,10 @@ export function DisclosureStrip() {
 }
 
 export function DemoBanner() {
-  if (!mode.anyMock) return null;
-  const parts = [mode.mockDb && "data is in-memory demo data (resets on restart)", mode.mockStripe && "payments are simulated, no card is charged", mode.mockAi && "coach replies are scripted"].filter(Boolean);
+  // On the Shopify launch path Stripe is unused, so a missing Stripe key is not "simulated payments" (no banner to real visitors).
+  const simulatedPayments = mode.mockStripe && !isShopify();
+  if (!mode.mockDb && !simulatedPayments) return null;
+  const parts = [mode.mockDb && "data is in-memory demo data (resets on restart)", simulatedPayments && "payments are simulated, no card is charged", mode.mockAi && "coach replies are scripted"].filter(Boolean);
   return (
     <div className="no-print border-b-2 border-ink bg-brass text-ink" role="note">
       <p className="wrap py-2 text-fine font-bold">Demo mode: {parts.join("; ")}.</p>
