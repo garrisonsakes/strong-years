@@ -1,0 +1,38 @@
+D,page,script_id,tag,title,speaker,format,target_seconds,source
+-21,@changyin,S158,runway·WAITLIST,"Not a doctor, not a real person",CHANG,F08,44,runway_scripts.json
+-21,@changyin,S01,F02·STRONG,30-second chair stand test,CHANG,F02,44,scripts.json
+-21,@sunyoon.kitchen,S167,runway·WAITLIST,'Are you even real?',SUN,F26,45,runway_scripts.json
+-21,@sunyoon.kitchen,S33,F06·GUT,Two kiwis a day,SUN,F06,39,scripts.json
+-21,@changandsun,S169,runway·BEGIN,He flexes in every shiny surface,DUO,F08,44,runway_scripts.json
+-21,@changandsun,S52,F34·BALANCE,Balance showdown: loser does dishes,DUO,F34,40,scripts.json
+-20,@changyin,S04,F16·TEST,Handshake: grip as a signal,CHANG,F16,43,scripts.json
+-20,@changyin,S19,F11·STRONG,"7-day challenge, day 1",CHANG,F11,42,scripts.json
+-20,@sunyoon.kitchen,S40,F07·KNEES,Nobody is coming to save your knees,SUN,F07,41,scripts.json
+-20,@changandsun,S51,F08·STRONG,Microwave flexing / the sign,DUO,F08,40,scripts.json
+-19,@changyin,S159,runway·TEST,"30-second chair test, my number first",CHANG,F02,47,runway_scripts.json
+-19,@changyin,S06,F28·STRONG,Too old to build muscle? Nonagenarians,CHANG,F28,41,scripts.json
+-19,@sunyoon.kitchen,S31,F04·SOUP,Onion water? Put the onion in the soup,SUN,F04,41,scripts.json
+-19,@sunyoon.kitchen,S39,F06·SOUP,Honey for night cough,SUN,F06,38,scripts.json
+-19,@changandsun,S53,F33·FAMILY,Our daughter thinks we train too much,DUO,F33,41,scripts.json
+-19,@changandsun,S55,F18·SOUP,Dumpling count = protein count,DUO,F18,40,scripts.json
+-18,@changyin,S10,F21·BREATH,Cyclic sigh before bed,CHANG,F21,40,scripts.json
+-18,@changyin,S03,F02·TEST,Sitting-rising (floor) test,CHANG,F02,44,scripts.json
+-18,@sunyoon.kitchen,S160,runway·GUT,Two kiwis every morning,SUN,F06,46,runway_scripts.json
+-18,@sunyoon.kitchen,S35,F06·GUT,Walk after dinner,SUN,F06,41,scripts.json
+-18,@changandsun,S168,runway·TEST,Loser does dishes: the chair test,DUO,F34,48,runway_scripts.json
+-18,@changandsun,S57,F08·SLEEP,He snores: the study says see the doctor,DUO,F08,38,scripts.json
+-17,@changyin,S02,F02·BALANCE,10-second one-leg test,CHANG,F02,42,scripts.json
+-17,@sunyoon.kitchen,S36,F31·GUT,Mother's easy kimchi,SUN,F31,43,scripts.json
+-17,@changandsun,S54,F08·BACK,He says he stretched,DUO,F08,39,scripts.json
+-16,@changyin,S152,runway·STRONG,Heel raises while you brush,CHANG,F32,45,runway_scripts.json
+-16,@changyin,S05,F16·STRONG,10 days in bed,CHANG,F16,43,scripts.json
+-16,@sunyoon.kitchen,S32,F18·SOUP,He was 20 grams short,SUN,F18,41,scripts.json
+-16,@sunyoon.kitchen,S41,F07·BEGIN,Loneliness: call someone today,SUN,F07,41,scripts.json
+-16,@changandsun,S58,F35·BREATH,"When we fight, we exhale",DUO,F35,39,scripts.json
+-16,@changandsun,S56,F34·STRONG,"Couples workout, nobody gets divorced",DUO,F34,41,scripts.json
+-15,@changyin,S07,F28·STRONG,Lifting dangerous after 60? 121 trials,CHANG,F28,42,scripts.json
+-15,@changyin,S11,F05·SLEEP,90-second lying-down wind-down,CHANG,F05,45,scripts.json
+-15,@sunyoon.kitchen,S161,runway·SOUP,Chicken soup for a cold: show me the study,SUN,F28,47,runway_scripts.json
+-15,@sunyoon.kitchen,S34,F04·GUT,Liver tea? Your liver has a job,SUN,F04,39,scripts.json
+-15,@changandsun,S172,runway·SOUP,Fourteen dumplings: the protein count,DUO,F18,46,runway_scripts.json
+-15,@changandsun,S59,F08·TEST,We're AI. The advice isn't fake.,DUO,F08,40,scripts.json

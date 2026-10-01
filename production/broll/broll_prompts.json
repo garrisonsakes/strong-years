@@ -1,0 +1,547 @@
+{
+  "version": "2026-10-01",
+  "rule": "No-face B-roll only (no people, faces or hands): no likeness, no identity lock; still AI-labelled and C2PA-signed when used.",
+  "count": 60,
+  "items": [
+    {
+      "id": "BR01",
+      "set_code": "SET-GARAGE",
+      "prompt": "Wooden chair pushed against a garage wall, morning sidelight through the open door, dust in the air. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR02",
+      "set_code": "SET-GARAGE",
+      "prompt": "Three kettlebells (8, 12, 20 kg, unmarked) lined up on a rubber mat, slow push-in. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR03",
+      "set_code": "SET-GARAGE",
+      "prompt": "Resistance bands hanging on a pegboard, gentle sway. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 4,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR04",
+      "set_code": "SET-GARAGE",
+      "prompt": "Clipboard log on a nail, pencil on a string, light moving across it. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR05",
+      "set_code": "SET-GARAGE",
+      "prompt": "Convex safety mirror in a garage corner reflecting the empty room. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR06",
+      "set_code": "SET-GARAGE",
+      "prompt": "Squat rack with an unloaded barbell, slow pan left to right. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 4,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR07",
+      "set_code": "SET-GARAGE",
+      "prompt": "Chalk bowl on a stool, a puff of chalk dust settling. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR08",
+      "set_code": "SET-GARAGE",
+      "prompt": "Garage door rising, morning light flooding the concrete floor. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR09",
+      "set_code": "SET-GARAGE",
+      "prompt": "Empty sturdy chair and a kitchen-height counter, locked-off wide. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 4,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR10",
+      "set_code": "SET-GARAGE",
+      "prompt": "Water bottle and a folded towel on a workbench, morning light. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR11",
+      "set_code": "SET-GARAGE",
+      "prompt": "Floor-level slider past a rubber mat and the chair legs. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR12",
+      "set_code": "SET-GARAGE",
+      "prompt": "Wall clock with no readable numbers, soft-focus garage behind. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 4,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR13",
+      "set_code": "SET-KITCHEN",
+      "prompt": "Onggi crocks on a sunny windowsill, slow push-in. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR14",
+      "set_code": "SET-KITCHEN",
+      "prompt": "Gas stove flame igniting under a pot, blue flame close-up. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR15",
+      "set_code": "SET-KITCHEN",
+      "prompt": "Soup simmering in a pot, steam rising in window light. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 4,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR16",
+      "set_code": "SET-KITCHEN",
+      "prompt": "Digital kitchen scale with a block of tofu, display out of focus. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR17",
+      "set_code": "SET-KITCHEN",
+      "prompt": "Chopping board with sliced scallions and garlic, overhead locked-off. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR18",
+      "set_code": "SET-KITCHEN",
+      "prompt": "Rice cooker steam vent puffing, kitchen in soft focus. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 4,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR19",
+      "set_code": "SET-KITCHEN",
+      "prompt": "Kimchi in a glass jar on the counter, top-down slow rotate. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR20",
+      "set_code": "SET-KITCHEN",
+      "prompt": "Fridge whiteboard with marker scribbles out of focus, slow rack focus to a jar of chopsticks. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR21",
+      "set_code": "SET-KITCHEN",
+      "prompt": "Bowls of banchan arranged on a wooden tray, overhead. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 4,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR22",
+      "set_code": "SET-KITCHEN",
+      "prompt": "Ladle lifting soup from a pot, steam, shallow depth of field. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR23",
+      "set_code": "SET-KITCHEN",
+      "prompt": "Barley tea poured into a cup from a kettle on a stand, light through the glass. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR24",
+      "set_code": "SET-KITCHEN",
+      "prompt": "Grocery bag on the counter: cabbage, eggs, tofu, beans (no labels readable). Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 4,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR25",
+      "set_code": "SET-KITCHEN",
+      "prompt": "Kettle starting to steam on the stove. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR26",
+      "set_code": "SET-KITCHEN",
+      "prompt": "Clean dish rack with two bowls drying, afternoon light. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR27",
+      "set_code": "SET-YARD",
+      "prompt": "Wooden fence rail in morning light, dew on the wood. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 4,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR28",
+      "set_code": "SET-YARD",
+      "prompt": "Persimmon tree branches with ripe fruit swaying. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR29",
+      "set_code": "SET-YARD",
+      "prompt": "Clothesline with a laundry basket below, breeze. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR30",
+      "set_code": "SET-YARD",
+      "prompt": "Garden path pavers, slow dolly forward. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 4,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR31",
+      "set_code": "SET-YARD",
+      "prompt": "Bench beside the fence, golden hour. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR32",
+      "set_code": "SET-YARD",
+      "prompt": "Bird feeder swaying, soft background. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR33",
+      "set_code": "SET-YARD",
+      "prompt": "Watering can beside raised vegetable beds, morning light. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 4,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR34",
+      "set_code": "SET-YARD",
+      "prompt": "Wind chime moving on the porch eave, garden behind. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR35",
+      "set_code": "SET-PROM",
+      "prompt": "Foggy waterfront promenade at 7 am, steel railing leading into fog. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR36",
+      "set_code": "SET-PROM",
+      "prompt": "Empty promenade bench, gulls in the distance. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 4,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR37",
+      "set_code": "SET-PROM",
+      "prompt": "Footpath with morning puddles reflecting the sky. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR38",
+      "set_code": "SET-PROM",
+      "prompt": "Steel railing close-up with fog droplets. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR39",
+      "set_code": "SET-PROM",
+      "prompt": "Sunrise breaking through fog over calm water, locked-off wide. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 4,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR40",
+      "set_code": "SET-LIVING",
+      "prompt": "Sofa with a knitted throw and a reading lamp switching on. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR41",
+      "set_code": "SET-LIVING",
+      "prompt": "Floor mat unrolled in a living room, afternoon light. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR42",
+      "set_code": "SET-LIVING",
+      "prompt": "Bookshelf with plants, slow pan, spines unreadable. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 4,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR43",
+      "set_code": "SET-LIVING",
+      "prompt": "Window with sheer curtains moving in a breeze. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR44",
+      "set_code": "SET-LIVING",
+      "prompt": "Armchair and a side table with reading glasses folded. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR45",
+      "set_code": "SET-BED",
+      "prompt": "Bedside lamp with warm light, folded pajamas on the bed. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 4,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR46",
+      "set_code": "SET-BED",
+      "prompt": "Made bed with a plumped pillow, still life, slow push-in. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR47",
+      "set_code": "SET-BED",
+      "prompt": "Night window with soft city lights bokeh. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR48",
+      "set_code": "SET-TABLE",
+      "prompt": "Study card face-down on a wooden table beside barley tea. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 4,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR49",
+      "set_code": "SET-TABLE",
+      "prompt": "Fruit bowl with apples and persimmons, late-morning light. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR50",
+      "set_code": "SET-TABLE",
+      "prompt": "Notebook and pencil on a table, slow rack focus. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR51",
+      "set_code": "SET-TABLE",
+      "prompt": "Two cups of tea steaming on a table, top-down. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 4,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR52",
+      "set_code": "SET-STOOP",
+      "prompt": "Five-step stoop with a handrail, morning sun. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR53",
+      "set_code": "SET-STOOP",
+      "prompt": "Bottom stair close-up, worn edge, slow tilt up the handrail. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR54",
+      "set_code": "SET-STOOP",
+      "prompt": "Front door with a welcome mat, afternoon light. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 4,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR55",
+      "set_code": "SET-MARKET",
+      "prompt": "Produce aisle of an Asian supermarket: napa cabbage stack, labels out of focus. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR56",
+      "set_code": "SET-MARKET",
+      "prompt": "Bins of mushrooms and greens, slow dolly. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR57",
+      "set_code": "SET-MARKET",
+      "prompt": "Tofu packages in a chilled case, labels unreadable. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 4,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR58",
+      "set_code": "SET-MARKET",
+      "prompt": "Farmers-market stall with persimmons and pears under an awning. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR59",
+      "set_code": "SET-BATH",
+      "prompt": "Grab bar beside a bathroom sink, morning light. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 6,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    },
+    {
+      "id": "BR60",
+      "set_code": "SET-BATH",
+      "prompt": "Bath mat and slip-resistant shoes beside the tub. Photorealistic, shot on iPhone at eye level, natural light, handheld micro-shake, 9:16 vertical, 24-30 fps, documentary realism. No people, no faces, no hands, no text, no logos, no readable labels.",
+      "negative_prompt": "people, person, face, faces, hands, fingers, body parts, text, letters, words, logos, readable labels, watermark, floating objects, liquid changing colour, cartoon, CGI look, oversaturated",
+      "duration_s": 4,
+      "pipeline": "Nano Banana 2 keyframe (set plate as reference) -> Veo 3.1 image-to-video, audio off",
+      "ai_label": "AI-generated: C2PA-signed and platform AI label when published"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": "2026-10-01",
+  "rule": "Designed voices only. Never cloned from a real person (VIDEO_RE §9.4, CHARACTERS §4.6/§5.6/§13.3). A person and the cultural consultant pick one of the candidates; the voice_id is then locked and never regenerated.",
+  "model": "Eleven v3 (Flash v2.5 fallback)",
+  "candidates": 8,
+  "voices": {
+    "chang": {
+      "description": "Warm, low baritone male voice in his mid-70s with a light East Asian (Mandarin/Korean-influenced) accent. Calm, unhurried, clear articulation, slight gravel, smiles audibly on jokes. Studio-clean but intimate, as if speaking to one person in a garage.",
+      "settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.8,
+        "style": 0.2
+      },
+      "target_wpm": 140,
+      "preview_text": "Good morning. I'm Chang. AI character. Real chair. Push your chair against the wall. Shoes on. One... two... breathe out... three."
+    },
+    "sun": {
+      "description": "Bright, crisp female voice in her mid-70s with a light Korean accent. Quick comic timing, dry, warm underneath, slightly raspy on laughs, precise consonants.",
+      "settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.8,
+        "style": 0.35
+      },
+      "target_wpm": 155,
+      "preview_text": "Sun Yoon here. One pot on Sunday, two lunches done. The grams are written in. Chang says it's his favorite. Chang says that about every soup."
+    }
+  }
+}

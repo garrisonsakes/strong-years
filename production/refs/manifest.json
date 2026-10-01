@@ -1,0 +1,1042 @@
+{
+  "version": "2026-10-01",
+  "status": "LOCKED: master prompts verbatim from CHARACTERS §13.1 / VIDEO_RE §9.2.1 plus the wardrobe-code text (§4.5 / §5.5). Do not paraphrase. Any edit changes sha256 and render_refs.py refuses the item.",
+  "order": "Generate C01 and S01 first; a person picks one candidate each; then C02/S02 with those as refs; then the rest with the two locked refs (<= 5 refs per call); duo last.",
+  "counts": {
+    "chang": 24,
+    "sun": 24,
+    "duo": 6
+  },
+  "items": [
+    {
+      "id": "C01",
+      "character": "chang",
+      "shot": "front neutral, head and shoulders, plain warm-gray wall",
+      "wardrobe_code": "C-CASUAL",
+      "set_code": "none",
+      "prompt": "Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Olive or brick-red flannel shirt open over a white tee, dark jeans, house slippers; or a cream cable-knit cardigan (evenings). Shot: front neutral, head and shoulders, plain warm-gray wall. 9:16 vertical. Same person as the reference images; keep facial structure, hairline, beard, eyebrow scar and body proportions identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [],
+      "seed": 321649645,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "67bb936200222d64834cc72caa6cfd7d45c7162eb22269e3b8a6f8cca64dfca4"
+    },
+    {
+      "id": "C02",
+      "character": "chang",
+      "shot": "three-quarter left, warm smile, head and shoulders",
+      "wardrobe_code": "C-CASUAL",
+      "set_code": "none",
+      "prompt": "Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Olive or brick-red flannel shirt open over a white tee, dark jeans, house slippers; or a cream cable-knit cardigan (evenings). Shot: three-quarter left, warm smile, head and shoulders. 9:16 vertical. Same person as the reference images; keep facial structure, hairline, beard, eyebrow scar and body proportions identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01"
+      ],
+      "seed": 924715883,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "ad12d20d9fa0f26d88869d9a4ee28e9e651e85d847cd6f8b87177b08d4e867d2"
+    },
+    {
+      "id": "C03",
+      "character": "chang",
+      "shot": "three-quarter right, warm smile, head and shoulders",
+      "wardrobe_code": "C-CASUAL",
+      "set_code": "none",
+      "prompt": "Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Olive or brick-red flannel shirt open over a white tee, dark jeans, house slippers; or a cream cable-knit cardigan (evenings). Shot: three-quarter right, warm smile, head and shoulders. 9:16 vertical. Same person as the reference images; keep facial structure, hairline, beard, eyebrow scar and body proportions identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02"
+      ],
+      "seed": 234534316,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "16742787df1274819bbd21ee510c171331af2547aec4db8013af00e19d1a6e55"
+    },
+    {
+      "id": "C04",
+      "character": "chang",
+      "shot": "left profile, head and shoulders",
+      "wardrobe_code": "C-CASUAL",
+      "set_code": "none",
+      "prompt": "Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Olive or brick-red flannel shirt open over a white tee, dark jeans, house slippers; or a cream cable-knit cardigan (evenings). Shot: left profile, head and shoulders. 9:16 vertical. Same person as the reference images; keep facial structure, hairline, beard, eyebrow scar and body proportions identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02"
+      ],
+      "seed": 883180390,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "aac254aaf3adc6005c40fb904198fc765de3fc1052fe06c79288cea3d5d9c18c"
+    },
+    {
+      "id": "C05",
+      "character": "chang",
+      "shot": "right profile, head and shoulders",
+      "wardrobe_code": "C-CASUAL",
+      "set_code": "none",
+      "prompt": "Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Olive or brick-red flannel shirt open over a white tee, dark jeans, house slippers; or a cream cable-knit cardigan (evenings). Shot: right profile, head and shoulders. 9:16 vertical. Same person as the reference images; keep facial structure, hairline, beard, eyebrow scar and body proportions identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02"
+      ],
+      "seed": 309674867,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "5ce3e32a7b452c017a509c9e9f4495d92309a2a2ced403f838b775cf7c277336"
+    },
+    {
+      "id": "C06",
+      "character": "chang",
+      "shot": "front, mid laugh, eyes creased",
+      "wardrobe_code": "C-CASUAL",
+      "set_code": "none",
+      "prompt": "Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Olive or brick-red flannel shirt open over a white tee, dark jeans, house slippers; or a cream cable-knit cardigan (evenings). Shot: front, mid laugh, eyes creased. 9:16 vertical. Same person as the reference images; keep facial structure, hairline, beard, eyebrow scar and body proportions identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02"
+      ],
+      "seed": 1784013216,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "c6ecdde2777ee9a25163dc437a24f9cec6ae3ddf2b36f9bb360092db60104e5f"
+    },
+    {
+      "id": "C07",
+      "character": "chang",
+      "shot": "full body front, standing tall, arms relaxed",
+      "wardrobe_code": "C-TRAIN-A",
+      "set_code": "SET-GARAGE",
+      "prompt": "Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Faded navy cotton tank top (the famous tank), black athletic shorts to the knee, flat minimalist training shoes (black), short white socks. Chalk on his hands. Shot: full body front, standing tall, arms relaxed. Set SET-GARAGE (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, hairline, beard, eyebrow scar and body proportions identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02"
+      ],
+      "seed": 871823050,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "2f0f28ac02b112355928bb4dbfe2386c24e06f8f770f0a59c17ee71a4a8abf20"
+    },
+    {
+      "id": "C08",
+      "character": "chang",
+      "shot": "full body back view, shoulders and slight upper-back rounding visible",
+      "wardrobe_code": "C-TRAIN-A",
+      "set_code": "SET-GARAGE",
+      "prompt": "Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Faded navy cotton tank top (the famous tank), black athletic shorts to the knee, flat minimalist training shoes (black), short white socks. Chalk on his hands. Shot: full body back view, shoulders and slight upper-back rounding visible. Set SET-GARAGE (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, hairline, beard, eyebrow scar and body proportions identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02"
+      ],
+      "seed": 897077810,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "b42dac4791b5ff073f29f9db2a15fe611a6e1153c090daaad686a0cf1f979824"
+    },
+    {
+      "id": "C09",
+      "character": "chang",
+      "shot": "full body side view, sit-to-stand start position on a wooden chair against the wall",
+      "wardrobe_code": "C-TRAIN-A",
+      "set_code": "SET-GARAGE",
+      "prompt": "Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Faded navy cotton tank top (the famous tank), black athletic shorts to the knee, flat minimalist training shoes (black), short white socks. Chalk on his hands. Shot: full body side view, sit-to-stand start position on a wooden chair against the wall. Set SET-GARAGE (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, hairline, beard, eyebrow scar and body proportions identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02"
+      ],
+      "seed": 160726126,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "806a46d0707891b462bffd4d1bfc03e8926bb31ee4df0c4ffba93c15f35b97aa"
+    },
+    {
+      "id": "C10",
+      "character": "chang",
+      "shot": "medium-full, holding a 12 kg kettlebell close at the chest, forearm tendons visible",
+      "wardrobe_code": "C-TRAIN-A",
+      "set_code": "SET-GARAGE",
+      "prompt": "Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Faded navy cotton tank top (the famous tank), black athletic shorts to the knee, flat minimalist training shoes (black), short white socks. Chalk on his hands. Shot: medium-full, holding a 12 kg kettlebell close at the chest, forearm tendons visible. Set SET-GARAGE (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, hairline, beard, eyebrow scar and body proportions identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02"
+      ],
+      "seed": 425189008,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "de19064a1126a86121ffc1f75ab270200cd7e82b7251371159eec2570dc78bcb"
+    },
+    {
+      "id": "C11",
+      "character": "chang",
+      "shot": "close-up of both hands palms up: calluses, gold wedding band on the left hand",
+      "wardrobe_code": "C-TRAIN-A",
+      "set_code": "SET-GARAGE",
+      "prompt": "Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Faded navy cotton tank top (the famous tank), black athletic shorts to the knee, flat minimalist training shoes (black), short white socks. Chalk on his hands. Shot: close-up of both hands palms up: calluses, gold wedding band on the left hand. Set SET-GARAGE (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, hairline, beard, eyebrow scar and body proportions identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02"
+      ],
+      "seed": 582322510,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "d0da059136cf862fcc7278509c73f6a1fa4e13aa6f99cc0ba08db1090f3d3319"
+    },
+    {
+      "id": "C12",
+      "character": "chang",
+      "shot": "close-up of the back of the right hand: burn scar, age spots, chalk",
+      "wardrobe_code": "C-TRAIN-A",
+      "set_code": "SET-GARAGE",
+      "prompt": "Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Faded navy cotton tank top (the famous tank), black athletic shorts to the knee, flat minimalist training shoes (black), short white socks. Chalk on his hands. Shot: close-up of the back of the right hand: burn scar, age spots, chalk. Set SET-GARAGE (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, hairline, beard, eyebrow scar and body proportions identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02"
+      ],
+      "seed": 201652540,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "ca2486902bf42ca4408db6134a17969e13e0914e1927d27b6b39eee212681651"
+    },
+    {
+      "id": "C13",
+      "character": "chang",
+      "shot": "medium, writing on a clipboard log by the pegboard",
+      "wardrobe_code": "C-TRAIN-A",
+      "set_code": "SET-GARAGE",
+      "prompt": "Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Faded navy cotton tank top (the famous tank), black athletic shorts to the knee, flat minimalist training shoes (black), short white socks. Chalk on his hands. Shot: medium, writing on a clipboard log by the pegboard. Set SET-GARAGE (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, hairline, beard, eyebrow scar and body proportions identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02"
+      ],
+      "seed": 1715849863,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "8e0ac55bf1be82b3f44a17336ac354da97d6eb5b2b27d74aacc40b0936b3f3ae"
+    },
+    {
+      "id": "C14",
+      "character": "chang",
+      "shot": "full body, outdoors at the fence rail, one hand on the rail",
+      "wardrobe_code": "C-TRAIN-B",
+      "set_code": "SET-YARD",
+      "prompt": "Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Charcoal long-sleeve henley with sleeves pushed up, soft black jogger pants, gray-white flat walking shoes, navy knit beanie (winter). Shot: full body, outdoors at the fence rail, one hand on the rail. Set SET-YARD (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, hairline, beard, eyebrow scar and body proportions identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02"
+      ],
+      "seed": 210827794,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "e6aab5f6651132bff2835f49ec19a5fc596da931cc847d5f3e7e0c9e25968df3"
+    },
+    {
+      "id": "C15",
+      "character": "chang",
+      "shot": "full body, tai chi opening posture on a foggy promenade by a steel railing",
+      "wardrobe_code": "C-TRAIN-B",
+      "set_code": "SET-PROM",
+      "prompt": "Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Charcoal long-sleeve henley with sleeves pushed up, soft black jogger pants, gray-white flat walking shoes, navy knit beanie (winter). Shot: full body, tai chi opening posture on a foggy promenade by a steel railing. Set SET-PROM (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, hairline, beard, eyebrow scar and body proportions identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02"
+      ],
+      "seed": 1254117671,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "80174ad0c3c63c2307891bc4366c5a920c47699f4c6582a03e8320441fca911c"
+    },
+    {
+      "id": "C16",
+      "character": "chang",
+      "shot": "medium, kitchen counter, sleeves rolled, pink floral apron",
+      "wardrobe_code": "C-KITCHEN",
+      "set_code": "SET-KITCHEN",
+      "prompt": "Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing White T-shirt + Sun's pink floral apron (running bit: \"it's the only one she lets me use\"), sleeves rolled. Shot: medium, kitchen counter, sleeves rolled, pink floral apron. Set SET-KITCHEN (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, hairline, beard, eyebrow scar and body proportions identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02"
+      ],
+      "seed": 1788848719,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "bbbc9070fc91757c56587abd44e139767c4a30443a6a0855455e4e5c5a9e965e"
+    },
+    {
+      "id": "C17",
+      "character": "chang",
+      "shot": "medium-full, seated on the sofa, reading glasses in hand",
+      "wardrobe_code": "C-CASUAL",
+      "set_code": "SET-LIVING",
+      "prompt": "Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Olive or brick-red flannel shirt open over a white tee, dark jeans, house slippers; or a cream cable-knit cardigan (evenings). Shot: medium-full, seated on the sofa, reading glasses in hand. Set SET-LIVING (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, hairline, beard, eyebrow scar and body proportions identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02"
+      ],
+      "seed": 856857297,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "7d1d1373c53cb3345601640b0ad78fb384ab69347f0357156c59069dde3cbf81"
+    },
+    {
+      "id": "C18",
+      "character": "chang",
+      "shot": "medium, evening lamp light, relaxed",
+      "wardrobe_code": "C-CASUAL",
+      "set_code": "SET-LIVING",
+      "prompt": "Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Olive or brick-red flannel shirt open over a white tee, dark jeans, house slippers; or a cream cable-knit cardigan (evenings). Shot: medium, evening lamp light, relaxed. Set SET-LIVING (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, hairline, beard, eyebrow scar and body proportions identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02"
+      ],
+      "seed": 1620452071,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "17e53234635358e2bfacb12ed6ec2ea99f51420f9ebd592c89b783be4ca4b7ea"
+    },
+    {
+      "id": "C19",
+      "character": "chang",
+      "shot": "medium, formal, standing by the window",
+      "wardrobe_code": "C-FORMAL",
+      "set_code": "SET-LIVING",
+      "prompt": "Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Navy suit, white shirt open at the collar, no tie. Or for Lunar New Year: a deep-red knit sweater (warm, not a costume). Shot: medium, formal, standing by the window. Set SET-LIVING (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, hairline, beard, eyebrow scar and body proportions identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02"
+      ],
+      "seed": 772032521,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "5d6e26a9c8a60987c5d32a9339535f3e9afdb0cfdc7526f789e2940939041bf9"
+    },
+    {
+      "id": "C20",
+      "character": "chang",
+      "shot": "medium, seated on the bed edge, reading glasses on forehead",
+      "wardrobe_code": "C-BED",
+      "set_code": "SET-BED",
+      "prompt": "Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Soft blue cotton pajama set, reading glasses on his forehead. Shot: medium, seated on the bed edge, reading glasses on forehead. Set SET-BED (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, hairline, beard, eyebrow scar and body proportions identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02"
+      ],
+      "seed": 1384925453,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "aa3afbf8589c2e05875e0a5c0e30783f0a16e3731ae49209bb6cede7557fc5f5"
+    },
+    {
+      "id": "C21",
+      "character": "chang",
+      "shot": "full body, on the bottom step of a five-step stoop, one hand on the handrail",
+      "wardrobe_code": "C-TRAIN-A",
+      "set_code": "SET-STOOP",
+      "prompt": "Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Faded navy cotton tank top (the famous tank), black athletic shorts to the knee, flat minimalist training shoes (black), short white socks. Chalk on his hands. Shot: full body, on the bottom step of a five-step stoop, one hand on the handrail. Set SET-STOOP (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, hairline, beard, eyebrow scar and body proportions identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02"
+      ],
+      "seed": 880584973,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "872a8b83b5f4eae9b684d64f8b58d8ef56580d1d8fafc615f81f712fe3b6e323"
+    },
+    {
+      "id": "C22",
+      "character": "chang",
+      "shot": "medium, at the table with a study card and a cup of barley tea, explaining with one hand",
+      "wardrobe_code": "C-CASUAL",
+      "set_code": "SET-TABLE",
+      "prompt": "Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Olive or brick-red flannel shirt open over a white tee, dark jeans, house slippers; or a cream cable-knit cardigan (evenings). Shot: medium, at the table with a study card and a cup of barley tea, explaining with one hand. Set SET-TABLE (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, hairline, beard, eyebrow scar and body proportions identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02"
+      ],
+      "seed": 250035705,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "2816d0c00da12ed7b01b408bf425f688013472f2a7a8e61ad5003dc71dcd418d"
+    },
+    {
+      "id": "C23",
+      "character": "chang",
+      "shot": "full body walking toward camera on the promenade, handheld eye level",
+      "wardrobe_code": "C-TRAIN-B",
+      "set_code": "SET-PROM",
+      "prompt": "Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Charcoal long-sleeve henley with sleeves pushed up, soft black jogger pants, gray-white flat walking shoes, navy knit beanie (winter). Shot: full body walking toward camera on the promenade, handheld eye level. Set SET-PROM (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, hairline, beard, eyebrow scar and body proportions identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02"
+      ],
+      "seed": 1816270271,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "77d9bce65e57ec99459a8d0d13b61331b2ae67c6d1d5dd0d2af994634106f474"
+    },
+    {
+      "id": "C24",
+      "character": "chang",
+      "shot": "close-up, front, natural window light, skin texture and pores visible, no smile",
+      "wardrobe_code": "C-CASUAL",
+      "set_code": "none",
+      "prompt": "Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Olive or brick-red flannel shirt open over a white tee, dark jeans, house slippers; or a cream cable-knit cardigan (evenings). Shot: close-up, front, natural window light, skin texture and pores visible, no smile. 9:16 vertical. Same person as the reference images; keep facial structure, hairline, beard, eyebrow scar and body proportions identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02"
+      ],
+      "seed": 322773721,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "f1ff73adfe5d92efcf2f3f877c1624aeb0894c2019ed45ba50c61aa3cf207c29"
+    },
+    {
+      "id": "S01",
+      "character": "sun",
+      "shot": "front neutral, head and shoulders, plain warm-gray wall",
+      "wardrobe_code": "S-CARDI-JADE",
+      "set_code": "none",
+      "prompt": "Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Jade-green cardigan over a white blouse, pearl studs. (The most recognizable look; use for thumbnails.). Shot: front neutral, head and shoulders, plain warm-gray wall. 9:16 vertical. Same person as the reference images; keep facial structure, silver bob, tortoiseshell clip, mole beside the left nostril and body proportions identical.",
+      "negative_prompt": "geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [],
+      "seed": 893297896,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "0255a2522ef0143f0291e92dc8feab840fc1e173fec30b34def883fbf4a6bff9"
+    },
+    {
+      "id": "S02",
+      "character": "sun",
+      "shot": "three-quarter left, mischievous smirk, reading glasses on",
+      "wardrobe_code": "S-CARDI-JADE",
+      "set_code": "none",
+      "prompt": "Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Jade-green cardigan over a white blouse, pearl studs. (The most recognizable look; use for thumbnails.). Shot: three-quarter left, mischievous smirk, reading glasses on. 9:16 vertical. Same person as the reference images; keep facial structure, silver bob, tortoiseshell clip, mole beside the left nostril and body proportions identical.",
+      "negative_prompt": "geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "S01"
+      ],
+      "seed": 1152641303,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "41829d2bc0c8a0c29c9eec546672657508c55cc33554fd6a73c3226af6091ce7"
+    },
+    {
+      "id": "S03",
+      "character": "sun",
+      "shot": "three-quarter right, smirk, glasses hanging on the cord",
+      "wardrobe_code": "S-CARDI-JADE",
+      "set_code": "none",
+      "prompt": "Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Jade-green cardigan over a white blouse, pearl studs. (The most recognizable look; use for thumbnails.). Shot: three-quarter right, smirk, glasses hanging on the cord. 9:16 vertical. Same person as the reference images; keep facial structure, silver bob, tortoiseshell clip, mole beside the left nostril and body proportions identical.",
+      "negative_prompt": "geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "S01",
+        "S02"
+      ],
+      "seed": 561793266,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "55c2412705e3d5954cf30aa722501c90c17202e84b5c372fb66f902de09a2f85"
+    },
+    {
+      "id": "S04",
+      "character": "sun",
+      "shot": "left profile showing the tortoiseshell clip",
+      "wardrobe_code": "S-CARDI-JADE",
+      "set_code": "none",
+      "prompt": "Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Jade-green cardigan over a white blouse, pearl studs. (The most recognizable look; use for thumbnails.). Shot: left profile showing the tortoiseshell clip. 9:16 vertical. Same person as the reference images; keep facial structure, silver bob, tortoiseshell clip, mole beside the left nostril and body proportions identical.",
+      "negative_prompt": "geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "S01",
+        "S02"
+      ],
+      "seed": 881981701,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "82b0c76df637d1cb659fa5531ceaa3373d3c0f9c3254a49b623b68bcca906bd6"
+    },
+    {
+      "id": "S05",
+      "character": "sun",
+      "shot": "right profile",
+      "wardrobe_code": "S-CARDI-JADE",
+      "set_code": "none",
+      "prompt": "Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Jade-green cardigan over a white blouse, pearl studs. (The most recognizable look; use for thumbnails.). Shot: right profile. 9:16 vertical. Same person as the reference images; keep facial structure, silver bob, tortoiseshell clip, mole beside the left nostril and body proportions identical.",
+      "negative_prompt": "geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "S01",
+        "S02"
+      ],
+      "seed": 967230425,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "e57508005cdaec8e49e765d10c92b281ab2049d97ac55c6088c688b1230c8337"
+    },
+    {
+      "id": "S06",
+      "character": "sun",
+      "shot": "front, laughing, eyes creased",
+      "wardrobe_code": "S-CARDI-JADE",
+      "set_code": "none",
+      "prompt": "Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Jade-green cardigan over a white blouse, pearl studs. (The most recognizable look; use for thumbnails.). Shot: front, laughing, eyes creased. 9:16 vertical. Same person as the reference images; keep facial structure, silver bob, tortoiseshell clip, mole beside the left nostril and body proportions identical.",
+      "negative_prompt": "geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "S01",
+        "S02"
+      ],
+      "seed": 831762687,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "84e80a566b9f4f551baf2297a9a467436e2c187d416781528a9fde4b247a1aaa"
+    },
+    {
+      "id": "S07",
+      "character": "sun",
+      "shot": "full body standing in the kitchen",
+      "wardrobe_code": "S-KITCHEN",
+      "set_code": "SET-KITCHEN",
+      "prompt": "Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Cream long-sleeve top, blue-and-white striped linen apron, sleeves pushed up, glasses on the cord. Shot: full body standing in the kitchen. Set SET-KITCHEN (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, silver bob, tortoiseshell clip, mole beside the left nostril and body proportions identical.",
+      "negative_prompt": "geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "S01",
+        "S02"
+      ],
+      "seed": 1338255225,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "418ddf9c4dc62980b5861dc4f4294a2a3f12bb9c9fcf7bf1da72bed4ed43af9c"
+    },
+    {
+      "id": "S08",
+      "character": "sun",
+      "shot": "medium, stirring a pot on the gas stove, steam",
+      "wardrobe_code": "S-KITCHEN",
+      "set_code": "SET-KITCHEN",
+      "prompt": "Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Cream long-sleeve top, blue-and-white striped linen apron, sleeves pushed up, glasses on the cord. Shot: medium, stirring a pot on the gas stove, steam. Set SET-KITCHEN (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, silver bob, tortoiseshell clip, mole beside the left nostril and body proportions identical.",
+      "negative_prompt": "geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "S01",
+        "S02"
+      ],
+      "seed": 864197390,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "4b900da8569f5e7be47d98e3e5b40137ce9f7652f28168ae682794c8b939ce51"
+    },
+    {
+      "id": "S09",
+      "character": "sun",
+      "shot": "medium, weighing tofu on a digital scale, reading glasses on",
+      "wardrobe_code": "S-KITCHEN",
+      "set_code": "SET-KITCHEN",
+      "prompt": "Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Cream long-sleeve top, blue-and-white striped linen apron, sleeves pushed up, glasses on the cord. Shot: medium, weighing tofu on a digital scale, reading glasses on. Set SET-KITCHEN (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, silver bob, tortoiseshell clip, mole beside the left nostril and body proportions identical.",
+      "negative_prompt": "geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "S01",
+        "S02"
+      ],
+      "seed": 114681988,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "50dead1d234fec6023c0aa7e3bfc5cd310af5957d2f592ed0d3e9e032aa97617"
+    },
+    {
+      "id": "S10",
+      "character": "sun",
+      "shot": "close-up of hands: jade bangle on the left wrist, gold wedding band, chopping scallions",
+      "wardrobe_code": "S-KITCHEN",
+      "set_code": "SET-KITCHEN",
+      "prompt": "Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Cream long-sleeve top, blue-and-white striped linen apron, sleeves pushed up, glasses on the cord. Shot: close-up of hands: jade bangle on the left wrist, gold wedding band, chopping scallions. Set SET-KITCHEN (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, silver bob, tortoiseshell clip, mole beside the left nostril and body proportions identical.",
+      "negative_prompt": "geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "S01",
+        "S02"
+      ],
+      "seed": 1024911617,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "502993da4166711805b395d8d1f8d8982107887a5b908b346facf6da38d42a67"
+    },
+    {
+      "id": "S11",
+      "character": "sun",
+      "shot": "medium, seated at the table, blunt look straight to camera",
+      "wardrobe_code": "S-CARDI-JADE",
+      "set_code": "SET-TABLE",
+      "prompt": "Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Jade-green cardigan over a white blouse, pearl studs. (The most recognizable look; use for thumbnails.). Shot: medium, seated at the table, blunt look straight to camera. Set SET-TABLE (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, silver bob, tortoiseshell clip, mole beside the left nostril and body proportions identical.",
+      "negative_prompt": "geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "S01",
+        "S02"
+      ],
+      "seed": 1243335404,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "b83d63eebb289e2fe662f60b0b61572fa23b0acdf142e4434974b10c63376ba8"
+    },
+    {
+      "id": "S12",
+      "character": "sun",
+      "shot": "medium, seated in the living room",
+      "wardrobe_code": "S-CARDI-MUSTARD",
+      "set_code": "SET-LIVING",
+      "prompt": "Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Mustard-yellow cardigan, navy top. Shot: medium, seated in the living room. Set SET-LIVING (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, silver bob, tortoiseshell clip, mole beside the left nostril and body proportions identical.",
+      "negative_prompt": "geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "S01",
+        "S02"
+      ],
+      "seed": 1540742125,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "3a79eb0ada1166fad81a582f872672da6b39ba422a25d47b26d037892d534081"
+    },
+    {
+      "id": "S13",
+      "character": "sun",
+      "shot": "full body walking on the promenade",
+      "wardrobe_code": "S-WALK",
+      "set_code": "SET-PROM",
+      "prompt": "Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Navy quilted vest over a lavender long-sleeve, black stretch pants, white walking shoes, wide-brim beige sun visor (beloved bit). Shot: full body walking on the promenade. Set SET-PROM (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, silver bob, tortoiseshell clip, mole beside the left nostril and body proportions identical.",
+      "negative_prompt": "geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "S01",
+        "S02"
+      ],
+      "seed": 47172734,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "5e8c1307b28cf8bc539a3e0464b579655fbc25231f323fced8a7fa8de0bfdb39"
+    },
+    {
+      "id": "S14",
+      "character": "sun",
+      "shot": "full body at the backyard fence, balance stance, one hand hovering over the rail",
+      "wardrobe_code": "S-WALK",
+      "set_code": "SET-YARD",
+      "prompt": "Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Navy quilted vest over a lavender long-sleeve, black stretch pants, white walking shoes, wide-brim beige sun visor (beloved bit). Shot: full body at the backyard fence, balance stance, one hand hovering over the rail. Set SET-YARD (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, silver bob, tortoiseshell clip, mole beside the left nostril and body proportions identical.",
+      "negative_prompt": "geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "S01",
+        "S02"
+      ],
+      "seed": 1964956420,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "aa0c95d9c95a89d981c3e9db4f24cc2c5310f394b69ffbb116a03937f2275096"
+    },
+    {
+      "id": "S15",
+      "character": "sun",
+      "shot": "full body, resistance band row",
+      "wardrobe_code": "S-TRAIN",
+      "set_code": "SET-GARAGE",
+      "prompt": "Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Plum zip-up track jacket, black leggings, the visor pushed up on her head. Shot: full body, resistance band row. Set SET-GARAGE (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, silver bob, tortoiseshell clip, mole beside the left nostril and body proportions identical.",
+      "negative_prompt": "geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "S01",
+        "S02"
+      ],
+      "seed": 1701762234,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "4cd5a40da5ba5a8197f2ca357b2090aaa79fc7fe75f6bad6d9d5f7abbe65c2f5"
+    },
+    {
+      "id": "S16",
+      "character": "sun",
+      "shot": "medium, formal, standing by the window",
+      "wardrobe_code": "S-FORMAL",
+      "set_code": "SET-LIVING",
+      "prompt": "Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Navy dress with a gold brooch. On Seollal/Chuseok: a pastel hanbok (authentic, holiday only, never a costume for health content). Shot: medium, formal, standing by the window. Set SET-LIVING (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, silver bob, tortoiseshell clip, mole beside the left nostril and body proportions identical.",
+      "negative_prompt": "geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "S01",
+        "S02"
+      ],
+      "seed": 254577715,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "e34c1d9898d7b7c40d25d58bdd122aec5d6456d419d7bc0c410810ffcdb00947"
+    },
+    {
+      "id": "S17",
+      "character": "sun",
+      "shot": "medium, evening lamp",
+      "wardrobe_code": "S-BED",
+      "set_code": "SET-BED",
+      "prompt": "Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Soft pink cotton pajamas, hair clipped back, face cream on. Shot: medium, evening lamp. Set SET-BED (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, silver bob, tortoiseshell clip, mole beside the left nostril and body proportions identical.",
+      "negative_prompt": "geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "S01",
+        "S02"
+      ],
+      "seed": 1046656065,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "e617ab90b2ee9bbef37b44e321ecca684c40daf7fc5acdd26335126c7c37112a"
+    },
+    {
+      "id": "S18",
+      "character": "sun",
+      "shot": "medium, writing on the fridge whiteboard with a marker",
+      "wardrobe_code": "S-KITCHEN",
+      "set_code": "SET-KITCHEN",
+      "prompt": "Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Cream long-sleeve top, blue-and-white striped linen apron, sleeves pushed up, glasses on the cord. Shot: medium, writing on the fridge whiteboard with a marker. Set SET-KITCHEN (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, silver bob, tortoiseshell clip, mole beside the left nostril and body proportions identical.",
+      "negative_prompt": "geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "S01",
+        "S02"
+      ],
+      "seed": 1592761739,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "cb96be8e259a2ef1bb12f5f016a7809cc198af25bdb23f39569136e7a32afbf2"
+    },
+    {
+      "id": "S19",
+      "character": "sun",
+      "shot": "close-up, front, window light, the mole beside the left nostril visible",
+      "wardrobe_code": "S-CARDI-JADE",
+      "set_code": "none",
+      "prompt": "Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Jade-green cardigan over a white blouse, pearl studs. (The most recognizable look; use for thumbnails.). Shot: close-up, front, window light, the mole beside the left nostril visible. 9:16 vertical. Same person as the reference images; keep facial structure, silver bob, tortoiseshell clip, mole beside the left nostril and body proportions identical.",
+      "negative_prompt": "geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "S01",
+        "S02"
+      ],
+      "seed": 1632240323,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "3560c6b9e1c1cc4d4f59da4e7bb7a0be03599a234450acb82e431306d3990d1e"
+    },
+    {
+      "id": "S20",
+      "character": "sun",
+      "shot": "medium, holding a bowl of soup toward camera, steam",
+      "wardrobe_code": "S-KITCHEN",
+      "set_code": "SET-KITCHEN",
+      "prompt": "Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Cream long-sleeve top, blue-and-white striped linen apron, sleeves pushed up, glasses on the cord. Shot: medium, holding a bowl of soup toward camera, steam. Set SET-KITCHEN (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, silver bob, tortoiseshell clip, mole beside the left nostril and body proportions identical.",
+      "negative_prompt": "geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "S01",
+        "S02"
+      ],
+      "seed": 122518517,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "e1da59f9a5c9868473c989812046eb786b0a3bd98207591086b0381baeafd9fe"
+    },
+    {
+      "id": "S21",
+      "character": "sun",
+      "shot": "medium, in the produce aisle holding a napa cabbage",
+      "wardrobe_code": "S-WALK",
+      "set_code": "SET-MARKET",
+      "prompt": "Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Navy quilted vest over a lavender long-sleeve, black stretch pants, white walking shoes, wide-brim beige sun visor (beloved bit). Shot: medium, in the produce aisle holding a napa cabbage. Set SET-MARKET (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, silver bob, tortoiseshell clip, mole beside the left nostril and body proportions identical.",
+      "negative_prompt": "geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "S01",
+        "S02"
+      ],
+      "seed": 1450539606,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "82ce765618329d0df3dc67bbae0a15d01a6d65848f7d854069301f68333cb4c7"
+    },
+    {
+      "id": "S22",
+      "character": "sun",
+      "shot": "medium-full, seated on the sofa, arms crossed, amused",
+      "wardrobe_code": "S-CARDI-MUSTARD",
+      "set_code": "SET-LIVING",
+      "prompt": "Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Mustard-yellow cardigan, navy top. Shot: medium-full, seated on the sofa, arms crossed, amused. Set SET-LIVING (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, silver bob, tortoiseshell clip, mole beside the left nostril and body proportions identical.",
+      "negative_prompt": "geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "S01",
+        "S02"
+      ],
+      "seed": 1022763097,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "7e95ce5785fa6a68c5727db415e9df0e07f5cbb5b12a92de3a98042bccdc87ee"
+    },
+    {
+      "id": "S23",
+      "character": "sun",
+      "shot": "full body back view walking away on the promenade",
+      "wardrobe_code": "S-WALK",
+      "set_code": "SET-PROM",
+      "prompt": "Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Navy quilted vest over a lavender long-sleeve, black stretch pants, white walking shoes, wide-brim beige sun visor (beloved bit). Shot: full body back view walking away on the promenade. Set SET-PROM (the empty set plate is a background reference). 9:16 vertical. Same person as the reference images; keep facial structure, silver bob, tortoiseshell clip, mole beside the left nostril and body proportions identical.",
+      "negative_prompt": "geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "S01",
+        "S02"
+      ],
+      "seed": 705888552,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "39c383ed4fa9a276feea32889f2a15f1f13f61c8cb441df138e4f87a13b72181"
+    },
+    {
+      "id": "S24",
+      "character": "sun",
+      "shot": "close-up of the reading glasses on the jade beaded cord and the pearl stud earring",
+      "wardrobe_code": "S-CARDI-JADE",
+      "set_code": "none",
+      "prompt": "Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Jade-green cardigan over a white blouse, pearl studs. (The most recognizable look; use for thumbnails.). Shot: close-up of the reading glasses on the jade beaded cord and the pearl stud earring. 9:16 vertical. Same person as the reference images; keep facial structure, silver bob, tortoiseshell clip, mole beside the left nostril and body proportions identical.",
+      "negative_prompt": "geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "S01",
+        "S02"
+      ],
+      "seed": 860708480,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "0dd33d7471487182f991ffe2635cb8ef514ea7cdb322a64d141c2482c7270ba1"
+    },
+    {
+      "id": "D01",
+      "character": "duo",
+      "shot": "both on the sofa, Sun on the left, Chang on the right, relaxed, laughing",
+      "wardrobe_code": "C-CASUAL + S-CARDI-JADE",
+      "set_code": "SET-LIVING",
+      "prompt": "Two people. Left: Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Jade-green cardigan over a white blouse, pearl studs. (The most recognizable look; use for thumbnails.). Right: Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Olive or brick-red flannel shirt open over a white tee, dark jeans, house slippers; or a cream cable-knit cardigan (evenings). Shot: both on the sofa, Sun on the left, Chang on the right, relaxed, laughing. Set SET-LIVING (the empty set plate is a background reference). 9:16 vertical. Same two people as the reference images; keep both faces, hairlines, Chang's beard and eyebrow scar, Sun's bob, clip and mole identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion, extra people",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02",
+        "S01",
+        "S02"
+      ],
+      "seed": 6733626,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "1464f7677e674f96711f5edbbdb56a715e4de9387d2cb75f74a4d3a2fade2e3c"
+    },
+    {
+      "id": "D02",
+      "character": "duo",
+      "shot": "garage: Chang lifting a 12 kg kettlebell, Sun in the doorway with arms crossed",
+      "wardrobe_code": "C-TRAIN-A + S-CARDI-MUSTARD",
+      "set_code": "SET-GARAGE",
+      "prompt": "Two people. Left: Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Mustard-yellow cardigan, navy top. Right: Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Faded navy cotton tank top (the famous tank), black athletic shorts to the knee, flat minimalist training shoes (black), short white socks. Chalk on his hands. Shot: garage: Chang lifting a 12 kg kettlebell, Sun in the doorway with arms crossed. Set SET-GARAGE (the empty set plate is a background reference). 9:16 vertical. Same two people as the reference images; keep both faces, hairlines, Chang's beard and eyebrow scar, Sun's bob, clip and mole identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion, extra people",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02",
+        "S01",
+        "S02"
+      ],
+      "seed": 70294785,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "880617b1855671d4a31b858b782eba6cb0f4ea65b8a2e768694d2a76014b7130"
+    },
+    {
+      "id": "D03",
+      "character": "duo",
+      "shot": "kitchen side by side at the counter",
+      "wardrobe_code": "C-KITCHEN + S-KITCHEN",
+      "set_code": "SET-KITCHEN",
+      "prompt": "Two people. Left: Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Cream long-sleeve top, blue-and-white striped linen apron, sleeves pushed up, glasses on the cord. Right: Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing White T-shirt + Sun's pink floral apron (running bit: \"it's the only one she lets me use\"), sleeves rolled. Shot: kitchen side by side at the counter. Set SET-KITCHEN (the empty set plate is a background reference). 9:16 vertical. Same two people as the reference images; keep both faces, hairlines, Chang's beard and eyebrow scar, Sun's bob, clip and mole identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion, extra people",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02",
+        "S01",
+        "S02"
+      ],
+      "seed": 1370600896,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "e158d589fa42be42f6321eb778b4317e29a82045d5a2246ed6cae22c973ad58a"
+    },
+    {
+      "id": "D04",
+      "character": "duo",
+      "shot": "walking side by side on the foggy promenade",
+      "wardrobe_code": "C-TRAIN-B + S-WALK",
+      "set_code": "SET-PROM",
+      "prompt": "Two people. Left: Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Navy quilted vest over a lavender long-sleeve, black stretch pants, white walking shoes, wide-brim beige sun visor (beloved bit). Right: Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Charcoal long-sleeve henley with sleeves pushed up, soft black jogger pants, gray-white flat walking shoes, navy knit beanie (winter). Shot: walking side by side on the foggy promenade. Set SET-PROM (the empty set plate is a background reference). 9:16 vertical. Same two people as the reference images; keep both faces, hairlines, Chang's beard and eyebrow scar, Sun's bob, clip and mole identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion, extra people",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02",
+        "S01",
+        "S02"
+      ],
+      "seed": 146572745,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "01143f53b60b0b776a5f7a1ad2de500237f6d9caed038c76b0872afab2c0a6cd"
+    },
+    {
+      "id": "D05",
+      "character": "duo",
+      "shot": "at the table, Sun pointing at a study card, Chang reading over his glasses",
+      "wardrobe_code": "C-CASUAL + S-CARDI-JADE",
+      "set_code": "SET-TABLE",
+      "prompt": "Two people. Left: Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Jade-green cardigan over a white blouse, pearl studs. (The most recognizable look; use for thumbnails.). Right: Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Olive or brick-red flannel shirt open over a white tee, dark jeans, house slippers; or a cream cable-knit cardigan (evenings). Shot: at the table, Sun pointing at a study card, Chang reading over his glasses. Set SET-TABLE (the empty set plate is a background reference). 9:16 vertical. Same two people as the reference images; keep both faces, hairlines, Chang's beard and eyebrow scar, Sun's bob, clip and mole identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion, extra people",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02",
+        "S01",
+        "S02"
+      ],
+      "seed": 1089421926,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "d508290aa9339dffc4be7b3a6d30040e1d59958fcd36091cfd467ac8804454a6"
+    },
+    {
+      "id": "D06",
+      "character": "duo",
+      "shot": "backyard fence, both in a balance stance, one hand hovering over the rail",
+      "wardrobe_code": "C-TRAIN-B + S-WALK",
+      "set_code": "SET-YARD",
+      "prompt": "Two people. Left: Photorealistic portrait of a 76-year-old Korean woman, 155 cm, petite and upright, silver-white chin-length bob with side part and a tortoiseshell hair clip on the left, reading glasses on a jade-green beaded cord around her neck, small pearl stud earrings, jade bangle on left wrist, gold wedding band, neatly drawn soft brown eyebrows, deep laugh lines, mischievous bright dark eyes, coral-rose lipstick, small mole beside left nostril, natural skin texture, shot on iPhone at eye level, soft window light, candid, documentary realism, wearing Navy quilted vest over a lavender long-sleeve, black stretch pants, white walking shoes, wide-brim beige sun visor (beloved bit). Right: Photorealistic portrait of a 74-year-old East Asian man, retired welder who strength-trains, 170 cm, lean muscular build of a fit older tradesman, broad shoulders, thick forearms with visible veins, slightly loose skin at elbows and neck, age spots, deep crow's feet, short white crew-cut hair receding at temples, short neatly trimmed 1 cm white beard and mustache, bushy white eyebrows, small scar through outer left eyebrow, warm dark brown eyes, gold wedding band, natural skin texture with pores, shot on iPhone at eye level, soft natural light, candid, documentary realism, wearing Charcoal long-sleeve henley with sleeves pushed up, soft black jogger pants, gray-white flat walking shoes, navy knit beanie (winter). Shot: backyard fence, both in a balance stance, one hand hovering over the rail. Set SET-YARD (the empty set plate is a background reference). 9:16 vertical. Same two people as the reference images; keep both faces, hairlines, Chang's beard and eyebrow scar, Sun's bob, clip and mole identical.",
+      "negative_prompt": "bodybuilder, steroid physique, 8-pack abs, oiled skin, smooth plastic skin, young skin, long wispy beard, Fu Manchu mustache, topknot, robe, monk, temple, prayer beads, kung fu costume, bamboo, misty mountains, conical hat, extra fingers, distorted hands, text artifacts, geisha, hanbok (except holiday episodes), exaggerated makeup, young skin, plastic skin, caricature, dragon-lady, bowl haircut, conical hat, fan, extra fingers, distorted hands, perfect white teeth band, readable fake text, garbled labels, floating objects, liquid changing colour, duplicated fingers on props, wide-angle face distortion, extra people",
+      "aspect_ratio": "9:16",
+      "model": "Nano Banana (Gemini image) primary; NB Pro fallback",
+      "refs_required": [
+        "C01",
+        "C02",
+        "S01",
+        "S02"
+      ],
+      "seed": 585159747,
+      "candidates": 4,
+      "locked": true,
+      "sha256": "e5cda217c7e0f43547d2831f44d1256f2a52217e33fd9cc2a6b1cd4474b3d5c6"
+    }
+  ]
+}

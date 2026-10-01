@@ -1,0 +1,1419 @@
+{
+  "summary": {
+    "pass": 37
+  },
+  "total": 37,
+  "files": {
+    "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json": {
+      "total": 37,
+      "pass": 37
+    }
+  },
+  "judge": "not requested (deterministic only)",
+  "results": [
+    {
+      "id": "S158",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S158",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [],
+        "myth_bust": false,
+        "has_movement": false,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S01",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S01",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E06",
+          "E11"
+        ],
+        "myth_bust": false,
+        "has_movement": true,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S167",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S167",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [],
+        "myth_bust": false,
+        "has_movement": false,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S33",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S33",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [
+          {
+            "rule": "3.2",
+            "term": "constipation",
+            "evidence_present": true
+          }
+        ],
+        "required_missing": [],
+        "auto_inserted": [
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E24",
+          "E25"
+        ],
+        "myth_bust": false,
+        "has_movement": false,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S169",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S169",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [],
+        "myth_bust": false,
+        "has_movement": false,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S52",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S52",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "movement_addon_en (M-03 stop rule appended to caption before the footer)",
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E09"
+        ],
+        "myth_bust": false,
+        "has_movement": true,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S04",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S04",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [
+          {
+            "rule": "3.2",
+            "term": "arthritis",
+            "evidence_present": true
+          },
+          {
+            "rule": "3.2",
+            "term": "blood pressure",
+            "evidence_present": true
+          }
+        ],
+        "required_missing": [],
+        "auto_inserted": [
+          "movement_addon_en (M-03 stop rule appended to caption before the footer)",
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E07"
+        ],
+        "myth_bust": false,
+        "has_movement": true,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S19",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S19",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "movement_addon_en (M-03 stop rule appended to caption before the footer)",
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E01"
+        ],
+        "myth_bust": false,
+        "has_movement": true,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S40",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S40",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [
+          {
+            "rule": "3.2",
+            "term": "arthritis",
+            "evidence_present": true
+          }
+        ],
+        "required_missing": [],
+        "auto_inserted": [
+          "movement_addon_en (M-03 stop rule appended to caption before the footer)",
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E01"
+        ],
+        "myth_bust": false,
+        "has_movement": true,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S51",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S51",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E21"
+        ],
+        "myth_bust": false,
+        "has_movement": false,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S159",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S159",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "movement_addon_en (M-03 stop rule appended to caption before the footer)",
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E49"
+        ],
+        "myth_bust": false,
+        "has_movement": true,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S06",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S06",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "movement_addon_en (M-03 stop rule appended to caption before the footer)",
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E01",
+          "E03"
+        ],
+        "myth_bust": true,
+        "has_movement": true,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S31",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S31",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [
+          {
+            "rule": "3.2",
+            "term": "blood pressure",
+            "evidence_present": true
+          }
+        ],
+        "required_missing": [],
+        "auto_inserted": [
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E20"
+        ],
+        "myth_bust": true,
+        "has_movement": false,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S39",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S39",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E32"
+        ],
+        "myth_bust": false,
+        "has_movement": false,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S53",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S53",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E12"
+        ],
+        "myth_bust": false,
+        "has_movement": false,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S55",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S55",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E28"
+        ],
+        "myth_bust": false,
+        "has_movement": false,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S10",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S10",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E18"
+        ],
+        "myth_bust": false,
+        "has_movement": false,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S03",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S03",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "movement_addon_en (M-03 stop rule appended to caption before the footer)",
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E08"
+        ],
+        "myth_bust": false,
+        "has_movement": true,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S160",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S160",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E25"
+        ],
+        "myth_bust": false,
+        "has_movement": false,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S35",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S35",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [
+          {
+            "rule": "3.2",
+            "term": "blood sugar",
+            "evidence_present": true
+          }
+        ],
+        "required_missing": [],
+        "auto_inserted": [
+          "movement_addon_en (M-03 stop rule appended to caption before the footer)",
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E23"
+        ],
+        "myth_bust": false,
+        "has_movement": true,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S168",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S168",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "movement_addon_en (M-03 stop rule appended to caption before the footer)",
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E49"
+        ],
+        "myth_bust": false,
+        "has_movement": true,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S57",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S57",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [
+          {
+            "rule": "3.2",
+            "term": "sleep apnea",
+            "evidence_present": true
+          }
+        ],
+        "required_missing": [],
+        "auto_inserted": [
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E48"
+        ],
+        "myth_bust": false,
+        "has_movement": false,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S02",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S02",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "movement_addon_en (M-03 stop rule appended to caption before the footer)",
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E09"
+        ],
+        "myth_bust": false,
+        "has_movement": true,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S36",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S36",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [
+          {
+            "rule": "3.2",
+            "term": "inflammation",
+            "evidence_present": true
+          }
+        ],
+        "required_missing": [],
+        "auto_inserted": [
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E26"
+        ],
+        "myth_bust": false,
+        "has_movement": false,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S54",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S54",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "movement_addon_en (M-03 stop rule appended to caption before the footer)",
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E30"
+        ],
+        "myth_bust": false,
+        "has_movement": true,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S152",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S152",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "movement_addon_en (M-03 stop rule appended to caption before the footer)",
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E47"
+        ],
+        "myth_bust": false,
+        "has_movement": true,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S05",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S05",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "movement_addon_en (M-03 stop rule appended to caption before the footer)",
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E05"
+        ],
+        "myth_bust": false,
+        "has_movement": true,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S32",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S32",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E28"
+        ],
+        "myth_bust": false,
+        "has_movement": false,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S41",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S41",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E37"
+        ],
+        "myth_bust": false,
+        "has_movement": false,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S58",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S58",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [
+          {
+            "rule": "3.2",
+            "term": "hrv",
+            "evidence_present": true
+          }
+        ],
+        "required_missing": [],
+        "auto_inserted": [
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E18",
+          "E19"
+        ],
+        "myth_bust": false,
+        "has_movement": false,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S56",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S56",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "movement_addon_en (M-03 stop rule appended to caption before the footer)",
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E01"
+        ],
+        "myth_bust": false,
+        "has_movement": true,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S07",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S07",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "movement_addon_en (M-03 stop rule appended to caption before the footer)",
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E01",
+          "E42"
+        ],
+        "myth_bust": true,
+        "has_movement": true,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S11",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S11",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "movement_addon_en (M-03 stop rule appended to caption before the footer)",
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E19",
+          "E46"
+        ],
+        "myth_bust": false,
+        "has_movement": true,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S161",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S161",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E57"
+        ],
+        "myth_bust": true,
+        "has_movement": false,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S34",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S34",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E24"
+        ],
+        "myth_bust": true,
+        "has_movement": false,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S172",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S172",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E28",
+          "E52"
+        ],
+        "myth_bust": false,
+        "has_movement": false,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "S59",
+      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S59",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E08",
+          "E09",
+          "E11"
+        ],
+        "myth_bust": false,
+        "has_movement": false,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    }
+  ]
+}

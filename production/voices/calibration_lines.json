@@ -1,0 +1,27 @@
+{
+  "purpose": "Calibration lines: run every candidate voice through all of them; score accent consistency, numbers, counting cadence to real rep timing, names, Korean food words, safety lines (clear and calm, never cute). Pick by ear, then measure wpm.",
+  "chang": [
+    "Good morning. I'm Chang. AI character. Real chair.",
+    "One... two... breathe out... three... four... five.",
+    "Twelve kilograms. Fourteen years. Thirty seconds.",
+    "Chest pain, dizziness, sharp pain? Stop. Sit down. Call your doctor.",
+    "If you need your hands, use your hands. That's where we start, not where we stay.",
+    "Sun Yoon says the soup is ready. I say five more reps.",
+    "Rebuild, Steady, Strong or Iron. Pick your level on the screen.",
+    "Ha. She's right. She's always right.",
+    "Seventy-four. Retired welder. Still lifting.",
+    "Kimchi, doenjang, gochujang. Sun Yoon taught me all three."
+  ],
+  "sun": [
+    "Sun Yoon. Chang does chairs. I do soup.",
+    "Twenty-eight grams of protein. Fourteen of fiber. Written on the page.",
+    "Who should skip this one? Low-salt diets. Read the box.",
+    "Kimchi is food, not magic.",
+    "Onggi crocks, gas stove, digital scale. My kitchen, my rules.",
+    "Seollal and Chuseok: the only days I wear the hanbok.",
+    "Mandu, get off the armrest.",
+    "Ha! Chang thinks he invented walking.",
+    "Seventy-six. Five foot one. Still taller than my excuses.",
+    "If you have kidney disease, ask your doctor before you change your protein."
+  ]
+}

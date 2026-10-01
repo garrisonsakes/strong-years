@@ -1,0 +1,20 @@
+{
+  "note": "Alias fallback for models that ignore IPA phonemes (Eleven v3 honours alias lexemes; check per model). Keep in sync with pronunciation.pls.",
+  "aliases": {
+    "Chang Yin": "Chang Yin",
+    "Sun Yoon": "Sun Yoon",
+    "kimchi": "kimchee",
+    "doenjang": "dwen-jahng",
+    "gochujang": "go-choo-jahng",
+    "onggi": "ong-gee",
+    "Seollal": "suhl-lahl",
+    "Chuseok": "choo-sawk",
+    "hanbok": "hahn-bohk",
+    "Mandu": "mahn-doo",
+    "banchan": "bahn-chahn",
+    "japchae": "jahp-chay",
+    "doenjang-jjigae": "dwen-jahng jee-gay",
+    "tai chi": "tie chee",
+    "qigong": "chee-gong"
+  }
+}
