@@ -1,0 +1,21 @@
+{
+	email {$ACME_EMAIL}
+}
+
+# n8n editor + webhooks (the editor has its own login; restrict by IP in Hetzner's firewall if possible)
+n8n.{$DOMAIN} {
+	encode gzip
+	reverse_proxy n8n:5678
+}
+
+# Workers: only the Meta DM webhook and the liveness probe are public. Everything else is token-authenticated
+# AND reachable only from n8n over the internal Docker network.
+workers.{$DOMAIN} {
+	@public path /dm/webhook /health
+	handle @public {
+		reverse_proxy workers:8080
+	}
+	handle {
+		respond "Not found" 404
+	}
+}

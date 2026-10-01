@@ -1,0 +1,55 @@
+name: workers-ci
+on:
+  push:
+    paths: ["workers/**", "prompts/**", "SAFETY_RULES.md", "EVIDENCE.md", "n8n_core_workflow.json", "schema.sql", "data/content/*.json", ".github/workflows/workers-ci.yml"]
+  pull_request:
+    paths: ["workers/**", "prompts/**", "SAFETY_RULES.md", "EVIDENCE.md", "n8n_core_workflow.json", "schema.sql", "data/content/*.json"]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    services:
+      postgres:                       # schema.sql security tests (AUDIT C3 / L14)
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres" --health-interval 5s --health-timeout 5s --health-retries 20
+    env:
+      PGTEST_DSN: postgresql://postgres:postgres@localhost:5432/postgres
+    defaults:
+      run:
+        working-directory: workers
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: workers/requirements*.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: System deps (ffmpeg with flite + chromaprint, tesseract)
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends ffmpeg tesseract-ocr tesseract-ocr-eng postgresql-client
+      - name: Python deps
+        run: pip install -r requirements-dev.txt
+      - name: Compliance self-test (SAFETY_RULES §10–11)
+        run: python -m compliance selftest
+      - name: Tests (incl. SQL security tests against the pgvector service)
+        run: python -m pytest -q -rs
+      - name: Compliance report on content scripts
+        run: make compliance-report
+      - name: Sample video
+        run: make sample
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sample-and-reports
+          path: |
+            workers/out/sample/sample_report.json
+            workers/out/sample/frames/
+            workers/out/compliance_report.json

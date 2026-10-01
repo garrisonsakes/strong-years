@@ -1,0 +1,71 @@
+name: ci
+on:
+  push: {branches: [main]}
+  pull_request:
+permissions: {contents: read}
+concurrency: {group: "ci-${{ github.ref }}", cancel-in-progress: true}
+
+jobs:
+  app:
+    runs-on: ubuntu-24.04
+    defaults: {run: {working-directory: app}}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 22, cache: npm, cache-dependency-path: app/package-lock.json}
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm test
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
+
+  workers:
+    runs-on: ubuntu-24.04
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env: {POSTGRES_PASSWORD: postgres}
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres" --health-interval 5s --health-timeout 5s --health-retries 20
+    env:
+      PGTEST_DSN: postgresql://postgres:postgres@localhost:5432/postgres
+    defaults: {run: {working-directory: workers}}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip, cache-dependency-path: workers/requirements-dev.txt}
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg tesseract-ocr libchromaprint-tools postgresql-client
+      - run: pip install -r requirements-dev.txt
+      - run: python -m pytest
+      - name: migrations on a scratch database (idempotent, RLS verified)
+        working-directory: .
+        run: |
+          psql "$PGTEST_DSN" -c "create database ci_pipe" -c "create database ci_app"
+          export PIPELINE_DATABASE_URL=postgresql://postgres:postgres@localhost:5432/ci_pipe APP_DATABASE_URL=postgresql://postgres:postgres@localhost:5432/ci_app
+          make db-migrate BOOTSTRAP=1
+          make db-migrate
+
+  shopify:
+    runs-on: ubuntu-24.04
+    defaults: {run: {working-directory: shopify}}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 22, cache: npm, cache-dependency-path: shopify/package-lock.json}
+      - run: npm ci
+      - run: npm run check
+
+  content:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -r workers/requirements.txt
+      - run: make validate-content
+      - run: python3 production/shot_list/plan_week.py
+      - run: python3 deploy/scripts/check_secrets.py --repo-only
+      - run: LAUNCH_MODE=prelaunch python3 deploy/scripts/n8n_import.py

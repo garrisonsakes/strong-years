@@ -1,0 +1,126 @@
+# Strong Years ops stack on one Hetzner box (or any Docker host):
+#   n8n in queue mode (main + worker) on Postgres 16 + Redis 7, the Python workers (QA / compliance / growth / DM bot),
+#   a separate assembly (render) worker, and Caddy for TLS. The members app runs on Vercel (app/README.md).
+# Nothing here publishes or spends by itself: n8n imports with publishing nodes disabled (make n8n-import),
+# SPEND_ENABLED=0 / GROWTH_DRY_RUN=1 and DM_SEND_ENABLED=0 are the defaults.
+name: strongyears
+
+x-workers-env: &workers-env
+  WORKER_TOKEN: ${WORKER_TOKEN:?set WORKER_TOKEN}
+  SUPABASE_URL: ${PIPELINE_SUPABASE_URL:-}
+  SUPABASE_SERVICE_KEY: ${PIPELINE_SUPABASE_SERVICE_KEY:-}
+  R2_ENDPOINT: ${R2_ENDPOINT:-}
+  R2_BUCKET: ${R2_BUCKET:-}
+  R2_ACCESS_KEY_ID: ${R2_ACCESS_KEY_ID:-}
+  R2_SECRET_ACCESS_KEY: ${R2_SECRET_ACCESS_KEY:-}
+  R2_PUBLIC_BASE: ${R2_PUBLIC_BASE:-}
+  ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+  REQUIRE_JUDGE: "1"
+  REVIEWER_SIGNED: ${REVIEWER_SIGNED:-0}
+  SPEND_ENABLED: ${SPEND_ENABLED:-0}
+  GROWTH_DRY_RUN: ${GROWTH_DRY_RUN:-1}
+  GROWTH_LIVE_METRICS: ${GROWTH_LIVE_METRICS:-0}
+  APP_URL: ${APP_URL:-}
+  EXCEPTIONS_API_TOKEN: ${EXCEPTIONS_API_TOKEN:-}
+  SITE_BASE_URL: ${SITE_BASE_URL:-https://strongyears.com}
+  LAUNCH_MODE: ${LAUNCH_MODE:-prelaunch}
+  OUTPUT_DIR: /data/out
+  WORK_DIR: /data/work
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: n8n
+      POSTGRES_PASSWORD: ${N8N_DB_PASSWORD:?set N8N_DB_PASSWORD}
+      POSTGRES_DB: n8n
+    volumes: [pg:/var/lib/postgresql/data]
+    healthcheck: {test: ["CMD-SHELL", "pg_isready -U n8n"], interval: 10s, retries: 10}
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes", "--requirepass", "${REDIS_PASSWORD:?set REDIS_PASSWORD}"]
+    volumes: [redis:/data]
+    healthcheck: {test: ["CMD-SHELL", "redis-cli -a $$REDIS_PASSWORD ping | grep PONG"], interval: 10s, retries: 10}
+    environment: {REDIS_PASSWORD: "${REDIS_PASSWORD}"}
+
+  n8n:
+    image: n8nio/n8n:${N8N_VERSION:-1.112.0}
+    restart: unless-stopped
+    depends_on: {postgres: {condition: service_healthy}, redis: {condition: service_healthy}}
+    environment: &n8n-env
+      DB_TYPE: postgresdb
+      DB_POSTGRESDB_HOST: postgres
+      DB_POSTGRESDB_DATABASE: n8n
+      DB_POSTGRESDB_USER: n8n
+      DB_POSTGRESDB_PASSWORD: ${N8N_DB_PASSWORD}
+      EXECUTIONS_MODE: queue
+      QUEUE_BULL_REDIS_HOST: redis
+      QUEUE_BULL_REDIS_PASSWORD: ${REDIS_PASSWORD}
+      OFFLOAD_MANUAL_EXECUTIONS_TO_WORKERS: "true"
+      N8N_ENCRYPTION_KEY: ${N8N_ENCRYPTION_KEY:?set N8N_ENCRYPTION_KEY}
+      N8N_HOST: n8n.${DOMAIN}
+      N8N_PROTOCOL: https
+      WEBHOOK_URL: https://n8n.${DOMAIN}/
+      N8N_RUNNERS_ENABLED: "true"
+      N8N_SECURE_COOKIE: "true"
+      GENERIC_TIMEZONE: America/New_York
+      N8N_BLOCK_ENV_ACCESS_IN_NODE: "false"
+      SUPABASE_URL: ${PIPELINE_SUPABASE_URL:-}
+      RENDER_WORKER_URL: http://assembly:8080
+      QA_WORKER_URL: http://workers:8080
+      COMPLIANCE_WORKER_URL: http://workers:8080
+      SLACK_WEBHOOK_URL: ${SLACK_WEBHOOK_URL:-}
+      LAUNCH_MODE: ${LAUNCH_MODE:-prelaunch}
+    volumes:
+      - n8n:/home/node/.n8n
+      - ./n8n/prepared:/prepared:ro
+
+  n8n-worker:
+    image: n8nio/n8n:${N8N_VERSION:-1.112.0}
+    restart: unless-stopped
+    command: worker --concurrency=5
+    depends_on: [n8n]
+    environment: *n8n-env
+    volumes: [n8n:/home/node/.n8n]
+
+  workers:
+    build: {context: .., dockerfile: workers/Dockerfile}
+    image: strongyears-workers:local
+    restart: unless-stopped
+    environment:
+      <<: *workers-env
+      DM_MODE: ${DM_MODE:-}
+      DM_SEND_ENABLED: ${DM_SEND_ENABLED:-0}
+      DM_VERIFY_TOKEN: ${DM_VERIFY_TOKEN:-}
+      META_APP_SECRET: ${META_APP_SECRET:-}
+      DM_DB_PATH: /data/out/dm/dm.sqlite3
+    volumes: [workers_data:/data]
+    healthcheck: {test: ["CMD-SHELL", "python3 -c \"import urllib.request;urllib.request.urlopen('http://localhost:8080/health')\""], interval: 30s, retries: 5}
+
+  assembly:
+    image: strongyears-workers:local
+    depends_on: [workers]
+    restart: unless-stopped
+    environment:
+      <<: *workers-env
+      X264_PRESET: ${X264_PRESET:-medium}
+      C2PA_SIGN_CERT: ${C2PA_SIGN_CERT:-}
+      C2PA_PRIVATE_KEY: ${C2PA_PRIVATE_KEY:-}
+    volumes: [workers_data:/data]
+    deploy: {resources: {limits: {cpus: "${ASSEMBLY_CPUS:-6}", memory: 12g}}}
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    depends_on: [n8n, workers]
+    ports: ["80:80", "443:443"]
+    environment: {DOMAIN: "${DOMAIN}", ACME_EMAIL: "${ACME_EMAIL:-}"}
+    volumes:
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes: {pg: {}, redis: {}, n8n: {}, workers_data: {}, caddy_data: {}, caddy_config: {}}
