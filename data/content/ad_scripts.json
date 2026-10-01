@@ -1,0 +1,2026 @@
+[
+ {
+  "id": "A01",
+  "source_concept": "C01 The 30-Second Chair Test",
+  "format": "UGC talking head",
+  "character": "Chang Yin",
+  "audience": "W, M",
+  "length_seconds": 30,
+  "hook_variants_first_2s": [
+   "Thirty seconds. One chair. How many?",
+   "Sit. Stand. No hands. Count with me.",
+   "This chair is a strength test."
+  ],
+  "body": [
+   {
+    "t": "2-8",
+    "vo_or_action": "Chang, garage, chair against the wall: 'Arms crossed. Stand all the way up, sit all the way down. Thirty seconds.'",
+    "on_screen_text": "Chair against the wall · arms crossed"
+   },
+   {
+    "t": "8-18",
+    "vo_or_action": "He does it at a steady pace, counting aloud; 30-second timer inset.",
+    "on_screen_text": "30-second chair stand"
+   },
+   {
+    "t": "18-24",
+    "vo_or_action": "'Write your number down. Next month, do it again. That's how you see strength move.'",
+    "on_screen_text": "Write it down · retest monthly"
+   },
+   {
+    "t": "24-30",
+    "vo_or_action": "Cut to the monthly Strength Age chart and today's session screen on a phone: 'Every morning, eight minutes, with me.'",
+    "on_screen_text": "Daily 8-minute session"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "Chair against the wall · arms crossed",
+   "30-second chair stand",
+   "Write it down · retest monthly",
+   "Daily 8-minute session",
+   "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)"
+  ],
+  "cta_button": "Subscribe",
+  "destination": "/join",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Chang Yin (an AI character) does the 30-second chair stand, a standard test from senior fitness research. Try it with a sturdy chair against a wall, arms crossed, 30 seconds. Write the number down; Strong Years members retest every month and follow a new 8–12 minute session each morning, with a chair version of everything. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "30 seconds. One chair. Your number.",
+  "end_card": "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.",
+  "compliance_note": "Test framed as senior fitness research, no agency named, no screening or risk language. No 'you + age' phrasing. AI tag 0–3 s and in line 1 of primary text. Price line carries full recurring terms.",
+  "ad_name": "BLITZ_W_A01_{hook#}_UGC_{yyyymmdd}"
+ },
+ {
+  "id": "A02",
+  "source_concept": "C02 The Armrest Sign",
+  "format": "UGC talking head",
+  "character": "Chang Yin",
+  "audience": "W",
+  "length_seconds": 30,
+  "hook_variants_first_2s": [
+   "Armrests do a lot of work.",
+   "Watch the hands, not the chair.",
+   "Legs, not armrests. Here's how."
+  ],
+  "body": [
+   {
+    "t": "2-9",
+    "vo_or_action": "CU hands pressing armrests; Chang: 'Standing up from a chair is a leg-strength test we all take every day.'",
+    "on_screen_text": "A leg test we take every day"
+   },
+   {
+    "t": "9-20",
+    "vo_or_action": "Three moves beside an armless chair against the wall: sit-to-stand to a higher seat, counter squat, heel raises. Seated version shown in picture-in-picture.",
+    "on_screen_text": "3 moves · seated version of each"
+   },
+   {
+    "t": "20-26",
+    "vo_or_action": "Level switch on the session screen: Rebuild / Steady / Strong / Iron.",
+    "on_screen_text": "4 levels"
+   },
+   {
+    "t": "26-30",
+    "vo_or_action": "'Day one takes eight minutes.'",
+    "on_screen_text": "Day one: 8 minutes"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "A leg test we take every day",
+   "3 moves · seated version of each",
+   "4 levels",
+   "Day one: 8 minutes",
+   "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)"
+  ],
+  "cta_button": "Subscribe",
+  "destination": "/join",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Standing up from a chair is a leg-strength test everyone takes every day. Chang Yin (an AI character) shows three moves that train exactly those muscles, with a seated version of each. It's day one of the Daily Practice inside Strong Years: 8–12 minutes, levelled from all-chair to Iron. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "8 minutes. One chair. Stronger legs.",
+  "end_card": "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.",
+  "compliance_note": "Everyday-moment framing about people in general, no viewer attribute. No condition words. Product shown (level switch). AI disclosure in-creative + primary text.",
+  "ad_name": "BLITZ_W_A02_{hook#}_UGC_{yyyymmdd}"
+ },
+ {
+  "id": "A03",
+  "source_concept": "C06 Yes, We're AI (Chang version)",
+  "format": "UGC talking head",
+  "character": "Chang Yin",
+  "audience": "All 45+",
+  "length_seconds": 25,
+  "hook_variants_first_2s": [
+   "I'm not real. The exercises are.",
+   "I'm AI. Here's what's real.",
+   "Some AI teachers pretend. I won't."
+  ],
+  "body": [
+   {
+    "t": "2-9",
+    "vo_or_action": "Chang in the garage: 'A team made me. My story is fiction. The research is real, and it's in every caption.'",
+    "on_screen_text": "AI character · real research"
+   },
+   {
+    "t": "9-18",
+    "vo_or_action": "Product: daily session, monthly retest chart, Sunday recipe card, Wednesday live Q&A screen with a real team member (first name only).",
+    "on_screen_text": "Daily session · monthly retest · live Wednesdays"
+   },
+   {
+    "t": "18-25",
+    "vo_or_action": "'Founding Membership opens today.'",
+    "on_screen_text": "Founding Membership: first 5,000"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "AI character · real research",
+   "Daily session · monthly retest · live Wednesdays",
+   "Founding Membership: first 5,000",
+   "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)"
+  ],
+  "cta_button": "Subscribe",
+  "destination": "/join",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Chang Yin is an AI character, and we say so up front. His story is fiction. What's real: a new 8–12 minute strength and balance session every morning, a chair version of everything, a monthly Strength Age retest, Sun Yoon's Sunday recipes, and a real person on our team answering questions live every Wednesday. Every session and recipe is built from published guidelines for older adults, and our sources are on our site.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "Honest AI. Real exercises.",
+  "end_card": "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.",
+  "compliance_note": "Reviewer-gate FALLBACK wording only (no review claim). No competitor named (D-09). Human coach introduced without credentials.",
+  "ad_name": "BLITZ_All45+_A03_{hook#}_UGC_{yyyymmdd}"
+ },
+ {
+  "id": "A04",
+  "source_concept": "C09 Strength Is the Retirement Plan",
+  "format": "UGC talking head",
+  "character": "Chang Yin",
+  "audience": "M",
+  "length_seconds": 30,
+  "hook_variants_first_2s": [
+   "Everybody plans for money. Nobody plans for legs.",
+   "Two water jugs. Seventy-four. Watch.",
+   "Retirement plan: part two."
+  ],
+  "body": [
+   {
+    "t": "2-9",
+    "vo_or_action": "Chang lifts two full water jugs: 'I'm 74, in our story. I was a welder. People plan for money in retirement.'",
+    "on_screen_text": "AI character · fictional story"
+   },
+   {
+    "t": "9-18",
+    "vo_or_action": "Farmer carry across the garage, then chair stands holding the jugs (labeled 'Chang's level').",
+    "on_screen_text": "Chang's level, not the starting point"
+   },
+   {
+    "t": "18-25",
+    "vo_or_action": "Cut to the level switch and a monthly retest chart labeled 'Example'.",
+    "on_screen_text": "Start at Rebuild · work up"
+   },
+   {
+    "t": "25-30",
+    "vo_or_action": "'Plan for the legs too.'",
+    "on_screen_text": "Plan for the legs too"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "AI character · fictional story",
+   "Chang's level, not the starting point",
+   "Start at Rebuild · work up",
+   "Plan for the legs too",
+   "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)"
+  ],
+  "cta_button": "Subscribe",
+  "destination": "/join",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Chang Yin is an AI character: in his story, a retired welder who trains every morning with a chair and two water jugs. The research is real: muscle keeps responding to training at 60, 70 and beyond. Strong Years gives you a new 8–12 minute Daily Practice every morning and a monthly Strength Age retest to track it. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "Plan for the legs too",
+  "end_card": "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.",
+  "compliance_note": "Age stated about the character (fictional), not the viewer. Advanced lift labeled. Example chart labeled 'Example', no member data.",
+  "ad_name": "BLITZ_M_A04_{hook#}_UGC_{yyyymmdd}"
+ },
+ {
+  "id": "A05",
+  "source_concept": "C10 The Car-to-Kitchen Test",
+  "format": "UGC talking head",
+  "character": "Chang Yin",
+  "audience": "M",
+  "length_seconds": 28,
+  "hook_variants_first_2s": [
+   "Two water jugs. Car to kitchen.",
+   "The grocery run is a strength test.",
+   "Trunk to counter. No rest?"
+  ],
+  "body": [
+   {
+    "t": "2-10",
+    "vo_or_action": "Chang lifts two jugs from a car trunk with a clean squat, carries them to the kitchen: 'Grip, legs, trunk. All at once.'",
+    "on_screen_text": "Grip · legs · trunk"
+   },
+   {
+    "t": "10-20",
+    "vo_or_action": "Three training moves: suitcase carry, counter squat, jug deadlift from a step, each with a chair or counter in frame.",
+    "on_screen_text": "3 moves · chair or counter in frame"
+   },
+   {
+    "t": "20-28",
+    "vo_or_action": "Session screen: 'Today: carry day.'",
+    "on_screen_text": "Today's session: carry day"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "Grip · legs · trunk",
+   "3 moves · chair or counter in frame",
+   "Today's session: carry day",
+   "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)"
+  ],
+  "cta_button": "Subscribe",
+  "destination": "/join",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Carrying groceries from the car is a strength test: grip, legs and trunk working together. Chang Yin (an AI character) shows how to train it at home with water jugs. It's one of the Daily Practice sessions in Strong Years, with a chair-based version for every move. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "The grocery test, trained at home",
+  "end_card": "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.",
+  "compliance_note": "Functional framing, no condition words, no viewer attributes. Safe setup visible (chair/counter).",
+  "ad_name": "BLITZ_M_A05_{hook#}_UGC_{yyyymmdd}"
+ },
+ {
+  "id": "A06",
+  "source_concept": "C11 Floor and Back Up",
+  "format": "UGC talking head",
+  "character": "Chang Yin",
+  "audience": "M, W",
+  "length_seconds": 30,
+  "hook_variants_first_2s": [
+   "Getting up off the floor is a skill.",
+   "Floor. Back up. Step by step.",
+   "Skills can be trained. This one too."
+  ],
+  "body": [
+   {
+    "t": "2-10",
+    "vo_or_action": "Chang lowers to the floor beside a sturdy chair, one hand on it, and stands back up: 'It's a skill. Skills can be practised.'",
+    "on_screen_text": "A skill you can practise"
+   },
+   {
+    "t": "10-22",
+    "vo_or_action": "Step-by-step progression with the chair: kneel, half-kneel, stand. On screen: 'Start with support. Someone home.'",
+    "on_screen_text": "Start with support · someone home"
+   },
+   {
+    "t": "22-30",
+    "vo_or_action": "Session screen with the 'floor skills' week highlighted.",
+    "on_screen_text": "Floor skills week"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "A skill you can practise",
+   "Start with support · someone home",
+   "Floor skills week",
+   "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)"
+  ],
+  "cta_button": "Subscribe",
+  "destination": "/join",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Getting down to the floor and back up is something many people stop practising, which makes it harder over time. Chang Yin (an AI character) shows a step-by-step progression that starts with a sturdy chair for support and someone at home. It's part of Strong Years. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "Floor to standing, step by step",
+  "end_card": "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.",
+  "compliance_note": "Support + someone-home cue on screen. No injury or emergency imagery. No viewer attributes.",
+  "ad_name": "BLITZ_M_A06_{hook#}_UGC_{yyyymmdd}"
+ },
+ {
+  "id": "A07",
+  "source_concept": "C12 Golf, Fishing, Grandkids",
+  "format": "UGC talking head",
+  "character": "Chang Yin",
+  "audience": "M",
+  "length_seconds": 30,
+  "hook_variants_first_2s": [
+   "The swing starts in the legs.",
+   "Golf club. Garage. Watch the hips.",
+   "Casting, swinging, lifting: same muscles."
+  ],
+  "body": [
+   {
+    "t": "2-10",
+    "vo_or_action": "Chang with a golf club as a prop: 'Legs, hips, trunk, grip. The arms come last.'",
+    "on_screen_text": "Legs · hips · trunk · grip"
+   },
+   {
+    "t": "10-22",
+    "vo_or_action": "Band rotations (comfortable range), split-stance holds at the counter, grip work with a towel.",
+    "on_screen_text": "Band rotations · split stance · grip"
+   },
+   {
+    "t": "22-30",
+    "vo_or_action": "Lifting a toddler-sized sandbag from a step to the waist, labeled 'real weight, sandbag'. Session screen.",
+    "on_screen_text": "Train for what you love"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "Legs · hips · trunk · grip",
+   "Band rotations · split stance · grip",
+   "Train for what you love",
+   "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)"
+  ],
+  "cta_button": "Subscribe",
+  "destination": "/join",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Golf swing, casting a line, lifting a grandchild: it's all legs, hips, trunk and grip. Chang Yin (an AI character) trains all four in short daily sessions you can do in a garage or kitchen. Every session is built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "Train for what you love doing",
+  "end_card": "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.",
+  "compliance_note": "Hobby framing; no condition words. Rotations shown only to a comfortable range. Grandchild referenced, not shown (sandbag prop).",
+  "ad_name": "BLITZ_M_A07_{hook#}_UGC_{yyyymmdd}"
+ },
+ {
+  "id": "A08",
+  "source_concept": "C13 Power, Not Just Strength",
+  "format": "UGC talking head",
+  "character": "Chang Yin",
+  "audience": "M",
+  "length_seconds": 28,
+  "hook_variants_first_2s": [
+   "Strength is how much. Power is how fast.",
+   "Fast up. Slow down.",
+   "Quick feet at the counter."
+  ],
+  "body": [
+   {
+    "t": "2-10",
+    "vo_or_action": "Chang: 'Power is moving with speed. Reviews of power training in older adults found gains similar to regular lifting, sometimes better.'",
+    "on_screen_text": "Power = speed"
+   },
+   {
+    "t": "10-20",
+    "vo_or_action": "'Fast up, slow down' chair stands, chair against the wall; quick side steps with hands on the counter.",
+    "on_screen_text": "Fast up · slow down · hands on the counter"
+   },
+   {
+    "t": "20-28",
+    "vo_or_action": "Session screen: 'Thursday: power day.'",
+    "on_screen_text": "Thursday: power day"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "Power = speed",
+   "Fast up · slow down · hands on the counter",
+   "Thursday: power day",
+   "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)"
+  ],
+  "cta_button": "Subscribe",
+  "destination": "/join",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Power is moving with speed, like catching a door or crossing the street before the light changes. Chang Yin (an AI character) trains it with 'fast up, slow down' movements at a kitchen counter. It's built into the Strong Years week. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "Train power, not just strength",
+  "end_card": "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.",
+  "compliance_note": "Evidence stated modestly (E39 'similar, sometimes better'). No safety-outcome claim. Support visible.",
+  "ad_name": "BLITZ_M_A08_{hook#}_UGC_{yyyymmdd}"
+ },
+ {
+  "id": "A09",
+  "source_concept": "C14-F A Real Coach Answers (FALLBACK version)",
+  "format": "UGC talking head",
+  "character": "Real team coach + Chang Yin",
+  "audience": "All 45+",
+  "length_seconds": 30,
+  "hook_variants_first_2s": [
+   "Real person. Wednesday. Live.",
+   "AI coach every morning. Humans on Wednesday.",
+   "Your question, answered live."
+  ],
+  "body": [
+   {
+    "t": "2-12",
+    "vo_or_action": "A real team coach (first name only, lower third: '[First name], real person'): answers one member question about starting with the chair.",
+    "on_screen_text": "[First name], real person"
+   },
+   {
+    "t": "12-22",
+    "vo_or_action": "Cut to Chang Yin demonstrating the answer. Lower third: 'Chang Yin, AI character'.",
+    "on_screen_text": "Chang Yin, AI character"
+   },
+   {
+    "t": "22-30",
+    "vo_or_action": "Wednesday Live Q&A screen + session screen.",
+    "on_screen_text": "Live Q&A every Wednesday"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "[First name], real person",
+   "Chang Yin, AI character",
+   "Live Q&A every Wednesday",
+   "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)"
+  ],
+  "cta_button": "Subscribe",
+  "destination": "/join",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Every Wednesday a real person on our team answers member questions live. Every morning Chang Yin, an AI character, leads the Daily Practice. Strong Years: 8–12 minutes a day, a chair version of everything, and a monthly Strength Age retest. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "AI coach. Real humans on Wednesdays.",
+  "end_card": "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.",
+  "compliance_note": "Concept 14 FALLBACK: no credentials claimed for the human. Real person is paid, credited, and consents in writing. Lower thirds label who is real and who is AI.",
+  "ad_name": "BLITZ_All45+_A09_{hook#}_UGC_{yyyymmdd}"
+ },
+ {
+  "id": "A10",
+  "source_concept": "C05 The Jar Lid",
+  "format": "UGC talking head",
+  "character": "Sun Yoon + Chang Yin",
+  "audience": "W, M",
+  "length_seconds": 28,
+  "hook_variants_first_2s": [
+   "Show-off. Show them how.",
+   "She hands me jars all day.",
+   "The jar is a hand-strength test."
+  ],
+  "body": [
+   {
+    "t": "2-8",
+    "vo_or_action": "Sun hands Chang a jar; he opens it easily. Sun: 'Show-off. Show them how.'",
+    "on_screen_text": "AI characters"
+   },
+   {
+    "t": "8-20",
+    "vo_or_action": "Three grip moves: towel wring, water-jug hold, rubber-band finger spreads.",
+    "on_screen_text": "Towel · jug · rubber band"
+   },
+   {
+    "t": "20-28",
+    "vo_or_action": "'Grip & Hands' program screen. Sun: 'Seven out of ten.'",
+    "on_screen_text": "Grip & Hands program"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "AI characters",
+   "Towel · jug · rubber band",
+   "Grip & Hands program",
+   "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)"
+  ],
+  "cta_button": "Subscribe",
+  "destination": "/join",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Grip strength is one of the simplest strength measures there is, and it's trainable. Chang Yin (an AI character) shows three grip exercises with a towel, a water jug and a rubber band, from the Grip & Hands program in Strong Years. Sun Yoon (also AI) supervises. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "Three moves for stronger hands",
+  "end_card": "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.",
+  "compliance_note": "No condition words (no 'arthritis'). Couple banter, no testimonial. Product shown.",
+  "ad_name": "BLITZ_W_A10_{hook#}_UGC_{yyyymmdd}"
+ },
+ {
+  "id": "A11",
+  "source_concept": "C07 Do It With Me Now",
+  "format": "Follow-along",
+  "character": "Chang Yin",
+  "audience": "W, M, CG",
+  "length_seconds": 60,
+  "hook_variants_first_2s": [
+   "Stand up with me. Right now.",
+   "Hold the counter. Sixty seconds.",
+   "Minute one starts now."
+  ],
+  "body": [
+   {
+    "t": "2-20",
+    "vo_or_action": "Continuous: sit-to-stands from a chair against the wall, rep counter on screen. 'Breathe out as you stand.'",
+    "on_screen_text": "Chair stands · breathe out"
+   },
+   {
+    "t": "20-40",
+    "vo_or_action": "Marching at the counter, one hand on it, timer running.",
+    "on_screen_text": "March · hand on the counter"
+   },
+   {
+    "t": "40-55",
+    "vo_or_action": "Slow heel raises, slow exhale.",
+    "on_screen_text": "Heel raises · slow"
+   },
+   {
+    "t": "55-60",
+    "vo_or_action": "'That was minute one of today's session.'",
+    "on_screen_text": "Minute one: done"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "Chair stands · breathe out",
+   "March · hand on the counter",
+   "Heel raises · slow",
+   "Minute one: done",
+   "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)"
+  ],
+  "cta_button": "Subscribe",
+  "destination": "/join",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Chang Yin (an AI character) just led the first minute of today's Daily Practice. Did you do it with him? The full session is 8 minutes, levelled from all-chair Rebuild up to Iron, and there's a new one every morning in Strong Years. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "Minute one done. Seven more?",
+  "end_card": "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.",
+  "compliance_note": "Value-first follow-along; support visible throughout; breathing cue. No outcome promise.",
+  "ad_name": "BLITZ_W_A11_{hook#}_FOLLOW-ALONG_{yyyymmdd}"
+ },
+ {
+  "id": "A12",
+  "source_concept": "C04 The 10-Second Counter Stance (follow-along cut)",
+  "format": "Follow-along",
+  "character": "Chang Yin",
+  "audience": "W, M",
+  "length_seconds": 45,
+  "hook_variants_first_2s": [
+   "Heel to toe. Ten seconds. Counter.",
+   "Four stances. One kitchen counter.",
+   "Feet together. Now a little harder."
+  ],
+  "body": [
+   {
+    "t": "2-14",
+    "vo_or_action": "Chang at the counter, one hand hovering: feet together, 10 seconds, timer.",
+    "on_screen_text": "Stage 1 · feet together"
+   },
+   {
+    "t": "14-26",
+    "vo_or_action": "Semi-tandem, 10 seconds. Then heel-to-toe, 10 seconds.",
+    "on_screen_text": "Stage 2 · Stage 3"
+   },
+   {
+    "t": "26-38",
+    "vo_or_action": "One-leg, 10 seconds, fingers over the counter. 'Touching the counter is allowed.'",
+    "on_screen_text": "Stage 4 · touching allowed"
+   },
+   {
+    "t": "38-45",
+    "vo_or_action": "Steady Feet program screen.",
+    "on_screen_text": "Steady Feet program"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "Stage 1 · feet together",
+   "Stage 2 · Stage 3",
+   "Stage 4 · touching allowed",
+   "Steady Feet program",
+   "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)"
+  ],
+  "cta_button": "Subscribe",
+  "destination": "/join",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Four standard standing positions from senior fitness research, done at the kitchen counter with one hand ready: feet together, one foot slightly ahead, heel to toe, one foot. Chang Yin (an AI character) walks through all four in real time. Steady Feet is one of the 12-week programs in Strong Years. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "The 4-stage counter routine",
+  "end_card": "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.",
+  "compliance_note": "'Train your balance' framing only; no risk or outcome language; no agency named. Counter support in every frame.",
+  "ad_name": "BLITZ_W_A12_{hook#}_FOLLOW-ALONG_{yyyymmdd}"
+ },
+ {
+  "id": "A13",
+  "source_concept": "C21 A Seated Version of Everything",
+  "format": "Follow-along",
+  "character": "Chang Yin + real seated demonstrator",
+  "audience": "CG, W",
+  "length_seconds": 45,
+  "hook_variants_first_2s": [
+   "Every move has a seated version.",
+   "Sit down. We'll train anyway.",
+   "Chair-only session. Follow along."
+  ],
+  "body": [
+   {
+    "t": "2-12",
+    "vo_or_action": "Chang seated; a real, credited seated demonstrator in picture-in-picture: seated marches.",
+    "on_screen_text": "Seated marches"
+   },
+   {
+    "t": "12-24",
+    "vo_or_action": "Knee extensions, towel rows, slow exhale breathing.",
+    "on_screen_text": "Knee extensions · towel rows · slow breath"
+   },
+   {
+    "t": "24-38",
+    "vo_or_action": "Rebuild track screen: 'All chair, every day.'",
+    "on_screen_text": "Rebuild: all chair"
+   },
+   {
+    "t": "38-45",
+    "vo_or_action": "'Seated counts.'",
+    "on_screen_text": "Seated counts"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "Seated marches",
+   "Knee extensions · towel rows · slow breath",
+   "Rebuild: all chair",
+   "Seated counts",
+   "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)"
+  ],
+  "cta_button": "Subscribe",
+  "destination": "/join?trk=rebuild",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Every Strong Years session has a chair-based Rebuild version, done fully seated. Led by Chang Yin (an AI character), with movements demonstrated alongside a real, credited coach. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "Seated strength sessions, daily",
+  "end_card": "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.",
+  "compliance_note": "Variant without the caregiver role line (ADS C21 policy note). Real demonstrator paid, credited, consented; no condition words.",
+  "ad_name": "BLITZ_CG_A13_{hook#}_FOLLOW-ALONG_{yyyymmdd}"
+ },
+ {
+  "id": "A14",
+  "source_concept": "C22 Ten Minutes for Both of You (AI couple version)",
+  "format": "Follow-along",
+  "character": "Chang Yin + Sun Yoon",
+  "audience": "W, M, CG",
+  "length_seconds": 45,
+  "hook_variants_first_2s": [
+   "Two chairs. Ten minutes. Every morning.",
+   "Loser does the dishes.",
+   "Couples session. Follow along."
+  ],
+  "body": [
+   {
+    "t": "2-14",
+    "vo_or_action": "Chang and Sun side by side at two chairs against the wall: chair stands together, counting.",
+    "on_screen_text": "Two chairs · chair stands"
+   },
+   {
+    "t": "14-28",
+    "vo_or_action": "Counter squats, then marching; Sun does the seated version, Chang the standing one.",
+    "on_screen_text": "Two levels, one session"
+   },
+   {
+    "t": "28-40",
+    "vo_or_action": "Couple add-on screen: 'Add a partner for $8/month, own level and progress.'",
+    "on_screen_text": "Partner add-on"
+   },
+   {
+    "t": "40-45",
+    "vo_or_action": "Sun: 'He does the dishes.'",
+    "on_screen_text": "AI characters"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "Two chairs · chair stands",
+   "Two levels, one session",
+   "Partner add-on",
+   "AI characters",
+   "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)"
+  ],
+  "cta_button": "Subscribe",
+  "destination": "/join",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Do it together: Chang Yin and Sun Yoon (both AI characters) show a 10-minute session for two, each at their own level. Add a partner to Strong Years for $8/month, renews monthly with your membership, cancel online anytime. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "Two people, one kitchen table",
+  "end_card": "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.",
+  "compliance_note": "Concept 22 without paid real participants: AI characters only, labeled. Partner add-on price carries recurring terms.",
+  "ad_name": "BLITZ_W_A14_{hook#}_FOLLOW-ALONG_{yyyymmdd}"
+ },
+ {
+  "id": "A15",
+  "source_concept": "C07 derivative: Kitchen-Counter Minute",
+  "format": "Follow-along",
+  "character": "Chang Yin",
+  "audience": "W, M",
+  "length_seconds": 50,
+  "hook_variants_first_2s": [
+   "Kitchen timer. Sixty seconds.",
+   "Wind the timer. Stand up.",
+   "Coffee's brewing. So are we."
+  ],
+  "body": [
+   {
+    "t": "2-15",
+    "vo_or_action": "Wind-up timer set to 60. Counter squats, hands on the counter.",
+    "on_screen_text": "Counter squats"
+   },
+   {
+    "t": "15-30",
+    "vo_or_action": "Heel raises, slow down.",
+    "on_screen_text": "Heel raises"
+   },
+   {
+    "t": "30-45",
+    "vo_or_action": "Marching, one hand on the counter; timer rings.",
+    "on_screen_text": "March · ring"
+   },
+   {
+    "t": "45-50",
+    "vo_or_action": "Session screen: 'That was one minute.'",
+    "on_screen_text": "One minute. Seven to go."
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "Counter squats",
+   "Heel raises",
+   "March · ring",
+   "One minute. Seven to go.",
+   "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)"
+  ],
+  "cta_button": "Subscribe",
+  "destination": "/join",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "One minute at the kitchen counter with Chang Yin (an AI character): counter squats, heel raises, marching. That's how every Strong Years session starts, then it builds to 8–12 minutes with a chair version of every move. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "One minute at the counter",
+  "end_card": "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.",
+  "compliance_note": "Follow-along value; support in frame; no outcome promise.",
+  "ad_name": "BLITZ_W_A15_{hook#}_FOLLOW-ALONG_{yyyymmdd}"
+ },
+ {
+  "id": "A16",
+  "source_concept": "C05 derivative: Grip Minute",
+  "format": "Follow-along",
+  "character": "Chang Yin",
+  "audience": "M, W",
+  "length_seconds": 45,
+  "hook_variants_first_2s": [
+   "Towel. Wring it. Ten seconds.",
+   "Hands out. Follow along.",
+   "Three hand moves. One minute."
+  ],
+  "body": [
+   {
+    "t": "2-15",
+    "vo_or_action": "Towel wring both directions, 10 seconds each.",
+    "on_screen_text": "Towel wring"
+   },
+   {
+    "t": "15-28",
+    "vo_or_action": "Water-jug hold at the side, standing tall, 15 seconds each hand.",
+    "on_screen_text": "Jug hold"
+   },
+   {
+    "t": "28-40",
+    "vo_or_action": "Rubber-band finger spreads, 10 reps.",
+    "on_screen_text": "Finger spreads"
+   },
+   {
+    "t": "40-45",
+    "vo_or_action": "Grip & Hands program screen.",
+    "on_screen_text": "Grip & Hands"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "Towel wring",
+   "Jug hold",
+   "Finger spreads",
+   "Grip & Hands",
+   "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)"
+  ],
+  "cta_button": "Subscribe",
+  "destination": "/join",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "A one-minute hand-strength follow-along with Chang Yin (an AI character): towel wring, water-jug hold, rubber-band finger spreads. It's a taste of the Grip & Hands program inside Strong Years. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "Stronger hands in one minute a day",
+  "end_card": "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.",
+  "compliance_note": "No condition words; no outcome promise.",
+  "ad_name": "BLITZ_M_A16_{hook#}_FOLLOW-ALONG_{yyyymmdd}"
+ },
+ {
+  "id": "A17",
+  "source_concept": "C07 derivative: Morning Unlock (starts in bed)",
+  "format": "Follow-along",
+  "character": "Chang Yin",
+  "audience": "W, M",
+  "length_seconds": 50,
+  "hook_variants_first_2s": [
+   "Before your feet touch the floor.",
+   "Still in bed? Good. Start here.",
+   "Morning session, pajamas allowed."
+  ],
+  "body": [
+   {
+    "t": "2-15",
+    "vo_or_action": "Chang in bed: knee rolls side to side, slow breathing.",
+    "on_screen_text": "Knee rolls · slow breath"
+   },
+   {
+    "t": "15-28",
+    "vo_or_action": "Ankle pumps, then sit on the edge, count to ten.",
+    "on_screen_text": "Ankle pumps · sit · count 10"
+   },
+   {
+    "t": "28-42",
+    "vo_or_action": "Stand slowly, one hand on the headboard; three counter squats.",
+    "on_screen_text": "Stand slowly · headboard"
+   },
+   {
+    "t": "42-50",
+    "vo_or_action": "Session screen: 'Morning Unlock, 7 minutes.'",
+    "on_screen_text": "Morning Unlock"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "Knee rolls · slow breath",
+   "Ankle pumps · sit · count 10",
+   "Stand slowly · headboard",
+   "Morning Unlock",
+   "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)"
+  ],
+  "cta_button": "Subscribe",
+  "destination": "/join",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "A morning routine that starts in bed: knee rolls, ankle pumps, sit for a count of ten, stand slowly with a hand on the headboard. Chang Yin (an AI character) leads it every morning in Strong Years. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "A morning routine that starts in bed",
+  "end_card": "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.",
+  "compliance_note": "No condition words (no 'back pain', 'stiff'). Stand-slowly cue shown.",
+  "ad_name": "BLITZ_W_A17_{hook#}_FOLLOW-ALONG_{yyyymmdd}"
+ },
+ {
+  "id": "A18",
+  "source_concept": "C11 derivative: Floor-Skills Follow-Along",
+  "format": "Follow-along",
+  "character": "Chang Yin + Frank",
+  "audience": "M, W",
+  "length_seconds": 50,
+  "hook_variants_first_2s": [
+   "Chair next to you. Someone home.",
+   "Kneel. Half-kneel. Stand.",
+   "Floor practice, with support."
+  ],
+  "body": [
+   {
+    "t": "2-15",
+    "vo_or_action": "Sturdy chair beside Chang; he kneels using the chair, then half-kneels.",
+    "on_screen_text": "Chair beside you · someone home"
+   },
+   {
+    "t": "15-30",
+    "vo_or_action": "Frank (fictional neighbor) does the same with two hands on the chair: 'Frank's version is where most people start.'",
+    "on_screen_text": "Frank's version first"
+   },
+   {
+    "t": "30-42",
+    "vo_or_action": "Both stand, breathing out.",
+    "on_screen_text": "Breathe out as you stand"
+   },
+   {
+    "t": "42-50",
+    "vo_or_action": "Session screen: floor-skills week.",
+    "on_screen_text": "Floor skills week"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "Chair beside you · someone home",
+   "Frank's version first",
+   "Breathe out as you stand",
+   "Floor skills week",
+   "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)"
+  ],
+  "cta_button": "Subscribe",
+  "destination": "/join",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Kneel, half-kneel, stand, with a sturdy chair beside you and someone at home. Chang Yin (an AI character) and his neighbor Frank (a fictional character) show two levels side by side. It's the floor-skills week in Strong Years. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "Floor skills, with support",
+  "end_card": "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.",
+  "compliance_note": "Frank is fictional and reports no results (T-03). Support cue on screen.",
+  "ad_name": "BLITZ_M_A18_{hook#}_FOLLOW-ALONG_{yyyymmdd}"
+ },
+ {
+  "id": "A19",
+  "source_concept": "C24 What's Your Strength Age? (static + 6 s motion)",
+  "format": "Quiz",
+  "character": "none (product card) + AI tag",
+  "audience": "All 45+",
+  "length_seconds": 6,
+  "hook_variants_first_2s": [
+   "Your birthday gives you one age.",
+   "Strength Age: ?",
+   "Two home tests. One number."
+  ],
+  "body": [
+   {
+    "t": "0-6",
+    "vo_or_action": "The Strength Age card, huge '?' where the number goes, three answer-style buttons: 'Younger than my birthday', 'About the same', 'Older'. Motion: the '?' flips.",
+    "on_screen_text": "Free 3-minute Strength Age test"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "Free 3-minute Strength Age test",
+   "Result-page offer: Strength Age card + founding offer box with full terms"
+  ],
+  "cta_button": "Learn more",
+  "destination": "/q/a",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Created with AI characters. Your birthday gives you one age. Two simple at-home tests from senior fitness research, plus a few questions, give you another: your Strength Age. Free, 3 minutes. On your result page, founding members can start the daily plan the same day. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "Free 3-minute Strength Age test",
+  "end_card": "Result-page offer: Strength Age card + founding offer box with full terms",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe from the quiz result page (Founding Membership offer; starter variant: Purchase + Subscribe at the $12 checkout). Fallback: Purchase; if restricted, Lead (q_a_complete) with a cost cap, judged on back-end MRR per $.",
+  "compliance_note": "'Your Strength Age' refers to a quiz result, not a health attribute; no age assertion about the viewer. Landing lands on the quiz; offer appears only after the result (ADS §7).",
+  "ad_name": "BLITZ_All45+_A19_{hook#}_QUIZ_{yyyymmdd}"
+ },
+ {
+  "id": "A20",
+  "source_concept": "C24 variant: Chang asks",
+  "format": "Quiz",
+  "character": "Chang Yin",
+  "audience": "All 45+",
+  "length_seconds": 20,
+  "hook_variants_first_2s": [
+   "Legs have an age too.",
+   "Guess my Strength Age.",
+   "Three minutes. One number."
+  ],
+  "body": [
+   {
+    "t": "2-10",
+    "vo_or_action": "Chang holds a card with his Strength Age covered by a sticky note: 'Guess.'",
+    "on_screen_text": "AI character"
+   },
+   {
+    "t": "10-16",
+    "vo_or_action": "He peels it off (labeled 'Chang's result, fictional character').",
+    "on_screen_text": "Chang's result (fictional)"
+   },
+   {
+    "t": "16-20",
+    "vo_or_action": "Quiz screen: question 1.",
+    "on_screen_text": "Free · 3 minutes"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "AI character",
+   "Chang's result (fictional)",
+   "Free · 3 minutes",
+   "Quiz question 1 screen"
+  ],
+  "cta_button": "Learn more",
+  "destination": "/q/a",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Chang Yin (an AI character) took the free Strength Age test. Take yours: two at-home tests from senior fitness research and a few questions, 3 minutes. The result page shows your number and a 7-day plan, and founding members can start the full program the same day. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "Guess his Strength Age. Then yours.",
+  "end_card": "Quiz question 1 screen",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe from the quiz result page (Founding Membership offer; starter variant: Purchase + Subscribe at the $12 checkout). Fallback: Purchase; if restricted, Lead (q_a_complete) with a cost cap, judged on back-end MRR per $.",
+  "compliance_note": "Character's result labeled fictional (no fake member data). No viewer attribute.",
+  "ad_name": "BLITZ_All45+_A20_{hook#}_QUIZ_{yyyymmdd}"
+ },
+ {
+  "id": "A21",
+  "source_concept": "C25 Sun Yoon's Kitchen Check (renamed, no condition words)",
+  "format": "Quiz",
+  "character": "Sun Yoon",
+  "audience": "W, AC",
+  "length_seconds": 15,
+  "hook_variants_first_2s": [
+   "Two minutes. Be honest. I will be.",
+   "Sun Yoon grades your breakfast.",
+   "Five scores. Fourteen questions."
+  ],
+  "body": [
+   {
+    "t": "2-10",
+    "vo_or_action": "Sun at the stove with a speech bubble; five empty score bars: Fuel, Rhythm, Flow, Rest, Comfort.",
+    "on_screen_text": "Sun Yoon's 2-minute Kitchen Check"
+   },
+   {
+    "t": "10-15",
+    "vo_or_action": "Recipe card preview: 'Your 7-day kitchen plan'.",
+    "on_screen_text": "Free · 7-day kitchen plan"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "Sun Yoon's 2-minute Kitchen Check",
+   "Free · 7-day kitchen plan",
+   "Quiz start screen"
+  ],
+  "cta_button": "Learn more",
+  "destination": "/q/b",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Sun Yoon's free Kitchen Check: 14 quick questions about breakfast, protein, water, walks and evenings, and a 7-day kitchen plan with three recipes to start tonight. Sun Yoon is an AI character. Recipes built on published nutrition guidance for older adults. Not medical advice.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "Sun Yoon's 2-minute Kitchen Check",
+  "end_card": "Quiz start screen",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe from the quiz result page (Founding Membership offer; starter variant: Purchase + Subscribe at the $12 checkout). Fallback: Purchase; if restricted, Lead (q_a_complete) with a cost cap, judged on back-end MRR per $.",
+  "compliance_note": "ADS C25 renamed to avoid condition words in the ad ('gut', 'tired'); destination /q/b unchanged. Offer only after result.",
+  "ad_name": "BLITZ_W_A21_{hook#}_QUIZ_{yyyymmdd}"
+ },
+ {
+  "id": "A22",
+  "source_concept": "C25 variant: the protein score",
+  "format": "Quiz",
+  "character": "Sun Yoon",
+  "audience": "W",
+  "length_seconds": 18,
+  "hook_variants_first_2s": [
+   "Guess the protein on this plate.",
+   "Toast and tea. Score it.",
+   "I weigh breakfasts. For fun."
+  ],
+  "body": [
+   {
+    "t": "2-10",
+    "vo_or_action": "Sun puts toast and tea on a kitchen scale: 'Guess the grams.'",
+    "on_screen_text": "Guess the grams"
+   },
+   {
+    "t": "10-18",
+    "vo_or_action": "Reveal on screen ('about 6 g') then the quiz start screen: 'Score your whole kitchen.'",
+    "on_screen_text": "Score your kitchen · free"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "Guess the grams",
+   "Score your kitchen · free",
+   "Quiz start screen"
+  ],
+  "cta_button": "Learn more",
+  "destination": "/q/b",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Sun Yoon (an AI character) weighs breakfasts for fun. Guess this one, then take her free 2-minute Kitchen Check for a 7-day plan with three recipes. Most breakfasts are short on protein; general guidance for older adults is about 25–30 g per meal. Recipes built on published nutrition guidance for older adults. Not medical advice.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "Guess the grams. Then score your kitchen.",
+  "end_card": "Quiz start screen",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe from the quiz result page (Founding Membership offer; starter variant: Purchase + Subscribe at the $12 checkout). Fallback: Purchase; if restricted, Lead (q_a_complete) with a cost cap, judged on back-end MRR per $.",
+  "compliance_note": "'Older adults' as a general population, not the viewer. No condition words; kidney caution lives on the result page.",
+  "ad_name": "BLITZ_W_A22_{hook#}_QUIZ_{yyyymmdd}"
+ },
+ {
+  "id": "A23",
+  "source_concept": "C01 quiz cut",
+  "format": "Quiz",
+  "character": "Chang Yin",
+  "audience": "W, M",
+  "length_seconds": 20,
+  "hook_variants_first_2s": [
+   "Count your chair stands. Then tap.",
+   "Your number goes in question two.",
+   "One chair. Then three minutes."
+  ],
+  "body": [
+   {
+    "t": "2-12",
+    "vo_or_action": "Chang does 30 seconds of chair stands (sped up), chair against the wall.",
+    "on_screen_text": "Count your stands"
+   },
+   {
+    "t": "12-20",
+    "vo_or_action": "Quiz screen: 'Q2: How many did you do?' with a number pad.",
+    "on_screen_text": "Enter your number"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "Count your stands",
+   "Enter your number",
+   "Quiz question 2 screen"
+  ],
+  "cta_button": "Learn more",
+  "destination": "/q/a",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Do the 30-second chair stand with Chang Yin (an AI character), then enter your number in the free Strength Age test. You'll see how it compares with typical results by age group from senior fitness research, plus a 7-day plan. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "Count. Tap. See your number.",
+  "end_card": "Quiz question 2 screen",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe from the quiz result page (Founding Membership offer; starter variant: Purchase + Subscribe at the $12 checkout). Fallback: Purchase; if restricted, Lead (q_a_complete) with a cost cap, judged on back-end MRR per $.",
+  "compliance_note": "Comparison framed as typical results by age group; no screening or risk language.",
+  "ad_name": "BLITZ_W_A23_{hook#}_QUIZ_{yyyymmdd}"
+ },
+ {
+  "id": "A24",
+  "source_concept": "C04 quiz cut",
+  "format": "Quiz",
+  "character": "Chang Yin",
+  "audience": "W, M",
+  "length_seconds": 18,
+  "hook_variants_first_2s": [
+   "Heel to toe. How many seconds?",
+   "Stopwatch on. Counter close.",
+   "Seconds go in question three."
+  ],
+  "body": [
+   {
+    "t": "2-12",
+    "vo_or_action": "Chang at the counter, heel to toe, fingers hovering; timer.",
+    "on_screen_text": "Heel to toe · counter"
+   },
+   {
+    "t": "12-18",
+    "vo_or_action": "Quiz screen: 'Q3: How many seconds?'",
+    "on_screen_text": "Enter your seconds"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "Heel to toe · counter",
+   "Enter your seconds",
+   "Quiz question 3 screen"
+  ],
+  "cta_button": "Learn more",
+  "destination": "/q/a",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Heel to toe at the kitchen counter, one hand ready, count your seconds. Chang Yin (an AI character) shows how. Enter the number in the free Strength Age test for your result and a 7-day plan. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "How many seconds, heel to toe?",
+  "end_card": "Quiz question 3 screen",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe from the quiz result page (Founding Membership offer; starter variant: Purchase + Subscribe at the $12 checkout). Fallback: Purchase; if restricted, Lead (q_a_complete) with a cost cap, judged on back-end MRR per $.",
+  "compliance_note": "Training framing only, no risk or outcome language.",
+  "ad_name": "BLITZ_W_A24_{hook#}_QUIZ_{yyyymmdd}"
+ },
+ {
+  "id": "A25",
+  "source_concept": "C10 quiz cut: the grocery test",
+  "format": "Quiz",
+  "character": "Chang Yin",
+  "audience": "M",
+  "length_seconds": 18,
+  "hook_variants_first_2s": [
+   "Two jugs. How many steps?",
+   "Carry test. Then three minutes.",
+   "Steps go in question four."
+  ],
+  "body": [
+   {
+    "t": "2-12",
+    "vo_or_action": "Chang carries two jugs along the counter, step counter on screen.",
+    "on_screen_text": "Count your steps"
+   },
+   {
+    "t": "12-18",
+    "vo_or_action": "Quiz screen: 'Q4: How many steps?'",
+    "on_screen_text": "Enter your steps"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "Count your steps",
+   "Enter your steps",
+   "Quiz question 4 screen"
+  ],
+  "cta_button": "Learn more",
+  "destination": "/q/a",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "The grocery carry, as a home test: two water jugs, stand tall, count your steps. Chang Yin (an AI character) shows it. Put the number in the free Strength Age test for your result and a 7-day plan. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "The grocery test: how many steps?",
+  "end_card": "Quiz question 4 screen",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe from the quiz result page (Founding Membership offer; starter variant: Purchase + Subscribe at the $12 checkout). Fallback: Purchase; if restricted, Lead (q_a_complete) with a cost cap, judged on back-end MRR per $.",
+  "compliance_note": "No condition words or viewer attributes.",
+  "ad_name": "BLITZ_M_A25_{hook#}_QUIZ_{yyyymmdd}"
+ },
+ {
+  "id": "A26",
+  "source_concept": "C23 A Safe First Plan (quiz with safety check first)",
+  "format": "Quiz",
+  "character": "Chang Yin",
+  "audience": "CG, AC, W",
+  "length_seconds": 20,
+  "hook_variants_first_2s": [
+   "The quiz asks safety questions first.",
+   "A one-page plan for the doctor.",
+   "Safe start. Free."
+  ],
+  "body": [
+   {
+    "t": "2-12",
+    "vo_or_action": "A printed one-page plan on a clipboard: movements with pictures, stop rules, a line for the doctor's notes.",
+    "on_screen_text": "One-page plan · doctor's notes line"
+   },
+   {
+    "t": "12-20",
+    "vo_or_action": "Quiz screen: 'First, a few safety questions.'",
+    "on_screen_text": "Safety questions first"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "One-page plan · doctor's notes line",
+   "Safety questions first",
+   "Quiz safety screen"
+  ],
+  "cta_button": "Learn more",
+  "destination": "/q/a",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Not sure where to start? The free Strength Age test asks safety questions first, and if standing tests aren't right today it gives a one-page seated plan to show the doctor. Chang Yin is an AI character. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "A safe first plan, free",
+  "end_card": "Quiz safety screen",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe from the quiz result page (Founding Membership offer; starter variant: Purchase + Subscribe at the $12 checkout). Fallback: Purchase; if restricted, Lead (q_a_complete) with a cost cap, judged on back-end MRR per $.",
+  "compliance_note": "No viewer attributes; 'not sure where to start' is a general prompt. Doctor-first framing (S-01 access, not outcome).",
+  "ad_name": "BLITZ_CG_A26_{hook#}_QUIZ_{yyyymmdd}"
+ },
+ {
+  "id": "A27",
+  "source_concept": "C03 Toast Is Not Breakfast",
+  "format": "Sun blunt",
+  "character": "Sun Yoon (+ Chang cameo)",
+  "audience": "W",
+  "length_seconds": 28,
+  "hook_variants_first_2s": [
+   "This is not breakfast. This is a plate.",
+   "Toast and tea? No.",
+   "I'm going to fix your breakfast."
+  ],
+  "body": [
+   {
+    "t": "2-8",
+    "vo_or_action": "Sun holds up a slice of toast: 'This is not breakfast. This is a plate.'",
+    "on_screen_text": "AI character"
+   },
+   {
+    "t": "8-20",
+    "vo_or_action": "Silken tofu with soy, sesame and scallion in 3 minutes; on-screen 'about 25 g protein'.",
+    "on_screen_text": "~25 g protein · 3 minutes"
+   },
+   {
+    "t": "20-28",
+    "vo_or_action": "Chang finishing a session: 'She's right.' Sunday recipe screen.",
+    "on_screen_text": "Sunday recipes"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "AI character",
+   "~25 g protein · 3 minutes",
+   "Sunday recipes",
+   "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)"
+  ],
+  "cta_button": "Subscribe",
+  "destination": "/join",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Sun Yoon (an AI character) has opinions about breakfast. Muscles need protein at every meal, about 25–30 grams for older adults, and breakfast is where most people come up short. Her Sunday recipes, a printable grocery list and Chang Yin's daily sessions are all inside Strong Years. Recipes built on published nutrition guidance for older adults. Not medical advice.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "Toast is not breakfast",
+  "end_card": "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.",
+  "compliance_note": "Protein number general (E28) and verified by calculation; no condition words; no body commentary.",
+  "ad_name": "BLITZ_W_A27_{hook#}_SUN_{yyyymmdd}"
+ },
+ {
+  "id": "A28",
+  "source_concept": "C08 Coffee at 3 O'Clock",
+  "format": "Sun blunt",
+  "character": "Sun Yoon + Chang Yin",
+  "audience": "W",
+  "length_seconds": 28,
+  "hook_variants_first_2s": [
+   "Coffee at three. Then you blame the moon.",
+   "The moon didn't do this.",
+   "Evening rules. Three of them."
+  ],
+  "body": [
+   {
+    "t": "2-9",
+    "vo_or_action": "Sun pouring tea: 'You drink coffee at three o'clock and then you blame the moon.'",
+    "on_screen_text": "AI character"
+   },
+   {
+    "t": "9-20",
+    "vo_or_action": "Three evening habits on cards: last coffee before noon, a lighter dinner, the 4-6 breath.",
+    "on_screen_text": "Coffee before noon · lighter dinner · 4-6 breath"
+   },
+   {
+    "t": "20-28",
+    "vo_or_action": "Chang demonstrates 20 seconds of slow-exhale breathing; evening session screen.",
+    "on_screen_text": "Evening wind-down session"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "AI character",
+   "Coffee before noon · lighter dinner · 4-6 breath",
+   "Evening wind-down session",
+   "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)"
+  ],
+  "cta_button": "Subscribe",
+  "destination": "/join",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Sun Yoon (an AI character) is blunt about evenings: caffeine lasts for hours, big late dinners sit heavy, and a slow exhale helps you wind down. Strong Years includes an evening wind-down session and her recipes. Recipes built on published nutrition guidance for older adults. Not medical advice.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "Sun Yoon's three evening rules",
+  "end_card": "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.",
+  "compliance_note": "No sleep-disorder words; habit framing only.",
+  "ad_name": "BLITZ_W_A28_{hook#}_SUN_{yyyymmdd}"
+ },
+ {
+  "id": "A29",
+  "source_concept": "Hook bank: 'He complains. He still does it.'",
+  "format": "Sun blunt",
+  "character": "Sun Yoon + Chang Yin",
+  "audience": "W",
+  "length_seconds": 25,
+  "hook_variants_first_2s": [
+   "He complains. He still does it.",
+   "Every morning, the same speech.",
+   "Fifty years of excuses. Zero skipped days."
+  ],
+  "body": [
+   {
+    "t": "2-10",
+    "vo_or_action": "Chang grumbling at 7 a.m.; Sun hands him the phone with today's session: 'He complains. He still does it.'",
+    "on_screen_text": "AI characters · fictional marriage"
+   },
+   {
+    "t": "10-20",
+    "vo_or_action": "Quick cuts of him doing the session: chair stands, counter balance, slow breath.",
+    "on_screen_text": "8 minutes · every morning"
+   },
+   {
+    "t": "20-25",
+    "vo_or_action": "Sun: 'Seven out of ten.' Streak screen with grace days.",
+    "on_screen_text": "Streaks with grace days"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "AI characters · fictional marriage",
+   "8 minutes · every morning",
+   "Streaks with grace days",
+   "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)"
+  ],
+  "cta_button": "Subscribe",
+  "destination": "/join",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Sun Yoon and Chang Yin are AI characters with a fictional 50-year marriage. Every morning he complains, and every morning he does his 8 minutes anyway. Strong Years gives you the same daily session, a streak with grace days, and a coach message each morning. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "He complains. He still does it.",
+  "end_card": "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.",
+  "compliance_note": "Humor, no testimonial, no outcome claim.",
+  "ad_name": "BLITZ_W_A29_{hook#}_SUN_{yyyymmdd}"
+ },
+ {
+  "id": "A30",
+  "source_concept": "C06 Yes, We're AI (Sun version)",
+  "format": "Sun blunt",
+  "character": "Sun Yoon",
+  "audience": "All 45+",
+  "length_seconds": 22,
+  "hook_variants_first_2s": [
+   "I'm not real. Neither is he.",
+   "Yes, I'm AI. Next question.",
+   "Some wellness accounts pretend. I don't."
+  ],
+  "body": [
+   {
+    "t": "2-8",
+    "vo_or_action": "Sun, straight to camera: 'I'm not real. Neither is he. The exercises are.'",
+    "on_screen_text": "AI characters"
+   },
+   {
+    "t": "8-16",
+    "vo_or_action": "Chang waving from the garage. Product: daily session, retest chart, recipe card.",
+    "on_screen_text": "Real sessions · real recipes"
+   },
+   {
+    "t": "16-22",
+    "vo_or_action": "'Sources are on our site. I read them.'",
+    "on_screen_text": "Sources on our site"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "AI characters",
+   "Real sessions · real recipes",
+   "Sources on our site",
+   "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)"
+  ],
+  "cta_button": "Subscribe",
+  "destination": "/join",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Some wellness accounts pretend their AI teachers are real. We don't. Sun Yoon and Chang Yin are AI characters, and their story is fiction. Every session and recipe is built from published guidelines for older adults, and our sources are on our site. Strong Years: a daily 8–12 minute session, a chair version of everything, Sunday recipes and a live Wednesday Q&A with a real person.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "Honest AI. Real exercises.",
+  "end_card": "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.",
+  "compliance_note": "FALLBACK wording (no review claim). No competitor named.",
+  "ad_name": "BLITZ_All45+_A30_{hook#}_SUN_{yyyymmdd}"
+ },
+ {
+  "id": "A31",
+  "source_concept": "Hook bank: 'Eat like you're not in a hurry'",
+  "format": "Sun blunt",
+  "character": "Sun Yoon",
+  "audience": "W",
+  "length_seconds": 25,
+  "hook_variants_first_2s": [
+   "Sit down. Eat like you're not in a hurry.",
+   "You're eating standing up again.",
+   "Plate. Chair. Twenty minutes."
+  ],
+  "body": [
+   {
+    "t": "2-10",
+    "vo_or_action": "Sun pulls out a chair at the table: 'Sit. Eat like you're not in a hurry.'",
+    "on_screen_text": "AI character"
+   },
+   {
+    "t": "10-20",
+    "vo_or_action": "A plate with a palm of protein, vegetables, rice; Sunday recipe card.",
+    "on_screen_text": "Protein · vegetables · rice"
+   },
+   {
+    "t": "20-25",
+    "vo_or_action": "Recipe library screen: 'Cooking for one' collection.",
+    "on_screen_text": "Cooking-for-one recipes"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "AI character",
+   "Protein · vegetables · rice",
+   "Cooking-for-one recipes",
+   "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)"
+  ],
+  "cta_button": "Subscribe",
+  "destination": "/join",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Sun Yoon (an AI character) has one rule for lunch: sit down. Her Sunday recipes include a cooking-for-one collection, with protein at every meal. It's all inside Strong Years, with Chang Yin's daily sessions. Recipes built on published nutrition guidance for older adults. Not medical advice.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "Sit down. Eat like you mean it.",
+  "end_card": "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.",
+  "compliance_note": "No viewer attribute ('widowed', 'alone' avoided in ad copy). No condition words.",
+  "ad_name": "BLITZ_W_A31_{hook#}_SUN_{yyyymmdd}"
+ },
+ {
+  "id": "A32",
+  "source_concept": "C06 derivative: 'Show me the study'",
+  "format": "Sun blunt",
+  "character": "Sun Yoon + Chang Yin",
+  "audience": "All 45+",
+  "length_seconds": 25,
+  "hook_variants_first_2s": [
+   "Show me the study.",
+   "He pulled it out of his shorts.",
+   "No study, no video."
+  ],
+  "body": [
+   {
+    "t": "2-9",
+    "vo_or_action": "Sun, arms crossed: 'Show me the study.' Chang pulls a folded study card from his shorts pocket.",
+    "on_screen_text": "AI characters"
+   },
+   {
+    "t": "9-18",
+    "vo_or_action": "The card on screen (real citation, house design); Sun circles the sample size with a pen.",
+    "on_screen_text": "Real citation · real sample size"
+   },
+   {
+    "t": "18-25",
+    "vo_or_action": "'Every video cites its study. So does every session.' Product screen.",
+    "on_screen_text": "Sources in every caption"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "AI characters",
+   "Real citation · real sample size",
+   "Sources in every caption",
+   "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)"
+  ],
+  "cta_button": "Subscribe",
+  "destination": "/join",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Sun Yoon and Chang Yin are AI characters with one house rule: no study, no claim. Every video and every Strong Years session is built on published research, and the source is named. Daily 8–12 minute sessions, Sunday recipes and a monthly Strength Age retest. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "No study, no claim. That's the rule.",
+  "end_card": "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.",
+  "compliance_note": "Study card reproduces a real citation exactly (V-03); no specific health claim in the ad itself.",
+  "ad_name": "BLITZ_All45+_A32_{hook#}_SUN_{yyyymmdd}"
+ },
+ {
+  "id": "A33",
+  "source_concept": "C06 derivative: the cancel button (subscription clarity)",
+  "format": "Sun blunt",
+  "character": "Sun Yoon",
+  "audience": "All 45+",
+  "length_seconds": 25,
+  "hook_variants_first_2s": [
+   "Cancel button. Right there. Watch.",
+   "Two screens to cancel. I timed it.",
+   "You never need to call anyone to quit."
+  ],
+  "body": [
+   {
+    "t": "2-12",
+    "vo_or_action": "Sun screen-records the real cancel flow: Account → Membership → save offer next to an equally big 'Finish canceling' button.",
+    "on_screen_text": "Two screens · 'Finish canceling'"
+   },
+   {
+    "t": "12-20",
+    "vo_or_action": "'You never need to call us. No maze. Email before every renewal.'",
+    "on_screen_text": "Renewal email reminder"
+   },
+   {
+    "t": "20-25",
+    "vo_or_action": "Founding offer card with full terms.",
+    "on_screen_text": "Founding terms"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "Two screens · 'Finish canceling'",
+   "Renewal email reminder",
+   "Founding terms",
+   "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)"
+  ],
+  "cta_button": "Subscribe",
+  "destination": "/join",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Sun Yoon (an AI character) made sure the cancel button is easy to find: two screens, and the 'Finish canceling' button is as big as the offer. We email before every renewal. Strong Years: a daily strength session with Chang Yin (also AI), Sunday recipes and a monthly retest. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "Easy to join. Easy to cancel.",
+  "end_card": "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.",
+  "compliance_note": "Cancel flow described exactly as OFFER.md (≤2 screens, equal-prominence button). ROSCA-friendly.",
+  "ad_name": "BLITZ_All45+_A33_{hook#}_SUN_{yyyymmdd}"
+ },
+ {
+  "id": "A34",
+  "source_concept": "C06 derivative: 'I read the terms. Twice.'",
+  "format": "Sun blunt",
+  "character": "Sun Yoon + Chang Yin",
+  "audience": "All 45+",
+  "length_seconds": 25,
+  "hook_variants_first_2s": [
+   "'Founding price.' Show me the terms.",
+   "Locked how? Explain.",
+   "I read the terms. Twice."
+  ],
+  "body": [
+   {
+    "t": "2-10",
+    "vo_or_action": "Sun cross-examines Chang, who pulls a folded terms card from his pocket.",
+    "on_screen_text": "AI characters"
+   },
+   {
+    "t": "10-20",
+    "vo_or_action": "Card on screen: price, charged today, renews monthly, cancel online anytime, 14-day money-back guarantee, price locked while subscribed (pauses included), first 5,000 members or the close date.",
+    "on_screen_text": "All the terms, on one card"
+   },
+   {
+    "t": "20-25",
+    "vo_or_action": "Sun: 'Seven out of ten. Fine.'",
+    "on_screen_text": "Founding Membership: first 5,000"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "AI characters",
+   "All the terms, on one card",
+   "Founding Membership: first 5,000",
+   "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)"
+  ],
+  "cta_button": "Subscribe",
+  "destination": "/join",
+  "starter_variant_destination": "/b?t=BOOK",
+  "primary_text": "Sun Yoon (an AI character) read the founding terms twice so you don't have to guess. Strong Years: a daily 8–12 minute session with Chang Yin (also AI), a chair version of everything, Sunday recipes and a monthly Strength Age retest. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "headline": "The founding terms, in plain words",
+  "end_card": "Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)",
+  "offer": "founding",
+  "offer_line": "Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.",
+  "starter_variant_line": "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.",
+  "compliance_note": "T-04: cap is real (5,000) and publicly counted; no countdown or 'spots left'.",
+  "ad_name": "BLITZ_All45+_A34_{hook#}_SUN_{yyyymmdd}"
+ },
+ {
+  "id": "A35",
+  "source_concept": "C15 Ask Your Mom to Do This",
+  "format": "Adult-child gift",
+  "character": "Chang Yin + labeled dramatization",
+  "audience": "AC",
+  "length_seconds": 30,
+  "hook_variants_first_2s": [
+   "Next time you call Mom, ask her this.",
+   "Thirty seconds. Do it together.",
+   "A phone call with a chair."
+  ],
+  "body": [
+   {
+    "t": "2-10",
+    "vo_or_action": "On screen: 'Next time you call your mom, ask her to do this.' Chang demonstrates the chair stand, chair against the wall.",
+    "on_screen_text": "AI character"
+   },
+   {
+    "t": "10-22",
+    "vo_or_action": "Split screen: a video call (labeled 'Dramatization. Paid actors.'), a daughter counting while her mother does sit-to-stands.",
+    "on_screen_text": "Dramatization. Paid actors."
+   },
+   {
+    "t": "22-30",
+    "vo_or_action": "Gift page: 3 months $49 / 12 months $119, never auto-renews.",
+    "on_screen_text": "Give Mom & Dad Strong Years"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "AI character",
+   "Dramatization. Paid actors.",
+   "Give Mom & Dad Strong Years",
+   "Gift card graphic + '3 months $49 · 12 months $119 · prepaid · never auto-renews'"
+  ],
+  "cta_button": "Shop now",
+  "destination": "/gift",
+  "starter_variant_destination": "/q/a?mode=helper",
+  "primary_text": "A simple way to do something together on your next call: the 30-second chair stand. Chang Yin (an AI character) shows how, safely, with a chair against a wall. Then give them the full program: a new 8–12 minute session every morning, Sun Yoon's recipes and a monthly retest. Give 3 months for $49 or 12 months for $119, prepaid and charged today. It starts the day they open it and never auto-renews. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.",
+  "headline": "A 30-second thing to do together",
+  "end_card": "Gift card graphic + '3 months $49 · 12 months $119 · prepaid · never auto-renews'",
+  "offer": "gift",
+  "offer_line": "Give 3 months for $49 or 12 months for $119, prepaid and charged today. It starts the day they open it and never auto-renews.",
+  "starter_variant_line": "Or they can start for $12 today: both Starter Books and the first month, then $25/month as a founding member. Renews monthly until cancelled. Cancel online anytime.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Purchase (gift checkout, value = gift price). Fallback: Lead with a cost cap.",
+  "compliance_note": "Dramatization labeled (ADS rule 5). Parent not described as having any condition. Gift terms clear (S-04).",
+  "ad_name": "BLITZ_AC_A35_{hook#}_ADULT-CHILD_{yyyymmdd}"
+ },
+ {
+  "id": "A36",
+  "source_concept": "C16 Give a Stronger Year (carousel)",
+  "format": "Adult-child gift",
+  "character": "Sun Yoon (card 1)",
+  "audience": "AC",
+  "length_seconds": 0,
+  "hook_variants_first_2s": [
+   "Give your mom a stronger year.",
+   "The gift she'll use every morning.",
+   "Not another scarf."
+  ],
+  "body": [
+   {
+    "t": "card 1",
+    "vo_or_action": "Sun Yoon holding a gift card.",
+    "on_screen_text": "Give your mom a stronger year."
+   },
+   {
+    "t": "card 2",
+    "vo_or_action": "The session screen.",
+    "on_screen_text": "A new 10-minute session every morning, with a seated version."
+   },
+   {
+    "t": "card 3",
+    "vo_or_action": "The Strength Age chart.",
+    "on_screen_text": "A monthly test you can do together."
+   },
+   {
+    "t": "card 4",
+    "vo_or_action": "Sun's recipe card.",
+    "on_screen_text": "Recipes every Sunday. Soft-food versions too."
+   },
+   {
+    "t": "card 5",
+    "vo_or_action": "Price card.",
+    "on_screen_text": "3 months $49 · 12 months $119 · Never auto-renews."
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "Give your mom a stronger year.",
+   "A new 10-minute session every morning, with a seated version.",
+   "A monthly test you can do together.",
+   "Recipes every Sunday. Soft-food versions too.",
+   "3 months $49 · 12 months $119 · Never auto-renews.",
+   "Gift card graphic + '3 months $49 · 12 months $119 · prepaid · never auto-renews'"
+  ],
+  "cta_button": "Shop now",
+  "destination": "/gift",
+  "starter_variant_destination": "/q/a?mode=helper",
+  "primary_text": "This year, give something they'll use every morning. Give Mom & Dad Strong Years: a daily strength and balance session led by Chang Yin (an AI character), Sun Yoon's recipes and a monthly Strength Age test. Give 3 months for $49 or 12 months for $119, prepaid and charged today. It starts the day they open it and never auto-renews. Delivered by email or as a printed card. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.",
+  "headline": "Give Mom & Dad Strong Years, from $49",
+  "end_card": "Gift card graphic + '3 months $49 · 12 months $119 · prepaid · never auto-renews'",
+  "offer": "gift",
+  "offer_line": "Give 3 months for $49 or 12 months for $119, prepaid and charged today. It starts the day they open it and never auto-renews.",
+  "starter_variant_line": "Or they can start for $12 today: both Starter Books and the first month, then $25/month as a founding member. Renews monthly until cancelled. Cancel online anytime.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Purchase (gift checkout, value = gift price). Fallback: Lead with a cost cap.",
+  "compliance_note": "Card 4 uses the FALLBACK (no reviewer photo). Price card states no auto-renew. AI tag on card 1.",
+  "ad_name": "BLITZ_AC_A36_{hook#}_ADULT-CHILD_{yyyymmdd}"
+ },
+ {
+  "id": "A37",
+  "source_concept": "C17 Get a Note When Dad Does His Session",
+  "format": "Adult-child gift",
+  "character": "product demo",
+  "audience": "AC",
+  "length_seconds": 20,
+  "hook_variants_first_2s": [
+   "'Dad did 18 sessions this month.'",
+   "A note you'll actually want.",
+   "Peace of mind, with permission."
+  ],
+  "body": [
+   {
+    "t": "2-10",
+    "vo_or_action": "Phone notification on screen: 'Dad did 18 sessions this month.' (labeled 'Example')",
+    "on_screen_text": "Example notification"
+   },
+   {
+    "t": "10-20",
+    "vo_or_action": "Screen recording of the opt-in: 'Would you like Sam to get a note when you finish sessions? Your numbers are never shared unless you choose.'",
+    "on_screen_text": "Their choice · private by default"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "Example notification",
+   "Their choice · private by default",
+   "Gift card graphic + '3 months $49 · 12 months $119 · prepaid · never auto-renews'"
+  ],
+  "cta_button": "Shop now",
+  "destination": "/gift",
+  "starter_variant_destination": "/q/a?mode=helper",
+  "primary_text": "Strong Years is led by Chang Yin, an AI character. Live far from your parents? With a Strong Years gift, your mom or dad can choose to let you get a monthly note like 'Mom did 18 sessions.' It's their choice, and their numbers stay private unless they decide to share. A new 8–12 minute session every morning. Give 3 months for $49 or 12 months for $119, prepaid and charged today. It starts the day they open it and never auto-renews. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.",
+  "headline": "Peace of mind, with their permission",
+  "end_card": "Gift card graphic + '3 months $49 · 12 months $119 · prepaid · never auto-renews'",
+  "offer": "gift",
+  "offer_line": "Give 3 months for $49 or 12 months for $119, prepaid and charged today. It starts the day they open it and never auto-renews.",
+  "starter_variant_line": "Or they can start for $12 today: both Starter Books and the first month, then $25/month as a founding member. Renews monthly until cancelled. Cancel online anytime.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Purchase (gift checkout, value = gift price). Fallback: Lead with a cost cap.",
+  "compliance_note": "Example notification labeled; opt-in by the parent; no health data shared.",
+  "ad_name": "BLITZ_AC_A37_{hook#}_ADULT-CHILD_{yyyymmdd}"
+ },
+ {
+  "id": "A38",
+  "source_concept": "C18 What You Notice at the Holidays (seasonal, Nov 1–Dec 23)",
+  "format": "Adult-child gift",
+  "character": "adult-child voiceover (labeled dramatization) + Chang Yin",
+  "audience": "AC",
+  "length_seconds": 25,
+  "hook_variants_first_2s": [
+   "At Thanksgiving I noticed Dad held the rail.",
+   "Every stair. Both hands.",
+   "The holidays show you things."
+  ],
+  "body": [
+   {
+    "t": "2-10",
+    "vo_or_action": "VO (labeled dramatization) over a staircase shot: 'At Thanksgiving I noticed Dad held the rail on every single stair.'",
+    "on_screen_text": "Dramatization"
+   },
+   {
+    "t": "10-18",
+    "vo_or_action": "Chang Yin's Step Builder at the bottom stair, hand on the rail.",
+    "on_screen_text": "Step Builder session"
+   },
+   {
+    "t": "18-25",
+    "vo_or_action": "Gift card: 3 months $49 / 12 months $119, never auto-renews.",
+    "on_screen_text": "A gift for the stairs"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "Dramatization",
+   "Step Builder session",
+   "A gift for the stairs",
+   "Gift card graphic + '3 months $49 · 12 months $119 · prepaid · never auto-renews'"
+  ],
+  "cta_button": "Shop now",
+  "destination": "/gift",
+  "starter_variant_destination": "/q/a?mode=helper",
+  "primary_text": "Stairs, chairs and car doors get harder gradually, and it's easy to miss until the holidays. Strong Years gives your parent a patient teacher every morning (Chang Yin, an AI character). Give 3 months for $49 or 12 months for $119, prepaid and charged today. It starts the day they open it and never auto-renews. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.",
+  "headline": "A gift for the stairs",
+  "end_card": "Gift card graphic + '3 months $49 · 12 months $119 · prepaid · never auto-renews'",
+  "offer": "gift",
+  "offer_line": "Give 3 months for $49 or 12 months for $119, prepaid and charged today. It starts the day they open it and never auto-renews.",
+  "starter_variant_line": "Or they can start for $12 today: both Starter Books and the first month, then $25/month as a founding member. Renews monthly until cancelled. Cancel online anytime.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Purchase (gift checkout, value = gift price). Fallback: Lead with a cost cap.",
+  "compliance_note": "ADS C18 policy note: statement is about the speaker's parent, observational; no condition implied for the viewer's parent. Dramatization labeled.",
+  "ad_name": "BLITZ_AC_A38_{hook#}_ADULT-CHILD_{yyyymmdd}"
+ },
+ {
+  "id": "A39",
+  "source_concept": "C19 Retest Together (AI-character version)",
+  "format": "Adult-child gift",
+  "character": "Chang Yin + Sun Yoon + Mina (voice)",
+  "audience": "AC",
+  "length_seconds": 25,
+  "hook_variants_first_2s": [
+   "Ready? Thirty seconds. Go.",
+   "Our new Sunday call.",
+   "Retest night, on video."
+  ],
+  "body": [
+   {
+    "t": "2-12",
+    "vo_or_action": "Split-screen video call: Chang and Sun on chairs against the wall; Mina (their fictional daughter, voice only) counts.",
+    "on_screen_text": "AI characters · fictional family"
+   },
+   {
+    "t": "12-20",
+    "vo_or_action": "They compare numbers and laugh; Sun: 'I'm older, so I'm right.'",
+    "on_screen_text": "Retest Day: the 1st of every month"
+   },
+   {
+    "t": "20-25",
+    "vo_or_action": "Gift card + monthly retest chart (labeled 'Example').",
+    "on_screen_text": "Give Mom & Dad Strong Years"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "AI characters · fictional family",
+   "Retest Day: the 1st of every month",
+   "Give Mom & Dad Strong Years",
+   "Gift card graphic + '3 months $49 · 12 months $119 · prepaid · never auto-renews'"
+  ],
+  "cta_button": "Shop now",
+  "destination": "/gift",
+  "starter_variant_destination": "/q/a?mode=helper",
+  "primary_text": "Chang Yin and Sun Yoon (AI characters) do their monthly Strength Age retest on a video call with their daughter. Strong Years members retest on the 1st of every month, and it makes a good family call. Give 3 months for $49 or 12 months for $119, prepaid and charged today. It starts the day they open it and never auto-renews. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.",
+  "headline": "Your new monthly call",
+  "end_card": "Gift card graphic + '3 months $49 · 12 months $119 · prepaid · never auto-renews'",
+  "offer": "gift",
+  "offer_line": "Give 3 months for $49 or 12 months for $119, prepaid and charged today. It starts the day they open it and never auto-renews.",
+  "starter_variant_line": "Or they can start for $12 today: both Starter Books and the first month, then $25/month as a founding member. Renews monthly until cancelled. Cancel online anytime.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Purchase (gift checkout, value = gift price). Fallback: Lead with a cost cap.",
+  "compliance_note": "C19 requires real paid people; this version uses labeled AI characters instead. No member data, chart labeled 'Example'.",
+  "ad_name": "BLITZ_AC_A39_{hook#}_ADULT-CHILD_{yyyymmdd}"
+ },
+ {
+  "id": "A40",
+  "source_concept": "Hook bank AC: 'The gift she'll use every morning'",
+  "format": "Adult-child gift",
+  "character": "Sun Yoon",
+  "audience": "AC",
+  "length_seconds": 22,
+  "hook_variants_first_2s": [
+   "The gift she'll use every morning.",
+   "Mothers say 'nothing'. They're lying.",
+   "Not another candle."
+  ],
+  "body": [
+   {
+    "t": "2-10",
+    "vo_or_action": "Sun pushes a candle aside: 'Mothers say they want nothing. They're lying. I'm a mother.'",
+    "on_screen_text": "AI character"
+   },
+   {
+    "t": "10-18",
+    "vo_or_action": "Product: morning session on a tablet, Sunday recipe card, retest chart.",
+    "on_screen_text": "Every morning · every Sunday · every month"
+   },
+   {
+    "t": "18-22",
+    "vo_or_action": "Gift card with terms.",
+    "on_screen_text": "3 mo $49 · 12 mo $119 · never auto-renews"
+   }
+  ],
+  "on_screen_text": [
+   "AI character (burned-in tag, top-left, full contrast, every frame)",
+   "AI character",
+   "Every morning · every Sunday · every month",
+   "3 mo $49 · 12 mo $119 · never auto-renews",
+   "Gift card graphic + '3 months $49 · 12 months $119 · prepaid · never auto-renews'"
+  ],
+  "cta_button": "Shop now",
+  "destination": "/gift",
+  "starter_variant_destination": "/q/a?mode=helper",
+  "primary_text": "Sun Yoon (an AI character) says mothers who ask for nothing are lying. Give something used every morning: Strong Years, with Chang Yin's daily session, Sun's Sunday recipes and a monthly retest. Give 3 months for $49 or 12 months for $119, prepaid and charged today. It starts the day they open it and never auto-renews. Delivered by email or as a printed card. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.",
+  "headline": "The gift she'll use every morning",
+  "end_card": "Gift card graphic + '3 months $49 · 12 months $119 · prepaid · never auto-renews'",
+  "offer": "gift",
+  "offer_line": "Give 3 months for $49 or 12 months for $119, prepaid and charged today. It starts the day they open it and never auto-renews.",
+  "starter_variant_line": "Or they can start for $12 today: both Starter Books and the first month, then $25/month as a founding member. Renews monthly until cancelled. Cancel online anytime.",
+  "starter_variant_end_card": "Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'",
+  "optimization_event": "Purchase (gift checkout, value = gift price). Fallback: Lead with a cost cap.",
+  "compliance_note": "No attribute or condition language about the recipient. Gift terms clear (S-04).",
+  "ad_name": "BLITZ_AC_A40_{hook#}_ADULT-CHILD_{yyyymmdd}"
+ }
+]

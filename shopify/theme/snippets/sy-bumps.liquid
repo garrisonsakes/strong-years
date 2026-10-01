@@ -1,0 +1,20 @@
+{%- comment -%} Optional cart bumps, each unticked, each with its own price and terms line. Never required. {%- endcomment -%}
+{%- assign wall = all_products['the-wall-plan'] -%}
+{%- assign kit = all_products['strong-years-kit'] -%}
+{%- if wall != blank or kit.available -%}
+<fieldset class="stack-s" style="border:0;padding:0;margin:0">
+  <legend><h2 style="font-size:1.35rem;margin-bottom:10px">Want something to keep, too? (optional)</h2></legend>
+  {%- if wall != blank and wall.available -%}
+  <label class="bump">
+    <input type="checkbox" name="sy_bump" value="{{ wall.selected_or_first_available_variant.id }}">
+    <span class="stack-s"><strong>Add The Wall Plan, {{ wall.price | money_without_trailing_zeros }}.</strong><span>A printable 12-week calendar for your fridge plus 12 weekly grocery lists from Sun Yoon. Large print. Yours to keep, even if you cancel. Refund on request within 14 days.</span></span>
+  </label>
+  {%- endif -%}
+  {%- if kit != blank and kit.available -%}
+  <label class="bump">
+    <input type="checkbox" name="sy_bump" value="{{ kit.selected_or_first_available_variant.id }}">
+    <span class="stack-s"><strong>Add the Strong Years Kit, {{ kit.price | money_without_trailing_zeros }}.</strong><span>3 resistance loops, a door anchor and a grip trainer, shipped to you. One payment. 30-day refund, no return needed.</span></span>
+  </label>
+  {%- endif -%}
+</fieldset>
+{%- endif -%}

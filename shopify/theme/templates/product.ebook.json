@@ -1,0 +1,21 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product-ebook",
+      "settings": {}
+    },
+    "characters": {
+      "type": "sy-characters",
+      "settings": {}
+    },
+    "reviews": {
+      "type": "sy-no-reviews",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "characters",
+    "reviews"
+  ]
+}

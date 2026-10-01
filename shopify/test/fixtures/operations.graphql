@@ -1,0 +1,952 @@
+# ShopContext:Readshopcontextcur
+query ShopContextInline {
+  shop {
+    id
+    name
+    currencyCode
+    myshopifyDomain
+    primaryDomain { url host }
+    features { eligibleForSubscriptions sellsSubscriptions }
+  }
+  locations(first: 10) { nodes { id name isActive } }
+  publications(first: 25) { nodes { id catalog { title } } }
+}
+
+# MetafieldDefinitionCreate:Metafielddefinitio
+mutation MetafieldDefinitionCreateInline {
+  metafieldDefinitionCreate(definition: { name: "14-day money-back guarantee used", namespace: "strong_years", key: "guarantee_used", type: "boolean", ownerType: CUSTOMER, description: "Once per person. Set by the members app when a membership refund is issued.", access: { storefront: NONE } }) {
+    createdDefinition { id namespace key ownerType }
+    userErrors { field message code }
+  }
+}
+
+# CollectionByHandle:Findcollectionbook
+query CollectionByHandleInline {
+  collectionByIdentifier(identifier: { handle: "books" }) { id handle title }
+}
+
+# CollectionCreate:Createcollectionbo
+mutation CollectionCreateInline {
+  collectionCreate(input: { handle: "books", title: "Books and printables", descriptionHtml: "<p>Large-print books and printables to keep.</p>" }) {
+    collection { id handle }
+    userErrors { field message }
+  }
+}
+
+# PublishToOnlineStore:Publishcollectionb
+mutation PublishToOnlineStoreInline {
+  publishablePublish(id: "gid://shopify/Collection/DRYRUN-books", input: [{ publicationId: "gid://shopify/Publication/DRYRUN-online-store" }]) {
+    userErrors { field message }
+  }
+}
+
+# CollectionByHandle:Findcollectionmemb
+query CollectionByHandleInline {
+  collectionByIdentifier(identifier: { handle: "membership" }) { id handle title }
+}
+
+# CollectionCreate:Createcollectionme
+mutation CollectionCreateInline {
+  collectionCreate(input: { handle: "membership", title: "Membership", descriptionHtml: "<p>Strong Years membership plans. Every plan renews until you cancel and can be cancelled online.</p>" }) {
+    collection { id handle }
+    userErrors { field message }
+  }
+}
+
+# PublishToOnlineStore:Publishcollectionm
+mutation PublishToOnlineStoreInline {
+  publishablePublish(id: "gid://shopify/Collection/DRYRUN-membership", input: [{ publicationId: "gid://shopify/Publication/DRYRUN-online-store" }]) {
+    userErrors { field message }
+  }
+}
+
+# CollectionByHandle:Findcollectiongift
+query CollectionByHandleInline {
+  collectionByIdentifier(identifier: { handle: "gifts" }) { id handle title }
+}
+
+# CollectionCreate:Createcollectiongi
+mutation CollectionCreateInline {
+  collectionCreate(input: { handle: "gifts", title: "Gifts", descriptionHtml: "<p>Prepaid gift memberships. They do not renew.</p>" }) {
+    collection { id handle }
+    userErrors { field message }
+  }
+}
+
+# PublishToOnlineStore:Publishcollectiong
+mutation PublishToOnlineStoreInline {
+  publishablePublish(id: "gid://shopify/Collection/DRYRUN-gear", input: [{ publicationId: "gid://shopify/Publication/DRYRUN-online-store" }]) {
+    userErrors { field message }
+  }
+}
+
+# CollectionByHandle:Findcollectiongear
+query CollectionByHandleInline {
+  collectionByIdentifier(identifier: { handle: "gear" }) { id handle title }
+}
+
+# CollectionCreate:Createcollectionge
+mutation CollectionCreateInline {
+  collectionCreate(input: { handle: "gear", title: "Gear", descriptionHtml: "<p>Simple equipment Chang Yin uses.</p>" }) {
+    collection { id handle }
+    userErrors { field message }
+  }
+}
+
+# ProductByHandle:Findproductstrongy
+query ProductByHandleInline {
+  productByIdentifier(identifier: { handle: "strong-years-kit" }) {
+    id
+    handle
+    status
+    requiresSellingPlan
+    variants(first: 10) {
+      nodes { id title price sku inventoryItem { id tracked } inventoryQuantity }
+    }
+    sellingPlanGroups(first: 10) {
+      nodes {
+        id
+        name
+        appId
+        sellingPlans(first: 10) {
+          nodes {
+            id
+            name
+            billingPolicy { ... on SellingPlanRecurringBillingPolicy { interval intervalCount } }
+          }
+        }
+      }
+    }
+  }
+}
+
+# ProductUpsert:Createproductstron
+mutation ProductUpsertInline {
+  productSet(input: { handle: "strong-years-kit", title: "The Strong Years Kit", status: ACTIVE, vendor: "Strong Years", productType: "Equipment", tags: ["sy-bump", "physical"], templateSuffix: "bump", descriptionHtml: "<p>You don't need equipment to start. Inside: 3 resistance loops (light, medium, heavy), a door anchor and a grip trainer, with a large-print card showing how Chang Yin uses each one. One payment, shipped to you. 30-day refund, no return needed.</p><p><strong>Chang Yin and Sun Yoon are AI characters.</strong> Their life story is made up. The exercises and recipes are real, built from published guidelines for older adults. General fitness and nutrition education, not medical advice. Check with your doctor before starting new exercise.</p>", seo: { title: "The Strong Years Kit", description: "3 resistance loops, a door anchor and a grip trainer, with a large-print card." }, collections: ["gid://shopify/Collection/DRYRUN-gear"], metafields: [{ namespace: "strong_years", key: "role", type: "single_line_text_field", value: "bump_kit" }], productOptions: [{ name: "Kit", values: [{ name: "Loops + door anchor + grip trainer" }] }], variants: [{ position: 1, optionValues: [{ optionName: "Kit", name: "Loops + door anchor + grip trainer" }], price: "29.00", sku: "SY-KIT-29", taxable: true, inventoryPolicy: DENY, inventoryItem: { sku: "SY-KIT-29", tracked: true, requiresShipping: true, measurement: { weight: { value: 0.9, unit: POUNDS } } }, inventoryQuantities: [{ locationId: "gid://shopify/Location/DRYRUN-1", name: "available", quantity: 0 }] }] }, identifier: { handle: "strong-years-kit" }, synchronous: true) {
+    product {
+      id
+      handle
+      status
+      variants(first: 10) { nodes { id title price sku inventoryItem { id } } }
+    }
+    userErrors { field message code }
+  }
+}
+
+# PublishToOnlineStore:Publishstrongyears
+mutation PublishToOnlineStoreInline {
+  publishablePublish(id: "gid://shopify/Product/DRYRUN-strong-years-kit", input: [{ publicationId: "gid://shopify/Publication/DRYRUN-online-store" }]) {
+    userErrors { field message }
+  }
+}
+
+# ProductByHandle:Findproductfoundin
+query ProductByHandleInline {
+  productByIdentifier(identifier: { handle: "founding-annual" }) {
+    id
+    handle
+    status
+    requiresSellingPlan
+    variants(first: 10) {
+      nodes { id title price sku inventoryItem { id tracked } inventoryQuantity }
+    }
+    sellingPlanGroups(first: 10) {
+      nodes {
+        id
+        name
+        appId
+        sellingPlans(first: 10) {
+          nodes {
+            id
+            name
+            billingPolicy { ... on SellingPlanRecurringBillingPolicy { interval intervalCount } }
+          }
+        }
+      }
+    }
+  }
+}
+
+# ProductUpsert:Createproductfound
+mutation ProductUpsertInline {
+  productSet(input: { handle: "founding-annual", title: "Strong Years Founding Annual", status: UNLISTED, vendor: "Strong Years", productType: "Membership", tags: ["sy-membership", "sy-annual", "subscription"], templateSuffix: "membership", descriptionHtml: "<p>For founding members after their first renewal. <strong>$249 today, then $249 every year until you cancel.</strong> We email you 30 days before every yearly renewal. Cancel online anytime.</p><p><strong>Chang Yin and Sun Yoon are AI characters.</strong> Their life story is made up. The exercises and recipes are real, built from published guidelines for older adults. General fitness and nutrition education, not medical advice. Check with your doctor before starting new exercise.</p>", seo: { title: "Founding Annual | Strong Years", description: "For founding members after their first renewal: $249 a year." }, collections: ["gid://shopify/Collection/DRYRUN-membership"], metafields: [{ namespace: "strong_years", key: "role", type: "single_line_text_field", value: "annual" }], productOptions: [{ name: "Plan", values: [{ name: "Yearly" }] }], variants: [{ position: 1, optionValues: [{ optionName: "Plan", name: "Yearly" }], price: "249.00", sku: "SY-ANNUAL-249", taxable: true, inventoryPolicy: CONTINUE, inventoryItem: { sku: "SY-ANNUAL-249", tracked: false, requiresShipping: false } }] }, identifier: { handle: "founding-annual" }, synchronous: true) {
+    product {
+      id
+      handle
+      status
+      variants(first: 10) { nodes { id title price sku inventoryItem { id } } }
+    }
+    userErrors { field message code }
+  }
+}
+
+# PublishToOnlineStore:Publishfoundingmem
+mutation PublishToOnlineStoreInline {
+  publishablePublish(id: "gid://shopify/Product/DRYRUN-founding-membership", input: [{ publicationId: "gid://shopify/Publication/DRYRUN-online-store" }]) {
+    userErrors { field message }
+  }
+}
+
+# PublishToOnlineStore:Publishfoundingann
+mutation PublishToOnlineStoreInline {
+  publishablePublish(id: "gid://shopify/Product/DRYRUN-founding-annual", input: [{ publicationId: "gid://shopify/Publication/DRYRUN-online-store" }]) {
+    userErrors { field message }
+  }
+}
+
+# ProductByHandle:Findproductessenti
+query ProductByHandleInline {
+  productByIdentifier(identifier: { handle: "essentials-membership" }) {
+    id
+    handle
+    status
+    requiresSellingPlan
+    variants(first: 10) {
+      nodes { id title price sku inventoryItem { id tracked } inventoryQuantity }
+    }
+    sellingPlanGroups(first: 10) {
+      nodes {
+        id
+        name
+        appId
+        sellingPlans(first: 10) {
+          nodes {
+            id
+            name
+            billingPolicy { ... on SellingPlanRecurringBillingPolicy { interval intervalCount } }
+          }
+        }
+      }
+    }
+  }
+}
+
+# ProductUpsert:Createproductessen
+mutation ProductUpsertInline {
+  productSet(input: { handle: "essentials-membership", title: "Strong Years Essentials", status: UNLISTED, vendor: "Strong Years", productType: "Membership", tags: ["sy-membership", "sy-essentials", "subscription"], templateSuffix: "membership", descriptionHtml: "<p>The Daily Practice and the monthly Strength Age retest, without the extras. <strong>$12 a month until you cancel.</strong> Cancel online anytime.</p><p><strong>Chang Yin and Sun Yoon are AI characters.</strong> Their life story is made up. The exercises and recipes are real, built from published guidelines for older adults. General fitness and nutrition education, not medical advice. Check with your doctor before starting new exercise.</p>", seo: { title: "Strong Years Essentials", description: "The Daily Practice and the monthly retest for $12 a month." }, collections: ["gid://shopify/Collection/DRYRUN-membership"], metafields: [{ namespace: "strong_years", key: "role", type: "single_line_text_field", value: "essentials" }], productOptions: [{ name: "Plan", values: [{ name: "Monthly" }] }], variants: [{ position: 1, optionValues: [{ optionName: "Plan", name: "Monthly" }], price: "12.00", sku: "SY-ESSENTIALS-12", taxable: true, inventoryPolicy: CONTINUE, inventoryItem: { sku: "SY-ESSENTIALS-12", tracked: false, requiresShipping: false } }] }, identifier: { handle: "essentials-membership" }, synchronous: true) {
+    product {
+      id
+      handle
+      status
+      variants(first: 10) { nodes { id title price sku inventoryItem { id } } }
+    }
+    userErrors { field message code }
+  }
+}
+
+# PublishToOnlineStore:Publishessentialsm
+mutation PublishToOnlineStoreInline {
+  publishablePublish(id: "gid://shopify/Product/DRYRUN-essentials-membership", input: [{ publicationId: "gid://shopify/Publication/DRYRUN-online-store" }]) {
+    userErrors { field message }
+  }
+}
+
+# ProductByHandle:Findproductgiftstr
+query ProductByHandleInline {
+  productByIdentifier(identifier: { handle: "gift-strong-years" }) {
+    id
+    handle
+    status
+    requiresSellingPlan
+    variants(first: 10) {
+      nodes { id title price sku inventoryItem { id tracked } inventoryQuantity }
+    }
+    sellingPlanGroups(first: 10) {
+      nodes {
+        id
+        name
+        appId
+        sellingPlans(first: 10) {
+          nodes {
+            id
+            name
+            billingPolicy { ... on SellingPlanRecurringBillingPolicy { interval intervalCount } }
+          }
+        }
+      }
+    }
+  }
+}
+
+# ProductUpsert:Createproductgifts
+mutation ProductUpsertInline {
+  productSet(input: { handle: "gift-strong-years", title: "Give Strong Years (prepaid gift)", status: ACTIVE, vendor: "Strong Years", productType: "Gift membership", tags: ["sy-gift", "no-auto-renew"], templateSuffix: "gift", descriptionHtml: "<p>A prepaid gift membership. <strong>One payment. It does not renew.</strong> You choose the start date; the gift ends on the end date shown at checkout. Near the end, the person you gave it to can choose to continue on their own card. Nobody is charged automatically.</p><p><strong>Chang Yin and Sun Yoon are AI characters.</strong> Their life story is made up. The exercises and recipes are real, built from published guidelines for older adults. General fitness and nutrition education, not medical advice. Check with your doctor before starting new exercise.</p>", seo: { title: "Give Mom or Dad Strong Years | Prepaid gift", description: "A prepaid gift membership: 3 months for $49 or 12 months for $119. One payment. It does not renew." }, collections: ["gid://shopify/Collection/DRYRUN-gifts"], metafields: [{ namespace: "strong_years", key: "role", type: "single_line_text_field", value: "gift" }], productOptions: [{ name: "Length", values: [{ name: "3 months" }, { name: "12 months" }] }], variants: [{ position: 1, optionValues: [{ optionName: "Length", name: "3 months" }], price: "49.00", sku: "SY-GIFT-3M", taxable: true, inventoryPolicy: CONTINUE, inventoryItem: { sku: "SY-GIFT-3M", tracked: false, requiresShipping: false } }, { position: 2, optionValues: [{ optionName: "Length", name: "12 months" }], price: "119.00", sku: "SY-GIFT-12M", taxable: true, inventoryPolicy: CONTINUE, inventoryItem: { sku: "SY-GIFT-12M", tracked: false, requiresShipping: false } }] }, identifier: { handle: "gift-strong-years" }, synchronous: true) {
+    product {
+      id
+      handle
+      status
+      variants(first: 10) { nodes { id title price sku inventoryItem { id } } }
+    }
+    userErrors { field message code }
+  }
+}
+
+# PublishToOnlineStore:Publishgiftstrongy
+mutation PublishToOnlineStoreInline {
+  publishablePublish(id: "gid://shopify/Product/DRYRUN-gift-strong-years", input: [{ publicationId: "gid://shopify/Publication/DRYRUN-online-store" }]) {
+    userErrors { field message }
+  }
+}
+
+# ProductByHandle:Findproductthewall
+query ProductByHandleInline {
+  productByIdentifier(identifier: { handle: "the-wall-plan" }) {
+    id
+    handle
+    status
+    requiresSellingPlan
+    variants(first: 10) {
+      nodes { id title price sku inventoryItem { id tracked } inventoryQuantity }
+    }
+    sellingPlanGroups(first: 10) {
+      nodes {
+        id
+        name
+        appId
+        sellingPlans(first: 10) {
+          nodes {
+            id
+            name
+            billingPolicy { ... on SellingPlanRecurringBillingPolicy { interval intervalCount } }
+          }
+        }
+      }
+    }
+  }
+}
+
+# ProductUpsert:Createproductthewa
+mutation ProductUpsertInline {
+  productSet(input: { handle: "the-wall-plan", title: "The Wall Plan + 12 grocery lists", status: ACTIVE, vendor: "Strong Years", productType: "Printable", tags: ["sy-bump", "digital"], templateSuffix: "bump", descriptionHtml: "<p>A printable 12-week calendar for your fridge plus 12 weekly grocery lists from Sun Yoon. Large print, one page a week. Yours to keep, even if you cancel. Refund on request within 14 days.</p><p><strong>Chang Yin and Sun Yoon are AI characters.</strong> Their life story is made up. The exercises and recipes are real, built from published guidelines for older adults. General fitness and nutrition education, not medical advice. Check with your doctor before starting new exercise.</p>", seo: { title: "The Wall Plan | Strong Years", description: "A large-print 12-week calendar for your fridge plus 12 weekly grocery lists." }, collections: ["gid://shopify/Collection/DRYRUN-books"], metafields: [{ namespace: "strong_years", key: "role", type: "single_line_text_field", value: "bump_wallplan" }], productOptions: [{ name: "Format", values: [{ name: "PDF download" }] }], variants: [{ position: 1, optionValues: [{ optionName: "Format", name: "PDF download" }], price: "9.00", sku: "SY-WALLPLAN-9", taxable: true, inventoryPolicy: CONTINUE, inventoryItem: { sku: "SY-WALLPLAN-9", tracked: false, requiresShipping: false } }] }, identifier: { handle: "the-wall-plan" }, synchronous: true) {
+    product {
+      id
+      handle
+      status
+      variants(first: 10) { nodes { id title price sku inventoryItem { id } } }
+    }
+    userErrors { field message code }
+  }
+}
+
+# PublishToOnlineStore:Publishthewallplan
+mutation PublishToOnlineStoreInline {
+  publishablePublish(id: "gid://shopify/Product/DRYRUN-the-wall-plan", input: [{ publicationId: "gid://shopify/Publication/DRYRUN-online-store" }]) {
+    userErrors { field message }
+  }
+}
+
+# DiscountByCode:FinddiscountSTARTE
+query DiscountByCodeInline {
+  codeDiscountNodeByCode(code: "STARTER12") { id }
+}
+
+# DiscountCodeCreate:CreatediscountSTAR
+mutation DiscountCodeCreateInline {
+  discountCodeBasicCreate(basicCodeDiscount: { title: "Cell B: Starter Books + first founding month for $12", code: "STARTER12", startsAt: "2026-10-01T00:00:00Z", appliesOncePerCustomer: true, combinesWith: { orderDiscounts: false, productDiscounts: false, shippingDiscounts: true }, context: { all: ALL }, customerGets: { value: { discountAmount: { amount: "13.00", appliesOnEachItem: false } }, items: { products: { productsToAdd: ["gid://shopify/Product/DRYRUN-founding-membership"] } }, appliesOnSubscription: true, appliesOnOneTimePurchase: false }, recurringCycleLimit: 1 }) {
+    codeDiscountNode { id }
+    userErrors { field message code }
+  }
+}
+
+# DiscountByCode:FinddiscountCHANG
+query DiscountByCodeInline {
+  codeDiscountNodeByCode(code: "CHANG") { id }
+}
+
+# DiscountCodeCreate:CreatediscountCHAN
+mutation DiscountCodeCreateInline {
+  discountCodeBasicCreate(basicCodeDiscount: { title: "Page code: duo page", code: "CHANGANDSUN", startsAt: "2026-10-01T00:00:00Z", appliesOncePerCustomer: true, combinesWith: { orderDiscounts: false, productDiscounts: false, shippingDiscounts: true }, context: { all: ALL }, customerGets: { value: { discountAmount: { amount: "2.00", appliesOnEachItem: false } }, items: { products: { productsToAdd: ["gid://shopify/Product/DRYRUN-strong-years-starter-books", "gid://shopify/Product/DRYRUN-strong-years-starter-books-c7", "gid://shopify/Product/DRYRUN-strong-years-starter-books-c15"] } }, appliesOnSubscription: false, appliesOnOneTimePurchase: true } }) {
+    codeDiscountNode { id }
+    userErrors { field message code }
+  }
+}
+
+# DiscountByCode:FinddiscountSUNYOO
+query DiscountByCodeInline {
+  codeDiscountNodeByCode(code: "SUNYOON") { id }
+}
+
+# DiscountCodeCreate:CreatediscountSUNY
+mutation DiscountCodeCreateInline {
+  discountCodeBasicCreate(basicCodeDiscount: { title: "Page code: Sun Yoon kitchen page", code: "SUNYOON", startsAt: "2026-10-01T00:00:00Z", appliesOncePerCustomer: true, combinesWith: { orderDiscounts: false, productDiscounts: false, shippingDiscounts: true }, context: { all: ALL }, customerGets: { value: { discountAmount: { amount: "2.00", appliesOnEachItem: false } }, items: { products: { productsToAdd: ["gid://shopify/Product/DRYRUN-strong-years-starter-books", "gid://shopify/Product/DRYRUN-strong-years-starter-books-c7", "gid://shopify/Product/DRYRUN-strong-years-starter-books-c15"] } }, appliesOnSubscription: false, appliesOnOneTimePurchase: true } }) {
+    codeDiscountNode { id }
+    userErrors { field message code }
+  }
+}
+
+# DiscountByCode:FinddiscountCHANGA
+query DiscountByCodeInline {
+  codeDiscountNodeByCode(code: "CHANGANDSUN") { id }
+}
+
+# MetafieldsSet:Setshopmetafieldsc
+mutation MetafieldsSetInline {
+  metafieldsSet(metafields: [{ ownerId: "gid://shopify/Shop/DRYRUN", namespace: "strong_years", key: "cells", type: "json", value: "{\"ebook\":[{\"id\":\"e12\",\"price\":\"12.00\",\"handle\":\"strong-years-starter-books\",\"weight\":0.34,\"default\":true},{\"id\":\"e7\",\"price\":\"7.00\",\"handle\":\"strong-years-starter-books-c7\",\"weight\":0.33,\"default\":false},{\"id\":\"e15\",\"price\":\"15.00\",\"handle\":\"strong-years-starter-books-c15\",\"weight\":0.33,\"default\":false}],\"arms\":[{\"id\":\"A\",\"weight\":0.5},{\"id\":\"B\",\"weight\":0.5,\"cell\":\"m12\"}],\"version\":1}" }, { ownerId: "gid://shopify/Shop/DRYRUN", namespace: "strong_years", key: "founding", type: "json", value: "{\"cap\":5000,\"cap_label\":\"5,000\",\"close_date\":\"2027-01-09\",\"price\":\"25.00\",\"standard_price\":\"35.00\",\"count_line_threshold\":1000,\"few_left_threshold\":4900,\"closed\":false}" }, { ownerId: "gid://shopify/Shop/DRYRUN", namespace: "strong_years", key: "links", type: "json", value: "{\"members_url\":\"https://members.strongyears.com\",\"support_email\":\"{{SUPPORT_EMAIL}}\",\"phone\":\"{{BILLING_PHONE}}\",\"company\":\"{{COMPANY_LEGAL_NAME}}\",\"address\":\"{{MAILING_ADDRESS}}\",\"domain\":\"strongyears.com\",\"sms_enabled\":false,\"reviewer_signed\":false}" }]) {
+    metafields { key namespace }
+    userErrors { field message code }
+  }
+}
+
+# WebhookList:Listexistingwebhoo
+query WebhookListInline {
+  webhookSubscriptions(first: 100) {
+    nodes {
+      id
+      topic
+      uri
+    }
+  }
+}
+
+# WebhookCreate:SubscribewebhookOR
+mutation WebhookCreateInline {
+  webhookSubscriptionCreate(topic: ORDERS_UPDATED, webhookSubscription: { uri: "https://members.strongyears.com/api/webhooks/shopify", format: JSON, metafieldNamespaces: ["strong_years"] }) {
+    webhookSubscription { id topic uri }
+    userErrors { field message }
+  }
+}
+
+# WebhookCreate:SubscribewebhookRE
+mutation WebhookCreateInline {
+  webhookSubscriptionCreate(topic: REFUNDS_CREATE, webhookSubscription: { uri: "https://members.strongyears.com/api/webhooks/shopify", format: JSON }) {
+    webhookSubscription { id topic uri }
+    userErrors { field message }
+  }
+}
+
+# WebhookCreate:SubscribewebhookCU
+mutation WebhookCreateInline {
+  webhookSubscriptionCreate(topic: CUSTOMERS_DELETE, webhookSubscription: { uri: "https://members.strongyears.com/api/webhooks/shopify", format: JSON }) {
+    webhookSubscription { id topic uri }
+    userErrors { field message }
+  }
+}
+
+# WebhookCreate:SubscribewebhookIN
+mutation WebhookCreateInline {
+  webhookSubscriptionCreate(topic: INVENTORY_LEVELS_UPDATE, webhookSubscription: { uri: "https://members.strongyears.com/api/webhooks/shopify", format: JSON }) {
+    webhookSubscription { id topic uri }
+    userErrors { field message }
+  }
+}
+
+# WebhookCreate:SubscribewebhookAP
+mutation WebhookCreateInline {
+  webhookSubscriptionCreate(topic: APP_UNINSTALLED, webhookSubscription: { uri: "https://members.strongyears.com/api/webhooks/shopify", format: JSON }) {
+    webhookSubscription { id topic uri }
+    userErrors { field message }
+  }
+}
+
+# PageByHandle:Findpagemembership
+query PageByHandleInline {
+  pages(first: 1, query: "handle:membership-and-cancellation") { nodes { id handle } }
+}
+
+# PageCreate:Createpagemembersh
+mutation PageCreateInline {
+  pageCreate(page: { handle: "membership-and-cancellation", title: "Membership and cancellation policy", body: "<div class=\"sy-summary\">\n<h2>The short version</h2>\n<ul>\n<li><strong>It renews automatically.</strong> A monthly membership is charged today and then every month on the same date until you cancel. A yearly membership is charged today and then every year until you cancel.</li>\n<li><strong>Founding price:</strong> $25 a month, locked for as long as you stay subscribed (pauses included). If you cancel and rejoin later, you pay the price at that time.</li>\n<li><strong>Cancel anytime</strong> online in your account at <a href=\"https://strongyears.com/account\">strongyears.com/account</a> (at most two screens), or by replying \"cancel\" to any email from us. Nobody needs to call. You keep access until the end of the period you paid for.</li>\n<li><strong>14-day money-back guarantee</strong> on your membership charge, once per person: ask within 14 days of the charge and we refund it in full.</li>\n<li><strong>Reminders:</strong> we email you before every renewal charge (7 and 2 days before your first renewal, 3 days before each one after that, 30 days before a yearly renewal) and once a year with a summary of your plan.</li>\n<li><strong>Price changes:</strong> we tell you by email exactly 30 days before any change, with a one-tap cancel link.</li>\n<li><strong>Gifts</strong> are paid once and never renew.</li>\n</ul>\n</div>\n<h2>Membership and cancellation policy</h2>\n<p>Effective 2026-10-01. This policy covers every Strong Years membership sold at strongyears.com. Strong Years is made by {{COMPANY_LEGAL_NAME}}, {{MAILING_ADDRESS}}.</p>\n\n<h3>1. Plans and prices</h3>\n<ul>\n<li><strong>Founding membership:</strong> $25 charged today for your first month, then $25 every month until you cancel.</li>\n<li><strong>Starter offer (where shown):</strong> $12 charged today for the Starter Books and your first founding month, then $25 every month until you cancel.</li>\n<li><strong>Standard membership</strong> (after the founding group closes): $35 charged today, then $35 every month until you cancel.</li>\n<li><strong>Founding annual</strong> (offered to founding members after their first renewal): $249 charged today, then $249 every year until you cancel.</li>\n<li><strong>Essentials:</strong> $12 a month until you cancel.</li>\n<li><strong>Gift memberships:</strong> 3 months for $49 or 12 months for $119, paid once. They do not renew. Near the end of a gift, the person who received it can choose to continue on their own card, with new consent. Nobody is charged automatically.</li>\n</ul>\n<p>Prices are in US dollars. Sales tax is added where it applies. On your bank statement the charge appears as STRONGYEARS MEMBER.</p>\n\n<h3 id=\"founding\">2. The founding group</h3>\n<p>Founding membership is open to the first 5,000 members or until January 9, 2027, whichever comes first. The count is the real number of founding memberships whose first charge succeeded and was not refunded or charged back. It is never reset, extended or reopened. If someone takes a refund, their seat goes back. The live count is shown on the founding membership page. After the group closes, new members join at the standard price of $35 a month, and that price is actually charged.</p>\n<p>Your founding price stays the same for as long as you stay subscribed, including while your membership is paused. If you cancel and rejoin, you pay the price offered at that time.</p>\n\n<h3>3. Your consent</h3>\n<p>Before you pay, we show these terms directly above the button and ask you to tick a separate box that is not ticked for you. We keep a record of the exact terms you saw, the time, and the price, for at least three years.</p>\n\n<h3>4. How to cancel</h3>\n<p>Cancel online in your account at <a href=\"https://strongyears.com/account\">strongyears.com/account</a> (at most two screens), or by replying \"cancel\" to any email from us. Cancelling stops all future charges immediately. You keep access until the end of the period you have paid for. We send a confirmation email right away. We never require a phone call to cancel; the billing line {{BILLING_PHONE}} is for questions only.</p>\n<p>You can also pause instead of cancelling. A paused membership is not charged and keeps your founding price.</p>\n\n<h3>5. Refunds</h3>\n<ul>\n<li><strong>Membership:</strong> 14-day money-back guarantee on your membership charge, once per person (matched by email and payment card). Ask within 14 days of the charge, in your account or by replying to any email, and we refund that charge in full.</li>\n<li><strong>Books, printables and other digital add-ons:</strong> refund on request within 14 days of purchase. Email {{SUPPORT_EMAIL}}.</li>\n<li><strong>The Strong Years Kit:</strong> refund on request within 30 days, no return needed.</li>\n<li><strong>Gift memberships:</strong> refund on request within 14 days of purchase if the gift has not been started.</li>\n</ul>\n\n<h3>6. Reminders and notices</h3>\n<p>We email you before every renewal charge: 7 and 2 days before your first renewal, then 3 days before each monthly renewal after that, and 30 days before a yearly renewal. Every auto-renewing member gets a yearly summary of the plan, the price, how often it bills and how to cancel. If a price ever changes, we email you exactly 30 days before the change with a one-tap cancel link. Our payment system may also send its own reminder a few days before each charge.</p>\n\n<h3>7. State automatic renewal laws</h3>\n<p>We follow the automatic renewal laws of California, New York, Minnesota, Virginia and the other states that have them, and we apply the strictest rule to everyone, wherever you live. That means clear terms before you pay, your express consent, a confirmation email that repeats the terms and how to cancel, online cancellation through the same website you joined on, reminders before renewals, a yearly summary, and advance notice of price changes. This policy follows the federal Restore Online Shoppers' Confidence Act (ROSCA).</p>\n\n<h3>8. Failed payments</h3>\n<p>If a renewal payment fails, we retry it a few times over several days and email you a link to update your card. Your access continues while we retry.</p>\n\n<h3>9. AI characters</h3>\n<p><strong>Chang Yin and Sun Yoon are AI characters</strong> created by the Strong Years team. Their life story (the welding, the garage, the fifty years of marriage) is fiction. They are not real people, not doctors, not physical therapists, not dietitians and not religious teachers. Sessions and recipes are built from published exercise and nutrition guidelines for older adults. Everything here is general fitness and nutrition education, not medical advice. Check with your doctor before starting new exercise.</p>\n\n<h3>10. Contact</h3>\n<p>{{COMPANY_LEGAL_NAME}}, {{MAILING_ADDRESS}}. Email {{SUPPORT_EMAIL}}. Billing questions {{BILLING_PHONE}}.</p>", templateSuffix: "legal", isPublished: true }) {
+    page { id handle }
+    userErrors { field message code }
+  }
+}
+
+# PageByHandle:Findpageaboutthech
+query PageByHandleInline {
+  pages(first: 1, query: "handle:about-the-characters") { nodes { id handle } }
+}
+
+# PageCreate:Createpageaboutthe
+mutation PageCreateInline {
+  pageCreate(page: { handle: "about-the-characters", title: "About Chang Yin and Sun Yoon", body: "<p><strong>Hi, we're AI.</strong> Chang Yin and Sun Yoon are AI characters created by a team of real people. Chang Yin is written as a 74-year-old retired welder who trains in his California garage. Sun Yoon is written as his wife, 76, who runs the kitchen and tells the truth about food. Their story is fiction, and we say so everywhere they appear: on every post, in every email, at the top of every page and at the start of every chat.</p>\n<p><strong>Why AI characters?</strong> So we can make a new session every day, at four levels, with a chair-based version of everything, without pretending anyone is something they're not.</p>\n<p><strong>Why a Chinese and Korean couple?</strong> Chang Yin draws on Chinese movement traditions such as tai chi and qigong, taught as exercise, combined with modern strength training. Sun Yoon draws on Korean home cooking: soups, fermented vegetables and banchan. We work with paid cultural reviewers from each heritage on names, food and settings. They are not monks, priests or healers, and nothing here is presented as ancient secret knowledge.</p>\n<p><strong>What's real:</strong> the exercises, the progressions, the recipes and the research behind them. Sessions and recipes are built from published exercise and nutrition guidelines for older adults. Our sources are listed on <a href=\"/pages/how-we-make-this\">How we make this</a>.</p>\n<p><strong>What they will never do:</strong> claim to be human, claim to be a doctor or therapist, show you reviews we don't have, or tell you to change your medication.</p>\n<p>General fitness and nutrition education, not medical advice. Check with your doctor before starting new exercise.</p>", templateSuffix: "characters", isPublished: true }) {
+    page { id handle }
+    userErrors { field message code }
+  }
+}
+
+# PageByHandle:Findpagefaq
+query PageByHandleInline {
+  pages(first: 1, query: "handle:faq") { nodes { id handle } }
+}
+
+# PageCreate:Createpagefaq
+mutation PageCreateInline {
+  pageCreate(page: { handle: "faq", title: "Questions", body: "<h3>Is Chang Yin real?</h3><p>No. Chang Yin and Sun Yoon are AI characters created by our team, and their story is invented. What is real: the exercises, the progressions and the recipes, built from published exercise and nutrition guidelines for older adults.</p>\n<h3>What do I get with the Starter Books?</h3><p>Two large-print PDF books to keep: Chang Yin's 7-Day Strength Reset (seven follow-along sessions, most of them next to a chair and a counter) and Sun Yoon's Strong Kitchen. They download instantly and they never renew.</p>\n<h3>What happens after I join the membership?</h3><p>Your first month is charged today. If you do nothing, your membership continues at the same price every month on the same date, until you cancel. We email you before every renewal. Changed your mind within 14 days? You have a 14-day money-back guarantee on your membership charge, once per person.</p>\n<h3>What is the founding price?</h3><p>$25 a month, locked for as long as you stay subscribed, pauses included. Founding membership is open to the first 5,000 members or until January 9, 2027, whichever comes first. After that, new members pay $35 a month.</p>\n<h3>How do I cancel?</h3><p>Cancel online in your account at strongyears.com/account (at most two screens), or by replying \"cancel\" to any email from us. Nobody will call you, and you never need to call us to cancel.</p>\n<h3>Do I need equipment?</h3><p>No. A sturdy chair against a wall and a kitchen counter are enough. Some people add resistance loops after a few weeks.</p>\n<h3>Is this right for me?</h3><p>Strong Years is general fitness education for adults. It isn't physical therapy and doesn't replace your doctor. Check with your doctor before starting new exercise, especially with a heart condition, high blood pressure, recent surgery, a joint replacement, osteoporosis or dizziness. Every session has a chair-based version.</p>\n<h3>Can I give it to my mom or dad?</h3><p>Yes. Gift memberships are paid once (3 months for $49 or 12 months for $119) and never renew. Near the end, they can choose to continue on their own card.</p>\n<h3>Where are the reviews?</h3><p>We're new, so we won't show you reviews we don't have. Member words appear only once real members give us written permission.</p>", templateSuffix: "faq", isPublished: true }) {
+    page { id handle }
+    userErrors { field message code }
+  }
+}
+
+# PageByHandle:Findpagehowwemaket
+query PageByHandleInline {
+  pages(first: 1, query: "handle:how-we-make-this") { nodes { id handle } }
+}
+
+# PageCreate:Createpagehowwemak
+mutation PageCreateInline {
+  pageCreate(page: { handle: "how-we-make-this", title: "How we make this", body: "<p>Every session, recipe and number on Strong Years starts from published research and guidelines for older adults. Each statistic carries an evidence ID that points to the study: who was studied, how many people, and how strong the evidence is. We grade evidence honestly: big reviews and guidelines first; small or observational studies are labelled as such and never presented as proof of cause and effect.</p>\n<p>Every movement is shown with a support (a counter, a chair against the wall), an easier version, and a stop rule: stop if you feel chest pain, dizziness or sharp pain. Advanced moves Chang Yin demonstrates are labelled \"Chang's level, not your starting point\".</p>\n<p>Every script passes an automated rules check and an AI review, and anything flagged goes to a person on our team before it is published.</p>\n<p>Sessions and recipes are built from published exercise and nutrition guidelines for older adults.</p>\n<p>The team: {{COMPANY_LEGAL_NAME}}, {{MAILING_ADDRESS}}.</p>", templateSuffix: "legal", isPublished: true }) {
+    page { id handle }
+    userErrors { field message code }
+  }
+}
+
+# PageByHandle:Findpagesafety
+query PageByHandleInline {
+  pages(first: 1, query: "handle:safety") { nodes { id handle } }
+}
+
+# PageCreate:Createpagesafety
+mutation PageCreateInline {
+  pageCreate(page: { handle: "safety", title: "Safety and crisis protocol", body: "<p>The member chat (\"Ask Chang Yin\", \"Ask Sun Yoon\") is an AI. It tells you so at the start of every conversation and again at least every 3 hours of continuing conversation.</p>\n<p><strong>If you're thinking about harming yourself, call or text 988</strong> (Suicide &amp; Crisis Lifeline, free, 24/7). <strong>If you're in danger or it's a medical emergency, call 911.</strong> For concerns about an older adult's safety, the Eldercare Locator is 1-800-677-1116.</p>\n<p>Every message is checked for signs of self-harm, abuse or a medical emergency (chest pain, stroke signs, a fall with injury or a head strike). When one is found, the chat stops coaching, shows the resources above, logs the event and alerts our team. A real person on our team reads these messages 7:00 to 23:00 Eastern, 7 days a week. Outside those hours, the resources above are shown immediately and a person reads the message at 7:00 Eastern.</p>\n<p>The chat never diagnoses, never changes medication, doses or timing, and never offers therapy. Grief, relationship and mental-health conversations get the resources above and a human.</p>\n<p>If the AI service is unavailable, the chat goes offline and shows 988, 911, the Eldercare Locator and a way to reach a person.</p>", templateSuffix: "legal", isPublished: true }) {
+    page { id handle }
+    userErrors { field message code }
+  }
+}
+
+# PageByHandle:Findpagewelcome
+query PageByHandleInline {
+  pages(first: 1, query: "handle:welcome") { nodes { id handle } }
+}
+
+# PageCreate:Createpagewelcome
+mutation PageCreateInline {
+  pageCreate(page: { handle: "welcome", title: "Your books are ready", body: "<p>Your Starter Books are in your email and in your downloads. Start with Day 0 of the Strength Reset: six simple tests, about 15 minutes, next to a chair and a kitchen counter.</p>", templateSuffix: "welcome", isPublished: true }) {
+    page { id handle }
+    userErrors { field message code }
+  }
+}
+
+# ShopPolicyUpdate:SetpolicyREFUNDPOL
+mutation ShopPolicyUpdateInline {
+  shopPolicyUpdate(shopPolicy: { type: REFUND_POLICY, body: "<p><strong>Membership:</strong> 14-day money-back guarantee on your membership charge, once per person (matched by email and payment card). Ask within 14 days of the charge, in your account at https://members.strongyears.com or by replying to any email from us, and we refund that charge in full. If you also want to stop future charges, cancel online in your account at <a href=\"https://strongyears.com/account\">strongyears.com/account</a> (at most two screens), or by replying \"cancel\" to any email from us.</p>\n<p><strong>Books, printables and other digital add-ons:</strong> they are delivered instantly as downloads. Refund on request within 14 days of purchase: email {{SUPPORT_EMAIL}}. One refund per add-on.</p>\n<p><strong>The Strong Years Kit:</strong> refund on request within 30 days of delivery. No return needed.</p>\n<p><strong>Gift memberships:</strong> refund on request within 14 days of purchase if the gift has not been started.</p>\n<p>Refunds go back to the original payment method. Banks usually show them within 5 to 10 business days.</p>\n<p>Full details: <a href=\"https://strongyears.com/pages/membership-and-cancellation\">Membership and cancellation policy</a>.</p>" }) {
+    shopPolicy { id type }
+    userErrors { field message code }
+  }
+}
+
+# ShopPolicyUpdate:SetpolicySUBSCRIPT
+mutation ShopPolicyUpdateInline {
+  shopPolicyUpdate(shopPolicy: { type: SUBSCRIPTION_POLICY, body: "<div class=\"sy-summary\">\n<h2>The short version</h2>\n<ul>\n<li><strong>It renews automatically.</strong> A monthly membership is charged today and then every month on the same date until you cancel. A yearly membership is charged today and then every year until you cancel.</li>\n<li><strong>Founding price:</strong> $25 a month, locked for as long as you stay subscribed (pauses included). If you cancel and rejoin later, you pay the price at that time.</li>\n<li><strong>Cancel anytime</strong> online in your account at <a href=\"https://strongyears.com/account\">strongyears.com/account</a> (at most two screens), or by replying \"cancel\" to any email from us. Nobody needs to call. You keep access until the end of the period you paid for.</li>\n<li><strong>14-day money-back guarantee</strong> on your membership charge, once per person: ask within 14 days of the charge and we refund it in full.</li>\n<li><strong>Reminders:</strong> we email you before every renewal charge (7 and 2 days before your first renewal, 3 days before each one after that, 30 days before a yearly renewal) and once a year with a summary of your plan.</li>\n<li><strong>Price changes:</strong> we tell you by email exactly 30 days before any change, with a one-tap cancel link.</li>\n<li><strong>Gifts</strong> are paid once and never renew.</li>\n</ul>\n</div>\n<h2>Membership and cancellation policy</h2>\n<p>Effective 2026-10-01. This policy covers every Strong Years membership sold at strongyears.com. Strong Years is made by {{COMPANY_LEGAL_NAME}}, {{MAILING_ADDRESS}}.</p>\n\n<h3>1. Plans and prices</h3>\n<ul>\n<li><strong>Founding membership:</strong> $25 charged today for your first month, then $25 every month until you cancel.</li>\n<li><strong>Starter offer (where shown):</strong> $12 charged today for the Starter Books and your first founding month, then $25 every month until you cancel.</li>\n<li><strong>Standard membership</strong> (after the founding group closes): $35 charged today, then $35 every month until you cancel.</li>\n<li><strong>Founding annual</strong> (offered to founding members after their first renewal): $249 charged today, then $249 every year until you cancel.</li>\n<li><strong>Essentials:</strong> $12 a month until you cancel.</li>\n<li><strong>Gift memberships:</strong> 3 months for $49 or 12 months for $119, paid once. They do not renew. Near the end of a gift, the person who received it can choose to continue on their own card, with new consent. Nobody is charged automatically.</li>\n</ul>\n<p>Prices are in US dollars. Sales tax is added where it applies. On your bank statement the charge appears as STRONGYEARS MEMBER.</p>\n\n<h3 id=\"founding\">2. The founding group</h3>\n<p>Founding membership is open to the first 5,000 members or until January 9, 2027, whichever comes first. The count is the real number of founding memberships whose first charge succeeded and was not refunded or charged back. It is never reset, extended or reopened. If someone takes a refund, their seat goes back. The live count is shown on the founding membership page. After the group closes, new members join at the standard price of $35 a month, and that price is actually charged.</p>\n<p>Your founding price stays the same for as long as you stay subscribed, including while your membership is paused. If you cancel and rejoin, you pay the price offered at that time.</p>\n\n<h3>3. Your consent</h3>\n<p>Before you pay, we show these terms directly above the button and ask you to tick a separate box that is not ticked for you. We keep a record of the exact terms you saw, the time, and the price, for at least three years.</p>\n\n<h3>4. How to cancel</h3>\n<p>Cancel online in your account at <a href=\"https://strongyears.com/account\">strongyears.com/account</a> (at most two screens), or by replying \"cancel\" to any email from us. Cancelling stops all future charges immediately. You keep access until the end of the period you have paid for. We send a confirmation email right away. We never require a phone call to cancel; the billing line {{BILLING_PHONE}} is for questions only.</p>\n<p>You can also pause instead of cancelling. A paused membership is not charged and keeps your founding price.</p>\n\n<h3>5. Refunds</h3>\n<ul>\n<li><strong>Membership:</strong> 14-day money-back guarantee on your membership charge, once per person (matched by email and payment card). Ask within 14 days of the charge, in your account or by replying to any email, and we refund that charge in full.</li>\n<li><strong>Books, printables and other digital add-ons:</strong> refund on request within 14 days of purchase. Email {{SUPPORT_EMAIL}}.</li>\n<li><strong>The Strong Years Kit:</strong> refund on request within 30 days, no return needed.</li>\n<li><strong>Gift memberships:</strong> refund on request within 14 days of purchase if the gift has not been started.</li>\n</ul>\n\n<h3>6. Reminders and notices</h3>\n<p>We email you before every renewal charge: 7 and 2 days before your first renewal, then 3 days before each monthly renewal after that, and 30 days before a yearly renewal. Every auto-renewing member gets a yearly summary of the plan, the price, how often it bills and how to cancel. If a price ever changes, we email you exactly 30 days before the change with a one-tap cancel link. Our payment system may also send its own reminder a few days before each charge.</p>\n\n<h3>7. State automatic renewal laws</h3>\n<p>We follow the automatic renewal laws of California, New York, Minnesota, Virginia and the other states that have them, and we apply the strictest rule to everyone, wherever you live. That means clear terms before you pay, your express consent, a confirmation email that repeats the terms and how to cancel, online cancellation through the same website you joined on, reminders before renewals, a yearly summary, and advance notice of price changes. This policy follows the federal Restore Online Shoppers' Confidence Act (ROSCA).</p>\n\n<h3>8. Failed payments</h3>\n<p>If a renewal payment fails, we retry it a few times over several days and email you a link to update your card. Your access continues while we retry.</p>\n\n<h3>9. AI characters</h3>\n<p><strong>Chang Yin and Sun Yoon are AI characters</strong> created by the Strong Years team. Their life story (the welding, the garage, the fifty years of marriage) is fiction. They are not real people, not doctors, not physical therapists, not dietitians and not religious teachers. Sessions and recipes are built from published exercise and nutrition guidelines for older adults. Everything here is general fitness and nutrition education, not medical advice. Check with your doctor before starting new exercise.</p>\n\n<h3>10. Contact</h3>\n<p>{{COMPANY_LEGAL_NAME}}, {{MAILING_ADDRESS}}. Email {{SUPPORT_EMAIL}}. Billing questions {{BILLING_PHONE}}.</p>" }) {
+    shopPolicy { id type }
+    userErrors { field message code }
+  }
+}
+
+# ShopPolicyUpdate:SetpolicyTERMSOFSE
+mutation ShopPolicyUpdateInline {
+  shopPolicyUpdate(shopPolicy: { type: TERMS_OF_SERVICE, body: "<p>Effective 2026-10-01. These terms are an agreement between you and {{COMPANY_LEGAL_NAME}} (\"we\"), {{MAILING_ADDRESS}}, for the Strong Years website at strongyears.com, the members area at https://members.strongyears.com, and everything we sell.</p>\n<h3>1. Who can use Strong Years</h3>\n<p>You must be 18 or older to buy or to create a members account.</p>\n<h3>2. What Strong Years is, and what it is not</h3>\n<p>Strong Years is general fitness and nutrition education: follow-along exercise sessions, recipes, printables and an AI coach chat. It is not medical care, physical therapy, a diagnosis or a treatment, and it does not replace your doctor or anyone who can examine you in person. Check with your doctor before starting new exercise, especially if you have a heart condition, high blood pressure, recent surgery, a joint replacement, osteoporosis or dizziness. Stop any exercise if you feel chest pain, dizziness or sharp pain. In an emergency, call 911.</p>\n<h3>3. AI characters</h3>\n<p><strong>Chang Yin and Sun Yoon are AI characters</strong> created by the Strong Years team. Their life story (the welding, the garage, the fifty years of marriage) is fiction. They are not real people, not doctors, not physical therapists, not dietitians and not religious teachers. Sessions and recipes are built from published exercise and nutrition guidelines for older adults. Everything here is general fitness and nutrition education, not medical advice. Check with your doctor before starting new exercise.</p>\n<p>The member chat is an AI. It says so at the start of every conversation and again during long conversations. It does not give medical advice, does not change medications and does not provide therapy. If you write about harming yourself, it shows crisis resources: call or text 988 (Suicide &amp; Crisis Lifeline, free, 24/7), or call 911 in an emergency. Our crisis protocol is published at <a href=\"https://strongyears.com/pages/safety\">strongyears.com/pages/safety</a>.</p>\n<h3>4. Memberships, renewals and cancellation</h3>\n<p>Memberships renew automatically until you cancel. Prices, renewal terms, cancellation, reminders and refunds are set out in our <a href=\"https://strongyears.com/pages/membership-and-cancellation\">Membership and cancellation policy</a>, which is part of these terms. You can cancel online in your account at <a href=\"https://strongyears.com/account\">strongyears.com/account</a> (at most two screens), or by replying \"cancel\" to any email from us.</p>\n<h3>5. Digital products</h3>\n<p>Books, printables and programs are licensed to you for personal, non-commercial use. Please don't resell or share the files publicly.</p>\n<h3>6. Reviews and member stories</h3>\n<p>We never write, buy or invent reviews or testimonials. We only show a member's words with their written permission.</p>\n<h3>7. Your content and community rules</h3>\n<p>Be kind in the community. We remove harassment, sales pitches and requests for money. There are no private messages between members.</p>\n<h3>8. Limits</h3>\n<p>To the extent the law allows, our total liability to you is limited to the amount you paid us in the 12 months before the claim. Nothing in these terms limits rights you have under consumer protection law that cannot be limited.</p>\n<h3>9. Changes</h3>\n<p>If we change these terms in a way that matters to you, we email you at least 30 days before the change takes effect.</p>\n<h3>10. Law and contact</h3>\n<p>These terms are governed by the laws of {{GOVERNING_STATE}} and applicable US federal law. Questions: {{SUPPORT_EMAIL}}, {{BILLING_PHONE}}, {{MAILING_ADDRESS}}.</p>" }) {
+    shopPolicy { id type }
+    userErrors { field message code }
+  }
+}
+
+# ShopPolicyUpdate:SetpolicyPRIVACYPO
+mutation ShopPolicyUpdateInline {
+  shopPolicyUpdate(shopPolicy: { type: PRIVACY_POLICY, body: "<p>Effective 2026-10-01. {{COMPANY_LEGAL_NAME}} (\"we\") runs strongyears.com and https://members.strongyears.com.</p>\n<h3>What we collect</h3>\n<ul>\n<li><strong>Account and order details:</strong> name, email, billing details and order history. Payments are processed by Shopify; we never see your full card number.</li>\n<li><strong>How you found us:</strong> the link you arrived from (for example utm tags, the post or page that sent you, and the keyword you commented). We use this to know which posts help people, and to pay affiliates.</li>\n<li><strong>What you tell us in the app:</strong> your level, test scores, goals and anything you choose to tell the AI coach. Health-related details are consumer health data. We collect them only with your opt-in consent, use them only to run your plan, never sell them and never send them to advertising platforms.</li>\n<li><strong>Device and usage data</strong> such as pages viewed and sessions completed.</li>\n</ul>\n<h3>How we use it</h3>\n<p>To deliver your membership and downloads, send the emails you need (receipts, renewal reminders, the yearly summary), improve the program, prevent fraud and repeat refunds, and meet legal duties such as keeping consent records for automatic renewals.</p>\n<h3>Advertising</h3>\n<p>We may use advertising pixels to measure purchases. We send event names that don't describe health (for example \"Purchase\") and never send quiz answers, test scores or anything you tell the coach.</p>\n<h3>Who we share it with</h3>\n<p>Service providers that run the store and the members area (Shopify for checkout, our hosting and database providers, our email provider), under contracts that limit their use. We don't sell personal information.</p>\n<h3>Your choices and rights</h3>\n<p>You can see, correct, download or delete your data, see and delete what the AI coach remembers, and withdraw consent at any time in your account or by emailing {{SUPPORT_EMAIL}}. Residents of California, Washington, Nevada, Connecticut, Colorado, Virginia and other states have additional rights, which we honor for everyone.</p>\n<h3>Age</h3>\n<p>Strong Years is for adults 18 and older.</p>\n<h3>Contact</h3>\n<p>{{COMPANY_LEGAL_NAME}}, {{MAILING_ADDRESS}}, {{SUPPORT_EMAIL}}.</p>" }) {
+    shopPolicy { id type }
+    userErrors { field message code }
+  }
+}
+
+# ShopPolicyUpdate:SetpolicySHIPPINGP
+mutation ShopPolicyUpdateInline {
+  shopPolicyUpdate(shopPolicy: { type: SHIPPING_POLICY, body: "<p><strong>Digital products and memberships</strong> are delivered instantly by email and in your members area. Nothing is shipped.</p>\n<p><strong>The Strong Years Kit</strong> ships to US addresses only. Orders leave our warehouse within 2 business days. You get a tracking email when it ships. Refund on request within 30 days of delivery, no return needed.</p>" }) {
+    shopPolicy { id type }
+    userErrors { field message code }
+  }
+}
+
+# ShopPolicyUpdate:SetpolicyCONTACTIN
+mutation ShopPolicyUpdateInline {
+  shopPolicyUpdate(shopPolicy: { type: CONTACT_INFORMATION, body: "<p>{{COMPANY_LEGAL_NAME}}<br>{{MAILING_ADDRESS}}<br>Email: {{SUPPORT_EMAIL}}<br>Billing questions: {{BILLING_PHONE}}</p><p>A real person on our team reads messages 7:00 to 23:00 Eastern, 7 days a week.</p>" }) {
+    shopPolicy { id type }
+    userErrors { field message code }
+  }
+}
+
+# RedirectList:Findredirectjoin
+query RedirectListInline {
+  urlRedirects(first: 5, query: "path:/join") { nodes { id path target } }
+}
+
+# RedirectCreate:Createredirectjoin
+mutation RedirectCreateInline {
+  urlRedirectCreate(urlRedirect: { path: "/join", target: "/products/founding-membership" }) {
+    urlRedirect { id path target }
+    userErrors { field message code }
+  }
+}
+
+# RedirectList:Findredirectstart
+query RedirectListInline {
+  urlRedirects(first: 5, query: "path:/start") { nodes { id path target } }
+}
+
+# RedirectCreate:Createredirectstar
+mutation RedirectCreateInline {
+  urlRedirectCreate(urlRedirect: { path: "/start", target: "/" }) {
+    urlRedirect { id path target }
+    userErrors { field message code }
+  }
+}
+
+# RedirectList:Findredirectbooks
+query RedirectListInline {
+  urlRedirects(first: 5, query: "path:/books") { nodes { id path target } }
+}
+
+# RedirectCreate:Createredirectbook
+mutation RedirectCreateInline {
+  urlRedirectCreate(urlRedirect: { path: "/books", target: "/products/strong-years-starter-books" }) {
+    urlRedirect { id path target }
+    userErrors { field message code }
+  }
+}
+
+# RedirectList:Findredirectgift
+query RedirectListInline {
+  urlRedirects(first: 5, query: "path:/gift") { nodes { id path target } }
+}
+
+# RedirectCreate:Createredirectgift
+mutation RedirectCreateInline {
+  urlRedirectCreate(urlRedirect: { path: "/gift", target: "/products/gift-strong-years" }) {
+    urlRedirect { id path target }
+    userErrors { field message code }
+  }
+}
+
+# RedirectList:Findredirectterms
+query RedirectListInline {
+  urlRedirects(first: 5, query: "path:/terms") { nodes { id path target } }
+}
+
+# RedirectCreate:Createredirectterm
+mutation RedirectCreateInline {
+  urlRedirectCreate(urlRedirect: { path: "/terms", target: "/pages/membership-and-cancellation" }) {
+    urlRedirect { id path target }
+    userErrors { field message code }
+  }
+}
+
+# RedirectList:Findredirectsafety
+query RedirectListInline {
+  urlRedirects(first: 5, query: "path:/safety") { nodes { id path target } }
+}
+
+# RedirectCreate:Createredirectsafe
+mutation RedirectCreateInline {
+  urlRedirectCreate(urlRedirect: { path: "/safety", target: "/pages/safety" }) {
+    urlRedirect { id path target }
+    userErrors { field message code }
+  }
+}
+
+# RedirectList:Findredirecthowwem
+query RedirectListInline {
+  urlRedirects(first: 5, query: "path:/how-we-make-this") { nodes { id path target } }
+}
+
+# RedirectCreate:Createredirecthoww
+mutation RedirectCreateInline {
+  urlRedirectCreate(urlRedirect: { path: "/how-we-make-this", target: "/pages/how-we-make-this" }) {
+    urlRedirect { id path target }
+    userErrors { field message code }
+  }
+}
+
+# ProductByHandle:Checksellingplangr
+query ProductByHandleInline {
+  productByIdentifier(identifier: { handle: "founding-annual" }) {
+    id
+    handle
+    status
+    requiresSellingPlan
+    variants(first: 10) {
+      nodes { id title price sku inventoryItem { id tracked } inventoryQuantity }
+    }
+    sellingPlanGroups(first: 10) {
+      nodes {
+        id
+        name
+        appId
+        sellingPlans(first: 10) {
+          nodes {
+            id
+            name
+            billingPolicy { ... on SellingPlanRecurringBillingPolicy { interval intervalCount } }
+          }
+        }
+      }
+    }
+  }
+}
+
+# SellingPlanGroupCreate:Createsellingplang
+mutation SellingPlanGroupCreateInline {
+  sellingPlanGroupCreate(input: { name: "Yearly membership", merchantCode: "sy-yearly", options: ["Plan"], position: 1, sellingPlansToCreate: [{ name: "Yearly, renews until you cancel", description: "Billed every year until you cancel. We email you 30 days before each renewal.", options: ["Yearly, renews until you cancel"], position: 1, category: SUBSCRIPTION, billingPolicy: { recurring: { interval: YEAR, intervalCount: 1 } }, deliveryPolicy: { recurring: { interval: YEAR, intervalCount: 1 } }, pricingPolicies: [] }] }, resources: { productIds: ["gid://shopify/Product/DRYRUN-founding-annual"] }) {
+    sellingPlanGroup { id sellingPlans(first: 10) { nodes { id name } } }
+    userErrors { field message code }
+  }
+}
+
+# ProductUpdate:Makefoundingmember
+mutation ProductUpdateInline {
+  productUpdate(product: { id: "gid://shopify/Product/DRYRUN-founding-membership", requiresSellingPlan: true }) {
+    product { id status requiresSellingPlan }
+    userErrors { field message }
+  }
+}
+
+# ProductUpdate:Makestrongyearsmem
+mutation ProductUpdateInline {
+  productUpdate(product: { id: "gid://shopify/Product/DRYRUN-strong-years-membership", requiresSellingPlan: true }) {
+    product { id status requiresSellingPlan }
+    userErrors { field message }
+  }
+}
+
+# ProductUpdate:Makeessentialsmemb
+mutation ProductUpdateInline {
+  productUpdate(product: { id: "gid://shopify/Product/DRYRUN-essentials-membership", requiresSellingPlan: true }) {
+    product { id status requiresSellingPlan }
+    userErrors { field message }
+  }
+}
+
+# ProductUpdate:Makefoundingannual
+mutation ProductUpdateInline {
+  productUpdate(product: { id: "gid://shopify/Product/DRYRUN-founding-annual", requiresSellingPlan: true }) {
+    product { id status requiresSellingPlan }
+    userErrors { field message }
+  }
+}
+
+# WebhookCreate:SubscribewebhookSU
+mutation WebhookCreateInline {
+  webhookSubscriptionCreate(topic: SUBSCRIPTION_BILLING_ATTEMPTS_CHALLENGED, webhookSubscription: { uri: "https://members.strongyears.com/api/webhooks/shopify", format: JSON }) {
+    webhookSubscription { id topic uri }
+    userErrors { field message }
+  }
+}
+
+# ProductByHandle:Verifystrongyearss
+query ProductByHandleInline {
+  productByIdentifier(identifier: { handle: "strong-years-starter-books-c15" }) {
+    id
+    handle
+    status
+    requiresSellingPlan
+    variants(first: 10) {
+      nodes { id title price sku inventoryItem { id tracked } inventoryQuantity }
+    }
+    sellingPlanGroups(first: 10) {
+      nodes {
+        id
+        name
+        appId
+        sellingPlans(first: 10) {
+          nodes {
+            id
+            name
+            billingPolicy { ... on SellingPlanRecurringBillingPolicy { interval intervalCount } }
+          }
+        }
+      }
+    }
+  }
+}
+
+# ProductByHandle:Verifyfoundingmemb
+query ProductByHandleInline {
+  productByIdentifier(identifier: { handle: "founding-membership" }) {
+    id
+    handle
+    status
+    requiresSellingPlan
+    variants(first: 10) {
+      nodes { id title price sku inventoryItem { id tracked } inventoryQuantity }
+    }
+    sellingPlanGroups(first: 10) {
+      nodes {
+        id
+        name
+        appId
+        sellingPlans(first: 10) {
+          nodes {
+            id
+            name
+            billingPolicy { ... on SellingPlanRecurringBillingPolicy { interval intervalCount } }
+          }
+        }
+      }
+    }
+  }
+}
+
+# ProductByHandle:Verifystrongyearsm
+query ProductByHandleInline {
+  productByIdentifier(identifier: { handle: "strong-years-membership" }) {
+    id
+    handle
+    status
+    requiresSellingPlan
+    variants(first: 10) {
+      nodes { id title price sku inventoryItem { id tracked } inventoryQuantity }
+    }
+    sellingPlanGroups(first: 10) {
+      nodes {
+        id
+        name
+        appId
+        sellingPlans(first: 10) {
+          nodes {
+            id
+            name
+            billingPolicy { ... on SellingPlanRecurringBillingPolicy { interval intervalCount } }
+          }
+        }
+      }
+    }
+  }
+}
+
+# ProductByHandle:Verifyfoundingannu
+query ProductByHandleInline {
+  productByIdentifier(identifier: { handle: "founding-annual" }) {
+    id
+    handle
+    status
+    requiresSellingPlan
+    variants(first: 10) {
+      nodes { id title price sku inventoryItem { id tracked } inventoryQuantity }
+    }
+    sellingPlanGroups(first: 10) {
+      nodes {
+        id
+        name
+        appId
+        sellingPlans(first: 10) {
+          nodes {
+            id
+            name
+            billingPolicy { ... on SellingPlanRecurringBillingPolicy { interval intervalCount } }
+          }
+        }
+      }
+    }
+  }
+}
+
+# ProductByHandle:Verifyessentialsme
+query ProductByHandleInline {
+  productByIdentifier(identifier: { handle: "essentials-membership" }) {
+    id
+    handle
+    status
+    requiresSellingPlan
+    variants(first: 10) {
+      nodes { id title price sku inventoryItem { id tracked } inventoryQuantity }
+    }
+    sellingPlanGroups(first: 10) {
+      nodes {
+        id
+        name
+        appId
+        sellingPlans(first: 10) {
+          nodes {
+            id
+            name
+            billingPolicy { ... on SellingPlanRecurringBillingPolicy { interval intervalCount } }
+          }
+        }
+      }
+    }
+  }
+}
+
+# ProductByHandle:Verifygiftstrongye
+query ProductByHandleInline {
+  productByIdentifier(identifier: { handle: "gift-strong-years" }) {
+    id
+    handle
+    status
+    requiresSellingPlan
+    variants(first: 10) {
+      nodes { id title price sku inventoryItem { id tracked } inventoryQuantity }
+    }
+    sellingPlanGroups(first: 10) {
+      nodes {
+        id
+        name
+        appId
+        sellingPlans(first: 10) {
+          nodes {
+            id
+            name
+            billingPolicy { ... on SellingPlanRecurringBillingPolicy { interval intervalCount } }
+          }
+        }
+      }
+    }
+  }
+}
+
+# ProductByHandle:Verifythewallplan
+query ProductByHandleInline {
+  productByIdentifier(identifier: { handle: "the-wall-plan" }) {
+    id
+    handle
+    status
+    requiresSellingPlan
+    variants(first: 10) {
+      nodes { id title price sku inventoryItem { id tracked } inventoryQuantity }
+    }
+    sellingPlanGroups(first: 10) {
+      nodes {
+        id
+        name
+        appId
+        sellingPlans(first: 10) {
+          nodes {
+            id
+            name
+            billingPolicy { ... on SellingPlanRecurringBillingPolicy { interval intervalCount } }
+          }
+        }
+      }
+    }
+  }
+}
+
+# ProductByHandle:Verifystrongyearsk
+query ProductByHandleInline {
+  productByIdentifier(identifier: { handle: "strong-years-kit" }) {
+    id
+    handle
+    status
+    requiresSellingPlan
+    variants(first: 10) {
+      nodes { id title price sku inventoryItem { id tracked } inventoryQuantity }
+    }
+    sellingPlanGroups(first: 10) {
+      nodes {
+        id
+        name
+        appId
+        sellingPlans(first: 10) {
+          nodes {
+            id
+            name
+            billingPolicy { ... on SellingPlanRecurringBillingPolicy { interval intervalCount } }
+          }
+        }
+      }
+    }
+  }
+}
+
+# DiscountByCode:VerifySTARTERdisco
+query DiscountByCodeInline {
+  codeDiscountNodeByCode(code: "STARTER12") { id }
+}

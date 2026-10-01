@@ -1,0 +1,24 @@
+# Strong Years Offers: a single-store app (Dev Dashboard, same organization as the store).
+# Created with: shopify app init --template none  (then the two extensions below)
+# Deploy:      shopify app deploy   (pushes the extensions; the server lives in the members app)
+client_id = "SET_FROM_DEV_DASHBOARD"
+name = "Strong Years Offers"
+handle = "strong-years-offers"
+application_url = "https://members.strongyears.com/shopify"
+embedded = false
+
+[access_scopes]
+# Provisioning (npm run provision) + members app (refunds, customer metafields) + post-purchase offers.
+scopes = "read_products,write_products,read_inventory,write_inventory,read_locations,read_publications,write_publications,read_discounts,write_discounts,read_content,write_content,read_online_store_pages,write_online_store_pages,read_legal_policies,write_legal_policies,read_online_store_navigation,write_online_store_navigation,read_orders,write_orders,read_customers,write_customers,read_markets_home,read_purchase_options"
+# App engine only (SUBSCRIPTION_ENGINE=app), add: write_purchase_options,read_own_subscription_contracts,write_own_subscription_contracts
+
+[auth]
+redirect_urls = ["https://members.strongyears.com/shopify/auth/callback"]
+
+[webhooks]
+api_version = "2026-07"
+# Topic subscriptions are created by `npm run provision` (shopify/src/plan.ts) so the URI is env-driven.
+
+[build]
+automatically_update_urls_on_dev = false
+include_config_on_deploy = true

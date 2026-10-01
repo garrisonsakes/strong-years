@@ -1,0 +1,33 @@
+{%- comment -%} Prepaid gift, no auto-renew (OFFER.md §0, FUNNEL.md S-04: clearly a gift with start and end dates). {%- endcomment -%}
+<section class="wrap stack" aria-labelledby="gift-h">
+  {% render 'sy-character', who: 'sun', size: 72, text: '<p><strong>Sun Yoon:</strong> "Better than another sweater."</p>' %}
+  <h1 id="gift-h">Give Mom or Dad Strong Years.</h1>
+  <p>A prepaid membership: the Daily Practice with Chang Yin, Sun Yoon's Sunday recipes and the monthly Strength Age retest. <strong>One payment. It does not renew.</strong></p>
+  <form action="{{ routes.cart_add_url }}" method="post" class="stack" data-sy-offer="gift" data-sy-interval="once" novalidate>
+    <input type="hidden" name="return_to" value="/checkout">
+    <fieldset class="stack-s" style="border:0;padding:0;margin:0">
+      <legend><h2 style="font-size:1.35rem;margin-bottom:10px">How long?</h2></legend>
+      {%- for variant in product.variants -%}
+        <label class="plan">
+          <input type="radio" name="id" value="{{ variant.id }}" data-sy-sku="{% if variant.sku contains '12M' %}gift12{% else %}gift3{% endif %}" {% if forloop.first %}checked{% endif %}>
+          <span class="stack-s"><strong>{{ variant.title }}</strong><span class="price">{{ variant.price | money_without_trailing_zeros }}</span><span>Paid once. Ends automatically.</span></span>
+        </label>
+      {%- endfor -%}
+    </fieldset>
+    <div class="field"><label for="g-name">Their first name</label><input id="g-name" name="properties[Recipient name]" autocomplete="off" data-sy-required="Please add their first name."></div>
+    <div class="field"><label for="g-email">Their email (we send the gift here)</label><input id="g-email" type="email" name="properties[Recipient email]" autocomplete="off" data-sy-required="Please add their email address."></div>
+    <div class="field"><label for="g-start">Start date</label><input id="g-start" type="date" name="properties[Start date]" data-sy-required="Please choose a start date."></div>
+    <div class="field"><label for="g-msg">A note from you (optional)</label><textarea id="g-msg" name="properties[Gift note]" rows="3" maxlength="300"></textarea></div>
+    <div class="terms" data-sy-terms>
+      <p><strong>One payment. It does not renew.</strong> The gift starts on the date you choose and ends after the length you picked. Nobody is charged again.</p>
+      <p>Near the end, the person you gave it to can choose to continue on their own card, with their own consent.</p>
+      <p>Refund on request within 14 days of purchase if the gift has not been started.</p>
+    </div>
+    <p class="alert" data-sy-error role="alert" hidden></p>
+    <button type="submit" class="btn">Give Strong Years</button>
+  </form>
+  <p class="small">Chang Yin and Sun Yoon are AI characters. General fitness and nutrition education, not medical advice.</p>
+</section>
+{% schema %}
+{ "name": "Gift membership", "settings": [] }
+{% endschema %}

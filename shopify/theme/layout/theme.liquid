@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#FBF6EC">
+    {%- liquid
+      assign sy_role = product.metafields.strong_years.role.value
+      assign sy_cell = product.metafields.strong_years.cell.value
+      assign canonical = canonical_url
+      if sy_role == 'ebook'
+        assign canonical = shop.url | append: '/products/strong-years-starter-books'
+      endif
+    -%}
+    <title>{{ page_title }}{% unless page_title contains shop.name %} | {{ shop.name }}{% endunless %}</title>
+    {%- if page_description -%}<meta name="description" content="{{ page_description | escape }}">{%- endif -%}
+    <link rel="canonical" href="{{ canonical }}">
+    {%- if sy_role == 'ebook' and sy_cell != 'e12' -%}<meta name="robots" content="noindex, follow">{%- endif -%}
+    {%- if sy_role == 'essentials' or sy_role == 'annual' or template.suffix == 'starter' -%}<meta name="robots" content="noindex, follow">{%- endif -%}
+    <meta property="og:site_name" content="{{ shop.name }}">
+    <meta property="og:title" content="{{ page_title | escape }}">
+    <meta property="og:url" content="{{ canonical }}">
+    {{ 'atkinson-hyperlegible-latin-400-normal.woff2' | asset_url | preload_tag: as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }}
+    {{ 'fraunces-latin-opsz-normal.woff2' | asset_url | preload_tag: as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }}
+    {{ 'strong-years.css' | asset_url | stylesheet_tag }}
+
+    <script type="application/json" id="sy-config">
+      {
+        "cells": {{ shop.metafields.strong_years.cells.value | json }},
+        "founding": {{ shop.metafields.strong_years.founding.value | json }},
+        "links": {{ shop.metafields.strong_years.links.value | json }},
+        "page": {
+          "template": {{ template.name | json }},
+          "suffix": {{ template.suffix | json }},
+          "role": {{ sy_role | json }},
+          "cell": {{ sy_cell | json }},
+          "handle": {{ product.handle | json }}
+        }
+      }
+    </script>
+    <script>
+      /* Boot: assign a sticky price cell + funnel arm BEFORE first paint (no flicker, no bait-and-switch:
+         the price shown is the price of the product the visitor buys). See assets/strong-years.js. */
+      (function () {
+        var d = document.documentElement, C = {};
+        try { C = JSON.parse(document.getElementById('sy-config').textContent) || {}; } catch (e) {}
+        var cells = (C.cells && C.cells.ebook) || [], arms = (C.cells && C.cells.arms) || [];
+        var q = new URLSearchParams(location.search);
+        function get(k) { try { return localStorage.getItem(k); } catch (e) { var m = document.cookie.match('(?:^|; )' + k + '=([^;]*)'); return m ? decodeURIComponent(m[1]) : null; } }
+        function set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} document.cookie = k + '=' + encodeURIComponent(v) + ';path=/;max-age=15552000;samesite=lax'; }
+        /* With the arm/cell test off (cells.test === false) everyone gets the entry marked default (CANON UPDATE 3: arm B, cell e12). */
+        function pick(list) { var t = 0, i, r; if (C.cells && C.cells.test === false) { for (i = 0; i < list.length; i++) if (list[i]['default']) return list[i].id; } for (i = 0; i < list.length; i++) t += +list[i].weight || 0; r = Math.random() * t; for (i = 0; i < list.length; i++) { r -= +list[i].weight || 0; if (r <= 0) return list[i].id; } return list.length ? list[0].id : null; }
+        /* The members app's /b redirect hands over its signed visitor id so the order is credited to the same visitor. */
+        var vid = q.get('vid'); if (vid && /^[0-9a-f-]{36}$/.test(vid)) set('sy_vid', vid);
+        function valid(list, id) { for (var i = 0; i < list.length; i++) if (list[i].id === id) return true; return false; }
+        var cell = q.get('cell'), arm = q.get('arm');
+        if (!valid(cells, cell)) cell = get('sy_ebook_cell');
+        if (!valid(cells, cell)) cell = pick(cells);
+        if (!valid(arms, arm)) arm = get('sy_arm');
+        if (!valid(arms, arm)) arm = pick(arms);
+        if (cell) { set('sy_ebook_cell', cell); d.setAttribute('data-cell', cell); }
+        if (arm) { set('sy_arm', arm); d.setAttribute('data-arm', arm); }
+        /* sy_cell = the cell the members app reports on: m12 for arm B, else the ebook price cell. */
+        var armB = null; for (var j = 0; j < arms.length; j++) if (arms[j].id === arm && arms[j].cell) armB = arms[j].cell;
+        set('sy_cell', armB || cell || '');
+        var P = C.page || {};
+        if (P.role === 'ebook' && cell && P.cell && P.cell !== cell) {
+          for (var i = 0; i < cells.length; i++) if (cells[i].id === cell) { location.replace('/products/' + cells[i].handle + location.search); break; }
+        }
+      })();
+    </script>
+    {{ content_for_header }}
+  </head>
+  <body class="template-{{ template.name }}{% if template.suffix %} template-{{ template.name }}-{{ template.suffix }}{% endif %}">
+    <a class="skip" href="#main">Skip to content</a>
+    {% sections 'header-group' %}
+    <main id="main" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
+    {% sections 'footer-group' %}
+    <script src="{{ 'strong-years.js' | asset_url }}" defer></script>
+  </body>
+</html>

@@ -1,0 +1,4277 @@
+[
+ {
+  "id": "B1",
+  "name": "Chicken and ginger rice porridge",
+  "native": "dak-juk (Korean) / jī zhōu (Chinese)",
+  "category": "Breakfast",
+  "serves": 4,
+  "minutes_active": 15,
+  "minutes_total": 55,
+  "per_serving": {
+   "kcal": 421.1,
+   "protein_g": 40.6,
+   "fiber_g": 1.1,
+   "sodium_mg": 504.1
+  },
+  "ingredients": [
+   {
+    "amount": "3/4 cup",
+    "item": "short-grain white rice (sushi rice), rinsed",
+    "grams": 150,
+    "source": "FDC 168931"
+   },
+   {
+    "amount": "1 lb",
+    "item": "boneless, skinless chicken breast, whole",
+    "grams": 454,
+    "source": "FDC 171077"
+   },
+   {
+    "amount": "4 cups",
+    "item": "low-sodium chicken broth",
+    "grams": 960,
+    "source": "FDC 171609"
+   },
+   {
+    "amount": "4 cups",
+    "item": "water",
+    "grams": 0,
+    "source": null
+   },
+   {
+    "amount": "2-inch piece",
+    "item": "fresh ginger, peeled and thinly sliced",
+    "grams": 22,
+    "source": "FDC 169231"
+   },
+   {
+    "amount": "4",
+    "item": "garlic cloves, smashed",
+    "grams": 12,
+    "source": "FDC 169230"
+   },
+   {
+    "amount": "4",
+    "item": "large eggs, beaten",
+    "grams": 200,
+    "source": "FDC 171287"
+   },
+   {
+    "amount": "3 cups (3 oz)",
+    "item": "baby spinach",
+    "grams": 85,
+    "source": "FDC 168462"
+   },
+   {
+    "amount": "4",
+    "item": "scallions, thinly sliced",
+    "grams": 60,
+    "source": "FDC 170005"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "low-sodium soy sauce",
+    "grams": 16,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "2 tsp",
+    "item": "toasted sesame oil",
+    "grams": 9,
+    "source": "FDC 171016"
+   },
+   {
+    "amount": "1/4 tsp",
+    "item": "salt",
+    "grams": 1.5,
+    "source": "FDC 173468"
+   },
+   {
+    "amount": "pinch",
+    "item": "white or black pepper",
+    "grams": 0,
+    "source": null
+   }
+  ],
+  "steps": [
+   "Rinse the rice in a bowl of cold water, swishing with your hand, until the water is mostly clear. Drain.",
+   "Put the broth, water, ginger, garlic and the whole chicken breast in a large pot. Bring to a boil, then turn down to a gentle simmer. Cover and cook 15 minutes, until the thickest part of the chicken reads 165°F.",
+   "Lift the chicken onto a plate. Add the rice to the pot. Simmer uncovered, stirring every 5 minutes and scraping the bottom, for 35 to 40 minutes, until the grains break open and it looks creamy.",
+   "While it cooks, shred the chicken with two forks.",
+   "Stir the spinach into the porridge until it wilts, about 1 minute.",
+   "Keep the pot at a gentle simmer. Pour in the beaten eggs in a thin stream while you stir slowly. Keep simmering 2 minutes, until the egg is fully cooked and firm.",
+   "Stir the chicken back in. Season with the soy sauce and salt. Taste before adding more.",
+   "Serve topped with scallions, a few drops of sesame oil and pepper. Fish out the ginger slices if you don't like biting them."
+  ],
+  "soft_food": "Already soft. For a smoother texture, blend 1 minute with an immersion blender before adding the chicken, and chop the chicken finely.",
+  "storage": "Fridge up to 4 days. It thickens as it sits: add water when you reheat, and reheat to 165°F (steaming hot all the way through).",
+  "cautions": [
+   "On warfarin? Keep greens steady from week to week; don't suddenly change how much you eat. Ask your doctor.",
+   "Kidney disease? Ask your doctor for your protein number (E28)."
+  ],
+  "collection": "strong_kitchen"
+ },
+ {
+  "id": "B2",
+  "name": "Steamed egg custard with soft tofu",
+  "native": "gyeran-jjim (Korean)",
+  "category": "Breakfast",
+  "serves": 2,
+  "minutes_active": 8,
+  "minutes_total": 20,
+  "per_serving": {
+   "kcal": 398.3,
+   "protein_g": 28.0,
+   "fiber_g": 2.4,
+   "sodium_mg": 308.8
+  },
+  "ingredients": [
+   {
+    "amount": "5",
+    "item": "large eggs",
+    "grams": 250,
+    "source": "FDC 171287"
+   },
+   {
+    "amount": "1/2 block (7 oz)",
+    "item": "soft tofu, drained and cut into small cubes",
+    "grams": 198,
+    "source": "FDC 172449"
+   },
+   {
+    "amount": "3/4 cup",
+    "item": "low-sodium chicken broth",
+    "grams": 180,
+    "source": "FDC 171609"
+   },
+   {
+    "amount": "2",
+    "item": "scallions, finely chopped",
+    "grams": 30,
+    "source": "FDC 170005"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "low-sodium soy sauce",
+    "grams": 5,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "1/2 tsp",
+    "item": "toasted sesame oil",
+    "grams": 2.3,
+    "source": "FDC 171016"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "toasted sesame seeds",
+    "grams": 3,
+    "source": "FDC 170151"
+   },
+   {
+    "amount": "1 cup",
+    "item": "cooked brown rice, to serve (1/2 cup each)",
+    "grams": 195,
+    "source": "FDC 169704"
+   }
+  ],
+  "steps": [
+   "Whisk the eggs, broth and soy sauce in a bowl until smooth, about 30 seconds.",
+   "Put the tofu cubes in a small heatproof bowl or a small pot (2 to 3 cups). Pour the egg mixture over the tofu. Stir in most of the scallions.",
+   "Set the bowl on a folded towel in a larger pot with 1 inch of simmering water (or cook the small pot directly over low heat). Cover.",
+   "Steam on low for 12 to 15 minutes, until the center no longer jiggles like liquid and a knife comes out clean. The custard should be fully set, not runny.",
+   "Top with the rest of the scallions, sesame oil and sesame seeds. Serve with rice."
+  ],
+  "soft_food": "Already soft. Skip the rice, or cook it softer with extra water.",
+  "storage": "Best eaten right away. Leftovers keep 2 days in the fridge; reheat until steaming.",
+  "cautions": [],
+  "collection": "strong_kitchen"
+ },
+ {
+  "id": "B3",
+  "name": "Savory oatmeal with egg, edamame and kimchi",
+  "native": "Sun's oat juk",
+  "category": "Breakfast",
+  "serves": 1,
+  "minutes_active": 5,
+  "minutes_total": 10,
+  "per_serving": {
+   "kcal": 438.9,
+   "protein_g": 28.9,
+   "fiber_g": 10.5,
+   "sodium_mg": 539.9
+  },
+  "ingredients": [
+   {
+    "amount": "1/2 cup",
+    "item": "old-fashioned rolled oats",
+    "grams": 40,
+    "source": "FDC 173904"
+   },
+   {
+    "amount": "1 cup",
+    "item": "unsweetened soy milk",
+    "grams": 243,
+    "source": "FDC 175215"
+   },
+   {
+    "amount": "1/2 cup",
+    "item": "water",
+    "grams": 0,
+    "source": null
+   },
+   {
+    "amount": "1/2 cup",
+    "item": "frozen shelled edamame",
+    "grams": 78,
+    "source": "FDC 168410"
+   },
+   {
+    "amount": "1",
+    "item": "large egg, beaten",
+    "grams": 50,
+    "source": "FDC 171287"
+   },
+   {
+    "amount": "1/4 cup",
+    "item": "kimchi, chopped",
+    "grams": 38,
+    "source": "FDC 170392"
+   },
+   {
+    "amount": "1",
+    "item": "scallion, sliced",
+    "grams": 15,
+    "source": "FDC 170005"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "low-sodium soy sauce",
+    "grams": 5,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "1/2 tsp",
+    "item": "toasted sesame oil",
+    "grams": 2.3,
+    "source": "FDC 171016"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "toasted sesame seeds",
+    "grams": 3,
+    "source": "FDC 170151"
+   }
+  ],
+  "steps": [
+   "Put the oats, soy milk, water and edamame in a small pot. Bring to a simmer over medium heat, stirring.",
+   "Cook 4 to 5 minutes, stirring often, until thick.",
+   "Stir in the beaten egg and keep stirring over low heat for 1 to 2 minutes, until no runny egg is left.",
+   "Stir in the soy sauce. Top with kimchi, scallion, sesame oil and sesame seeds."
+  ],
+  "soft_food": "Cook the oats 2 minutes longer with a splash more water. Use quick oats. Chop the kimchi very finely, or leave it out.",
+  "storage": "Best fresh. Cooked oats keep 3 days; reheat with a splash of water until steaming.",
+  "cautions": [
+   "Kimchi is salty. Watching sodium? Small portions, or rinse it.",
+   "High fiber. Go up slowly and drink water, or you'll feel it (E24)."
+  ],
+  "collection": "strong_kitchen"
+ },
+ {
+  "id": "B4",
+  "name": "Morning yogurt bowl with kiwi and walnuts",
+  "native": "Sun's fridge breakfast",
+  "category": "Breakfast",
+  "serves": 1,
+  "minutes_active": 5,
+  "minutes_total": 5,
+  "per_serving": {
+   "kcal": 375.6,
+   "protein_g": 28.3,
+   "fiber_g": 7.4,
+   "sodium_mg": 88.9
+  },
+  "ingredients": [
+   {
+    "amount": "1 cup (8 oz)",
+    "item": "plain nonfat Greek yogurt",
+    "grams": 227,
+    "source": "FDC 170894"
+   },
+   {
+    "amount": "2",
+    "item": "green kiwis, peeled and sliced",
+    "grams": 150,
+    "source": "FDC 168153"
+   },
+   {
+    "amount": "2 Tbsp",
+    "item": "chopped walnuts",
+    "grams": 14,
+    "source": "FDC 170187"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "ground flaxseed",
+    "grams": 7,
+    "source": "FDC 169414"
+   },
+   {
+    "amount": "1 tsp (optional)",
+    "item": "honey",
+    "grams": 7,
+    "source": "FDC 169640"
+   }
+  ],
+  "steps": [
+   "Spoon the yogurt into a bowl.",
+   "Top with kiwi slices, walnuts and flaxseed.",
+   "Drizzle with honey if you want it. You don't need it. The kiwi is sweet."
+  ],
+  "soft_food": "Use seedless fruit if kiwi seeds bother your dentures: a ripe persimmon or a banana. Swap the walnuts for 1 Tbsp smooth peanut butter stirred in.",
+  "storage": "Assemble fresh. Ground flaxseed keeps best in the fridge.",
+  "cautions": [
+   "Honey: never for babies under 1. Diabetes: honey counts as sugar (or leave it out).",
+   "High fiber. Go up slowly and drink water, or you'll feel it (E24).",
+   "Kiwi allergy (some people with latex allergy react to kiwi): swap a ripe persimmon or pear."
+  ],
+  "collection": "strong_kitchen"
+ },
+ {
+  "id": "B5",
+  "name": "Tomato and egg on toast",
+  "native": "fānqié chǎo dàn (Chinese)",
+  "category": "Breakfast",
+  "serves": 2,
+  "minutes_active": 12,
+  "minutes_total": 15,
+  "per_serving": {
+   "kcal": 448.0,
+   "protein_g": 25.6,
+   "fiber_g": 6.4,
+   "sodium_mg": 771.0
+  },
+  "ingredients": [
+   {
+    "amount": "5",
+    "item": "large eggs",
+    "grams": 250,
+    "source": "FDC 171287"
+   },
+   {
+    "amount": "3 medium",
+    "item": "ripe tomatoes, cut into wedges",
+    "grams": 369,
+    "source": "FDC 170457"
+   },
+   {
+    "amount": "2",
+    "item": "scallions, sliced",
+    "grams": 30,
+    "source": "FDC 170005"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "sugar",
+    "grams": 4.2,
+    "source": "FDC 169655"
+   },
+   {
+    "amount": "1/4 tsp",
+    "item": "salt",
+    "grams": 1.5,
+    "source": "FDC 173468"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "canola oil",
+    "grams": 14,
+    "source": "FDC 172336"
+   },
+   {
+    "amount": "4 slices",
+    "item": "whole-wheat bread, toasted",
+    "grams": 128,
+    "source": "FDC 172688"
+   }
+  ],
+  "steps": [
+   "Beat the eggs with a pinch of the salt.",
+   "Heat half the oil in a nonstick pan over medium heat. Add the eggs and stir gently until just set in soft, fully cooked curds, about 2 minutes. Slide onto a plate.",
+   "Add the rest of the oil and the tomatoes. Cook, stirring, 3 to 4 minutes, until juicy and soft. Add the sugar and remaining salt.",
+   "Return the eggs to the pan. Stir together 1 minute until the eggs are hot and firm.",
+   "Top with scallions. Spoon over the toast."
+  ],
+  "soft_food": "Skip the toast crust, or serve over soft rice. Peel the tomatoes if the skins bother you.",
+  "storage": "Best fresh. Keeps 1 day in the fridge; reheat until steaming.",
+  "cautions": [
+   "High fiber. Go up slowly and drink water, or you'll feel it (E24).",
+   "This one is on the salty side (about 770 mg sodium per serving). Watching sodium? Use half the paste or soy sauce and add water or unsalted broth."
+  ],
+  "collection": "strong_kitchen"
+ },
+ {
+  "id": "L1",
+  "name": "Turkey bibimbap bowl",
+  "native": "bibimbap (Korean)",
+  "category": "Lunch",
+  "serves": 4,
+  "minutes_active": 30,
+  "minutes_total": 35,
+  "per_serving": {
+   "kcal": 590.8,
+   "protein_g": 39.7,
+   "fiber_g": 7.3,
+   "sodium_mg": 768.0
+  },
+  "ingredients": [
+   {
+    "amount": "1 lb",
+    "item": "ground turkey",
+    "grams": 454,
+    "source": "FDC 171505"
+   },
+   {
+    "amount": "3 cups",
+    "item": "cooked brown rice",
+    "grams": 585,
+    "source": "FDC 169704"
+   },
+   {
+    "amount": "10 oz",
+    "item": "fresh spinach",
+    "grams": 284,
+    "source": "FDC 168462"
+   },
+   {
+    "amount": "3 cups",
+    "item": "mung bean sprouts (always cooked, below)",
+    "grams": 312,
+    "source": "FDC 169957"
+   },
+   {
+    "amount": "2 medium",
+    "item": "carrots, cut in thin matchsticks",
+    "grams": 122,
+    "source": "FDC 170393"
+   },
+   {
+    "amount": "1 medium",
+    "item": "zucchini, cut in thin matchsticks",
+    "grams": 196,
+    "source": "FDC 169291"
+   },
+   {
+    "amount": "4",
+    "item": "large eggs",
+    "grams": 200,
+    "source": "FDC 171287"
+   },
+   {
+    "amount": "4",
+    "item": "garlic cloves, minced",
+    "grams": 12,
+    "source": "FDC 169230"
+   },
+   {
+    "amount": "2 Tbsp",
+    "item": "low-sodium soy sauce (divided)",
+    "grams": 32,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "toasted sesame oil (divided)",
+    "grams": 13.6,
+    "source": "FDC 171016"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "canola oil (divided)",
+    "grams": 14,
+    "source": "FDC 172336"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "toasted sesame seeds",
+    "grams": 9,
+    "source": "FDC 170151"
+   },
+   {
+    "amount": "2 Tbsp",
+    "item": "gochujang (Korean chili paste), for the sauce",
+    "grams": 38,
+    "source": "gochujang"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "honey, for the sauce",
+    "grams": 7,
+    "source": "FDC 169640"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "rice or white vinegar, for the sauce",
+    "grams": 15,
+    "source": "FDC 172237"
+   }
+  ],
+  "steps": [
+   "Sauce: stir the gochujang, honey, vinegar and 1 Tbsp water together. Set aside.",
+   "Bring a large pot of water to a boil. Add the bean sprouts and cook 3 minutes. Lift them out with a slotted spoon, drain, and toss with 1 tsp sesame oil and a pinch of the garlic. Sprouts are always cooked in this house.",
+   "Add the spinach to the same boiling water for 30 seconds. Drain, rinse with cold water, squeeze dry, chop, and toss with 1 tsp soy sauce, 1 tsp sesame oil and a little garlic.",
+   "Heat 1 tsp canola oil in a large skillet. Stir-fry the carrots 2 minutes, then the zucchini 2 minutes, with a pinch of salt if you like. Set aside.",
+   "In the same skillet, cook the turkey with the rest of the garlic and soy sauce, breaking it up, 6 to 8 minutes, until no pink remains and it reads 165°F.",
+   "Fry the eggs in the remaining oil until the whites and yolks are firm, about 4 minutes. Cover the pan for the last minute so the tops set.",
+   "Build each bowl: 3/4 cup rice, a quarter of the turkey and each vegetable in little piles, an egg on top. Sprinkle with sesame seeds and the last sesame oil. Mix in sauce to taste at the table."
+  ],
+  "soft_food": "Chop all the vegetables finely and cook them 1 to 2 minutes longer. Use softer white rice cooked with extra water.",
+  "storage": "Components keep 3 days in the fridge in separate containers. Cook eggs fresh. Reheat turkey and rice to 165°F.",
+  "cautions": [
+   "On warfarin? Keep greens steady from week to week; don't suddenly change how much you eat. Ask your doctor.",
+   "Kidney disease? Ask your doctor for your protein number (E28).",
+   "High fiber. Go up slowly and drink water, or you'll feel it (E24).",
+   "Honey: never for babies under 1. Diabetes: honey counts as sugar (or leave it out).",
+   "This one is on the salty side (about 770 mg sodium per serving). Watching sodium? Use half the paste or soy sauce and add water or unsalted broth."
+  ],
+  "collection": "strong_kitchen"
+ },
+ {
+  "id": "L2",
+  "name": "Kimchi fried rice with tofu and egg",
+  "native": "kimchi-bokkeumbap (Korean)",
+  "category": "Lunch",
+  "serves": 2,
+  "minutes_active": 15,
+  "minutes_total": 20,
+  "per_serving": {
+   "kcal": 566.9,
+   "protein_g": 26.9,
+   "fiber_g": 9.0,
+   "sodium_mg": 872.4
+  },
+  "ingredients": [
+   {
+    "amount": "2 cups",
+    "item": "cooked brown rice, ideally a day old and cold",
+    "grams": 390,
+    "source": "FDC 169704"
+   },
+   {
+    "amount": "1 cup",
+    "item": "well-fermented kimchi, chopped",
+    "grams": 150,
+    "source": "FDC 170392"
+   },
+   {
+    "amount": "1/2 block (7 oz)",
+    "item": "extra-firm tofu, patted dry, in 1/2-inch cubes",
+    "grams": 198,
+    "source": "FDC 174290"
+   },
+   {
+    "amount": "2",
+    "item": "large eggs",
+    "grams": 100,
+    "source": "FDC 171287"
+   },
+   {
+    "amount": "1 cup",
+    "item": "frozen peas",
+    "grams": 134,
+    "source": "FDC 170016"
+   },
+   {
+    "amount": "2",
+    "item": "scallions, sliced",
+    "grams": 30,
+    "source": "FDC 170005"
+   },
+   {
+    "amount": "1 Tbsp (optional)",
+    "item": "gochujang",
+    "grams": 19,
+    "source": "gochujang"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "low-sodium soy sauce",
+    "grams": 5,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "canola oil",
+    "grams": 14,
+    "source": "FDC 172336"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "toasted sesame oil",
+    "grams": 4.5,
+    "source": "FDC 171016"
+   },
+   {
+    "amount": "1 sheet",
+    "item": "roasted seaweed (gim or nori), crumbled",
+    "grams": 2.5,
+    "source": "FDC 168458"
+   }
+  ],
+  "steps": [
+   "Heat the canola oil in a large nonstick skillet over medium-high heat. Add the tofu and cook, turning, until golden on a few sides, 5 to 6 minutes.",
+   "Add the kimchi and cook 3 minutes, until it smells toasty.",
+   "Add the rice, peas, gochujang (if using) and soy sauce. Stir and press the rice into the pan. Cook 4 to 5 minutes, stirring every minute, until hot all the way through (165°F).",
+   "Push the rice to one side. Fry the eggs in the empty space until the whites and yolks are firm.",
+   "Drizzle with sesame oil. Serve with an egg on each plate, scallions and seaweed on top."
+  ],
+  "soft_food": "Use soft tofu instead of extra-firm (add it at the end so it holds together), chop the kimchi finely, and use white rice.",
+  "storage": "Keeps 3 days in the fridge. Reheat until steaming. Cook the eggs fresh.",
+  "cautions": [
+   "Kimchi is salty. Watching sodium? Small portions, or rinse it.",
+   "High fiber. Go up slowly and drink water, or you'll feel it (E24).",
+   "This one is on the salty side (about 870 mg sodium per serving). Watching sodium? Use half the paste or soy sauce and add water or unsalted broth."
+  ],
+  "collection": "strong_kitchen"
+ },
+ {
+  "id": "L3",
+  "name": "Cold sesame noodles with chicken and cucumber",
+  "native": "liáng miàn (Chinese)",
+  "category": "Lunch",
+  "serves": 2,
+  "minutes_active": 20,
+  "minutes_total": 25,
+  "per_serving": {
+   "kcal": 551.2,
+   "protein_g": 42.9,
+   "fiber_g": 10.4,
+   "sodium_mg": 387.9
+  },
+  "ingredients": [
+   {
+    "amount": "4 oz dry (about 2 cups cooked)",
+    "item": "whole-wheat spaghetti",
+    "grams": 280,
+    "source": "FDC 168910"
+   },
+   {
+    "amount": "8 oz",
+    "item": "boneless, skinless chicken breast",
+    "grams": 227,
+    "source": "FDC 171077"
+   },
+   {
+    "amount": "1/2 cup",
+    "item": "frozen shelled edamame",
+    "grams": 78,
+    "source": "FDC 168410"
+   },
+   {
+    "amount": "1 medium",
+    "item": "cucumber, cut in matchsticks",
+    "grams": 200,
+    "source": "FDC 168409"
+   },
+   {
+    "amount": "1 medium",
+    "item": "carrot, shredded",
+    "grams": 61,
+    "source": "FDC 170393"
+   },
+   {
+    "amount": "2 Tbsp",
+    "item": "tahini (or Chinese sesame paste)",
+    "grams": 30,
+    "source": "FDC 170189"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "low-sodium soy sauce",
+    "grams": 16,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "rice or white vinegar",
+    "grams": 15,
+    "source": "FDC 172237"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "honey",
+    "grams": 7,
+    "source": "FDC 169640"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "toasted sesame oil",
+    "grams": 4.5,
+    "source": "FDC 171016"
+   },
+   {
+    "amount": "1",
+    "item": "garlic clove, grated",
+    "grams": 3,
+    "source": "FDC 169230"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "toasted sesame seeds",
+    "grams": 3,
+    "source": "FDC 170151"
+   }
+  ],
+  "steps": [
+   "Put the chicken in a small pot, cover with water by an inch, bring to a boil, then turn to the lowest simmer. Cover and cook 12 to 15 minutes, until it reads 165°F in the thickest part. Cool 5 minutes and shred.",
+   "Cook the spaghetti in plenty of boiling water according to the package, adding the edamame for the last 3 minutes. Drain and rinse under cold water until cool.",
+   "Sauce: whisk the tahini, soy sauce, vinegar, honey, sesame oil, garlic and 2 to 3 Tbsp warm water until smooth and pourable.",
+   "Toss the noodles and edamame with the sauce. Top with chicken, cucumber, carrot and sesame seeds."
+  ],
+  "soft_food": "Cook the noodles 2 minutes past the package time and cut them shorter. Peel and seed the cucumber, or skip it and use cooked, cooled zucchini.",
+  "storage": "Keeps 2 days in the fridge, sauce separate. Eat cold, straight from the fridge; don't leave it out more than 2 hours.",
+  "cautions": [
+   "Kidney disease? Ask your doctor for your protein number (E28).",
+   "High fiber. Go up slowly and drink water, or you'll feel it (E24).",
+   "Honey: never for babies under 1. Diabetes: honey counts as sugar (or leave it out)."
+  ],
+  "collection": "strong_kitchen"
+ },
+ {
+  "id": "L4",
+  "name": "Tuna mayo rice bowl",
+  "native": "chamchi-mayo deopbap (Korean)",
+  "category": "Lunch",
+  "serves": 1,
+  "minutes_active": 8,
+  "minutes_total": 10,
+  "per_serving": {
+   "kcal": 452.6,
+   "protein_g": 36.0,
+   "fiber_g": 6.8,
+   "sodium_mg": 594.2
+  },
+  "ingredients": [
+   {
+    "amount": "1 can (5 oz)",
+    "item": "light tuna in water, drained",
+    "grams": 113,
+    "source": "FDC 173709"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "reduced-fat mayonnaise",
+    "grams": 15,
+    "source": "FDC 171443"
+   },
+   {
+    "amount": "3/4 cup",
+    "item": "cooked brown rice, warm",
+    "grams": 146,
+    "source": "FDC 169704"
+   },
+   {
+    "amount": "1/2 cup",
+    "item": "frozen shelled edamame, thawed in hot water",
+    "grams": 78,
+    "source": "FDC 168410"
+   },
+   {
+    "amount": "1/2 cup",
+    "item": "diced cucumber",
+    "grams": 52,
+    "source": "FDC 168409"
+   },
+   {
+    "amount": "1",
+    "item": "scallion, sliced",
+    "grams": 15,
+    "source": "FDC 170005"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "low-sodium soy sauce",
+    "grams": 5,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "1/2 tsp",
+    "item": "toasted sesame oil",
+    "grams": 2.3,
+    "source": "FDC 171016"
+   },
+   {
+    "amount": "1 sheet",
+    "item": "roasted seaweed, cut in strips",
+    "grams": 2.5,
+    "source": "FDC 168458"
+   }
+  ],
+  "steps": [
+   "Mix the tuna and mayonnaise with a fork.",
+   "Put the warm rice in a bowl. Drizzle with the soy sauce and sesame oil.",
+   "Top with the tuna, edamame, cucumber and scallion.",
+   "Scatter the seaweed over just before eating so it stays crisp. Wrap bites of rice and tuna in the seaweed with your chopsticks."
+  ],
+  "soft_food": "Use soft white rice and skip the cucumber. Mash the edamame lightly with a fork.",
+  "storage": "Mixed tuna keeps 2 days in the fridge. Assemble fresh.",
+  "cautions": [
+   "Kidney disease? Ask your doctor for your protein number (E28).",
+   "High fiber. Go up slowly and drink water, or you'll feel it (E24)."
+  ],
+  "collection": "strong_kitchen"
+ },
+ {
+  "id": "L5",
+  "name": "Chicken lettuce wraps with ssamjang",
+  "native": "dak ssam (Korean)",
+  "category": "Lunch",
+  "serves": 2,
+  "minutes_active": 20,
+  "minutes_total": 25,
+  "per_serving": {
+   "kcal": 466.0,
+   "protein_g": 40.8,
+   "fiber_g": 6.1,
+   "sodium_mg": 882.5
+  },
+  "ingredients": [
+   {
+    "amount": "12 oz",
+    "item": "boneless, skinless chicken thighs",
+    "grams": 340,
+    "source": "FDC 173627"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "low-sodium soy sauce (marinade)",
+    "grams": 16,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "honey (marinade)",
+    "grams": 7,
+    "source": "FDC 169640"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "grated ginger (marinade)",
+    "grams": 2,
+    "source": "FDC 169231"
+   },
+   {
+    "amount": "2",
+    "item": "garlic cloves, grated (1 marinade, 1 sauce)",
+    "grams": 6,
+    "source": "FDC 169230"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "canola oil",
+    "grams": 4.7,
+    "source": "FDC 172336"
+   },
+   {
+    "amount": "12 leaves",
+    "item": "green-leaf or romaine lettuce",
+    "grams": 200,
+    "source": "FDC 169247"
+   },
+   {
+    "amount": "1 cup",
+    "item": "cooked brown rice",
+    "grams": 195,
+    "source": "FDC 169704"
+   },
+   {
+    "amount": "1 medium",
+    "item": "cucumber, cut in sticks",
+    "grams": 200,
+    "source": "FDC 168409"
+   },
+   {
+    "amount": "1 medium",
+    "item": "carrot, cut in sticks",
+    "grams": 61,
+    "source": "FDC 170393"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "miso or Korean doenjang (sauce)",
+    "grams": 17,
+    "source": "FDC 172442"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "gochujang (sauce)",
+    "grams": 6,
+    "source": "gochujang"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "toasted sesame oil (sauce)",
+    "grams": 4.5,
+    "source": "FDC 171016"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "toasted sesame seeds (sauce)",
+    "grams": 3,
+    "source": "FDC 170151"
+   },
+   {
+    "amount": "1",
+    "item": "scallion, finely chopped (sauce)",
+    "grams": 15,
+    "source": "FDC 170005"
+   }
+  ],
+  "steps": [
+   "Mix the soy sauce, honey, ginger and one grated garlic clove. Coat the chicken and leave 15 minutes (or up to a day in the fridge).",
+   "Ssamjang: stir the miso, gochujang, sesame oil, sesame seeds, scallion and the other garlic clove together.",
+   "Heat the oil in a skillet over medium heat. Cook the chicken 5 to 6 minutes a side, until it reads 165°F. Rest 3 minutes, then slice thin.",
+   "At the table: a lettuce leaf, a spoon of rice, chicken, a cucumber and carrot stick, a dab of ssamjang. Wrap and eat. Small wraps. Learn from Chang."
+  ],
+  "soft_food": "Chop the chicken small, use soft butter lettuce, and skip the raw carrot (or steam it 4 minutes).",
+  "storage": "Cooked chicken keeps 3 days in the fridge. Sauce keeps a week. Wash lettuce fresh.",
+  "cautions": [
+   "On warfarin? Keep greens steady from week to week; don't suddenly change how much you eat. Ask your doctor.",
+   "Kidney disease? Ask your doctor for your protein number (E28).",
+   "Honey: never for babies under 1. Diabetes: honey counts as sugar (or leave it out).",
+   "This one is on the salty side (about 880 mg sodium per serving). Watching sodium? Use half the paste or soy sauce and add water or unsalted broth."
+  ],
+  "collection": "strong_kitchen"
+ },
+ {
+  "id": "D1",
+  "name": "Chang's Sunday black bean noodles",
+  "native": "jajangmyeon (Korean-Chinese)",
+  "category": "Dinner",
+  "serves": 4,
+  "minutes_active": 25,
+  "minutes_total": 40,
+  "per_serving": {
+   "kcal": 576.3,
+   "protein_g": 41.4,
+   "fiber_g": 8.0,
+   "sodium_mg": 689.6
+  },
+  "ingredients": [
+   {
+    "amount": "1 lb",
+    "item": "pork loin, trimmed, in 1/2-inch cubes",
+    "grams": 454,
+    "source": "FDC 168230"
+   },
+   {
+    "amount": "1/4 cup",
+    "item": "chunjang (Korean black bean paste)",
+    "grams": 72,
+    "source": "chunjang"
+   },
+   {
+    "amount": "2 Tbsp",
+    "item": "canola oil (divided)",
+    "grams": 28,
+    "source": "FDC 172336"
+   },
+   {
+    "amount": "1 large",
+    "item": "onion, diced",
+    "grams": 150,
+    "source": "FDC 170000"
+   },
+   {
+    "amount": "1 medium",
+    "item": "zucchini, diced",
+    "grams": 196,
+    "source": "FDC 169291"
+   },
+   {
+    "amount": "1 medium",
+    "item": "russet potato, peeled, diced small",
+    "grams": 213,
+    "source": "FDC 170027"
+   },
+   {
+    "amount": "1 cup",
+    "item": "green cabbage, chopped",
+    "grams": 89,
+    "source": "FDC 169975"
+   },
+   {
+    "amount": "2 cups",
+    "item": "low-sodium chicken broth",
+    "grams": 480,
+    "source": "FDC 171609"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "sugar",
+    "grams": 4.2,
+    "source": "FDC 169655"
+   },
+   {
+    "amount": "1 Tbsp + 3 Tbsp water",
+    "item": "cornstarch",
+    "grams": 8,
+    "source": "FDC 169698"
+   },
+   {
+    "amount": "8 oz dry (about 4 cups cooked)",
+    "item": "whole-wheat spaghetti (or fresh jajang noodles)",
+    "grams": 560,
+    "source": "FDC 168910"
+   },
+   {
+    "amount": "1/2 medium",
+    "item": "cucumber, in thin matchsticks, to top",
+    "grams": 150,
+    "source": "FDC 168409"
+   }
+  ],
+  "steps": [
+   "Heat 1 Tbsp oil in a small pan over medium-low heat. Add the chunjang and fry, stirring constantly, 3 minutes, until it smells nutty. Set aside. (Frying the paste takes away its raw, bitter taste.)",
+   "Heat the other Tbsp oil in a large pot or wok over medium-high heat. Brown the pork 5 minutes.",
+   "Add the onion, potato, zucchini and cabbage. Stir-fry 5 minutes.",
+   "Stir in the fried chunjang and sugar until everything is coated. Add the broth. Simmer 10 minutes, until the potato is soft and the pork reads 145°F or more.",
+   "Stir the cornstarch into the water, then into the sauce. Simmer 1 to 2 minutes until glossy and thick.",
+   "Meanwhile, cook the noodles according to the package. Drain.",
+   "Serve 1 cup of noodles per bowl with a quarter of the sauce and cucumber on top. Mix with chopsticks before eating. Wear a dark shirt."
+  ],
+  "soft_food": "Dice everything small, cook the potato until very soft, and cut the noodles short. The sauce alone over soft rice works too.",
+  "storage": "Sauce keeps 4 days in the fridge or 3 months in the freezer. Cook noodles fresh.",
+  "cautions": [
+   "Kidney disease? Ask your doctor for your protein number (E28).",
+   "High fiber. Go up slowly and drink water, or you'll feel it (E24)."
+  ],
+  "collection": "strong_kitchen"
+ },
+ {
+  "id": "D2",
+  "name": "Beef bulgogi with broccoli and brown rice",
+  "native": "bulgogi (Korean)",
+  "category": "Dinner",
+  "serves": 4,
+  "minutes_active": 20,
+  "minutes_total": 30,
+  "per_serving": {
+   "kcal": 541.7,
+   "protein_g": 41.1,
+   "fiber_g": 8.0,
+   "sodium_mg": 559.8
+  },
+  "ingredients": [
+   {
+    "amount": "1 1/4 lb",
+    "item": "top sirloin, very thinly sliced (freeze 30 minutes first to slice easily)",
+    "grams": 567,
+    "source": "FDC 174055"
+   },
+   {
+    "amount": "1/2 large",
+    "item": "Asian pear (or 1 small ripe Bosc pear), grated",
+    "grams": 120,
+    "source": "FDC 168177"
+   },
+   {
+    "amount": "1 small + 1 medium",
+    "item": "onion (small one grated for marinade, medium one sliced)",
+    "grams": 180,
+    "source": "FDC 170000"
+   },
+   {
+    "amount": "4",
+    "item": "garlic cloves, grated",
+    "grams": 12,
+    "source": "FDC 169230"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "grated ginger",
+    "grams": 6,
+    "source": "FDC 169231"
+   },
+   {
+    "amount": "3 Tbsp",
+    "item": "low-sodium soy sauce",
+    "grams": 48,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "honey",
+    "grams": 21,
+    "source": "FDC 169640"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "toasted sesame oil",
+    "grams": 13.6,
+    "source": "FDC 171016"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "canola oil",
+    "grams": 14,
+    "source": "FDC 172336"
+   },
+   {
+    "amount": "4",
+    "item": "scallions, cut in 2-inch pieces",
+    "grams": 60,
+    "source": "FDC 170005"
+   },
+   {
+    "amount": "1 lb",
+    "item": "broccoli florets",
+    "grams": 454,
+    "source": "FDC 170379"
+   },
+   {
+    "amount": "3 cups",
+    "item": "cooked brown rice",
+    "grams": 585,
+    "source": "FDC 169704"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "toasted sesame seeds",
+    "grams": 9,
+    "source": "FDC 170151"
+   }
+  ],
+  "steps": [
+   "Marinade: mix the grated pear, grated small onion, garlic, ginger, soy sauce, honey and sesame oil in a bowl. Add the beef and toss. Marinate 30 minutes in the fridge (up to overnight).",
+   "Steam the broccoli over boiling water 5 to 6 minutes, until tender enough to pierce easily with a fork.",
+   "Heat the canola oil in a large skillet over high heat. Add the sliced onion and half the beef in a single layer (don't crowd it). Cook 2 to 3 minutes, turning once, until browned and no pink remains. Repeat with the rest. Add scallions for the last minute.",
+   "Serve each plate with 3/4 cup rice, a quarter of the beef and a quarter of the broccoli. Sprinkle with sesame seeds."
+  ],
+  "soft_food": "Slice the beef as thin as paper, or use lean ground beef in the same marinade (cook to 160°F). Steam the broccoli 8 minutes.",
+  "storage": "Cooked bulgogi keeps 3 days in the fridge. Raw marinated beef can be frozen flat in a bag for 3 months.",
+  "cautions": [
+   "Kidney disease? Ask your doctor for your protein number (E28).",
+   "High fiber. Go up slowly and drink water, or you'll feel it (E24).",
+   "Honey: never for babies under 1. Diabetes: honey counts as sugar (or leave it out).",
+   "On warfarin? Keep greens steady from week to week; don't suddenly change how much you eat. Ask your doctor."
+  ],
+  "collection": "strong_kitchen"
+ },
+ {
+  "id": "D3",
+  "name": "Mild mapo tofu with bok choy",
+  "native": "mápó dòufu (Chinese)",
+  "category": "Dinner",
+  "serves": 4,
+  "minutes_active": 20,
+  "minutes_total": 25,
+  "per_serving": {
+   "kcal": 439.7,
+   "protein_g": 28.5,
+   "fiber_g": 5.1,
+   "sodium_mg": 452.0
+  },
+  "ingredients": [
+   {
+    "amount": "1 block (14 oz)",
+    "item": "firm tofu, in 3/4-inch cubes",
+    "grams": 397,
+    "source": "FDC 172448"
+   },
+   {
+    "amount": "8 oz",
+    "item": "90% lean ground beef (or lean ground pork)",
+    "grams": 227,
+    "source": "FDC 174030"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "miso (or 2 tsp doubanjiang chili bean paste, if you have it)",
+    "grams": 17,
+    "source": "FDC 172442"
+   },
+   {
+    "amount": "3",
+    "item": "garlic cloves, minced",
+    "grams": 9,
+    "source": "FDC 169230"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "minced ginger",
+    "grams": 6,
+    "source": "FDC 169231"
+   },
+   {
+    "amount": "1 cup",
+    "item": "low-sodium chicken broth",
+    "grams": 240,
+    "source": "FDC 171609"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "low-sodium soy sauce",
+    "grams": 16,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "1 Tbsp + 2 Tbsp water",
+    "item": "cornstarch",
+    "grams": 8,
+    "source": "FDC 169698"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "canola oil",
+    "grams": 14,
+    "source": "FDC 172336"
+   },
+   {
+    "amount": "1/2 tsp",
+    "item": "red pepper flakes (optional)",
+    "grams": 0.9,
+    "source": "FDC 170932"
+   },
+   {
+    "amount": "3",
+    "item": "scallions, sliced",
+    "grams": 45,
+    "source": "FDC 170005"
+   },
+   {
+    "amount": "1 lb",
+    "item": "bok choy, cut in 2-inch pieces",
+    "grams": 454,
+    "source": "FDC 170390"
+   },
+   {
+    "amount": "3 cups",
+    "item": "cooked brown rice",
+    "grams": 585,
+    "source": "FDC 169704"
+   }
+  ],
+  "steps": [
+   "Put the tofu cubes in a bowl and cover with just-boiled water for 5 minutes. This firms them up so they don't break. Drain.",
+   "Heat the oil in a large skillet over medium-high heat. Cook the beef, breaking it up, 5 minutes, until no pink remains (160°F).",
+   "Add the garlic, ginger, miso and pepper flakes. Stir 1 minute.",
+   "Add the broth and soy sauce. Slide in the tofu and gently push it around (don't stir hard). Simmer 5 minutes.",
+   "Stir the cornstarch into the water, pour it in and gently fold until the sauce is glossy, 1 minute. Top with scallions.",
+   "Meanwhile, steam or stir-fry the bok choy 3 to 4 minutes, until the stems are just tender.",
+   "Serve each plate with 3/4 cup rice, a quarter of the tofu and a quarter of the bok choy."
+  ],
+  "soft_food": "Use soft tofu, skip the pepper flakes, and chop the bok choy small. It's already one of the softest dinners in this book.",
+  "storage": "Keeps 3 days in the fridge. Reheat gently until steaming.",
+  "cautions": [
+   "On warfarin? Keep greens steady from week to week; don't suddenly change how much you eat. Ask your doctor."
+  ],
+  "collection": "strong_kitchen"
+ },
+ {
+  "id": "D4",
+  "name": "Soy-braised chicken with potatoes and carrots",
+  "native": "dakjjim (Korean)",
+  "category": "Dinner",
+  "serves": 4,
+  "minutes_active": 15,
+  "minutes_total": 50,
+  "per_serving": {
+   "kcal": 491.5,
+   "protein_g": 41.6,
+   "fiber_g": 5.5,
+   "sodium_mg": 773.6
+  },
+  "ingredients": [
+   {
+    "amount": "1 1/2 lb",
+    "item": "boneless, skinless chicken thighs, halved",
+    "grams": 680,
+    "source": "FDC 173627"
+   },
+   {
+    "amount": "1 lb (2 small)",
+    "item": "russet potatoes, peeled, in 1 1/2-inch chunks",
+    "grams": 454,
+    "source": "FDC 170027"
+   },
+   {
+    "amount": "2 medium",
+    "item": "carrots, in 1-inch chunks",
+    "grams": 122,
+    "source": "FDC 170393"
+   },
+   {
+    "amount": "1 medium",
+    "item": "onion, in wedges",
+    "grams": 110,
+    "source": "FDC 170000"
+   },
+   {
+    "amount": "4 oz",
+    "item": "fresh shiitake mushrooms, stems removed, halved",
+    "grams": 113,
+    "source": "FDC 169242"
+   },
+   {
+    "amount": "4",
+    "item": "garlic cloves, minced",
+    "grams": 12,
+    "source": "FDC 169230"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "minced ginger",
+    "grams": 6,
+    "source": "FDC 169231"
+   },
+   {
+    "amount": "1/4 cup",
+    "item": "low-sodium soy sauce",
+    "grams": 64,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "honey",
+    "grams": 21,
+    "source": "FDC 169640"
+   },
+   {
+    "amount": "1 cup",
+    "item": "water",
+    "grams": 0,
+    "source": null
+   },
+   {
+    "amount": "1 tsp",
+    "item": "toasted sesame oil",
+    "grams": 4.5,
+    "source": "FDC 171016"
+   },
+   {
+    "amount": "2",
+    "item": "scallions, sliced",
+    "grams": 30,
+    "source": "FDC 170005"
+   },
+   {
+    "amount": "2 cups",
+    "item": "cooked brown rice, to serve (1/2 cup each)",
+    "grams": 390,
+    "source": "FDC 169704"
+   }
+  ],
+  "steps": [
+   "Mix the soy sauce, honey, garlic, ginger and water in a large pot.",
+   "Add the chicken, potatoes, carrots, onion and mushrooms. Stir to coat.",
+   "Bring to a boil, then cover and simmer on low 25 minutes, stirring once or twice.",
+   "Uncover and simmer 10 more minutes, until the sauce thickens a little, the potatoes are soft and the chicken reads 165°F.",
+   "Stir in the sesame oil. Top with scallions. Serve with rice."
+  ],
+  "soft_food": "Cook 10 minutes longer, until the chicken shreds with a spoon. Cut the carrots thinner.",
+  "storage": "Better the next day. Keeps 4 days in the fridge or 3 months frozen. Reheat to 165°F.",
+  "cautions": [
+   "Kidney disease? Ask your doctor for your protein number (E28).",
+   "Honey: never for babies under 1. Diabetes: honey counts as sugar (or leave it out).",
+   "This one is on the salty side (about 770 mg sodium per serving). Watching sodium? Use half the paste or soy sauce and add water or unsalted broth."
+  ],
+  "collection": "strong_kitchen"
+ },
+ {
+  "id": "D5",
+  "name": "Steamed salmon with ginger and scallion",
+  "native": "qīng zhēng yú (Chinese)",
+  "category": "Dinner",
+  "serves": 2,
+  "minutes_active": 15,
+  "minutes_total": 25,
+  "per_serving": {
+   "kcal": 603.6,
+   "protein_g": 37.0,
+   "fiber_g": 5.1,
+   "sodium_mg": 494.2
+  },
+  "ingredients": [
+   {
+    "amount": "2 fillets (5 oz each)",
+    "item": "salmon, skin on or off",
+    "grams": 283,
+    "source": "FDC 175167"
+   },
+   {
+    "amount": "2-inch piece",
+    "item": "fresh ginger, in very thin matchsticks",
+    "grams": 22,
+    "source": "FDC 169231"
+   },
+   {
+    "amount": "4",
+    "item": "scallions, in thin 2-inch strips",
+    "grams": 60,
+    "source": "FDC 170005"
+   },
+   {
+    "amount": "1",
+    "item": "garlic clove, sliced",
+    "grams": 3,
+    "source": "FDC 169230"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "low-sodium soy sauce",
+    "grams": 16,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "canola oil",
+    "grams": 14,
+    "source": "FDC 172336"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "toasted sesame oil",
+    "grams": 4.5,
+    "source": "FDC 171016"
+   },
+   {
+    "amount": "4 heads (about 12 oz)",
+    "item": "baby bok choy, halved",
+    "grams": 340,
+    "source": "FDC 170390"
+   },
+   {
+    "amount": "1 1/2 cups",
+    "item": "cooked brown rice",
+    "grams": 293,
+    "source": "FDC 169704"
+   }
+  ],
+  "steps": [
+   "Put the salmon on a heatproof plate that fits in your steamer or a large pot with a rack. Scatter half the ginger and the garlic on top.",
+   "Steam over boiling water, covered, 8 to 10 minutes, until the fish flakes easily and reads 145°F. Add the bok choy around the fish (or in a second basket) for the last 4 minutes.",
+   "Carefully lift out the plate with oven mitts. Pour off the cooking water on the plate. Scatter the rest of the ginger and the scallions on the fish. Drizzle the soy sauce over.",
+   "Heat the canola and sesame oils in a small pan until shimmering, about 1 minute. Standing back, pour the hot oil over the scallions and ginger. It will sizzle.",
+   "Serve with rice and bok choy."
+  ],
+  "soft_food": "Salmon is naturally soft. Chop the bok choy leaves and skip the stems.",
+  "storage": "Best fresh. Leftover salmon keeps 2 days in the fridge; eat cold on rice or reheat gently.",
+  "cautions": [
+   "Kidney disease? Ask your doctor for your protein number (E28).",
+   "On warfarin? Keep greens steady from week to week; don't suddenly change how much you eat. Ask your doctor.",
+   "Pour hot oil away from you, with dry hands. Keep grandkids and pets out of the kitchen for that step."
+  ],
+  "collection": "strong_kitchen"
+ },
+ {
+  "id": "D6",
+  "name": "Shrimp and egg stir-fry with peas and broccoli",
+  "native": "huá dàn xiā rén (Chinese)",
+  "category": "Dinner",
+  "serves": 2,
+  "minutes_active": 15,
+  "minutes_total": 20,
+  "per_serving": {
+   "kcal": 533.6,
+   "protein_g": 44.4,
+   "fiber_g": 7.3,
+   "sodium_mg": 676.6
+  },
+  "ingredients": [
+   {
+    "amount": "8 oz",
+    "item": "raw shrimp, peeled and deveined (frozen is fine, thawed)",
+    "grams": 227,
+    "source": "FDC 175179"
+   },
+   {
+    "amount": "4",
+    "item": "large eggs",
+    "grams": 200,
+    "source": "FDC 171287"
+   },
+   {
+    "amount": "1 cup",
+    "item": "frozen peas",
+    "grams": 134,
+    "source": "FDC 170016"
+   },
+   {
+    "amount": "2 cups",
+    "item": "small broccoli florets",
+    "grams": 182,
+    "source": "FDC 170379"
+   },
+   {
+    "amount": "1 cup",
+    "item": "cooked brown rice",
+    "grams": 195,
+    "source": "FDC 169704"
+   },
+   {
+    "amount": "2",
+    "item": "scallions, sliced",
+    "grams": 30,
+    "source": "FDC 170005"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "cornstarch",
+    "grams": 2.7,
+    "source": "FDC 169698"
+   },
+   {
+    "amount": "1/4 tsp",
+    "item": "salt",
+    "grams": 1.5,
+    "source": "FDC 173468"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "canola oil (divided)",
+    "grams": 14,
+    "source": "FDC 172336"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "toasted sesame oil",
+    "grams": 4.5,
+    "source": "FDC 171016"
+   },
+   {
+    "amount": "pinch",
+    "item": "white pepper",
+    "grams": 0,
+    "source": null
+   }
+  ],
+  "steps": [
+   "Toss the shrimp with the cornstarch and a pinch of salt.",
+   "Heat 1 tsp oil in a large nonstick skillet over medium-high heat. Stir-fry the broccoli with 2 Tbsp water, covered, 3 minutes. Add the peas for 1 minute. Move to a plate.",
+   "Add 1 tsp oil and the shrimp. Cook 1 to 2 minutes a side, until pink and opaque all the way through. Move to the plate.",
+   "Beat the eggs with the rest of the salt and pepper. Add the last oil, pour in the eggs and stir slowly until just set in large, fully cooked curds.",
+   "Return the shrimp and vegetables. Fold together 30 seconds. Drizzle sesame oil, top with scallions, serve with rice."
+  ],
+  "soft_food": "Chop the shrimp into small pieces before cooking. Cook the broccoli 2 minutes longer.",
+  "storage": "Best fresh. Keeps 1 day in the fridge; reheat until steaming.",
+  "cautions": [
+   "Kidney disease? Ask your doctor for your protein number (E28).",
+   "Shellfish allergy: swap in cubed firm tofu, or chicken breast cooked to 165°F.",
+   "High fiber. Go up slowly and drink water, or you'll feel it (E24).",
+   "On warfarin? Keep greens steady from week to week; don't suddenly change how much you eat. Ask your doctor."
+  ],
+  "collection": "strong_kitchen"
+ },
+ {
+  "id": "S1",
+  "name": "Seaweed soup with beef and tofu",
+  "native": "miyeok-guk (Korean)",
+  "category": "Soup",
+  "serves": 4,
+  "minutes_active": 15,
+  "minutes_total": 45,
+  "per_serving": {
+   "kcal": 324.5,
+   "protein_g": 27.9,
+   "fiber_g": 2.3,
+   "sodium_mg": 811.5
+  },
+  "ingredients": [
+   {
+    "amount": "1/2 oz (about 1 cup soaked)",
+    "item": "dried wakame seaweed (calculated as 140 g soaked)",
+    "grams": 140,
+    "source": "FDC 170496"
+   },
+   {
+    "amount": "12 oz",
+    "item": "lean beef chuck or brisket, in small thin pieces",
+    "grams": 340,
+    "source": "FDC 174051"
+   },
+   {
+    "amount": "1/2 block (7 oz)",
+    "item": "firm tofu, in small cubes",
+    "grams": 198,
+    "source": "FDC 172448"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "toasted sesame oil",
+    "grams": 13.6,
+    "source": "FDC 171016"
+   },
+   {
+    "amount": "3",
+    "item": "garlic cloves, minced",
+    "grams": 9,
+    "source": "FDC 169230"
+   },
+   {
+    "amount": "2 Tbsp",
+    "item": "low-sodium soy sauce",
+    "grams": 32,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "8 cups",
+    "item": "water",
+    "grams": 0,
+    "source": null
+   },
+   {
+    "amount": "1/4 tsp",
+    "item": "salt",
+    "grams": 1.5,
+    "source": "FDC 173468"
+   },
+   {
+    "amount": "2 cups",
+    "item": "cooked brown rice, to serve (1/2 cup each)",
+    "grams": 390,
+    "source": "FDC 169704"
+   }
+  ],
+  "steps": [
+   "Soak the wakame in a big bowl of cold water 15 minutes. It grows a lot. Drain, squeeze out the water, and cut into 2-inch pieces with scissors.",
+   "Heat the sesame oil in a large pot over medium heat. Add the beef and garlic and cook, stirring, 3 minutes.",
+   "Add the wakame and 1 Tbsp of the soy sauce. Stir 2 minutes.",
+   "Add the water. Bring to a boil, then simmer, partly covered, 25 minutes, until the beef is tender.",
+   "Add the tofu and the rest of the soy sauce. Simmer 5 more minutes. Taste, then add salt only if it needs it.",
+   "Serve with a bowl of rice on the side."
+  ],
+  "soft_food": "Cut the beef into tiny pieces or use lean ground beef (cook to 160°F). Chop the seaweed finely.",
+  "storage": "Keeps 4 days in the fridge, 3 months frozen. It gets better on day two.",
+  "cautions": [
+   "Thyroid condition? Seaweed can be very high in iodine (E58). Ask your doctor how much is okay for you.",
+   "This one is on the salty side (about 810 mg sodium per serving). Watching sodium? Use half the paste or soy sauce and add water or unsalted broth."
+  ],
+  "collection": "strong_kitchen"
+ },
+ {
+  "id": "S2",
+  "name": "Kimchi stew with pork and tofu",
+  "native": "kimchi-jjigae (Korean)",
+  "category": "Soup",
+  "serves": 4,
+  "minutes_active": 15,
+  "minutes_total": 35,
+  "per_serving": {
+   "kcal": 320.4,
+   "protein_g": 25.2,
+   "fiber_g": 4.7,
+   "sodium_mg": 569.1
+  },
+  "ingredients": [
+   {
+    "amount": "2 cups",
+    "item": "well-fermented (sour) kimchi, chopped, plus 1/4 cup of its juice",
+    "grams": 300,
+    "source": "FDC 170392"
+   },
+   {
+    "amount": "8 oz",
+    "item": "lean pork shoulder, in thin bite-size slices",
+    "grams": 227,
+    "source": "FDC 168258"
+   },
+   {
+    "amount": "1 block (14 oz)",
+    "item": "firm tofu, in 1/2-inch slices",
+    "grams": 397,
+    "source": "FDC 172448"
+   },
+   {
+    "amount": "1 medium",
+    "item": "onion, sliced",
+    "grams": 110,
+    "source": "FDC 170000"
+   },
+   {
+    "amount": "1 cup",
+    "item": "white mushrooms, sliced",
+    "grams": 70,
+    "source": "FDC 169251"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "gochujang",
+    "grams": 19,
+    "source": "gochujang"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "Korean chili flakes (gochugaru) or 1/4 tsp red pepper flakes",
+    "grams": 1.8,
+    "source": "FDC 170932"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "sugar",
+    "grams": 4.2,
+    "source": "FDC 169655"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "toasted sesame oil",
+    "grams": 4.5,
+    "source": "FDC 171016"
+   },
+   {
+    "amount": "4 cups",
+    "item": "water",
+    "grams": 0,
+    "source": null
+   },
+   {
+    "amount": "2",
+    "item": "scallions, sliced",
+    "grams": 30,
+    "source": "FDC 170005"
+   },
+   {
+    "amount": "2 cups",
+    "item": "cooked brown rice, to serve (1/2 cup each)",
+    "grams": 390,
+    "source": "FDC 169704"
+   }
+  ],
+  "steps": [
+   "Heat the sesame oil in a medium pot over medium heat. Add the pork and cook 3 minutes.",
+   "Add the kimchi, onion, gochujang, chili flakes and sugar. Stir-fry 5 minutes, until the kimchi softens and smells toasty.",
+   "Add the water and kimchi juice. Bring to a boil, then simmer 15 minutes.",
+   "Lay the tofu slices and mushrooms on top. Simmer 5 more minutes, until the pork is tender and everything is hot (the pork is well past 145°F).",
+   "Top with scallions. Serve bubbling, with rice."
+  ],
+  "soft_food": "Use soft tofu and chop the kimchi and pork very small.",
+  "storage": "Keeps 4 days in the fridge. Many people like it best on day two.",
+  "cautions": [
+   "Kimchi is salty. Watching sodium? Small portions, or rinse it."
+  ],
+  "collection": "strong_kitchen"
+ },
+ {
+  "id": "S3",
+  "name": "Soft tofu stew with shrimp and egg",
+  "native": "sundubu-jjigae (Korean)",
+  "category": "Soup",
+  "serves": 2,
+  "minutes_active": 15,
+  "minutes_total": 25,
+  "per_serving": {
+   "kcal": 430.8,
+   "protein_g": 38.2,
+   "fiber_g": 4.2,
+   "sodium_mg": 493.7
+  },
+  "ingredients": [
+   {
+    "amount": "12 oz",
+    "item": "soft tofu (a tube of sundubu or a block of soft tofu)",
+    "grams": 340,
+    "source": "FDC 172449"
+   },
+   {
+    "amount": "4 oz",
+    "item": "raw shrimp, peeled, chopped",
+    "grams": 113,
+    "source": "FDC 175179"
+   },
+   {
+    "amount": "2",
+    "item": "large eggs",
+    "grams": 100,
+    "source": "FDC 171287"
+   },
+   {
+    "amount": "1/2 cup",
+    "item": "kimchi, chopped",
+    "grams": 75,
+    "source": "FDC 170392"
+   },
+   {
+    "amount": "1/2 medium",
+    "item": "zucchini, diced",
+    "grams": 98,
+    "source": "FDC 169291"
+   },
+   {
+    "amount": "1/2 medium",
+    "item": "onion, diced",
+    "grams": 55,
+    "source": "FDC 170000"
+   },
+   {
+    "amount": "2",
+    "item": "garlic cloves, minced",
+    "grams": 6,
+    "source": "FDC 169230"
+   },
+   {
+    "amount": "2 tsp",
+    "item": "Korean chili flakes (gochugaru) or 1/2 tsp red pepper flakes",
+    "grams": 3.6,
+    "source": "FDC 170932"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "toasted sesame oil",
+    "grams": 4.5,
+    "source": "FDC 171016"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "low-sodium soy sauce",
+    "grams": 5,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "1 1/2 cups",
+    "item": "low-sodium chicken broth",
+    "grams": 360,
+    "source": "FDC 171609"
+   },
+   {
+    "amount": "1",
+    "item": "scallion, sliced",
+    "grams": 15,
+    "source": "FDC 170005"
+   },
+   {
+    "amount": "1 cup",
+    "item": "cooked brown rice, to serve",
+    "grams": 195,
+    "source": "FDC 169704"
+   }
+  ],
+  "steps": [
+   "Heat the sesame oil in a small pot over medium-low heat. Add the chili flakes and garlic and stir 30 seconds. Don't let them burn.",
+   "Add the onion, zucchini and kimchi. Cook 3 minutes.",
+   "Add the broth and soy sauce. Bring to a boil.",
+   "Spoon in the tofu in big pieces. Add the shrimp. Simmer 4 minutes, until the shrimp are pink and opaque.",
+   "Crack in the eggs. Simmer 4 to 5 minutes more, spooning broth over them, until the whites and yolks are completely firm.",
+   "Top with scallion. Serve with rice."
+  ],
+  "soft_food": "It's already soft. Chop the shrimp small and break the cooked egg up in the bowl.",
+  "storage": "Best fresh. Keeps 1 day in the fridge (without the egg if possible). Reheat until steaming.",
+  "cautions": [
+   "Kimchi is salty. Watching sodium? Small portions, or rinse it.",
+   "Shellfish allergy: swap in cubed firm tofu, or chicken breast cooked to 165°F.",
+   "Kidney disease? Ask your doctor for your protein number (E28)."
+  ],
+  "collection": "strong_kitchen"
+ },
+ {
+  "id": "S4",
+  "name": "Egg-drop soup with tofu, spinach and peas",
+  "native": "dàn huā tāng (Chinese)",
+  "category": "Soup",
+  "serves": 2,
+  "minutes_active": 10,
+  "minutes_total": 15,
+  "per_serving": {
+   "kcal": 317.7,
+   "protein_g": 30.6,
+   "fiber_g": 3.3,
+   "sodium_mg": 421.6
+  },
+  "ingredients": [
+   {
+    "amount": "4 cups",
+    "item": "low-sodium chicken broth",
+    "grams": 960,
+    "source": "FDC 171609"
+   },
+   {
+    "amount": "1/2 block (7 oz)",
+    "item": "soft tofu, in small cubes",
+    "grams": 198,
+    "source": "FDC 172449"
+   },
+   {
+    "amount": "3",
+    "item": "large eggs, beaten",
+    "grams": 150,
+    "source": "FDC 171287"
+   },
+   {
+    "amount": "3 cups (3 oz)",
+    "item": "baby spinach",
+    "grams": 85,
+    "source": "FDC 168462"
+   },
+   {
+    "amount": "1/2 cup",
+    "item": "frozen peas",
+    "grams": 67,
+    "source": "FDC 170016"
+   },
+   {
+    "amount": "1 cup",
+    "item": "white mushrooms, sliced",
+    "grams": 70,
+    "source": "FDC 169251"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "grated ginger",
+    "grams": 2,
+    "source": "FDC 169231"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "low-sodium soy sauce",
+    "grams": 5,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "1 Tbsp + 2 Tbsp water",
+    "item": "cornstarch",
+    "grams": 8,
+    "source": "FDC 169698"
+   },
+   {
+    "amount": "1/2 tsp",
+    "item": "toasted sesame oil",
+    "grams": 2.3,
+    "source": "FDC 171016"
+   },
+   {
+    "amount": "1",
+    "item": "scallion, sliced",
+    "grams": 15,
+    "source": "FDC 170005"
+   },
+   {
+    "amount": "pinch",
+    "item": "white pepper",
+    "grams": 0,
+    "source": null
+   }
+  ],
+  "steps": [
+   "Bring the broth, ginger and mushrooms to a simmer in a pot. Cook 3 minutes.",
+   "Add the tofu and peas. Simmer 2 minutes.",
+   "Stir the cornstarch into the water, then stir it into the soup. Simmer 1 minute until slightly thick.",
+   "Stir the soup in a slow circle. While it's moving, pour the beaten eggs in a thin stream. Let them set into ribbons, then simmer 1 more minute so the egg is fully cooked.",
+   "Stir in the spinach until wilted. Add soy sauce, sesame oil and pepper. Top with scallion."
+  ],
+  "soft_food": "Already soft. Chop the spinach before adding.",
+  "storage": "Keeps 2 days in the fridge. Reheat until steaming.",
+  "cautions": [
+   "On warfarin? Keep greens steady from week to week; don't suddenly change how much you eat. Ask your doctor.",
+   "Kidney disease? Ask your doctor for your protein number (E28)."
+  ],
+  "collection": "strong_kitchen"
+ },
+ {
+  "id": "S5",
+  "name": "Chicken, ginger and jujube soup",
+  "native": "weeknight samgyetang (Korean)",
+  "category": "Soup",
+  "serves": 4,
+  "minutes_active": 15,
+  "minutes_total": 60,
+  "per_serving": {
+   "kcal": 294.1,
+   "protein_g": 30.7,
+   "fiber_g": 2.0,
+   "sodium_mg": 440.6
+  },
+  "ingredients": [
+   {
+    "amount": "1 1/4 lb",
+    "item": "boneless, skinless chicken thighs (or 2 lb bone-in drumsticks)",
+    "grams": 567,
+    "source": "FDC 173627"
+   },
+   {
+    "amount": "1/3 cup",
+    "item": "short-grain rice, rinsed",
+    "grams": 67,
+    "source": "FDC 168931"
+   },
+   {
+    "amount": "10",
+    "item": "garlic cloves, peeled, whole",
+    "grams": 30,
+    "source": "FDC 169230"
+   },
+   {
+    "amount": "3-inch piece",
+    "item": "fresh ginger, sliced",
+    "grams": 33,
+    "source": "FDC 169231"
+   },
+   {
+    "amount": "8",
+    "item": "dried jujubes (red dates)",
+    "grams": 32,
+    "source": "FDC 168152"
+   },
+   {
+    "amount": "1",
+    "item": "leek, white and light green parts, sliced and washed",
+    "grams": 89,
+    "source": "FDC 169246"
+   },
+   {
+    "amount": "1 cup",
+    "item": "daikon radish, peeled and diced",
+    "grams": 116,
+    "source": "FDC 168451"
+   },
+   {
+    "amount": "8 cups",
+    "item": "water",
+    "grams": 0,
+    "source": null
+   },
+   {
+    "amount": "1/2 tsp",
+    "item": "salt",
+    "grams": 3,
+    "source": "FDC 173468"
+   },
+   {
+    "amount": "3",
+    "item": "scallions, sliced",
+    "grams": 45,
+    "source": "FDC 170005"
+   },
+   {
+    "amount": "pinch",
+    "item": "black pepper",
+    "grams": 0,
+    "source": null
+   }
+  ],
+  "steps": [
+   "Put everything except the salt, scallions and pepper in a large pot.",
+   "Bring to a boil, skim off any foam, then simmer partly covered 45 minutes, until the rice has softened into the broth and the chicken is very tender (well past 165°F).",
+   "Lift out the chicken, shred it, and return it to the pot. Remove the ginger slices if you like.",
+   "Season with the salt. Serve with scallions and pepper. Eat the jujubes (watch for the pits) and the soft garlic cloves."
+  ],
+  "soft_food": "Already soft. Pit and chop the jujubes before serving. Mash the garlic into the broth.",
+  "storage": "Keeps 4 days in the fridge, 3 months frozen. Reheat to 165°F.",
+  "cautions": [
+   "Kidney disease? Ask your doctor for your protein number (E28)."
+  ],
+  "collection": "strong_kitchen"
+ },
+ {
+  "id": "N1",
+  "name": "Warm edamame with sesame and chili",
+  "native": "Sun's TV snack",
+  "category": "Snack",
+  "serves": 2,
+  "minutes_active": 3,
+  "minutes_total": 8,
+  "per_serving": {
+   "kcal": 151.1,
+   "protein_g": 13.9,
+   "fiber_g": 6.1,
+   "sodium_mg": 239.5
+  },
+  "ingredients": [
+   {
+    "amount": "1 1/2 cups",
+    "item": "frozen shelled edamame",
+    "grams": 233,
+    "source": "FDC 168411"
+   },
+   {
+    "amount": "1/2 tsp",
+    "item": "toasted sesame oil",
+    "grams": 2.3,
+    "source": "FDC 171016"
+   },
+   {
+    "amount": "1/4 tsp",
+    "item": "flaky or coarse salt",
+    "grams": 1.2,
+    "source": "FDC 173468"
+   },
+   {
+    "amount": "pinch",
+    "item": "red pepper flakes, and a squeeze of lemon",
+    "grams": 0,
+    "source": null
+   }
+  ],
+  "steps": [
+   "Microwave or boil the edamame 4 to 5 minutes, until hot and tender. Drain.",
+   "Toss with sesame oil, salt, pepper flakes and lemon."
+  ],
+  "soft_food": "Cook 2 minutes longer and mash lightly with a fork; spread on toast.",
+  "storage": "Cooked edamame keeps 4 days in the fridge. Good cold.",
+  "cautions": [
+   "High fiber. Go up slowly and drink water, or you'll feel it (E24)."
+  ],
+  "collection": "strong_kitchen"
+ },
+ {
+  "id": "N2",
+  "name": "Soy-braised eggs",
+  "native": "gyeran-jangjorim (Korean)",
+  "category": "Snack",
+  "serves": 3,
+  "minutes_active": 10,
+  "minutes_total": 30,
+  "per_serving": {
+   "kcal": 179.4,
+   "protein_g": 14.3,
+   "fiber_g": 0.2,
+   "sodium_mg": 718.6
+  },
+  "ingredients": [
+   {
+    "amount": "6",
+    "item": "large eggs",
+    "grams": 300,
+    "source": "FDC 171287"
+   },
+   {
+    "amount": "3 Tbsp",
+    "item": "low-sodium soy sauce",
+    "grams": 48,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "3/4 cup",
+    "item": "water",
+    "grams": 0,
+    "source": null
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "honey",
+    "grams": 21,
+    "source": "FDC 169640"
+   },
+   {
+    "amount": "4",
+    "item": "garlic cloves, smashed",
+    "grams": 12,
+    "source": "FDC 169230"
+   }
+  ],
+  "steps": [
+   "Hard-boil the eggs: cover with cold water, bring to a boil, then simmer 10 minutes, until the yolks are completely firm. Cool in cold water and peel.",
+   "Bring the soy sauce, water, honey and garlic to a boil in a small pot.",
+   "Add the peeled eggs. Simmer 10 minutes on low, rolling them every few minutes so they color evenly.",
+   "Store the eggs in the liquid in a covered container in the fridge. Eat two at a time."
+  ],
+  "soft_food": "Chop and mix with a little of the liquid over soft rice.",
+  "storage": "Keeps 4 days in the fridge in the liquid. Don't leave them out more than 2 hours.",
+  "cautions": [
+   "Honey: never for babies under 1. Diabetes: honey counts as sugar (or leave it out).",
+   "Our sodium number is an overestimate: we count all the soy sauce, but most of it stays in the pot."
+  ],
+  "collection": "strong_kitchen"
+ },
+ {
+  "id": "N3",
+  "name": "Chilled tofu with scallion-soy sauce",
+  "native": "liángbàn dòufu (Chinese) / naeng-dubu (Korean)",
+  "category": "Snack",
+  "serves": 2,
+  "minutes_active": 5,
+  "minutes_total": 5,
+  "per_serving": {
+   "kcal": 162.2,
+   "protein_g": 15.6,
+   "fiber_g": 1.1,
+   "sodium_mg": 305.8
+  },
+  "ingredients": [
+   {
+    "amount": "1 block (14 oz)",
+    "item": "soft tofu, well chilled",
+    "grams": 397,
+    "source": "FDC 172449"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "low-sodium soy sauce",
+    "grams": 16,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "rice or white vinegar",
+    "grams": 5,
+    "source": "FDC 172237"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "toasted sesame oil",
+    "grams": 4.5,
+    "source": "FDC 171016"
+   },
+   {
+    "amount": "1",
+    "item": "scallion, finely chopped",
+    "grams": 15,
+    "source": "FDC 170005"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "toasted sesame seeds",
+    "grams": 3,
+    "source": "FDC 170151"
+   },
+   {
+    "amount": "1/2 tsp",
+    "item": "Korean chili flakes (optional)",
+    "grams": 0.9,
+    "source": "FDC 170932"
+   },
+   {
+    "amount": "1/2 cup",
+    "item": "diced cucumber",
+    "grams": 52,
+    "source": "FDC 168409"
+   }
+  ],
+  "steps": [
+   "Drain the tofu and set it on a plate. Cut into thick slices, keeping the block shape.",
+   "Mix the soy sauce, vinegar, sesame oil, scallion, sesame seeds and chili flakes.",
+   "Spoon the sauce over the tofu. Scatter the cucumber around. Eat cold, with a spoon."
+  ],
+  "soft_food": "Already soft. Skip the cucumber.",
+  "storage": "Best fresh. Opened tofu keeps 3 days in the fridge covered in fresh water, changed daily.",
+  "cautions": [],
+  "collection": "strong_kitchen"
+ },
+ {
+  "id": "G01",
+  "collection": "gut_reset",
+  "name": "Mixed-grain rice with black beans",
+  "native": "japgok-bap (Korean)",
+  "category": "Base",
+  "serves": 8,
+  "minutes_active": 5,
+  "minutes_total": 10,
+  "per_serving": {
+   "kcal": 155.4,
+   "protein_g": 4.6,
+   "fiber_g": 4.5,
+   "sodium_mg": 48.3
+  },
+  "ingredients": [
+   {
+    "amount": "3 cups",
+    "item": "cooked brown rice",
+    "grams": 585,
+    "source": "FDC 169704"
+   },
+   {
+    "amount": "1 1/2 cups",
+    "item": "cooked pearled barley",
+    "grams": 235,
+    "source": "FDC 170285"
+   },
+   {
+    "amount": "1 can (15 oz), drained and rinsed",
+    "item": "low-sodium black beans",
+    "grams": 258,
+    "source": "FDC 175238"
+   }
+  ],
+  "steps": [
+   "Cook brown rice and barley ahead (or buy them cooked and frozen). Rinse the beans in a colander.",
+   "Mix everything in a big bowl while the grains are warm.",
+   "Portion 2/3 cup per person. Freeze the rest in flat bags."
+  ],
+  "soft_food": "Cook the brown rice and barley with 25% more water, and mash the beans lightly.",
+  "storage": "Fridge 4 days, freezer 3 months. Reheat until steaming (165°F).",
+  "cautions": [
+   "High fiber. Go up slowly and drink water, or you'll feel it (E24)."
+  ]
+ },
+ {
+  "id": "G02",
+  "collection": "gut_reset",
+  "name": "Soybean-paste stew with tofu and shrimp",
+  "native": "doenjang-jjigae (Korean)",
+  "category": "Soup",
+  "serves": 4,
+  "minutes_active": 15,
+  "minutes_total": 30,
+  "per_serving": {
+   "kcal": 325.9,
+   "protein_g": 26.7,
+   "fiber_g": 5.4,
+   "sodium_mg": 411.1
+  },
+  "ingredients": [
+   {
+    "amount": "1 block (14 oz)",
+    "item": "firm tofu, in cubes",
+    "grams": 397,
+    "source": "FDC 172448"
+   },
+   {
+    "amount": "8 oz",
+    "item": "raw shrimp, peeled",
+    "grams": 227,
+    "source": "FDC 175179"
+   },
+   {
+    "amount": "2 Tbsp",
+    "item": "doenjang or miso",
+    "grams": 34,
+    "source": "FDC 172442"
+   },
+   {
+    "amount": "1 medium",
+    "item": "zucchini, in half-moons",
+    "grams": 196,
+    "source": "FDC 169291"
+   },
+   {
+    "amount": "1 medium",
+    "item": "onion, diced",
+    "grams": 110,
+    "source": "FDC 170000"
+   },
+   {
+    "amount": "4 oz",
+    "item": "fresh shiitake mushrooms, sliced",
+    "grams": 113,
+    "source": "FDC 169242"
+   },
+   {
+    "amount": "1 small",
+    "item": "russet potato, in small cubes",
+    "grams": 150,
+    "source": "FDC 170027"
+   },
+   {
+    "amount": "1",
+    "item": "garlic clove, minced",
+    "grams": 3,
+    "source": "FDC 169230"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "Korean chili flakes (optional)",
+    "grams": 1.8,
+    "source": "FDC 170932"
+   },
+   {
+    "amount": "2",
+    "item": "scallions, sliced",
+    "grams": 30,
+    "source": "FDC 170005"
+   },
+   {
+    "amount": "4 cups",
+    "item": "water",
+    "grams": 0,
+    "source": null
+   },
+   {
+    "amount": "2 cups",
+    "item": "cooked brown rice, to serve",
+    "grams": 390,
+    "source": "FDC 169704"
+   }
+  ],
+  "steps": [
+   "Stir the doenjang into the water in a pot until dissolved. Add the potato, onion and garlic. Boil, then simmer 8 minutes.",
+   "Add the zucchini and mushrooms. Simmer 5 minutes.",
+   "Add the tofu and shrimp. Simmer 3 to 4 minutes, until the shrimp are pink and opaque all the way through.",
+   "Add chili flakes if you like. Top with scallions. Serve with rice."
+  ],
+  "soft_food": "Dice everything small and cook the potato until very soft. Chop the shrimp.",
+  "storage": "Fridge 3 days. Reheat until steaming.",
+  "cautions": [
+   "Shellfish allergy: swap in cubed firm tofu, or chicken breast cooked to 165°F."
+  ]
+ },
+ {
+  "id": "G03",
+  "collection": "gut_reset",
+  "name": "Two banchan: sesame spinach and soybean sprouts",
+  "native": "sigeumchi-namul and kongnamul-muchim (Korean)",
+  "category": "Side",
+  "serves": 4,
+  "minutes_active": 15,
+  "minutes_total": 15,
+  "per_serving": {
+   "kcal": 120.5,
+   "protein_g": 10.1,
+   "fiber_g": 2.7,
+   "sodium_mg": 355.5
+  },
+  "ingredients": [
+   {
+    "amount": "10 oz",
+    "item": "fresh spinach",
+    "grams": 284,
+    "source": "FDC 168462"
+   },
+   {
+    "amount": "12 oz",
+    "item": "soybean sprouts (always cooked)",
+    "grams": 340,
+    "source": "FDC 168460"
+   },
+   {
+    "amount": "2",
+    "item": "garlic cloves, grated",
+    "grams": 6,
+    "source": "FDC 169230"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "low-sodium soy sauce",
+    "grams": 16,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "2 tsp",
+    "item": "toasted sesame oil",
+    "grams": 9,
+    "source": "FDC 171016"
+   },
+   {
+    "amount": "2 tsp",
+    "item": "toasted sesame seeds",
+    "grams": 6,
+    "source": "FDC 170151"
+   },
+   {
+    "amount": "1/4 tsp",
+    "item": "salt",
+    "grams": 1.5,
+    "source": "FDC 173468"
+   },
+   {
+    "amount": "2",
+    "item": "scallions, finely chopped",
+    "grams": 30,
+    "source": "FDC 170005"
+   }
+  ],
+  "steps": [
+   "Bring a pot of water to a boil. Add the soybean sprouts, cover, and cook 6 minutes. Lift out, drain, and cool.",
+   "In the same water, blanch the spinach 30 seconds. Drain, rinse cold, squeeze dry and chop.",
+   "Toss the sprouts with half the garlic, sesame oil, sesame seeds, scallions and the salt.",
+   "Toss the spinach with the rest of the garlic, sesame oil, sesame seeds, scallions and the soy sauce.",
+   "Serve cold or at room temperature."
+  ],
+  "soft_food": "Chop both finely after cooking. Cook the sprouts 2 minutes longer.",
+  "storage": "Fridge 3 days in covered containers.",
+  "cautions": [
+   "On warfarin? Keep greens steady from week to week; don't suddenly change how much you eat. Ask your doctor."
+  ]
+ },
+ {
+  "id": "G04",
+  "collection": "gut_reset",
+  "name": "Soy-braised black soybeans",
+  "native": "kongjaban (Korean)",
+  "category": "Side",
+  "serves": 6,
+  "minutes_active": 5,
+  "minutes_total": 20,
+  "per_serving": {
+   "kcal": 121.7,
+   "protein_g": 11.0,
+   "fiber_g": 3.6,
+   "sodium_mg": 328.0
+  },
+  "ingredients": [
+   {
+    "amount": "2 cups",
+    "item": "cooked black soybeans (canned, drained, or home-cooked)",
+    "grams": 344,
+    "source": "FDC 174299"
+   },
+   {
+    "amount": "2 Tbsp",
+    "item": "low-sodium soy sauce",
+    "grams": 32,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "honey",
+    "grams": 21,
+    "source": "FDC 169640"
+   },
+   {
+    "amount": "1/2 cup",
+    "item": "water",
+    "grams": 0,
+    "source": null
+   },
+   {
+    "amount": "1 tsp",
+    "item": "toasted sesame oil",
+    "grams": 4.5,
+    "source": "FDC 171016"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "toasted sesame seeds",
+    "grams": 3,
+    "source": "FDC 170151"
+   }
+  ],
+  "steps": [
+   "Put the beans, soy sauce, honey and water in a small pan.",
+   "Simmer on low, stirring now and then, 12 to 15 minutes, until the liquid is almost gone and the beans look glossy.",
+   "Stir in the sesame oil and seeds. Cool. Serve 1/3 cup as a side."
+  ],
+  "soft_food": "Simmer 10 minutes longer with extra water and mash lightly.",
+  "storage": "Fridge 1 week.",
+  "cautions": [
+   "Honey: never for babies under 1. Diabetes: honey counts as sugar (or leave it out).",
+   "Our sodium number is an overestimate: we count all the soy sauce, but most of it stays in the pot."
+  ]
+ },
+ {
+  "id": "G05",
+  "collection": "gut_reset",
+  "name": "Mung bean pancakes with kimchi and pork",
+  "native": "bindaetteok (Korean)",
+  "category": "Lunch",
+  "serves": 4,
+  "minutes_active": 30,
+  "minutes_total": 40,
+  "per_serving": {
+   "kcal": 324.9,
+   "protein_g": 22.4,
+   "fiber_g": 9.4,
+   "sodium_mg": 519.2
+  },
+  "ingredients": [
+   {
+    "amount": "1 cup dried (soaked overnight)",
+    "item": "peeled split mung beans",
+    "grams": 207,
+    "source": "FDC 174256"
+   },
+   {
+    "amount": "4 oz",
+    "item": "pork loin, minced finely",
+    "grams": 113,
+    "source": "FDC 168230"
+   },
+   {
+    "amount": "1 cup",
+    "item": "kimchi, chopped and squeezed",
+    "grams": 150,
+    "source": "FDC 170392"
+   },
+   {
+    "amount": "1 cup",
+    "item": "cooked soybean sprouts, chopped",
+    "grams": 70,
+    "source": "FDC 168460"
+   },
+   {
+    "amount": "2",
+    "item": "scallions, sliced",
+    "grams": 30,
+    "source": "FDC 170005"
+   },
+   {
+    "amount": "1",
+    "item": "large egg",
+    "grams": 50,
+    "source": "FDC 171287"
+   },
+   {
+    "amount": "1/4 tsp",
+    "item": "salt",
+    "grams": 1.5,
+    "source": "FDC 173468"
+   },
+   {
+    "amount": "2 Tbsp",
+    "item": "canola oil",
+    "grams": 28,
+    "source": "FDC 172336"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "low-sodium soy sauce (dip)",
+    "grams": 16,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "rice or white vinegar (dip)",
+    "grams": 15,
+    "source": "FDC 172237"
+   }
+  ],
+  "steps": [
+   "Drain the soaked mung beans. Blend with 1/2 cup water to a thick, slightly gritty batter.",
+   "Stir in the pork, kimchi, sprouts, scallions, egg and salt.",
+   "Heat 1/2 Tbsp oil in a nonstick skillet over medium heat. Spoon in 1/2 cup batter and flatten to a 4-inch round.",
+   "Cook 4 to 5 minutes a side, until deep golden and cooked through (pork reaches 160°F in the center; press to check no pink batter remains).",
+   "Repeat with the rest. Serve with the soy-vinegar dip."
+  ],
+  "soft_food": "Make them thinner and smaller, and cut into pieces.",
+  "storage": "Fridge 3 days, freezer 2 months. Reheat in a dry skillet until steaming.",
+  "cautions": [
+   "Kimchi is salty. Watching sodium? Small portions, or rinse it.",
+   "High fiber. Go up slowly and drink water, or you'll feel it (E24)."
+  ]
+ },
+ {
+  "id": "G06",
+  "collection": "gut_reset",
+  "name": "Stir-fried tofu with broccoli and garlic",
+  "native": "suàn róng xī lán chǎo dòufu (Chinese)",
+  "category": "Dinner",
+  "serves": 2,
+  "minutes_active": 15,
+  "minutes_total": 20,
+  "per_serving": {
+   "kcal": 426.7,
+   "protein_g": 28.5,
+   "fiber_g": 8.2,
+   "sodium_mg": 425.6
+  },
+  "ingredients": [
+   {
+    "amount": "1 block (14 oz)",
+    "item": "extra-firm tofu, pressed and cubed",
+    "grams": 397,
+    "source": "FDC 174290"
+   },
+   {
+    "amount": "12 oz",
+    "item": "broccoli florets",
+    "grams": 340,
+    "source": "FDC 170379"
+   },
+   {
+    "amount": "4",
+    "item": "garlic cloves, minced",
+    "grams": 12,
+    "source": "FDC 169230"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "minced ginger",
+    "grams": 6,
+    "source": "FDC 169231"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "low-sodium soy sauce",
+    "grams": 16,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "oyster sauce",
+    "grams": 5,
+    "source": "FDC 174529"
+   },
+   {
+    "amount": "1 tsp + 3 Tbsp water",
+    "item": "cornstarch",
+    "grams": 2.7,
+    "source": "FDC 169698"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "canola oil",
+    "grams": 14,
+    "source": "FDC 172336"
+   },
+   {
+    "amount": "1 cup",
+    "item": "cooked brown rice",
+    "grams": 195,
+    "source": "FDC 169704"
+   }
+  ],
+  "steps": [
+   "Pat the tofu dry. Heat half the oil in a nonstick skillet and cook the tofu, turning, until golden, 6 to 8 minutes. Move to a plate.",
+   "Add the rest of the oil, the broccoli and 3 Tbsp water. Cover and steam-fry 4 minutes.",
+   "Add garlic and ginger, stir 30 seconds.",
+   "Return the tofu. Stir the soy sauce, oyster sauce, cornstarch and water together and pour in. Toss 1 minute until glossy.",
+   "Serve with rice."
+  ],
+  "soft_food": "Use firm (not extra-firm) tofu and cook the broccoli 3 minutes longer.",
+  "storage": "Fridge 3 days.",
+  "cautions": [
+   "On warfarin? Keep greens steady from week to week; don't suddenly change how much you eat. Ask your doctor.",
+   "High fiber. Go up slowly and drink water, or you'll feel it (E24).",
+   "Kidney disease? Ask your doctor for your protein number (E28)."
+  ]
+ },
+ {
+  "id": "G07",
+  "collection": "gut_reset",
+  "name": "Cod braised with tomato and ginger",
+  "native": "fānqié mèn yú (Chinese)",
+  "category": "Dinner",
+  "serves": 2,
+  "minutes_active": 15,
+  "minutes_total": 25,
+  "per_serving": {
+   "kcal": 365.7,
+   "protein_g": 36.4,
+   "fiber_g": 6.8,
+   "sodium_mg": 467.8
+  },
+  "ingredients": [
+   {
+    "amount": "12 oz",
+    "item": "cod fillets, in 2 pieces",
+    "grams": 340,
+    "source": "FDC 171955"
+   },
+   {
+    "amount": "3 medium",
+    "item": "tomatoes, in wedges",
+    "grams": 369,
+    "source": "FDC 170457"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "minced ginger",
+    "grams": 6,
+    "source": "FDC 169231"
+   },
+   {
+    "amount": "2",
+    "item": "scallions, sliced",
+    "grams": 30,
+    "source": "FDC 170005"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "sugar",
+    "grams": 4.2,
+    "source": "FDC 169655"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "low-sodium soy sauce",
+    "grams": 16,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "canola oil",
+    "grams": 14,
+    "source": "FDC 172336"
+   },
+   {
+    "amount": "8 oz",
+    "item": "baby bok choy, halved",
+    "grams": 227,
+    "source": "FDC 170390"
+   },
+   {
+    "amount": "1 cup",
+    "item": "cooked pearled barley or brown rice",
+    "grams": 157,
+    "source": "FDC 170285"
+   }
+  ],
+  "steps": [
+   "Heat the oil in a skillet with a lid. Add the ginger and tomatoes. Cook 5 minutes until the tomatoes collapse into a sauce. Add sugar and soy sauce.",
+   "Nestle the cod into the sauce and lay the bok choy around it. Cover.",
+   "Simmer on low 8 to 10 minutes, until the fish flakes easily and reads 145°F.",
+   "Top with scallions. Serve over the barley."
+  ],
+  "soft_food": "Already soft. Chop the bok choy stems small.",
+  "storage": "Best fresh; fridge 1 day.",
+  "cautions": [
+   "On warfarin? Keep greens steady from week to week; don't suddenly change how much you eat. Ask your doctor.",
+   "Kidney disease? Ask your doctor for your protein number (E28)."
+  ]
+ },
+ {
+  "id": "G08",
+  "collection": "gut_reset",
+  "name": "Egg and chive stir-fry with kimchi",
+  "native": "jiǔcài chǎo jīdàn (Chinese)",
+  "category": "Lunch",
+  "serves": 2,
+  "minutes_active": 10,
+  "minutes_total": 12,
+  "per_serving": {
+   "kcal": 476.9,
+   "protein_g": 29.9,
+   "fiber_g": 7.6,
+   "sodium_mg": 665.2
+  },
+  "ingredients": [
+   {
+    "amount": "5",
+    "item": "large eggs",
+    "grams": 250,
+    "source": "FDC 171287"
+   },
+   {
+    "amount": "4 oz (1 bunch)",
+    "item": "garlic chives or regular chives, in 1-inch pieces",
+    "grams": 113,
+    "source": "FDC 169994"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "canola oil",
+    "grams": 14,
+    "source": "FDC 172336"
+   },
+   {
+    "amount": "1/4 tsp",
+    "item": "salt",
+    "grams": 1.5,
+    "source": "FDC 173468"
+   },
+   {
+    "amount": "1 cup",
+    "item": "cooked brown rice",
+    "grams": 195,
+    "source": "FDC 169704"
+   },
+   {
+    "amount": "1/2 cup",
+    "item": "kimchi, to serve",
+    "grams": 75,
+    "source": "FDC 170392"
+   },
+   {
+    "amount": "1 cup",
+    "item": "frozen shelled edamame, cooked",
+    "grams": 155,
+    "source": "FDC 168411"
+   }
+  ],
+  "steps": [
+   "Beat the eggs with the salt.",
+   "Heat the oil in a nonstick skillet over medium heat. Add the chives and stir 1 minute.",
+   "Pour in the eggs. Stir slowly until they set into large, fully cooked curds, about 2 minutes.",
+   "Serve with rice, edamame and a little kimchi."
+  ],
+  "soft_food": "Chop the chives finely; mash the edamame.",
+  "storage": "Best fresh.",
+  "cautions": [
+   "Kimchi is salty. Watching sodium? Small portions, or rinse it.",
+   "High fiber. Go up slowly and drink water, or you'll feel it (E24)."
+  ]
+ },
+ {
+  "id": "G09",
+  "collection": "gut_reset",
+  "name": "Sweet potato porridge with walnuts",
+  "native": "goguma-juk (Korean)",
+  "category": "Breakfast",
+  "serves": 2,
+  "minutes_active": 10,
+  "minutes_total": 35,
+  "per_serving": {
+   "kcal": 380.5,
+   "protein_g": 17.5,
+   "fiber_g": 4.4,
+   "sodium_mg": 371.3
+  },
+  "ingredients": [
+   {
+    "amount": "1 medium",
+    "item": "sweet potato, peeled and cubed",
+    "grams": 200,
+    "source": "FDC 168482"
+   },
+   {
+    "amount": "1/3 cup",
+    "item": "short-grain rice, rinsed",
+    "grams": 67,
+    "source": "FDC 168931"
+   },
+   {
+    "amount": "2 cups",
+    "item": "unsweetened soy milk",
+    "grams": 486,
+    "source": "FDC 175215"
+   },
+   {
+    "amount": "1 cup",
+    "item": "water",
+    "grams": 0,
+    "source": null
+   },
+   {
+    "amount": "pinch",
+    "item": "salt",
+    "grams": 0.8,
+    "source": "FDC 173468"
+   },
+   {
+    "amount": "2",
+    "item": "hard-boiled eggs, on the side",
+    "grams": 100,
+    "source": "FDC 171287"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "chopped walnuts",
+    "grams": 7,
+    "source": "FDC 170187"
+   }
+  ],
+  "steps": [
+   "Simmer the sweet potato and rice in the water, covered, 15 minutes, until soft.",
+   "Add the soy milk. Simmer 10 more minutes, stirring often so it doesn't stick.",
+   "Mash or blend until smooth. Add the salt.",
+   "Top with walnuts. Serve with a hard-boiled egg each (boiled 10 minutes, yolk firm)."
+  ],
+  "soft_food": "Blend completely smooth; skip the walnuts or grind them.",
+  "storage": "Fridge 3 days. Thin with water when you reheat.",
+  "cautions": []
+ },
+ {
+  "id": "G10",
+  "collection": "gut_reset",
+  "name": "Chicken, barley and mushroom soup",
+  "native": "Sun's winter pot",
+  "category": "Soup",
+  "serves": 4,
+  "minutes_active": 15,
+  "minutes_total": 45,
+  "per_serving": {
+   "kcal": 322.2,
+   "protein_g": 33.6,
+   "fiber_g": 5.8,
+   "sodium_mg": 423.5
+  },
+  "ingredients": [
+   {
+    "amount": "1 lb",
+    "item": "boneless, skinless chicken thighs",
+    "grams": 454,
+    "source": "FDC 173627"
+   },
+   {
+    "amount": "1 1/2 cups",
+    "item": "cooked pearled barley",
+    "grams": 235,
+    "source": "FDC 170285"
+   },
+   {
+    "amount": "8 oz",
+    "item": "fresh shiitake mushrooms, sliced",
+    "grams": 227,
+    "source": "FDC 169242"
+   },
+   {
+    "amount": "2 medium",
+    "item": "carrots, diced",
+    "grams": 122,
+    "source": "FDC 170393"
+   },
+   {
+    "amount": "2 stalks",
+    "item": "celery, diced",
+    "grams": 80,
+    "source": "FDC 169988"
+   },
+   {
+    "amount": "1 medium",
+    "item": "onion, diced",
+    "grams": 110,
+    "source": "FDC 170000"
+   },
+   {
+    "amount": "3",
+    "item": "garlic cloves, minced",
+    "grams": 9,
+    "source": "FDC 169230"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "minced ginger",
+    "grams": 6,
+    "source": "FDC 169231"
+   },
+   {
+    "amount": "6 cups",
+    "item": "low-sodium chicken broth",
+    "grams": 1440,
+    "source": "FDC 171609"
+   },
+   {
+    "amount": "1/4 tsp",
+    "item": "salt",
+    "grams": 1.5,
+    "source": "FDC 173468"
+   },
+   {
+    "amount": "3 cups (3 oz)",
+    "item": "baby spinach",
+    "grams": 85,
+    "source": "FDC 168462"
+   }
+  ],
+  "steps": [
+   "Put the chicken, carrots, celery, onion, garlic, ginger and broth in a pot. Boil, then simmer 20 minutes.",
+   "Lift out the chicken (it should read 165°F), shred it, and return it.",
+   "Add the mushrooms and barley. Simmer 10 minutes.",
+   "Stir in the spinach until wilted. Taste, then add the salt only if needed."
+  ],
+  "soft_food": "Dice the vegetables small and shred the chicken finely.",
+  "storage": "Fridge 4 days, freezer 3 months. Reheat to 165°F.",
+  "cautions": [
+   "On warfarin? Keep greens steady from week to week; don't suddenly change how much you eat. Ask your doctor.",
+   "Kidney disease? Ask your doctor for your protein number (E28).",
+   "High fiber. Go up slowly and drink water, or you'll feel it (E24)."
+  ]
+ },
+ {
+  "id": "G11",
+  "collection": "gut_reset",
+  "name": "Napa cabbage, beef and tofu soybean soup",
+  "native": "baechu doenjang-guk (Korean)",
+  "category": "Soup",
+  "serves": 4,
+  "minutes_active": 15,
+  "minutes_total": 35,
+  "per_serving": {
+   "kcal": 295.0,
+   "protein_g": 25.0,
+   "fiber_g": 3.8,
+   "sodium_mg": 382.4
+  },
+  "ingredients": [
+   {
+    "amount": "1 lb",
+    "item": "napa cabbage, cut in 2-inch pieces",
+    "grams": 454,
+    "source": "FDC 169979"
+   },
+   {
+    "amount": "8 oz",
+    "item": "lean beef chuck, thinly sliced",
+    "grams": 227,
+    "source": "FDC 174051"
+   },
+   {
+    "amount": "1 block (14 oz)",
+    "item": "soft tofu, in cubes",
+    "grams": 397,
+    "source": "FDC 172449"
+   },
+   {
+    "amount": "2 Tbsp",
+    "item": "doenjang or miso",
+    "grams": 34,
+    "source": "FDC 172442"
+   },
+   {
+    "amount": "2",
+    "item": "garlic cloves, minced",
+    "grams": 6,
+    "source": "FDC 169230"
+   },
+   {
+    "amount": "2",
+    "item": "scallions, sliced",
+    "grams": 30,
+    "source": "FDC 170005"
+   },
+   {
+    "amount": "6 cups",
+    "item": "water",
+    "grams": 0,
+    "source": null
+   },
+   {
+    "amount": "2 cups",
+    "item": "cooked brown rice, to serve",
+    "grams": 390,
+    "source": "FDC 169704"
+   }
+  ],
+  "steps": [
+   "Stir the doenjang into the water in a pot. Add the beef and garlic. Boil, skim the foam, then simmer 10 minutes.",
+   "Add the cabbage. Simmer 12 minutes, until soft and sweet.",
+   "Add the tofu. Simmer 3 minutes. Top with scallions. Serve with rice."
+  ],
+  "soft_food": "Chop the cabbage and beef small.",
+  "storage": "Fridge 4 days.",
+  "cautions": []
+ },
+ {
+  "id": "G12",
+  "collection": "gut_reset",
+  "name": "Korean radish and beef soup",
+  "native": "soegogi-muguk (Korean)",
+  "category": "Soup",
+  "serves": 4,
+  "minutes_active": 15,
+  "minutes_total": 45,
+  "per_serving": {
+   "kcal": 294.1,
+   "protein_g": 23.2,
+   "fiber_g": 3.8,
+   "sodium_mg": 526.0
+  },
+  "ingredients": [
+   {
+    "amount": "12 oz",
+    "item": "lean beef chuck, in thin bite-size slices",
+    "grams": 340,
+    "source": "FDC 174051"
+   },
+   {
+    "amount": "1 lb",
+    "item": "daikon radish, in thin squares",
+    "grams": 454,
+    "source": "FDC 168451"
+   },
+   {
+    "amount": "3",
+    "item": "garlic cloves, minced",
+    "grams": 9,
+    "source": "FDC 169230"
+   },
+   {
+    "amount": "2 Tbsp",
+    "item": "low-sodium soy sauce",
+    "grams": 32,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "toasted sesame oil",
+    "grams": 13.6,
+    "source": "FDC 171016"
+   },
+   {
+    "amount": "8 cups",
+    "item": "water",
+    "grams": 0,
+    "source": null
+   },
+   {
+    "amount": "3",
+    "item": "scallions, sliced",
+    "grams": 45,
+    "source": "FDC 170005"
+   },
+   {
+    "amount": "1/4 tsp",
+    "item": "salt",
+    "grams": 1.5,
+    "source": "FDC 173468"
+   },
+   {
+    "amount": "2 cups",
+    "item": "cooked brown rice, to serve",
+    "grams": 390,
+    "source": "FDC 169704"
+   }
+  ],
+  "steps": [
+   "Heat the sesame oil in a pot. Cook the beef and garlic 3 minutes.",
+   "Add the radish and 1 Tbsp soy sauce. Stir 3 minutes.",
+   "Add the water. Boil, skim, then simmer 25 minutes until the radish is translucent.",
+   "Season with the rest of the soy sauce, then salt if needed. Scallions on top. Rice on the side."
+  ],
+  "soft_food": "Cut the beef and radish very small; cook 10 minutes longer.",
+  "storage": "Fridge 4 days, freezer 3 months.",
+  "cautions": []
+ },
+ {
+  "id": "G13",
+  "collection": "gut_reset",
+  "name": "Kimchi pancake with shrimp",
+  "native": "kimchi-jeon (Korean)",
+  "category": "Lunch",
+  "serves": 3,
+  "minutes_active": 15,
+  "minutes_total": 20,
+  "per_serving": {
+   "kcal": 302.8,
+   "protein_g": 19.6,
+   "fiber_g": 5.5,
+   "sodium_mg": 343.3
+  },
+  "ingredients": [
+   {
+    "amount": "1 cup",
+    "item": "whole-wheat flour",
+    "grams": 120,
+    "source": "FDC 168893"
+   },
+   {
+    "amount": "1",
+    "item": "large egg",
+    "grams": 50,
+    "source": "FDC 171287"
+   },
+   {
+    "amount": "1 cup + 2 Tbsp juice",
+    "item": "sour kimchi, chopped",
+    "grams": 150,
+    "source": "FDC 170392"
+   },
+   {
+    "amount": "6 oz",
+    "item": "raw shrimp, chopped",
+    "grams": 170,
+    "source": "FDC 175179"
+   },
+   {
+    "amount": "3",
+    "item": "scallions, in 1-inch pieces",
+    "grams": 45,
+    "source": "FDC 170005"
+   },
+   {
+    "amount": "3/4 cup",
+    "item": "cold water",
+    "grams": 0,
+    "source": null
+   },
+   {
+    "amount": "2 Tbsp",
+    "item": "canola oil",
+    "grams": 28,
+    "source": "FDC 172336"
+   }
+  ],
+  "steps": [
+   "Mix the flour, egg, kimchi and juice, and water into a thick batter. Fold in the shrimp and scallions.",
+   "Heat 1 Tbsp oil in a large nonstick skillet over medium heat. Spread half the batter thin.",
+   "Cook 4 minutes until the edges crisp, flip, and cook 4 more minutes until cooked through and the shrimp are opaque.",
+   "Repeat. Cut in squares."
+  ],
+  "soft_food": "Make it thinner and cut it small; use soft white flour if whole-wheat is too coarse.",
+  "storage": "Fridge 2 days. Re-crisp in a dry skillet until steaming.",
+  "cautions": [
+   "Kimchi is salty. Watching sodium? Small portions, or rinse it.",
+   "Shellfish allergy: swap in cubed firm tofu, or chicken breast cooked to 165°F.",
+   "High fiber. Go up slowly and drink water, or you'll feel it (E24)."
+  ]
+ },
+ {
+  "id": "G14",
+  "collection": "gut_reset",
+  "name": "Garlic eggplant with ground turkey",
+  "native": "mild yú xiāng qiézi (Chinese)",
+  "category": "Dinner",
+  "serves": 4,
+  "minutes_active": 25,
+  "minutes_total": 30,
+  "per_serving": {
+   "kcal": 486.9,
+   "protein_g": 30.3,
+   "fiber_g": 7.9,
+   "sodium_mg": 383.6
+  },
+  "ingredients": [
+   {
+    "amount": "1 1/2 lb",
+    "item": "eggplant (Chinese or globe), in finger-size strips",
+    "grams": 680,
+    "source": "FDC 169228"
+   },
+   {
+    "amount": "1 lb",
+    "item": "ground turkey",
+    "grams": 454,
+    "source": "FDC 171505"
+   },
+   {
+    "amount": "3",
+    "item": "garlic cloves, minced",
+    "grams": 9,
+    "source": "FDC 169230"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "minced ginger",
+    "grams": 6,
+    "source": "FDC 169231"
+   },
+   {
+    "amount": "3",
+    "item": "scallions, sliced",
+    "grams": 45,
+    "source": "FDC 170005"
+   },
+   {
+    "amount": "2 Tbsp",
+    "item": "low-sodium soy sauce",
+    "grams": 32,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "rice or white vinegar",
+    "grams": 15,
+    "source": "FDC 172237"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "sugar",
+    "grams": 4.2,
+    "source": "FDC 169655"
+   },
+   {
+    "amount": "1 Tbsp + 3 Tbsp water",
+    "item": "cornstarch",
+    "grams": 8,
+    "source": "FDC 169698"
+   },
+   {
+    "amount": "2 Tbsp",
+    "item": "canola oil",
+    "grams": 28,
+    "source": "FDC 172336"
+   },
+   {
+    "amount": "1 cup",
+    "item": "low-sodium chicken broth",
+    "grams": 240,
+    "source": "FDC 171609"
+   },
+   {
+    "amount": "3 cups",
+    "item": "cooked brown rice",
+    "grams": 585,
+    "source": "FDC 169704"
+   }
+  ],
+  "steps": [
+   "Heat 1 Tbsp oil in a large skillet. Add the eggplant and 1/4 cup water, cover, and cook 8 minutes, stirring once, until soft. Move to a bowl.",
+   "Add the remaining oil and the turkey. Cook, breaking it up, 6 to 8 minutes, until no pink remains (165°F).",
+   "Add garlic, ginger and most of the scallions. Stir 1 minute.",
+   "Return the eggplant. Add broth, soy sauce, vinegar and sugar. Simmer 3 minutes.",
+   "Stir in the cornstarch mixed with water until glossy. Top with scallions. Serve with rice."
+  ],
+  "soft_food": "Peel the eggplant and cook it 5 minutes longer.",
+  "storage": "Fridge 3 days.",
+  "cautions": [
+   "Kidney disease? Ask your doctor for your protein number (E28).",
+   "High fiber. Go up slowly and drink water, or you'll feel it (E24)."
+  ]
+ },
+ {
+  "id": "G15",
+  "collection": "gut_reset",
+  "name": "Hand-torn cabbage with pork",
+  "native": "shǒu sī bāo cài (Chinese)",
+  "category": "Dinner",
+  "serves": 3,
+  "minutes_active": 15,
+  "minutes_total": 20,
+  "per_serving": {
+   "kcal": 373.2,
+   "protein_g": 29.6,
+   "fiber_g": 5.5,
+   "sodium_mg": 282.7
+  },
+  "ingredients": [
+   {
+    "amount": "1 lb",
+    "item": "green cabbage, torn into pieces",
+    "grams": 454,
+    "source": "FDC 169975"
+   },
+   {
+    "amount": "12 oz",
+    "item": "pork loin, thinly sliced",
+    "grams": 340,
+    "source": "FDC 168230"
+   },
+   {
+    "amount": "3",
+    "item": "garlic cloves, sliced",
+    "grams": 9,
+    "source": "FDC 169230"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "low-sodium soy sauce",
+    "grams": 16,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "rice or white vinegar",
+    "grams": 15,
+    "source": "FDC 172237"
+   },
+   {
+    "amount": "1/2 tsp",
+    "item": "sugar",
+    "grams": 2,
+    "source": "FDC 169655"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "canola oil",
+    "grams": 14,
+    "source": "FDC 172336"
+   },
+   {
+    "amount": "1/2 tsp",
+    "item": "red pepper flakes (optional)",
+    "grams": 0.9,
+    "source": "FDC 170932"
+   },
+   {
+    "amount": "1 1/2 cups",
+    "item": "cooked brown rice",
+    "grams": 293,
+    "source": "FDC 169704"
+   }
+  ],
+  "steps": [
+   "Heat the oil in a wok or large skillet over high heat. Cook the pork 3 to 4 minutes, until no pink remains (145°F). Move to a plate.",
+   "Add garlic and pepper flakes for 20 seconds, then the cabbage. Stir-fry 4 to 5 minutes until wilted with some crisp edges.",
+   "Return the pork. Add soy sauce, vinegar and sugar. Toss 1 minute. Serve with rice."
+  ],
+  "soft_food": "Cut the cabbage in small pieces and cook it 3 minutes longer, covered.",
+  "storage": "Fridge 3 days.",
+  "cautions": [
+   "Kidney disease? Ask your doctor for your protein number (E28).",
+   "High fiber. Go up slowly and drink water, or you'll feel it (E24)."
+  ]
+ },
+ {
+  "id": "G16",
+  "collection": "gut_reset",
+  "name": "Edamame, corn and cucumber salad with tofu",
+  "native": "Sun's summer bowl",
+  "category": "Lunch",
+  "serves": 2,
+  "minutes_active": 10,
+  "minutes_total": 10,
+  "per_serving": {
+   "kcal": 331.5,
+   "protein_g": 27.1,
+   "fiber_g": 9.4,
+   "sodium_mg": 106.5
+  },
+  "ingredients": [
+   {
+    "amount": "1 1/2 cups",
+    "item": "frozen shelled edamame, cooked and cooled",
+    "grams": 233,
+    "source": "FDC 168411"
+   },
+   {
+    "amount": "1 cup",
+    "item": "frozen corn, thawed",
+    "grams": 136,
+    "source": "FDC 168398"
+   },
+   {
+    "amount": "1 medium",
+    "item": "cucumber, diced",
+    "grams": 200,
+    "source": "FDC 168409"
+   },
+   {
+    "amount": "1/2 block (7 oz)",
+    "item": "extra-firm tofu, cubed",
+    "grams": 198,
+    "source": "FDC 174290"
+   },
+   {
+    "amount": "1",
+    "item": "scallion, sliced",
+    "grams": 15,
+    "source": "FDC 170005"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "rice or white vinegar",
+    "grams": 15,
+    "source": "FDC 172237"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "toasted sesame oil",
+    "grams": 4.5,
+    "source": "FDC 171016"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "low-sodium soy sauce",
+    "grams": 5,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "toasted sesame seeds",
+    "grams": 3,
+    "source": "FDC 170151"
+   }
+  ],
+  "steps": [
+   "Whisk the vinegar, sesame oil and soy sauce in a bowl.",
+   "Add the edamame, corn, cucumber, tofu and scallion. Toss.",
+   "Top with sesame seeds. Eat cold."
+  ],
+  "soft_food": "Use soft tofu, peel and seed the cucumber, and mash the edamame lightly.",
+  "storage": "Fridge 2 days.",
+  "cautions": [
+   "High fiber. Go up slowly and drink water, or you'll feel it (E24)."
+  ]
+ },
+ {
+  "id": "G17",
+  "collection": "gut_reset",
+  "name": "Beef and vegetable glass noodles, lighter",
+  "native": "japchae (Korean)",
+  "category": "Dinner",
+  "serves": 4,
+  "minutes_active": 35,
+  "minutes_total": 40,
+  "per_serving": {
+   "kcal": 395.1,
+   "protein_g": 26.1,
+   "fiber_g": 4.0,
+   "sodium_mg": 572.4
+  },
+  "ingredients": [
+   {
+    "amount": "4 oz dry",
+    "item": "sweet potato glass noodles (dangmyeon)",
+    "grams": 113,
+    "source": "FDC 174258"
+   },
+   {
+    "amount": "12 oz",
+    "item": "top sirloin, in thin strips",
+    "grams": 340,
+    "source": "FDC 174055"
+   },
+   {
+    "amount": "5 oz",
+    "item": "fresh spinach",
+    "grams": 142,
+    "source": "FDC 168462"
+   },
+   {
+    "amount": "2 medium",
+    "item": "carrots, in matchsticks",
+    "grams": 122,
+    "source": "FDC 170393"
+   },
+   {
+    "amount": "1 medium",
+    "item": "onion, sliced",
+    "grams": 110,
+    "source": "FDC 170000"
+   },
+   {
+    "amount": "4 oz",
+    "item": "fresh shiitake mushrooms, sliced",
+    "grams": 113,
+    "source": "FDC 169242"
+   },
+   {
+    "amount": "1 medium",
+    "item": "red bell pepper, in strips",
+    "grams": 119,
+    "source": "FDC 170108"
+   },
+   {
+    "amount": "2",
+    "item": "large eggs (thin omelet, cooked firm)",
+    "grams": 100,
+    "source": "FDC 171287"
+   },
+   {
+    "amount": "3 Tbsp",
+    "item": "low-sodium soy sauce",
+    "grams": 48,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "honey",
+    "grams": 21,
+    "source": "FDC 169640"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "toasted sesame oil",
+    "grams": 13.6,
+    "source": "FDC 171016"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "canola oil",
+    "grams": 14,
+    "source": "FDC 172336"
+   },
+   {
+    "amount": "3",
+    "item": "garlic cloves, grated",
+    "grams": 9,
+    "source": "FDC 169230"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "toasted sesame seeds",
+    "grams": 9,
+    "source": "FDC 170151"
+   }
+  ],
+  "steps": [
+   "Cook the noodles in boiling water 6 minutes, drain, rinse, and cut with scissors into shorter lengths.",
+   "Blanch the spinach 30 seconds, rinse cold, squeeze dry.",
+   "Beat the eggs and cook as a thin omelet in a nonstick pan until fully set. Roll and slice into strips.",
+   "Stir-fry the beef in half the oil until no pink remains. Remove. Stir-fry the onion, carrots, mushrooms and pepper in the rest, 4 minutes.",
+   "Mix soy sauce, honey, sesame oil and garlic. Toss everything together with the sauce. Top with sesame seeds."
+  ],
+  "soft_food": "Cut the noodles and vegetables short and cook the vegetables 2 minutes longer.",
+  "storage": "Fridge 3 days. Eat at room temperature or warm gently.",
+  "cautions": [
+   "On warfarin? Keep greens steady from week to week; don't suddenly change how much you eat. Ask your doctor.",
+   "Honey: never for babies under 1. Diabetes: honey counts as sugar (or leave it out).",
+   "Kidney disease? Ask your doctor for your protein number (E28)."
+  ]
+ },
+ {
+  "id": "G18",
+  "collection": "gut_reset",
+  "name": "Cold soy-milk noodle soup",
+  "native": "kongguksu (Korean)",
+  "category": "Lunch",
+  "serves": 2,
+  "minutes_active": 15,
+  "minutes_total": 20,
+  "per_serving": {
+   "kcal": 519.1,
+   "protein_g": 34.0,
+   "fiber_g": 9.0,
+   "sodium_mg": 802.7
+  },
+  "ingredients": [
+   {
+    "amount": "3 cups",
+    "item": "unsweetened soy milk, chilled",
+    "grams": 729,
+    "source": "FDC 175215"
+   },
+   {
+    "amount": "1/2 block (7 oz)",
+    "item": "soft tofu",
+    "grams": 198,
+    "source": "FDC 172449"
+   },
+   {
+    "amount": "2 Tbsp",
+    "item": "toasted sesame seeds",
+    "grams": 18,
+    "source": "FDC 170151"
+   },
+   {
+    "amount": "1/2 tsp",
+    "item": "salt",
+    "grams": 3,
+    "source": "FDC 173468"
+   },
+   {
+    "amount": "4 oz dry (about 2 cups cooked)",
+    "item": "whole-wheat spaghetti",
+    "grams": 280,
+    "source": "FDC 168910"
+   },
+   {
+    "amount": "1/2 medium",
+    "item": "cucumber, in matchsticks",
+    "grams": 100,
+    "source": "FDC 168409"
+   },
+   {
+    "amount": "2",
+    "item": "hard-boiled eggs, halved",
+    "grams": 100,
+    "source": "FDC 171287"
+   }
+  ],
+  "steps": [
+   "Blend the soy milk, tofu, sesame seeds and salt until smooth. Chill.",
+   "Cook the noodles, then rinse under cold water until cold.",
+   "Divide noodles into bowls, pour the cold soy broth over, top with cucumber and a hard-boiled egg (boiled 10 minutes, yolk firm)."
+  ],
+  "soft_food": "Cook the noodles 2 minutes longer and cut them short; skip the cucumber.",
+  "storage": "Broth keeps 3 days in the fridge. Assemble fresh.",
+  "cautions": [
+   "Kidney disease? Ask your doctor for your protein number (E28).",
+   "High fiber. Go up slowly and drink water, or you'll feel it (E24).",
+   "This one is on the salty side (about 800 mg sodium per serving). Watching sodium? Use half the paste or soy sauce and add water or unsalted broth."
+  ]
+ },
+ {
+  "id": "G19",
+  "collection": "gut_reset",
+  "name": "Tomato, tofu and egg soup with peas",
+  "native": "fānqié dòufu dàn huā tāng (Chinese)",
+  "category": "Soup",
+  "serves": 4,
+  "minutes_active": 10,
+  "minutes_total": 25,
+  "per_serving": {
+   "kcal": 254.8,
+   "protein_g": 21.5,
+   "fiber_g": 4.1,
+   "sodium_mg": 471.4
+  },
+  "ingredients": [
+   {
+    "amount": "4 medium",
+    "item": "tomatoes, in wedges",
+    "grams": 492,
+    "source": "FDC 170457"
+   },
+   {
+    "amount": "1 block (14 oz)",
+    "item": "firm tofu, in cubes",
+    "grams": 397,
+    "source": "FDC 172448"
+   },
+   {
+    "amount": "3",
+    "item": "large eggs, beaten",
+    "grams": 150,
+    "source": "FDC 171287"
+   },
+   {
+    "amount": "4 cups",
+    "item": "low-sodium chicken broth",
+    "grams": 960,
+    "source": "FDC 171609"
+   },
+   {
+    "amount": "2 cups",
+    "item": "water",
+    "grams": 0,
+    "source": null
+   },
+   {
+    "amount": "1 cup",
+    "item": "frozen peas",
+    "grams": 134,
+    "source": "FDC 170016"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "sugar",
+    "grams": 4.2,
+    "source": "FDC 169655"
+   },
+   {
+    "amount": "1/2 tsp",
+    "item": "salt",
+    "grams": 3,
+    "source": "FDC 173468"
+   },
+   {
+    "amount": "2",
+    "item": "scallions, sliced",
+    "grams": 30,
+    "source": "FDC 170005"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "canola oil",
+    "grams": 14,
+    "source": "FDC 172336"
+   }
+  ],
+  "steps": [
+   "Heat the oil in a pot. Cook the tomatoes 5 minutes, pressing them, until saucy.",
+   "Add broth, water, sugar and salt. Simmer 8 minutes.",
+   "Add tofu and peas. Simmer 3 minutes.",
+   "Stir the soup in a circle and drizzle in the eggs. Simmer 1 minute more so the egg is fully cooked. Top with scallions."
+  ],
+  "soft_food": "Already soft.",
+  "storage": "Fridge 3 days. Reheat until steaming.",
+  "cautions": []
+ },
+ {
+  "id": "G20",
+  "collection": "gut_reset",
+  "name": "Gochujang chicken with sweet potato and broccoli",
+  "native": "Sun's sheet-pan dinner",
+  "category": "Dinner",
+  "serves": 4,
+  "minutes_active": 15,
+  "minutes_total": 45,
+  "per_serving": {
+   "kcal": 389.0,
+   "protein_g": 39.0,
+   "fiber_g": 5.8,
+   "sodium_mg": 631.1
+  },
+  "ingredients": [
+   {
+    "amount": "1 1/2 lb",
+    "item": "boneless, skinless chicken thighs, in large pieces",
+    "grams": 680,
+    "source": "FDC 173627"
+   },
+   {
+    "amount": "2 medium",
+    "item": "sweet potatoes, in 1-inch cubes",
+    "grams": 260,
+    "source": "FDC 168482"
+   },
+   {
+    "amount": "1 lb",
+    "item": "broccoli florets",
+    "grams": 454,
+    "source": "FDC 170379"
+   },
+   {
+    "amount": "1 medium",
+    "item": "onion, in wedges",
+    "grams": 110,
+    "source": "FDC 170000"
+   },
+   {
+    "amount": "2 Tbsp",
+    "item": "gochujang",
+    "grams": 38,
+    "source": "gochujang"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "honey",
+    "grams": 21,
+    "source": "FDC 169640"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "low-sodium soy sauce",
+    "grams": 16,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "canola oil",
+    "grams": 14,
+    "source": "FDC 172336"
+   },
+   {
+    "amount": "2",
+    "item": "garlic cloves, grated",
+    "grams": 6,
+    "source": "FDC 169230"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "toasted sesame seeds",
+    "grams": 3,
+    "source": "FDC 170151"
+   }
+  ],
+  "steps": [
+   "Heat the oven to 425°F. Line a large sheet pan with foil or parchment.",
+   "Mix gochujang, honey, soy sauce, oil and garlic. Toss the chicken in half; toss the sweet potato and onion in the rest.",
+   "Spread the sweet potato and onion on the pan. Roast 15 minutes.",
+   "Add the chicken and broccoli. Roast 20 to 25 minutes more, until the chicken reads 165°F and the sweet potato is soft.",
+   "Sprinkle with sesame seeds."
+  ],
+  "soft_food": "Cut everything small and roast the sweet potato 10 minutes longer.",
+  "storage": "Fridge 3 days. Reheat to 165°F.",
+  "cautions": [
+   "Kidney disease? Ask your doctor for your protein number (E28).",
+   "High fiber. Go up slowly and drink water, or you'll feel it (E24).",
+   "Honey: never for babies under 1. Diabetes: honey counts as sugar (or leave it out).",
+   "On warfarin? Keep greens steady from week to week; don't suddenly change how much you eat. Ask your doctor."
+  ]
+ },
+ {
+  "id": "G21",
+  "collection": "gut_reset",
+  "name": "Overnight oats with soy milk, kiwi and flax",
+  "native": "Sun's night-before breakfast",
+  "category": "Breakfast",
+  "serves": 1,
+  "minutes_active": 5,
+  "minutes_total": 5,
+  "per_serving": {
+   "kcal": 421.1,
+   "protein_g": 29.3,
+   "fiber_g": 9.3,
+   "sodium_mg": 113.2
+  },
+  "ingredients": [
+   {
+    "amount": "1/2 cup",
+    "item": "old-fashioned rolled oats",
+    "grams": 40,
+    "source": "FDC 173904"
+   },
+   {
+    "amount": "1/2 cup",
+    "item": "unsweetened soy milk",
+    "grams": 122,
+    "source": "FDC 175215"
+   },
+   {
+    "amount": "3/4 cup",
+    "item": "plain nonfat Greek yogurt",
+    "grams": 170,
+    "source": "FDC 170894"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "ground flaxseed",
+    "grams": 7,
+    "source": "FDC 169414"
+   },
+   {
+    "amount": "1",
+    "item": "green kiwi, diced",
+    "grams": 75,
+    "source": "FDC 168153"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "chopped walnuts",
+    "grams": 7,
+    "source": "FDC 170187"
+   }
+  ],
+  "steps": [
+   "Stir the oats, soy milk, yogurt and flaxseed together in a jar.",
+   "Cover and refrigerate overnight (at least 6 hours).",
+   "In the morning, top with kiwi and walnuts."
+  ],
+  "soft_food": "Use quick oats; swap the kiwi for a ripe mashed banana or persimmon; grind the walnuts.",
+  "storage": "Up to 2 days in the fridge without the fruit.",
+  "cautions": [
+   "High fiber. Go up slowly and drink water, or you'll feel it (E24).",
+   "Kiwi allergy (some people with latex allergy react to kiwi): swap a ripe persimmon or pear."
+  ]
+ },
+ {
+  "id": "G22",
+  "collection": "gut_reset",
+  "name": "Steamed sweet potato and egg plate",
+  "native": "goguma and salted eggs, the Korean train snack",
+  "category": "Snack",
+  "serves": 1,
+  "minutes_active": 5,
+  "minutes_total": 30,
+  "per_serving": {
+   "kcal": 247.5,
+   "protein_g": 14.8,
+   "fiber_g": 3.9,
+   "sodium_mg": 366.3
+  },
+  "ingredients": [
+   {
+    "amount": "1 small",
+    "item": "sweet potato, steamed or boiled in its skin",
+    "grams": 130,
+    "source": "FDC 168484"
+   },
+   {
+    "amount": "2",
+    "item": "hard-boiled eggs",
+    "grams": 100,
+    "source": "FDC 171287"
+   },
+   {
+    "amount": "1/4 cup",
+    "item": "kimchi",
+    "grams": 38,
+    "source": "FDC 170392"
+   }
+  ],
+  "steps": [
+   "Steam or boil the whole sweet potato 25 to 30 minutes, until a knife slides in.",
+   "Boil the eggs 10 minutes, until the yolks are completely firm; cool and peel.",
+   "Plate with kimchi. Eat warm or cold."
+  ],
+  "soft_food": "Mash the sweet potato and chop the eggs.",
+  "storage": "Cooked sweet potatoes and peeled eggs keep 4 days in the fridge.",
+  "cautions": [
+   "Kimchi is salty. Watching sodium? Small portions, or rinse it."
+  ]
+ },
+ {
+  "id": "G23",
+  "collection": "gut_reset",
+  "name": "Steamed Asian pear with jujube and ginger",
+  "native": "baesuk (Korean)",
+  "category": "Dessert",
+  "serves": 2,
+  "minutes_active": 10,
+  "minutes_total": 40,
+  "per_serving": {
+   "kcal": 93.3,
+   "protein_g": 1.1,
+   "fiber_g": 5.5,
+   "sodium_mg": 0.9
+  },
+  "ingredients": [
+   {
+    "amount": "1 large",
+    "item": "Asian pear, halved and cored",
+    "grams": 275,
+    "source": "FDC 168177"
+   },
+   {
+    "amount": "4",
+    "item": "dried jujubes, sliced",
+    "grams": 16,
+    "source": "FDC 168152"
+   },
+   {
+    "amount": "3 thin slices",
+    "item": "fresh ginger",
+    "grams": 6,
+    "source": "FDC 169231"
+   },
+   {
+    "amount": "1 tsp (optional)",
+    "item": "honey",
+    "grams": 7,
+    "source": "FDC 169640"
+   }
+  ],
+  "steps": [
+   "Put the pear halves cut-side up in a heatproof bowl. Tuck jujube slices and ginger into the hollows. Drizzle honey if using.",
+   "Steam, covered, over simmering water 25 to 30 minutes, until soft.",
+   "Eat warm with the juices, with a spoon."
+  ],
+  "soft_food": "Already soft. Remove the ginger slices.",
+  "storage": "Fridge 2 days.",
+  "cautions": [
+   "Honey: never for babies under 1. Diabetes: honey counts as sugar (or leave it out)."
+  ]
+ },
+ {
+  "id": "G24",
+  "collection": "gut_reset",
+  "name": "Persimmon, walnut and yogurt cup",
+  "native": "Sun's autumn snack",
+  "category": "Snack",
+  "serves": 1,
+  "minutes_active": 3,
+  "minutes_total": 3,
+  "per_serving": {
+   "kcal": 230.0,
+   "protein_g": 13.6,
+   "fiber_g": 6.5,
+   "sodium_mg": 42.5
+  },
+  "ingredients": [
+   {
+    "amount": "1",
+    "item": "ripe Fuyu persimmon, diced",
+    "grams": 168,
+    "source": "FDC 169941"
+   },
+   {
+    "amount": "1/2 cup",
+    "item": "plain nonfat Greek yogurt",
+    "grams": 113,
+    "source": "FDC 170894"
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "chopped walnuts",
+    "grams": 7,
+    "source": "FDC 170187"
+   },
+   {
+    "amount": "pinch",
+    "item": "cinnamon",
+    "grams": 0,
+    "source": null
+   }
+  ],
+  "steps": [
+   "Spoon the yogurt into a cup.",
+   "Top with persimmon, walnuts and cinnamon."
+  ],
+  "soft_food": "Use a very ripe persimmon, peeled; grind the walnuts.",
+  "storage": "Assemble fresh.",
+  "cautions": [
+   "High fiber. Go up slowly and drink water, or you'll feel it (E24)."
+  ]
+ },
+ {
+  "id": "G25",
+  "collection": "gut_reset",
+  "name": "Cucumber and seaweed salad",
+  "native": "oi-miyeok-muchim (Korean)",
+  "category": "Side",
+  "serves": 4,
+  "minutes_active": 10,
+  "minutes_total": 20,
+  "per_serving": {
+   "kcal": 34.0,
+   "protein_g": 1.4,
+   "fiber_g": 0.8,
+   "sodium_mg": 345.2
+  },
+  "ingredients": [
+   {
+    "amount": "1/4 oz dry (about 1/2 cup soaked)",
+    "item": "dried wakame (calculated as 70 g soaked)",
+    "grams": 70,
+    "source": "FDC 170496"
+   },
+   {
+    "amount": "2 medium",
+    "item": "cucumbers, thinly sliced",
+    "grams": 400,
+    "source": "FDC 168409"
+   },
+   {
+    "amount": "2 Tbsp",
+    "item": "rice or white vinegar",
+    "grams": 30,
+    "source": "FDC 172237"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "sugar",
+    "grams": 4.2,
+    "source": "FDC 169655"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "low-sodium soy sauce",
+    "grams": 5,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "toasted sesame seeds",
+    "grams": 3,
+    "source": "FDC 170151"
+   },
+   {
+    "amount": "1/4 tsp",
+    "item": "salt",
+    "grams": 1.5,
+    "source": "FDC 173468"
+   },
+   {
+    "amount": "1/2 tsp",
+    "item": "Korean chili flakes (optional)",
+    "grams": 0.9,
+    "source": "FDC 170932"
+   }
+  ],
+  "steps": [
+   "Soak the wakame in cold water 10 minutes. Drain, squeeze, and chop.",
+   "Toss the cucumber with the salt; wait 10 minutes; squeeze out the water.",
+   "Mix vinegar, sugar and soy sauce. Toss with cucumber and seaweed. Top with sesame seeds and chili."
+  ],
+  "soft_food": "Peel and seed the cucumber; chop the seaweed finely.",
+  "storage": "Fridge 2 days.",
+  "cautions": [
+   "Thyroid condition? Seaweed can be very high in iodine (E58). Ask your doctor how much is okay for you."
+  ]
+ },
+ {
+  "id": "G26",
+  "collection": "gut_reset",
+  "name": "Soybean sprout soup with tofu and egg",
+  "native": "kongnamul-guk (Korean)",
+  "category": "Soup",
+  "serves": 4,
+  "minutes_active": 10,
+  "minutes_total": 25,
+  "per_serving": {
+   "kcal": 182.7,
+   "protein_g": 19.4,
+   "fiber_g": 1.2,
+   "sodium_mg": 410.9
+  },
+  "ingredients": [
+   {
+    "amount": "12 oz",
+    "item": "soybean sprouts (cooked in the soup)",
+    "grams": 340,
+    "source": "FDC 168460"
+   },
+   {
+    "amount": "1/2 block (7 oz)",
+    "item": "soft tofu, cubed",
+    "grams": 198,
+    "source": "FDC 172449"
+   },
+   {
+    "amount": "2",
+    "item": "large eggs, beaten",
+    "grams": 100,
+    "source": "FDC 171287"
+   },
+   {
+    "amount": "3",
+    "item": "garlic cloves, minced",
+    "grams": 9,
+    "source": "FDC 169230"
+   },
+   {
+    "amount": "2",
+    "item": "scallions, sliced",
+    "grams": 30,
+    "source": "FDC 170005"
+   },
+   {
+    "amount": "4 cups",
+    "item": "low-sodium chicken broth",
+    "grams": 960,
+    "source": "FDC 171609"
+   },
+   {
+    "amount": "2 cups",
+    "item": "water",
+    "grams": 0,
+    "source": null
+   },
+   {
+    "amount": "1 Tbsp",
+    "item": "low-sodium soy sauce",
+    "grams": 16,
+    "source": "FDC 172473"
+   },
+   {
+    "amount": "1/4 tsp",
+    "item": "salt",
+    "grams": 1.5,
+    "source": "FDC 173468"
+   },
+   {
+    "amount": "1 tsp",
+    "item": "Korean chili flakes (optional)",
+    "grams": 1.8,
+    "source": "FDC 170932"
+   }
+  ],
+  "steps": [
+   "Put the sprouts, garlic, broth and water in a pot. Cover and boil 8 minutes without lifting the lid (the sprouts stay crunchy and lose their raw smell).",
+   "Add tofu, soy sauce and salt. Simmer 2 minutes.",
+   "Drizzle in the eggs while stirring. Simmer 1 minute so the egg is fully cooked. Scallions and chili on top."
+  ],
+  "soft_food": "Chop the sprouts after cooking.",
+  "storage": "Fridge 3 days.",
+  "cautions": []
+ }
+]

@@ -1,0 +1,35 @@
+{%- comment -%}
+  Founding cohort box. Reads the REAL inventory of the founding variant (cap - available = seats taken).
+  FUNNEL.md {{COUNT_LINE}} rule: below 1,000 taken → open-to-first-5,000 line; from 1,000 → "N of 5,000 taken as of <time>".
+  "Only a few left" only when the real count is >= 4,900. No timers. Params: variant
+{%- endcomment -%}
+{%- liquid
+  assign f = shop.metafields.strong_years.founding.value
+  assign cap = f.cap | default: 5000
+  assign available = variant.inventory_quantity | default: cap
+  if available < 0
+    assign available = 0
+  endif
+  assign taken = cap | minus: available
+  assign threshold = f.count_line_threshold | default: 1000
+  assign few = f.few_left_threshold | default: 4900
+  assign close_date = f.close_date | date: '%B %-d, %Y'
+  assign pct = taken | times: 100 | divided_by: cap
+  assign cap_label = f.cap_label | default: '5,000'
+  assign th = taken | divided_by: 1000
+  assign rest = taken | modulo: 1000 | prepend: '00' | slice: -3, 3
+  if th > 0
+    assign taken_label = th | append: ',' | append: rest
+  else
+    assign taken_label = taken
+  endif
+-%}
+<div class="cohort" role="status">
+  {%- if taken < threshold -%}
+    <p><strong>Founding membership is open to the first {{ cap_label }} members or until {{ close_date }}, whichever comes first.</strong> <a href="/pages/membership-and-cancellation#founding">See how we count</a></p>
+  {%- else -%}
+    <p><strong>{{ taken_label }} of {{ cap_label }} founding seats taken</strong> as of {{ 'now' | date: '%B %-d, %-I:%M %p' }}{% if taken >= few %}. Only a few left.{% endif %}</p>
+    <div class="meter" aria-hidden="true"><span style="width: {{ pct }}%"></span></div>
+  {%- endif -%}
+  <p class="small">A live count from our store inventory. No timers, no made-up numbers. If someone takes a refund, their seat goes back.</p>
+</div>

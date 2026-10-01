@@ -1,0 +1,16 @@
+{
+  "sender": "members app (app/src/lib/notify.ts: Resend or Postmark). Shopify sends only its own order confirmation.",
+  "audience": "Starter Books buyers who are not members (orders/paid with an ebook line and no membership line)",
+  "emails": [
+    { "id": "books_e1", "file": "01-day0-your-books.md", "delay_hours": 0 },
+    { "id": "books_e2", "file": "02-day2-breakfast.md", "delay_hours": 48, "local_time": "07:45" },
+    { "id": "books_e3", "file": "03-day5-after-the-seven.md", "delay_hours": 120, "local_time": "07:45" }
+  ],
+  "rules": [
+    "Stop the offer blocks the moment the buyer becomes a member (orders/paid with a membership line).",
+    "Every offer block states price, interval, that it renews until cancelled, and cancel online anytime (SAFETY_RULES S-02).",
+    "Offer links go to the membership page (terms + unticked consent checkbox), never to a cart permalink.",
+    "{{COUNT_LINE}} follows the FUNNEL.md rule using the live founding inventory; never a countdown.",
+    "No SMS lines until SMS_ENABLED=true. Footer full contrast, no gray text. One button per email, 60px, Persimmon #B3311C with white text."
+  ]
+}

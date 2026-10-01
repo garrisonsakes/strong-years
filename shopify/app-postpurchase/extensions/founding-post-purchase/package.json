@@ -1,0 +1,10 @@
+{
+  "name": "founding-post-purchase",
+  "private": true,
+  "version": "1.0.0",
+  "main": "src/index.jsx",
+  "dependencies": {
+    "@shopify/post-purchase-ui-extensions-react": "^0.13.5",
+    "react": "^18.2.0"
+  }
+}

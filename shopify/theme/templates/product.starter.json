@@ -1,0 +1,78 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product-membership",
+      "settings": {
+        "offer": "starter"
+      }
+    },
+    "included": {
+      "type": "sy-rich",
+      "settings": {
+        "heading": "What's inside Strong Years"
+      },
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "text": "Your Daily Practice every day, levelled across Rebuild (chair-based), Steady, Strong and Iron, with a \"sore knee / sore back / low energy today\" button"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "text": "Six 12-week programs: Strong at 70, Back Strong, Balance & Steady Feet, Gut Reset with Sun Yoon, Grip & Hands, Walk Stronger"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "text": "The monthly Strength Age retest with your own chart"
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "text": "Sun Yoon's Kitchen: 3 recipes every Sunday, a grocery list, and one remedy with an honest evidence grade"
+          }
+        },
+        "b5": {
+          "type": "item",
+          "settings": {
+            "text": "Ask Chang Yin, an AI coach chat that says it is an AI"
+          }
+        },
+        "b6": {
+          "type": "item",
+          "settings": {
+            "text": "Wednesday Live Q&A with a real human coach from our team"
+          }
+        },
+        "b7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A personal trainer once a week costs about $240 to $400 a month. Strong Years is not physical therapy and doesn't replace your doctor or a trainer who can watch you in person. It's what makes the other days of the month count.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6",
+        "b7"
+      ]
+    },
+    "characters": {
+      "type": "sy-characters",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "included",
+    "characters"
+  ]
+}

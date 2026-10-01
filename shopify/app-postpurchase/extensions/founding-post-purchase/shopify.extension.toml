@@ -1,0 +1,13 @@
+# Post-purchase page (between payment and the Thank you page). Shopify docs:
+# shopify.dev/docs/apps/build/checkout/product-offers/create-a-post-purchase-subscription
+# BETA: works in dev stores; a LIVE store needs Shopify's post-purchase access approval (Dev Dashboard → app → API access).
+# Shopify only shows this page for card payments (not Apple Pay / Google Pay / PayPal / installments), Online Store orders
+# >= $0.50, and it can add a SUBSCRIPTION only when the order has a shipping address (digital-only orders have none).
+api_version = "2026-07"
+
+[[extensions]]
+type = "checkout_post_purchase"
+name = "Founding offer after purchase"
+handle = "founding-post-purchase"
+
+[extensions.settings]

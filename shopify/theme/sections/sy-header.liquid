@@ -1,0 +1,29 @@
+{%- comment -%} Disclosure strip (every page, full width, Ink background) + brand bar. {%- endcomment -%}
+{%- assign links = shop.metafields.strong_years.links.value -%}
+<div class="strip">
+  {%- if links.reviewer_signed -%}
+    Chang Yin and Sun Yoon are AI characters. Sessions and recipes are reviewed by licensed professionals.
+  {%- else -%}
+    Chang Yin and Sun Yoon are AI characters. Every session is built on published exercise guidelines for older adults.
+  {%- endif %}
+  <a href="/pages/about-the-characters">How we make this</a>
+</div>
+<header class="brandbar">
+  <a class="wordmark" href="{{ routes.root_url }}">Strong <i>Years</i></a>
+  {%- if section.settings.show_nav -%}
+  <nav class="nav" aria-label="Main">
+    <a href="/pages/faq">Questions</a>
+    <a href="{{ routes.account_url }}">Account</a>
+  </nav>
+  {%- else -%}
+  <span class="pill">AI characters</span>
+  {%- endif -%}
+</header>
+{% schema %}
+{
+  "name": "Strong Years header",
+  "settings": [
+    { "type": "checkbox", "id": "show_nav", "label": "Show Questions and Account links", "default": true }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,24 @@
+{%- comment -%}
+  The founding offer for people who just bought the Starter Books (welcome page, email links, order status link).
+  It links to the membership page, where terms + the consent checkbox live. Never a cart permalink (that would
+  skip the consent record). If the founding group is closed it offers the standard plan.
+{%- endcomment -%}
+{%- assign founding = all_products['founding-membership'] -%}
+{%- assign f = shop.metafields.strong_years.founding.value -%}
+<section class="wrap stack" aria-labelledby="h-{{ section.id }}">
+  {% render 'sy-character', who: 'chang', size: 80, text: '<p><strong>Chang Yin:</strong> "The books get you started. The Daily Practice keeps you going."</p>' %}
+  {%- if f.closed or founding.available == false -%}
+    <h2 id="h-{{ section.id }}">Keep going with Strong Years.</h2>
+    <p>A new 8 to 12 minute session every day at your level, Sun Yoon's Sunday recipes and a monthly Strength Age retest.</p>
+    <a class="btn" href="/products/strong-years-membership">See the membership</a>
+  {%- else -%}
+    <h2 id="h-{{ section.id }}">Keep going as a founding member: {{ founding.price | money_without_trailing_zeros }} a month.</h2>
+    <p>A new 8 to 12 minute session every day at your level, Sun Yoon's Sunday recipes and a monthly Strength Age retest. {{ founding.price | money_without_trailing_zeros }} today for your first month, then {{ founding.price | money_without_trailing_zeros }} a month until you cancel. Founding price locked for as long as you stay subscribed. 14-day money-back guarantee. Cancel online anytime.</p>
+    {% render 'sy-count-line', variant: founding.selected_or_first_available_variant %}
+    <a class="btn" href="/products/founding-membership">See the founding membership</a>
+    <p class="under">Nothing is added unless you choose it on the next page.</p>
+  {%- endif -%}
+</section>
+{% schema %}
+{ "name": "Founding offer", "settings": [], "presets": [{ "name": "Founding offer" }] }
+{% endschema %}

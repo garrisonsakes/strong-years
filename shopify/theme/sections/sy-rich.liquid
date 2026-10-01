@@ -1,0 +1,29 @@
+{%- comment -%} Generic copy section: heading, paragraphs, checklist items, link. Used for candor / problem / included / mechanism. {%- endcomment -%}
+<section class="wrap stack-s section" {% if section.settings.heading != blank %}aria-labelledby="h-{{ section.id }}"{% endif %}>
+  {%- if section.settings.heading != blank -%}<h2 id="h-{{ section.id }}">{{ section.settings.heading }}</h2>{%- endif -%}
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'text' -%}
+        <div class="rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+      {%- when 'item' -%}
+        <ul class="checklist" {{ block.shopify_attributes }}><li>{{ block.settings.text }}</li></ul>
+      {%- when 'subheading' -%}
+        <h3 {{ block.shopify_attributes }}>{{ block.settings.text }}</h3>
+      {%- when 'link' -%}
+        <p {{ block.shopify_attributes }}><a href="{{ block.settings.url }}">{{ block.settings.label }}</a></p>
+    {%- endcase -%}
+  {%- endfor -%}
+</section>
+{% schema %}
+{
+  "name": "Strong Years copy",
+  "settings": [{ "type": "text", "id": "heading", "label": "Heading" }],
+  "blocks": [
+    { "type": "text", "name": "Paragraphs", "settings": [{ "type": "richtext", "id": "text", "label": "Text" }] },
+    { "type": "item", "name": "Checklist line", "settings": [{ "type": "text", "id": "text", "label": "Text" }] },
+    { "type": "subheading", "name": "Subheading", "settings": [{ "type": "text", "id": "text", "label": "Text" }] },
+    { "type": "link", "name": "Link", "settings": [{ "type": "text", "id": "label", "label": "Label" }, { "type": "url", "id": "url", "label": "URL" }] }
+  ],
+  "presets": [{ "name": "Strong Years copy" }]
+}
+{% endschema %}

@@ -1,0 +1,8 @@
+{%- comment -%} Params: who ('chang'|'sun'), size, text (html) {%- endcomment -%}
+<div class="char">
+  <figure>
+    {%- if who == 'sun' -%}{% render 'sy-char-sun', size: size %}{%- else -%}{% render 'sy-char-chang', size: size %}{%- endif -%}
+    <span class="pill">AI character</span>
+  </figure>
+  {%- if text != blank -%}<div class="stack-s">{{ text }}</div>{%- endif -%}
+</div>

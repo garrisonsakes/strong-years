@@ -1,0 +1,209 @@
+{
+  "sections": {
+    "hero": {
+      "type": "sy-hero",
+      "settings": {}
+    },
+    "candor": {
+      "type": "sy-rich",
+      "settings": {
+        "heading": "Yes, we are AI. Here is why that is good news for you."
+      },
+      "blocks": {
+        "b1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Chang Yin and Sun Yoon are characters our team created with AI. We tell you this up front because you deserve to know who you are learning from, and because some accounts online pretend their AI teachers are real. We never will.</p><p>What is real: the movements, the progressions, the recipes and the safety checks. Every session and recipe is built by our team from published exercise and nutrition guidelines for older adults, and we show our sources.</p><p>Why characters at all? A patient teacher who never rushes you, shows up every morning and speaks slowly and clearly is what most programs are missing. And on Wednesdays, a real human coach from our team answers member questions live.</p>"
+          }
+        },
+        "b2": {
+          "type": "link",
+          "settings": {
+            "label": "Read exactly how we make each session",
+            "url": "/pages/how-we-make-this"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2"
+      ]
+    },
+    "problem": {
+      "type": "sy-rich",
+      "settings": {
+        "heading": "Strength doesn't leave all at once. It leaves one chair, one stair, one jar lid at a time."
+      },
+      "blocks": {
+        "b1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Strength drops faster than muscle. Around age 75, muscle mass drops about 0.6 to 1% a year, but strength drops about 2.5 to 4% a year. The first signs are small: pushing on the armrests to stand up, holding the rail on the stairs, asking someone else to open the jar.</p><p>The good part: strength answers training at every age. A review of 121 trials with 6,700 older adults training two or three times a week found large gains in strength and easier chair stands. In one small study, ten nursing-home residents around age 90 trained their legs for eight weeks and their strength rose 174%. Ten people is a small study. It still shows muscle adapts in the 90s.</p>"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "text": "Leg strength: standing up, getting off the floor, climbing stairs"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "text": "Balance practice, always next to a counter or a chair"
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "text": "Grip and upper body: jars, bags, grandchildren, suitcases"
+          }
+        },
+        "b5": {
+          "type": "item",
+          "settings": {
+            "text": "Mobility and slow breathing"
+          }
+        },
+        "b6": {
+          "type": "link",
+          "settings": {
+            "label": "Our sources",
+            "url": "/pages/how-we-make-this"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6"
+      ]
+    },
+    "included": {
+      "type": "sy-rich",
+      "settings": {
+        "heading": "What's inside Strong Years"
+      },
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "text": "Your Daily Practice every day, levelled across Rebuild (chair-based), Steady, Strong and Iron, with a \"sore knee / sore back / low energy today\" button"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "text": "Six 12-week programs: Strong at 70, Back Strong, Balance & Steady Feet, Gut Reset with Sun Yoon, Grip & Hands, Walk Stronger"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "text": "The monthly Strength Age retest with your own chart"
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "text": "Sun Yoon's Kitchen: 3 recipes every Sunday, a grocery list, and one remedy with an honest evidence grade"
+          }
+        },
+        "b5": {
+          "type": "item",
+          "settings": {
+            "text": "Ask Chang Yin, an AI coach chat that says it is an AI"
+          }
+        },
+        "b6": {
+          "type": "item",
+          "settings": {
+            "text": "Wednesday Live Q&A with a real human coach from our team"
+          }
+        },
+        "b7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A personal trainer once a week costs about $240 to $400 a month. Strong Years is not physical therapy and doesn't replace your doctor or a trainer who can watch you in person. It's what makes the other days of the month count.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6",
+        "b7"
+      ]
+    },
+    "characters": {
+      "type": "sy-characters",
+      "settings": {}
+    },
+    "reviews": {
+      "type": "sy-no-reviews",
+      "settings": {}
+    },
+    "faq": {
+      "type": "sy-faq",
+      "settings": {
+        "heading": "Questions"
+      },
+      "blocks": {
+        "b1": {
+          "type": "qa",
+          "settings": {
+            "question": "Is Chang Yin real?",
+            "answer": "<p>No. Chang Yin and Sun Yoon are AI characters created by our team, and their story is invented. The exercises, progressions and recipes are real, built from published guidelines for older adults.</p>"
+          }
+        },
+        "b2": {
+          "type": "qa",
+          "settings": {
+            "question": "Does anything renew if I buy the books?",
+            "answer": "<p>No. The Starter Books are one payment and never renew. After you buy, you'll see one optional offer to join the membership; it is only added if you choose it.</p>"
+          }
+        },
+        "b3": {
+          "type": "qa",
+          "settings": {
+            "question": "How do I cancel the membership?",
+            "answer": "<p>In your account: Manage membership, choose your subscription, Cancel, confirm. Two screens. Or reply \"cancel\" to any email. Nobody will call you.</p>"
+          }
+        },
+        "b4": {
+          "type": "qa",
+          "settings": {
+            "question": "Is this right for me?",
+            "answer": "<p>It's general fitness education, not physical therapy or medical care. Check with your doctor before starting new exercise. Every session has a chair-based version.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ]
+    },
+    "cta": {
+      "type": "sy-cta",
+      "settings": {}
+    }
+  },
+  "order": [
+    "hero",
+    "candor",
+    "problem",
+    "included",
+    "characters",
+    "reviews",
+    "faq",
+    "cta"
+  ]
+}

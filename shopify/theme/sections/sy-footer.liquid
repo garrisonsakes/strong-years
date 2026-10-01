@@ -1,0 +1,25 @@
+{%- assign links = shop.metafields.strong_years.links.value -%}
+<footer class="foot">
+  <div class="wrap stack-s">
+    <p><strong>Chang Yin and Sun Yoon are AI characters; their story is fictional.</strong>
+      {% if links.reviewer_signed %}Sessions and recipes are reviewed by licensed professionals.{% else %}Sessions and recipes are built from published guidelines for older adults.{% endif %}
+      General fitness and nutrition education, not medical advice. Check with your doctor before starting new exercise.</p>
+    <p>If you're thinking about harming yourself, call or text <strong>988</strong>. In an emergency, call <strong>911</strong>.</p>
+    <ul>
+      <li><a href="/pages/membership-and-cancellation">Membership and cancellation</a></li>
+      <li><a href="/policies/refund-policy">Refunds</a></li>
+      <li><a href="/policies/terms-of-service">Terms</a></li>
+      <li><a href="/policies/privacy-policy">Privacy</a></li>
+      <li><a href="/pages/about-the-characters">About the characters</a></li>
+      <li><a href="/pages/how-we-make-this">How we make this</a></li>
+      <li><a href="/pages/safety">Safety</a></li>
+      <li><a href="/pages/faq">Questions</a></li>
+      <li><a href="{{ routes.account_url }}">Manage membership</a></li>
+    </ul>
+    <p>{{ links.company }} · {{ links.address }} · <a href="mailto:{{ links.support_email }}">{{ links.support_email }}</a> · {{ links.phone }}</p>
+    <p>On your statement: STRONGYEARS MEMBER. © {{ 'now' | date: '%Y' }} {{ shop.name }}</p>
+  </div>
+</footer>
+{% schema %}
+{ "name": "Strong Years footer", "settings": [] }
+{% endschema %}

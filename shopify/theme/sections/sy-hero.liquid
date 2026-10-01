@@ -1,0 +1,56 @@
+{%- comment -%}
+  Landing hero, arm-aware (assigned before paint in layout/theme.liquid):
+  Arm A: Starter Books first (cell price $7/$12/$15), founding offer after purchase.
+  Arm B: "$12 today = books + first month, then $25/mo" as one subscription purchase.
+  If the founding group is closed, arm B points to the standard membership instead.
+{%- endcomment -%}
+{%- liquid
+  assign f = shop.metafields.strong_years.founding.value
+  assign cells = shop.metafields.strong_years.cells.value
+  assign founding = all_products['founding-membership']
+  assign closed = f.closed
+  if founding.available == false
+    assign closed = true
+  endif
+-%}
+<section class="wrap stack" aria-labelledby="hero-h">
+  <div class="hero-figure">
+    {% render 'sy-character', who: 'chang', size: 88, text: '<p><strong>Chang Yin</strong>, 74, retired welder. AI character. "Measure twice. Lift once."</p>' %}
+  </div>
+  <h1 id="hero-h">{{ section.settings.heading }}</h1>
+  <p>{{ section.settings.subhead }}</p>
+
+  <div class="stack-s" data-arm-only="A">
+    <a class="btn" data-sy-ebook-link href="/products/strong-years-starter-books">
+      Get both books for&nbsp;{%- for c in cells.ebook -%}<span data-cell-only="{{ c.id }}">${{ c.price | remove: '.00' }}</span>{%- endfor -%}
+    </a>
+    <p class="under">One payment. Nothing renews. Instant download.</p>
+  </div>
+
+  <div class="stack-s" data-arm-only="B">
+    {%- if closed -%}
+      <a class="btn" href="/products/strong-years-membership">Join Strong Years</a>
+      <p class="under">The founding group is full. New members join at the standard price, renewing monthly until you cancel.</p>
+    {%- else -%}
+      <a class="btn" href="/products/founding-membership?view=starter">Start for $12 today</a>
+      <p class="under">$12 today for the Starter Books and your first month. Then $25 a month until you cancel. Cancel online anytime.</p>
+    {%- endif -%}
+  </div>
+
+  <ul class="checklist small">
+    <li>{% if shop.metafields.strong_years.links.value.reviewer_signed %}Reviewed by licensed professionals{% else %}Built on published guidelines for older adults{% endif %}</li>
+    <li>A chair-based version of every session</li>
+    <li>Big type, big buttons</li>
+    <li>Cancel online anytime, no phone call</li>
+  </ul>
+</section>
+{% schema %}
+{
+  "name": "Strong Years hero",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Get stronger after 60. Eight minutes a day, and a number that shows your progress." },
+    { "type": "textarea", "id": "subhead", "label": "Subhead", "default": "Start with two books to keep: Chang Yin's 7-Day Strength Reset, seven follow-along sessions next to a chair and a kitchen counter, and Sun Yoon's Strong Kitchen, protein at every meal with honest evidence grades on kitchen remedies." }
+  ],
+  "presets": [{ "name": "Strong Years hero" }]
+}
+{% endschema %}

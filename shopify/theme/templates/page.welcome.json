@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    },
+    "offer": {
+      "type": "sy-founding-offer",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "offer"
+  ]
+}

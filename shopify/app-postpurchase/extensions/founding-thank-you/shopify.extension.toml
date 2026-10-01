@@ -1,0 +1,36 @@
+# Thank you page + Order status page block (checkout UI extension, Polaris web components + Preact).
+# Works for EVERY order, including digital-only ebook orders and wallet payments where the post-purchase page
+# can't show. It never charges: it links to the membership page, where the full terms and the unticked consent
+# checkbox live (Shop Pay / saved wallets make that second checkout one tap for most buyers).
+# Placement: Settings → Checkout → Customize → Thank you page → Add app block → "Founding offer".
+api_version = "2026-07"
+
+[[extensions]]
+name = "Founding offer"
+handle = "founding-thank-you"
+type = "ui_extension"
+
+[[extensions.targeting]]
+target = "purchase.thank-you.block.render"
+module = "./src/ThankYou.jsx"
+
+[[extensions.targeting]]
+target = "customer-account.order-status.block.render"
+module = "./src/ThankYou.jsx"
+
+[extensions.capabilities]
+api_access = false
+network_access = false
+
+[extensions.settings]
+[[extensions.settings.fields]]
+key = "founding_url"
+type = "single_line_text_field"
+name = "Founding membership page URL"
+description = "e.g. https://strongyears.com/products/founding-membership"
+
+[[extensions.settings.fields]]
+key = "price"
+type = "single_line_text_field"
+name = "Founding price shown (must match the store price)"
+description = "e.g. $25"

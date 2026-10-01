@@ -1,0 +1,52 @@
+{%- liquid
+  assign has_sub = false
+  assign sub_price = ''
+  for item in cart.items
+    if item.selling_plan_allocation
+      assign has_sub = true
+      assign sub_price = item.selling_plan_allocation.price | money_without_trailing_zeros
+    endif
+  endfor
+-%}
+<section class="wrap stack" aria-labelledby="cart-h">
+  <h1 id="cart-h">Your order</h1>
+  {%- if cart.item_count == 0 -%}
+    <p>Your cart is empty.</p>
+    <a class="btn" href="{{ routes.root_url }}">Back to Strong Years</a>
+  {%- else -%}
+  <form action="{{ routes.cart_url }}" method="post" class="stack" data-sy-cart data-sy-price="{{ sub_price }}" novalidate>
+    <table class="receipt">
+      <thead><tr><th scope="col">Item</th><th scope="col">Price</th></tr></thead>
+      <tbody>
+      {%- for item in cart.items -%}
+        <tr>
+          <td>
+            <strong>{{ item.product.title }}</strong>{% if item.variant.title != 'Default Title' %} · {{ item.variant.title }}{% endif %}
+            {%- if item.selling_plan_allocation -%}<br>{{ item.selling_plan_allocation.selling_plan.name }}: renews at {{ item.selling_plan_allocation.compare_at_price | default: item.selling_plan_allocation.price | money_without_trailing_zeros }} until you cancel{%- endif -%}
+            <br><a href="{{ item.url_to_remove }}">Remove</a>
+          </td>
+          <td>{{ item.final_line_price | money }}</td>
+        </tr>
+      {%- endfor -%}
+      <tr><td><strong>Total today</strong></td><td><strong>{{ cart.total_price | money }}</strong></td></tr>
+      </tbody>
+    </table>
+    {%- if has_sub -%}
+      <div class="terms" data-sy-terms>
+        <p><strong>This order includes a membership that renews automatically</strong> every period on the same date until you cancel.</p>
+        <p><strong>Cancel anytime</strong> online in at most two screens in your account (no phone call, no email needed). 14-day money-back guarantee on your membership charge, once per person. We email you before every renewal.</p>
+      </div>
+      <label class="tick">
+        <input type="checkbox" name="sy_consent" value="yes" required>
+        <span data-sy-consent-label>I agree to the automatic renewal terms above. I can cancel online anytime.</span>
+      </label>
+      <p class="small"><a href="/pages/membership-and-cancellation">Membership and cancellation policy</a></p>
+    {%- endif -%}
+    <p class="alert" data-sy-error role="alert" hidden></p>
+    <button type="submit" name="checkout" class="btn">Continue to secure checkout</button>
+  </form>
+  {%- endif -%}
+</section>
+{% schema %}
+{ "name": "Cart", "settings": [] }
+{% endschema %}

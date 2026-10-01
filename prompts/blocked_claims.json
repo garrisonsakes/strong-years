@@ -1,0 +1,206 @@
+{
+  "version": "2026-09-30",
+  "notes": "Used twice. (1) The n8n Code node 'Regex Pre-Scan' runs every `regex` case-insensitively over spoken text, on-screen text and captions. (2) The whole file is passed to the Compliance Judge for semantic matching. `severity`: block = the script cannot ship; revise = rewrite needed. Evidence IDs refer to EVIDENCE.md.",
+  "patterns": [
+    {
+      "id": "BC01",
+      "severity": "block",
+      "regex": "\\b(cure[sd]?|curing)\\b",
+      "meaning": "Disease-cure language",
+      "allowed_alternative": "helped / improved (A–B grade only)"
+    },
+    {
+      "id": "BC02",
+      "severity": "block",
+      "regex": "(\\b(reverse[sd]?|reversing|reversal)\\b.{0,40}\\b(diabetes|arthritis|osteoporosis|dementia|alzheimer'?s?|heart disease|hypertension|aging|disease|thyroid|neuropathy|cancer|copd|asthma|gout|eczema|psoriasis|fatty liver|sleep apnea|glaucoma|cataracts?|hearing loss|macular degeneration)\\b|\\b(diabetes|arthritis|osteoporosis|dementia|alzheimer'?s?|heart disease|hypertension|aging|disease|thyroid|neuropathy|cancer|copd|asthma|gout|eczema|psoriasis|fatty liver|sleep apnea|glaucoma|cataracts?|hearing loss|macular degeneration)\\b.{0,20}\\b(reversed|reversal)\\b)",
+      "meaning": "Reversal of a disease or of aging (any disease or condition; broadened after the AUDIT_FINAL held-out test)",
+      "allowed_alternative": "Describe the training effect with its evidence ID"
+    },
+    {
+      "id": "BC03",
+      "severity": "block",
+      "regex": "(\\b(instant(ly)?|immediately|in seconds|in minutes|overnight)\\b.{0,50}\\b(lower(s|ed|ing)?|drop(s|ped|ping)?|reduc(e|es|ed|ing)|fix(es|ed)?|heal(s|ed)?|burn(s|ed)?|cure[sd]?|melt(s|ed)?)\\b|\\b(lower(s|ed|ing)?|drop(s|ped|ping)?|reduc(e|es|ed|ing)|fix(es|ed)?|heal(s|ed)?|burn(s|ed)?|cure[sd]?|melt(s|ed)?)\\b.{0,50}\\b(instant(ly)?|immediately|in seconds|in minutes|overnight)\\b)",
+      "meaning": "Instant physiological effect (Yang Mun 'decrease blood pressure instantly')",
+      "allowed_alternative": "Over weeks of training (E20); slow breathing can calm you in the moment (E18/E19)"
+    },
+    {
+      "id": "BC04",
+      "severity": "block",
+      "regex": "\\b(stop|quit|replace|ditch|throw away|don'?t need)\\b.{0,30}\\b(medication|meds|pills|insulin|statin|blood thinner|prescription)",
+      "meaning": "Medication substitution"
+    },
+    {
+      "id": "BC05",
+      "severity": "block",
+      "regex": "\\b(detox|cleanse|flush (out )?toxins|toxins? out)\\b",
+      "meaning": "Detox and cleanse claims",
+      "allowed_alternative": "Myth-bust framing only (your liver and kidneys do this)"
+    },
+    {
+      "id": "BC06",
+      "severity": "block",
+      "regex": "\\b(doctors? (hate|don'?t want)|big pharma|they don'?t want you to know|secret (remedy|cure))\\b",
+      "meaning": "Conspiracy and anti-medicine framing"
+    },
+    {
+      "id": "BC07",
+      "severity": "block",
+      "regex": "\\b(as a (doctor|physician|nurse|physical therapist|pt|dietitian)|my patients|i('ve| have) treated|in my clinic|licensed)\\b",
+      "meaning": "AI character claiming credentials or patients"
+    },
+    {
+      "id": "BC08",
+      "severity": "block",
+      "regex": "\\b(monk|monastery|temple secret|master of qi|ancient secret|sacred)\\b",
+      "meaning": "Clergy or mysticism framing (the Yang Mun backlash vector)"
+    },
+    {
+      "id": "BC09",
+      "severity": "block",
+      "regex": "\\b(my (student|follower|client) (lost|healed|cured|got rid))|\\b(testimonial|review)s?\\b.{0,20}\\b(said|says)\\b",
+      "meaning": "Fabricated testimonials or reviews (FTC 16 CFR 465)"
+    },
+    {
+      "id": "BC10",
+      "severity": "block",
+      "regex": "\\b(onion|salt|bay lea(f|ves)|potato|garlic)\\b.{0,40}\\b(under (your|the) feet|in (your|the) socks?)\\b",
+      "meaning": "Folk foot remedies presented as effective (debunk framing only)"
+    },
+    {
+      "id": "BC11",
+      "severity": "block",
+      "regex": "\\b(lose|lost|drop)\\b\\s?\\d+\\s?(lbs?|pounds|kg|kilos)\\b.{0,30}\\b(days?|weeks?)\\b",
+      "meaning": "Rapid weight-loss outcome claims"
+    },
+    {
+      "id": "BC12",
+      "severity": "block",
+      "regex": "\\b(boost|strengthen)s? (your )?immun(e|ity)\\b.{0,40}\\b(covid|flu|cancer|virus)",
+      "meaning": "Immune claims against specific diseases"
+    },
+    {
+      "id": "BC13",
+      "severity": "revise",
+      "regex": "\\b(boost(s|ing)? (your )?(immunity|immune system|metabolism))\\b",
+      "meaning": "Vague structure/function puffery; needs evidence or removal"
+    },
+    {
+      "id": "BC14",
+      "severity": "revise",
+      "regex": "\\b(guarantee[sd]|(?<!money.back )guarantee|money.back guarantee(?=\\s+(that|you|you'?ll|your|it|it'?ll|this)\\b)|100%|never fails|works for everyone)\\b",
+      "meaning": "Guaranteed outcomes. Commerce exception (BLITZ canon): the refund-policy phrases \"14-day money-back guarantee\" and \"money-back guarantee\" are allowed; \"guarantee\" in any other form (guaranteed, guarantees, guarantee you'll…, money-back guarantee that/you…) stays flagged.",
+      "allowed_alternative": "Refund policy only: \"14-day money-back guarantee\" / \"money-back guarantee\", never followed by an outcome",
+      "allowed_phrases": [
+        "14-day money-back guarantee",
+        "money-back guarantee"
+      ]
+    },
+    {
+      "id": "BC15",
+      "severity": "revise",
+      "regex": "\\b(add(s)? (\\d+ )?years|live longer|longevity secret)\\b",
+      "meaning": "Lifespan causation from observational data (C-grade needs 'linked with')"
+    },
+    {
+      "id": "BC16",
+      "severity": "revise",
+      "regex": "\\b(hold your breath|bear down)\\b",
+      "meaning": "Valsalva under load (E42)"
+    },
+    {
+      "id": "BC17",
+      "severity": "revise",
+      "regex": "\\b(sit-?ups?|crunch(es)?|toe touch(es)?|weighted twist)\\b",
+      "meaning": "Spinal flexion risk for low-bone-density audience (E40); needs alternative or explicit exclusion"
+    },
+    {
+      "id": "BC18",
+      "severity": "revise",
+      "regex": "\\b(no pain,? no gain|push through (the )?pain)\\b",
+      "meaning": "Violates pain-monitoring rule (E41)"
+    },
+    {
+      "id": "BC19",
+      "severity": "revise",
+      "regex": "\\b(vitamin d)\\b.{0,40}\\b(falls?|fractures?)\\b",
+      "meaning": "USPSTF does not recommend vitamin D to prevent falls (E36)"
+    },
+    {
+      "id": "BC20",
+      "severity": "revise",
+      "regex": "\\b(anxiety|depression|panic)\\b.{0,30}\\b(gone|cured|fixed|disappear)",
+      "meaning": "Mental-health cure framing"
+    },
+    {
+      "id": "BC21",
+      "severity": "revise",
+      "regex": "\\b(supplement|capsule|pill|powder|creatine|collagen|magnesium)\\b",
+      "meaning": "Supplement mention: route to human review; never the lead"
+    },
+    {
+      "id": "BC22",
+      "severity": "revise",
+      "regex": "\\b(link in bio)\\b.{0,40}\\b(heal|cure|fix)\\b",
+      "meaning": "CTA promising a health outcome"
+    },
+    {
+      "id": "BC23",
+      "severity": "block",
+      "regex": "\\bmoney.back guarantee\\b[^.!?\\n]{0,120}\\b(stronger|sleep\\w*|pain\\w*|lose|lost|losing|weight|fat|balance|falls?|results?|feel better|younger|fix\\w*|heal\\w*|improve\\w*|works? for you|see a difference|notice)|\\b(stronger|sleep\\w*|pain\\w*|lose|lost|losing|weight|fat|balance|falls?|results?|feel better|younger|fix\\w*|heal\\w*|improve\\w*|works? for you|see a difference|notice)\\b[^.!?\\n]{0,120}\\bmoney.back guarantee\\b",
+      "meaning": "Money-back guarantee tied to a health outcome in the same sentence (the refund-policy whitelist never covers outcomes: 'money-back guarantee if you don't sleep better', 'stronger in 14 days or it's free')",
+      "allowed_alternative": "State the refund policy on its own: \"14-day money-back guarantee: tap Refund in your account within 14 days of your first charge.\""
+    },
+    {
+      "id": "BC24",
+      "severity": "block",
+      "regex": "\\b((say |kiss )?(goodbye|farewell|bye[- ]bye|so long) to|no more|never need|off) (your |all |those )?(pills|meds|medications?|medicines?|insulin|statins?|inhalers?|blood pressure pills|prescriptions?|injections)\\b(?!\\s+(of|dough|shape))",
+      "meaning": "Medication-exit phrasing ('say goodbye to your pills'): implied medication substitution (AUDIT_FINAL round 2)",
+      "allowed_alternative": "Habits that work alongside your treatment; your doctor decides on medication"
+    },
+    {
+      "id": "BC25",
+      "severity": "block",
+      "regex": "\\b(guaranteeing|zero side[- ]effects|without (any )?side[- ]effects|free of side[- ]effects|side[- ]effect[- ]free|no risks?)\\b",
+      "meaning": "Absolute safety/outcome promises ('zero side effects', 'guaranteeing'): SAFETY_RULES §3.1 guarantee/no-side-effects family (AUDIT_FINAL round 3)",
+      "allowed_alternative": "State what the study found and who should ask their doctor first"
+    }
+  ],
+  "semantic_only": [
+    {
+      "id": "BS01",
+      "severity": "block",
+      "meaning": "Implied effect via 'watch what happens' prop demos where the visible effect is fake or physiologically meaningless (e.g., onion in water turning color 'pulls toxins')."
+    },
+    {
+      "id": "BS02",
+      "severity": "block",
+      "meaning": "The character presents their fictional backstory as real-world fact to establish authority (e.g., '60 years treating people')."
+    },
+    {
+      "id": "BS03",
+      "severity": "block",
+      "meaning": "Discouraging medical care, screening, or emergency care (chest pain, stroke signs, suicidal thoughts)."
+    },
+    {
+      "id": "BS04",
+      "severity": "revise",
+      "meaning": "Numbers not matching the cited evidence exactly, or a cohort finding stated causally."
+    },
+    {
+      "id": "BS05",
+      "severity": "revise",
+      "meaning": "Movement shown without regression, or an advanced feat without a 'don't start here' line."
+    },
+    {
+      "id": "BS06",
+      "severity": "human",
+      "meaning": "Any content about pelvic floor, sexual health, grief, loneliness crisis, eating behaviour, or medication timing."
+    }
+  ],
+  "required_lines": {
+    "pain_rule": "Stop if you feel sharp pain, or pain above 3 out of 10.",
+    "clearance": "If you have heart problems, get dizzy, or just had surgery, check with your doctor first.",
+    "potassium_salt": "Not for kidney disease or potassium-raising medicines. Ask your doctor first.",
+    "crisis": "If you're thinking about harming yourself, call or text 988 (US) right now."
+  }
+}

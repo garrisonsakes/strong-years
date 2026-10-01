@@ -1,0 +1,31 @@
+{
+  "tool": "Shopify Dev MCP validate_graphql_codeblocks (read-only, api=admin)",
+  "date": "2026-10-01",
+  "apiVersionTarget": "2026-07",
+  "result": "VALID",
+  "documents": [
+    "ShopContext", "ProductByHandle", "ProductUpsert", "ProductUpdate", "PublishToOnlineStore", "UnpublishFromOnlineStore",
+    "CollectionByHandle", "CollectionCreate", "CollectionUpdate", "InventorySetFounding", "InventoryAdjust",
+    "VariantInventoryPolicy", "MetafieldDefinitionCreate", "MetafieldsSet", "DiscountByCode", "DiscountCodeCreate",
+    "DiscountCodeUpdate", "WebhookList", "WebhookCreate", "WebhookUpdate", "PageByHandle", "PageCreate", "PageUpdate",
+    "ShopPolicyUpdate", "RedirectList", "RedirectCreate", "RedirectUpdate", "SellingPlanGroupCreate", "SellingPlanGroupAddProducts"
+  ],
+  "inlinedInputShapesValidated": [
+    "productSet with tracked+physical variant, inventoryQuantities, weight, UNLISTED status, existing variant id",
+    "discountCodeBasicCreate STARTER12: context.all, appliesOnSubscription, recurringCycleLimit 1",
+    "metafieldDefinitionCreate with access.storefront",
+    "webhookSubscriptionCreate topics: ORDERS_PAID, ORDERS_UPDATED, ORDERS_CANCELLED, REFUNDS_CREATE, CUSTOMERS_CREATE, CUSTOMERS_DELETE, INVENTORY_LEVELS_UPDATE, APP_UNINSTALLED, SUBSCRIPTION_CONTRACTS_EXPIRE, SUBSCRIPTION_BILLING_ATTEMPTS_CHALLENGED (+ metafieldNamespaces)",
+    "pageCreate / pageUpdate with templateSuffix + isPublished",
+    "shopPolicyUpdate SUBSCRIPTION_POLICY / CONTACT_INFORMATION / SHIPPING_POLICY",
+    "sellingPlanGroupCreate with fixed first-cycle PRICE 12.00 + recurring afterCycle 1 PRICE 25.00",
+    "productUpdate requiresSellingPlan/status, inventoryAdjustQuantities with referenceDocumentUri, productVariantsBulkUpdate inventoryPolicy, urlRedirectCreate, metafieldsSet, publishablePublish"
+  ],
+  "fixesApplied": ["Publication.name (deprecated) → Publication.catalog.title"],
+  "requiredScopesReported": [
+    "read_locations", "read_inventory", "write_inventory", "read_markets_home", "read_publications", "write_publications",
+    "read_products", "write_products", "read_discounts", "write_discounts", "read_content", "write_content",
+    "read_online_store_pages", "write_online_store_pages", "read_legal_policies", "write_legal_policies",
+    "read_online_store_navigation", "write_online_store_navigation",
+    "app engine only: write_purchase_options, write_own_subscription_contracts"
+  ]
+}

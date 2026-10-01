@@ -1,0 +1,433 @@
+# cat|pillar|format|cta|page|speaker|evidence|star|hook
+CUR|P01|F27|STRONG|CY|CHANG|E01|*|I'm 74. This is the one thing I did every day since 60.
+CUR|P14|F13|STRONG|CY|CHANG|E22||If you sit for hours every afternoon, your calves take the afternoon off. Try this.
+CUR|P04|F16|TEST|ST|CHANG|E07|*|Your handshake is telling your future. Here's what it says.
+CUR|P03|F02|BALANCE|CY|CHANG|E09||Stand on one leg. Count. That number matters more than you think.
+CUR|P10|F06|GUT|SK|SUN|E25||The fruit I put in his lunch every day. It's not an apple.
+CUR|P07|F21|BREATH|MB|CHANG|E18||Two breaths in, one long breath out. Watch my shoulders drop.
+CUR|P14|F13|KNEES|MB|CHANG|E01||Why your knees complain more going down stairs than up.
+CUR|P05|F15|BACK|MB|CHANG|E30||Your hips got stiff for a reason nobody told you.
+CUR|P09|F05|SLEEP|MB|CHANG|E19||What I do in bed before I close my eyes. Ninety seconds.
+CUR|P11|F31|SOUP|SK|SUN|E28||In Korea we eat this soup on birthdays. I make it every week.
+CUR|P13|F18|SOUP|SK|SUN|E28|*|I weighed my husband's breakfast. He was 20 grams short.
+CUR|P02|F17|STRONG|ST|CHANG|E01||The best gym you own is in your kitchen. It has four legs.
+CUR|P14|F13|STRONG|CY|CHANG|E05||Your muscles only care what you did this week.
+CUR|P06|F03|BACK|MB|CHANG|E30||If you do dishes every night at a low sink, try this two-second back fix.
+CUR|P08|F22|BALANCE|MB|CHANG|E14||Old men in the park taught me this at 14. Science caught up later.
+CUR|P04|F15|STRONG|ST|CHANG|E12||Why I carry my groceries the long way around the house.
+CUR|P12|F06|GUT|SK|SUN|E25||Two of these a day did as well as prunes. Small study. Big surprise.
+CUR|P01|F02|TEST|CY|CHANG|E11||There's a 30-second test clinicians use. You need one chair.
+CUR|P14|F16|STRONG|CY|CHANG|E05||What happens to your legs after 10 days in bed. Sit down first.
+CUR|P16|F07|STRONG|SY|SUN|E29||I'm 76. I lift things. Here's the first thing I lifted.
+CUR|P05|F20|BACK|MB|CHANG|E30||If you wake up stiff every morning, do this before your feet touch the floor.
+CUR|P10|F06|GUT|SK|SUN|E23||What my family did after every dinner for 50 years. Now there's a study.
+CUR|P03|F02|BALANCE|MB|CHANG|E12||Close your eyes for 10 seconds. Hold the counter first.
+CUR|P07|F13|BREATH|MB|CHANG|E19||Your exhale is a brake pedal. Here's how to press it.
+CUR|P02|F13|STRONG|ST|CHANG|E01||The muscle that gets you off the toilet at 90. Train it now.
+CUR|P11|F31|GUT|SK|SUN|E26||Why there are two clay jars on my kitchen counter.
+CUR|P06|F14|BACK|MB|CHANG|E30||Reach your top shelf without a grunt? Try this first.
+CUR|P17|F08|BEGIN|CS|DUO|E37||Married 50 years. This is what we do every night at eight.
+CUR|P01|F27|STRONG|CY|CHANG|E21||I'm going to show you my training log. Page fourteen hundred.
+CUR|P14|F13|STRONG|ST|CHANG|E04||Jar lids didn't get tighter. Something else changed.
+TST|P01|F02|TEST|CY|CHANG|E11|*|If you use your hands every time you stand, try this. Thirty seconds. No hands.
+TST|P03|F02|BALANCE|CY|CHANG|E09|*|Stand on one leg next to the counter, and just watch what happens by second ten.
+TST|P01|F02|TEST|CY|CHANG|E08|*|Sit on the floor and get up without hands. Score yourself out of 10.
+TST|P02|F02|STRONG|ST|CHANG|E06||Five chair stands. Time it. Over 15 seconds? Let's work.
+TST|P04|F02|STRONG|ST|CHANG|E07||Two full milk jugs. Walk 30 steps. Can you?
+TST|P03|F02|BALANCE|MB|CHANG|E13||Heel-to-toe along the counter. Ten steps. Any wobble?
+TST|P14|F02|TEST|CY|CHANG|E10||How fast do you walk? A 4-meter test with a tape measure.
+TST|P05|F02|BACK|MB|CHANG|E30||Touch the back of your head with both hands. Shoulder check.
+TST|P02|F23|STRONG|ST|CHANG|E20||Wall sit next to me. I'm 74. Who stops first?
+TST|P19|F11|STRONG|CY|CHANG|E01||Seven days. Ten minutes. Day one starts now. Stand up.
+TST|P03|F32|BALANCE|CY|CHANG|E12||Brush your teeth on one leg. Hold the sink. Who wins?
+TST|P05|F02|BACK|MB|CHANG|E30||Lie on your back. Can both knees fall to the side together?
+TST|P01|F02|TEST|ST|CHANG|E08||Three tests. Chair, one leg, floor. Write your numbers today.
+TST|P04|F02|STRONG|ST|CHANG|E01||Push-ups on the kitchen counter. How many clean ones?
+TST|P02|F02|KNEES|ST|CHANG|E01||Bottom stair, ten step-ups each leg, holding the rail. Easy?
+TST|P03|F02|BALANCE|MB|CHANG|E12||Stand on one foot and turn your head. That's the real test.
+TST|P17|F08|BALANCE|CS|DUO|E09||One-leg balance, husband versus wife. Loser does dishes.
+TST|P06|F02|BACK|MB|CHANG|E30||Can you put your sock on standing up? Hold the counter.
+TST|P09|F05|SLEEP|MB|CHANG|E19||Tonight in bed: count how many slow breaths you finish.
+TST|P13|F18|SOUP|SK|SUN|E28||Guess the protein on this plate. Closest guess gets a recipe.
+TST|P02|F17|STRONG|ST|CHANG|E01||How low can you sit and still stand up? Stack books on the chair.
+TST|P04|F02|STRONG|ST|CHANG|E07||Open a jar with your weaker hand. Honest answer below.
+TST|P07|F21|BREATH|MB|CHANG|E19||How long is your exhale? Count it with me.
+TST|P19|F11|BALANCE|CY|CHANG|E12||Thirty days of balance. One minute a day. Day one: feet together.
+TST|P01|F14|STRONG|ST|CHANG|E45||Get down to the floor with a chair. Now, can you get back up?
+TST|P17|F34|STRONG|CS|DUO|E01||Couples test: sit-to-stand holding hands. Who pulls whom?
+TST|P03|F02|BALANCE|CY|CHANG|E12||Can you walk and name five animals at the same time?
+TST|P02|F02|STRONG|MB|CHANG|E02||Squat to the chair, pause three seconds, stand. No dropping.
+TST|P02|F02|BALANCE|ST|CHANG|E12||Sixty seconds. How many times can you rise onto your toes?
+TST|P19|F11|GUT|SK|SUN|E25||Two kiwis a day for seven days. I'm keeping a chart. Join me.
+MYT|P15|F04|SOUP|SK|SUN|E23|*|Onion in water? Not a remedy, not a tea. Put the onion in the soup.
+MYT|P15|F28|STRONG|CY|CHANG|E01|*|"Lifting is dangerous after 60." Here's what 121 trials found.
+MYT|P15|F28|BALANCE|CY|CHANG|E36|*|Vitamin D pills for steady feet? Not the answer, not the plan. Practice is.
+MYT|P15|F28|BACK|MB|CHANG|E30||"Rest your bad back." The biggest review says move it.
+MYT|P15|F28|KNEES|MB|CHANG|E01||Squats are bad for older knees? The research disagrees.
+MYT|P15|F04|GUT|SK|SUN|E24||Detox tea? No. Your liver already has a job.
+MYT|P15|F04|GUT|SK|SUN|E23||A drink to "burn sugar" after dinner? Walk to the mailbox instead.
+MYT|P15|F28|STRONG|CY|CHANG|E03||"Too old to build muscle." Ten 90-year-olds would disagree.
+MYT|P15|F04|BALANCE|CY|CHANG|E09||Salt under your feet? No. Stand on one foot instead.
+MYT|P15|F04|BACK|SK|SUN|E30||Cabbage leaf on your back for pain? Cabbage goes in kimchi.
+MYT|P15|F28|SOUP|SK|SUN|E28||"Old people need less protein." It's the other way around.
+MYT|P15|F28|STRONG|CY|CHANG|E21||"Walking is enough." Walking is wonderful. It isn't enough.
+MYT|P15|F21|BREATH|MB|CHANG|E18||"Take a deep breath." Wrong half. It's the exhale.
+MYT|P15|F28|STRONG|ST|CHANG|E02||"Light weights, lots of reps is safer for seniors." Not always.
+MYT|P15|F28|BALANCE|MB|CHANG|E14||The move I'd start with is not a machine, not a gym class. It's tai chi.
+MYT|P15|F06|GUT|SK|SUN|E24||"Fiber makes me bloated, so I skip it." Go slower. Not zero.
+MYT|P15|F03|KNEES|MB|CHANG|E02||"Never let your knees pass your toes." Watch how you climb stairs.
+MYT|P15|F03|BACK|MB|CHANG|E30||'Bend your knees, not your back.' Half true. Not the whole story. Learn the hinge.
+MYT|P15|F28|STRONG|SY|SUN|E29||"Women shouldn't lift heavy after menopause." One trial says otherwise.
+MYT|P15|F04|GUT|SK|SUN|E24||Three-day juice cleanse? You threw away the fiber and kept the sugar.
+MYT|P15|F28|STRONG|CY|CHANG|E42||"Cardio is all your heart needs." Your muscles get a vote.
+MYT|P15|F28|BALANCE|MB|CHANG|E12||"Balance is something you have or don't." It's trainable. 108 trials.
+MYT|P15|F28|STRONG|CY|CHANG|E22||Ten thousand steps? Over 60, the benefit leveled off sooner.
+MYT|P15|F24|STRONG|CY|CHANG|E12||"Stretching is the most important thing after 60." It's third.
+MYT|P15|F03|BACK|MB|CHANG|E40||Sit-ups for a strong core? Not for older spines. Do this.
+MYT|P15|F28|BREATH|MB|CHANG|E20||"Lower your blood pressure in 60 seconds" videos. The honest version.
+MYT|P15|F31|GUT|SK|SUN|E26||"Kimchi is too spicy for old stomachs." Try this white one.
+MYT|P15|F28|KNEES|MB|CHANG|E15||"Tai chi can't help arthritic knees." One trial matched physical therapy.
+MYT|P15|F16|TEST|ST|CHANG|E07||A stress ball won't add years. Here's what grip really tells you.
+MYT|P15|F07|BEGIN|SY|SUN|E37||"Old people can't make new friends." Wrong. And it matters.
+FOD|P14|F16|STRONG|CY|CHANG|E05|*|If you spend ten days in bed, watch what happens to your legs.
+FOD|P01|F02|STRONG|CY|CHANG|E11|*|The day you need your arms to stand up is a warning. Start here.
+FOD|P03|F15|BALANCE|CY|CHANG|E12|*|If you practice balance every day, three counter moves are enough to start.
+FOD|P14|F16|STRONG|CY|CHANG|E04||After 75, strength fades faster than muscle size. Test what your legs can do.
+FOD|P01|F14|STRONG|CY|CHANG|E45||If you fell right now, could you get up? Practice before you need it.
+FOD|P04|F15|STRONG|ST|CHANG|E07||Can't open jars anymore? Don't buy the gadget yet.
+FOD|P02|F17|STRONG|ST|CHANG|E01||The toilet, the car, the bed. Three chairs you'll sit in forever.
+FOD|P03|F15|BALANCE|MB|CHANG|E12||Afraid of falling, so you move less? That makes it worse. Break it.
+FOD|P14|F02|TEST|CY|CHANG|E10||Your walking speed says a lot about your future. Measure it.
+FOD|P06|F14|BACK|MB|CHANG|E40||Getting shorter and rounder? Here's what you can still train.
+FOD|P16|F07|BEGIN|SY|SUN|E37||Loneliness isn't just sad. It shows up in the health data.
+FOD|P02|F15|KNEES|ST|CHANG|E01||Stairs getting harder? Some of it is age. A lot of it is practice.
+FOD|P09|F05|SLEEP|MB|CHANG|E43||Dizzy when you get up at night? Do this before you stand.
+FOD|P13|F18|SOUP|SK|SUN|E28||Eating like a bird after 70? Your muscles notice.
+FOD|P01|F16|TEST|CY|CHANG|E07||In 142,861 people, grip strength was a better health signal than blood pressure.
+FOD|P05|F15|BACK|MB|CHANG|E30||Can't turn your head to back the car out? Start with this.
+FOD|P03|F16|BALANCE|CY|CHANG|E09||More than half of people 71 to 75 failed this 10-second test.
+FOD|P04|F15|STRONG|ST|CHANG|E12||Carrying groceries in two trips now? Let's make it one again.
+FOD|P06|F14|KNEES|MB|CHANG|E41||Knee hurts, so you stopped walking. Now it hurts more. Break the loop.
+FOD|P02|F13|STRONG|ST|CHANG|E39||The muscle fibers you lose first are the ones that catch you.
+FOD|P10|F06|GUT|SK|SUN|E25||Constipated for years and "just living with it"? Try this, then tell your doctor.
+FOD|P14|F16|STRONG|CY|CHANG|E04||Strength leaves two to five times faster than muscle size.
+FOD|P16|F33|FAMILY|SY|SUN|E12||Your kids already worry about you. Give them less to worry about.
+FOD|P01|F16|TEST|CY|CHANG|E08||Every point on this floor test counts. 2,002 adults were scored. Score yourself.
+FOD|P02|F17|STRONG|ST|CHANG|E11||Chair with armrests? You've been using them. Try one without.
+FOD|P07|F21|BREATH|MB|CHANG|E19||Breathing high in your chest all day? Your shoulders are doing your belly's job.
+FOD|P13|F18|SOUP|SK|SUN|E28||Tea and toast at 75 is a muscle problem. Grams, not vibes.
+FOD|P06|F14|BACK|MB|CHANG|E02||Can't reach behind for your wallet or your bra? Try this gently.
+FOD|P01|F27|STRONG|CY|CHANG|E21||Nobody at 80 wishes they'd trained less at 70.
+FOD|P09|F05|SLEEP|MB|CHANG|E19||Wide awake at 3 a.m. again? Don't grab the phone. Do this.
+IDN|P16|F27|STRONG|CY|CHANG|E01|*|I'm not a "senior." I'm a person who trains.
+IDN|P16|F07|BEGIN|SY|SUN|E37|*|For the women who raised everyone and never did one thing for themselves.
+IDN|P01|F27|STRONG|CY|CHANG|E01||Over 60 and you still want to be useful? Watch this.
+IDN|P16|F07|STRONG|SY|SUN|E29||Grandmothers who lift. Say hi.
+IDN|P17|F33|FAMILY|CS|DUO|E45||For grandparents who want to get down on the floor with the grandkids. And back up.
+IDN|P02|F27|STRONG|ST|CHANG|E01||Retired. Not finished.
+IDN|P16|F07|STRONG|SY|SUN|E07|*|I'm 76. I don't want to look young. I want to open my own jars.
+IDN|P01|F33|FAMILY|CY|CHANG|E01||For every dad who "doesn't need help." Neither do I. Train anyway.
+IDN|P16|F07|SOUP|SY|SUN|E28||If you're the one who cooks for everyone, this one's for you.
+IDN|P03|F15|BALANCE|CY|CHANG|E12||For people who hold the rail on every stair. Me too. Let's train.
+IDN|P04|F15|STRONG|ST|CHANG|E07||Welders, farmers, mechanics, cooks. Your hands built things. Keep them strong.
+IDN|P06|F14|KNEES|MB|CHANG|E01||New-knee club, say hi. This is your homework, after your PT says yes.
+IDN|P18|F17|BEGIN|CY|CHANG|E01||Never exercised in your life? Start here. Seriously.
+IDN|P16|F07|STRONG|SY|SUN|E29||For the women who were told their whole life to be small.
+IDN|P17|F34|STRONG|CS|DUO|E21||Married 30, 40, 50 years? Train together. Here's how.
+IDN|P16|F27|STRONG|CY|CHANG|E03||You're not too old. You're untrained. Different problem. Better news.
+IDN|P08|F22|BALANCE|MB|CHANG|E14||For people who hate the gym. This counts too.
+IDN|P11|F31|SOUP|SK|SUN|E24||Immigrant kitchens, say hi. We cooked with what we had.
+IDN|P16|F31|SOUP|SY|SUN|E37||Widowed and eating standing at the counter? Sit down. Let's cook for one.
+IDN|P01|F14|STRONG|ST|CHANG|E02||Former athletes: your body remembers. Wake it up slowly.
+IDN|P09|F05|SLEEP|MB|CHANG|E19||Night owls over 60, this is for your 11 p.m.
+IDN|P16|F15|STRONG|CY|CHANG|E01||Raising your grandkids? You need legs like a 40-year-old. Let's work.
+IDN|P13|F18|SOUP|SK|SUN|E28||Vegetarian over 60? Yes, you can get enough protein. Here's the plate.
+IDN|P16|F07|BEGIN|SY|SUN|E37||Caring for a sick husband or wife? You matter too.
+IDN|P05|F15|BACK|MB|CHANG|E30||Men over 70 who "don't stretch": I know. Me too. Four minutes.
+IDN|P06|F14|BACK|MB|CHANG|E30||Forty years at a desk, now retired, back still angry? This is for you.
+IDN|P16|F07|BEGIN|SY|SUN|E37||Women who survived everything and still can't say no. Practice with me.
+IDN|P19|F11|STRONG|CY|CHANG|E01||Day-one people: put a 1 in the comments. That's the entry fee.
+IDN|P01|F27|BEGIN|CY|CHANG|E01||Ex-smokers, ex-couch, ex-"too busy": the door is still open.
+IDN|P17|F29|BALANCE|CS|DUO|E22||For couples who argue about the thermostat. Same. Now come walk.
+BED|P09|F05|SLEEP|MB|CHANG|E19|*|If you do this every night before sleep, it takes ninety seconds. Lying down.
+BED|P07|F21|BREATH|MB|CHANG|E18|*|If you sigh out slowly every day for five minutes, your mood may follow.
+BED|P09|F05|SLEEP|MB|CHANG|E43||If you get up every night to use the bathroom, sit and count to ten first.
+BED|P05|F05|BACK|MB|CHANG|E30||The stretch I do lying in bed for my back. No floor needed.
+BED|P09|F21|SLEEP|MB|CHANG|E19||Awake at 3 a.m.? Six slow breaths before you do anything else.
+BED|P06|F05|KNEES|MB|CHANG|E41||Knees ache in bed? A pillow here, then this gentle move.
+BED|P08|F22|SLEEP|MB|CHANG|E16||Three slow tai chi moves in your pajamas. Then bed.
+BED|P03|F32|BALANCE|MB|CHANG|E12|*|If you brush your teeth every night, do this at the same time. Hold the sink.
+BED|P16|F07|BEGIN|SY|SUN|E37||Before bed, tell someone one thing that went right today. Sun Yoon's orders.
+BED|P10|F06|GUT|SK|SUN|E23||Heavy dinner? Ten minutes of walking before the couch. Here's why.
+BED|P09|F05|SLEEP|MB|CHANG|E19||Legs feel heavy at night? Twenty ankle pumps before you lie down.
+BED|P07|F21|BREATH|MB|CHANG|E19||Breathe out longer than you breathe in. That's the whole trick.
+BED|P17|F08|SLEEP|CS|DUO|E19||What we do every night before bed, after 50 years.
+BED|P05|F05|BACK|MB|CHANG|E30||Hips tight from sitting all day? Two moves on the bed. Slowly.
+BED|P09|F05|SLEEP|MB|CHANG|E43||Getting up to pee at night? Three rules so you get back safely.
+BED|P12|F06|SOUP|SK|SUN|E32||If you hear him cough every night, try a spoon of honey. There's a study.
+BED|P08|F22|SLEEP|MB|CHANG|E17||The evening qigong move I learned at 14. Arms up. Arms down.
+BED|P09|F15|BALANCE|MB|CHANG|E36||Your bedroom has a balance hazard. Let me show you.
+BED|P06|F05|BACK|MB|CHANG|E30||Shoulder aches when you lie on it? Try this before bed. Gently.
+BED|P16|F07|BEGIN|SY|SUN|E37||Don't go to bed angry. Go to bed, then fight tomorrow. Fifty years' advice.
+BED|P07|F21|BREATH|MB|CHANG|E19||Five seconds in. Five seconds out. Three minutes. Your body changes gears.
+BED|P09|F05|SLEEP|MB|CHANG|E19||Lie down, knees bent, hands on your belly. Watch them rise.
+BED|P02|F17|STRONG|ST|CHANG|E21||Didn't train today? Five slow chair stands before bed. Still counts.
+BED|P10|F06|GUT|SK|SUN|E25||Two kiwis after dinner. Here's why they're on my table.
+BED|P03|F05|BALANCE|MB|CHANG|E12||By the bed: toes spread, heels up, sit. Sixty seconds. Hold the headboard.
+BED|P19|F11|STRONG|CY|CHANG|E22||Before bed, put tomorrow's walking shoes by the door. Day three.
+BED|P17|F08|BACK|CS|DUO|E30||He does his stretches before bed. Because I hid his kettlebell.
+BED|P07|F21|BREATH|MB|CHANG|E19||Racing mind in bed? One hand on your chest. One on your belly.
+BED|P09|F14|SLEEP|MB|CHANG|E45||Bed too low? How to get out of it safely at 75.
+BED|P16|F07|BEGIN|SY|SUN|E37||Call someone before bed tonight. Not a text. Call.
+KIT|P11|F31|SOUP|SK|SUN|E28|*|The soup I make when he's sore from training. Thirty grams of protein.
+KIT|P13|F18|SOUP|SK|SUN|E28|*|This is 30 grams of protein for breakfast at 76.
+KIT|P12|F06|GUT|SK|SUN|E25|*|If you eat two kiwis every day, here's what one small study found.
+KIT|P11|F31|GUT|SK|SUN|E26||My mother's easy kimchi. No special jar. Ten minutes of work.
+KIT|P11|F31|SOUP|SK|SUN|E28||Seaweed soup. The Korean birthday soup. Everyone in this house gets it.
+KIT|P13|F18|SOUP|SK|SUN|E28||Eggs, tofu, beans, fish. How I get 90 grams into a 74-year-old.
+KIT|P11|F31|SOUP|SK|SUN|E24||Doenjang stew for a cold night. It's salty, so here's the trick.
+KIT|P12|F06|GUT|SK|SUN|E27||If you eat five prunes every day for a year, here's what one bone study found.
+KIT|P11|F12|SOUP|SK|SUN|E28||Jajangmyeon Sunday. He cooks. I grade.
+KIT|P10|F06|GUT|SK|SUN|E24||If you add fiber every day too fast, you'll feel it. Five grams at a time.
+KIT|P13|F31|SOUP|SK|SUN|E28||Greek yogurt bowl. Twenty grams. Four minutes. Go.
+KIT|P12|F06|SOUP|SK|SUN|E33||Ginger, scallion, garlic. My cold-night broth. Honest about what it does.
+KIT|P11|F31|SOUP|SK|SUN|E28||Dumplings for fourteen people. Or one husband. Same number.
+KIT|P13|F18|SOUP|SK|SUN|E28||Your breakfast is missing one palm-sized thing.
+KIT|P10|F31|GUT|SK|SUN|E24||Beans make you gassy? Here's how my mother cooked them.
+KIT|P11|F31|SOUP|SK|SUN|E24||One pot, five days of lunches. For people cooking for one.
+KIT|P12|F06|GUT|SK|SUN|E34||Peppermint for a cranky belly. A real study. One warning.
+KIT|P13|F31|SOUP|SK|SUN|E28||Tofu tastes like nothing? That's the point. Watch.
+KIT|P11|F31|GUT|SK|SUN|E24||Rice porridge for the days your stomach says "gently."
+KIT|P19|F11|GUT|SK|SUN|E24||Seven-day fiber ladder. Day one: one kiwi.
+KIT|P10|F28|GUT|SK|SUN|E26||Six servings of fermented food a day for ten weeks. What happened.
+KIT|P13|F18|SOUP|SK|SUN|E28||If you buy canned fish every week, that's thirty grams of protein for pocket change.
+KIT|P11|F06|SOUP|SK|SUN|E35||Salt substitute in my soup? Maybe. Ask your doctor first. Here's why.
+KIT|P12|F06|SOUP|SK|SUN|E32||Honey-ginger tea for a cough. What the research actually says.
+KIT|P11|F12|SOUP|SK|SUN|E37||Cooking for one after 50 years of cooking for five. My Tuesday.
+KIT|P13|F18|SOUP|SK|SUN|E28||Chicken thigh, rice, kimchi, egg. The 35-gram bowl.
+KIT|P10|F06|GUT|SK|SUN|E23||If you walk after dinner every night, even five minutes, here's the glucose study.
+KIT|P11|F28|SOUP|SK|SUN|E24||Barley tea is always on my table. Honest reason: I like it.
+KIT|P11|F31|GUT|SK|SUN|E24||Persimmon season. Here's what I do with forty of them.
+KIT|P13|F31|SOUP|SK|SUN|E28||Chang's after-training snack. I make it. He takes the credit.
+CPL|P17|F08|STRONG|CS|DUO|E21|*|He flexes in the microwave. So I made a sign.
+CPL|P17|F08|BALANCE|CS|DUO|E09|*|Fifty years married. I still beat him at balance.
+CPL|P17|F33|FAMILY|CS|DUO|E12|*|Our daughter called. She thinks we train too much.
+CPL|P17|F08|BACK|CS|DUO|E30||He says he stretched. The kettlebell is still hidden.
+CPL|P17|F08|SOUP|CS|DUO|E28||He counts reps. I count dumplings. "That's fourteen."
+CPL|P17|F08|STRONG|CS|DUO|E21||He wore a tank top in January again.
+CPL|P17|F08|STRONG|CS|DUO|E12||I asked him to carry one bag. He carried all of them. And the cat.
+CPL|P17|F35|BEGIN|CS|DUO|E37||How to argue for 50 years and still hold hands on walks.
+CPL|P17|F34|BALANCE|CS|DUO|E12||Loser of the balance test does the dishes. Watch.
+CPL|P17|F28|STRONG|CS|DUO|E01||He printed another study. The printer is tired, Chang.
+CPL|P17|F08|STRONG|CS|DUO|E02||I graded his squat. Seven out of ten. Because I love him.
+CPL|P17|F35|BEGIN|CS|DUO|E37||The thing he said on our first day that I still correct.
+CPL|P17|F34|STRONG|CS|DUO|E08||He gets up off the floor with no hands. I use one. Both count.
+CPL|P17|F29|GUT|CS|DUO|E23||Every night after dinner we walk to the mailbox and back. Here's why.
+CPL|P17|F08|BEGIN|CS|DUO|E37||The short version of his ten-minute story.
+CPL|P17|F25|KNEES|CS|DUO|E01||Frank said his knee hurt. Chang said, "Which one? The new one?"
+CPL|P17|F35|BEGIN|CS|DUO|E37||What 50 years of marriage taught us about fighting fair.
+CPL|P17|F08|STRONG|CS|DUO|E21||He wanted to name the cat Deadlift. We named him Mandu.
+CPL|P17|F34|STRONG|CS|DUO|E21||A couples workout where nobody gets divorced.
+CPL|P17|F08|STRONG|CS|DUO|E04||Our son tried to help his father carry the couch. It went badly for the son.
+CPL|P17|F08|BEGIN|CS|DUO|E37||She's older. So she's right. That's the rule.
+CPL|P17|F08|SLEEP|CS|DUO|E43||He snores. I found a study. The study says: see the doctor.
+CPL|P17|F08|BEGIN|CS|DUO|E37||We tried a TikTok dance. The cat left.
+CPL|P17|F18|SOUP|CS|DUO|E28||He ate twelve dumplings and called it a protein meal. Let's count.
+CPL|P17|F27|BEGIN|CS|DUO|E37||Fiftieth anniversary in 23 days. She still says the dumplings were over-salted.
+CPL|P17|F28|STRONG|CS|DUO|E01||"Show me the study." He pulled it out of his shorts.
+CPL|P17|F21|BREATH|CS|DUO|E18||When we fight, one of us says "exhale." Here's why.
+CPL|P17|F35|BEGIN|CS|DUO|E37||Things he does that I'll never admit are sweet.
+CPL|P20|F08|BEGIN|CS|DUO|E37||We're AI. The marriage is fictional. The advice isn't.
+CPL|P17|F35|BEGIN|CS|DUO|E37||The one habit that kept us from killing each other for 50 years.
+BLT|P16|F07|KNEES|SY|SUN|E01|*|Nobody is coming to save your knees. You are.
+BLT|P16|F07|FAMILY|SY|SUN|E08|*|Your kids don't need your money. They need you to be able to get up.
+BLT|P15|F07|BEGIN|SK|SUN|E20|*|If a video says 'instantly,' close it. Not a study, not a plan.
+BLT|P16|F07|STRONG|SY|SUN|E01||Stop saying "I'm fine." You're not fine. You're untrained.
+BLT|P16|F07|BEGIN|SY|SUN|E37||Loneliness is a health problem. Call someone. Today.
+BLT|P13|F18|SOUP|SK|SUN|E28||Tea and toast isn't breakfast. It's a hug.
+BLT|P16|F07|BEGIN|SY|SUN|E37||You're not too old to make friends. You're too comfortable.
+BLT|P16|F35|BEGIN|SY|SUN|E37||He didn't leave the dishes because he's tired. He left them because you always do them.
+BLT|P16|F07|STRONG|SY|SUN|E11||The best anti-aging product is a chair and your own legs.
+BLT|P16|F35|BEGIN|SY|SUN|E37||Estranged from your kids? The blunt answer, then the soft one.
+BLT|P16|F07|STRONG|SY|SUN|E21||Retirement isn't a nap. It's a second job, and the job is you.
+BLT|P15|F07|GUT|SK|SUN|E24||Your liver doesn't need a cleanse. It needs you to skip the third glass.
+BLT|P16|F07|BEGIN|SY|SUN|E37||You're allowed to say no to babysitting. Twice a week is love. Five is a job.
+BLT|P16|F07|STRONG|SY|SUN|E29||Stop apologizing for taking up space at the gym.
+BLT|P16|F07|STRONG|SY|SUN|E01||You don't hate exercise. You hate exercise that hurts. Different thing.
+BLT|P16|F08|BACK|SY|SUN|E30||Your husband won't stretch? Neither will mine. Here's how I win.
+BLT|P16|F35|BEGIN|SY|SUN|E37||Grief doesn't end. It gets a room in the house. You still have to eat.
+BLT|P13|F18|SOUP|SK|SUN|E28||Can't read the label without glasses? Put them on. Then read the protein.
+BLT|P16|F07|STRONG|SY|SUN|E01||"I'll start Monday." You're 70. Monday is a luxury. Start at lunch.
+BLT|P16|F07|BEGIN|SY|SUN|E43||Your doctor isn't mad at you. Tell them the truth about what you eat.
+BLT|P16|F07|GUT|SY|SUN|E23||You don't need a new diet. You need a vegetable and a walk.
+BLT|P16|F07|STRONG|SY|SUN|E30||Not every ache is age. Some of it is the couch.
+BLT|P16|F35|BEGIN|SY|SUN|E37||He cheated 30 years ago and you still bring it up? Did you forgive?
+BLT|P16|F35|BEGIN|SY|SUN|E37||Your daughter-in-law isn't your enemy. Your pride is.
+BLT|P16|F07|BEGIN|SY|SUN|E37||Wear the hearing aids. Nobody's looking at your ears. They're happy you can hear them.
+BLT|P16|F07|STRONG|SY|SUN|E04||Being needed is nice. Being strong is better. You can be both.
+BLT|P15|F07|BEGIN|SY|SUN|E24||If someone is selling you a secret, it isn't a secret. It's a product.
+BLT|P16|F07|BALANCE|SY|SUN|E12||You're not lazy. You're scared of falling. Let's fix the scared part.
+BLT|P16|F07|BEGIN|SY|SUN|E37||You're 72. Use the good olive oil. Wear the nice dress. Today.
+BLT|P16|F07|STRONG|SY|SUN|E03||The best age to start was 50. The second best is right now. Stand up.
+NUM|P04|F16|TEST|ST|CHANG|E07|*|Your grip is a window. 142,861 people in 17 countries. Here's how to train it.
+NUM|P03|F16|BALANCE|CY|CHANG|E09|*|Can you stand on one leg for 10 seconds? 1,702 adults took this test.
+NUM|P01|F16|TEST|CY|CHANG|E08|*|The floor test: sit down, stand up, score out of ten. Let's score you.
+NUM|P01|F16|STRONG|CY|CHANG|E03||Ninety-year-olds. Eight weeks of leg training. They got much stronger.
+NUM|P02|F16|STRONG|ST|CHANG|E06||Five chair stands over 15 seconds? That's a line in the guidelines.
+NUM|P08|F16|BALANCE|CY|CHANG|E14||Tai chi, done slowly, for balance. 670 older adults took this class. Try one move.
+NUM|P02|F16|STRONG|ST|CHANG|E21||Thirty to sixty minutes of strength a week. That's the dose in the big study.
+NUM|P14|F02|TEST|CY|CHANG|E10||One meter per second. That's the walking speed to know. Measure yours.
+NUM|P10|F18|GUT|SK|SUN|E24||Twenty-five to twenty-nine grams of fiber a day. Here's what that looks like.
+NUM|P13|F18|SOUP|SK|SUN|E28||1.2 grams of protein per kilo. For a 60 kg woman, that's 72 grams.
+NUM|P07|F21|BREATH|MB|CHANG|E18||Five minutes a day of this breath beat meditation for mood in a Stanford study.
+NUM|P02|F16|STRONG|ST|CHANG|E20||Wall sits lowered blood pressure more than any other exercise type. Over weeks.
+NUM|P03|F16|BALANCE|CY|CHANG|E12||108 trials of balance and strength training. Here are three moves they share.
+NUM|P14|F29|STRONG|CY|CHANG|E22||Six to eight thousand steps. Over 60, that's where the curve flattened.
+NUM|P14|F16|STRONG|CY|CHANG|E05||At 67, ten days in bed. At 38, twenty-eight days. Guess who lost more.
+NUM|P10|F06|GUT|SK|SUN|E23||Two minutes of walking after a meal. That's where the study starts.
+NUM|P12|F06|GUT|SK|SUN|E25||Two kiwis versus 100 g of prunes versus psyllium. Which did best?
+NUM|P06|F28|BACK|MB|CHANG|E30||249 trials on back pain. The winner wasn't rest.
+NUM|P08|F28|KNEES|MB|CHANG|E15||Tai chi matched physical therapy for knee arthritis. 204 people, one year.
+NUM|P03|F16|BALANCE|CY|CHANG|E13||The Otago program: simple home moves, studied in people averaging 81.
+NUM|P12|F06|GUT|SK|SUN|E27||Fifty grams of prunes a day for a year. Hip bone density held.
+NUM|P01|F28|STRONG|CY|CHANG|E01||121 trials. 6,700 older adults. The main side effect was sore muscles.
+NUM|P13|F18|SOUP|SK|SUN|E28||Twenty-five to thirty grams per meal. Not per day. Per meal.
+NUM|P16|F07|BEGIN|SY|SUN|E37||148 studies, 308,849 people: friendships show up in the health data. Call one.
+NUM|P10|F28|GUT|SK|SUN|E26||Nineteen inflammation markers went down in a fermented-food study. Here's what they ate.
+NUM|P02|F16|TEST|ST|CHANG|E11||Chair stands in 30 seconds, age 70 to 74: men under 12, women under 10.
+NUM|P14|F16|STRONG|CY|CHANG|E04||Strength fades two to five times faster than muscle size. So test strength.
+NUM|P06|F14|KNEES|MB|CHANG|E41||Up to 3 out of 10 pain is okay if it's gone by morning.
+NUM|P15|F28|BALANCE|CY|CHANG|E36||Vitamin D pills for steady feet? The task force said no. Exercise got a B.
+NUM|P07|F21|BREATH|MB|CHANG|E19||Six breaths a minute. That's the pace. Here's what it does to your heart rhythm.
+# ---- Blitz bank H301–H390 (2026-09-30): one hook per new script S61–S150, written to the POSTDB §8 grammars (object/body part in the first 3 words; 'If you [habit] every [time]'; myth 'not X, not Y'; 'watch what happens'; tests you do now; share triggers). LCH = founding launch week.
+TST|P04|F02|TEST|CY|CHANG|E07||Two gallon milk jugs. Walk to the fence and back. Can you?
+IDN|P02|F32|STRONG|CY|CHANG|E01,E46||If you stand up every time the ads come on, that's sixty stands a night.
+CUR|P03|F02|BALANCE|CY|CHANG|E09||Glass of water, full to the top. Stand on one leg and watch it.
+TST|P03|F32|BALANCE|CY|CHANG|E13||If you march in place every time the microwave runs, that's balance practice all day.
+MYT|P15|F28|STRONG|CY|CHANG|E42,E21,E43||Your heart's best friend isn't only the treadmill. Not only the bike. Muscles get a vote.
+CUR|P06|F03|BACK|CY|CHANG|E30,E41||Bottom shelf of the fridge. Don't fold in half. Watch how I get down there.
+TST|P14|F02|TEST|CY|CHANG|E10||If you walk down your hallway every day, time it once. Four meters. Painter's tape.
+FOD|P02|F17|STRONG|CY|CHANG|E11,E01||If you push on the armrests every time you stand, your legs skip their job.
+IDN|P01|F33|FAMILY|CY|CHANG|E11||Send this to your mom. Then do this chair test with her on the phone tonight.
+NUM|P14|F13|STRONG|CY|CHANG|E04,E39||The number one thing to test is not thigh size, not the scale. It's strength.
+TST|P02|F01|STRONG|CY|CHANG|E02||If you make coffee every morning, set this timer for sixty seconds and stand with me.
+CUR|P03|F03|BACK|CY|CHANG|E12||If you drop your keys every week like me, pick them up like a golfer.
+FOD|P03|F15|BALANCE|CY|CHANG|E13,E36||If you walk past a curled rug corner every day, fix it tonight. Then practice this.
+MYT|P15|F24|STRONG|CY|CHANG|E42,E02||Red face. Chair arms. Same weight for years. Three mistakes I see after 60.
+TST|P01|F02|TEST|CY|CHANG|E11,E09,E10||Notebook. Three numbers. Chair, one leg, walking speed. Write them tonight.
+KIT|P13|F12|SOUP|CY|CHANG|E28||If you lift every week, breakfast needs protein. Twenty-eight grams. Sun counted.
+KIT|P04|F15|STRONG|ST|CHANG|E01||Soup cans. Curl them slowly, and just watch my forearms work.
+TST|P02|F02|STRONG|ST|CHANG|E02||Twenty-pound bag of rice. Hug it. Squat to the chair. How many clean ones?
+CUR|P02|F15|BALANCE|ST|CHANG|E39||If you shuffle every time you walk, try fast feet at the counter. Three each way.
+MYT|P15|F28|STRONG|ST|CHANG|E02,E43||Two-pound dumbbells for years? The guidelines for older adults go heavier. Slowly.
+IDN|P01|F25|STRONG|ST|CHANG|E42||Eighty kilos. Five reps. I'm 74. Here's where you start instead.
+IDN|P04|F15|TEST|ST|CHANG|E07||Hammer. Hold the very end of the handle, turn it slowly, and watch your forearm.
+CUR|P02|F03|STRONG|ST|CHANG|E01||If you haul yourself out by the door frame every time, your legs skip practice.
+CPL|P04|F25|STRONG|ST|CHANG|E01||Cooler full of ice. Frank carries it one way. I carry it another. Both count.
+CUR|P06|F03|KNEES|ST|CHANG|E01,E41||Tape on your shoe. Point your knee at it every rep, and watch what happens.
+CUR|P04|F15|BACK|ST|CHANG|E01||If you push and reach every day, pull once. Door anchor, band, ribs.
+IDN|P04|F15|STRONG|ST|CHANG|E01||Carry-on bag, overhead bin. Practice it at home before the airport tests you.
+CUR|P05|F20|BACK|MB|CHANG|E47,E46||If you wait for the coffee every morning, write the alphabet with your ankles.
+NUM|P06|F14|KNEES|MB|CHANG|E41||Knee pain, zero to ten. Here's the number where you keep going.
+NUM|P08|F22|BALANCE|MB|CHANG|E14||Fence. One hand on it. Cloud hands, slowly, and watch your weight shift.
+CUR|P07|F21|BREATH|MB|CHANG|E19||Drinking straw. Breathe out through it slowly. Watch what happens to my shoulders.
+BED|P09|F05|SLEEP|MB|CHANG|E19,E46,E48||If you put a paperback on your belly every night, watch how your breathing slows.
+TST|P06|F14|BACK|MB|CHANG|E41,E01||Top shelf. Reach for the mug and watch your shoulder. Did it climb to your ear?
+BED|P08|F22|SLEEP|MB|CHANG|E17,E46||If you watch TV every evening, sit on the sofa's edge and draw the bow first.
+BED|P06|F03|BACK|MB|CHANG|E30,E41,E46||If you sit straight up every morning when the alarm rings, roll like a log instead.
+CPL|P03|F32|BALANCE|MB|CHANG|E12||If you stand heel-to-toe every time you do the dishes, that's balance practice every night.
+BLT|P05|F33|BACK|MB|CHANG|E30||Send this to the man in your house who says stretching is a waste of time.
+NUM|P08|F28|KNEES|MB|CHANG|E15,E41||Knee osteoarthritis. 204 adults. Tai chi or physical therapy. Same improvement.
+MYT|P15|F04|SOUP|SK|SUN|E28||If you drink warm water every morning on an empty stomach, here's what actually happens.
+MYT|P15|F04|SOUP|SK|SUN|E28||Garlic cloves in warm water every morning? Chop them into dinner instead.
+CUR|P15|F04|SOUP|SK|SUN|E32,E28||Honey on the tomato. Watch what happens.
+KIT|P10|F06|GUT|SK|SUN|E24||If you buy frozen peas every week, that's eight grams of fiber a cup.
+MYT|P15|F04|GUT|SK|SUN|E22||Cucumber, lemon, mint in water. Very pretty. Here's what it doesn't do.
+KIT|P10|F31|GUT|SK|SUN|E24||If you eat oats every morning, here's how to get fourteen grams of fiber by eight.
+MYT|P15|F04|GUT|SK|SUN|E23||Cinnamon on everything for your blood sugar? It's a spice, not a plan.
+NUM|P13|F18|SOUP|SK|SUN|E28||If you eat two eggs every morning, that's twelve grams. Breakfast needs twenty-five.
+MYT|P15|F04|BACK|SK|SUN|E30||Cabbage leaf on a sore back? Sweetheart, cabbage goes in the kimchi jar.
+KIT|P10|F19|GUT|SK|SUN|E26||Canned sauerkraut? Usually not live. Not the same. Buy it from the fridge aisle.
+MYT|P15|F04|SOUP|SK|SUN|E35||Standing on a tray of salt? Salt belongs in the pot. Maybe less of it.
+KIT|P12|F06|SOUP|SK|SUN|E33||Ginger every morning? Not magic, not useless. It may help a little.
+BLT|P13|F18|SOUP|SK|SUN|E28||If you eat peanut butter every morning for protein, sweetheart, you're eating a sauce.
+CUR|P15|F04|GUT|SK|SUN|E24||Blueberries in a glass of water. Watch what happens.
+KIT|P13|F18|SOUP|SK|SUN|E28||If you buy the little fruit yogurts every week, flip one. Read one number.
+KIT|P10|F06|GUT|SK|SUN|E24||Popcorn is not junk, not a cheat. Three cups air-popped is a whole grain.
+BED|P15|F04|SLEEP|SY|SUN|E19,E48||Sesame oil behind your ears for sleep? It goes in the spinach.
+MYT|P15|F04|BREATH|SY|SUN|E18||Your feet can't calm a racing mind. Your exhale can. Here's the study.
+BLT|P16|F07|TEST|SY|SUN|E07||If you let the bagger carry your groceries every week, your hands miss the work.
+BLT|P16|F35|BEGIN|SY|SUN|E37||Your friend who stopped coming to church. Or cards. Or walking. Call her today.
+IDN|P01|F14|STRONG|SY|SUN|E45||Grandkids play on the floor. Can you get down there, and back up?
+BLT|P03|F07|BALANCE|SY|SUN|E12||If you wear socks on a wood floor every day, sweetheart, that's an ice rink.
+IDN|P18|F26|KNEES|SY|SUN|E03,E41||Three knee questions from you. Three blunt answers from me.
+FOD|P09|F07|BALANCE|SY|SUN|E46||If you jump up from the couch every time the show ends, the room spins.
+KIT|P13|F10|SOUP|SY|SUN|E28||If you eat crackers and tea every lunch, look at this plate. Three grams.
+BLT|P16|F07|STRONG|SY|SUN|E01||If you buy eighty-dollar face cream every month, add ten free chair stands.
+CPL|P17|F34|BALANCE|CS|DUO|E13||Walk backwards along the counter. Ten steps. Loser does the dishes.
+CPL|P17|F08|BACK|CS|DUO|E02||Forty-one degrees in the garage. He's in the tank top again.
+KIT|P17|F31|GUT|CS|DUO|E26||Jajangmyeon Sunday. He cooked. I brought the kimchi and a cucumber.
+CPL|P17|F34|TEST|CS|DUO|E45||Toy truck under the couch. Who gets down, grabs it, and gets back up first?
+CPL|P17|F28|BEGIN|CS|DUO|E37||Printer's out of ink again. Thirty pages. One study. About friends.
+CPL|P17|F25|KNEES|CS|DUO|E01||Frank's porch steps. Going down is the hard part. Watch his knee.
+CPL|P17|F08|BACK|CS|DUO|E30,E41||Hips. Now. I don't care that the cat is on the mat.
+CPL|P17|F27|STRONG|CS|DUO|E01||1976. He carried me over the threshold. He still wants to. Absolutely not.
+CPL|P17|F29|BEGIN|CS|DUO|E22||If you walk every evening, six to eight thousand steps is the number that mattered.
+CPL|P17|F08|STRONG|CS|DUO|E02,E43||Page one of my training log. 2012. My first deadlift. It was a cold morning—
+LCH|P20|F38|JOIN|CY|CHANG|||Garage door's open. So is Strong Years. Founding members, first 5,000.
+LCH|P20|F39|BEGIN|CY|CHANG|||I'm Chang. I'm AI. Here's what's real on this page.
+LCH|P19|F11|BALANCE|CY|CHANG|E12||Thirty days of balance. One minute a day. Day one is tomorrow. Chart's on the fridge.
+LCH|P20|F38|JOIN|CY|CHANG|||'Founding member.' Sounds fancy. Here's exactly what it means. Four things.
+LCH|P16|F33|FAMILY|CY|CHANG|||Your dad won't buy this for himself. He'll use it if you give it to him.
+LCH|P20|F38|JOIN|CY|CHANG|||Phone on the counter. This is what tomorrow morning looks like as a member.
+LCH|P20|F38|JOIN|SK|SUN|||Recipe card, every Sunday, with a grade on the remedy. Doors are open.
+LCH|P16|F33|FAMILY|SK|SUN|||Send this to your daughter. Tell her what you want for your birthday. For once.
+LCH|P20|F07|JOIN|SK|SUN|||Cancel button. I made them put it where you can find it. Watch.
+LCH|P20|F39|BEGIN|SK|SUN|||Rules of my kitchen page. Four of them. Read before you follow.
+LCH|P20|F38|JOIN|CS|DUO|||Fifty years married. Fictional. Founding members: real. Doors are open.
+LCH|P20|F39|JOIN|CS|DUO|||Before you follow us, or join us: we're AI.
+LCH|P19|F11|STRONG|CS|DUO|E01||Two chairs. Seven days. Ten minutes. Loser does dishes all week.
+LCH|P16|F33|FAMILY|CS|DUO|||To the kids who call on Sundays: here's a gift that shows up every morning.
+LCH|P20|F38|JOIN|CS|DUO|||'Founding price, locked.' Locked how? Show me the terms.
+LCH|P20|F10|JOIN|CS|DUO|||'Is it a subscription?' Yes. Four more questions. Fast answers.
+# ---- Runway + launch-week bank H391–H430 (2026-10-01, CANON UPDATE 2): one hook per script S151–S190. H391–H415 = runway (value-first; WAITLIST CTA in 8 of 25), H416–H430 = LCH launch week (ebook BOOK front end + founding membership).
+TST|P04|F15|STRONG|CY|CHANG|E01,E02||Laundry basket, full. Hug it close and watch your back stay tall.
+IDN|P02|F32|STRONG|CY|CHANG|E47||If you brush your teeth every night, add ten slow heel raises at the sink.
+TST|P03|F32|WAITLIST|CY|CHANG|E50||If you wait for the kettle every morning, stand heel to toe while it boils.
+MYT|P15|F04|TEST|CY|CHANG|E02,E43||'Lifting is dangerous after seventy.' Is it? Watch me pick up this eight-kilo bell.
+CUR|P07|F21|BREATH|CY|CHANG|E19||Not faster, not deeper. Longer breaths out. Try it right now with me.
+IDN|P01|F17|WAITLIST|CY|CHANG|E45||If you sit on the floor every evening for the news, getting up stops being scary.
+NUM|P14|F13|KNEES|CY|CHANG|E04,E01||Thigh muscles do most of the work when you stand up. Feel them switch on.
+IDN|P20|F08|WAITLIST|CY|CHANG|||Not a doctor, not a real person. An AI welder. Here's what's real.
+TST|P01|F02|TEST|CY|CHANG|E49||Chair, wall, thirty seconds. Watch how many I do, then you go.
+KIT|P10|F06|GUT|SK|SUN|E25||If you eat two green kiwis every morning, here's what a real study found.
+MYT|P15|F28|SOUP|SK|SUN|E57||Chicken soup for a cold? Show me the study. Okay. Here it is.
+MYT|P12|F04|BEGIN|SK|SUN|E58||Not a superfood, not poison. Seaweed snacks, every day? Read the iodine first.
+KIT|P10|F18|WAITLIST|SK|SUN|E24,E52||One can of chickpeas. Three meals. Here's the fiber math, out loud.
+BLT|P13|F12|WAITLIST|SK|SUN|E28,E52||If you eat toast and coffee every morning, you're short on protein. Let's fix breakfast.
+BLT|P16|F07|BEGIN|SK|SUN|E29,E40||Seventy-six, too old to lift? Not too old, not too late. Too comfortable.
+KIT|P11|F31|SOUP|SK|SUN|E28,E52||Firm tofu, crumbled. Watch it turn into breakfast with thirty grams of protein.
+BLT|P20|F26|WAITLIST|SK|SUN|||'Are you even real?' No. I'm AI. My opinion of your breakfast is real.
+CPL|P01|F34|TEST|CS|DUO|E49||Thirty-second chair test. Him versus me. Watch his face when I win.
+CPL|P17|F08|BEGIN|CS|DUO|||If your husband flexes in every shiny surface, you're married to this man.
+CPL|P03|F23|BALANCE|CS|DUO|E50||If you do the dishes every night, take turns standing on one leg at the sink.
+BLT|P16|F35|BEGIN|CS|DUO|E37||Not an app, not a gym. Call one person before dinner tonight.
+CPL|P13|F18|SOUP|CS|DUO|E28,E52||Fourteen dumplings. He says twelve. Let's count the protein, not the dumplings.
+IDN|P01|F33|TEST|CS|DUO|E49||Sunday video call with your mom? Do the chair test together. She'll say she's fine.
+BLT|P20|F10|WAITLIST|CS|DUO|||'Is it another course I'll never open?' Short version: no. Here's what it is.
+CPL|P08|F22|WAITLIST|CS|DUO|E17||If you wait for the coffee every morning, give me one minute of tai chi.
+LCH|P20|F38|BOOK|CY|CHANG|||Doors are open. Two little books. Start here, not with a big program.
+LCH|P20|F38|JOIN|CY|CHANG|||Founding membership. I'll read you the terms out loud. All of them.
+LCH|P02|F01|BOOK|CY|CHANG|E01||Not a course, not a challenge. Seven mornings, one chair. Here's day one, free.
+LCH|P06|F14|BOOK|CY|CHANG|E02||If you climb the same three stairs every day, day four is for you.
+LCH|P20|F10|BOOK|CY|CHANG|||Why only 5,000 founding members? Because that's how many we can welcome properly.
+LCH|P20|F38|BOOK|SK|SUN|E28,E52||My Strong Kitchen book is out. Grams in every recipe. No vibes.
+LCH|P11|F31|BOOK|SK|SUN|E28,E52||Egg, tofu, scallion. Watch me make thirty grams of breakfast from my book.
+LCH|P16|F07|BOOK|SK|SUN|E28||Not a diet book, not a meal plan. A cookbook with the grams written in.
+LCH|P20|F10|JOIN|SK|SUN|||'Is the membership worth it?' Short version: only if you'll use it. Here's how to know.
+LCH|P16|F33|FAMILY|SK|SUN|||Buying for your mother? Don't sign her up for something that renews forever.
+LCH|P20|F38|BOOK|CS|DUO|||Doors open today. Here's the honest version, because he talks too slowly.
+LCH|P20|F10|BOOK|CS|DUO|||If you already lift three times every week, don't buy our books. Really.
+LCH|P20|F38|JOIN|CS|DUO|||'Locked' price. Locked how? She made me explain it properly.
+LCH|P20|F26|BOOK|CS|DUO|||Your questions from launch week. Real questions. No fake reviews. Let's go.
+LCH|P20|F39|BOOK|CS|DUO|||Not a countdown, not a midnight price jump. Launch week ends. Here's what changes.

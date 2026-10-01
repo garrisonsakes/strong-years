@@ -1,0 +1,6001 @@
+[
+ {
+  "id": "H001",
+  "cat": "CUR",
+  "pillar": "P01",
+  "format": "F27",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": true,
+  "hook": "I'm 74. This is the one thing I did every day since 60."
+ },
+ {
+  "id": "H002",
+  "cat": "CUR",
+  "pillar": "P14",
+  "format": "F13",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E22"
+  ],
+  "test_first": false,
+  "hook": "If you sit for hours every afternoon, your calves take the afternoon off. Try this."
+ },
+ {
+  "id": "H003",
+  "cat": "CUR",
+  "pillar": "P04",
+  "format": "F16",
+  "cta": "TEST",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E07"
+  ],
+  "test_first": true,
+  "hook": "Your handshake is telling your future. Here's what it says."
+ },
+ {
+  "id": "H004",
+  "cat": "CUR",
+  "pillar": "P03",
+  "format": "F02",
+  "cta": "BALANCE",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E09"
+  ],
+  "test_first": false,
+  "hook": "Stand on one leg. Count. That number matters more than you think."
+ },
+ {
+  "id": "H005",
+  "cat": "CUR",
+  "pillar": "P10",
+  "format": "F06",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E25"
+  ],
+  "test_first": false,
+  "hook": "The fruit I put in his lunch every day. It's not an apple."
+ },
+ {
+  "id": "H006",
+  "cat": "CUR",
+  "pillar": "P07",
+  "format": "F21",
+  "cta": "BREATH",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E18"
+  ],
+  "test_first": false,
+  "hook": "Two breaths in, one long breath out. Watch my shoulders drop."
+ },
+ {
+  "id": "H007",
+  "cat": "CUR",
+  "pillar": "P14",
+  "format": "F13",
+  "cta": "KNEES",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "Why your knees complain more going down stairs than up."
+ },
+ {
+  "id": "H008",
+  "cat": "CUR",
+  "pillar": "P05",
+  "format": "F15",
+  "cta": "BACK",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E30"
+  ],
+  "test_first": false,
+  "hook": "Your hips got stiff for a reason nobody told you."
+ },
+ {
+  "id": "H009",
+  "cat": "CUR",
+  "pillar": "P09",
+  "format": "F05",
+  "cta": "SLEEP",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E19"
+  ],
+  "test_first": false,
+  "hook": "What I do in bed before I close my eyes. Ninety seconds."
+ },
+ {
+  "id": "H010",
+  "cat": "CUR",
+  "pillar": "P11",
+  "format": "F31",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "In Korea we eat this soup on birthdays. I make it every week."
+ },
+ {
+  "id": "H011",
+  "cat": "CUR",
+  "pillar": "P13",
+  "format": "F18",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": true,
+  "hook": "I weighed my husband's breakfast. He was 20 grams short."
+ },
+ {
+  "id": "H012",
+  "cat": "CUR",
+  "pillar": "P02",
+  "format": "F17",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "The best gym you own is in your kitchen. It has four legs."
+ },
+ {
+  "id": "H013",
+  "cat": "CUR",
+  "pillar": "P14",
+  "format": "F13",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E05"
+  ],
+  "test_first": false,
+  "hook": "Your muscles only care what you did this week."
+ },
+ {
+  "id": "H014",
+  "cat": "CUR",
+  "pillar": "P06",
+  "format": "F03",
+  "cta": "BACK",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E30"
+  ],
+  "test_first": false,
+  "hook": "If you do dishes every night at a low sink, try this two-second back fix."
+ },
+ {
+  "id": "H015",
+  "cat": "CUR",
+  "pillar": "P08",
+  "format": "F22",
+  "cta": "BALANCE",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E14"
+  ],
+  "test_first": false,
+  "hook": "Old men in the park taught me this at 14. Science caught up later."
+ },
+ {
+  "id": "H016",
+  "cat": "CUR",
+  "pillar": "P04",
+  "format": "F15",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E12"
+  ],
+  "test_first": false,
+  "hook": "Why I carry my groceries the long way around the house."
+ },
+ {
+  "id": "H017",
+  "cat": "CUR",
+  "pillar": "P12",
+  "format": "F06",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E25"
+  ],
+  "test_first": false,
+  "hook": "Two of these a day did as well as prunes. Small study. Big surprise."
+ },
+ {
+  "id": "H018",
+  "cat": "CUR",
+  "pillar": "P01",
+  "format": "F02",
+  "cta": "TEST",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E11"
+  ],
+  "test_first": false,
+  "hook": "There's a 30-second test clinicians use. You need one chair."
+ },
+ {
+  "id": "H019",
+  "cat": "CUR",
+  "pillar": "P14",
+  "format": "F16",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E05"
+  ],
+  "test_first": false,
+  "hook": "What happens to your legs after 10 days in bed. Sit down first."
+ },
+ {
+  "id": "H020",
+  "cat": "CUR",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "STRONG",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E29"
+  ],
+  "test_first": false,
+  "hook": "I'm 76. I lift things. Here's the first thing I lifted."
+ },
+ {
+  "id": "H021",
+  "cat": "CUR",
+  "pillar": "P05",
+  "format": "F20",
+  "cta": "BACK",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E30"
+  ],
+  "test_first": false,
+  "hook": "If you wake up stiff every morning, do this before your feet touch the floor."
+ },
+ {
+  "id": "H022",
+  "cat": "CUR",
+  "pillar": "P10",
+  "format": "F06",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E23"
+  ],
+  "test_first": false,
+  "hook": "What my family did after every dinner for 50 years. Now there's a study."
+ },
+ {
+  "id": "H023",
+  "cat": "CUR",
+  "pillar": "P03",
+  "format": "F02",
+  "cta": "BALANCE",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E12"
+  ],
+  "test_first": false,
+  "hook": "Close your eyes for 10 seconds. Hold the counter first."
+ },
+ {
+  "id": "H024",
+  "cat": "CUR",
+  "pillar": "P07",
+  "format": "F13",
+  "cta": "BREATH",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E19"
+  ],
+  "test_first": false,
+  "hook": "Your exhale is a brake pedal. Here's how to press it."
+ },
+ {
+  "id": "H025",
+  "cat": "CUR",
+  "pillar": "P02",
+  "format": "F13",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "The muscle that gets you off the toilet at 90. Train it now."
+ },
+ {
+  "id": "H026",
+  "cat": "CUR",
+  "pillar": "P11",
+  "format": "F31",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E26"
+  ],
+  "test_first": false,
+  "hook": "Why there are two clay jars on my kitchen counter."
+ },
+ {
+  "id": "H027",
+  "cat": "CUR",
+  "pillar": "P06",
+  "format": "F14",
+  "cta": "BACK",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E30"
+  ],
+  "test_first": false,
+  "hook": "Reach your top shelf without a grunt? Try this first."
+ },
+ {
+  "id": "H028",
+  "cat": "CUR",
+  "pillar": "P17",
+  "format": "F08",
+  "cta": "BEGIN",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "Married 50 years. This is what we do every night at eight."
+ },
+ {
+  "id": "H029",
+  "cat": "CUR",
+  "pillar": "P01",
+  "format": "F27",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E21"
+  ],
+  "test_first": false,
+  "hook": "I'm going to show you my training log. Page fourteen hundred."
+ },
+ {
+  "id": "H030",
+  "cat": "CUR",
+  "pillar": "P14",
+  "format": "F13",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E04"
+  ],
+  "test_first": false,
+  "hook": "Jar lids didn't get tighter. Something else changed."
+ },
+ {
+  "id": "H031",
+  "cat": "TST",
+  "pillar": "P01",
+  "format": "F02",
+  "cta": "TEST",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E11"
+  ],
+  "test_first": true,
+  "hook": "If you use your hands every time you stand, try this. Thirty seconds. No hands."
+ },
+ {
+  "id": "H032",
+  "cat": "TST",
+  "pillar": "P03",
+  "format": "F02",
+  "cta": "BALANCE",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E09"
+  ],
+  "test_first": true,
+  "hook": "Stand on one leg next to the counter, and just watch what happens by second ten."
+ },
+ {
+  "id": "H033",
+  "cat": "TST",
+  "pillar": "P01",
+  "format": "F02",
+  "cta": "TEST",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E08"
+  ],
+  "test_first": true,
+  "hook": "Sit on the floor and get up without hands. Score yourself out of 10."
+ },
+ {
+  "id": "H034",
+  "cat": "TST",
+  "pillar": "P02",
+  "format": "F02",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E06"
+  ],
+  "test_first": false,
+  "hook": "Five chair stands. Time it. Over 15 seconds? Let's work."
+ },
+ {
+  "id": "H035",
+  "cat": "TST",
+  "pillar": "P04",
+  "format": "F02",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E07"
+  ],
+  "test_first": false,
+  "hook": "Two full milk jugs. Walk 30 steps. Can you?"
+ },
+ {
+  "id": "H036",
+  "cat": "TST",
+  "pillar": "P03",
+  "format": "F02",
+  "cta": "BALANCE",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E13"
+  ],
+  "test_first": false,
+  "hook": "Heel-to-toe along the counter. Ten steps. Any wobble?"
+ },
+ {
+  "id": "H037",
+  "cat": "TST",
+  "pillar": "P14",
+  "format": "F02",
+  "cta": "TEST",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E10"
+  ],
+  "test_first": false,
+  "hook": "How fast do you walk? A 4-meter test with a tape measure."
+ },
+ {
+  "id": "H038",
+  "cat": "TST",
+  "pillar": "P05",
+  "format": "F02",
+  "cta": "BACK",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E30"
+  ],
+  "test_first": false,
+  "hook": "Touch the back of your head with both hands. Shoulder check."
+ },
+ {
+  "id": "H039",
+  "cat": "TST",
+  "pillar": "P02",
+  "format": "F23",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E20"
+  ],
+  "test_first": false,
+  "hook": "Wall sit next to me. I'm 74. Who stops first?"
+ },
+ {
+  "id": "H040",
+  "cat": "TST",
+  "pillar": "P19",
+  "format": "F11",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "Seven days. Ten minutes. Day one starts now. Stand up."
+ },
+ {
+  "id": "H041",
+  "cat": "TST",
+  "pillar": "P03",
+  "format": "F32",
+  "cta": "BALANCE",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E12"
+  ],
+  "test_first": false,
+  "hook": "Brush your teeth on one leg. Hold the sink. Who wins?"
+ },
+ {
+  "id": "H042",
+  "cat": "TST",
+  "pillar": "P05",
+  "format": "F02",
+  "cta": "BACK",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E30"
+  ],
+  "test_first": false,
+  "hook": "Lie on your back. Can both knees fall to the side together?"
+ },
+ {
+  "id": "H043",
+  "cat": "TST",
+  "pillar": "P01",
+  "format": "F02",
+  "cta": "TEST",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E08"
+  ],
+  "test_first": false,
+  "hook": "Three tests. Chair, one leg, floor. Write your numbers today."
+ },
+ {
+  "id": "H044",
+  "cat": "TST",
+  "pillar": "P04",
+  "format": "F02",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "Push-ups on the kitchen counter. How many clean ones?"
+ },
+ {
+  "id": "H045",
+  "cat": "TST",
+  "pillar": "P02",
+  "format": "F02",
+  "cta": "KNEES",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "Bottom stair, ten step-ups each leg, holding the rail. Easy?"
+ },
+ {
+  "id": "H046",
+  "cat": "TST",
+  "pillar": "P03",
+  "format": "F02",
+  "cta": "BALANCE",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E12"
+  ],
+  "test_first": false,
+  "hook": "Stand on one foot and turn your head. That's the real test."
+ },
+ {
+  "id": "H047",
+  "cat": "TST",
+  "pillar": "P17",
+  "format": "F08",
+  "cta": "BALANCE",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E09"
+  ],
+  "test_first": false,
+  "hook": "One-leg balance, husband versus wife. Loser does dishes."
+ },
+ {
+  "id": "H048",
+  "cat": "TST",
+  "pillar": "P06",
+  "format": "F02",
+  "cta": "BACK",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E30"
+  ],
+  "test_first": false,
+  "hook": "Can you put your sock on standing up? Hold the counter."
+ },
+ {
+  "id": "H049",
+  "cat": "TST",
+  "pillar": "P09",
+  "format": "F05",
+  "cta": "SLEEP",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E19"
+  ],
+  "test_first": false,
+  "hook": "Tonight in bed: count how many slow breaths you finish."
+ },
+ {
+  "id": "H050",
+  "cat": "TST",
+  "pillar": "P13",
+  "format": "F18",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "Guess the protein on this plate. Closest guess gets a recipe."
+ },
+ {
+  "id": "H051",
+  "cat": "TST",
+  "pillar": "P02",
+  "format": "F17",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "How low can you sit and still stand up? Stack books on the chair."
+ },
+ {
+  "id": "H052",
+  "cat": "TST",
+  "pillar": "P04",
+  "format": "F02",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E07"
+  ],
+  "test_first": false,
+  "hook": "Open a jar with your weaker hand. Honest answer below."
+ },
+ {
+  "id": "H053",
+  "cat": "TST",
+  "pillar": "P07",
+  "format": "F21",
+  "cta": "BREATH",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E19"
+  ],
+  "test_first": false,
+  "hook": "How long is your exhale? Count it with me."
+ },
+ {
+  "id": "H054",
+  "cat": "TST",
+  "pillar": "P19",
+  "format": "F11",
+  "cta": "BALANCE",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E12"
+  ],
+  "test_first": false,
+  "hook": "Thirty days of balance. One minute a day. Day one: feet together."
+ },
+ {
+  "id": "H055",
+  "cat": "TST",
+  "pillar": "P01",
+  "format": "F14",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E45"
+  ],
+  "test_first": false,
+  "hook": "Get down to the floor with a chair. Now, can you get back up?"
+ },
+ {
+  "id": "H056",
+  "cat": "TST",
+  "pillar": "P17",
+  "format": "F34",
+  "cta": "STRONG",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "Couples test: sit-to-stand holding hands. Who pulls whom?"
+ },
+ {
+  "id": "H057",
+  "cat": "TST",
+  "pillar": "P03",
+  "format": "F02",
+  "cta": "BALANCE",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E12"
+  ],
+  "test_first": false,
+  "hook": "Can you walk and name five animals at the same time?"
+ },
+ {
+  "id": "H058",
+  "cat": "TST",
+  "pillar": "P02",
+  "format": "F02",
+  "cta": "STRONG",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E02"
+  ],
+  "test_first": false,
+  "hook": "Squat to the chair, pause three seconds, stand. No dropping."
+ },
+ {
+  "id": "H059",
+  "cat": "TST",
+  "pillar": "P02",
+  "format": "F02",
+  "cta": "BALANCE",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E12"
+  ],
+  "test_first": false,
+  "hook": "Sixty seconds. How many times can you rise onto your toes?"
+ },
+ {
+  "id": "H060",
+  "cat": "TST",
+  "pillar": "P19",
+  "format": "F11",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E25"
+  ],
+  "test_first": false,
+  "hook": "Two kiwis a day for seven days. I'm keeping a chart. Join me."
+ },
+ {
+  "id": "H061",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F04",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E23"
+  ],
+  "test_first": true,
+  "hook": "Onion in water? Not a remedy, not a tea. Put the onion in the soup."
+ },
+ {
+  "id": "H062",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F28",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": true,
+  "hook": "\"Lifting is dangerous after 60.\" Here's what 121 trials found."
+ },
+ {
+  "id": "H063",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F28",
+  "cta": "BALANCE",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E36"
+  ],
+  "test_first": true,
+  "hook": "Vitamin D pills for steady feet? Not the answer, not the plan. Practice is."
+ },
+ {
+  "id": "H064",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F28",
+  "cta": "BACK",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E30"
+  ],
+  "test_first": false,
+  "hook": "\"Rest your bad back.\" The biggest review says move it."
+ },
+ {
+  "id": "H065",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F28",
+  "cta": "KNEES",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "Squats are bad for older knees? The research disagrees."
+ },
+ {
+  "id": "H066",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F04",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E24"
+  ],
+  "test_first": false,
+  "hook": "Detox tea? No. Your liver already has a job."
+ },
+ {
+  "id": "H067",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F04",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E23"
+  ],
+  "test_first": false,
+  "hook": "A drink to \"burn sugar\" after dinner? Walk to the mailbox instead."
+ },
+ {
+  "id": "H068",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F28",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E03"
+  ],
+  "test_first": false,
+  "hook": "\"Too old to build muscle.\" Ten 90-year-olds would disagree."
+ },
+ {
+  "id": "H069",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F04",
+  "cta": "BALANCE",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E09"
+  ],
+  "test_first": false,
+  "hook": "Salt under your feet? No. Stand on one foot instead."
+ },
+ {
+  "id": "H070",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F04",
+  "cta": "BACK",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E30"
+  ],
+  "test_first": false,
+  "hook": "Cabbage leaf on your back for pain? Cabbage goes in kimchi."
+ },
+ {
+  "id": "H071",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F28",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "\"Old people need less protein.\" It's the other way around."
+ },
+ {
+  "id": "H072",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F28",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E21"
+  ],
+  "test_first": false,
+  "hook": "\"Walking is enough.\" Walking is wonderful. It isn't enough."
+ },
+ {
+  "id": "H073",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F21",
+  "cta": "BREATH",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E18"
+  ],
+  "test_first": false,
+  "hook": "\"Take a deep breath.\" Wrong half. It's the exhale."
+ },
+ {
+  "id": "H074",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F28",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E02"
+  ],
+  "test_first": false,
+  "hook": "\"Light weights, lots of reps is safer for seniors.\" Not always."
+ },
+ {
+  "id": "H075",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F28",
+  "cta": "BALANCE",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E14"
+  ],
+  "test_first": false,
+  "hook": "The move I'd start with is not a machine, not a gym class. It's tai chi."
+ },
+ {
+  "id": "H076",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F06",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E24"
+  ],
+  "test_first": false,
+  "hook": "\"Fiber makes me bloated, so I skip it.\" Go slower. Not zero."
+ },
+ {
+  "id": "H077",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F03",
+  "cta": "KNEES",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E02"
+  ],
+  "test_first": false,
+  "hook": "\"Never let your knees pass your toes.\" Watch how you climb stairs."
+ },
+ {
+  "id": "H078",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F03",
+  "cta": "BACK",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E30"
+  ],
+  "test_first": false,
+  "hook": "'Bend your knees, not your back.' Half true. Not the whole story. Learn the hinge."
+ },
+ {
+  "id": "H079",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F28",
+  "cta": "STRONG",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E29"
+  ],
+  "test_first": false,
+  "hook": "\"Women shouldn't lift heavy after menopause.\" One trial says otherwise."
+ },
+ {
+  "id": "H080",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F04",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E24"
+  ],
+  "test_first": false,
+  "hook": "Three-day juice cleanse? You threw away the fiber and kept the sugar."
+ },
+ {
+  "id": "H081",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F28",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E42"
+  ],
+  "test_first": false,
+  "hook": "\"Cardio is all your heart needs.\" Your muscles get a vote."
+ },
+ {
+  "id": "H082",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F28",
+  "cta": "BALANCE",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E12"
+  ],
+  "test_first": false,
+  "hook": "\"Balance is something you have or don't.\" It's trainable. 108 trials."
+ },
+ {
+  "id": "H083",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F28",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E22"
+  ],
+  "test_first": false,
+  "hook": "Ten thousand steps? Over 60, the benefit leveled off sooner."
+ },
+ {
+  "id": "H084",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F24",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E12"
+  ],
+  "test_first": false,
+  "hook": "\"Stretching is the most important thing after 60.\" It's third."
+ },
+ {
+  "id": "H085",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F03",
+  "cta": "BACK",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E40"
+  ],
+  "test_first": false,
+  "hook": "Sit-ups for a strong core? Not for older spines. Do this."
+ },
+ {
+  "id": "H086",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F28",
+  "cta": "BREATH",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E20"
+  ],
+  "test_first": false,
+  "hook": "\"Lower your blood pressure in 60 seconds\" videos. The honest version."
+ },
+ {
+  "id": "H087",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F31",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E26"
+  ],
+  "test_first": false,
+  "hook": "\"Kimchi is too spicy for old stomachs.\" Try this white one."
+ },
+ {
+  "id": "H088",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F28",
+  "cta": "KNEES",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E15"
+  ],
+  "test_first": false,
+  "hook": "\"Tai chi can't help arthritic knees.\" One trial matched physical therapy."
+ },
+ {
+  "id": "H089",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F16",
+  "cta": "TEST",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E07"
+  ],
+  "test_first": false,
+  "hook": "A stress ball won't add years. Here's what grip really tells you."
+ },
+ {
+  "id": "H090",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F07",
+  "cta": "BEGIN",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "\"Old people can't make new friends.\" Wrong. And it matters."
+ },
+ {
+  "id": "H091",
+  "cat": "FOD",
+  "pillar": "P14",
+  "format": "F16",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E05"
+  ],
+  "test_first": true,
+  "hook": "If you spend ten days in bed, watch what happens to your legs."
+ },
+ {
+  "id": "H092",
+  "cat": "FOD",
+  "pillar": "P01",
+  "format": "F02",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E11"
+  ],
+  "test_first": true,
+  "hook": "The day you need your arms to stand up is a warning. Start here."
+ },
+ {
+  "id": "H093",
+  "cat": "FOD",
+  "pillar": "P03",
+  "format": "F15",
+  "cta": "BALANCE",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E12"
+  ],
+  "test_first": true,
+  "hook": "If you practice balance every day, three counter moves are enough to start."
+ },
+ {
+  "id": "H094",
+  "cat": "FOD",
+  "pillar": "P14",
+  "format": "F16",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E04"
+  ],
+  "test_first": false,
+  "hook": "After 75, strength fades faster than muscle size. Test what your legs can do."
+ },
+ {
+  "id": "H095",
+  "cat": "FOD",
+  "pillar": "P01",
+  "format": "F14",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E45"
+  ],
+  "test_first": false,
+  "hook": "If you fell right now, could you get up? Practice before you need it."
+ },
+ {
+  "id": "H096",
+  "cat": "FOD",
+  "pillar": "P04",
+  "format": "F15",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E07"
+  ],
+  "test_first": false,
+  "hook": "Can't open jars anymore? Don't buy the gadget yet."
+ },
+ {
+  "id": "H097",
+  "cat": "FOD",
+  "pillar": "P02",
+  "format": "F17",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "The toilet, the car, the bed. Three chairs you'll sit in forever."
+ },
+ {
+  "id": "H098",
+  "cat": "FOD",
+  "pillar": "P03",
+  "format": "F15",
+  "cta": "BALANCE",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E12"
+  ],
+  "test_first": false,
+  "hook": "Afraid of falling, so you move less? That makes it worse. Break it."
+ },
+ {
+  "id": "H099",
+  "cat": "FOD",
+  "pillar": "P14",
+  "format": "F02",
+  "cta": "TEST",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E10"
+  ],
+  "test_first": false,
+  "hook": "Your walking speed says a lot about your future. Measure it."
+ },
+ {
+  "id": "H100",
+  "cat": "FOD",
+  "pillar": "P06",
+  "format": "F14",
+  "cta": "BACK",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E40"
+  ],
+  "test_first": false,
+  "hook": "Getting shorter and rounder? Here's what you can still train."
+ },
+ {
+  "id": "H101",
+  "cat": "FOD",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "BEGIN",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "Loneliness isn't just sad. It shows up in the health data."
+ },
+ {
+  "id": "H102",
+  "cat": "FOD",
+  "pillar": "P02",
+  "format": "F15",
+  "cta": "KNEES",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "Stairs getting harder? Some of it is age. A lot of it is practice."
+ },
+ {
+  "id": "H103",
+  "cat": "FOD",
+  "pillar": "P09",
+  "format": "F05",
+  "cta": "SLEEP",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E43"
+  ],
+  "test_first": false,
+  "hook": "Dizzy when you get up at night? Do this before you stand."
+ },
+ {
+  "id": "H104",
+  "cat": "FOD",
+  "pillar": "P13",
+  "format": "F18",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "Eating like a bird after 70? Your muscles notice."
+ },
+ {
+  "id": "H105",
+  "cat": "FOD",
+  "pillar": "P01",
+  "format": "F16",
+  "cta": "TEST",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E07"
+  ],
+  "test_first": false,
+  "hook": "In 142,861 people, grip strength was a better health signal than blood pressure."
+ },
+ {
+  "id": "H106",
+  "cat": "FOD",
+  "pillar": "P05",
+  "format": "F15",
+  "cta": "BACK",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E30"
+  ],
+  "test_first": false,
+  "hook": "Can't turn your head to back the car out? Start with this."
+ },
+ {
+  "id": "H107",
+  "cat": "FOD",
+  "pillar": "P03",
+  "format": "F16",
+  "cta": "BALANCE",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E09"
+  ],
+  "test_first": false,
+  "hook": "More than half of people 71 to 75 failed this 10-second test."
+ },
+ {
+  "id": "H108",
+  "cat": "FOD",
+  "pillar": "P04",
+  "format": "F15",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E12"
+  ],
+  "test_first": false,
+  "hook": "Carrying groceries in two trips now? Let's make it one again."
+ },
+ {
+  "id": "H109",
+  "cat": "FOD",
+  "pillar": "P06",
+  "format": "F14",
+  "cta": "KNEES",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E41"
+  ],
+  "test_first": false,
+  "hook": "Knee hurts, so you stopped walking. Now it hurts more. Break the loop."
+ },
+ {
+  "id": "H110",
+  "cat": "FOD",
+  "pillar": "P02",
+  "format": "F13",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E39"
+  ],
+  "test_first": false,
+  "hook": "The muscle fibers you lose first are the ones that catch you."
+ },
+ {
+  "id": "H111",
+  "cat": "FOD",
+  "pillar": "P10",
+  "format": "F06",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E25"
+  ],
+  "test_first": false,
+  "hook": "Constipated for years and \"just living with it\"? Try this, then tell your doctor."
+ },
+ {
+  "id": "H112",
+  "cat": "FOD",
+  "pillar": "P14",
+  "format": "F16",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E04"
+  ],
+  "test_first": false,
+  "hook": "Strength leaves two to five times faster than muscle size."
+ },
+ {
+  "id": "H113",
+  "cat": "FOD",
+  "pillar": "P16",
+  "format": "F33",
+  "cta": "FAMILY",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E12"
+  ],
+  "test_first": false,
+  "hook": "Your kids already worry about you. Give them less to worry about."
+ },
+ {
+  "id": "H114",
+  "cat": "FOD",
+  "pillar": "P01",
+  "format": "F16",
+  "cta": "TEST",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E08"
+  ],
+  "test_first": false,
+  "hook": "Every point on this floor test counts. 2,002 adults were scored. Score yourself."
+ },
+ {
+  "id": "H115",
+  "cat": "FOD",
+  "pillar": "P02",
+  "format": "F17",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E11"
+  ],
+  "test_first": false,
+  "hook": "Chair with armrests? You've been using them. Try one without."
+ },
+ {
+  "id": "H116",
+  "cat": "FOD",
+  "pillar": "P07",
+  "format": "F21",
+  "cta": "BREATH",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E19"
+  ],
+  "test_first": false,
+  "hook": "Breathing high in your chest all day? Your shoulders are doing your belly's job."
+ },
+ {
+  "id": "H117",
+  "cat": "FOD",
+  "pillar": "P13",
+  "format": "F18",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "Tea and toast at 75 is a muscle problem. Grams, not vibes."
+ },
+ {
+  "id": "H118",
+  "cat": "FOD",
+  "pillar": "P06",
+  "format": "F14",
+  "cta": "BACK",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E02"
+  ],
+  "test_first": false,
+  "hook": "Can't reach behind for your wallet or your bra? Try this gently."
+ },
+ {
+  "id": "H119",
+  "cat": "FOD",
+  "pillar": "P01",
+  "format": "F27",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E21"
+  ],
+  "test_first": false,
+  "hook": "Nobody at 80 wishes they'd trained less at 70."
+ },
+ {
+  "id": "H120",
+  "cat": "FOD",
+  "pillar": "P09",
+  "format": "F05",
+  "cta": "SLEEP",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E19"
+  ],
+  "test_first": false,
+  "hook": "Wide awake at 3 a.m. again? Don't grab the phone. Do this."
+ },
+ {
+  "id": "H121",
+  "cat": "IDN",
+  "pillar": "P16",
+  "format": "F27",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": true,
+  "hook": "I'm not a \"senior.\" I'm a person who trains."
+ },
+ {
+  "id": "H122",
+  "cat": "IDN",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "BEGIN",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": true,
+  "hook": "For the women who raised everyone and never did one thing for themselves."
+ },
+ {
+  "id": "H123",
+  "cat": "IDN",
+  "pillar": "P01",
+  "format": "F27",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "Over 60 and you still want to be useful? Watch this."
+ },
+ {
+  "id": "H124",
+  "cat": "IDN",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "STRONG",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E29"
+  ],
+  "test_first": false,
+  "hook": "Grandmothers who lift. Say hi."
+ },
+ {
+  "id": "H125",
+  "cat": "IDN",
+  "pillar": "P17",
+  "format": "F33",
+  "cta": "FAMILY",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E45"
+  ],
+  "test_first": false,
+  "hook": "For grandparents who want to get down on the floor with the grandkids. And back up."
+ },
+ {
+  "id": "H126",
+  "cat": "IDN",
+  "pillar": "P02",
+  "format": "F27",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "Retired. Not finished."
+ },
+ {
+  "id": "H127",
+  "cat": "IDN",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "STRONG",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E07"
+  ],
+  "test_first": true,
+  "hook": "I'm 76. I don't want to look young. I want to open my own jars."
+ },
+ {
+  "id": "H128",
+  "cat": "IDN",
+  "pillar": "P01",
+  "format": "F33",
+  "cta": "FAMILY",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "For every dad who \"doesn't need help.\" Neither do I. Train anyway."
+ },
+ {
+  "id": "H129",
+  "cat": "IDN",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "SOUP",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "If you're the one who cooks for everyone, this one's for you."
+ },
+ {
+  "id": "H130",
+  "cat": "IDN",
+  "pillar": "P03",
+  "format": "F15",
+  "cta": "BALANCE",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E12"
+  ],
+  "test_first": false,
+  "hook": "For people who hold the rail on every stair. Me too. Let's train."
+ },
+ {
+  "id": "H131",
+  "cat": "IDN",
+  "pillar": "P04",
+  "format": "F15",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E07"
+  ],
+  "test_first": false,
+  "hook": "Welders, farmers, mechanics, cooks. Your hands built things. Keep them strong."
+ },
+ {
+  "id": "H132",
+  "cat": "IDN",
+  "pillar": "P06",
+  "format": "F14",
+  "cta": "KNEES",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "New-knee club, say hi. This is your homework, after your PT says yes."
+ },
+ {
+  "id": "H133",
+  "cat": "IDN",
+  "pillar": "P18",
+  "format": "F17",
+  "cta": "BEGIN",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "Never exercised in your life? Start here. Seriously."
+ },
+ {
+  "id": "H134",
+  "cat": "IDN",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "STRONG",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E29"
+  ],
+  "test_first": false,
+  "hook": "For the women who were told their whole life to be small."
+ },
+ {
+  "id": "H135",
+  "cat": "IDN",
+  "pillar": "P17",
+  "format": "F34",
+  "cta": "STRONG",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E21"
+  ],
+  "test_first": false,
+  "hook": "Married 30, 40, 50 years? Train together. Here's how."
+ },
+ {
+  "id": "H136",
+  "cat": "IDN",
+  "pillar": "P16",
+  "format": "F27",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E03"
+  ],
+  "test_first": false,
+  "hook": "You're not too old. You're untrained. Different problem. Better news."
+ },
+ {
+  "id": "H137",
+  "cat": "IDN",
+  "pillar": "P08",
+  "format": "F22",
+  "cta": "BALANCE",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E14"
+  ],
+  "test_first": false,
+  "hook": "For people who hate the gym. This counts too."
+ },
+ {
+  "id": "H138",
+  "cat": "IDN",
+  "pillar": "P11",
+  "format": "F31",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E24"
+  ],
+  "test_first": false,
+  "hook": "Immigrant kitchens, say hi. We cooked with what we had."
+ },
+ {
+  "id": "H139",
+  "cat": "IDN",
+  "pillar": "P16",
+  "format": "F31",
+  "cta": "SOUP",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "Widowed and eating standing at the counter? Sit down. Let's cook for one."
+ },
+ {
+  "id": "H140",
+  "cat": "IDN",
+  "pillar": "P01",
+  "format": "F14",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E02"
+  ],
+  "test_first": false,
+  "hook": "Former athletes: your body remembers. Wake it up slowly."
+ },
+ {
+  "id": "H141",
+  "cat": "IDN",
+  "pillar": "P09",
+  "format": "F05",
+  "cta": "SLEEP",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E19"
+  ],
+  "test_first": false,
+  "hook": "Night owls over 60, this is for your 11 p.m."
+ },
+ {
+  "id": "H142",
+  "cat": "IDN",
+  "pillar": "P16",
+  "format": "F15",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "Raising your grandkids? You need legs like a 40-year-old. Let's work."
+ },
+ {
+  "id": "H143",
+  "cat": "IDN",
+  "pillar": "P13",
+  "format": "F18",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "Vegetarian over 60? Yes, you can get enough protein. Here's the plate."
+ },
+ {
+  "id": "H144",
+  "cat": "IDN",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "BEGIN",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "Caring for a sick husband or wife? You matter too."
+ },
+ {
+  "id": "H145",
+  "cat": "IDN",
+  "pillar": "P05",
+  "format": "F15",
+  "cta": "BACK",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E30"
+  ],
+  "test_first": false,
+  "hook": "Men over 70 who \"don't stretch\": I know. Me too. Four minutes."
+ },
+ {
+  "id": "H146",
+  "cat": "IDN",
+  "pillar": "P06",
+  "format": "F14",
+  "cta": "BACK",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E30"
+  ],
+  "test_first": false,
+  "hook": "Forty years at a desk, now retired, back still angry? This is for you."
+ },
+ {
+  "id": "H147",
+  "cat": "IDN",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "BEGIN",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "Women who survived everything and still can't say no. Practice with me."
+ },
+ {
+  "id": "H148",
+  "cat": "IDN",
+  "pillar": "P19",
+  "format": "F11",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "Day-one people: put a 1 in the comments. That's the entry fee."
+ },
+ {
+  "id": "H149",
+  "cat": "IDN",
+  "pillar": "P01",
+  "format": "F27",
+  "cta": "BEGIN",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "Ex-smokers, ex-couch, ex-\"too busy\": the door is still open."
+ },
+ {
+  "id": "H150",
+  "cat": "IDN",
+  "pillar": "P17",
+  "format": "F29",
+  "cta": "BALANCE",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E22"
+  ],
+  "test_first": false,
+  "hook": "For couples who argue about the thermostat. Same. Now come walk."
+ },
+ {
+  "id": "H151",
+  "cat": "BED",
+  "pillar": "P09",
+  "format": "F05",
+  "cta": "SLEEP",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E19"
+  ],
+  "test_first": true,
+  "hook": "If you do this every night before sleep, it takes ninety seconds. Lying down."
+ },
+ {
+  "id": "H152",
+  "cat": "BED",
+  "pillar": "P07",
+  "format": "F21",
+  "cta": "BREATH",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E18"
+  ],
+  "test_first": true,
+  "hook": "If you sigh out slowly every day for five minutes, your mood may follow."
+ },
+ {
+  "id": "H153",
+  "cat": "BED",
+  "pillar": "P09",
+  "format": "F05",
+  "cta": "SLEEP",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E43"
+  ],
+  "test_first": false,
+  "hook": "If you get up every night to use the bathroom, sit and count to ten first."
+ },
+ {
+  "id": "H154",
+  "cat": "BED",
+  "pillar": "P05",
+  "format": "F05",
+  "cta": "BACK",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E30"
+  ],
+  "test_first": false,
+  "hook": "The stretch I do lying in bed for my back. No floor needed."
+ },
+ {
+  "id": "H155",
+  "cat": "BED",
+  "pillar": "P09",
+  "format": "F21",
+  "cta": "SLEEP",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E19"
+  ],
+  "test_first": false,
+  "hook": "Awake at 3 a.m.? Six slow breaths before you do anything else."
+ },
+ {
+  "id": "H156",
+  "cat": "BED",
+  "pillar": "P06",
+  "format": "F05",
+  "cta": "KNEES",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E41"
+  ],
+  "test_first": false,
+  "hook": "Knees ache in bed? A pillow here, then this gentle move."
+ },
+ {
+  "id": "H157",
+  "cat": "BED",
+  "pillar": "P08",
+  "format": "F22",
+  "cta": "SLEEP",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E16"
+  ],
+  "test_first": false,
+  "hook": "Three slow tai chi moves in your pajamas. Then bed."
+ },
+ {
+  "id": "H158",
+  "cat": "BED",
+  "pillar": "P03",
+  "format": "F32",
+  "cta": "BALANCE",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E12"
+  ],
+  "test_first": true,
+  "hook": "If you brush your teeth every night, do this at the same time. Hold the sink."
+ },
+ {
+  "id": "H159",
+  "cat": "BED",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "BEGIN",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "Before bed, tell someone one thing that went right today. Sun Yoon's orders."
+ },
+ {
+  "id": "H160",
+  "cat": "BED",
+  "pillar": "P10",
+  "format": "F06",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E23"
+  ],
+  "test_first": false,
+  "hook": "Heavy dinner? Ten minutes of walking before the couch. Here's why."
+ },
+ {
+  "id": "H161",
+  "cat": "BED",
+  "pillar": "P09",
+  "format": "F05",
+  "cta": "SLEEP",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E19"
+  ],
+  "test_first": false,
+  "hook": "Legs feel heavy at night? Twenty ankle pumps before you lie down."
+ },
+ {
+  "id": "H162",
+  "cat": "BED",
+  "pillar": "P07",
+  "format": "F21",
+  "cta": "BREATH",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E19"
+  ],
+  "test_first": false,
+  "hook": "Breathe out longer than you breathe in. That's the whole trick."
+ },
+ {
+  "id": "H163",
+  "cat": "BED",
+  "pillar": "P17",
+  "format": "F08",
+  "cta": "SLEEP",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E19"
+  ],
+  "test_first": false,
+  "hook": "What we do every night before bed, after 50 years."
+ },
+ {
+  "id": "H164",
+  "cat": "BED",
+  "pillar": "P05",
+  "format": "F05",
+  "cta": "BACK",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E30"
+  ],
+  "test_first": false,
+  "hook": "Hips tight from sitting all day? Two moves on the bed. Slowly."
+ },
+ {
+  "id": "H165",
+  "cat": "BED",
+  "pillar": "P09",
+  "format": "F05",
+  "cta": "SLEEP",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E43"
+  ],
+  "test_first": false,
+  "hook": "Getting up to pee at night? Three rules so you get back safely."
+ },
+ {
+  "id": "H166",
+  "cat": "BED",
+  "pillar": "P12",
+  "format": "F06",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E32"
+  ],
+  "test_first": false,
+  "hook": "If you hear him cough every night, try a spoon of honey. There's a study."
+ },
+ {
+  "id": "H167",
+  "cat": "BED",
+  "pillar": "P08",
+  "format": "F22",
+  "cta": "SLEEP",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E17"
+  ],
+  "test_first": false,
+  "hook": "The evening qigong move I learned at 14. Arms up. Arms down."
+ },
+ {
+  "id": "H168",
+  "cat": "BED",
+  "pillar": "P09",
+  "format": "F15",
+  "cta": "BALANCE",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E36"
+  ],
+  "test_first": false,
+  "hook": "Your bedroom has a balance hazard. Let me show you."
+ },
+ {
+  "id": "H169",
+  "cat": "BED",
+  "pillar": "P06",
+  "format": "F05",
+  "cta": "BACK",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E30"
+  ],
+  "test_first": false,
+  "hook": "Shoulder aches when you lie on it? Try this before bed. Gently."
+ },
+ {
+  "id": "H170",
+  "cat": "BED",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "BEGIN",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "Don't go to bed angry. Go to bed, then fight tomorrow. Fifty years' advice."
+ },
+ {
+  "id": "H171",
+  "cat": "BED",
+  "pillar": "P07",
+  "format": "F21",
+  "cta": "BREATH",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E19"
+  ],
+  "test_first": false,
+  "hook": "Five seconds in. Five seconds out. Three minutes. Your body changes gears."
+ },
+ {
+  "id": "H172",
+  "cat": "BED",
+  "pillar": "P09",
+  "format": "F05",
+  "cta": "SLEEP",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E19"
+  ],
+  "test_first": false,
+  "hook": "Lie down, knees bent, hands on your belly. Watch them rise."
+ },
+ {
+  "id": "H173",
+  "cat": "BED",
+  "pillar": "P02",
+  "format": "F17",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E21"
+  ],
+  "test_first": false,
+  "hook": "Didn't train today? Five slow chair stands before bed. Still counts."
+ },
+ {
+  "id": "H174",
+  "cat": "BED",
+  "pillar": "P10",
+  "format": "F06",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E25"
+  ],
+  "test_first": false,
+  "hook": "Two kiwis after dinner. Here's why they're on my table."
+ },
+ {
+  "id": "H175",
+  "cat": "BED",
+  "pillar": "P03",
+  "format": "F05",
+  "cta": "BALANCE",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E12"
+  ],
+  "test_first": false,
+  "hook": "By the bed: toes spread, heels up, sit. Sixty seconds. Hold the headboard."
+ },
+ {
+  "id": "H176",
+  "cat": "BED",
+  "pillar": "P19",
+  "format": "F11",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E22"
+  ],
+  "test_first": false,
+  "hook": "Before bed, put tomorrow's walking shoes by the door. Day three."
+ },
+ {
+  "id": "H177",
+  "cat": "BED",
+  "pillar": "P17",
+  "format": "F08",
+  "cta": "BACK",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E30"
+  ],
+  "test_first": false,
+  "hook": "He does his stretches before bed. Because I hid his kettlebell."
+ },
+ {
+  "id": "H178",
+  "cat": "BED",
+  "pillar": "P07",
+  "format": "F21",
+  "cta": "BREATH",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E19"
+  ],
+  "test_first": false,
+  "hook": "Racing mind in bed? One hand on your chest. One on your belly."
+ },
+ {
+  "id": "H179",
+  "cat": "BED",
+  "pillar": "P09",
+  "format": "F14",
+  "cta": "SLEEP",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E45"
+  ],
+  "test_first": false,
+  "hook": "Bed too low? How to get out of it safely at 75."
+ },
+ {
+  "id": "H180",
+  "cat": "BED",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "BEGIN",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "Call someone before bed tonight. Not a text. Call."
+ },
+ {
+  "id": "H181",
+  "cat": "KIT",
+  "pillar": "P11",
+  "format": "F31",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": true,
+  "hook": "The soup I make when he's sore from training. Thirty grams of protein."
+ },
+ {
+  "id": "H182",
+  "cat": "KIT",
+  "pillar": "P13",
+  "format": "F18",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": true,
+  "hook": "This is 30 grams of protein for breakfast at 76."
+ },
+ {
+  "id": "H183",
+  "cat": "KIT",
+  "pillar": "P12",
+  "format": "F06",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E25"
+  ],
+  "test_first": true,
+  "hook": "If you eat two kiwis every day, here's what one small study found."
+ },
+ {
+  "id": "H184",
+  "cat": "KIT",
+  "pillar": "P11",
+  "format": "F31",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E26"
+  ],
+  "test_first": false,
+  "hook": "My mother's easy kimchi. No special jar. Ten minutes of work."
+ },
+ {
+  "id": "H185",
+  "cat": "KIT",
+  "pillar": "P11",
+  "format": "F31",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "Seaweed soup. The Korean birthday soup. Everyone in this house gets it."
+ },
+ {
+  "id": "H186",
+  "cat": "KIT",
+  "pillar": "P13",
+  "format": "F18",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "Eggs, tofu, beans, fish. How I get 90 grams into a 74-year-old."
+ },
+ {
+  "id": "H187",
+  "cat": "KIT",
+  "pillar": "P11",
+  "format": "F31",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E24"
+  ],
+  "test_first": false,
+  "hook": "Doenjang stew for a cold night. It's salty, so here's the trick."
+ },
+ {
+  "id": "H188",
+  "cat": "KIT",
+  "pillar": "P12",
+  "format": "F06",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E27"
+  ],
+  "test_first": false,
+  "hook": "If you eat five prunes every day for a year, here's what one bone study found."
+ },
+ {
+  "id": "H189",
+  "cat": "KIT",
+  "pillar": "P11",
+  "format": "F12",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "Jajangmyeon Sunday. He cooks. I grade."
+ },
+ {
+  "id": "H190",
+  "cat": "KIT",
+  "pillar": "P10",
+  "format": "F06",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E24"
+  ],
+  "test_first": false,
+  "hook": "If you add fiber every day too fast, you'll feel it. Five grams at a time."
+ },
+ {
+  "id": "H191",
+  "cat": "KIT",
+  "pillar": "P13",
+  "format": "F31",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "Greek yogurt bowl. Twenty grams. Four minutes. Go."
+ },
+ {
+  "id": "H192",
+  "cat": "KIT",
+  "pillar": "P12",
+  "format": "F06",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E33"
+  ],
+  "test_first": false,
+  "hook": "Ginger, scallion, garlic. My cold-night broth. Honest about what it does."
+ },
+ {
+  "id": "H193",
+  "cat": "KIT",
+  "pillar": "P11",
+  "format": "F31",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "Dumplings for fourteen people. Or one husband. Same number."
+ },
+ {
+  "id": "H194",
+  "cat": "KIT",
+  "pillar": "P13",
+  "format": "F18",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "Your breakfast is missing one palm-sized thing."
+ },
+ {
+  "id": "H195",
+  "cat": "KIT",
+  "pillar": "P10",
+  "format": "F31",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E24"
+  ],
+  "test_first": false,
+  "hook": "Beans make you gassy? Here's how my mother cooked them."
+ },
+ {
+  "id": "H196",
+  "cat": "KIT",
+  "pillar": "P11",
+  "format": "F31",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E24"
+  ],
+  "test_first": false,
+  "hook": "One pot, five days of lunches. For people cooking for one."
+ },
+ {
+  "id": "H197",
+  "cat": "KIT",
+  "pillar": "P12",
+  "format": "F06",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E34"
+  ],
+  "test_first": false,
+  "hook": "Peppermint for a cranky belly. A real study. One warning."
+ },
+ {
+  "id": "H198",
+  "cat": "KIT",
+  "pillar": "P13",
+  "format": "F31",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "Tofu tastes like nothing? That's the point. Watch."
+ },
+ {
+  "id": "H199",
+  "cat": "KIT",
+  "pillar": "P11",
+  "format": "F31",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E24"
+  ],
+  "test_first": false,
+  "hook": "Rice porridge for the days your stomach says \"gently.\""
+ },
+ {
+  "id": "H200",
+  "cat": "KIT",
+  "pillar": "P19",
+  "format": "F11",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E24"
+  ],
+  "test_first": false,
+  "hook": "Seven-day fiber ladder. Day one: one kiwi."
+ },
+ {
+  "id": "H201",
+  "cat": "KIT",
+  "pillar": "P10",
+  "format": "F28",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E26"
+  ],
+  "test_first": false,
+  "hook": "Six servings of fermented food a day for ten weeks. What happened."
+ },
+ {
+  "id": "H202",
+  "cat": "KIT",
+  "pillar": "P13",
+  "format": "F18",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "If you buy canned fish every week, that's thirty grams of protein for pocket change."
+ },
+ {
+  "id": "H203",
+  "cat": "KIT",
+  "pillar": "P11",
+  "format": "F06",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E35"
+  ],
+  "test_first": false,
+  "hook": "Salt substitute in my soup? Maybe. Ask your doctor first. Here's why."
+ },
+ {
+  "id": "H204",
+  "cat": "KIT",
+  "pillar": "P12",
+  "format": "F06",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E32"
+  ],
+  "test_first": false,
+  "hook": "Honey-ginger tea for a cough. What the research actually says."
+ },
+ {
+  "id": "H205",
+  "cat": "KIT",
+  "pillar": "P11",
+  "format": "F12",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "Cooking for one after 50 years of cooking for five. My Tuesday."
+ },
+ {
+  "id": "H206",
+  "cat": "KIT",
+  "pillar": "P13",
+  "format": "F18",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "Chicken thigh, rice, kimchi, egg. The 35-gram bowl."
+ },
+ {
+  "id": "H207",
+  "cat": "KIT",
+  "pillar": "P10",
+  "format": "F06",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E23"
+  ],
+  "test_first": false,
+  "hook": "If you walk after dinner every night, even five minutes, here's the glucose study."
+ },
+ {
+  "id": "H208",
+  "cat": "KIT",
+  "pillar": "P11",
+  "format": "F28",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E24"
+  ],
+  "test_first": false,
+  "hook": "Barley tea is always on my table. Honest reason: I like it."
+ },
+ {
+  "id": "H209",
+  "cat": "KIT",
+  "pillar": "P11",
+  "format": "F31",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E24"
+  ],
+  "test_first": false,
+  "hook": "Persimmon season. Here's what I do with forty of them."
+ },
+ {
+  "id": "H210",
+  "cat": "KIT",
+  "pillar": "P13",
+  "format": "F31",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "Chang's after-training snack. I make it. He takes the credit."
+ },
+ {
+  "id": "H211",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F08",
+  "cta": "STRONG",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E21"
+  ],
+  "test_first": true,
+  "hook": "He flexes in the microwave. So I made a sign."
+ },
+ {
+  "id": "H212",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F08",
+  "cta": "BALANCE",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E09"
+  ],
+  "test_first": true,
+  "hook": "Fifty years married. I still beat him at balance."
+ },
+ {
+  "id": "H213",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F33",
+  "cta": "FAMILY",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E12"
+  ],
+  "test_first": true,
+  "hook": "Our daughter called. She thinks we train too much."
+ },
+ {
+  "id": "H214",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F08",
+  "cta": "BACK",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E30"
+  ],
+  "test_first": false,
+  "hook": "He says he stretched. The kettlebell is still hidden."
+ },
+ {
+  "id": "H215",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F08",
+  "cta": "SOUP",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "He counts reps. I count dumplings. \"That's fourteen.\""
+ },
+ {
+  "id": "H216",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F08",
+  "cta": "STRONG",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E21"
+  ],
+  "test_first": false,
+  "hook": "He wore a tank top in January again."
+ },
+ {
+  "id": "H217",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F08",
+  "cta": "STRONG",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E12"
+  ],
+  "test_first": false,
+  "hook": "I asked him to carry one bag. He carried all of them. And the cat."
+ },
+ {
+  "id": "H218",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F35",
+  "cta": "BEGIN",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "How to argue for 50 years and still hold hands on walks."
+ },
+ {
+  "id": "H219",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F34",
+  "cta": "BALANCE",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E12"
+  ],
+  "test_first": false,
+  "hook": "Loser of the balance test does the dishes. Watch."
+ },
+ {
+  "id": "H220",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F28",
+  "cta": "STRONG",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "He printed another study. The printer is tired, Chang."
+ },
+ {
+  "id": "H221",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F08",
+  "cta": "STRONG",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E02"
+  ],
+  "test_first": false,
+  "hook": "I graded his squat. Seven out of ten. Because I love him."
+ },
+ {
+  "id": "H222",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F35",
+  "cta": "BEGIN",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "The thing he said on our first day that I still correct."
+ },
+ {
+  "id": "H223",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F34",
+  "cta": "STRONG",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E08"
+  ],
+  "test_first": false,
+  "hook": "He gets up off the floor with no hands. I use one. Both count."
+ },
+ {
+  "id": "H224",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F29",
+  "cta": "GUT",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E23"
+  ],
+  "test_first": false,
+  "hook": "Every night after dinner we walk to the mailbox and back. Here's why."
+ },
+ {
+  "id": "H225",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F08",
+  "cta": "BEGIN",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "The short version of his ten-minute story."
+ },
+ {
+  "id": "H226",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F25",
+  "cta": "KNEES",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "Frank said his knee hurt. Chang said, \"Which one? The new one?\""
+ },
+ {
+  "id": "H227",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F35",
+  "cta": "BEGIN",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "What 50 years of marriage taught us about fighting fair."
+ },
+ {
+  "id": "H228",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F08",
+  "cta": "STRONG",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E21"
+  ],
+  "test_first": false,
+  "hook": "He wanted to name the cat Deadlift. We named him Mandu."
+ },
+ {
+  "id": "H229",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F34",
+  "cta": "STRONG",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E21"
+  ],
+  "test_first": false,
+  "hook": "A couples workout where nobody gets divorced."
+ },
+ {
+  "id": "H230",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F08",
+  "cta": "STRONG",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E04"
+  ],
+  "test_first": false,
+  "hook": "Our son tried to help his father carry the couch. It went badly for the son."
+ },
+ {
+  "id": "H231",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F08",
+  "cta": "BEGIN",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "She's older. So she's right. That's the rule."
+ },
+ {
+  "id": "H232",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F08",
+  "cta": "SLEEP",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E43"
+  ],
+  "test_first": false,
+  "hook": "He snores. I found a study. The study says: see the doctor."
+ },
+ {
+  "id": "H233",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F08",
+  "cta": "BEGIN",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "We tried a TikTok dance. The cat left."
+ },
+ {
+  "id": "H234",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F18",
+  "cta": "SOUP",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "He ate twelve dumplings and called it a protein meal. Let's count."
+ },
+ {
+  "id": "H235",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F27",
+  "cta": "BEGIN",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "Fiftieth anniversary in 23 days. She still says the dumplings were over-salted."
+ },
+ {
+  "id": "H236",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F28",
+  "cta": "STRONG",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "\"Show me the study.\" He pulled it out of his shorts."
+ },
+ {
+  "id": "H237",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F21",
+  "cta": "BREATH",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E18"
+  ],
+  "test_first": false,
+  "hook": "When we fight, one of us says \"exhale.\" Here's why."
+ },
+ {
+  "id": "H238",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F35",
+  "cta": "BEGIN",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "Things he does that I'll never admit are sweet."
+ },
+ {
+  "id": "H239",
+  "cat": "CPL",
+  "pillar": "P20",
+  "format": "F08",
+  "cta": "BEGIN",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "We're AI. The marriage is fictional. The advice isn't."
+ },
+ {
+  "id": "H240",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F35",
+  "cta": "BEGIN",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "The one habit that kept us from killing each other for 50 years."
+ },
+ {
+  "id": "H241",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "KNEES",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": true,
+  "hook": "Nobody is coming to save your knees. You are."
+ },
+ {
+  "id": "H242",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "FAMILY",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E08"
+  ],
+  "test_first": true,
+  "hook": "Your kids don't need your money. They need you to be able to get up."
+ },
+ {
+  "id": "H243",
+  "cat": "BLT",
+  "pillar": "P15",
+  "format": "F07",
+  "cta": "BEGIN",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E20"
+  ],
+  "test_first": true,
+  "hook": "If a video says 'instantly,' close it. Not a study, not a plan."
+ },
+ {
+  "id": "H244",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "STRONG",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "Stop saying \"I'm fine.\" You're not fine. You're untrained."
+ },
+ {
+  "id": "H245",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "BEGIN",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "Loneliness is a health problem. Call someone. Today."
+ },
+ {
+  "id": "H246",
+  "cat": "BLT",
+  "pillar": "P13",
+  "format": "F18",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "Tea and toast isn't breakfast. It's a hug."
+ },
+ {
+  "id": "H247",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "BEGIN",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "You're not too old to make friends. You're too comfortable."
+ },
+ {
+  "id": "H248",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F35",
+  "cta": "BEGIN",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "He didn't leave the dishes because he's tired. He left them because you always do them."
+ },
+ {
+  "id": "H249",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "STRONG",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E11"
+  ],
+  "test_first": false,
+  "hook": "The best anti-aging product is a chair and your own legs."
+ },
+ {
+  "id": "H250",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F35",
+  "cta": "BEGIN",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "Estranged from your kids? The blunt answer, then the soft one."
+ },
+ {
+  "id": "H251",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "STRONG",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E21"
+  ],
+  "test_first": false,
+  "hook": "Retirement isn't a nap. It's a second job, and the job is you."
+ },
+ {
+  "id": "H252",
+  "cat": "BLT",
+  "pillar": "P15",
+  "format": "F07",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E24"
+  ],
+  "test_first": false,
+  "hook": "Your liver doesn't need a cleanse. It needs you to skip the third glass."
+ },
+ {
+  "id": "H253",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "BEGIN",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "You're allowed to say no to babysitting. Twice a week is love. Five is a job."
+ },
+ {
+  "id": "H254",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "STRONG",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E29"
+  ],
+  "test_first": false,
+  "hook": "Stop apologizing for taking up space at the gym."
+ },
+ {
+  "id": "H255",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "STRONG",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "You don't hate exercise. You hate exercise that hurts. Different thing."
+ },
+ {
+  "id": "H256",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F08",
+  "cta": "BACK",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E30"
+  ],
+  "test_first": false,
+  "hook": "Your husband won't stretch? Neither will mine. Here's how I win."
+ },
+ {
+  "id": "H257",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F35",
+  "cta": "BEGIN",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "Grief doesn't end. It gets a room in the house. You still have to eat."
+ },
+ {
+  "id": "H258",
+  "cat": "BLT",
+  "pillar": "P13",
+  "format": "F18",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "Can't read the label without glasses? Put them on. Then read the protein."
+ },
+ {
+  "id": "H259",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "STRONG",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "\"I'll start Monday.\" You're 70. Monday is a luxury. Start at lunch."
+ },
+ {
+  "id": "H260",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "BEGIN",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E43"
+  ],
+  "test_first": false,
+  "hook": "Your doctor isn't mad at you. Tell them the truth about what you eat."
+ },
+ {
+  "id": "H261",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "GUT",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E23"
+  ],
+  "test_first": false,
+  "hook": "You don't need a new diet. You need a vegetable and a walk."
+ },
+ {
+  "id": "H262",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "STRONG",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E30"
+  ],
+  "test_first": false,
+  "hook": "Not every ache is age. Some of it is the couch."
+ },
+ {
+  "id": "H263",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F35",
+  "cta": "BEGIN",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "He cheated 30 years ago and you still bring it up? Did you forgive?"
+ },
+ {
+  "id": "H264",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F35",
+  "cta": "BEGIN",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "Your daughter-in-law isn't your enemy. Your pride is."
+ },
+ {
+  "id": "H265",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "BEGIN",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "Wear the hearing aids. Nobody's looking at your ears. They're happy you can hear them."
+ },
+ {
+  "id": "H266",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "STRONG",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E04"
+  ],
+  "test_first": false,
+  "hook": "Being needed is nice. Being strong is better. You can be both."
+ },
+ {
+  "id": "H267",
+  "cat": "BLT",
+  "pillar": "P15",
+  "format": "F07",
+  "cta": "BEGIN",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E24"
+  ],
+  "test_first": false,
+  "hook": "If someone is selling you a secret, it isn't a secret. It's a product."
+ },
+ {
+  "id": "H268",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "BALANCE",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E12"
+  ],
+  "test_first": false,
+  "hook": "You're not lazy. You're scared of falling. Let's fix the scared part."
+ },
+ {
+  "id": "H269",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "BEGIN",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "You're 72. Use the good olive oil. Wear the nice dress. Today."
+ },
+ {
+  "id": "H270",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "STRONG",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E03"
+  ],
+  "test_first": false,
+  "hook": "The best age to start was 50. The second best is right now. Stand up."
+ },
+ {
+  "id": "H271",
+  "cat": "NUM",
+  "pillar": "P04",
+  "format": "F16",
+  "cta": "TEST",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E07"
+  ],
+  "test_first": true,
+  "hook": "Your grip is a window. 142,861 people in 17 countries. Here's how to train it."
+ },
+ {
+  "id": "H272",
+  "cat": "NUM",
+  "pillar": "P03",
+  "format": "F16",
+  "cta": "BALANCE",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E09"
+  ],
+  "test_first": true,
+  "hook": "Can you stand on one leg for 10 seconds? 1,702 adults took this test."
+ },
+ {
+  "id": "H273",
+  "cat": "NUM",
+  "pillar": "P01",
+  "format": "F16",
+  "cta": "TEST",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E08"
+  ],
+  "test_first": true,
+  "hook": "The floor test: sit down, stand up, score out of ten. Let's score you."
+ },
+ {
+  "id": "H274",
+  "cat": "NUM",
+  "pillar": "P01",
+  "format": "F16",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E03"
+  ],
+  "test_first": false,
+  "hook": "Ninety-year-olds. Eight weeks of leg training. They got much stronger."
+ },
+ {
+  "id": "H275",
+  "cat": "NUM",
+  "pillar": "P02",
+  "format": "F16",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E06"
+  ],
+  "test_first": false,
+  "hook": "Five chair stands over 15 seconds? That's a line in the guidelines."
+ },
+ {
+  "id": "H276",
+  "cat": "NUM",
+  "pillar": "P08",
+  "format": "F16",
+  "cta": "BALANCE",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E14"
+  ],
+  "test_first": false,
+  "hook": "Tai chi, done slowly, for balance. 670 older adults took this class. Try one move."
+ },
+ {
+  "id": "H277",
+  "cat": "NUM",
+  "pillar": "P02",
+  "format": "F16",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E21"
+  ],
+  "test_first": false,
+  "hook": "Thirty to sixty minutes of strength a week. That's the dose in the big study."
+ },
+ {
+  "id": "H278",
+  "cat": "NUM",
+  "pillar": "P14",
+  "format": "F02",
+  "cta": "TEST",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E10"
+  ],
+  "test_first": false,
+  "hook": "One meter per second. That's the walking speed to know. Measure yours."
+ },
+ {
+  "id": "H279",
+  "cat": "NUM",
+  "pillar": "P10",
+  "format": "F18",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E24"
+  ],
+  "test_first": false,
+  "hook": "Twenty-five to twenty-nine grams of fiber a day. Here's what that looks like."
+ },
+ {
+  "id": "H280",
+  "cat": "NUM",
+  "pillar": "P13",
+  "format": "F18",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "1.2 grams of protein per kilo. For a 60 kg woman, that's 72 grams."
+ },
+ {
+  "id": "H281",
+  "cat": "NUM",
+  "pillar": "P07",
+  "format": "F21",
+  "cta": "BREATH",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E18"
+  ],
+  "test_first": false,
+  "hook": "Five minutes a day of this breath beat meditation for mood in a Stanford study."
+ },
+ {
+  "id": "H282",
+  "cat": "NUM",
+  "pillar": "P02",
+  "format": "F16",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E20"
+  ],
+  "test_first": false,
+  "hook": "Wall sits lowered blood pressure more than any other exercise type. Over weeks."
+ },
+ {
+  "id": "H283",
+  "cat": "NUM",
+  "pillar": "P03",
+  "format": "F16",
+  "cta": "BALANCE",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E12"
+  ],
+  "test_first": false,
+  "hook": "108 trials of balance and strength training. Here are three moves they share."
+ },
+ {
+  "id": "H284",
+  "cat": "NUM",
+  "pillar": "P14",
+  "format": "F29",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E22"
+  ],
+  "test_first": false,
+  "hook": "Six to eight thousand steps. Over 60, that's where the curve flattened."
+ },
+ {
+  "id": "H285",
+  "cat": "NUM",
+  "pillar": "P14",
+  "format": "F16",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E05"
+  ],
+  "test_first": false,
+  "hook": "At 67, ten days in bed. At 38, twenty-eight days. Guess who lost more."
+ },
+ {
+  "id": "H286",
+  "cat": "NUM",
+  "pillar": "P10",
+  "format": "F06",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E23"
+  ],
+  "test_first": false,
+  "hook": "Two minutes of walking after a meal. That's where the study starts."
+ },
+ {
+  "id": "H287",
+  "cat": "NUM",
+  "pillar": "P12",
+  "format": "F06",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E25"
+  ],
+  "test_first": false,
+  "hook": "Two kiwis versus 100 g of prunes versus psyllium. Which did best?"
+ },
+ {
+  "id": "H288",
+  "cat": "NUM",
+  "pillar": "P06",
+  "format": "F28",
+  "cta": "BACK",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E30"
+  ],
+  "test_first": false,
+  "hook": "249 trials on back pain. The winner wasn't rest."
+ },
+ {
+  "id": "H289",
+  "cat": "NUM",
+  "pillar": "P08",
+  "format": "F28",
+  "cta": "KNEES",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E15"
+  ],
+  "test_first": false,
+  "hook": "Tai chi matched physical therapy for knee arthritis. 204 people, one year."
+ },
+ {
+  "id": "H290",
+  "cat": "NUM",
+  "pillar": "P03",
+  "format": "F16",
+  "cta": "BALANCE",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E13"
+  ],
+  "test_first": false,
+  "hook": "The Otago program: simple home moves, studied in people averaging 81."
+ },
+ {
+  "id": "H291",
+  "cat": "NUM",
+  "pillar": "P12",
+  "format": "F06",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E27"
+  ],
+  "test_first": false,
+  "hook": "Fifty grams of prunes a day for a year. Hip bone density held."
+ },
+ {
+  "id": "H292",
+  "cat": "NUM",
+  "pillar": "P01",
+  "format": "F28",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "121 trials. 6,700 older adults. The main side effect was sore muscles."
+ },
+ {
+  "id": "H293",
+  "cat": "NUM",
+  "pillar": "P13",
+  "format": "F18",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "Twenty-five to thirty grams per meal. Not per day. Per meal."
+ },
+ {
+  "id": "H294",
+  "cat": "NUM",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "BEGIN",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "148 studies, 308,849 people: friendships show up in the health data. Call one."
+ },
+ {
+  "id": "H295",
+  "cat": "NUM",
+  "pillar": "P10",
+  "format": "F28",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E26"
+  ],
+  "test_first": false,
+  "hook": "Nineteen inflammation markers went down in a fermented-food study. Here's what they ate."
+ },
+ {
+  "id": "H296",
+  "cat": "NUM",
+  "pillar": "P02",
+  "format": "F16",
+  "cta": "TEST",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E11"
+  ],
+  "test_first": false,
+  "hook": "Chair stands in 30 seconds, age 70 to 74: men under 12, women under 10."
+ },
+ {
+  "id": "H297",
+  "cat": "NUM",
+  "pillar": "P14",
+  "format": "F16",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E04"
+  ],
+  "test_first": false,
+  "hook": "Strength fades two to five times faster than muscle size. So test strength."
+ },
+ {
+  "id": "H298",
+  "cat": "NUM",
+  "pillar": "P06",
+  "format": "F14",
+  "cta": "KNEES",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E41"
+  ],
+  "test_first": false,
+  "hook": "Up to 3 out of 10 pain is okay if it's gone by morning."
+ },
+ {
+  "id": "H299",
+  "cat": "NUM",
+  "pillar": "P15",
+  "format": "F28",
+  "cta": "BALANCE",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E36"
+  ],
+  "test_first": false,
+  "hook": "Vitamin D pills for steady feet? The task force said no. Exercise got a B."
+ },
+ {
+  "id": "H300",
+  "cat": "NUM",
+  "pillar": "P07",
+  "format": "F21",
+  "cta": "BREATH",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E19"
+  ],
+  "test_first": false,
+  "hook": "Six breaths a minute. That's the pace. Here's what it does to your heart rhythm."
+ },
+ {
+  "id": "H301",
+  "cat": "TST",
+  "pillar": "P04",
+  "format": "F02",
+  "cta": "TEST",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E07"
+  ],
+  "test_first": false,
+  "hook": "Two gallon milk jugs. Walk to the fence and back. Can you?"
+ },
+ {
+  "id": "H302",
+  "cat": "IDN",
+  "pillar": "P02",
+  "format": "F32",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01",
+   "E46"
+  ],
+  "test_first": false,
+  "hook": "If you stand up every time the ads come on, that's sixty stands a night."
+ },
+ {
+  "id": "H303",
+  "cat": "CUR",
+  "pillar": "P03",
+  "format": "F02",
+  "cta": "BALANCE",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E09"
+  ],
+  "test_first": false,
+  "hook": "Glass of water, full to the top. Stand on one leg and watch it."
+ },
+ {
+  "id": "H304",
+  "cat": "TST",
+  "pillar": "P03",
+  "format": "F32",
+  "cta": "BALANCE",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E13"
+  ],
+  "test_first": false,
+  "hook": "If you march in place every time the microwave runs, that's balance practice all day."
+ },
+ {
+  "id": "H305",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F28",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E42",
+   "E21",
+   "E43"
+  ],
+  "test_first": false,
+  "hook": "Your heart's best friend isn't only the treadmill. Not only the bike. Muscles get a vote."
+ },
+ {
+  "id": "H306",
+  "cat": "CUR",
+  "pillar": "P06",
+  "format": "F03",
+  "cta": "BACK",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E30",
+   "E41"
+  ],
+  "test_first": false,
+  "hook": "Bottom shelf of the fridge. Don't fold in half. Watch how I get down there."
+ },
+ {
+  "id": "H307",
+  "cat": "TST",
+  "pillar": "P14",
+  "format": "F02",
+  "cta": "TEST",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E10"
+  ],
+  "test_first": false,
+  "hook": "If you walk down your hallway every day, time it once. Four meters. Painter's tape."
+ },
+ {
+  "id": "H308",
+  "cat": "FOD",
+  "pillar": "P02",
+  "format": "F17",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E11",
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "If you push on the armrests every time you stand, your legs skip their job."
+ },
+ {
+  "id": "H309",
+  "cat": "IDN",
+  "pillar": "P01",
+  "format": "F33",
+  "cta": "FAMILY",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E11"
+  ],
+  "test_first": false,
+  "hook": "Send this to your mom. Then do this chair test with her on the phone tonight."
+ },
+ {
+  "id": "H310",
+  "cat": "NUM",
+  "pillar": "P14",
+  "format": "F13",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E04",
+   "E39"
+  ],
+  "test_first": false,
+  "hook": "The number one thing to test is not thigh size, not the scale. It's strength."
+ },
+ {
+  "id": "H311",
+  "cat": "TST",
+  "pillar": "P02",
+  "format": "F01",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E02"
+  ],
+  "test_first": false,
+  "hook": "If you make coffee every morning, set this timer for sixty seconds and stand with me."
+ },
+ {
+  "id": "H312",
+  "cat": "CUR",
+  "pillar": "P03",
+  "format": "F03",
+  "cta": "BACK",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E12"
+  ],
+  "test_first": false,
+  "hook": "If you drop your keys every week like me, pick them up like a golfer."
+ },
+ {
+  "id": "H313",
+  "cat": "FOD",
+  "pillar": "P03",
+  "format": "F15",
+  "cta": "BALANCE",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E13",
+   "E36"
+  ],
+  "test_first": false,
+  "hook": "If you walk past a curled rug corner every day, fix it tonight. Then practice this."
+ },
+ {
+  "id": "H314",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F24",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E42",
+   "E02"
+  ],
+  "test_first": false,
+  "hook": "Red face. Chair arms. Same weight for years. Three mistakes I see after 60."
+ },
+ {
+  "id": "H315",
+  "cat": "TST",
+  "pillar": "P01",
+  "format": "F02",
+  "cta": "TEST",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E11",
+   "E09",
+   "E10"
+  ],
+  "test_first": false,
+  "hook": "Notebook. Three numbers. Chair, one leg, walking speed. Write them tonight."
+ },
+ {
+  "id": "H316",
+  "cat": "KIT",
+  "pillar": "P13",
+  "format": "F12",
+  "cta": "SOUP",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "If you lift every week, breakfast needs protein. Twenty-eight grams. Sun counted."
+ },
+ {
+  "id": "H317",
+  "cat": "KIT",
+  "pillar": "P04",
+  "format": "F15",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "Soup cans. Curl them slowly, and just watch my forearms work."
+ },
+ {
+  "id": "H318",
+  "cat": "TST",
+  "pillar": "P02",
+  "format": "F02",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E02"
+  ],
+  "test_first": false,
+  "hook": "Twenty-pound bag of rice. Hug it. Squat to the chair. How many clean ones?"
+ },
+ {
+  "id": "H319",
+  "cat": "CUR",
+  "pillar": "P02",
+  "format": "F15",
+  "cta": "BALANCE",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E39"
+  ],
+  "test_first": false,
+  "hook": "If you shuffle every time you walk, try fast feet at the counter. Three each way."
+ },
+ {
+  "id": "H320",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F28",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E02",
+   "E43"
+  ],
+  "test_first": false,
+  "hook": "Two-pound dumbbells for years? The guidelines for older adults go heavier. Slowly."
+ },
+ {
+  "id": "H321",
+  "cat": "IDN",
+  "pillar": "P01",
+  "format": "F25",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E42"
+  ],
+  "test_first": false,
+  "hook": "Eighty kilos. Five reps. I'm 74. Here's where you start instead."
+ },
+ {
+  "id": "H322",
+  "cat": "IDN",
+  "pillar": "P04",
+  "format": "F15",
+  "cta": "TEST",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E07"
+  ],
+  "test_first": false,
+  "hook": "Hammer. Hold the very end of the handle, turn it slowly, and watch your forearm."
+ },
+ {
+  "id": "H323",
+  "cat": "CUR",
+  "pillar": "P02",
+  "format": "F03",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "If you haul yourself out by the door frame every time, your legs skip practice."
+ },
+ {
+  "id": "H324",
+  "cat": "CPL",
+  "pillar": "P04",
+  "format": "F25",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "Cooler full of ice. Frank carries it one way. I carry it another. Both count."
+ },
+ {
+  "id": "H325",
+  "cat": "CUR",
+  "pillar": "P06",
+  "format": "F03",
+  "cta": "KNEES",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01",
+   "E41"
+  ],
+  "test_first": false,
+  "hook": "Tape on your shoe. Point your knee at it every rep, and watch what happens."
+ },
+ {
+  "id": "H326",
+  "cat": "CUR",
+  "pillar": "P04",
+  "format": "F15",
+  "cta": "BACK",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "If you push and reach every day, pull once. Door anchor, band, ribs."
+ },
+ {
+  "id": "H327",
+  "cat": "IDN",
+  "pillar": "P04",
+  "format": "F15",
+  "cta": "STRONG",
+  "page": "ST",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "Carry-on bag, overhead bin. Practice it at home before the airport tests you."
+ },
+ {
+  "id": "H328",
+  "cat": "CUR",
+  "pillar": "P05",
+  "format": "F20",
+  "cta": "BACK",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E47",
+   "E46"
+  ],
+  "test_first": false,
+  "hook": "If you wait for the coffee every morning, write the alphabet with your ankles."
+ },
+ {
+  "id": "H329",
+  "cat": "NUM",
+  "pillar": "P06",
+  "format": "F14",
+  "cta": "KNEES",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E41"
+  ],
+  "test_first": false,
+  "hook": "Knee pain, zero to ten. Here's the number where you keep going."
+ },
+ {
+  "id": "H330",
+  "cat": "NUM",
+  "pillar": "P08",
+  "format": "F22",
+  "cta": "BALANCE",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E14"
+  ],
+  "test_first": false,
+  "hook": "Fence. One hand on it. Cloud hands, slowly, and watch your weight shift."
+ },
+ {
+  "id": "H331",
+  "cat": "CUR",
+  "pillar": "P07",
+  "format": "F21",
+  "cta": "BREATH",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E19"
+  ],
+  "test_first": false,
+  "hook": "Drinking straw. Breathe out through it slowly. Watch what happens to my shoulders."
+ },
+ {
+  "id": "H332",
+  "cat": "BED",
+  "pillar": "P09",
+  "format": "F05",
+  "cta": "SLEEP",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E19",
+   "E46",
+   "E48"
+  ],
+  "test_first": false,
+  "hook": "If you put a paperback on your belly every night, watch how your breathing slows."
+ },
+ {
+  "id": "H333",
+  "cat": "TST",
+  "pillar": "P06",
+  "format": "F14",
+  "cta": "BACK",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E41",
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "Top shelf. Reach for the mug and watch your shoulder. Did it climb to your ear?"
+ },
+ {
+  "id": "H334",
+  "cat": "BED",
+  "pillar": "P08",
+  "format": "F22",
+  "cta": "SLEEP",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E17",
+   "E46"
+  ],
+  "test_first": false,
+  "hook": "If you watch TV every evening, sit on the sofa's edge and draw the bow first."
+ },
+ {
+  "id": "H335",
+  "cat": "BED",
+  "pillar": "P06",
+  "format": "F03",
+  "cta": "BACK",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E30",
+   "E41",
+   "E46"
+  ],
+  "test_first": false,
+  "hook": "If you sit straight up every morning when the alarm rings, roll like a log instead."
+ },
+ {
+  "id": "H336",
+  "cat": "CPL",
+  "pillar": "P03",
+  "format": "F32",
+  "cta": "BALANCE",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E12"
+  ],
+  "test_first": false,
+  "hook": "If you stand heel-to-toe every time you do the dishes, that's balance practice every night."
+ },
+ {
+  "id": "H337",
+  "cat": "BLT",
+  "pillar": "P05",
+  "format": "F33",
+  "cta": "BACK",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E30"
+  ],
+  "test_first": false,
+  "hook": "Send this to the man in your house who says stretching is a waste of time."
+ },
+ {
+  "id": "H338",
+  "cat": "NUM",
+  "pillar": "P08",
+  "format": "F28",
+  "cta": "KNEES",
+  "page": "MB",
+  "speaker": "CHANG",
+  "evidence": [
+   "E15",
+   "E41"
+  ],
+  "test_first": false,
+  "hook": "Knee osteoarthritis. 204 adults. Tai chi or physical therapy. Same improvement."
+ },
+ {
+  "id": "H339",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F04",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "If you drink warm water every morning on an empty stomach, here's what actually happens."
+ },
+ {
+  "id": "H340",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F04",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "Garlic cloves in warm water every morning? Chop them into dinner instead."
+ },
+ {
+  "id": "H341",
+  "cat": "CUR",
+  "pillar": "P15",
+  "format": "F04",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E32",
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "Honey on the tomato. Watch what happens."
+ },
+ {
+  "id": "H342",
+  "cat": "KIT",
+  "pillar": "P10",
+  "format": "F06",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E24"
+  ],
+  "test_first": false,
+  "hook": "If you buy frozen peas every week, that's eight grams of fiber a cup."
+ },
+ {
+  "id": "H343",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F04",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E22"
+  ],
+  "test_first": false,
+  "hook": "Cucumber, lemon, mint in water. Very pretty. Here's what it doesn't do."
+ },
+ {
+  "id": "H344",
+  "cat": "KIT",
+  "pillar": "P10",
+  "format": "F31",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E24"
+  ],
+  "test_first": false,
+  "hook": "If you eat oats every morning, here's how to get fourteen grams of fiber by eight."
+ },
+ {
+  "id": "H345",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F04",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E23"
+  ],
+  "test_first": false,
+  "hook": "Cinnamon on everything for your blood sugar? It's a spice, not a plan."
+ },
+ {
+  "id": "H346",
+  "cat": "NUM",
+  "pillar": "P13",
+  "format": "F18",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "If you eat two eggs every morning, that's twelve grams. Breakfast needs twenty-five."
+ },
+ {
+  "id": "H347",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F04",
+  "cta": "BACK",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E30"
+  ],
+  "test_first": false,
+  "hook": "Cabbage leaf on a sore back? Sweetheart, cabbage goes in the kimchi jar."
+ },
+ {
+  "id": "H348",
+  "cat": "KIT",
+  "pillar": "P10",
+  "format": "F19",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E26"
+  ],
+  "test_first": false,
+  "hook": "Canned sauerkraut? Usually not live. Not the same. Buy it from the fridge aisle."
+ },
+ {
+  "id": "H349",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F04",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E35"
+  ],
+  "test_first": false,
+  "hook": "Standing on a tray of salt? Salt belongs in the pot. Maybe less of it."
+ },
+ {
+  "id": "H350",
+  "cat": "KIT",
+  "pillar": "P12",
+  "format": "F06",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E33"
+  ],
+  "test_first": false,
+  "hook": "Ginger every morning? Not magic, not useless. It may help a little."
+ },
+ {
+  "id": "H351",
+  "cat": "BLT",
+  "pillar": "P13",
+  "format": "F18",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "If you eat peanut butter every morning for protein, sweetheart, you're eating a sauce."
+ },
+ {
+  "id": "H352",
+  "cat": "CUR",
+  "pillar": "P15",
+  "format": "F04",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E24"
+  ],
+  "test_first": false,
+  "hook": "Blueberries in a glass of water. Watch what happens."
+ },
+ {
+  "id": "H353",
+  "cat": "KIT",
+  "pillar": "P13",
+  "format": "F18",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "If you buy the little fruit yogurts every week, flip one. Read one number."
+ },
+ {
+  "id": "H354",
+  "cat": "KIT",
+  "pillar": "P10",
+  "format": "F06",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E24"
+  ],
+  "test_first": false,
+  "hook": "Popcorn is not junk, not a cheat. Three cups air-popped is a whole grain."
+ },
+ {
+  "id": "H355",
+  "cat": "BED",
+  "pillar": "P15",
+  "format": "F04",
+  "cta": "SLEEP",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E19",
+   "E48"
+  ],
+  "test_first": false,
+  "hook": "Sesame oil behind your ears for sleep? It goes in the spinach."
+ },
+ {
+  "id": "H356",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F04",
+  "cta": "BREATH",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E18"
+  ],
+  "test_first": false,
+  "hook": "Your feet can't calm a racing mind. Your exhale can. Here's the study."
+ },
+ {
+  "id": "H357",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "TEST",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E07"
+  ],
+  "test_first": false,
+  "hook": "If you let the bagger carry your groceries every week, your hands miss the work."
+ },
+ {
+  "id": "H358",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F35",
+  "cta": "BEGIN",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "Your friend who stopped coming to church. Or cards. Or walking. Call her today."
+ },
+ {
+  "id": "H359",
+  "cat": "IDN",
+  "pillar": "P01",
+  "format": "F14",
+  "cta": "STRONG",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E45"
+  ],
+  "test_first": false,
+  "hook": "Grandkids play on the floor. Can you get down there, and back up?"
+ },
+ {
+  "id": "H360",
+  "cat": "BLT",
+  "pillar": "P03",
+  "format": "F07",
+  "cta": "BALANCE",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E12"
+  ],
+  "test_first": false,
+  "hook": "If you wear socks on a wood floor every day, sweetheart, that's an ice rink."
+ },
+ {
+  "id": "H361",
+  "cat": "IDN",
+  "pillar": "P18",
+  "format": "F26",
+  "cta": "KNEES",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E03",
+   "E41"
+  ],
+  "test_first": false,
+  "hook": "Three knee questions from you. Three blunt answers from me."
+ },
+ {
+  "id": "H362",
+  "cat": "FOD",
+  "pillar": "P09",
+  "format": "F07",
+  "cta": "BALANCE",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E46"
+  ],
+  "test_first": false,
+  "hook": "If you jump up from the couch every time the show ends, the room spins."
+ },
+ {
+  "id": "H363",
+  "cat": "KIT",
+  "pillar": "P13",
+  "format": "F10",
+  "cta": "SOUP",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "If you eat crackers and tea every lunch, look at this plate. Three grams."
+ },
+ {
+  "id": "H364",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "STRONG",
+  "page": "SY",
+  "speaker": "SUN",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "If you buy eighty-dollar face cream every month, add ten free chair stands."
+ },
+ {
+  "id": "H365",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F34",
+  "cta": "BALANCE",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E13"
+  ],
+  "test_first": false,
+  "hook": "Walk backwards along the counter. Ten steps. Loser does the dishes."
+ },
+ {
+  "id": "H366",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F08",
+  "cta": "BACK",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E02"
+  ],
+  "test_first": false,
+  "hook": "Forty-one degrees in the garage. He's in the tank top again."
+ },
+ {
+  "id": "H367",
+  "cat": "KIT",
+  "pillar": "P17",
+  "format": "F31",
+  "cta": "GUT",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E26"
+  ],
+  "test_first": false,
+  "hook": "Jajangmyeon Sunday. He cooked. I brought the kimchi and a cucumber."
+ },
+ {
+  "id": "H368",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F34",
+  "cta": "TEST",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E45"
+  ],
+  "test_first": false,
+  "hook": "Toy truck under the couch. Who gets down, grabs it, and gets back up first?"
+ },
+ {
+  "id": "H369",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F28",
+  "cta": "BEGIN",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "Printer's out of ink again. Thirty pages. One study. About friends."
+ },
+ {
+  "id": "H370",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F25",
+  "cta": "KNEES",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "Frank's porch steps. Going down is the hard part. Watch his knee."
+ },
+ {
+  "id": "H371",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F08",
+  "cta": "BACK",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E30",
+   "E41"
+  ],
+  "test_first": false,
+  "hook": "Hips. Now. I don't care that the cat is on the mat."
+ },
+ {
+  "id": "H372",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F27",
+  "cta": "STRONG",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "1976. He carried me over the threshold. He still wants to. Absolutely not."
+ },
+ {
+  "id": "H373",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F29",
+  "cta": "BEGIN",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E22"
+  ],
+  "test_first": false,
+  "hook": "If you walk every evening, six to eight thousand steps is the number that mattered."
+ },
+ {
+  "id": "H374",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F08",
+  "cta": "STRONG",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E02",
+   "E43"
+  ],
+  "test_first": false,
+  "hook": "Page one of my training log. 2012. My first deadlift. It was a cold morning—"
+ },
+ {
+  "id": "H375",
+  "cat": "LCH",
+  "pillar": "P20",
+  "format": "F38",
+  "cta": "JOIN",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [],
+  "test_first": false,
+  "hook": "Garage door's open. So is Strong Years. Founding members, first 5,000."
+ },
+ {
+  "id": "H376",
+  "cat": "LCH",
+  "pillar": "P20",
+  "format": "F39",
+  "cta": "BEGIN",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [],
+  "test_first": false,
+  "hook": "I'm Chang. I'm AI. Here's what's real on this page."
+ },
+ {
+  "id": "H377",
+  "cat": "LCH",
+  "pillar": "P19",
+  "format": "F11",
+  "cta": "BALANCE",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E12"
+  ],
+  "test_first": false,
+  "hook": "Thirty days of balance. One minute a day. Day one is tomorrow. Chart's on the fridge."
+ },
+ {
+  "id": "H378",
+  "cat": "LCH",
+  "pillar": "P20",
+  "format": "F38",
+  "cta": "JOIN",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [],
+  "test_first": false,
+  "hook": "'Founding member.' Sounds fancy. Here's exactly what it means. Four things."
+ },
+ {
+  "id": "H379",
+  "cat": "LCH",
+  "pillar": "P16",
+  "format": "F33",
+  "cta": "FAMILY",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [],
+  "test_first": false,
+  "hook": "Your dad won't buy this for himself. He'll use it if you give it to him."
+ },
+ {
+  "id": "H380",
+  "cat": "LCH",
+  "pillar": "P20",
+  "format": "F38",
+  "cta": "JOIN",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [],
+  "test_first": false,
+  "hook": "Phone on the counter. This is what tomorrow morning looks like as a member."
+ },
+ {
+  "id": "H381",
+  "cat": "LCH",
+  "pillar": "P20",
+  "format": "F38",
+  "cta": "JOIN",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [],
+  "test_first": false,
+  "hook": "Recipe card, every Sunday, with a grade on the remedy. Doors are open."
+ },
+ {
+  "id": "H382",
+  "cat": "LCH",
+  "pillar": "P16",
+  "format": "F33",
+  "cta": "FAMILY",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [],
+  "test_first": false,
+  "hook": "Send this to your daughter. Tell her what you want for your birthday. For once."
+ },
+ {
+  "id": "H383",
+  "cat": "LCH",
+  "pillar": "P20",
+  "format": "F07",
+  "cta": "JOIN",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [],
+  "test_first": false,
+  "hook": "Cancel button. I made them put it where you can find it. Watch."
+ },
+ {
+  "id": "H384",
+  "cat": "LCH",
+  "pillar": "P20",
+  "format": "F39",
+  "cta": "BEGIN",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [],
+  "test_first": false,
+  "hook": "Rules of my kitchen page. Four of them. Read before you follow."
+ },
+ {
+  "id": "H385",
+  "cat": "LCH",
+  "pillar": "P20",
+  "format": "F38",
+  "cta": "JOIN",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [],
+  "test_first": false,
+  "hook": "Fifty years married. Fictional. Founding members: real. Doors are open."
+ },
+ {
+  "id": "H386",
+  "cat": "LCH",
+  "pillar": "P20",
+  "format": "F39",
+  "cta": "JOIN",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [],
+  "test_first": false,
+  "hook": "Before you follow us, or join us: we're AI."
+ },
+ {
+  "id": "H387",
+  "cat": "LCH",
+  "pillar": "P19",
+  "format": "F11",
+  "cta": "STRONG",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "Two chairs. Seven days. Ten minutes. Loser does dishes all week."
+ },
+ {
+  "id": "H388",
+  "cat": "LCH",
+  "pillar": "P16",
+  "format": "F33",
+  "cta": "FAMILY",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [],
+  "test_first": false,
+  "hook": "To the kids who call on Sundays: here's a gift that shows up every morning."
+ },
+ {
+  "id": "H389",
+  "cat": "LCH",
+  "pillar": "P20",
+  "format": "F38",
+  "cta": "JOIN",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [],
+  "test_first": false,
+  "hook": "'Founding price, locked.' Locked how? Show me the terms."
+ },
+ {
+  "id": "H390",
+  "cat": "LCH",
+  "pillar": "P20",
+  "format": "F10",
+  "cta": "JOIN",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [],
+  "test_first": false,
+  "hook": "'Is it a subscription?' Yes. Four more questions. Fast answers."
+ },
+ {
+  "id": "H391",
+  "cat": "TST",
+  "pillar": "P04",
+  "format": "F15",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01",
+   "E02"
+  ],
+  "test_first": false,
+  "hook": "Laundry basket, full. Hug it close and watch your back stay tall."
+ },
+ {
+  "id": "H392",
+  "cat": "IDN",
+  "pillar": "P02",
+  "format": "F32",
+  "cta": "STRONG",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E47"
+  ],
+  "test_first": false,
+  "hook": "If you brush your teeth every night, add ten slow heel raises at the sink."
+ },
+ {
+  "id": "H393",
+  "cat": "TST",
+  "pillar": "P03",
+  "format": "F32",
+  "cta": "WAITLIST",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E50"
+  ],
+  "test_first": false,
+  "hook": "If you wait for the kettle every morning, stand heel to toe while it boils."
+ },
+ {
+  "id": "H394",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F04",
+  "cta": "TEST",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E02",
+   "E43"
+  ],
+  "test_first": false,
+  "hook": "'Lifting is dangerous after seventy.' Is it? Watch me pick up this eight-kilo bell."
+ },
+ {
+  "id": "H395",
+  "cat": "CUR",
+  "pillar": "P07",
+  "format": "F21",
+  "cta": "BREATH",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E19"
+  ],
+  "test_first": false,
+  "hook": "Not faster, not deeper. Longer breaths out. Try it right now with me."
+ },
+ {
+  "id": "H396",
+  "cat": "IDN",
+  "pillar": "P01",
+  "format": "F17",
+  "cta": "WAITLIST",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E45"
+  ],
+  "test_first": false,
+  "hook": "If you sit on the floor every evening for the news, getting up stops being scary."
+ },
+ {
+  "id": "H397",
+  "cat": "NUM",
+  "pillar": "P14",
+  "format": "F13",
+  "cta": "KNEES",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E04",
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "Thigh muscles do most of the work when you stand up. Feel them switch on."
+ },
+ {
+  "id": "H398",
+  "cat": "IDN",
+  "pillar": "P20",
+  "format": "F08",
+  "cta": "WAITLIST",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [],
+  "test_first": false,
+  "hook": "Not a doctor, not a real person. An AI welder. Here's what's real."
+ },
+ {
+  "id": "H399",
+  "cat": "TST",
+  "pillar": "P01",
+  "format": "F02",
+  "cta": "TEST",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E49"
+  ],
+  "test_first": false,
+  "hook": "Chair, wall, thirty seconds. Watch how many I do, then you go."
+ },
+ {
+  "id": "H400",
+  "cat": "KIT",
+  "pillar": "P10",
+  "format": "F06",
+  "cta": "GUT",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E25"
+  ],
+  "test_first": false,
+  "hook": "If you eat two green kiwis every morning, here's what a real study found."
+ },
+ {
+  "id": "H401",
+  "cat": "MYT",
+  "pillar": "P15",
+  "format": "F28",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E57"
+  ],
+  "test_first": false,
+  "hook": "Chicken soup for a cold? Show me the study. Okay. Here it is."
+ },
+ {
+  "id": "H402",
+  "cat": "MYT",
+  "pillar": "P12",
+  "format": "F04",
+  "cta": "BEGIN",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E58"
+  ],
+  "test_first": false,
+  "hook": "Not a superfood, not poison. Seaweed snacks, every day? Read the iodine first."
+ },
+ {
+  "id": "H403",
+  "cat": "KIT",
+  "pillar": "P10",
+  "format": "F18",
+  "cta": "WAITLIST",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E24",
+   "E52"
+  ],
+  "test_first": false,
+  "hook": "One can of chickpeas. Three meals. Here's the fiber math, out loud."
+ },
+ {
+  "id": "H404",
+  "cat": "BLT",
+  "pillar": "P13",
+  "format": "F12",
+  "cta": "WAITLIST",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28",
+   "E52"
+  ],
+  "test_first": false,
+  "hook": "If you eat toast and coffee every morning, you're short on protein. Let's fix breakfast."
+ },
+ {
+  "id": "H405",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "BEGIN",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E29",
+   "E40"
+  ],
+  "test_first": false,
+  "hook": "Seventy-six, too old to lift? Not too old, not too late. Too comfortable."
+ },
+ {
+  "id": "H406",
+  "cat": "KIT",
+  "pillar": "P11",
+  "format": "F31",
+  "cta": "SOUP",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28",
+   "E52"
+  ],
+  "test_first": false,
+  "hook": "Firm tofu, crumbled. Watch it turn into breakfast with thirty grams of protein."
+ },
+ {
+  "id": "H407",
+  "cat": "BLT",
+  "pillar": "P20",
+  "format": "F26",
+  "cta": "WAITLIST",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [],
+  "test_first": false,
+  "hook": "'Are you even real?' No. I'm AI. My opinion of your breakfast is real."
+ },
+ {
+  "id": "H408",
+  "cat": "CPL",
+  "pillar": "P01",
+  "format": "F34",
+  "cta": "TEST",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E49"
+  ],
+  "test_first": false,
+  "hook": "Thirty-second chair test. Him versus me. Watch his face when I win."
+ },
+ {
+  "id": "H409",
+  "cat": "CPL",
+  "pillar": "P17",
+  "format": "F08",
+  "cta": "BEGIN",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [],
+  "test_first": false,
+  "hook": "If your husband flexes in every shiny surface, you're married to this man."
+ },
+ {
+  "id": "H410",
+  "cat": "CPL",
+  "pillar": "P03",
+  "format": "F23",
+  "cta": "BALANCE",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E50"
+  ],
+  "test_first": false,
+  "hook": "If you do the dishes every night, take turns standing on one leg at the sink."
+ },
+ {
+  "id": "H411",
+  "cat": "BLT",
+  "pillar": "P16",
+  "format": "F35",
+  "cta": "BEGIN",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E37"
+  ],
+  "test_first": false,
+  "hook": "Not an app, not a gym. Call one person before dinner tonight."
+ },
+ {
+  "id": "H412",
+  "cat": "CPL",
+  "pillar": "P13",
+  "format": "F18",
+  "cta": "SOUP",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E28",
+   "E52"
+  ],
+  "test_first": false,
+  "hook": "Fourteen dumplings. He says twelve. Let's count the protein, not the dumplings."
+ },
+ {
+  "id": "H413",
+  "cat": "IDN",
+  "pillar": "P01",
+  "format": "F33",
+  "cta": "TEST",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E49"
+  ],
+  "test_first": false,
+  "hook": "Sunday video call with your mom? Do the chair test together. She'll say she's fine."
+ },
+ {
+  "id": "H414",
+  "cat": "BLT",
+  "pillar": "P20",
+  "format": "F10",
+  "cta": "WAITLIST",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [],
+  "test_first": false,
+  "hook": "'Is it another course I'll never open?' Short version: no. Here's what it is."
+ },
+ {
+  "id": "H415",
+  "cat": "CPL",
+  "pillar": "P08",
+  "format": "F22",
+  "cta": "WAITLIST",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [
+   "E17"
+  ],
+  "test_first": false,
+  "hook": "If you wait for the coffee every morning, give me one minute of tai chi."
+ },
+ {
+  "id": "H416",
+  "cat": "LCH",
+  "pillar": "P20",
+  "format": "F38",
+  "cta": "BOOK",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [],
+  "test_first": false,
+  "hook": "Doors are open. Two little books. Start here, not with a big program."
+ },
+ {
+  "id": "H417",
+  "cat": "LCH",
+  "pillar": "P20",
+  "format": "F38",
+  "cta": "JOIN",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [],
+  "test_first": false,
+  "hook": "Founding membership. I'll read you the terms out loud. All of them."
+ },
+ {
+  "id": "H418",
+  "cat": "LCH",
+  "pillar": "P02",
+  "format": "F01",
+  "cta": "BOOK",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E01"
+  ],
+  "test_first": false,
+  "hook": "Not a course, not a challenge. Seven mornings, one chair. Here's day one, free."
+ },
+ {
+  "id": "H419",
+  "cat": "LCH",
+  "pillar": "P06",
+  "format": "F14",
+  "cta": "BOOK",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [
+   "E02"
+  ],
+  "test_first": false,
+  "hook": "If you climb the same three stairs every day, day four is for you."
+ },
+ {
+  "id": "H420",
+  "cat": "LCH",
+  "pillar": "P20",
+  "format": "F10",
+  "cta": "BOOK",
+  "page": "CY",
+  "speaker": "CHANG",
+  "evidence": [],
+  "test_first": false,
+  "hook": "Why only 5,000 founding members? Because that's how many we can welcome properly."
+ },
+ {
+  "id": "H421",
+  "cat": "LCH",
+  "pillar": "P20",
+  "format": "F38",
+  "cta": "BOOK",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28",
+   "E52"
+  ],
+  "test_first": false,
+  "hook": "My Strong Kitchen book is out. Grams in every recipe. No vibes."
+ },
+ {
+  "id": "H422",
+  "cat": "LCH",
+  "pillar": "P11",
+  "format": "F31",
+  "cta": "BOOK",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28",
+   "E52"
+  ],
+  "test_first": false,
+  "hook": "Egg, tofu, scallion. Watch me make thirty grams of breakfast from my book."
+ },
+ {
+  "id": "H423",
+  "cat": "LCH",
+  "pillar": "P16",
+  "format": "F07",
+  "cta": "BOOK",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [
+   "E28"
+  ],
+  "test_first": false,
+  "hook": "Not a diet book, not a meal plan. A cookbook with the grams written in."
+ },
+ {
+  "id": "H424",
+  "cat": "LCH",
+  "pillar": "P20",
+  "format": "F10",
+  "cta": "JOIN",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [],
+  "test_first": false,
+  "hook": "'Is the membership worth it?' Short version: only if you'll use it. Here's how to know."
+ },
+ {
+  "id": "H425",
+  "cat": "LCH",
+  "pillar": "P16",
+  "format": "F33",
+  "cta": "FAMILY",
+  "page": "SK",
+  "speaker": "SUN",
+  "evidence": [],
+  "test_first": false,
+  "hook": "Buying for your mother? Don't sign her up for something that renews forever."
+ },
+ {
+  "id": "H426",
+  "cat": "LCH",
+  "pillar": "P20",
+  "format": "F38",
+  "cta": "BOOK",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [],
+  "test_first": false,
+  "hook": "Doors open today. Here's the honest version, because he talks too slowly."
+ },
+ {
+  "id": "H427",
+  "cat": "LCH",
+  "pillar": "P20",
+  "format": "F10",
+  "cta": "BOOK",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [],
+  "test_first": false,
+  "hook": "If you already lift three times every week, don't buy our books. Really."
+ },
+ {
+  "id": "H428",
+  "cat": "LCH",
+  "pillar": "P20",
+  "format": "F38",
+  "cta": "JOIN",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [],
+  "test_first": false,
+  "hook": "'Locked' price. Locked how? She made me explain it properly."
+ },
+ {
+  "id": "H429",
+  "cat": "LCH",
+  "pillar": "P20",
+  "format": "F26",
+  "cta": "BOOK",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [],
+  "test_first": false,
+  "hook": "Your questions from launch week. Real questions. No fake reviews. Let's go."
+ },
+ {
+  "id": "H430",
+  "cat": "LCH",
+  "pillar": "P20",
+  "format": "F39",
+  "cta": "BOOK",
+  "page": "CS",
+  "speaker": "DUO",
+  "evidence": [],
+  "test_first": false,
+  "hook": "Not a countdown, not a midnight price jump. Launch week ends. Here's what changes."
+ }
+]

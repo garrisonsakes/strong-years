@@ -1,0 +1,19 @@
+<section class="wrap stack" aria-labelledby="page-h">
+  {%- if section.settings.show_characters -%}
+  <div class="pair">
+    {% render 'sy-character', who: 'chang', size: 96, text: '<p><strong>Chang Yin</strong>, AI character</p>' %}
+    {% render 'sy-character', who: 'sun', size: 96, text: '<p><strong>Sun Yoon</strong>, AI character</p>' %}
+  </div>
+  {%- endif -%}
+  <h1 id="page-h">{{ page.title }}</h1>
+  <div class="rte{% if section.settings.faq_style %} faq{% endif %}">{{ page.content }}</div>
+</section>
+{% schema %}
+{
+  "name": "Page",
+  "settings": [
+    { "type": "checkbox", "id": "show_characters", "label": "Show the two characters", "default": false },
+    { "type": "checkbox", "id": "faq_style", "label": "Question list style", "default": false }
+  ]
+}
+{% endschema %}

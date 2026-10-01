@@ -1,0 +1,29 @@
+{
+  "name": "strong-years-shopify",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "One-command provisioning of the Strong Years Shopify store (Admin GraphQL 2026-07). DRY_RUN=true by default.",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "provision": "node src/provision.ts",
+    "provision:live": "DRY_RUN=false node src/provision.ts",
+    "verify": "node src/provision.ts --phase=verify",
+    "close-founding": "node src/provision.ts --phase=close-founding",
+    "export-ops": "node scripts/export-operations.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "theme:check": "node scripts/theme-check.ts",
+    "theme:push": "shopify theme push --path theme --unpublished",
+    "check": "npm run typecheck && npm test && npm run theme:check"
+  },
+  "devDependencies": {
+    "@shopify/theme-check-node": "^3.30.0",
+    "@types/node": "^22.20.4",
+    "graphql": "^16.14.2",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.7"
+  }
+}

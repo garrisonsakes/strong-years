@@ -1,0 +1,53 @@
+# dependencies and builds
+node_modules/
+.next/
+out/
+dist/
+build/
+coverage/
+test-results/
+playwright-report/
+*.tsbuildinfo
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# secrets and keys (never commit)
+.env
+.env.*
+!.env.example
+!**/.env.example
+deploy/.env
+deploy/secrets.env
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+id_rsa*
+*.sqlite3
+
+# media and generated renders
+data/*
+!data/content/
+video/
+media/
+*.mp4
+*.mov
+*.m4a
+*.wav
+*.mp3
+*.webm
+*.pkl
+production/refs/out/
+production/refs/locked/
+production/voices/out/
+deploy/n8n/prepared/
+workers/out/
+app/screenshots/
+
+# local tool output
+*.log
+prototype/shots/

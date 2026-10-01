@@ -1,0 +1,47 @@
+{%- comment -%} Minimal pages Shopify expects (collection, list of collections, search, 404, blog, article, password, order). {%- endcomment -%}
+<section class="wrap stack" aria-labelledby="simple-h">
+  {%- case template.name -%}
+    {%- when 'collection' -%}
+      <h1 id="simple-h">{{ collection.title }}</h1>
+      <div class="rte">{{ collection.description }}</div>
+      <ul class="checklist">
+        {%- for p in collection.products -%}<li><a href="{{ p.url }}">{{ p.title }}</a> · {{ p.price | money_without_trailing_zeros }}</li>{%- endfor -%}
+      </ul>
+    {%- when 'list-collections' -%}
+      <h1 id="simple-h">Shop</h1>
+      <ul class="checklist">{%- for c in collections -%}<li><a href="{{ c.url }}">{{ c.title }}</a></li>{%- endfor -%}</ul>
+    {%- when 'search' -%}
+      <h1 id="simple-h">Search</h1>
+      <form action="{{ routes.search_url }}" method="get" class="stack-s" role="search">
+        <div class="field"><label for="q">Search</label><input id="q" type="search" name="q" value="{{ search.terms | escape }}"></div>
+        <button class="btn" type="submit">Search</button>
+      </form>
+      {%- if search.performed -%}<ul class="checklist">{%- for r in search.results -%}<li><a href="{{ r.url }}">{{ r.title }}</a></li>{%- endfor -%}</ul>{%- endif -%}
+    {%- when 'blog' -%}
+      <h1 id="simple-h">{{ blog.title }}</h1>
+      <ul class="checklist">{%- for a in blog.articles -%}<li><a href="{{ a.url }}">{{ a.title }}</a></li>{%- endfor -%}</ul>
+    {%- when 'article' -%}
+      <h1 id="simple-h">{{ article.title }}</h1>
+      <div class="rte">{{ article.content }}</div>
+    {%- when 'password' -%}
+      <h1 id="simple-h">Strong Years opens soon.</h1>
+      <p>Chang Yin and Sun Yoon are AI characters. The practices are real.</p>
+      {%- form 'storefront_password' -%}
+        <div class="field"><label for="pw">Password</label><input id="pw" type="password" name="password" autocomplete="current-password"></div>
+        <button class="btn" type="submit">Enter</button>
+      {%- endform -%}
+    {%- when 'order', 'customers/order' -%}
+      <h1 id="simple-h">Order {{ order.name }}</h1>
+      <table class="receipt"><tbody>
+        {%- for li in order.line_items -%}<tr><td>{{ li.title }}</td><td>{{ li.final_line_price | money }}</td></tr>{%- endfor -%}
+        <tr><td><strong>Total</strong></td><td><strong>{{ order.total_price | money }}</strong></td></tr>
+      </tbody></table>
+      <p><a href="{{ routes.account_url }}">Back to your account</a></p>
+    {%- else -%}
+      <h1 id="simple-h">We couldn't find that page.</h1>
+      <a class="btn" href="{{ routes.root_url }}">Go to Strong Years</a>
+  {%- endcase -%}
+</section>
+{% schema %}
+{ "name": "Simple page", "settings": [] }
+{% endschema %}

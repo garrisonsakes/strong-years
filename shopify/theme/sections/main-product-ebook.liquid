@@ -1,0 +1,37 @@
+{%- comment -%}
+  Starter Books (one-time). Each price cell is its own product, so the price rendered here is the price charged.
+  Visitors are routed to their sticky cell's product before first paint (layout boot script).
+{%- endcomment -%}
+{%- assign v = product.selected_or_first_available_variant -%}
+<section class="wrap stack" aria-labelledby="ebook-h">
+  {% render 'sy-character', who: 'chang', size: 72, text: '<p><strong>Chang Yin:</strong> "Seven days. One short session a day. Most of it next to a chair and a kitchen counter."</p>' %}
+  <h1 id="ebook-h">{{ section.settings.heading }}</h1>
+  <p class="price">{{ v.price | money_without_trailing_zeros }} <small>one payment</small></p>
+  <ul class="checklist bold">
+    <li>Chang Yin's 7-Day Strength Reset: seven follow-along sessions of 8 to 12 minutes, an Easier and a Harder version of every move, and your six at-home test numbers on Day 0 and Day 7</li>
+    <li>Sun Yoon's Strong Kitchen: protein at every meal, cheap food, and an honest evidence grade on every kitchen remedy</li>
+    <li>Large print. Instant download. Yours to keep.</li>
+  </ul>
+
+  <form action="{{ routes.cart_add_url }}" method="post" class="stack" data-sy-offer="ebook" data-sy-sku="ebook_{{ product.metafields.strong_years.cell.value }}" data-sy-price="{{ v.price | money_without_currency }}" data-sy-interval="once" novalidate>
+    <input type="hidden" name="id" value="{{ v.id }}">
+    <input type="hidden" name="return_to" value="/checkout">
+    {% render 'sy-bumps' %}
+    <div class="terms" data-sy-terms>
+      <p><strong>Today: {{ v.price | money_without_trailing_zeros }}</strong> for both books, plus any add-ons you ticked. <strong>One payment. Nothing renews.</strong></p>
+      <p>Books and printables are digital downloads: refund on request within 14 days (email us). The kit: 30 days, no return needed.</p>
+    </div>
+    <p class="alert" data-sy-error role="alert" hidden></p>
+    <button type="submit" class="btn">Get both books for {{ v.price | money_without_trailing_zeros }}</button>
+    <p class="under">Your download link arrives by email right after payment.</p>
+  </form>
+
+  <div class="rte">{{ product.description }}</div>
+  <p class="small">After you buy, you'll see one optional offer to join Strong Years on your order page and in our emails. It's never added unless you choose it.</p>
+</section>
+{% schema %}
+{
+  "name": "Starter Books",
+  "settings": [{ "type": "text", "id": "heading", "label": "Heading", "default": "Two books to start: the 7-Day Strength Reset and Sun Yoon's Strong Kitchen." }]
+}
+{% endschema %}

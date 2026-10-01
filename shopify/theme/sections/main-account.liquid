@@ -1,0 +1,34 @@
+{%- comment -%}
+  Account hub. Subscriptions are managed in Shopify customer accounts (Shopify Subscriptions: cancel in two
+  screens, pause, skip, update card). Sessions, downloads and the refund request live in the members app.
+{%- endcomment -%}
+{%- assign links = shop.metafields.strong_years.links.value -%}
+<section class="wrap stack" aria-labelledby="acct-h">
+  <h1 id="acct-h">Your account</h1>
+  <div class="stack-s">
+    <a class="btn" href="{{ links.members_url }}">Open my Strong Years sessions</a>
+    <a class="btn outline" href="{{ routes.account_url }}">Manage membership: cancel, pause or update card</a>
+    <a class="btn outline" href="{{ links.members_url }}/account/refund">Ask for a refund (14-day money-back guarantee)</a>
+  </div>
+  <div class="card stack-s">
+    <h2>How to cancel</h2>
+    <p>Open "Manage membership", choose your subscription, then "Cancel subscription" and confirm. Two screens. Or email us: a person reads it and does it for you within one business day, so for a same-day cancel use the buttons above. You keep access until the end of the period you paid for.</p>
+  </div>
+  {%- if customer -%}
+    <h2>Orders</h2>
+    <table class="receipt">
+      <thead><tr><th scope="col">Order</th><th scope="col">Total</th></tr></thead>
+      <tbody>
+      {%- for order in customer.orders -%}
+        <tr><td><a href="{{ order.customer_url }}">{{ order.name }}</a> · {{ order.created_at | date: '%B %-d, %Y' }}</td><td>{{ order.total_price | money }}</td></tr>
+      {%- else -%}
+        <tr><td>No orders yet.</td><td></td></tr>
+      {%- endfor -%}
+      </tbody>
+    </table>
+  {%- endif -%}
+  <p>Questions: <a href="mailto:{{ links.support_email }}">{{ links.support_email }}</a> · {{ links.phone }}</p>
+</section>
+{% schema %}
+{ "name": "Account", "settings": [] }
+{% endschema %}

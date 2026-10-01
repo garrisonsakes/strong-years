@@ -1,0 +1,25 @@
+{
+  "_comment": "Single source of truth for the Shopify \u2192 members-app webhook contract. shopify/config/catalog.ts imports this file (provisioning registers exactly these topics) and app/tests/unit/webhook-contract.test.ts asserts the members app handles exactly these topics (app/src/lib/billing/shopifyWebhook.ts SHOPIFY_TOPICS_CORE / SHOPIFY_TOPICS_ENRICHMENT). Core topics fire store-wide for any app with the scope (orders/*, refunds/create, disputes/* (read_orders; a lost chargeback revokes access, a won one restores it), customers/*, inventory_levels/update, app/uninstalled). Enrichment topics (subscription_contracts/*, subscription_billing_attempts/*) require read_own_subscription_contracts and fire only for contracts the subscribing app owns (shopify.dev WebhookSubscriptionTopic); with the free Shopify Subscriptions app owning the contracts they never reach us, so they are registered only when SUBSCRIPTION_ENGINE=app and the members app treats them as enrichment, never as the source of truth.",
+  "core": [
+    "orders/paid",
+    "orders/cancelled",
+    "refunds/create",
+    "disputes/create",
+    "disputes/update",
+    "customers/update",
+    "customers/delete",
+    "inventory_levels/update",
+    "app/uninstalled"
+  ],
+  "enrichment": [
+    "subscription_contracts/create",
+    "subscription_contracts/update",
+    "subscription_contracts/activate",
+    "subscription_contracts/pause",
+    "subscription_contracts/cancel",
+    "subscription_contracts/expire",
+    "subscription_contracts/fail",
+    "subscription_billing_attempts/success",
+    "subscription_billing_attempts/failure"
+  ]
+}

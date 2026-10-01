@@ -1,0 +1,25 @@
+<section class="wrap stack-s section" aria-labelledby="h-{{ section.id }}">
+  <h2 id="h-{{ section.id }}">{{ section.settings.heading }}</h2>
+  <div>
+    {%- for block in section.blocks -%}
+      <details {{ block.shopify_attributes }}>
+        <summary>{{ block.settings.question }}</summary>
+        <div class="rte">{{ block.settings.answer }}</div>
+      </details>
+    {%- endfor -%}
+  </div>
+  <p><a href="/pages/faq">All questions</a></p>
+</section>
+{% schema %}
+{
+  "name": "Questions",
+  "settings": [{ "type": "text", "id": "heading", "label": "Heading", "default": "Questions" }],
+  "blocks": [
+    { "type": "qa", "name": "Question", "settings": [
+      { "type": "text", "id": "question", "label": "Question" },
+      { "type": "richtext", "id": "answer", "label": "Answer" }
+    ] }
+  ],
+  "presets": [{ "name": "Questions" }]
+}
+{% endschema %}

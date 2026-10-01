@@ -1,0 +1,137 @@
+import { describe, it, expect } from "vitest";
+import { dryRunner, assertNotForbiddenShop } from "../src/client.ts";
+import { runPlan, type Engine, type Phase } from "../src/plan.ts";
+import { factsFromEnv } from "../src/provision.ts";
+import { PRODUCTS, FOUNDING_CAP, FUNNEL_ARMS } from "../config/catalog.ts";
+import { readFileSync } from "node:fs";
+
+const facts = factsFromEnv({ COMPANY_LEGAL_NAME: "Strong Years LLC", MAILING_ADDRESS: "1 Test St, Austin, TX 78701", SUPPORT_EMAIL: "help@strongyears.com", BILLING_PHONE: "(555) 010-0000", GOVERNING_STATE: "Texas", SY_DOMAIN: "strongyears.com", LEGAL_EFFECTIVE_DATE: "2026-10-01" } as any);
+
+async function plan(engine: Engine, phase: Phase, simulateProvisioned = false, confirmCloseFounding = false) {
+  const g = dryRunner(() => {}, { simulateProvisioned, engine });
+  const report = await runPlan(g, { engine, phase, membersAppUrl: "https://members.strongyears.com", facts, foundingCloseDateIso: "2027-01-09", nowIso: "2026-10-01T00:00:00Z", confirmCloseFounding });
+  return { ops: g.recorded, report };
+}
+const summary = (ops: any[]) => ops.map((o) => `${o.kind.padEnd(8)} ${o.op.padEnd(26)} ${o.step}`);
+
+describe("provisioning plan (DRY_RUN snapshot)", () => {
+  it("core phase, Shopify Subscriptions engine: full operation list", async () => {
+    const { ops, report } = await plan("shopify_subscriptions", "core");
+    expect(summary(ops)).toMatchSnapshot();
+    expect(ops.map((o) => ({ op: o.op, variables: o.variables }))).toMatchSnapshot("variables");
+    expect(report.manual.join("\n")).toMatch(/Shopify Subscriptions → Plans/);
+  });
+
+  it("core phase, app engine: creates app-owned selling plans with a fixed first-cycle price", async () => {
+    const { ops } = await plan("app", "core");
+    expect(summary(ops)).toMatchSnapshot();
+    const spg = ops.filter((o) => o.op === "SellingPlanGroupCreate");
+    expect(spg).toHaveLength(3);
+    const founding = spg.find((o) => (o.variables as any).input.merchantCode === "sy-founding")!;
+    const starter = (founding.variables as any).input.sellingPlansToCreate.find((p: any) => p.pricingPolicies.length);
+    expect(starter.pricingPolicies).toEqual([
+      { fixed: { adjustmentType: "PRICE", adjustmentValue: { fixedValue: "12.00" } } },
+      { recurring: { afterCycle: 1, adjustmentType: "PRICE", adjustmentValue: { fixedValue: "25.00" } } },
+    ]);
+    expect(ops.some((o) => o.op === "DiscountCodeCreate" && (o.variables as any).basicCodeDiscount.code === "STARTER12")).toBe(false);
+    expect(ops.filter((o) => o.op === "WebhookCreate").map((o) => (o.variables as any).topic)).toContain("SUBSCRIPTION_CONTRACTS_CREATE");
+  });
+
+  it("verify phase snapshot (after the client created the plans)", async () => {
+    const { ops, report } = await plan("shopify_subscriptions", "verify", true);
+    expect(summary(ops)).toMatchSnapshot();
+    expect(report.membersCatalog).toMatchSnapshot("members catalog");
+  });
+
+  it("close-founding is one-way and needs explicit confirmation", async () => {
+    await expect(plan("shopify_subscriptions", "close-founding", true, false)).rejects.toThrow(/yes-close-founding/);
+    const { ops } = await plan("shopify_subscriptions", "close-founding", true, true);
+    expect(summary(ops)).toMatchSnapshot();
+    const pol = ops.find((o) => o.op === "VariantInventoryPolicy")!;
+    expect((pol.variables as any).variants[0].inventoryPolicy).toBe("CONTINUE");
+  });
+});
+
+describe("plan invariants", () => {
+  it("founding cap = 5,000 real inventory, DENY overselling, set only at creation", async () => {
+    const { ops } = await plan("shopify_subscriptions", "core");
+    const f = ops.find((o) => o.op === "ProductUpsert" && (o.variables as any).input.handle === "founding-membership")!;
+    const v = (f.variables as any).input.variants[0];
+    expect(v.inventoryQuantities).toEqual([{ locationId: "gid://shopify/Location/DRYRUN-1", name: "available", quantity: FOUNDING_CAP }]);
+    expect(v.inventoryPolicy).toBe("DENY");
+    expect(v.inventoryItem.tracked).toBe(true);
+    // Re-run against a provisioned store: no inventory in the input → the seat count is never reset.
+    const again = await plan("shopify_subscriptions", "core", true);
+    const f2 = again.ops.find((o) => o.op === "ProductUpsert" && (o.variables as any).input.handle === "founding-membership")!;
+    expect((f2.variables as any).input.variants[0].inventoryQuantities).toBeUndefined();
+    expect((f2.variables as any).input.variants[0].id).toMatch(/ProductVariant/);
+  });
+
+  it("STARTER12 discounts only the first subscription payment of the founding product", async () => {
+    const { ops } = await plan("shopify_subscriptions", "core");
+    const d = (ops.find((o) => o.op === "DiscountCodeCreate" && (o.variables as any).basicCodeDiscount.code === "STARTER12")!.variables as any).basicCodeDiscount;
+    expect(d.recurringCycleLimit).toBe(1);
+    expect(d.customerGets.appliesOnSubscription).toBe(true);
+    expect(d.customerGets.appliesOnOneTimePurchase).toBe(false);
+    expect(d.customerGets.value.discountAmount.amount).toBe("13.00"); // $25 - $13 = $12 today
+    expect(d.customerGets.items.products.productsToAdd).toEqual(["gid://shopify/Product/DRYRUN-founding-membership"]);
+  });
+
+  it("page/affiliate codes never discount a membership (MRR is never discounted)", async () => {
+    const { ops } = await plan("shopify_subscriptions", "core");
+    for (const o of ops.filter((x) => x.op === "DiscountCodeCreate")) {
+      const d = (o.variables as any).basicCodeDiscount;
+      if (d.code === "STARTER12" || d.code === "STARTER12S") continue;
+      expect(d.customerGets.appliesOnSubscription).toBe(false);
+      expect(d.customerGets.items.products.productsToAdd.every((id: string) => id.includes("starter-books"))).toBe(true);
+    }
+  });
+
+  it("STARTER12S is the same first-payment-only offer on the standard membership after the founding close ($35 → $12)", async () => {
+    const { ops } = await plan("shopify_subscriptions", "core");
+    const d = (ops.find((o) => o.op === "DiscountCodeCreate" && (o.variables as any).basicCodeDiscount.code === "STARTER12S")!.variables as any).basicCodeDiscount;
+    expect(d.recurringCycleLimit).toBe(1);
+    expect(d.appliesOncePerCustomer).toBe(true);
+    expect(d.customerGets.value.discountAmount.amount).toBe("23.00");
+    expect(d.customerGets.items.products.productsToAdd).toEqual(["gid://shopify/Product/DRYRUN-strong-years-membership"]);
+  });
+
+  it("webhooks: exactly the fixture's core topics (config/webhook-topics.json), all pointing at the members app; enrichment topics only in the app engine", async () => {
+    const fixture = JSON.parse(readFileSync(new URL("../config/webhook-topics.json", import.meta.url), "utf8")) as { core: string[]; enrichment: string[] };
+    const toEnum = (t: string) => t.toUpperCase().replace("/", "_");
+    const { ops } = await plan("shopify_subscriptions", "core");
+    const hooks = ops.filter((o) => o.op === "WebhookCreate");
+    expect(hooks.map((o) => (o.variables as any).topic)).toEqual(fixture.core.map(toEnum));
+    expect(fixture.core).not.toContain("orders/refunded"); // not an Admin API topic; refunds/create is the refund event
+    expect(fixture.core).toContain("refunds/create");
+    for (const h of hooks) expect((h.variables as any).webhookSubscription.uri).toBe("https://members.strongyears.com/api/webhooks/shopify");
+    const app = await plan("app", "core");
+    const appHooks = app.ops.filter((o) => o.op === "WebhookCreate").map((o) => (o.variables as any).topic);
+    expect(appHooks).toEqual([...fixture.core, ...fixture.enrichment].map(toEnum));
+  });
+
+  it("arm B (cell B) is the launch default; A is the test arm (CANON UPDATE 3)", () => {
+    expect(FUNNEL_ARMS.find((a) => a.default)?.id).toBe("B");
+    expect(FUNNEL_ARMS.find((a) => a.id === "B")?.cell).toBe("m12");
+  });
+
+  it("ebook cells are separate products with one real price each; gifts never renew; kit ships", () => {
+    const ebooks = PRODUCTS.filter((p) => p.role === "ebook");
+    expect(ebooks.map((p) => p.variants[0].price).sort()).toEqual(["12.00", "15.00", "7.00"]);
+    expect(ebooks.every((p) => p.variants.length === 1 && !p.subscriptionOnly)).toBe(true);
+    const gift = PRODUCTS.find((p) => p.role === "gift")!;
+    expect(gift.subscriptionOnly).toBe(false);
+    expect(gift.variants.map((v) => v.price)).toEqual(["49.00", "119.00"]);
+    const kit = PRODUCTS.find((p) => p.role === "bump_kit")!;
+    expect(kit.variants[0].requiresShipping).toBe(true);
+    expect(kit.variants[0].initialQuantity).toBe(0);
+    const prices = Object.fromEntries(PRODUCTS.filter((p) => p.subscriptionOnly).map((p) => [p.role, p.variants[0].price]));
+    expect(prices).toEqual({ founding: "25.00", standard: "35.00", annual: "249.00", essentials: "12.00" });
+  });
+
+  it("refuses the K9SUPPS store by domain or name", () => {
+    expect(() => assertNotForbiddenShop("k9supps.myshopify.com")).toThrow(/Refusing/);
+    expect(() => assertNotForbiddenShop("K9 Supps")).toThrow(/Refusing/);
+    expect(() => assertNotForbiddenShop("strong-years.myshopify.com")).not.toThrow();
+  });
+});

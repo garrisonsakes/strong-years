@@ -1,0 +1,1841 @@
+{
+  "name": "ChangSun Growth: metrics → winners → allocator → governor (dry run)",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## Hourly growth loop\nposts < 96 h → worker metrics (live only with GROWTH_LIVE_METRICS=1) → post_metrics → baselines → scores → winners → remix_jobs + boost_queue → Slack.\n\nNothing here publishes or spends. Boost candidates wait for a human in `v_boost_approval_queue`; remix jobs become briefs only after /uniqueness/check + compliance + judge.",
+        "height": 260,
+        "width": 520,
+        "color": 4
+      },
+      "id": "81699e50-4ddf-5796-809a-dd0aeb04399c",
+      "name": "Note: hourly loop",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        -320
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 1
+            }
+          ]
+        }
+      },
+      "id": "5cd560c0-b6a1-5ee8-8d1c-0c88911afbee",
+      "name": "Hourly: Growth Tick",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/posts?select=id,platform,published_at,external_post_id,page_account_id,page_accounts(page_id,token_vault_key),variants(duration_s)&status=eq.published&published_at=gte.{{ $now.minus({ hours: 96 }).toISO() }}&limit=1000",
+        "options": {
+          "timeout": 120000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpCustomAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "id": "58e0d3f9-d92f-5771-95b1-999d0fecf94a",
+      "name": "Supabase: Recent Published Posts",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        260,
+        0
+      ],
+      "credentials": {
+        "httpCustomAuth": {
+          "id": "REPLACE_SUPABASE_CUSTOM_AUTH",
+          "name": "Supabase service (apikey + Bearer)"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/metrics?select=post_id,captured_at,views,reach,likes,comments,shares,saves,profile_visits,link_clicks,keyword_comments,dm_optins,avg_watch_pct&captured_at=gte.{{ $now.minus({ hours: 120 }).toISO() }}&limit=20000",
+        "options": {
+          "timeout": 120000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpCustomAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "id": "63f86b4a-4cc1-5000-bb84-7da41c4d6720",
+      "name": "Supabase: Raw Captures (metrics)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        520,
+        0
+      ],
+      "credentials": {
+        "httpCustomAuth": {
+          "id": "REPLACE_SUPABASE_CUSTOM_AUTH",
+          "name": "Supabase service (apikey + Bearer)"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/orders?select=attributed_post_id,created_at,is_subscription&created_at=gte.{{ $now.minus({ hours: 120 }).toISO() }}&attributed_post_id=not.is.null&limit=20000",
+        "options": {
+          "timeout": 120000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpCustomAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "id": "ebaef5fe-3ed8-55f3-ab7f-cd58250804bd",
+      "name": "Supabase: Order Rollup (orders by post)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        780,
+        0
+      ],
+      "credentials": {
+        "httpCustomAuth": {
+          "id": "REPLACE_SUPABASE_CUSTOM_AUTH",
+          "name": "Supabase service (apikey + Bearer)"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// posts + raw captures (+ rollups) -> /growth/metrics/normalize body. Captures already carry canonical counters\n// (raw_format 'capture'); keyword_comments / dm_optins ride along as cumulative rollup points; buyers (one-time orders)\n// and members (subscription orders) come from orders.attributed_post_id.\nconst posts = $('Supabase: Recent Published Posts').all().map(i => i.json);\nconst caps = $('Supabase: Raw Captures (metrics)').all().map(i => i.json);\nconst orders = $('Supabase: Order Rollup (orders by post)').all().map(i => i.json);\nconst byPost = {};\nfor (const c of caps) (byPost[c.post_id] = byPost[c.post_id] || []).push(c);\nconst memb = {}, buy = {};\nfor (const o of orders) {\n  const bucket = o.is_subscription ? memb : buy;\n  (bucket[o.attributed_post_id] = bucket[o.attributed_post_id] || []).push(o.created_at);\n}\nconst body = { now: new Date().toISOString(), posts: [] };\nfor (const p of posts) {\n  const cs = (byPost[p.id] || []).sort((a, b) => a.captured_at.localeCompare(b.captured_at));\n  const rollups = {};\n  if (cs.some(c => c.keyword_comments != null)) rollups.keyword_comments = cs.map(c => ({ at: c.captured_at, count: c.keyword_comments || 0 }));\n  if (cs.some(c => c.dm_optins != null)) rollups.optins = cs.map(c => ({ at: c.captured_at, count: c.dm_optins || 0 }));\n  // orders were queried for every post: no attributed order is a real 0, not an unknown (growth/scoring.reward)\n  rollups.buyers = buy[p.id] ? buy[p.id].sort().map((t, i) => ({ at: t, count: i + 1 })) : 0;\n  rollups.members = memb[p.id] ? memb[p.id].sort().map((t, i) => ({ at: t, count: i + 1 })) : 0;\n  const dur = (p.variants && p.variants[0] && p.variants[0].duration_s) || null;\n  body.posts.push({ post_id: p.id, page_id: p.page_accounts && p.page_accounts.page_id, platform: p.platform,\n    published_at: p.published_at, external_post_id: p.external_post_id, duration_s: dur, raw_format: 'capture',\n    captures: cs.map(c => ({ captured_at: c.captured_at, views: c.views, reach: c.reach, likes: c.likes, comments: c.comments,\n      shares: c.shares, saves: c.saves, profile_visits: c.profile_visits, link_clicks: c.link_clicks, avg_watch_pct: c.avg_watch_pct })),\n    rollups });\n}\nreturn [{ json: body }];\n"
+      },
+      "id": "9e189c06-23ef-521a-89cd-8191b7225d28",
+      "name": "Build Normalize Request",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1040,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.QA_WORKER_URL }}/growth/metrics/normalize",
+        "options": {
+          "timeout": 180000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json) }}"
+      },
+      "id": "4f1eaf29-8a46-5d50-be38-54111d3e2892",
+      "name": "Worker: Normalize Metrics",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1300,
+        0
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "REPLACE_WORKER",
+          "name": "Render/QA worker X-Worker-Token"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const res = $input.first().json;\nconst rows = (res.snapshots || []).map(s => ({ post_id: s.post_id, page_id: s.page_id, platform: s.platform, horizon_h: s.horizon_h,\n  published_at: s.published_at, captured_at: s.captured_at, age_h: s.age_h, views: s.views, reach: s.reach, likes: s.likes,\n  comments: s.comments, shares: s.shares, saves: s.saves, profile_visits: s.profile_visits, link_clicks: s.link_clicks,\n  follows: s.follows, avg_watch_pct: s.avg_watch_pct, keyword_comments: s.keyword_comments, optins: s.optins, buyers: s.buyers, members: s.members,\n  interpolated: s.interpolated, missing: s.missing, rollups_as_of_now: s.rollups_as_of_now, source: s.source }));\nreturn [{ json: { rows, count: rows.length } }];\n"
+      },
+      "id": "e3aa0bef-23ac-5f5a-94ac-076ca5c63e97",
+      "name": "Rows: post_metrics",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1560,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/post_metrics?on_conflict=post_id,horizon_h",
+        "options": {
+          "timeout": 120000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpCustomAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Prefer",
+              "value": "resolution=merge-duplicates,return=minimal"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.rows) }}"
+      },
+      "id": "77e10545-637d-5d2d-913d-63d1eea0d40b",
+      "name": "Supabase: Upsert post_metrics",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1820,
+        0
+      ],
+      "credentials": {
+        "httpCustomAuth": {
+          "id": "REPLACE_SUPABASE_CUSTOM_AUTH",
+          "name": "Supabase service (apikey + Bearer)"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/post_metrics?select=post_id,page_id,platform,horizon_h,published_at,views,shares,saves,keyword_comments,profile_visits,link_clicks,optins,members,interpolated&published_at=gte.{{ $now.minus({ days: 30 }).toISO() }}&limit=50000",
+        "options": {
+          "timeout": 120000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpCustomAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "id": "70e00c8a-1233-50e8-b5c1-d52fd39f641f",
+      "name": "Supabase: post_metrics History (30d)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2080,
+        0
+      ],
+      "credentials": {
+        "httpCustomAuth": {
+          "id": "REPLACE_SUPABASE_CUSTOM_AUTH",
+          "name": "Supabase service (apikey + Bearer)"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const history = $input.all().map(i => i.json);\nconst pages = [...new Set(history.map(h => h.page_id).filter(Boolean))];\nreturn [{ json: { history, pages } }];\n"
+      },
+      "id": "53a841e3-bf91-52b9-9cfa-c81bfe327d95",
+      "name": "Build Baselines Request",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2340,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.QA_WORKER_URL }}/growth/baselines",
+        "options": {
+          "timeout": 180000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json) }}"
+      },
+      "id": "2c5bc1fd-e02b-5ef9-b9e2-47294a950f1f",
+      "name": "Worker: Baselines",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2600,
+        0
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "REPLACE_WORKER",
+          "name": "Render/QA worker X-Worker-Token"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/page_baselines",
+        "options": {
+          "timeout": 120000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpCustomAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Prefer",
+              "value": "return=minimal"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.baselines.map(b => ({ page_id: b.page_id, platform: b.platform, horizon_h: b.horizon_h, n_posts: b.n_posts, components: b.components, config_version: b.config_version }))) }}"
+      },
+      "id": "278469b8-661f-574c-8a3a-4629d63be072",
+      "name": "Supabase: Insert page_baselines",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2860,
+        0
+      ],
+      "credentials": {
+        "httpCustomAuth": {
+          "id": "REPLACE_SUPABASE_CUSTOM_AUTH",
+          "name": "Supabase service (apikey + Bearer)"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const snaps = $('Rows: post_metrics').first().json.rows;\nconst baselines = $('Worker: Baselines').first().json.baselines;\nreturn [{ json: { snapshots: snaps, baselines } }];\n"
+      },
+      "id": "943efd2e-ecd8-5b76-a945-e150bdbc4ef9",
+      "name": "Build Score Request",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3120,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.QA_WORKER_URL }}/growth/score",
+        "options": {
+          "timeout": 180000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json) }}"
+      },
+      "id": "f1b4db5c-dac6-50a3-bfaa-175aef4818f4",
+      "name": "Worker: Score",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        3380,
+        0
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "REPLACE_WORKER",
+          "name": "Render/QA worker X-Worker-Token"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const res = $input.first().json;\nconst scores = (res.scores || []).map(s => ({ post_id: s.post_id, page_id: s.page_id, platform: s.platform, horizon_h: s.horizon_h,\n  score: s.score, z: s.z, components_used: s.components_used, views: s.views, class: s.class, breakout: s.breakout,\n  reward: s.reward, conversion_norm: s.conversion_norm, reasons: s.reasons, config_version: s.config_version }));\nconst winners = (res.winners || []).map(w => ({ post_id: w.post_id, page_id: w.page_id, platform: w.platform, best_score: w.score,\n  best_horizon_h: w.horizon_h, breakout: w.breakout, last_seen_at: new Date().toISOString() }));\nreturn [{ json: { scores, winners, all: res.scores || [] } }];\n"
+      },
+      "id": "6ef07eae-a724-5f9c-8382-0d26678b493b",
+      "name": "Rows: post_scores + winners",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3640,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/post_scores?on_conflict=post_id,horizon_h",
+        "options": {
+          "timeout": 120000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpCustomAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Prefer",
+              "value": "resolution=merge-duplicates,return=minimal"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.scores) }}"
+      },
+      "id": "7ecb2b50-e68e-530b-bc5d-4cfcebad5300",
+      "name": "Supabase: Upsert post_scores",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        3900,
+        0
+      ],
+      "credentials": {
+        "httpCustomAuth": {
+          "id": "REPLACE_SUPABASE_CUSTOM_AUTH",
+          "name": "Supabase service (apikey + Bearer)"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/winners?on_conflict=post_id",
+        "options": {
+          "timeout": 120000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpCustomAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Prefer",
+              "value": "resolution=merge-duplicates,return=minimal"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($('Rows: post_scores + winners').first().json.winners) }}"
+      },
+      "id": "e3bcdaed-0ef0-5968-a9b6-a8f9265dd2a7",
+      "name": "Supabase: Upsert winners",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        4160,
+        0
+      ],
+      "credentials": {
+        "httpCustomAuth": {
+          "id": "REPLACE_SUPABASE_CUSTOM_AUTH",
+          "name": "Supabase service (apikey + Bearer)"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "conditions": [
+            {
+              "id": "8e90ce23-e7e2-55b8-b7a5-ab32c4d10c28",
+              "leftValue": "={{ $('Rows: post_scores + winners').first().json.all.filter(s => s.class === 'WINNER' || s.class === 'LOSER').length }}",
+              "operator": {
+                "type": "number",
+                "operation": "gt"
+              },
+              "rightValue": 0
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "8fac2e15-22e0-5c0e-8611-76f51f47ccad",
+      "name": "Any winners or losers?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        4420,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/pages?select=id,slug,status,locale,page_dna&status=eq.active",
+        "options": {
+          "timeout": 120000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpCustomAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "id": "7fd76605-b0e2-521e-9d81-e7e29aca2b02",
+      "name": "Supabase: Pages",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        4680,
+        -160
+      ],
+      "credentials": {
+        "httpCustomAuth": {
+          "id": "REPLACE_SUPABASE_CUSTOM_AUTH",
+          "name": "Supabase service (apikey + Bearer)"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/posts?select=id,published_at,variant:variants(video:videos(brief:briefs(pillar,editorial_format,hook_id,speaker_mode,brief)))&id=in.({{ $('Rows: post_scores + winners').first().json.all.filter(s => s.class === 'WINNER' || s.class === 'LOSER').map(s => s.post_id).join(',') }})",
+        "options": {
+          "timeout": 120000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpCustomAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "id": "c56d7cee-16ff-589d-9990-8de3ad5ccdbe",
+      "name": "Supabase: Post Context (briefs)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        4940,
+        -160
+      ],
+      "credentials": {
+        "httpCustomAuth": {
+          "id": "REPLACE_SUPABASE_CUSTOM_AUTH",
+          "name": "Supabase service (apikey + Bearer)"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/remix_jobs?select=source_post_id,target_page_id,created_at&created_at=gte.{{ $now.minus({ days: 3 }).toISO() }}",
+        "options": {
+          "timeout": 120000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpCustomAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "id": "0811a7f8-9199-50bd-b993-ad0f078c0497",
+      "name": "Supabase: Recent remix_jobs",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        5200,
+        -160
+      ],
+      "credentials": {
+        "httpCustomAuth": {
+          "id": "REPLACE_SUPABASE_CUSTOM_AUTH",
+          "name": "Supabase service (apikey + Bearer)"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const scores = $('Rows: post_scores + winners').first().json.all.filter(s => s.class === 'WINNER' || s.class === 'LOSER');\nconst pages = $('Supabase: Pages').all().map(i => i.json);\nconst ctx = $('Supabase: Post Context (briefs)').all().map(i => i.json);\nconst recent = $('Supabase: Recent remix_jobs').all().map(i => i.json);\nconst posts = ctx.map(p => {\n  const b = (((p.variant || {}).video || {}).brief) || {};\n  const bb = b.brief || {};\n  return { post_id: p.id, published_at: p.published_at, arm: { pillar: b.pillar, grammar: bb.grammar, format: b.editorial_format,\n    speaker: b.speaker_mode, length: bb.length_bucket }, set_code: bb.set_code, hook_id: b.hook_id, evidence: bb.evidence || [] };\n});\nreturn [{ json: { scores, posts, pages, recent_remixes: recent, now: new Date().toISOString() } }];\n"
+      },
+      "id": "3c478e17-f5c2-537f-a615-66315db293a0",
+      "name": "Build Actions Request",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        5460,
+        -160
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.QA_WORKER_URL }}/growth/actions",
+        "options": {
+          "timeout": 180000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json) }}"
+      },
+      "id": "4dee3e12-4d0a-5048-9f4c-080df38bf9fb",
+      "name": "Worker: Winner Actions",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        5720,
+        -160
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "REPLACE_WORKER",
+          "name": "Render/QA worker X-Worker-Token"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const res = $input.first().json;\nconst remix = (res.remix_jobs || []).map(j => ({ source_post_id: j.source_post_id, source_page_id: j.source_page_id,\n  source_platform: j.source_platform, target_page_id: j.target_page_id, status: 'queued', priority: j.priority,\n  earliest_at: j.earliest_at, preferred_slot_hour: j.preferred_slot_hour, level: j.level, payload: j }));\nconst boosts = (res.boost_candidates || []).map(b => ({ post_id: b.post_id, page_id: b.page_id, platform: b.platform,\n  channel: b.channel, class: b.class, score: b.score, status: b.status, requested_daily_usd: b.requested_daily_usd,\n  compliance: b.compliance, ai_label_kept: true }));\nreturn [{ json: { remix, boosts, pins: res.pin_suggestions || [], downweights: res.downweights || [], counts: res.counts } }];\n"
+      },
+      "id": "0dbb6268-182e-5fca-9722-528337a30237",
+      "name": "Rows: remix_jobs + boost_queue",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        5980,
+        -160
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/remix_jobs?on_conflict=source_post_id,target_page_id",
+        "options": {
+          "timeout": 120000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpCustomAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Prefer",
+              "value": "resolution=ignore-duplicates,return=minimal"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.remix) }}"
+      },
+      "id": "45046b8c-0680-59fa-a1b4-89d63ddcd9a5",
+      "name": "Supabase: Insert remix_jobs",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        6240,
+        -160
+      ],
+      "credentials": {
+        "httpCustomAuth": {
+          "id": "REPLACE_SUPABASE_CUSTOM_AUTH",
+          "name": "Supabase service (apikey + Bearer)"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/boost_queue",
+        "options": {
+          "timeout": 120000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpCustomAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Prefer",
+              "value": "return=minimal"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($('Rows: remix_jobs + boost_queue').first().json.boosts) }}"
+      },
+      "id": "09401b68-2889-5817-b4d8-6aea486eb84a",
+      "name": "Supabase: Insert boost_queue",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        6500,
+        -160
+      ],
+      "credentials": {
+        "httpCustomAuth": {
+          "id": "REPLACE_SUPABASE_CUSTOM_AUTH",
+          "name": "Supabase service (apikey + Bearer)"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "operation": "post",
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $env.SLACK_GROWTH_CHANNEL || '#growth' }}"
+        },
+        "text": "=Growth: {{ $('Rows: remix_jobs + boost_queue').first().json.counts.remix_jobs }} remix jobs queued, {{ $('Rows: remix_jobs + boost_queue').first().json.counts.boost_candidates }} boost candidates waiting for a human (v_boost_approval_queue), {{ $('Rows: remix_jobs + boost_queue').first().json.pins.length }} pin suggestions: {{ $('Rows: remix_jobs + boost_queue').first().json.pins.map(p => p.platform + ':' + p.action + ' ' + p.post_id).join(', ') }}",
+        "otherOptions": {}
+      },
+      "id": "6b5c3247-ff21-5b8e-bef2-f17be97e378a",
+      "name": "Slack: Growth Hourly Summary",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [
+        6760,
+        -160
+      ],
+      "credentials": {
+        "slackApi": {
+          "id": "REPLACE_SLACK",
+          "name": "Slack (ops bot)"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "content": "## Nightly (23:10 page-local)\npages × platforms → /growth/allocate (Thompson sampling, ≥ 20% exploration) → briefs (queued, slot plan for tomorrow) → governor state from spend_budgets + spend_ledger + sy_orders rollups → /growth/governor/plan (DRY RUN: SPEND_ENABLED=0 by default) → governor_decisions → Slack.\n\nThe executor endpoint is not wired on purpose: a human approves in the review app and the client flips SPEND_ENABLED only after the §11 gate.",
+        "height": 260,
+        "width": 520,
+        "color": 5
+      },
+      "id": "c9f769c4-f70f-5448-9189-36115f56c21e",
+      "name": "Note: nightly allocator + governor",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "10 23 * * *"
+            }
+          ]
+        }
+      },
+      "id": "bb7dcfc4-4e6b-5705-a5cb-a59b29a412e2",
+      "name": "Nightly 23:10: Allocator + Governor",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/page_accounts?select=id,page_id,platform,daily_post_target,status,page:pages(id,slug,page_dna,status)&status=in.(warming,active)",
+        "options": {
+          "timeout": 120000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpCustomAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "id": "1c8caa68-d21b-5adb-879b-802525684f41",
+      "name": "Supabase: Active Page Accounts",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        260,
+        800
+      ],
+      "credentials": {
+        "httpCustomAuth": {
+          "id": "REPLACE_SUPABASE_CUSTOM_AUTH",
+          "name": "Supabase service (apikey + Bearer)"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/post_scores?select=post_id,page_id,platform,reward,scored_at,class,post:posts(variant:variants(video:videos(brief:briefs(pillar,editorial_format,speaker_mode,brief))))&scored_at=gte.{{ $now.minus({ days: 30 }).toISO() }}&horizon_h=gte.24&limit=50000",
+        "options": {
+          "timeout": 120000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpCustomAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "id": "8319d82c-00ed-5f3f-882b-d076305646d5",
+      "name": "Supabase: Bandit Observations (30d)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        520,
+        800
+      ],
+      "credentials": {
+        "httpCustomAuth": {
+          "id": "REPLACE_SUPABASE_CUSTOM_AUTH",
+          "name": "Supabase service (apikey + Bearer)"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/briefs?select=page_id,pillar,editorial_format,brief&target_date=gte.{{ $now.minus({ days: 7 }).toISODate() }}&limit=20000",
+        "options": {
+          "timeout": 120000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpCustomAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "id": "124ed3b1-cb69-583b-a44d-4fa135d66ce6",
+      "name": "Supabase: Recent Briefs (7d)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        780,
+        800
+      ],
+      "credentials": {
+        "httpCustomAuth": {
+          "id": "REPLACE_SUPABASE_CUSTOM_AUTH",
+          "name": "Supabase service (apikey + Bearer)"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// one item per page x platform for tomorrow; observations mapped to arm keys; LOSER posts carry reward 0\nconst accounts = $('Supabase: Active Page Accounts').all().map(i => i.json);\nconst obs = $('Supabase: Bandit Observations (30d)').all().map(i => i.json);\nconst briefs = $('Supabase: Recent Briefs (7d)').all().map(i => i.json);\nconst tomorrow = $now.plus({ days: 1 }).toISODate();\nconst armOf = (b) => { const bb = (b && b.brief) || {}; if (!b || !b.pillar) return null;\n  return `pillar=${b.pillar}|grammar=${bb.grammar || 'MYTH'}|format=${b.editorial_format || 'F02'}|speaker=${b.speaker_mode || 'CHANG'}|length=${bb.length_bucket || 'M'}`; };\nconst out = [];\nfor (const a of accounts) {\n  if (!a.page || a.page.status !== 'active') continue;\n  const observations = obs.filter(o => o.page_id === a.page_id && o.platform === a.platform).map(o => {\n    const key = armOf((((o.post || {}).variant || {}).video || {}).brief);\n    return key ? { arm_key: key, reward: o.class === 'LOSER' ? 0 : o.reward, at: o.scored_at } : null; }).filter(Boolean);\n  const recent = briefs.filter(b => b.page_id === a.page_id).map(b => ({ pillar: b.pillar, grammar: (b.brief || {}).grammar, format: b.editorial_format }));\n  out.push({ json: { page: a.page, platform: a.platform, date: tomorrow, cadence: a.daily_post_target, observations, recent,\n    page_account_id: a.id, now: new Date().toISOString() } });\n}\nreturn out;\n"
+      },
+      "id": "b5a1f415-74ea-5aa4-950b-d6216d43f333",
+      "name": "Build Allocate Requests",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1040,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.QA_WORKER_URL }}/growth/allocate",
+        "options": {
+          "timeout": 180000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json) }}"
+      },
+      "id": "0cced573-b79a-51e6-b369-eec09597a390",
+      "name": "Worker: Allocate Slots",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1300,
+        800
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "REPLACE_WORKER",
+          "name": "Render/QA worker X-Worker-Token"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const rows = [];\nfor (const item of $input.all()) {\n  const plan = item.json;\n  for (const s of plan.slots || []) {\n    rows.push({ page_id: plan.page_id, target_date: plan.date, slot_index: s.slot_index, format: s.render_format,\n      editorial_format: s.editorial_format, pillar: s.pillar, speaker_mode: s.speaker, status: 'queued', priority: s.priority,\n      brief: { grammar: s.grammar, length_bucket: s.length_bucket, length_s: s.length_s, running_bit: s.running_bit,\n        arm_key: s.arm_key, mode: s.mode, platform: plan.platform, hour: s.hour, proven_grammar: s.proven_grammar,\n        allocator: { theta: s.theta, posterior_mean: s.posterior_mean, observations: s.observations, config_version: plan.config_version } } });\n  }\n}\nreturn [{ json: { rows, count: rows.length } }];\n"
+      },
+      "id": "9d78deca-e2f6-5d8e-8071-93a9ddd8109f",
+      "name": "Rows: briefs (slot plan)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1560,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/briefs?on_conflict=page_id,target_date,slot_index,locale",
+        "options": {
+          "timeout": 120000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpCustomAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Prefer",
+              "value": "resolution=ignore-duplicates,return=minimal"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.rows) }}"
+      },
+      "id": "ebab781a-2b81-538f-ac8f-209d8967b448",
+      "name": "Supabase: Insert briefs (queued)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1820,
+        800
+      ],
+      "credentials": {
+        "httpCustomAuth": {
+          "id": "REPLACE_SUPABASE_CUSTOM_AUTH",
+          "name": "Supabase service (apikey + Bearer)"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/spend_budgets?select=*&status=eq.approved&order=approved_at.desc&limit=1",
+        "options": {
+          "timeout": 120000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpCustomAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "id": "10422adc-9051-5271-be61-7827bae8b19f",
+      "name": "Supabase: Approved Budget",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2080,
+        800
+      ],
+      "credentials": {
+        "httpCustomAuth": {
+          "id": "REPLACE_SUPABASE_CUSTOM_AUTH",
+          "name": "Supabase service (apikey + Bearer)"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/spend_ledger?select=day,spend_class,amount_usd,source&source=eq.reported&day=gte.{{ $now.startOf('month').toISODate() }}",
+        "options": {
+          "timeout": 120000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpCustomAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "id": "b93c21f3-e386-50ea-8893-2237bfdedc38",
+      "name": "Supabase: Ledger (month)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2340,
+        800
+      ],
+      "credentials": {
+        "httpCustomAuth": {
+          "id": "REPLACE_SUPABASE_CUSTOM_AUTH",
+          "name": "Supabase service (apikey + Bearer)"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/boost_queue?select=post_id,class,compliance,requested_daily_usd,approved_by,approved_at,approved_max_daily_usd&status=eq.approved",
+        "options": {
+          "timeout": 120000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpCustomAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "id": "f70d0d34-bd78-55b9-bd13-865c6112088e",
+      "name": "Supabase: Approved Boosts",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2600,
+        800
+      ],
+      "credentials": {
+        "httpCustomAuth": {
+          "id": "REPLACE_SUPABASE_CUSTOM_AUTH",
+          "name": "Supabase service (apikey + Bearer)"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Cash and campaign facts come from finance (GROWTH_* env until a finance feed exists); everything else from the DB.\nconst budget = ($('Supabase: Approved Budget').first() || { json: {} }).json;\nconst ledger = $('Supabase: Ledger (month)').all().map(i => i.json);\nconst boosts = $('Supabase: Approved Boosts').all().map(i => i.json);\nconst today = $now.toISODate();\nconst spentToday = ledger.filter(l => l.day === today).reduce((s, l) => s + Number(l.amount_usd || 0), 0);\nconst spentMonth = ledger.reduce((s, l) => s + Number(l.amount_usd || 0), 0);\nconst num = (v, d) => (v === undefined || v === null || v === '' ? d : Number(v));\nconst state = {\n  price_usd: num(budget.price_usd, 25), campaign_day: num($env.GROWTH_CAMPAIGN_DAY, 0),\n  budget: budget.id ? { id: budget.id, daily_cap_usd: budget.daily_cap_usd, monthly_cap_usd: budget.monthly_cap_usd,\n    cash_floor_usd: budget.cash_floor_usd, status: budget.status, approved_by: budget.approved_by, approved_at: budget.approved_at,\n    expires_at: budget.expires_at } : {},\n  cash: { balance_usd: num($env.GROWTH_CASH_BALANCE_USD, 0), spent_today_usd: spentToday, spent_month_usd: spentMonth,\n    line_180d_usd: num($env.GROWTH_CASH_LINE_180D_USD, 0) },\n  current: { cold_daily_usd: num($env.GROWTH_COLD_DAILY_USD, 0), retarget_daily_usd: num($env.GROWTH_RETARGET_DAILY_USD, 0),\n    retarget_requested_usd: num($env.GROWTH_RETARGET_REQUESTED_USD, 0) },\n  daily: JSON.parse($env.GROWTH_DAILY_JSON || '[]'),\n  refund_rate_14d: $env.GROWTH_REFUND_RATE_14D ? Number($env.GROWTH_REFUND_RATE_14D) : null,\n  chargeback_rate_30d: $env.GROWTH_CHARGEBACK_RATE_30D ? Number($env.GROWTH_CHARGEBACK_RATE_30D) : null,\n  chargeback_count_30d: $env.GROWTH_CHARGEBACK_COUNT_30D ? Number($env.GROWTH_CHARGEBACK_COUNT_30D) : null,\n  renewal1: { rate: $env.GROWTH_RENEWAL1_RATE ? Number($env.GROWTH_RENEWAL1_RATE) : null, cohort_n: num($env.GROWTH_RENEWAL1_COHORT_N, 0) },\n  graduation: { charge_today_purchases: num($env.GROWTH_CHARGE_TODAY_PURCHASES, 0),\n    factor: $env.GROWTH_FACTOR ? Number($env.GROWTH_FACTOR) : null, media_cost_case: $env.GROWTH_MEDIA_COST_CASE || 'central' },\n  boosts: boosts.map(b => ({ post_id: b.post_id, class: b.class, compliance_verdict: (b.compliance || {}).verdict,\n    judge_passed: (b.compliance || {}).judge_passed, requested_daily_usd: b.requested_daily_usd,\n    approval: { by: b.approved_by, at: b.approved_at, max_daily_usd: b.approved_max_daily_usd } })),\n};\nreturn [{ json: { state, now: new Date().toISOString(), actor: 'n8n-nightly' } }];\n"
+      },
+      "id": "2aa91eea-4bc1-5fa7-8819-5e1cf5f3ba2e",
+      "name": "Build Governor State",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2860,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.QA_WORKER_URL }}/growth/governor/plan",
+        "options": {
+          "timeout": 180000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json) }}"
+      },
+      "id": "03fd2d01-cd7b-5a18-89e2-2728d4370237",
+      "name": "Worker: Governor Plan (dry run)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        3120,
+        800
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "REPLACE_WORKER",
+          "name": "Render/QA worker X-Worker-Token"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/governor_decisions",
+        "options": {
+          "timeout": 120000
+        },
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpCustomAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Prefer",
+              "value": "return=minimal"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ decided_at: $json.decided_at, mode: $json.mode, status: $json.status, valid: $json.valid, state_hash: $json.state_hash, config_fingerprint: $json.config_fingerprint, planned_daily_usd: ($json.totals || {}).planned_daily_usd || 0, decision: $json, audit_hash: ($json.audit || {}).hash, prev_hash: ($json.audit || {}).prev_hash }) }}"
+      },
+      "id": "7e52a864-c15d-5702-a3f8-828a0489f82a",
+      "name": "Supabase: Insert governor_decisions",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        3380,
+        800
+      ],
+      "credentials": {
+        "httpCustomAuth": {
+          "id": "REPLACE_SUPABASE_CUSTOM_AUTH",
+          "name": "Supabase service (apikey + Bearer)"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "operation": "post",
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $env.SLACK_GROWTH_CHANNEL || '#growth' }}"
+        },
+        "text": "=Governor ({{ $('Worker: Governor Plan (dry run)').first().json.mode }}): status {{ $('Worker: Governor Plan (dry run)').first().json.status }} · planned ${{ $('Worker: Governor Plan (dry run)').first().json.totals.planned_daily_usd }}/day (cold {{ $('Worker: Governor Plan (dry run)').first().json.cold.next_daily_usd }}, retarget {{ $('Worker: Governor Plan (dry run)').first().json.retarget.next_daily_usd }}, boosts {{ $('Worker: Governor Plan (dry run)').first().json.boosts.filter(b => b.status === 'approved').length }}) · {{ $('Worker: Governor Plan (dry run)').first().json.reasons.join('; ') }} · Nothing is spent until a human approves this plan in the review app AND SPEND_ENABLED=1.",
+        "otherOptions": {}
+      },
+      "id": "f3f94762-5a94-50d1-a553-d7d5eafc900b",
+      "name": "Slack: Governor Plan for Approval",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [
+        3640,
+        800
+      ],
+      "credentials": {
+        "slackApi": {
+          "id": "REPLACE_SLACK",
+          "name": "Slack (ops bot)"
+        }
+      },
+      "onError": "continueRegularOutput"
+    }
+  ],
+  "connections": {
+    "Hourly: Growth Tick": {
+      "main": [
+        [
+          {
+            "node": "Supabase: Recent Published Posts",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase: Recent Published Posts": {
+      "main": [
+        [
+          {
+            "node": "Supabase: Raw Captures (metrics)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase: Raw Captures (metrics)": {
+      "main": [
+        [
+          {
+            "node": "Supabase: Order Rollup (orders by post)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Normalize Request": {
+      "main": [
+        [
+          {
+            "node": "Worker: Normalize Metrics",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Worker: Normalize Metrics": {
+      "main": [
+        [
+          {
+            "node": "Rows: post_metrics",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Rows: post_metrics": {
+      "main": [
+        [
+          {
+            "node": "Supabase: Upsert post_metrics",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase: Upsert post_metrics": {
+      "main": [
+        [
+          {
+            "node": "Supabase: post_metrics History (30d)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase: post_metrics History (30d)": {
+      "main": [
+        [
+          {
+            "node": "Build Baselines Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Baselines Request": {
+      "main": [
+        [
+          {
+            "node": "Worker: Baselines",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Worker: Baselines": {
+      "main": [
+        [
+          {
+            "node": "Supabase: Insert page_baselines",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase: Insert page_baselines": {
+      "main": [
+        [
+          {
+            "node": "Build Score Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Score Request": {
+      "main": [
+        [
+          {
+            "node": "Worker: Score",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Worker: Score": {
+      "main": [
+        [
+          {
+            "node": "Rows: post_scores + winners",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Rows: post_scores + winners": {
+      "main": [
+        [
+          {
+            "node": "Supabase: Upsert post_scores",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase: Upsert post_scores": {
+      "main": [
+        [
+          {
+            "node": "Supabase: Upsert winners",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase: Upsert winners": {
+      "main": [
+        [
+          {
+            "node": "Any winners or losers?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Any winners or losers?": {
+      "main": [
+        [
+          {
+            "node": "Supabase: Pages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase: Pages": {
+      "main": [
+        [
+          {
+            "node": "Supabase: Post Context (briefs)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase: Post Context (briefs)": {
+      "main": [
+        [
+          {
+            "node": "Supabase: Recent remix_jobs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase: Recent remix_jobs": {
+      "main": [
+        [
+          {
+            "node": "Build Actions Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Actions Request": {
+      "main": [
+        [
+          {
+            "node": "Worker: Winner Actions",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Worker: Winner Actions": {
+      "main": [
+        [
+          {
+            "node": "Rows: remix_jobs + boost_queue",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Rows: remix_jobs + boost_queue": {
+      "main": [
+        [
+          {
+            "node": "Supabase: Insert remix_jobs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase: Insert remix_jobs": {
+      "main": [
+        [
+          {
+            "node": "Supabase: Insert boost_queue",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase: Insert boost_queue": {
+      "main": [
+        [
+          {
+            "node": "Slack: Growth Hourly Summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Nightly 23:10: Allocator + Governor": {
+      "main": [
+        [
+          {
+            "node": "Supabase: Active Page Accounts",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase: Active Page Accounts": {
+      "main": [
+        [
+          {
+            "node": "Supabase: Bandit Observations (30d)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase: Bandit Observations (30d)": {
+      "main": [
+        [
+          {
+            "node": "Supabase: Recent Briefs (7d)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase: Recent Briefs (7d)": {
+      "main": [
+        [
+          {
+            "node": "Build Allocate Requests",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Allocate Requests": {
+      "main": [
+        [
+          {
+            "node": "Worker: Allocate Slots",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Worker: Allocate Slots": {
+      "main": [
+        [
+          {
+            "node": "Rows: briefs (slot plan)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Rows: briefs (slot plan)": {
+      "main": [
+        [
+          {
+            "node": "Supabase: Insert briefs (queued)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase: Insert briefs (queued)": {
+      "main": [
+        [
+          {
+            "node": "Supabase: Approved Budget",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase: Approved Budget": {
+      "main": [
+        [
+          {
+            "node": "Supabase: Ledger (month)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase: Ledger (month)": {
+      "main": [
+        [
+          {
+            "node": "Supabase: Approved Boosts",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase: Approved Boosts": {
+      "main": [
+        [
+          {
+            "node": "Build Governor State",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Governor State": {
+      "main": [
+        [
+          {
+            "node": "Worker: Governor Plan (dry run)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Worker: Governor Plan (dry run)": {
+      "main": [
+        [
+          {
+            "node": "Supabase: Insert governor_decisions",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase: Insert governor_decisions": {
+      "main": [
+        [
+          {
+            "node": "Slack: Governor Plan for Approval",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase: Order Rollup (orders by post)": {
+      "main": [
+        [
+          {
+            "node": "Build Normalize Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "timezone": "America/New_York",
+    "errorWorkflow": "REPLACE_ERROR_WORKFLOW_ID"
+  },
+  "staticData": null,
+  "meta": {
+    "templateCredsSetupCompleted": false
+  },
+  "pinData": {},
+  "versionId": "15ba2ff7-5ab4-558d-9db5-e427393de993",
+  "tags": [
+    {
+      "name": "growth"
+    }
+  ]
+}

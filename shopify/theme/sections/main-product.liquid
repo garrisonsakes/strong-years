@@ -1,0 +1,19 @@
+{%- assign v = product.selected_or_first_available_variant -%}
+<section class="wrap stack" aria-labelledby="p-h">
+  <h1 id="p-h">{{ product.title }}</h1>
+  <p class="price">{{ v.price | money_without_trailing_zeros }} <small>one payment</small></p>
+  <div class="rte">{{ product.description }}</div>
+  {%- if product.available -%}
+  <form action="{{ routes.cart_add_url }}" method="post" class="stack" data-sy-offer="addon" data-sy-sku="{% if v.sku contains 'KIT' %}kit{% else %}wallplan{% endif %}" data-sy-interval="once" novalidate>
+    <input type="hidden" name="id" value="{{ v.id }}">
+    <input type="hidden" name="return_to" value="/checkout">
+    <p class="alert" data-sy-error role="alert" hidden></p>
+    <button type="submit" class="btn">Buy for {{ v.price | money_without_trailing_zeros }}</button>
+  </form>
+  {%- else -%}
+    <p class="alert">Not available right now. We never take orders for stock we don't have.</p>
+  {%- endif -%}
+</section>
+{% schema %}
+{ "name": "Product", "settings": [] }
+{% endschema %}

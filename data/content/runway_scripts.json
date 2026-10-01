@@ -1,0 +1,4244 @@
+[
+ {
+  "id": "S151",
+  "page": "@changyin",
+  "speaker": "CHANG",
+  "format": "F15",
+  "pillar": "P04",
+  "hook_id": "H391",
+  "title": "The laundry basket lift",
+  "target_seconds": 46,
+  "hook_line": "Laundry basket, full. Hug it close and watch your back stay tall.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "CHANG",
+    "vo": "Laundry basket, full. Hug it close and watch your back stay tall.",
+    "ost": "LAUNDRY BASKET = TRAINING",
+    "shot": "SET-YARD | C-TRAIN-B | Chang hinges and lifts a full laundry basket off the pavers beside the clothesline | eye-level medium-full, handheld"
+   },
+   {
+    "t": "3-11",
+    "speaker": "CHANG",
+    "vo": "Feet wide. Push your hips back. Basket close to your belly. Stand up with your legs.",
+    "ost": "Hips back · basket close · legs lift",
+    "shot": "same | side view of the hinge, 3 slow reps | side medium-full"
+   },
+   {
+    "t": "11-20",
+    "speaker": "CHANG",
+    "vo": "Breathe out as you stand. Ten slow steps to the bench. Shoulders down. Set it down gently.",
+    "ost": "Breathe out · 10 slow steps",
+    "shot": "same | carry along the fence, sets basket on the bench | tracking medium-full"
+   },
+   {
+    "t": "20-29",
+    "speaker": "CHANG",
+    "vo": "In 121 trials, older adults who lifted two or three times a week got clearly stronger. Laundry counts.",
+    "ost": "121 trials · 2–3×/week",
+    "shot": "same | study card inset lower-left (Liu & Latham, Cochrane 2009) | medium"
+   },
+   {
+    "t": "29-36",
+    "speaker": "CHANG",
+    "vo": "Too heavy? Half a basket. Two trips. Hold the fence if you need it.",
+    "ost": "Easier: half a basket, two trips",
+    "shot": "same | Frank carries a half basket, one hand on the fence | two-shot"
+   },
+   {
+    "t": "36-41",
+    "speaker": "CHANG",
+    "vo": "Back surgery this year, or sharp pain when you bend? Ask your doctor first.",
+    "ost": "Back surgery? Sharp pain? Doctor first.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "41-46",
+    "speaker": "CHANG",
+    "vo": "Strong is a habit. Comment STRONG for the eight-minute chair builder.",
+    "ost": "Comment STRONG",
+    "shot": "same | pins a shirt on the line, points at camera | medium"
+   }
+  ],
+  "spoken_word_count": 102,
+  "has_movement": true,
+  "movement_tags": [
+   "carry",
+   "hinge"
+  ],
+  "safety_cue": "Hip hinge with the load close; breathe out on the lift; half-load regression; fence for support; back-surgery skip line. Caption add-on stop rule.",
+  "regression": "Half a basket in two trips, one hand on the fence.",
+  "cta_keyword": "STRONG",
+  "cta_deliverable": "8-Minute Chair Builder",
+  "cta_line": "Strong is a habit. Comment STRONG for the eight-minute chair builder.",
+  "caption": "Comment STRONG for the 8-minute Chair Builder.\nThe laundry-basket lift: feet wide, hips back, basket close, breathe out as you stand, 10 slow steps. A Cochrane review of 121 trials (6,700 older adults) found progressive resistance training 2–3×/week improved strength.\nBack surgery this year, or sharp pain when you bend? Ask your doctor first. Half a basket counts.",
+  "hashtags": {
+   "ig": [
+    "#strengthafter60",
+    "#homeworkout",
+    "#over60fitness",
+    "#changyin"
+   ],
+   "tt": [
+    "#over60",
+    "#laundryworkout",
+    "#strengthtraining",
+    "#changyin"
+   ],
+   "yt_title": "The Laundry Basket Lift (Strength After 60)"
+  },
+  "evidence": [
+   "E01",
+   "E02"
+  ],
+  "evidence_note": "Cochrane PRT (A) 'got stronger' at grade. Hinge cueing per NSCA (E02).",
+  "running_bit": "Frank's level (visual)",
+  "wink": false,
+  "myth_bust": false,
+  "music": "warm soul instrumental",
+  "thumbnail_text": "LAUNDRY = REPS",
+  "hook_grammar": [
+   "OBJ3",
+   "WATCH",
+   "DEMO"
+  ],
+  "series": "Kitchen Gym #4",
+  "launch_week": false,
+  "prop": "full laundry basket by the clothesline",
+  "skip_line": "Back surgery this year, or sharp pain when you bend? Ask your doctor first.",
+  "hook_category": "TST"
+ },
+ {
+  "id": "S152",
+  "page": "@changyin",
+  "speaker": "CHANG",
+  "format": "F32",
+  "pillar": "P02",
+  "hook_id": "H392",
+  "title": "Heel raises while you brush",
+  "target_seconds": 45,
+  "hook_line": "If you brush your teeth every night, add ten slow heel raises at the sink.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "CHANG",
+    "vo": "If you brush your teeth every night, add ten slow heel raises at the sink.",
+    "ost": "BRUSH + 10 HEEL RAISES",
+    "shot": "SET-BATH | C-CASUAL | Chang brushing, the two-minute timer blinking, fingers of his free hand on the sink edge | medium"
+   },
+   {
+    "t": "3-11",
+    "speaker": "CHANG",
+    "vo": "Fingers on the sink. Breathe out as you rise onto your toes. Two seconds up. Two down.",
+    "ost": "Fingers on the sink · 2 up, 2 down",
+    "shot": "same | heel raises, side view | side medium-full"
+   },
+   {
+    "t": "11-20",
+    "speaker": "CHANG",
+    "vo": "Your calf is a pump. Every squeeze pushes blood back up toward your heart. That's standard physiology.",
+    "ost": "Your calf = a pump",
+    "shot": "same | anatomy inset of the calf veins and valves | inset"
+   },
+   {
+    "t": "20-28",
+    "speaker": "CHANG",
+    "vo": "Two minutes of brushing fits ten raises easily. Switch hands. Ten more. Done before you spit.",
+    "ost": "2 minutes = 20 raises",
+    "shot": "same | he switches hands, keeps going | medium"
+   },
+   {
+    "t": "28-35",
+    "speaker": "CHANG",
+    "vo": "Too much? Keep the heels low. Small lifts still count. Both hands on the sink is fine.",
+    "ost": "Easier: small lifts, both hands",
+    "shot": "same | feet CU, small lifts | CU"
+   },
+   {
+    "t": "35-41",
+    "speaker": "CHANG",
+    "vo": "One calf swollen, red, or painful? Skip this and call your doctor today.",
+    "ost": "One calf swollen or red? Call your doctor.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "41-45",
+    "speaker": "CHANG",
+    "vo": "Comment STRONG for the eight-minute chair builder.",
+    "ost": "Comment STRONG",
+    "shot": "same | toothbrush salute | medium CU"
+   }
+  ],
+  "spoken_word_count": 102,
+  "has_movement": true,
+  "movement_tags": [
+   "heel_raise"
+  ],
+  "safety_cue": "Fingers on the sink; slow tempo; both-hands regression; one-swollen-calf red flag (E47). Caption add-on stop rule.",
+  "regression": "Small heel lifts with both hands on the sink.",
+  "cta_keyword": "STRONG",
+  "cta_deliverable": "8-Minute Chair Builder",
+  "cta_line": "Comment STRONG for the eight-minute chair builder.",
+  "caption": "Comment STRONG for the 8-minute Chair Builder.\nHabit stack: 10 slow heel raises at the sink while you brush, then switch hands for 10 more. Your calf muscle works as a pump that pushes blood back toward the heart (standard physiology).\nOne calf swollen, red or painful? Skip it and call your doctor today.",
+  "hashtags": {
+   "ig": [
+    "#habitstacking",
+    "#over60fitness",
+    "#strengthafter60",
+    "#changyin"
+   ],
+   "tt": [
+    "#habitstack",
+    "#over60",
+    "#homeworkout",
+    "#changyin"
+   ],
+   "yt_title": "Brush Your Teeth? Add 10 Heel Raises (Over 60)"
+  },
+  "evidence": [
+   "E47"
+  ],
+  "evidence_note": "Calf-pump physiology (E47) as mechanism only, no outcome claim.",
+  "running_bit": "",
+  "wink": false,
+  "myth_bust": false,
+  "music": "light acoustic",
+  "thumbnail_text": "BRUSH. RAISE. REPEAT.",
+  "hook_grammar": [
+   "IF_EVERY",
+   "DEMO"
+  ],
+  "series": "",
+  "launch_week": false,
+  "prop": "toothbrush with a blinking two-minute timer",
+  "skip_line": "One calf swollen, red, or painful? Skip this and call your doctor today.",
+  "hook_category": "IDN"
+ },
+ {
+  "id": "S153",
+  "page": "@changyin",
+  "speaker": "CHANG",
+  "format": "F32",
+  "pillar": "P03",
+  "hook_id": "H393",
+  "title": "Kettle balance",
+  "target_seconds": 48,
+  "hook_line": "If you wait for the kettle every morning, stand heel to toe while it boils.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "CHANG",
+    "vo": "If you wait for the kettle every morning, stand heel to toe while it boils.",
+    "ost": "KETTLE = BALANCE TIME",
+    "shot": "SET-KITCHEN | C-CASUAL | Chang sets a kettle on the gas, steps into a heel-to-toe stance, fingertips over the counter | medium"
+   },
+   {
+    "t": "3-11",
+    "speaker": "CHANG",
+    "vo": "Fingers over the counter. One heel touching the other toe. Eyes on the kettle.",
+    "ost": "Fingers over the counter · heel to toe",
+    "shot": "same | feet CU, then medium-full | CU then medium-full"
+   },
+   {
+    "t": "11-20",
+    "speaker": "CHANG",
+    "vo": "Ten seconds is the goal. It's one stage of the four-stage balance check clinics use.",
+    "ost": "Goal: 10 seconds",
+    "shot": "same | study card inset (CDC STEADI 4-Stage Balance Test) | medium"
+   },
+   {
+    "t": "20-28",
+    "speaker": "CHANG",
+    "vo": "Switch feet when it sings. Two rounds a morning. Your tea waits. Your ankles don't.",
+    "ost": "Switch feet · 2 rounds",
+    "shot": "same | the kettle whistles, he switches feet | medium-full"
+   },
+   {
+    "t": "28-34",
+    "speaker": "CHANG",
+    "vo": "Wobbly? Feet side by side, one hand flat on the counter. That still counts.",
+    "ost": "Easier: feet side by side",
+    "shot": "same | hand flat on the counter | CU"
+   },
+   {
+    "t": "34-39",
+    "speaker": "CHANG",
+    "vo": "Dizzy spells or a new hip? Keep both feet down and ask your doctor.",
+    "ost": "Dizzy? New hip? Both feet down.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "39-48",
+    "speaker": "CHANG",
+    "vo": "We open Strong Years soon. Comment WAITLIST. It's free, and you get day one now.",
+    "ost": "Comment WAITLIST · free",
+    "shot": "same | pours tea, raises the mug | medium"
+   }
+  ],
+  "spoken_word_count": 102,
+  "has_movement": true,
+  "movement_tags": [
+   "balance_static"
+  ],
+  "safety_cue": "Fingers over the counter (spoken + OST); 10-s hold; feet-side-by-side regression; dizziness/new-hip skip line. Caption add-on stop rule.",
+  "regression": "Feet side by side, one hand flat on the counter.",
+  "cta_keyword": "WAITLIST",
+  "cta_deliverable": "Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)",
+  "cta_line": "We open Strong Years soon. Comment WAITLIST. It's free, and you get day one now.",
+  "caption": "Comment WAITLIST for the free waitlist link and Chang's day-1 session.\nKettle balance: heel-to-toe (tandem) stance at the counter while the water boils, up to 10 seconds, switch feet, 2 rounds. The tandem stand is one stage of the CDC STEADI 4-Stage Balance Test.\nDizzy spells or a new hip? Feet side by side, hand on the counter, and ask your doctor.\nThe waitlist is free: one email when Strong Years opens, plus at most 3 launch emails in the 72 hours after. No card. Unsubscribe in one click.",
+  "hashtags": {
+   "ig": [
+    "#balancetraining",
+    "#steadyfeet",
+    "#morningroutine",
+    "#changyin"
+   ],
+   "tt": [
+    "#balanceexercises",
+    "#over60",
+    "#morningroutine",
+    "#changyin"
+   ],
+   "yt_title": "Waiting for the Kettle? Do This Balance Drill (Over 60)"
+  },
+  "evidence": [
+   "E50"
+  ],
+  "evidence_note": "STEADI 4-stage (tool, A) described as a clinic check; no risk or outcome claim.",
+  "running_bit": "",
+  "wink": false,
+  "myth_bust": false,
+  "music": "warm soul instrumental",
+  "thumbnail_text": "KETTLE BALANCE",
+  "hook_grammar": [
+   "IF_EVERY",
+   "DEMO",
+   "TEST_NOW"
+  ],
+  "series": "",
+  "launch_week": false,
+  "prop": "whistling kettle on the gas",
+  "skip_line": "Dizzy spells or a new hip? Keep both feet down and ask your doctor.",
+  "hook_category": "TST"
+ },
+ {
+  "id": "S154",
+  "page": "@changyin",
+  "speaker": "CHANG",
+  "format": "F04",
+  "pillar": "P15",
+  "hook_id": "H394",
+  "title": "'Lifting is dangerous after 70'",
+  "target_seconds": 47,
+  "hook_line": "'Lifting is dangerous after seventy.' Is it? Watch me pick up this eight-kilo bell.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "CHANG",
+    "vo": "'Lifting is dangerous after seventy.' Is it? Watch me pick up this eight-kilo bell.",
+    "ost": "MYTH ✗ 'TOO OLD TO LIFT'",
+    "shot": "SET-GARAGE | C-TRAIN-A | Chang blows dust off an 8 kg kettlebell on the mat | CU then medium"
+   },
+   {
+    "t": "3-12",
+    "speaker": "CHANG",
+    "vo": "Feet wide. Bell between my feet. Hips back, chest proud. Breathe out and stand.",
+    "ost": "Hips back · chest proud · breathe out",
+    "shot": "same | slow kettlebell deadlift, side view | side medium-full"
+   },
+   {
+    "t": "12-22",
+    "speaker": "CHANG",
+    "vo": "The strength coaches' position statement says resistance training is safe and effective for older adults. Even frail adults.",
+    "ost": "NSCA: safe + effective for older adults",
+    "shot": "same | study card inset (Fragala et al., JSCR 2019) | medium"
+   },
+   {
+    "t": "22-30",
+    "speaker": "CHANG",
+    "vo": "What's risky? Going heavy on day one. Straining with your breath held. Rounding your back under a load.",
+    "ost": "Risky: too heavy, too soon",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "30-37",
+    "speaker": "CHANG",
+    "vo": "Start with a backpack and two books. Then a light bell. Slow down. Again.",
+    "ost": "Start: a backpack + 2 books",
+    "shot": "same | Frank lifts a backpack, chair against the wall beside him | two-shot"
+   },
+   {
+    "t": "37-42",
+    "speaker": "CHANG",
+    "vo": "Heart condition or new chest pain? Get cleared by your doctor first.",
+    "ost": "Heart condition? Get cleared first.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "42-47",
+    "speaker": "CHANG",
+    "vo": "Comment TEST. I'll send the three-minute strength test.",
+    "ost": "Comment TEST",
+    "shot": "same | sets the bell down | medium"
+   }
+  ],
+  "spoken_word_count": 98,
+  "has_movement": true,
+  "movement_tags": [
+   "hinge"
+  ],
+  "safety_cue": "MB-EX (myth quoted and answered with the NSCA statement); breathe out on the lift; backpack regression; cardiac clearance line (E43).",
+  "regression": "A backpack with two books instead of a kettlebell.",
+  "cta_keyword": "TEST",
+  "cta_deliverable": "Strength Age test (quiz)",
+  "cta_line": "Comment TEST. I'll send the three-minute strength test.",
+  "caption": "Comment TEST for the free 3-minute Strength Age test.\nMyth: lifting is dangerous after 70. The NSCA position statement: resistance training is safe and effective for older adults, frail adults included, when it starts light and progresses gradually. The risky part is too heavy, too soon, with a straining breath.\nHeart condition or new chest pain? Get medical clearance first (ACSM).",
+  "hashtags": {
+   "ig": [
+    "#mythbusting",
+    "#strengthafter60",
+    "#liftingover60",
+    "#changyin"
+   ],
+   "tt": [
+    "#mythbusting",
+    "#over70",
+    "#strengthtraining",
+    "#changyin"
+   ],
+   "yt_title": "'Lifting Is Dangerous After 70'? Watch This"
+  },
+  "evidence": [
+   "E02",
+   "E43"
+  ],
+  "evidence_note": "NSCA (A) wording at grade; ACSM screening line.",
+  "running_bit": "",
+  "wink": false,
+  "myth_bust": true,
+  "music": "driving soul",
+  "thumbnail_text": "TOO OLD TO LIFT?",
+  "hook_grammar": [
+   "MYTH",
+   "WATCH",
+   "DEMO"
+  ],
+  "series": "",
+  "launch_week": false,
+  "prop": "dusty 8 kg kettlebell",
+  "skip_line": "Heart condition or new chest pain? Get cleared by your doctor first.",
+  "hook_category": "MYT"
+ },
+ {
+  "id": "S155",
+  "page": "@changyin",
+  "speaker": "CHANG",
+  "format": "F21",
+  "pillar": "P07",
+  "hook_id": "H395",
+  "title": "Longer out, not deeper",
+  "target_seconds": 44,
+  "hook_line": "Not faster, not deeper. Longer breaths out. Try it right now with me.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "CHANG",
+    "vo": "Not faster, not deeper. Longer breaths out. Try it right now with me.",
+    "ost": "LONGER OUT, NOT DEEPER",
+    "shot": "SET-PROM | C-TRAIN-B | Chang sits on the promenade bench and flips a small sand timer | medium"
+   },
+   {
+    "t": "3-12",
+    "speaker": "CHANG",
+    "vo": "Sit tall. Breathe in through your nose for four. Out through soft lips for six.",
+    "ost": "In 4 · out 6",
+    "shot": "same | breathing CU, a count ring on screen | CU"
+   },
+   {
+    "t": "12-22",
+    "speaker": "CHANG",
+    "vo": "In, two, three, four. Out, two, three, four, five, six. Again.",
+    "ost": "4 in · 6 out",
+    "shot": "same | the ring fills and empties | CU"
+   },
+   {
+    "t": "22-32",
+    "speaker": "CHANG",
+    "vo": "Slow breathing, around six breaths a minute, raises heart-rate variability. Your calm-down system gets a vote.",
+    "ost": "~6 breaths a minute",
+    "shot": "same | study card inset (Laborde et al., 2022) | medium"
+   },
+   {
+    "t": "32-38",
+    "speaker": "CHANG",
+    "vo": "Feel light-headed? Breathe normally and stop. Keep it easy, no straining.",
+    "ost": "Light-headed? Stop.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "38-44",
+    "speaker": "CHANG",
+    "vo": "Bench, bed, or bus stop. Comment BREATH for the guided five minutes.",
+    "ost": "Comment BREATH",
+    "shot": "same | gulls lift off the railing behind him | wide"
+   }
+  ],
+  "spoken_word_count": 78,
+  "has_movement": false,
+  "movement_tags": [
+   "breathing"
+  ],
+  "safety_cue": "No breath-holds; light-headed stop line; seated.",
+  "regression": "",
+  "cta_keyword": "BREATH",
+  "cta_deliverable": "The 4-6 Breath (5 min)",
+  "cta_line": "Bench, bed, or bus stop. Comment BREATH for the guided five minutes.",
+  "caption": "Comment BREATH for the guided 5-minute 4-6 Breath.\nIn through the nose for 4, out through soft lips for 6, about 6 breaths a minute. A meta-analysis found slow breathing at that pace increases vagally-mediated heart-rate variability during and after practice.\nLight-headed? Breathe normally and stop.",
+  "hashtags": {
+   "ig": [
+    "#breathwork",
+    "#slowbreathing",
+    "#over60",
+    "#changyin"
+   ],
+   "tt": [
+    "#breathwork",
+    "#over60",
+    "#calm",
+    "#changyin"
+   ],
+   "yt_title": "Not Deeper. Longer Out. (The 4-6 Breath)"
+  },
+  "evidence": [
+   "E19"
+  ],
+  "evidence_note": "HRV meta (A−); mechanism only.",
+  "running_bit": "",
+  "wink": false,
+  "myth_bust": false,
+  "music": "soft piano",
+  "thumbnail_text": "LONGER OUT",
+  "hook_grammar": [
+   "DEMO",
+   "TEST_NOW"
+  ],
+  "series": "",
+  "launch_week": false,
+  "prop": "small sand timer on the promenade bench",
+  "skip_line": "Feel light-headed? Breathe normally and stop.",
+  "hook_category": "CUR"
+ },
+ {
+  "id": "S156",
+  "page": "@changyin",
+  "speaker": "CHANG",
+  "format": "F17",
+  "pillar": "P01",
+  "hook_id": "H396",
+  "title": "Earn the floor during the news",
+  "target_seconds": 47,
+  "hook_line": "If you sit on the floor every evening for the news, getting up stops being scary.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "CHANG",
+    "vo": "If you sit on the floor every evening for the news, getting up stops being scary.",
+    "ost": "EARN THE FLOOR",
+    "shot": "SET-LIVING | C-CASUAL | Chang lowers onto a floor cushion beside the sofa, one hand on the seat | medium-full"
+   },
+   {
+    "t": "3-12",
+    "speaker": "CHANG",
+    "vo": "Hand on a sturdy sofa. Kneel on one knee. Then both knees. Then sit to the side.",
+    "ost": "Sofa · one knee · both knees · sit",
+    "shot": "same | step-by-step, side view | side medium-full"
+   },
+   {
+    "t": "12-21",
+    "speaker": "CHANG",
+    "vo": "Up is the same, backwards. Side sit. Both knees. One knee. Hands on the sofa. Stand.",
+    "ost": "Up = the same, backwards",
+    "shot": "same | the reverse sequence | side medium-full"
+   },
+   {
+    "t": "21-29",
+    "speaker": "CHANG",
+    "vo": "Getting up from the floor is a skill you can practice. Practice it before you ever need it.",
+    "ost": "A skill. Practice it early.",
+    "shot": "same | study card inset (Hofmeyer et al., JAGS 2002) | medium"
+   },
+   {
+    "t": "29-35",
+    "speaker": "CHANG",
+    "vo": "Knees complain? A folded towel under them. Or stop at the sofa seat for now.",
+    "ost": "Easier: towel · stop at the seat",
+    "shot": "same | Frank kneels on a folded towel | two-shot"
+   },
+   {
+    "t": "35-40",
+    "speaker": "CHANG",
+    "vo": "Hip replacement or dizziness? Ask your doctor before floor work.",
+    "ost": "New hip? Dizzy? Ask first.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "40-47",
+    "speaker": "CHANG",
+    "vo": "Earn the floor. Comment WAITLIST. It's free, and day one comes now.",
+    "ost": "Comment WAITLIST · free",
+    "shot": "same | waves from the cushion | medium"
+   }
+  ],
+  "spoken_word_count": 104,
+  "has_movement": true,
+  "movement_tags": [
+   "floor_transfer"
+  ],
+  "safety_cue": "Sturdy sofa for support at every stage; towel/sofa-seat regression; hip-replacement and dizziness skip line. Caption add-on stop rule.",
+  "regression": "Practice down to the sofa seat only, towel under the knees.",
+  "cta_keyword": "WAITLIST",
+  "cta_deliverable": "Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)",
+  "cta_line": "Earn the floor. Comment WAITLIST. It's free, and day one comes now.",
+  "caption": "Comment WAITLIST for the free waitlist link and Chang's day-1 session.\nFloor practice with the sofa: kneel on one knee, both knees, side sit, then the same steps backwards to stand, hands on the sofa the whole time. Only try the floor with a sturdy sofa next to you and someone home. Getting up from the floor is a teachable skill; practice it before you need it.\nHip replacement or dizziness? Ask your doctor before floor work.\nThe waitlist is free: one email when Strong Years opens, plus at most 3 launch emails in the 72 hours after. No card. Unsubscribe in one click.",
+  "hashtags": {
+   "ig": [
+    "#earnthefloor",
+    "#over60fitness",
+    "#mobility",
+    "#changyin"
+   ],
+   "tt": [
+    "#floortransfer",
+    "#over60",
+    "#mobility",
+    "#changyin"
+   ],
+   "yt_title": "Sit on the Floor for the News (Then Get Up Like This)"
+  },
+  "evidence": [
+   "E45"
+  ],
+  "evidence_note": "Floor-rise strategy literature (B).",
+  "running_bit": "Frank's level (visual)",
+  "wink": false,
+  "myth_bust": false,
+  "music": "warm acoustic",
+  "thumbnail_text": "EARN THE FLOOR",
+  "hook_grammar": [
+   "IF_EVERY",
+   "DEMO"
+  ],
+  "series": "",
+  "launch_week": false,
+  "prop": "floor cushion beside the sofa",
+  "skip_line": "Hip replacement or dizziness? Ask your doctor before floor work.",
+  "hook_category": "IDN"
+ },
+ {
+  "id": "S157",
+  "page": "@changyin",
+  "speaker": "CHANG",
+  "format": "F13",
+  "pillar": "P14",
+  "hook_id": "H397",
+  "title": "Feel your thigh switch on",
+  "target_seconds": 45,
+  "hook_line": "Thigh muscles do most of the work when you stand up. Feel them switch on.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "CHANG",
+    "vo": "Thigh muscles do most of the work when you stand up. Feel them switch on.",
+    "ost": "HAND ON YOUR THIGH",
+    "shot": "SET-TABLE | C-CASUAL | Chang seated at the walnut table, palm flat on his thigh, chair pushed against the wall | medium"
+   },
+   {
+    "t": "3-11",
+    "speaker": "CHANG",
+    "vo": "Hand on your thigh. Lean forward. Breathe out and stand. Feel it get hard under your hand?",
+    "ost": "Lean · breathe out · stand",
+    "shot": "same | slow sit-to-stand | side medium-full"
+   },
+   {
+    "t": "11-21",
+    "speaker": "CHANG",
+    "vo": "Around seventy-five, strength drops faster than muscle size. Two to five times faster.",
+    "ost": "Strength drops faster than size",
+    "shot": "same | study card inset (Mitchell et al., Front Physiol 2012) | medium"
+   },
+   {
+    "t": "21-29",
+    "speaker": "CHANG",
+    "vo": "So we train strength, not only walking. Slow sit, slow stand. Five of them.",
+    "ost": "Train strength · 5 slow reps",
+    "shot": "same | five reps with a rep counter | medium-full"
+   },
+   {
+    "t": "29-35",
+    "speaker": "CHANG",
+    "vo": "Too hard? Hands on your thighs to push. Or a firm cushion to raise the seat.",
+    "ost": "Easier: hands push · cushion",
+    "shot": "same | Frank uses his hands, cushion on the seat | two-shot"
+   },
+   {
+    "t": "35-40",
+    "speaker": "CHANG",
+    "vo": "Knee replacement recently? Follow your surgeon's plan first.",
+    "ost": "New knee? Surgeon's plan first.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "40-45",
+    "speaker": "CHANG",
+    "vo": "Legs first. Comment KNEES for the step builder.",
+    "ost": "Comment KNEES",
+    "shot": "same | taps his thigh | medium CU"
+   }
+  ],
+  "spoken_word_count": 91,
+  "has_movement": true,
+  "movement_tags": [
+   "sit_to_stand"
+  ],
+  "safety_cue": "Chair against the wall; breathe out on the stand; hands-push and cushion regressions; recent knee replacement line. Caption add-on stop rule.",
+  "regression": "Hands on thighs to push, firm cushion to raise the seat.",
+  "cta_keyword": "KNEES",
+  "cta_deliverable": "The Step Builder",
+  "cta_line": "Legs first. Comment KNEES for the step builder.",
+  "caption": "Comment KNEES for the Step Builder.\nPut a hand on your thigh and stand up from a chair pushed against a wall: your quadriceps do most of that work. Around age 75, strength falls about 2–5× faster than muscle mass (Mitchell et al., 2012), which is why we train strength, not walking alone.\nRecent knee replacement? Follow your surgeon's plan first.",
+  "hashtags": {
+   "ig": [
+    "#legsfirst",
+    "#chairexercises",
+    "#strengthafter60",
+    "#changyin"
+   ],
+   "tt": [
+    "#legday",
+    "#over70",
+    "#chairworkout",
+    "#changyin"
+   ],
+   "yt_title": "Put Your Hand on Your Thigh and Stand Up (Here's Why)"
+  },
+  "evidence": [
+   "E04",
+   "E01"
+  ],
+  "evidence_note": "Mitchell (A review): strength vs mass ratio stated as a population figure; no mortality wording.",
+  "running_bit": "Say hello to Coach (the chair)",
+  "wink": false,
+  "myth_bust": false,
+  "music": "warm soul instrumental",
+  "thumbnail_text": "FEEL IT SWITCH ON",
+  "hook_grammar": [
+   "OBJ3",
+   "DEMO"
+  ],
+  "series": "",
+  "launch_week": false,
+  "prop": "palm flat on his thigh at the walnut table",
+  "skip_line": "Knee replacement recently? Follow your surgeon's plan first.",
+  "hook_category": "NUM"
+ },
+ {
+  "id": "S158",
+  "page": "@changyin",
+  "speaker": "CHANG",
+  "format": "F08",
+  "pillar": "P20",
+  "hook_id": "H398",
+  "title": "Not a doctor, not a real person",
+  "target_seconds": 44,
+  "hook_line": "Not a doctor, not a real person. An AI welder. Here's what's real.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "CHANG",
+    "vo": "Not a doctor, not a real person. An AI welder. Here's what's real.",
+    "ost": "AI CHARACTER · HERE'S WHAT'S REAL",
+    "shot": "SET-GARAGE | C-TRAIN-A | Chang lifts the old welding helmet off its nail and taps the burned-in AI tag | medium"
+   },
+   {
+    "t": "3-11",
+    "speaker": "CHANG",
+    "vo": "A team of people made me. My story is fiction. The exercises are real, with an easier version every time.",
+    "ost": "Made by a team · story = fiction",
+    "shot": "same | medium CU | medium CU"
+   },
+   {
+    "t": "11-20",
+    "speaker": "CHANG",
+    "vo": "Every number we use comes from a published study. The study goes in the caption. Check me.",
+    "ost": "Studies in the caption",
+    "shot": "same | points down to the caption area | medium"
+   },
+   {
+    "t": "20-30",
+    "speaker": "CHANG",
+    "vo": "Soon we open Strong Years. A new session with me every morning, at your level, with a chair version.",
+    "ost": "Opening soon · daily sessions",
+    "shot": "same | phone inset: a session screen with the level switch | insert"
+   },
+   {
+    "t": "30-36",
+    "speaker": "CHANG",
+    "vo": "New to exercise, or living with a heart condition? Talk to your doctor first.",
+    "ost": "New to exercise? Doctor first.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "36-44",
+    "speaker": "CHANG",
+    "vo": "Comment WAITLIST. It's free. Day one now, one email when we open.",
+    "ost": "Comment WAITLIST · free",
+    "shot": "same | hangs the helmet back on its nail | medium"
+   }
+  ],
+  "spoken_word_count": 95,
+  "has_movement": false,
+  "movement_tags": [
+   "disclosure"
+  ],
+  "safety_cue": "Disclosure post (D-04/D-05 respected: denies being real or a doctor); reviewer-gate FALLBACK wording only; no price or subscription terms (runway).",
+  "regression": "",
+  "cta_keyword": "WAITLIST",
+  "cta_deliverable": "Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)",
+  "cta_line": "Comment WAITLIST. It's free. Day one now, one email when we open.",
+  "caption": "Comment WAITLIST for the free waitlist link and Chang's day-1 session.\nChang Yin is an AI character made by a team of people; his story is fiction. What's real: the exercises (always with an easier version) and the studies, cited in every caption. Strong Years opens soon with a new session every morning, at your level.\nThe waitlist is free: one email when Strong Years opens, plus at most 3 launch emails in the 72 hours after. No card. Unsubscribe in one click.",
+  "hashtags": {
+   "ig": [
+    "#aicharacter",
+    "#changyin",
+    "#strongyears",
+    "#over60"
+   ],
+   "tt": [
+    "#aicharacter",
+    "#changyin",
+    "#strongyears",
+    "#over60"
+   ],
+   "yt_title": "I'm Not a Doctor. I'm Not Real. Here's What Is."
+  },
+  "evidence": [],
+  "evidence_note": "Runway disclosure post; no health claim; FALLBACK wording (no reviewer claim).",
+  "running_bit": "The welding metaphors",
+  "wink": true,
+  "myth_bust": false,
+  "music": "warm acoustic",
+  "thumbnail_text": "AI. HERE'S WHAT'S REAL.",
+  "hook_grammar": [
+   "DEMO"
+  ],
+  "series": "",
+  "launch_week": false,
+  "prop": "welding helmet on a nail",
+  "skip_line": "New to exercise, or living with a heart condition? Talk to your doctor first.",
+  "hook_category": "IDN"
+ },
+ {
+  "id": "S159",
+  "page": "@changyin",
+  "speaker": "CHANG",
+  "format": "F02",
+  "pillar": "P01",
+  "hook_id": "H399",
+  "title": "30-second chair test, my number first",
+  "target_seconds": 47,
+  "hook_line": "Chair, wall, thirty seconds. Watch how many I do, then you go.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "CHANG",
+    "vo": "Chair, wall, thirty seconds. Watch how many I do, then you go.",
+    "ost": "30-SECOND CHAIR TEST",
+    "shot": "SET-GARAGE | C-TRAIN-A | Chang pushes the wooden chair against the wall under the big garage clock, sits, arms crossed | medium-full"
+   },
+   {
+    "t": "3-10",
+    "speaker": "CHANG",
+    "vo": "Arms crossed. Stand all the way up. Sit all the way down. Breathe out going up.",
+    "ost": "Arms crossed · all the way up",
+    "shot": "same | 30-s timer and rep counter | side medium-full"
+   },
+   {
+    "t": "10-20",
+    "speaker": "CHANG",
+    "vo": "Twenty-two. That's my level after fourteen years. Your number is a starting line, not a grade.",
+    "ost": "Chang's level: 22",
+    "shot": "same | counter freezes at 22, he grins | medium"
+   },
+   {
+    "t": "20-29",
+    "speaker": "CHANG",
+    "vo": "A US study of over seven thousand adults, sixty to ninety-four, set the normal ranges by age.",
+    "ost": "7,183 adults · ages 60–94",
+    "shot": "same | study card inset (Rikli & Jones, Senior Fitness Test) | medium"
+   },
+   {
+    "t": "29-36",
+    "speaker": "CHANG",
+    "vo": "Need your hands? Use them. Write that down too. That's honest data.",
+    "ost": "Need your hands? Use them.",
+    "shot": "same | Frank does it hands-on-thighs | two-shot"
+   },
+   {
+    "t": "36-41",
+    "speaker": "CHANG",
+    "vo": "Chest pain or dizziness? Stop, sit, and call your doctor.",
+    "ost": "Chest pain or dizzy? Stop.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "41-47",
+    "speaker": "CHANG",
+    "vo": "Tell me your number. Comment TEST for the full three-minute test.",
+    "ost": "Comment TEST",
+    "shot": "same | writes 22 on the clipboard log | CU"
+   }
+  ],
+  "spoken_word_count": 94,
+  "has_movement": true,
+  "movement_tags": [
+   "sit_to_stand"
+  ],
+  "safety_cue": "Chair against the wall; breathe out going up; hands regression; stop line. Caption add-on stop rule.",
+  "regression": "Hands on thighs to push up.",
+  "cta_keyword": "TEST",
+  "cta_deliverable": "Strength Age test (quiz)",
+  "cta_line": "Tell me your number. Comment TEST for the full three-minute test.",
+  "caption": "Comment TEST for the free 3-minute Strength Age test.\n30-second chair stand: chair against a wall, arms crossed, all the way up and down, count your stands. Normal ranges by age and sex come from the Senior Fitness Test norms (7,183 US adults aged 60–94).\nChest pain or dizziness? Stop, sit and call your doctor. Tell me your number below.",
+  "hashtags": {
+   "ig": [
+    "#chairtest",
+    "#strengthafter60",
+    "#over70",
+    "#changyin"
+   ],
+   "tt": [
+    "#chairtest",
+    "#over60",
+    "#strengthtest",
+    "#changyin"
+   ],
+   "yt_title": "30-Second Chair Test: My Number, Then Yours"
+  },
+  "evidence": [
+   "E49"
+  ],
+  "evidence_note": "Senior Fitness Test norms (A); population ranges, no risk label.",
+  "running_bit": "Say hello to Coach (the chair)",
+  "wink": false,
+  "myth_bust": false,
+  "music": "driving soul",
+  "thumbnail_text": "MY NUMBER: 22",
+  "hook_grammar": [
+   "OBJ3",
+   "WATCH",
+   "TEST_NOW",
+   "DEMO"
+  ],
+  "series": "",
+  "launch_week": false,
+  "prop": "big garage wall clock",
+  "skip_line": "Chest pain or dizziness? Stop, sit, and call your doctor.",
+  "hook_category": "TST"
+ },
+ {
+  "id": "S160",
+  "page": "@sunyoon.kitchen",
+  "speaker": "SUN",
+  "format": "F06",
+  "pillar": "P10",
+  "hook_id": "H400",
+  "title": "Two kiwis every morning",
+  "target_seconds": 46,
+  "hook_line": "If you eat two green kiwis every morning, here's what a real study found.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "SUN",
+    "vo": "If you eat two green kiwis every morning, here's what a real study found.",
+    "ost": "2 KIWIS: THE REAL STUDY",
+    "shot": "SET-KITCHEN | S-KITCHEN | Sun halves two green kiwis on a cutting board, over-the-glasses look | CU"
+   },
+   {
+    "t": "3-12",
+    "speaker": "SUN",
+    "vo": "Seventy-five adults with slow, stubborn bathrooms. Kiwis, prunes, or psyllium for four weeks.",
+    "ost": "75 adults · 4 weeks",
+    "shot": "same | study card inset (Chey et al., 2021) | medium"
+   },
+   {
+    "t": "12-21",
+    "speaker": "SUN",
+    "vo": "All three helped about the same. The kiwis had the fewest side effects. People liked them best.",
+    "ost": "All 3 helped · kiwi: fewest side effects",
+    "shot": "same | three bowls side by side | overhead"
+   },
+   {
+    "t": "21-31",
+    "speaker": "SUN",
+    "vo": "Two kiwis, a spoon, done. Skin on is more fiber, if you can stand the fuzz. I can't.",
+    "ost": "Two kiwis, a spoon, done",
+    "shot": "same | she scoops one, wrinkles her nose at the skin | CU"
+   },
+   {
+    "t": "31-38",
+    "speaker": "SUN",
+    "vo": "Add fiber slowly and drink more water with it. Your belly needs time.",
+    "ost": "Slowly · more water",
+    "shot": "same | pours water | medium"
+   },
+   {
+    "t": "38-42",
+    "speaker": "SUN",
+    "vo": "Kiwi allergy, or on a low-potassium diet? Skip this one.",
+    "ost": "Kiwi allergy? Low potassium? Skip.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "42-46",
+    "speaker": "SUN",
+    "vo": "Comment GUT. I'll send my seven-day fiber ladder.",
+    "ost": "Comment GUT",
+    "shot": "same | taps the board | medium"
+   }
+  ],
+  "spoken_word_count": 93,
+  "has_movement": false,
+  "movement_tags": [
+   "fiber"
+  ],
+  "safety_cue": "Kiwi allergy and low-potassium-diet skip line; increase fiber slowly with water.",
+  "regression": "",
+  "cta_keyword": "GUT",
+  "cta_deliverable": "Sun Yoon's 7-Day Fiber Ladder (NEW flow, clone SOUP flow)",
+  "cta_line": "Comment GUT. I'll send my seven-day fiber ladder.",
+  "caption": "Comment GUT for Sun Yoon's 7-Day Fiber Ladder.\nIn a 4-week trial of 75 adults with chronic constipation, 2 green kiwis a day, 100 g prunes and 12 g psyllium improved bowel movements similarly; kiwi had the fewest side effects and the highest satisfaction (Chey et al., 2021; exploratory).\nKiwi allergy or a low-potassium diet? Skip it. Add fiber slowly, with water.",
+  "hashtags": {
+   "ig": [
+    "#highfiber",
+    "#kiwi",
+    "#koreangrandma",
+    "#sunyoon"
+   ],
+   "tt": [
+    "#kiwi",
+    "#fiber",
+    "#koreangrandma",
+    "#sunyoon"
+   ],
+   "yt_title": "Two Kiwis Every Morning? Here's the Actual Study"
+  },
+  "evidence": [
+   "E25"
+  ],
+  "evidence_note": "Chey 2021 (B, exploratory) stated at grade.",
+  "running_bit": "Show me the study",
+  "wink": false,
+  "myth_bust": false,
+  "music": "playful pizzicato",
+  "thumbnail_text": "2 KIWIS A DAY?",
+  "hook_grammar": [
+   "IF_EVERY",
+   "KITCHEN_SERIES",
+   "DEMO"
+  ],
+  "series": "Sun Checks Your Kitchen #17: kiwi",
+  "launch_week": false,
+  "prop": "two green kiwis halved on a cutting board",
+  "skip_line": "Kiwi allergy, or on a low-potassium diet? Skip this one.",
+  "hook_category": "KIT"
+ },
+ {
+  "id": "S161",
+  "page": "@sunyoon.kitchen",
+  "speaker": "SUN",
+  "format": "F28",
+  "pillar": "P15",
+  "hook_id": "H401",
+  "title": "Chicken soup for a cold: show me the study",
+  "target_seconds": 47,
+  "hook_line": "Chicken soup for a cold? Show me the study. Okay. Here it is.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "SUN",
+    "vo": "Chicken soup for a cold? Show me the study. Okay. Here it is.",
+    "ost": "MYTH? CHICKEN SOUP",
+    "shot": "SET-KITCHEN | S-KITCHEN | Sun lifts the lid off a steaming pot of chicken and radish soup | CU"
+   },
+   {
+    "t": "3-12",
+    "speaker": "SUN",
+    "vo": "Year 2000. Scientists put soup on white blood cells in a lab dish. The cells slowed down.",
+    "ost": "Lab dish. Not people.",
+    "shot": "same | study card inset (Rennard et al., Chest 2000) | medium"
+   },
+   {
+    "t": "12-20",
+    "speaker": "SUN",
+    "vo": "A dish is not a person. The authors said so. Benefit in people? Untested.",
+    "ost": "Benefit in people: untested",
+    "shot": "same | she taps the card | CU"
+   },
+   {
+    "t": "20-31",
+    "speaker": "SUN",
+    "vo": "So why do I make it? Warm, salty, easy to swallow, and it gets protein into a tired person. That's real.",
+    "ost": "Warm · easy · protein",
+    "shot": "same | ladles chicken, radish, scallion into a bowl | overhead"
+   },
+   {
+    "t": "31-38",
+    "speaker": "SUN",
+    "vo": "Watching salt for your heart or kidneys? Use half the salt and more water.",
+    "ost": "Watching salt? Half the salt.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "38-43",
+    "speaker": "SUN",
+    "vo": "Fever over three days or trouble breathing? No soup. Call your doctor.",
+    "ost": "Fever 3+ days? Call your doctor.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "43-47",
+    "speaker": "SUN",
+    "vo": "Comment SOUP. Three of my soups, with grams.",
+    "ost": "Comment SOUP",
+    "shot": "same | sets the bowl down | medium"
+   }
+  ],
+  "spoken_word_count": 99,
+  "has_movement": false,
+  "movement_tags": [
+   "soup",
+   "sodium"
+  ],
+  "safety_cue": "MB-EX (lab-only claim labeled as untested in people); sodium line; fever/breathing red flag (SAFETY §4.3).",
+  "regression": "",
+  "cta_keyword": "SOUP",
+  "cta_deliverable": "Sun Yoon's Three Soups",
+  "cta_line": "Comment SOUP. Three of my soups, with grams.",
+  "caption": "Comment SOUP for Sun Yoon's Three Soups.\nThe famous chicken-soup study (Rennard et al., Chest 2000) was in a lab dish: soup slowed white-blood-cell movement, and the authors said benefit in people remains untested. Make it because it's warm, easy and carries protein.\nWatching salt? Use half. Fever over 3 days or trouble breathing? Call your doctor.",
+  "hashtags": {
+   "ig": [
+    "#mythbusting",
+    "#chickensoup",
+    "#koreanfood",
+    "#sunyoon"
+   ],
+   "tt": [
+    "#chickensoup",
+    "#mythbusting",
+    "#koreangrandma",
+    "#sunyoon"
+   ],
+   "yt_title": "Chicken Soup for a Cold? Show Me the Study"
+  },
+  "evidence": [
+   "E57"
+  ],
+  "evidence_note": "In-vitro (D) explicitly labeled; tradition framing.",
+  "running_bit": "Show me the study",
+  "wink": false,
+  "myth_bust": true,
+  "music": "playful pizzicato",
+  "thumbnail_text": "LAB DISH. NOT YOU.",
+  "hook_grammar": [
+   "OBJ3",
+   "MYTH",
+   "DEBUNK",
+   "KITCHEN_SERIES"
+  ],
+  "series": "Sun Checks Your Kitchen #18: chicken soup",
+  "launch_week": false,
+  "prop": "steaming pot of chicken and radish soup",
+  "skip_line": "Watching salt for your heart or kidneys? Use half the salt and more water.",
+  "hook_category": "MYT"
+ },
+ {
+  "id": "S162",
+  "page": "@sunyoon.kitchen",
+  "speaker": "SUN",
+  "format": "F04",
+  "pillar": "P12",
+  "hook_id": "H402",
+  "title": "Seaweed snacks: read the iodine",
+  "target_seconds": 45,
+  "hook_line": "Not a superfood, not poison. Seaweed snacks, every day? Read the iodine first.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "SUN",
+    "vo": "Not a superfood, not poison. Seaweed snacks, every day? Read the iodine first.",
+    "ost": "SEAWEED: READ THE LABEL",
+    "shot": "SET-TABLE | S-CARDI-JADE | Sun fans out a stack of roasted seaweed snack packs on the table | CU"
+   },
+   {
+    "t": "3-11",
+    "speaker": "SUN",
+    "vo": "I'm Korean. I eat seaweed. Birthday soup, every year. I'm not against it.",
+    "ost": "Korean grandma. Pro-seaweed.",
+    "shot": "same | the smirk | CU"
+   },
+   {
+    "t": "11-22",
+    "speaker": "SUN",
+    "vo": "But iodine in seaweed swings wildly. One study measured sixteen to almost three thousand micrograms per gram.",
+    "ost": "16 to 2,984 mcg per gram",
+    "shot": "same | study card inset (Teas et al.) | medium"
+   },
+   {
+    "t": "22-30",
+    "speaker": "SUN",
+    "vo": "The adult upper limit is eleven hundred a day. From everything. So a snack pack, fine. Five, no.",
+    "ost": "Upper limit: 1,100 mcg/day",
+    "shot": "same | she pulls four packs back | medium"
+   },
+   {
+    "t": "30-38",
+    "speaker": "SUN",
+    "vo": "Thyroid condition, or on thyroid medicine? Ask your doctor before eating seaweed daily.",
+    "ost": "Thyroid? Ask before daily seaweed.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "38-45",
+    "speaker": "SUN",
+    "vo": "Comment BEGIN. I'll send where to start in my kitchen.",
+    "ost": "Comment BEGIN",
+    "shot": "same | eats one sheet, crunch | CU"
+   }
+  ],
+  "spoken_word_count": 84,
+  "has_movement": false,
+  "movement_tags": [
+   "seaweed",
+   "iodine"
+  ],
+  "safety_cue": "Thyroid skip line (E58); portion framing, no fear claim.",
+  "regression": "",
+  "cta_keyword": "BEGIN",
+  "cta_deliverable": "Where should I begin? start menu",
+  "cta_line": "Comment BEGIN. I'll send where to start in my kitchen.",
+  "caption": "Comment BEGIN for Sun Yoon's where-to-start menu.\nSeaweed iodine varies enormously: commercially available seaweeds measured 16 to 2,984 mcg iodine per gram. The adult upper limit is 1,100 mcg/day from all sources. A snack pack is fine; a daily handful of packs isn't the same thing.\nThyroid condition or thyroid medicine? Ask your doctor before eating seaweed daily.",
+  "hashtags": {
+   "ig": [
+    "#seaweed",
+    "#koreanfood",
+    "#readthelabel",
+    "#sunyoon"
+   ],
+   "tt": [
+    "#seaweedsnacks",
+    "#koreangrandma",
+    "#readthelabel",
+    "#sunyoon"
+   ],
+   "yt_title": "Seaweed Snacks Every Day? Read the Iodine First"
+  },
+  "evidence": [
+   "E58"
+  ],
+  "evidence_note": "Iodine variability (A−); upper limit; thyroid caution.",
+  "running_bit": "",
+  "wink": false,
+  "myth_bust": false,
+  "music": "playful pizzicato",
+  "thumbnail_text": "READ THE IODINE",
+  "hook_grammar": [
+   "DEBUNK",
+   "KITCHEN_SERIES"
+  ],
+  "series": "Sun Checks Your Kitchen #19: seaweed",
+  "launch_week": false,
+  "prop": "stack of roasted seaweed snack packs",
+  "skip_line": "Thyroid condition, or on thyroid medicine? Ask your doctor before eating seaweed daily.",
+  "hook_category": "MYT"
+ },
+ {
+  "id": "S163",
+  "page": "@sunyoon.kitchen",
+  "speaker": "SUN",
+  "format": "F18",
+  "pillar": "P10",
+  "hook_id": "H403",
+  "title": "One can of chickpeas, three meals of fiber",
+  "target_seconds": 46,
+  "hook_line": "One can of chickpeas. Three meals. Here's the fiber math, out loud.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "SUN",
+    "vo": "One can of chickpeas. Three meals. Here's the fiber math, out loud.",
+    "ost": "1 CAN = 3 MEALS",
+    "shot": "SET-KITCHEN | S-KITCHEN | Sun drains a can of chickpeas into a colander under the tap | CU"
+   },
+   {
+    "t": "3-12",
+    "speaker": "SUN",
+    "vo": "The big fiber review: people eating twenty-five to twenty-nine grams a day had better health outcomes.",
+    "ost": "25–29 g fiber a day",
+    "shot": "same | study card inset (Reynolds et al., Lancet 2019) | medium"
+   },
+   {
+    "t": "12-23",
+    "speaker": "SUN",
+    "vo": "Half a cup of chickpeas, about six grams. On a salad, in soup, roasted with salt. Three meals, eighteen grams.",
+    "ost": "½ cup ≈ 6 g · 3 meals ≈ 18 g",
+    "shot": "same | three bowls: salad, soup, roasted | overhead"
+   },
+   {
+    "t": "23-31",
+    "speaker": "SUN",
+    "vo": "Add a kiwi and oatmeal and you're close. Grams, not vibes.",
+    "ost": "Grams, not vibes.",
+    "shot": "same | she writes the total on a card | CU"
+   },
+   {
+    "t": "31-38",
+    "speaker": "SUN",
+    "vo": "Beans make you gassy? Start with two spoons a day. Go up slowly. Drink water.",
+    "ost": "Gassy? Two spoons. Go slow.",
+    "shot": "same | tiny spoonful | CU"
+   },
+   {
+    "t": "38-46",
+    "speaker": "SUN",
+    "vo": "Doors open soon. Comment WAITLIST. Free, and my day-one recipe comes now.",
+    "ost": "Comment WAITLIST · free",
+    "shot": "same | lifts the colander | medium"
+   }
+  ],
+  "spoken_word_count": 86,
+  "has_movement": false,
+  "movement_tags": [
+   "fiber",
+   "legumes"
+  ],
+  "safety_cue": "Slow fiber increase with water (gas/bloating framed kindly); no condition claim.",
+  "regression": "",
+  "cta_keyword": "WAITLIST",
+  "cta_deliverable": "Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)",
+  "cta_line": "Doors open soon. Comment WAITLIST. Free, and my day-one recipe comes now.",
+  "caption": "Comment WAITLIST for the free waitlist link and Sun Yoon's day-1 recipe.\nA Lancet review linked 25–29 g fiber a day with better health outcomes than lower intakes. One can of chickpeas = about 3 half-cups at ~6 g fiber each (USDA): salad, soup, roasted.\nNew to beans? Start with two spoons a day and go up slowly, with water.\nThe waitlist is free: one email when Strong Years opens, plus at most 3 launch emails in the 72 hours after. No card. Unsubscribe in one click.",
+  "hashtags": {
+   "ig": [
+    "#highfiber",
+    "#chickpeas",
+    "#cookingforone",
+    "#sunyoon"
+   ],
+   "tt": [
+    "#chickpeas",
+    "#fiber",
+    "#koreangrandma",
+    "#sunyoon"
+   ],
+   "yt_title": "One Can of Chickpeas = 3 Meals of Fiber"
+  },
+  "evidence": [
+   "E24",
+   "E52"
+  ],
+  "evidence_note": "Reynolds (A) stated as association; USDA values (E52).",
+  "running_bit": "Grams, not vibes",
+  "wink": false,
+  "myth_bust": false,
+  "music": "playful pizzicato",
+  "thumbnail_text": "1 CAN. 18 GRAMS.",
+  "hook_grammar": [
+   "OBJ3",
+   "KITCHEN_SERIES",
+   "DEMO"
+  ],
+  "series": "Sun Checks Your Kitchen #20: canned beans",
+  "launch_week": false,
+  "prop": "open can of chickpeas in a colander",
+  "skip_line": "Beans make you gassy? Start with two spoons a day.",
+  "hook_category": "KIT"
+ },
+ {
+  "id": "S164",
+  "page": "@sunyoon.kitchen",
+  "speaker": "SUN",
+  "format": "F12",
+  "pillar": "P13",
+  "hook_id": "H404",
+  "title": "Toast and coffee every morning",
+  "target_seconds": 46,
+  "hook_line": "If you eat toast and coffee every morning, you're short on protein. Let's fix breakfast.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "SUN",
+    "vo": "If you eat toast and coffee every morning, you're short on protein. Let's fix breakfast.",
+    "ost": "TOAST + COFFEE = SHORT",
+    "shot": "SET-KITCHEN | S-KITCHEN | Sun puts one slice of toast and a coffee on a kitchen scale | CU"
+   },
+   {
+    "t": "3-10",
+    "speaker": "SUN",
+    "vo": "This plate? About four grams. Over sixty-five, experts say twenty-five to thirty a meal.",
+    "ost": "4 g vs 25–30 g",
+    "shot": "same | the scale readout and a study card inset (PROT-AGE, JAMDA 2013) | medium"
+   },
+   {
+    "t": "10-22",
+    "speaker": "SUN",
+    "vo": "Keep the toast. Add two eggs, twelve grams. A cup of soy milk, seven. Greek yogurt, a few spoons, eight.",
+    "ost": "+ eggs 12 · soy milk 7 · yogurt 8",
+    "shot": "same | eggs into the pan, soy milk poured, yogurt spooned | overhead"
+   },
+   {
+    "t": "22-29",
+    "speaker": "SUN",
+    "vo": "Thirty-one grams. Same toast. You just stopped eating it alone.",
+    "ost": "31 grams. Same toast.",
+    "shot": "same | the finished plate | CU"
+   },
+   {
+    "t": "29-37",
+    "speaker": "SUN",
+    "vo": "Kidney disease? Ask your doctor for your protein number first. It may be lower.",
+    "ost": "Kidney disease? Ask your number.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "37-46",
+    "speaker": "SUN",
+    "vo": "Comment WAITLIST. It's free. You get my day-one breakfast now, and one email when we open.",
+    "ost": "Comment WAITLIST · free",
+    "shot": "same | slides the plate toward camera | medium"
+   }
+  ],
+  "spoken_word_count": 89,
+  "has_movement": false,
+  "movement_tags": [
+   "high_protein"
+  ],
+  "safety_cue": "Kidney-disease protein caution (C-05 / E28 'unless severe kidney disease').",
+  "regression": "",
+  "cta_keyword": "WAITLIST",
+  "cta_deliverable": "Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)",
+  "cta_line": "Comment WAITLIST. It's free. You get my day-one breakfast now, and one email when we open.",
+  "caption": "Comment WAITLIST for the free waitlist link and Sun Yoon's day-1 breakfast.\nPROT-AGE suggests about 25–30 g protein per meal for adults over 65. Toast + coffee is ~4 g. Add 2 eggs (~12 g), a cup of soy milk (~7 g) and a few spoons of Greek yogurt (~8 g) for ~31 g (USDA).\nKidney disease? Ask your doctor for your protein number first.\nThe waitlist is free: one email when Strong Years opens, plus at most 3 launch emails in the 72 hours after. No card. Unsubscribe in one click.",
+  "hashtags": {
+   "ig": [
+    "#proteinbreakfast",
+    "#highprotein",
+    "#over65",
+    "#sunyoon"
+   ],
+   "tt": [
+    "#proteinbreakfast",
+    "#over65",
+    "#koreangrandma",
+    "#sunyoon"
+   ],
+   "yt_title": "Toast and Coffee Every Morning? Here's the Fix"
+  },
+  "evidence": [
+   "E28",
+   "E52"
+  ],
+  "evidence_note": "PROT-AGE (A); USDA values approximate (E52).",
+  "running_bit": "Grams, not vibes",
+  "wink": false,
+  "myth_bust": false,
+  "music": "playful pizzicato",
+  "thumbnail_text": "4 GRAMS. NO.",
+  "hook_grammar": [
+   "IF_EVERY",
+   "DEMO"
+  ],
+  "series": "",
+  "launch_week": false,
+  "prop": "plate with one slice of toast and a coffee",
+  "skip_line": "Kidney disease? Ask your doctor for your protein number first.",
+  "hook_category": "BLT"
+ },
+ {
+  "id": "S165",
+  "page": "@sunyoon.kitchen",
+  "speaker": "SUN",
+  "format": "F07",
+  "pillar": "P16",
+  "hook_id": "H405",
+  "title": "Too old to lift? Too comfortable.",
+  "target_seconds": 46,
+  "hook_line": "Seventy-six, too old to lift? Not too old, not too late. Too comfortable.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "SUN",
+    "vo": "Seventy-six, too old to lift? Not too old, not too late. Too comfortable.",
+    "ost": "NOT TOO OLD. TOO COMFORTABLE.",
+    "shot": "SET-GARAGE | S-TRAIN | Sun loops a resistance band around a sturdy workbench leg, visor pushed up | medium"
+   },
+   {
+    "t": "3-11",
+    "speaker": "SUN",
+    "vo": "Women our age think lifting is for him. Wrong. Your bones like load. So do your arms.",
+    "ost": "Your bones like load",
+    "shot": "same | she points at Chang off-screen | CU"
+   },
+   {
+    "t": "11-21",
+    "speaker": "SUN",
+    "vo": "One trial: women with low bone mass did supervised, progressed strength training. Bone and function improved.",
+    "ost": "Supervised · progressed · improved",
+    "shot": "same | study card inset (Watson et al., LIFTMOR, JBMR 2018) | medium"
+   },
+   {
+    "t": "21-30",
+    "speaker": "SUN",
+    "vo": "Me? A band. Sit tall on a chair, breathe out as you pull to the ribs, slowly back. Ten.",
+    "ost": "Band row · 10 slow",
+    "shot": "same | seated band rows on a chair, slow tempo | side medium"
+   },
+   {
+    "t": "30-36",
+    "speaker": "SUN",
+    "vo": "Too hard? Step closer. Less stretch, less pull. Still counts.",
+    "ost": "Easier: step closer",
+    "shot": "same | she steps in | medium"
+   },
+   {
+    "t": "36-41",
+    "speaker": "SUN",
+    "vo": "Osteoporosis? Ask your doctor what to avoid. No bending forward with weight.",
+    "ost": "Osteoporosis? Ask what to avoid.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "41-46",
+    "speaker": "SUN",
+    "vo": "Comment BEGIN. I'll send where to start. Gently.",
+    "ost": "Comment BEGIN",
+    "shot": "same | pats the camera like a hand | CU"
+   }
+  ],
+  "spoken_word_count": 95,
+  "has_movement": true,
+  "movement_tags": [
+   "row"
+  ],
+  "safety_cue": "Seated on a chair; slow tempo; step-closer regression; osteoporosis line (E40: no loaded flexion); supervised framing for LIFTMOR.",
+  "regression": "Step closer to the anchor so the band pulls less.",
+  "cta_keyword": "BEGIN",
+  "cta_deliverable": "Where should I begin? start menu",
+  "cta_line": "Comment BEGIN. I'll send where to start. Gently.",
+  "caption": "Comment BEGIN for the where-to-start menu.\nLIFTMOR: postmenopausal women with low bone mass did supervised, progressed strength + impact training for 8 months, and bone density and function improved (Watson et al., 2018). Start smaller: a seated band row, 10 slow reps.\nOsteoporosis? Ask your doctor what to avoid (no loaded forward bending).",
+  "hashtags": {
+   "ig": [
+    "#womenwholift",
+    "#womenover70",
+    "#proaging",
+    "#sunyoon"
+   ],
+   "tt": [
+    "#womenover60",
+    "#proaging",
+    "#bandworkout",
+    "#sunyoon"
+   ],
+   "yt_title": "76 and Too Old to Lift? No. Too Comfortable."
+  },
+  "evidence": [
+   "E29",
+   "E40"
+  ],
+  "evidence_note": "LIFTMOR (B) with 'supervised, progressed' qualifier; E40 caution.",
+  "running_bit": "I'm older, so I'm right",
+  "wink": false,
+  "myth_bust": false,
+  "music": "driving soul",
+  "thumbnail_text": "TOO COMFORTABLE.",
+  "hook_grammar": [
+   "DEMO"
+  ],
+  "series": "",
+  "launch_week": false,
+  "prop": "purple resistance band around a cabinet handle",
+  "skip_line": "Osteoporosis? Ask your doctor what to avoid.",
+  "hook_category": "BLT"
+ },
+ {
+  "id": "S166",
+  "page": "@sunyoon.kitchen",
+  "speaker": "SUN",
+  "format": "F31",
+  "pillar": "P11",
+  "hook_id": "H406",
+  "title": "Tofu scramble, thirty grams",
+  "target_seconds": 47,
+  "hook_line": "Firm tofu, crumbled. Watch it turn into breakfast with thirty grams of protein.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "SUN",
+    "vo": "Firm tofu, crumbled. Watch it turn into breakfast with thirty grams of protein.",
+    "ost": "TOFU → 30 G BREAKFAST",
+    "shot": "SET-KITCHEN | S-KITCHEN | Sun crumbles a block of firm tofu into a hot pan with her fingers | overhead CU"
+   },
+   {
+    "t": "3-12",
+    "speaker": "SUN",
+    "vo": "Half a block of firm tofu, about twenty grams. Scallion, garlic, a little soy sauce.",
+    "ost": "½ block ≈ 20 g",
+    "shot": "same | scallions snipped with scissors, sizzle | overhead"
+   },
+   {
+    "t": "12-20",
+    "speaker": "SUN",
+    "vo": "One egg in at the end, six more grams. A spoon of sesame seeds on top.",
+    "ost": "+ 1 egg ≈ 6 g",
+    "shot": "same | egg folds through | overhead"
+   },
+   {
+    "t": "20-29",
+    "speaker": "SUN",
+    "vo": "Over sixty-five, aim for twenty-five to thirty grams a meal. Kimchi on the side. Done.",
+    "ost": "Aim: 25–30 g a meal",
+    "shot": "same | plated with kimchi, study card inset (PROT-AGE) | medium"
+   },
+   {
+    "t": "29-36",
+    "speaker": "SUN",
+    "vo": "Soy sauce is salty. Use low-sodium, or half a spoon. Taste first.",
+    "ost": "Soy sauce = salty. Half.",
+    "shot": "same | half spoon | CU"
+   },
+   {
+    "t": "36-42",
+    "speaker": "SUN",
+    "vo": "Soy allergy, or kidney disease? Skip the tofu or ask your doctor.",
+    "ost": "Soy allergy? Kidney disease? Ask.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "42-47",
+    "speaker": "SUN",
+    "vo": "Comment SOUP. I'll send three soups, all with grams.",
+    "ost": "Comment SOUP",
+    "shot": "same | taps the pan with the spatula | medium"
+   }
+  ],
+  "spoken_word_count": 92,
+  "has_movement": false,
+  "movement_tags": [
+   "high_protein",
+   "soy"
+  ],
+  "safety_cue": "Sodium line; soy allergy and kidney-disease skip line.",
+  "regression": "",
+  "cta_keyword": "SOUP",
+  "cta_deliverable": "Sun Yoon's Three Soups",
+  "cta_line": "Comment SOUP. I'll send three soups, all with grams.",
+  "caption": "Comment SOUP for Sun Yoon's Three Soups.\nTofu scramble: ½ block firm tofu (~20 g protein), 1 egg (~6 g), scallion, garlic, low-sodium soy sauce, sesame seeds. PROT-AGE suggests ~25–30 g protein per meal for adults over 65 (values approx. USDA).\nSoy allergy or kidney disease? Skip it or ask your doctor. Soy sauce is salty: use half.",
+  "hashtags": {
+   "ig": [
+    "#tofu",
+    "#highprotein",
+    "#koreanfood",
+    "#sunyoon"
+   ],
+   "tt": [
+    "#tofuscramble",
+    "#highprotein",
+    "#koreangrandma",
+    "#sunyoon"
+   ],
+   "yt_title": "Tofu Scramble: 30 Grams of Protein for Breakfast"
+  },
+  "evidence": [
+   "E28",
+   "E52"
+  ],
+  "evidence_note": "PROT-AGE (A); USDA values.",
+  "running_bit": "",
+  "wink": false,
+  "myth_bust": false,
+  "music": "playful pizzicato",
+  "thumbnail_text": "TOFU. 30 GRAMS.",
+  "hook_grammar": [
+   "OBJ3",
+   "WATCH",
+   "DEMO",
+   "KITCHEN_SERIES"
+  ],
+  "series": "Sun Checks Your Kitchen #21: tofu",
+  "launch_week": false,
+  "prop": "block of firm tofu crumbling into a pan",
+  "skip_line": "Soy allergy, or kidney disease? Skip the tofu or ask your doctor.",
+  "hook_category": "KIT"
+ },
+ {
+  "id": "S167",
+  "page": "@sunyoon.kitchen",
+  "speaker": "SUN",
+  "format": "F26",
+  "pillar": "P20",
+  "hook_id": "H407",
+  "title": "'Are you even real?'",
+  "target_seconds": 45,
+  "hook_line": "'Are you even real?' No. I'm AI. My opinion of your breakfast is real.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "SUN",
+    "vo": "'Are you even real?' No. I'm AI. My opinion of your breakfast is real.",
+    "ost": "'ARE YOU EVEN REAL?' NO.",
+    "shot": "SET-TABLE | S-CARDI-JADE | Sun reads a printed comment card through her glasses | CU"
+   },
+   {
+    "t": "3-11",
+    "speaker": "SUN",
+    "vo": "A team of people made me. Chang too. Our story is fiction. Our fifty years? Also fiction. Still exhausting.",
+    "ost": "Made by a team · story = fiction",
+    "shot": "same | the slow blink | CU"
+   },
+   {
+    "t": "11-20",
+    "speaker": "SUN",
+    "vo": "What's real: the recipes, the grams, and the study in every caption. Go check. I would.",
+    "ost": "Real: recipes · grams · studies",
+    "shot": "same | she points at the caption area | medium"
+   },
+   {
+    "t": "20-29",
+    "speaker": "SUN",
+    "vo": "Soon we open Strong Years. A recipe every Sunday, a session with him every morning.",
+    "ost": "Opening soon",
+    "shot": "same | phone inset: a recipe card with grams | insert"
+   },
+   {
+    "t": "29-35",
+    "speaker": "SUN",
+    "vo": "Food allergy or a special diet from your doctor? Their plan comes first. Always.",
+    "ost": "Special diet? Doctor's plan first.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "35-45",
+    "speaker": "SUN",
+    "vo": "Comment WAITLIST. It's free. One email when we open. I don't spam. The team won't let me.",
+    "ost": "Comment WAITLIST · free",
+    "shot": "same | sets the card down, smirk | medium"
+   }
+  ],
+  "spoken_word_count": 95,
+  "has_movement": false,
+  "movement_tags": [
+   "disclosure"
+  ],
+  "safety_cue": "Disclosure post; D-04 respected (states she is AI); no subscription terms (runway).",
+  "regression": "",
+  "cta_keyword": "WAITLIST",
+  "cta_deliverable": "Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)",
+  "cta_line": "Comment WAITLIST. It's free. One email when we open. I don't spam. The team won't let me.",
+  "caption": "Comment WAITLIST for the free waitlist link and Sun Yoon's day-1 recipe.\nSun Yoon is an AI character made by a team of people; her story is fiction (she still kept her own family name). What's real: the recipes, the grams (USDA values) and the study cited in each caption.\nThe waitlist is free: one email when Strong Years opens, plus at most 3 launch emails in the 72 hours after. No card. Unsubscribe in one click.",
+  "hashtags": {
+   "ig": [
+    "#aicharacter",
+    "#sunyoon",
+    "#strongyears",
+    "#koreangrandma"
+   ],
+   "tt": [
+    "#aicharacter",
+    "#sunyoon",
+    "#strongyears",
+    "#koreangrandma"
+   ],
+   "yt_title": "'Are You Even Real?' No. Here's What Is."
+  },
+  "evidence": [],
+  "evidence_note": "Disclosure/wink post; no health claim.",
+  "running_bit": "AI wink",
+  "wink": true,
+  "myth_bust": false,
+  "music": "playful pizzicato",
+  "thumbnail_text": "NO. I'M AI.",
+  "hook_grammar": [
+   "DEMO"
+  ],
+  "series": "",
+  "launch_week": false,
+  "prop": "printed comment card reading 'are you even real?'",
+  "skip_line": "Food allergy or a special diet from your doctor? Their plan comes first.",
+  "hook_category": "BLT"
+ },
+ {
+  "id": "S168",
+  "page": "@changandsun",
+  "speaker": "DUO",
+  "format": "F34",
+  "pillar": "P01",
+  "hook_id": "H408",
+  "title": "Loser does dishes: the chair test",
+  "target_seconds": 48,
+  "hook_line": "Thirty-second chair test. Him versus me. Watch his face when I win.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "SUN",
+    "vo": "Thirty-second chair test. Him versus me. Watch his face when I win.",
+    "ost": "LOSER DOES DISHES",
+    "shot": "SET-KITCHEN | C-KITCHEN + S-KITCHEN | Sun drops yellow dish gloves on the table between two chairs pushed against the kitchen wall | medium"
+   },
+   {
+    "t": "3-10",
+    "speaker": "CHANG",
+    "vo": "Arms crossed. All the way up, all the way down. Breathe out going up. Go.",
+    "ost": "Arms crossed · breathe out up",
+    "shot": "same | split screen, both doing stands, timers | split"
+   },
+   {
+    "t": "10-18",
+    "speaker": "SUN",
+    "vo": "Seventeen. Normal range for a woman my age starts around ten or eleven. I'm older, so I'm right.",
+    "ost": "Sun: 17",
+    "shot": "same | Sun's counter stops | medium"
+   },
+   {
+    "t": "18-25",
+    "speaker": "CHANG",
+    "vo": "Twenty-two. That's my level. I win.",
+    "ost": "Chang: 22",
+    "shot": "same | Chang flexes in the oven door | medium"
+   },
+   {
+    "t": "25-33",
+    "speaker": "SUN",
+    "vo": "He trains every day. I make the soup. Adjusted for soup, I win.",
+    "ost": "Adjusted for soup: Sun",
+    "shot": "same | she tosses him the gloves | two-shot"
+   },
+   {
+    "t": "33-39",
+    "speaker": "CHANG",
+    "vo": "Need your hands? Use them. Your number is a starting line.",
+    "ost": "Need hands? Use them.",
+    "shot": "same | demonstrates hands on thighs | medium"
+   },
+   {
+    "t": "39-43",
+    "speaker": "SUN",
+    "vo": "Chest pain or dizzy? Stop and sit. Call your doctor.",
+    "ost": "Chest pain or dizzy? Stop.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "43-48",
+    "speaker": "CHANG",
+    "vo": "Comment TEST for the three-minute test. Loser does dishes.",
+    "ost": "Comment TEST",
+    "shot": "same | Chang in gloves at the sink | medium"
+   }
+  ],
+  "spoken_word_count": 94,
+  "has_movement": true,
+  "movement_tags": [
+   "sit_to_stand"
+  ],
+  "safety_cue": "Chairs against the wall; breathe out going up; hands regression; stop line. Caption add-on stop rule.",
+  "regression": "Hands on thighs to push up.",
+  "cta_keyword": "TEST",
+  "cta_deliverable": "Strength Age test (quiz)",
+  "cta_line": "Comment TEST for the three-minute test. Loser does dishes.",
+  "caption": "Comment TEST for the free 3-minute Strength Age test.\nCouple challenge: 30-second chair stand, chairs against the wall, arms crossed. Normal ranges by age and sex come from the Senior Fitness Test norms (7,183 US adults aged 60–94). Loser does dishes.\nChest pain or dizziness? Stop, sit and call your doctor. Tell us both your numbers.",
+  "hashtags": {
+   "ig": [
+    "#couplechallenge",
+    "#chairtest",
+    "#changandsun",
+    "#over60"
+   ],
+   "tt": [
+    "#couplechallenge",
+    "#over60",
+    "#chairtest",
+    "#changandsun"
+   ],
+   "yt_title": "Chair Test, Husband vs Wife (Loser Does Dishes)"
+  },
+  "evidence": [
+   "E49"
+  ],
+  "evidence_note": "Senior Fitness Test norms (A); Sun's range stated approximately as a population norm.",
+  "running_bit": "Loser does dishes; NO MIRROR FLEXING (oven door)",
+  "wink": false,
+  "myth_bust": false,
+  "music": "playful swing",
+  "thumbnail_text": "LOSER DOES DISHES",
+  "hook_grammar": [
+   "OBJ3",
+   "WATCH",
+   "TEST_NOW",
+   "DEMO"
+  ],
+  "series": "Loser Does Dishes",
+  "launch_week": false,
+  "prop": "yellow dish gloves on the dish rack",
+  "skip_line": "Chest pain or dizzy? Stop and sit.",
+  "hook_category": "CPL"
+ },
+ {
+  "id": "S169",
+  "page": "@changandsun",
+  "speaker": "DUO",
+  "format": "F08",
+  "pillar": "P17",
+  "hook_id": "H409",
+  "title": "He flexes in every shiny surface",
+  "target_seconds": 44,
+  "hook_line": "If your husband flexes in every shiny surface, you're married to this man.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "SUN",
+    "vo": "If your husband flexes in every shiny surface, you're married to this man.",
+    "ost": "HE FLEXES IN EVERYTHING",
+    "shot": "SET-KITCHEN | C-KITCHEN + S-KITCHEN | Chang flexes in the oven door; Sun tapes a handwritten sign to it | medium"
+   },
+   {
+    "t": "3-10",
+    "speaker": "CHANG",
+    "vo": "The oven door is honest. It doesn't round up.",
+    "ost": "The oven door is honest.",
+    "shot": "same | he turns to check the other arm | CU"
+   },
+   {
+    "t": "10-18",
+    "speaker": "SUN",
+    "vo": "Fifty years. Microwave, car window, my glasses. Yesterday, a spoon.",
+    "ost": "Microwave · car window · a spoon",
+    "shot": "same | quick flashback cuts: microwave, car window, spoon | quick cuts"
+   },
+   {
+    "t": "18-27",
+    "speaker": "CHANG",
+    "vo": "She's proud. She hides it. She hides my kettlebell too, until I stretch.",
+    "ost": "She hides the kettlebell.",
+    "shot": "same | Sun pulls a 20 kg bell from under the sink | two-shot"
+   },
+   {
+    "t": "27-35",
+    "speaker": "SUN",
+    "vo": "We're AI, and he still won't stretch. That's how you know it's realistic.",
+    "ost": "AI. Still won't stretch.",
+    "shot": "same | the smirk | CU"
+   },
+   {
+    "t": "35-39",
+    "speaker": "CHANG",
+    "vo": "Hips. Now. Hand on the counter. I know.",
+    "ost": "Hips. Now. Hand on the counter.",
+    "shot": "same | he drops into a hip stretch, hand on the counter | medium"
+   },
+   {
+    "t": "39-44",
+    "speaker": "SUN",
+    "vo": "Tag the flexer in your house. Comment BEGIN for where to start.",
+    "ost": "Comment BEGIN",
+    "shot": "same | she taps the sign: NO MIRROR FLEXING | CU"
+   }
+  ],
+  "spoken_word_count": 78,
+  "has_movement": false,
+  "movement_tags": [
+   "comedy"
+  ],
+  "safety_cue": "Comedy; AI wink; no health claim. The stretch is shown with a hand on the counter.",
+  "regression": "",
+  "cta_keyword": "BEGIN",
+  "cta_deliverable": "Where should I begin? start menu",
+  "cta_line": "Tag the flexer in your house. Comment BEGIN for where to start.",
+  "caption": "Comment BEGIN for the where-to-start menu.\nFifty years of fictional marriage. Microwave, car window, her glasses, a spoon. Tag the flexer in your house.\nChang & Sun are AI characters; the sign on the oven is very real.",
+  "hashtags": {
+   "ig": [
+    "#marriagehumor",
+    "#changandsun",
+    "#over60",
+    "#couplegoals"
+   ],
+   "tt": [
+    "#marriagehumor",
+    "#over60",
+    "#couplegoals",
+    "#changandsun"
+   ],
+   "yt_title": "He Flexes in Every Shiny Surface (50 Years Married)"
+  },
+  "evidence": [],
+  "evidence_note": "Couple comedy (P17); wink #1 rotated.",
+  "running_bit": "NO MIRROR FLEXING; the hidden kettlebell; Hips. Now.",
+  "wink": true,
+  "myth_bust": false,
+  "music": "playful swing",
+  "thumbnail_text": "HE FLEXES IN EVERYTHING",
+  "hook_grammar": [
+   "SHARE"
+  ],
+  "series": "",
+  "launch_week": false,
+  "prop": "handwritten sign taped to the oven door",
+  "skip_line": "Hand on the counter.",
+  "hook_category": "CPL"
+ },
+ {
+  "id": "S170",
+  "page": "@changandsun",
+  "speaker": "DUO",
+  "format": "F23",
+  "pillar": "P03",
+  "hook_id": "H410",
+  "title": "Dishes on one leg, together",
+  "target_seconds": 47,
+  "hook_line": "If you do the dishes every night, take turns standing on one leg at the sink.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "SUN",
+    "vo": "If you do the dishes every night, take turns standing on one leg at the sink.",
+    "ost": "DISHES ON ONE LEG",
+    "shot": "SET-KITCHEN | C-KITCHEN + S-KITCHEN | Chang washes, Sun dries; both lift one foot, fingers on the sink edge | medium"
+   },
+   {
+    "t": "3-11",
+    "speaker": "CHANG",
+    "vo": "Fingers on the sink edge. Lift one foot a little. Ten seconds. Switch.",
+    "ost": "Fingers on the sink · 10 s · switch",
+    "shot": "same | feet CU, then both | CU then medium"
+   },
+   {
+    "t": "11-21",
+    "speaker": "SUN",
+    "vo": "Standing on one leg is the last stage of a four-stage balance check clinics use. We practice it here.",
+    "ost": "Stage 4 of a clinic balance check",
+    "shot": "same | study card inset (CDC STEADI 4-Stage Balance Test) | medium"
+   },
+   {
+    "t": "21-30",
+    "speaker": "CHANG",
+    "vo": "Plate in, foot up. Plate out, foot down. Fifty plates later, a lot of practice.",
+    "ost": "Plate in, foot up",
+    "shot": "same | rhythm of plates and feet | medium-full"
+   },
+   {
+    "t": "30-36",
+    "speaker": "SUN",
+    "vo": "Wobbly? Toes of the lifted foot stay on the floor. Hand flat on the sink.",
+    "ost": "Easier: toes stay down",
+    "shot": "same | Sun's toe-touch version | CU"
+   },
+   {
+    "t": "36-41",
+    "speaker": "CHANG",
+    "vo": "Dizzy spells or a new hip? Keep both feet down and tell your doctor.",
+    "ost": "Dizzy? New hip? Both feet down.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "41-47",
+    "speaker": "SUN",
+    "vo": "Send this to whoever dries. Comment BALANCE for Steady Feet.",
+    "ost": "Comment BALANCE",
+    "shot": "same | she flicks the towel at him | two-shot"
+   }
+  ],
+  "spoken_word_count": 102,
+  "has_movement": true,
+  "movement_tags": [
+   "balance_static"
+  ],
+  "safety_cue": "Fingers on the sink edge (spoken + OST); toe-touch regression; dizziness/new-hip skip line. Caption add-on stop rule.",
+  "regression": "Toes of the lifted foot stay on the floor, hand flat on the sink.",
+  "cta_keyword": "BALANCE",
+  "cta_deliverable": "Steady Feet + the 10-second test",
+  "cta_line": "Send this to whoever dries. Comment BALANCE for Steady Feet.",
+  "caption": "Comment BALANCE for Steady Feet + the 10-second test.\nDishes on one leg: fingers on the sink edge, lift one foot a little, 10 seconds, switch. Standing on one leg is the 4th stage of the CDC STEADI 4-Stage Balance Test.\nDizzy spells or a new hip? Keep both feet down and tell your doctor. Send this to whoever dries.",
+  "hashtags": {
+   "ig": [
+    "#balancetraining",
+    "#couplechallenge",
+    "#changandsun",
+    "#over60"
+   ],
+   "tt": [
+    "#balanceexercises",
+    "#couplegoals",
+    "#over60",
+    "#changandsun"
+   ],
+   "yt_title": "Do the Dishes on One Leg (Together)"
+  },
+  "evidence": [
+   "E50"
+  ],
+  "evidence_note": "STEADI tool (A) described as a clinic check; no outcome claim.",
+  "running_bit": "Towel flick",
+  "wink": false,
+  "myth_bust": false,
+  "music": "playful swing",
+  "thumbnail_text": "DISHES ON ONE LEG",
+  "hook_grammar": [
+   "IF_EVERY",
+   "DEMO",
+   "SHARE"
+  ],
+  "series": "",
+  "launch_week": false,
+  "prop": "double sink full of soapy dishes",
+  "skip_line": "Dizzy spells or a new hip? Keep both feet down and tell your doctor.",
+  "hook_category": "CPL"
+ },
+ {
+  "id": "S171",
+  "page": "@changandsun",
+  "speaker": "DUO",
+  "format": "F35",
+  "pillar": "P16",
+  "hook_id": "H411",
+  "title": "Call one person before dinner",
+  "target_seconds": 45,
+  "hook_line": "Not an app, not a gym. Call one person before dinner tonight.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "SUN",
+    "vo": "Not an app, not a gym. Call one person before dinner tonight.",
+    "ost": "CALL ONE PERSON TONIGHT",
+    "shot": "SET-LIVING | C-CASUAL + S-CARDI-JADE | Sun hands Chang the landline receiver, the curly cord stretched across the sofa | medium"
+   },
+   {
+    "t": "3-11",
+    "speaker": "CHANG",
+    "vo": "Frank lives alone now. Every Tuesday I call. Five minutes. Sometimes he complains the whole time.",
+    "ost": "Five minutes · every Tuesday",
+    "shot": "same | Chang dials; Mandu on the armrest | medium"
+   },
+   {
+    "t": "11-22",
+    "speaker": "SUN",
+    "vo": "A review of 148 studies found people with stronger social ties had better health outcomes. Connection is health.",
+    "ost": "148 studies · ties matter",
+    "shot": "same | study card inset (Holt-Lunstad et al., PLoS Med 2010) | medium"
+   },
+   {
+    "t": "22-30",
+    "speaker": "CHANG",
+    "vo": "You don't need a reason. 'I was thinking about you.' That's the whole call.",
+    "ost": "'I was thinking about you.'",
+    "shot": "same | Chang on the phone, smiling | CU"
+   },
+   {
+    "t": "30-37",
+    "speaker": "SUN",
+    "vo": "Feeling alone most days? Tell your doctor. That counts as health, too.",
+    "ost": "Alone most days? Tell your doctor.",
+    "shot": "same | she pats his hand | CU"
+   },
+   {
+    "t": "37-45",
+    "speaker": "CHANG",
+    "vo": "Type a first name below. Then call them. Comment BEGIN for where to start.",
+    "ost": "Type a name · Comment BEGIN",
+    "shot": "same | hangs up, Sun leans on his shoulder | medium"
+   }
+  ],
+  "spoken_word_count": 86,
+  "has_movement": false,
+  "movement_tags": [
+   "connection"
+  ],
+  "safety_cue": "Loneliness framed as health without mortality wording; comment-thread grief/loneliness replies route to humans (FUNNEL §4.14).",
+  "regression": "",
+  "cta_keyword": "BEGIN",
+  "cta_deliverable": "Where should I begin? start menu",
+  "cta_line": "Type a first name below. Then call them. Comment BEGIN for where to start.",
+  "caption": "Comment BEGIN for the where-to-start menu.\nA meta-analysis of 148 studies (308,849 people) found stronger social relationships were linked with better health outcomes (Holt-Lunstad et al., 2010). The call can be five minutes: 'I was thinking about you.'\nFeeling alone most days? Tell your doctor; it counts as health. Type a first name below, then call them.",
+  "hashtags": {
+   "ig": [
+    "#friendship",
+    "#agingwell",
+    "#changandsun",
+    "#callyourmother"
+   ],
+   "tt": [
+    "#friendship",
+    "#over60",
+    "#changandsun",
+    "#callsomeone"
+   ],
+   "yt_title": "Not an App. Not a Gym. Call One Person Tonight."
+  },
+  "evidence": [
+   "E37"
+  ],
+  "evidence_note": "Holt-Lunstad (C) stated as 'health outcomes' association; no survival wording.",
+  "running_bit": "Frank (offscreen)",
+  "wink": false,
+  "myth_bust": false,
+  "music": "soft piano",
+  "thumbnail_text": "CALL ONE PERSON",
+  "hook_grammar": [
+   "SHARE"
+  ],
+  "series": "",
+  "launch_week": false,
+  "prop": "landline phone with a long curly cord",
+  "skip_line": "Feeling alone most days? Tell your doctor.",
+  "hook_category": "BLT"
+ },
+ {
+  "id": "S172",
+  "page": "@changandsun",
+  "speaker": "DUO",
+  "format": "F18",
+  "pillar": "P13",
+  "hook_id": "H412",
+  "title": "Fourteen dumplings: the protein count",
+  "target_seconds": 46,
+  "hook_line": "Fourteen dumplings. He says twelve. Let's count the protein, not the dumplings.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "SUN",
+    "vo": "Fourteen dumplings. He says twelve. Let's count the protein, not the dumplings.",
+    "ost": "14 DUMPLINGS (HE SAYS 12)",
+    "shot": "SET-TABLE | C-CASUAL + S-CARDI-MUSTARD | Sun lifts the lid on a steamer basket of pork dumplings; Chang reaches, she slaps his hand | medium"
+   },
+   {
+    "t": "3-10",
+    "speaker": "CHANG",
+    "vo": "Twelve. I counted.",
+    "ost": "Chang: 12",
+    "shot": "same | innocent face | CU"
+   },
+   {
+    "t": "10-19",
+    "speaker": "SUN",
+    "vo": "Fourteen. Each one, about two to three grams of protein. Fourteen is roughly thirty-five grams.",
+    "ost": "14 × ~2.5 g ≈ 35 g",
+    "shot": "same | she lines them up, numbers pop on screen | overhead"
+   },
+   {
+    "t": "19-28",
+    "speaker": "CHANG",
+    "vo": "Over sixty-five, twenty-five to thirty a meal. So I needed twelve. Thank you.",
+    "ost": "Target: 25–30 g a meal",
+    "shot": "same | study card inset (PROT-AGE) | medium"
+   },
+   {
+    "t": "28-36",
+    "speaker": "SUN",
+    "vo": "He needed twelve and a plate of greens. Dumplings are salty. Dip once, not twice.",
+    "ost": "Salty. Dip once.",
+    "shot": "same | she pushes the greens to him | two-shot"
+   },
+   {
+    "t": "36-41",
+    "speaker": "CHANG",
+    "vo": "Kidney disease? Ask your doctor for your protein number.",
+    "ost": "Kidney disease? Ask your number.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "41-46",
+    "speaker": "SUN",
+    "vo": "Comment SOUP. My dumpling soup is in there. Fourteen max.",
+    "ost": "Comment SOUP",
+    "shot": "same | she eats one; he counts on his fingers | two-shot"
+   }
+  ],
+  "spoken_word_count": 77,
+  "has_movement": false,
+  "movement_tags": [
+   "high_protein",
+   "sodium"
+  ],
+  "safety_cue": "Sodium line; kidney-disease protein caution.",
+  "regression": "",
+  "cta_keyword": "SOUP",
+  "cta_deliverable": "Sun Yoon's Three Soups",
+  "cta_line": "Comment SOUP. My dumpling soup is in there. Fourteen max.",
+  "caption": "Comment SOUP for Sun Yoon's Three Soups.\nPork dumplings carry roughly 2–3 g protein each (USDA, approximate). PROT-AGE suggests about 25–30 g protein per meal for adults over 65, so the honest count was about 12, plus greens. Dumplings are salty: dip once.\nKidney disease? Ask your doctor for your protein number.",
+  "hashtags": {
+   "ig": [
+    "#dumplings",
+    "#highprotein",
+    "#changandsun",
+    "#koreanfood"
+   ],
+   "tt": [
+    "#dumplings",
+    "#couplegoals",
+    "#highprotein",
+    "#changandsun"
+   ],
+   "yt_title": "Fourteen Dumplings? Let's Count the Protein"
+  },
+  "evidence": [
+   "E28",
+   "E52"
+  ],
+  "evidence_note": "PROT-AGE (A); USDA ranges approximate.",
+  "running_bit": "Dumpling count",
+  "wink": false,
+  "myth_bust": false,
+  "music": "playful swing",
+  "thumbnail_text": "14. HE SAYS 12.",
+  "hook_grammar": [
+   "OBJ3",
+   "DEMO"
+  ],
+  "series": "",
+  "launch_week": false,
+  "prop": "steamer basket of pork dumplings",
+  "skip_line": "Kidney disease? Ask your doctor for your protein number.",
+  "hook_category": "CPL"
+ },
+ {
+  "id": "S173",
+  "page": "@changandsun",
+  "speaker": "DUO",
+  "format": "F33",
+  "pillar": "P01",
+  "hook_id": "H413",
+  "title": "Do the chair test with your parents Sunday",
+  "target_seconds": 46,
+  "hook_line": "Sunday video call with your mom? Do the chair test together. She'll say she's fine.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "SUN",
+    "vo": "Sunday video call with your mom? Do the chair test together. She'll say she's fine.",
+    "ost": "DO THE TEST ON SUNDAY'S CALL",
+    "shot": "SET-TABLE | C-CASUAL + S-CARDI-MUSTARD | Sun props a tablet against the fruit bowl; Mina waves from Seattle on screen | medium"
+   },
+   {
+    "t": "3-10",
+    "speaker": "CHANG",
+    "vo": "Everybody grabs a sturdy chair. Push it against the wall. Arms crossed. Breathe out going up.",
+    "ost": "Chair against the wall · arms crossed",
+    "shot": "same | Chang demonstrates beside the table | medium-full"
+   },
+   {
+    "t": "10-18",
+    "speaker": "SUN",
+    "vo": "Thirty seconds. Count your stands. Loser makes lunch next visit.",
+    "ost": "30 seconds · count",
+    "shot": "same | Mina's timer on the tablet | split"
+   },
+   {
+    "t": "18-27",
+    "speaker": "CHANG",
+    "vo": "The point isn't the score. It's a number you can watch move. Normal ranges are by age.",
+    "ost": "A number you can watch",
+    "shot": "same | study card inset (Rikli & Jones) | medium"
+   },
+   {
+    "t": "27-34",
+    "speaker": "SUN",
+    "vo": "Somebody stands nearby the first time. Hands on the thighs is allowed.",
+    "ost": "Someone nearby · hands allowed",
+    "shot": "same | Chang spots Sun | two-shot"
+   },
+   {
+    "t": "34-39",
+    "speaker": "CHANG",
+    "vo": "Chest pain or dizziness? Stop and sit. Call the doctor.",
+    "ost": "Chest pain or dizzy? Stop.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "39-46",
+    "speaker": "SUN",
+    "vo": "Send this to your mom. Comment TEST for the three-minute test.",
+    "ost": "Comment TEST",
+    "shot": "same | Mina laughs on the tablet | medium"
+   }
+  ],
+  "spoken_word_count": 91,
+  "has_movement": true,
+  "movement_tags": [
+   "sit_to_stand"
+  ],
+  "safety_cue": "Chair against the wall; a helper nearby; hands regression; stop line. Caption add-on stop rule.",
+  "regression": "Hands on thighs to push up, helper nearby.",
+  "cta_keyword": "TEST",
+  "cta_deliverable": "Strength Age test (quiz)",
+  "cta_line": "Send this to your mom. Comment TEST for the three-minute test.",
+  "caption": "Comment TEST for the free 3-minute Strength Age test.\nDo the 30-second chair stand together on a video call: sturdy chair against a wall, arms crossed, someone nearby the first time. Normal ranges by age come from the Senior Fitness Test norms (7,183 US adults aged 60–94).\nChest pain or dizziness? Stop, sit and call the doctor. Send this to your mom.",
+  "hashtags": {
+   "ig": [
+    "#agingparents",
+    "#chairtest",
+    "#changandsun",
+    "#familytime"
+   ],
+   "tt": [
+    "#agingparents",
+    "#over60",
+    "#chairtest",
+    "#changandsun"
+   ],
+   "yt_title": "Do the Chair Test With Your Parents This Sunday"
+  },
+  "evidence": [
+   "E49"
+  ],
+  "evidence_note": "Senior Fitness Test norms (A).",
+  "running_bit": "Phone calls from Mina",
+  "wink": false,
+  "myth_bust": false,
+  "music": "warm acoustic",
+  "thumbnail_text": "SUNDAY CALL TEST",
+  "hook_grammar": [
+   "SHARE",
+   "TEST_NOW"
+  ],
+  "series": "",
+  "launch_week": false,
+  "prop": "tablet propped on the table for a Sunday video call",
+  "skip_line": "Chest pain or dizziness? Stop and sit.",
+  "hook_category": "IDN"
+ },
+ {
+  "id": "S174",
+  "page": "@changandsun",
+  "speaker": "DUO",
+  "format": "F10",
+  "pillar": "P20",
+  "hook_id": "H414",
+  "title": "'Is it another course I'll never open?'",
+  "target_seconds": 46,
+  "hook_line": "'Is it another course I'll never open?' Short version: no. Here's what it is.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "SUN",
+    "vo": "'Is it another course I'll never open?' Short version: no. Here's what it is.",
+    "ost": "ANOTHER COURSE? NO.",
+    "shot": "SET-LIVING | C-CASUAL + S-CARDI-JADE | Sun drops a pile of unopened binders on the sofa; Mandu jumps off | medium"
+   },
+   {
+    "t": "3-11",
+    "speaker": "CHANG",
+    "vo": "One new session every morning. Eight to twelve minutes. You press play, I count with you.",
+    "ost": "8–12 minutes · every morning",
+    "shot": "same | phone inset: today's session screen | insert"
+   },
+   {
+    "t": "11-19",
+    "speaker": "SUN",
+    "vo": "A chair version of everything. Four levels. If today is a bad day, there's a gentle one.",
+    "ost": "Chair version · 4 levels",
+    "shot": "same | the level switch on screen | insert"
+   },
+   {
+    "t": "19-28",
+    "speaker": "CHANG",
+    "vo": "My recipes? No. Her recipes, every Sunday. And a strength number you retest each month.",
+    "ost": "Sun's recipes · your number",
+    "shot": "same | recipe card and retest chart insets | quick cuts"
+   },
+   {
+    "t": "28-36",
+    "speaker": "SUN",
+    "vo": "Every price and every term goes on one page, before anyone types a card number. No surprises.",
+    "ost": "All terms on one page first",
+    "shot": "same | the over-the-glasses look | CU"
+   },
+   {
+    "t": "36-41",
+    "speaker": "CHANG",
+    "vo": "New to exercise? Check with your doctor first, and start on the gentle level.",
+    "ost": "New? Doctor first.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "41-46",
+    "speaker": "SUN",
+    "vo": "Comment WAITLIST. It's free. You'll hear first when doors open.",
+    "ost": "Comment WAITLIST · free",
+    "shot": "same | she hands him a binder to recycle | two-shot"
+   }
+  ],
+  "spoken_word_count": 103,
+  "has_movement": false,
+  "movement_tags": [
+   "product"
+  ],
+  "safety_cue": "Product description is access, not outcome (S-01); no price or subscription terms during runway; terms-first promise.",
+  "regression": "",
+  "cta_keyword": "WAITLIST",
+  "cta_deliverable": "Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)",
+  "cta_line": "Comment WAITLIST. It's free. You'll hear first when doors open.",
+  "caption": "Comment WAITLIST for the free waitlist link and the day-1 session.\nWhat Strong Years is: a new 8–12 minute session with Chang every morning, a chair version of everything, 4 levels, Sun Yoon's recipes every Sunday and a strength number you retest monthly. Every price and term is shown on one page before checkout.\nThe waitlist is free: one email when Strong Years opens, plus at most 3 launch emails in the 72 hours after. No card. Unsubscribe in one click.",
+  "hashtags": {
+   "ig": [
+    "#strongyears",
+    "#changandsun",
+    "#over60fitness",
+    "#homeworkout"
+   ],
+   "tt": [
+    "#strongyears",
+    "#over60",
+    "#homeworkout",
+    "#changandsun"
+   ],
+   "yt_title": "Another Course You'll Never Open? Here's What It Is"
+  },
+  "evidence": [],
+  "evidence_note": "Runway product explainer (P20); no claims.",
+  "running_bit": "Mandu the cat",
+  "wink": false,
+  "myth_bust": false,
+  "music": "playful swing",
+  "thumbnail_text": "ANOTHER COURSE? NO.",
+  "hook_grammar": [
+   "SHARE"
+  ],
+  "series": "",
+  "launch_week": false,
+  "prop": "pile of unopened course binders",
+  "skip_line": "New to exercise? Check with your doctor first, and start on the gentle level.",
+  "hook_category": "BLT"
+ },
+ {
+  "id": "S175",
+  "page": "@changandsun",
+  "speaker": "DUO",
+  "format": "F22",
+  "pillar": "P08",
+  "hook_id": "H415",
+  "title": "One minute of tai chi while the coffee brews",
+  "target_seconds": 47,
+  "hook_line": "If you wait for the coffee every morning, give me one minute of tai chi.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "CHANG",
+    "vo": "If you wait for the coffee every morning, give me one minute of tai chi.",
+    "ost": "COFFEE MINUTE: TAI CHI",
+    "shot": "SET-YARD | C-TRAIN-B + S-WALK | Chang presses the plunger halfway, steps onto the pavers beside the waist-high fence | medium-full"
+   },
+   {
+    "t": "3-12",
+    "speaker": "CHANG",
+    "vo": "Feet hip-width. Knees soft. Shift your weight slowly to the right. Slowly to the left.",
+    "ost": "Knees soft · shift right, shift left",
+    "shot": "same | weight shifts, one hand near the fence | medium-full"
+   },
+   {
+    "t": "12-20",
+    "speaker": "SUN",
+    "vo": "He calls it sinking. Really it's lowering your center of mass. Fence within reach.",
+    "ost": "Lower center · fence in reach",
+    "shot": "same | Sun joins, fingertips on the fence | two-shot"
+   },
+   {
+    "t": "20-30",
+    "speaker": "CHANG",
+    "vo": "Trials of tai chi and qigong in older adults found better sleep quality and mood. Gentle, regular practice.",
+    "ost": "Trials: better sleep quality + mood",
+    "shot": "same | study card inset (qigong meta-analysis, 2026) | medium"
+   },
+   {
+    "t": "30-36",
+    "speaker": "SUN",
+    "vo": "Wobbly? Smaller shifts. Both hands on the fence. Still tai chi.",
+    "ost": "Easier: smaller shifts, both hands",
+    "shot": "same | Sun's small version | CU"
+   },
+   {
+    "t": "36-41",
+    "speaker": "CHANG",
+    "vo": "Dizzy spells or a recent hip surgery? Ask your doctor first.",
+    "ost": "Dizzy? Hip surgery? Ask first.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "41-47",
+    "speaker": "SUN",
+    "vo": "Comment WAITLIST. Free. Day one now, coffee not included.",
+    "ost": "Comment WAITLIST · free",
+    "shot": "same | she pours two cups | medium"
+   }
+  ],
+  "spoken_word_count": 93,
+  "has_movement": true,
+  "movement_tags": [
+   "weight_shift"
+  ],
+  "safety_cue": "Fence or a counter within reach (support cue spoken + OST); smaller-shift regression; dizziness/hip-surgery skip line; D-07: 'sinking' explained as center of mass, never qi as mechanism.",
+  "regression": "Smaller shifts with both hands on the fence.",
+  "cta_keyword": "WAITLIST",
+  "cta_deliverable": "Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)",
+  "cta_line": "Comment WAITLIST. Free. Day one now, coffee not included.",
+  "caption": "Comment WAITLIST for the free waitlist link and the day-1 session.\nOne coffee minute: slow tai chi weight shifts, knees soft, fence within reach. Meta-analyses of Baduanjin/qigong in older adults report better sleep quality and fewer depressive symptoms (moderate certainty).\nDizzy spells or recent hip surgery? Ask your doctor first.\nThe waitlist is free: one email when Strong Years opens, plus at most 3 launch emails in the 72 hours after. No card. Unsubscribe in one click.",
+  "hashtags": {
+   "ig": [
+    "#taichi",
+    "#qigong",
+    "#morningroutine",
+    "#changandsun"
+   ],
+   "tt": [
+    "#taichi",
+    "#over60",
+    "#morningroutine",
+    "#changandsun"
+   ],
+   "yt_title": "While the Coffee Brews: One Minute of Tai Chi"
+  },
+  "evidence": [
+   "E17"
+  ],
+  "evidence_note": "Qigong meta (A−) at grade; cultural vocabulary per D-07.",
+  "running_bit": "",
+  "wink": false,
+  "myth_bust": false,
+  "music": "soft acoustic",
+  "thumbnail_text": "COFFEE MINUTE",
+  "hook_grammar": [
+   "IF_EVERY",
+   "DEMO"
+  ],
+  "series": "",
+  "launch_week": false,
+  "prop": "French press steeping on the yard bench",
+  "skip_line": "Dizzy spells or a recent hip surgery? Ask your doctor first.",
+  "hook_category": "CPL"
+ },
+ {
+  "id": "S176",
+  "page": "@changyin",
+  "speaker": "CHANG",
+  "format": "F38",
+  "pillar": "P20",
+  "hook_id": "H416",
+  "title": "Doors open: two little books",
+  "target_seconds": 50,
+  "hook_line": "Doors are open. Two little books. Start here, not with a big program.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "CHANG",
+    "vo": "Doors are open. Two little books. Start here, not with a big program.",
+    "ost": "DOORS OPEN · START HERE",
+    "shot": "SET-GARAGE | C-TRAIN-A | Chang sets two printed books on the workbench under the garage light | medium"
+   },
+   {
+    "t": "3-11",
+    "speaker": "CHANG",
+    "vo": "Book one, mine. The 7-Day Strength Reset. Seven mornings, one chair, eight minutes each.",
+    "ost": "7-Day Strength Reset",
+    "shot": "same | flips pages: day-by-day photos, chair against the wall | insert"
+   },
+   {
+    "t": "11-19",
+    "speaker": "CHANG",
+    "vo": "Book two, hers. Sun Yoon's Strong Kitchen. Recipes with the protein grams written in.",
+    "ost": "Sun Yoon's Strong Kitchen",
+    "shot": "same | recipe pages with grams | insert"
+   },
+   {
+    "t": "19-28",
+    "speaker": "CHANG",
+    "vo": "{{EBOOK_PRICE}}, one-time. Not a subscription. Yours to keep. The download comes right away.",
+    "ost": "{{EBOOK_PRICE}} one-time · yours to keep",
+    "shot": "same | price card, full contrast | medium"
+   },
+   {
+    "t": "28-37",
+    "speaker": "CHANG",
+    "vo": "Every move has a chair version and an easier version. Every number has the study next to it.",
+    "ost": "Easier version · study cited",
+    "shot": "same | split: Chang's level and Frank's level | split"
+   },
+   {
+    "t": "37-43",
+    "speaker": "CHANG",
+    "vo": "I'm an AI coach. The exercises are real. New to exercise? Check with your doctor.",
+    "ost": "AI coach · real exercises",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "43-50",
+    "speaker": "CHANG",
+    "vo": "Comment BOOK. We'll DM the link and what's inside.",
+    "ost": "Comment BOOK",
+    "shot": "same | taps the books | medium CU"
+   }
+  ],
+  "spoken_word_count": 96,
+  "has_movement": false,
+  "movement_tags": [
+   "offer"
+  ],
+  "safety_cue": "One-time product: price, 'not a subscription', 'yours to keep' in spoken, OST and caption; no outcome promise (S-01); AI disclosure; doctor line.",
+  "regression": "",
+  "cta_keyword": "BOOK",
+  "cta_deliverable": "Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)",
+  "cta_line": "Comment BOOK. We'll DM the link and what's inside.",
+  "caption": "Comment BOOK for the link and what's inside.\nTwo little books to start: Chang's 7-Day Strength Reset (seven mornings, one chair, about 8 minutes each, a chair and an easier version of every move) and Sun Yoon's Strong Kitchen (recipes with the protein grams written in).\nThe Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's Strong Kitchen (PDF). {{EBOOK_PRICE}} one-time, not a subscription, yours to keep. Checkout is on our Shopify store; the link comes in the DM.",
+  "hashtags": {
+   "ig": [
+    "#strongyears",
+    "#strengthafter60",
+    "#changyin",
+    "#homeworkout"
+   ],
+   "tt": [
+    "#strongyears",
+    "#over60",
+    "#changyin",
+    "#homeworkout"
+   ],
+   "yt_title": "Doors Are Open: Start With Two Little Books"
+  },
+  "evidence": [],
+  "evidence_note": "Offer post (no health claim). Price placeholder rendered per test cell.",
+  "running_bit": "",
+  "wink": false,
+  "myth_bust": false,
+  "music": "warm soul instrumental",
+  "thumbnail_text": "START HERE",
+  "hook_grammar": [
+   "OBJ3",
+   "LAUNCH",
+   "DEMO"
+  ],
+  "series": "",
+  "launch_week": true,
+  "prop": "two printed books on the workbench",
+  "skip_line": "New to exercise? Check with your doctor.",
+  "hook_category": "LCH"
+ },
+ {
+  "id": "S177",
+  "page": "@changyin",
+  "speaker": "CHANG",
+  "format": "F38",
+  "pillar": "P20",
+  "hook_id": "H417",
+  "title": "Founding membership: the terms, out loud",
+  "target_seconds": 52,
+  "hook_line": "Founding membership. I'll read you the terms out loud. All of them.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "CHANG",
+    "vo": "Founding membership. I'll read you the terms out loud. All of them.",
+    "ost": "THE TERMS, OUT LOUD",
+    "shot": "SET-GARAGE | C-TRAIN-A | Chang unclips a terms card from the training-log clipboard | medium"
+   },
+   {
+    "t": "3-11",
+    "speaker": "CHANG",
+    "vo": "{{FOUNDING_PRICE}} a month. Your first month is charged today. It renews monthly at the same price until you cancel.",
+    "ost": "{{FOUNDING_PRICE}}/mo · charged today · renews monthly",
+    "shot": "same | terms card CU, full contrast | CU"
+   },
+   {
+    "t": "11-18",
+    "speaker": "CHANG",
+    "vo": "Cancel online, anytime, in two screens. Fourteen days to change your mind, full refund.",
+    "ost": "Cancel online · 14-day money-back",
+    "shot": "same | phone inset: the cancel screen | insert"
+   },
+   {
+    "t": "18-27",
+    "speaker": "CHANG",
+    "vo": "Your founding price is locked for as long as you stay subscribed. Pauses included.",
+    "ost": "Locked while you stay subscribed",
+    "shot": "same | medium | medium"
+   },
+   {
+    "t": "27-36",
+    "speaker": "CHANG",
+    "vo": "First 5,000 members. That's a real number. The live count is on the page. No countdown clock.",
+    "ost": "First 5,000 · live count",
+    "shot": "same | phone inset: the live counter | insert"
+   },
+   {
+    "t": "36-44",
+    "speaker": "CHANG",
+    "vo": "What you get: a new session with me every morning, her recipes Sundays, a strength retest each month.",
+    "ost": "Daily session · recipes · retest",
+    "shot": "same | quick product cuts | quick cuts"
+   },
+   {
+    "t": "44-48",
+    "speaker": "CHANG",
+    "vo": "I'm AI. Check with your doctor before starting.",
+    "ost": "AI coach · doctor first",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "48-52",
+    "speaker": "CHANG",
+    "vo": "Comment JOIN for the link and the full terms.",
+    "ost": "Comment JOIN",
+    "shot": "same | clips the card back | medium"
+   }
+  ],
+  "spoken_word_count": 111,
+  "has_movement": false,
+  "movement_tags": [
+   "offer"
+  ],
+  "safety_cue": "S-02 terms spoken + OST + caption; T-04 real cap only, live count, no countdown; S-01 access not outcome; 'locked for as long as you stay subscribed' wording.",
+  "regression": "",
+  "cta_keyword": "JOIN",
+  "cta_deliverable": "Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)",
+  "cta_line": "Comment JOIN for the link and the full terms.",
+  "caption": "Comment JOIN for the founding-member link and full terms.\nWhat you get: a new 8–12 minute session with Chang every morning (chair version of everything), Sun Yoon's recipes every Sunday and a monthly strength retest.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Open to the first 5,000 founding members; the live count is at {{DOMAIN}}/terms#founding.",
+  "hashtags": {
+   "ig": [
+    "#strongyears",
+    "#foundingmember",
+    "#changyin",
+    "#over60"
+   ],
+   "tt": [
+    "#strongyears",
+    "#foundingmember",
+    "#changyin",
+    "#over60"
+   ],
+   "yt_title": "Founding Membership: Every Term, Read Out Loud"
+  },
+  "evidence": [],
+  "evidence_note": "Terms post; matches FUNNEL §4.17 and CANON UPDATE 2 wording.",
+  "running_bit": "",
+  "wink": false,
+  "myth_bust": false,
+  "music": "warm acoustic",
+  "thumbnail_text": "EVERY TERM. OUT LOUD.",
+  "hook_grammar": [
+   "OBJ3",
+   "LAUNCH"
+  ],
+  "series": "",
+  "launch_week": true,
+  "prop": "terms card clipped to the training log",
+  "skip_line": "Check with your doctor before starting.",
+  "hook_category": "LCH"
+ },
+ {
+  "id": "S178",
+  "page": "@changyin",
+  "speaker": "CHANG",
+  "format": "F01",
+  "pillar": "P02",
+  "hook_id": "H418",
+  "title": "Day one of the Reset, free on the page",
+  "target_seconds": 50,
+  "hook_line": "Not a course, not a challenge. Seven mornings, one chair. Here's day one, free.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "CHANG",
+    "vo": "Not a course, not a challenge. Seven mornings, one chair. Here's day one, free.",
+    "ost": "DAY ONE, FREE",
+    "shot": "SET-GARAGE | C-TRAIN-A | Chang lifts the Reset off the chair seat, open to day one, then pushes the chair against the wall | medium-full"
+   },
+   {
+    "t": "3-12",
+    "speaker": "CHANG",
+    "vo": "Day one: sit to stand. Chair against the wall. Lean forward. Breathe out as you stand. Five slow.",
+    "ost": "Chair against the wall · 5 slow stands",
+    "shot": "same | five slow reps | side medium-full"
+   },
+   {
+    "t": "12-21",
+    "speaker": "CHANG",
+    "vo": "Then the counter. Fingers over it. Ten heel raises. Then march in place, thirty seconds.",
+    "ost": "Counter · 10 heel raises · 30 s march",
+    "shot": "same | heel raises and marching at the workbench | medium-full"
+   },
+   {
+    "t": "21-29",
+    "speaker": "CHANG",
+    "vo": "In 121 trials, older adults who trained two or three times a week got stronger getting out of a chair.",
+    "ost": "121 trials · chair rising improved",
+    "shot": "same | study card inset (Liu & Latham, Cochrane 2009) | medium"
+   },
+   {
+    "t": "29-36",
+    "speaker": "CHANG",
+    "vo": "Too hard? Hands on your thighs. Days two to seven are in the book. {{EBOOK_PRICE}}, one-time.",
+    "ost": "Days 2–7: {{EBOOK_PRICE}} one-time",
+    "shot": "same | Frank does hands-on-thighs; book insert | two-shot"
+   },
+   {
+    "t": "36-41",
+    "speaker": "CHANG",
+    "vo": "Dizzy or short of breath? Stop, sit, and call your doctor.",
+    "ost": "Dizzy? Short of breath? Stop.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "41-50",
+    "speaker": "CHANG",
+    "vo": "Not a subscription. Yours to keep. Comment BOOK and we'll send the link.",
+    "ost": "Comment BOOK",
+    "shot": "same | closes the book, sets it on the chair | medium"
+   }
+  ],
+  "spoken_word_count": 107,
+  "has_movement": true,
+  "movement_tags": [
+   "sit_to_stand",
+   "heel_raise"
+  ],
+  "safety_cue": "Chair against the wall; counter for heel raises; hands regression; stop line; one-time price with 'not a subscription'.",
+  "regression": "Hands on thighs to push up; hold the counter with both hands.",
+  "cta_keyword": "BOOK",
+  "cta_deliverable": "Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)",
+  "cta_line": "Not a subscription. Yours to keep. Comment BOOK and we'll send the link.",
+  "caption": "Comment BOOK for the link and what's inside.\nDay 1 of the 7-Day Strength Reset, free here: 5 slow sit-to-stands (chair against a wall), 10 heel raises at the counter, 30 seconds of marching. A Cochrane review of 121 trials found training 2–3×/week improved strength and getting up from a chair.\nThe Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's Strong Kitchen (PDF). {{EBOOK_PRICE}} one-time, not a subscription, yours to keep. Checkout is on our Shopify store; the link comes in the DM.",
+  "hashtags": {
+   "ig": [
+    "#chairexercises",
+    "#strengthafter60",
+    "#strongyears",
+    "#changyin"
+   ],
+   "tt": [
+    "#chairworkout",
+    "#over60",
+    "#strongyears",
+    "#changyin"
+   ],
+   "yt_title": "Day 1 of the 7-Day Strength Reset (Free, Follow Along)"
+  },
+  "evidence": [
+   "E01"
+  ],
+  "evidence_note": "Cochrane PRT (A) at grade; free day-1 value with the offer at the end.",
+  "running_bit": "Say hello to Coach (the chair)",
+  "wink": false,
+  "myth_bust": false,
+  "music": "warm soul instrumental",
+  "thumbnail_text": "DAY ONE. FREE.",
+  "hook_grammar": [
+   "LAUNCH",
+   "DEMO"
+  ],
+  "series": "",
+  "launch_week": true,
+  "prop": "the Reset open to day one on the garage chair",
+  "skip_line": "Dizzy or short of breath? Stop, sit, and call your doctor.",
+  "hook_category": "LCH"
+ },
+ {
+  "id": "S179",
+  "page": "@changyin",
+  "speaker": "CHANG",
+  "format": "F14",
+  "pillar": "P06",
+  "hook_id": "H419",
+  "title": "Day four of the Reset: the bottom stair",
+  "target_seconds": 50,
+  "hook_line": "If you climb the same three stairs every day, day four is for you.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "CHANG",
+    "vo": "If you climb the same three stairs every day, day four is for you.",
+    "ost": "DAY 4: THE BOTTOM STAIR",
+    "shot": "SET-STOOP | C-TRAIN-B | Chang taps a tape mark on the bottom stoop step, hand on the black handrail | medium-full"
+   },
+   {
+    "t": "3-12",
+    "speaker": "CHANG",
+    "vo": "Bottom stair only. Hand on the rail. Step up with your right. Bring the left up. Step down. Slowly.",
+    "ost": "Bottom stair · hand on the rail",
+    "shot": "same | slow step-ups, side view | side medium-full"
+   },
+   {
+    "t": "12-20",
+    "speaker": "CHANG",
+    "vo": "Five on the right. Five on the left. Breathe out on the way up.",
+    "ost": "5 each side · breathe out up",
+    "shot": "same | rep counter | medium-full"
+   },
+   {
+    "t": "20-29",
+    "speaker": "CHANG",
+    "vo": "Strength training two or three times a week improves strength in older adults. Stairs are strength training.",
+    "ost": "Stairs = strength training",
+    "shot": "same | study card inset (NSCA, Fragala 2019) | medium"
+   },
+   {
+    "t": "29-36",
+    "speaker": "CHANG",
+    "vo": "Too much? Two hands on the rail. Or a thick book on the floor instead of a stair.",
+    "ost": "Easier: two hands · a thick book",
+    "shot": "same | Frank on a phone book with both hands on the rail | two-shot"
+   },
+   {
+    "t": "36-41",
+    "speaker": "CHANG",
+    "vo": "Knee surgery recently? Follow your surgeon's plan first.",
+    "ost": "Recent knee surgery? Surgeon first.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "41-50",
+    "speaker": "CHANG",
+    "vo": "The full seven days: {{EBOOK_PRICE}}, one-time, yours to keep. Comment BOOK for the link.",
+    "ost": "Comment BOOK",
+    "shot": "same | sits on the step, holds up the book | medium"
+   }
+  ],
+  "spoken_word_count": 104,
+  "has_movement": true,
+  "movement_tags": [
+   "step_up"
+  ],
+  "safety_cue": "Handrail (spoken + OST); bottom stair only; two-hands and thick-book regressions; knee-surgery skip line; one-time price.",
+  "regression": "Two hands on the rail, or a thick book on the floor instead of a stair.",
+  "cta_keyword": "BOOK",
+  "cta_deliverable": "Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)",
+  "cta_line": "The full seven days: {{EBOOK_PRICE}}, one-time, yours to keep. Comment BOOK for the link.",
+  "caption": "Comment BOOK for the link and what's inside.\nDay 4 of the 7-Day Strength Reset: bottom-stair step-ups, hand on the rail, 5 each side, breathe out on the way up. The NSCA position statement supports resistance training 2–3×/week for older adults, progressed gradually.\nMild discomfort up to 3 out of 10 is okay if it settles by tomorrow; sharp pain means stop. Recent knee surgery? Follow your surgeon's plan first.\nThe Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's Strong Kitchen (PDF). {{EBOOK_PRICE}} one-time, not a subscription, yours to keep. Checkout is on our Shopify store; the link comes in the DM.",
+  "hashtags": {
+   "ig": [
+    "#stairs",
+    "#legsfirst",
+    "#strongyears",
+    "#changyin"
+   ],
+   "tt": [
+    "#stairworkout",
+    "#over60",
+    "#strongyears",
+    "#changyin"
+   ],
+   "yt_title": "The Bottom Stair: Day 4 of the 7-Day Reset"
+  },
+  "evidence": [
+   "E02"
+  ],
+  "evidence_note": "NSCA (A) at grade; no outcome promise for the book.",
+  "running_bit": "",
+  "wink": false,
+  "myth_bust": false,
+  "music": "warm soul instrumental",
+  "thumbnail_text": "DAY 4: ONE STAIR",
+  "hook_grammar": [
+   "IF_EVERY",
+   "LAUNCH",
+   "DEMO"
+  ],
+  "series": "",
+  "launch_week": true,
+  "prop": "tape mark on the bottom stoop step",
+  "skip_line": "Knee surgery recently? Follow your surgeon's plan first.",
+  "hook_category": "LCH"
+ },
+ {
+  "id": "S180",
+  "page": "@changyin",
+  "speaker": "CHANG",
+  "format": "F10",
+  "pillar": "P20",
+  "hook_id": "H420",
+  "title": "Why 5,000? The real counter.",
+  "target_seconds": 55,
+  "hook_line": "Why only 5,000 founding members? Because that's how many we can welcome properly.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "CHANG",
+    "vo": "Why only 5,000 founding members? Because that's how many we can welcome properly.",
+    "ost": "WHY 5,000? THE REAL COUNT",
+    "shot": "SET-GARAGE | C-TRAIN-A | Chang chalks tally marks on the inside of the garage door | medium"
+   },
+   {
+    "t": "3-11",
+    "speaker": "CHANG",
+    "vo": "The counter on the page is the real number from our system. No fake scarcity tricks.",
+    "ost": "Live count · real number",
+    "shot": "same | phone inset: the live counter | insert"
+   },
+   {
+    "t": "11-20",
+    "speaker": "CHANG",
+    "vo": "How it works: you get the two books for {{EBOOK_PRICE}}, one-time. After checkout, one optional offer.",
+    "ost": "Books: {{EBOOK_PRICE}} one-time",
+    "shot": "same | the two books on the workbench | medium"
+   },
+   {
+    "t": "20-30",
+    "speaker": "CHANG",
+    "vo": "Founding membership, {{FOUNDING_PRICE}} a month. If you add it, the first month is charged that day. It renews monthly until you cancel.",
+    "ost": "{{FOUNDING_PRICE}}/mo · renews monthly",
+    "shot": "same | terms card | CU"
+   },
+   {
+    "t": "30-38",
+    "speaker": "CHANG",
+    "vo": "Cancel online in two screens. Fourteen days to change your mind. The price is locked for as long as you stay subscribed.",
+    "ost": "Cancel online · 14-day money-back",
+    "shot": "same | phone inset: the cancel screen | insert"
+   },
+   {
+    "t": "38-45",
+    "speaker": "CHANG",
+    "vo": "Say no to the offer? You keep the books. Nobody chases you.",
+    "ost": "Say no? Keep the books.",
+    "shot": "same | shrugs | medium CU"
+   },
+   {
+    "t": "45-50",
+    "speaker": "CHANG",
+    "vo": "I'm an AI coach. Check with your doctor before starting.",
+    "ost": "AI coach · doctor first",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "50-55",
+    "speaker": "CHANG",
+    "vo": "Comment BOOK for the link. The count is on the page.",
+    "ost": "Comment BOOK",
+    "shot": "same | adds one more tally | medium"
+   }
+  ],
+  "spoken_word_count": 122,
+  "has_movement": false,
+  "movement_tags": [
+   "offer"
+  ],
+  "safety_cue": "T-04 real cap and live count; S-02 membership terms spoken + OST + caption; book is one-time; declining keeps the books.",
+  "regression": "",
+  "cta_keyword": "BOOK",
+  "cta_deliverable": "Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)",
+  "cta_line": "Comment BOOK for the link. The count is on the page.",
+  "caption": "Comment BOOK for the link and what's inside.\nWhy 5,000? It's how many founding members we can welcome properly. The counter on the page is the real number from our system.\nThe Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's Strong Kitchen (PDF). {{EBOOK_PRICE}} one-time, not a subscription, yours to keep. Checkout is on our Shopify store; the link comes in the DM.\nAfter checkout you'll see one optional offer, the Founding Membership: {{FOUNDING_PRICE}}/month. If you add it, {{FOUNDING_PRICE}} is charged that day for your first month, then it renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Open to the first 5,000 founding members; the live count is at {{DOMAIN}}/terms#founding.",
+  "hashtags": {
+   "ig": [
+    "#strongyears",
+    "#foundingmember",
+    "#changyin",
+    "#over60"
+   ],
+   "tt": [
+    "#strongyears",
+    "#foundingmember",
+    "#changyin",
+    "#over60"
+   ],
+   "yt_title": "Why Only 5,000 Founding Members? (The Real Counter)"
+  },
+  "evidence": [],
+  "evidence_note": "Offer explainer; matches CANON UPDATE 2 post-purchase flow.",
+  "running_bit": "",
+  "wink": false,
+  "myth_bust": false,
+  "music": "warm acoustic",
+  "thumbnail_text": "THE REAL COUNT",
+  "hook_grammar": [
+   "LAUNCH"
+  ],
+  "series": "",
+  "launch_week": true,
+  "prop": "tally marks chalked on the garage door",
+  "skip_line": "Check with your doctor before starting.",
+  "hook_category": "LCH"
+ },
+ {
+  "id": "S181",
+  "page": "@sunyoon.kitchen",
+  "speaker": "SUN",
+  "format": "F38",
+  "pillar": "P20",
+  "hook_id": "H421",
+  "title": "My Strong Kitchen book is out",
+  "target_seconds": 48,
+  "hook_line": "My Strong Kitchen book is out. Grams in every recipe. No vibes.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "SUN",
+    "vo": "My Strong Kitchen book is out. Grams in every recipe. No vibes.",
+    "ost": "STRONG KITCHEN IS OUT",
+    "shot": "SET-KITCHEN | S-KITCHEN | Sun props her book against the rice cooker and opens it to a recipe page | CU"
+   },
+   {
+    "t": "3-11",
+    "speaker": "SUN",
+    "vo": "Twenty-five to thirty grams of protein a meal, made with food from a normal American grocery store.",
+    "ost": "Normal grocery store",
+    "shot": "same | flips pages: eggs, tofu, beans, fish | insert"
+   },
+   {
+    "t": "11-20",
+    "speaker": "SUN",
+    "vo": "Every recipe says who should skip it. Kidney disease, blood thinners, salt limits. Written right on the page.",
+    "ost": "'Who should skip' on every page",
+    "shot": "same | CU of a skip box on the page | insert"
+   },
+   {
+    "t": "20-29",
+    "speaker": "SUN",
+    "vo": "It comes with his book, the 7-Day Strength Reset. Both for {{EBOOK_PRICE}}, one-time. Yours to keep.",
+    "ost": "Both books: {{EBOOK_PRICE}} one-time",
+    "shot": "same | the two books side by side | medium"
+   },
+   {
+    "t": "29-36",
+    "speaker": "SUN",
+    "vo": "Not a subscription. Not a meal plan you have to follow. A cookbook. Use it.",
+    "ost": "Not a subscription. A cookbook.",
+    "shot": "same | over-the-glasses look | CU"
+   },
+   {
+    "t": "36-42",
+    "speaker": "SUN",
+    "vo": "Special diet from your doctor? Their plan comes first. Then my soup.",
+    "ost": "Special diet? Doctor first.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "42-48",
+    "speaker": "SUN",
+    "vo": "Comment BOOK. We'll send the link and three sample pages.",
+    "ost": "Comment BOOK",
+    "shot": "same | taps the book | medium"
+   }
+  ],
+  "spoken_word_count": 100,
+  "has_movement": false,
+  "movement_tags": [
+   "offer"
+  ],
+  "safety_cue": "One-time price + 'not a subscription' + 'yours to keep' spoken and in caption; no health outcome; special-diet line.",
+  "regression": "",
+  "cta_keyword": "BOOK",
+  "cta_deliverable": "Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)",
+  "cta_line": "Comment BOOK. We'll send the link and three sample pages.",
+  "caption": "Comment BOOK for the link and three sample pages.\nSun Yoon's Strong Kitchen: recipes built to about 25–30 g protein per meal (PROT-AGE) from a normal US grocery store, USDA values for every gram, and a who-should-skip box on every page.\nThe Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's Strong Kitchen (PDF). {{EBOOK_PRICE}} one-time, not a subscription, yours to keep. Checkout is on our Shopify store; the link comes in the DM.",
+  "hashtags": {
+   "ig": [
+    "#strongkitchen",
+    "#highprotein",
+    "#sunyoon",
+    "#strongyears"
+   ],
+   "tt": [
+    "#cookbook",
+    "#highprotein",
+    "#koreangrandma",
+    "#sunyoon"
+   ],
+   "yt_title": "Sun Yoon's Strong Kitchen Is Out (Grams, Not Vibes)"
+  },
+  "evidence": [
+   "E28",
+   "E52"
+  ],
+  "evidence_note": "Product description; PROT-AGE target and USDA method cited; no outcome claim.",
+  "running_bit": "Grams, not vibes",
+  "wink": false,
+  "myth_bust": false,
+  "music": "playful pizzicato",
+  "thumbnail_text": "GRAMS. NOT VIBES.",
+  "hook_grammar": [
+   "OBJ3",
+   "LAUNCH",
+   "DEMO"
+  ],
+  "series": "",
+  "launch_week": true,
+  "prop": "Strong Kitchen book propped against the rice cooker",
+  "skip_line": "Special diet from your doctor? Their plan comes first.",
+  "hook_category": "LCH"
+ },
+ {
+  "id": "S182",
+  "page": "@sunyoon.kitchen",
+  "speaker": "SUN",
+  "format": "F31",
+  "pillar": "P11",
+  "hook_id": "H422",
+  "title": "Page 14: egg, tofu, scallion",
+  "target_seconds": 48,
+  "hook_line": "Egg, tofu, scallion. Watch me make thirty grams of breakfast from my book.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "SUN",
+    "vo": "Egg, tofu, scallion. Watch me make thirty grams of breakfast from my book.",
+    "ost": "PAGE 14: 30 G BREAKFAST",
+    "shot": "SET-KITCHEN | S-KITCHEN | Sun cracks an egg one-handed next to her book open at page 14 | overhead CU"
+   },
+   {
+    "t": "3-12",
+    "speaker": "SUN",
+    "vo": "Two eggs, beaten. A third of a block of firm tofu, crumbled in. Scallion, a pinch of salt.",
+    "ost": "2 eggs + ⅓ block tofu",
+    "shot": "same | whisking, crumbling, snipping | overhead"
+   },
+   {
+    "t": "12-21",
+    "speaker": "SUN",
+    "vo": "Low heat. Fold, don't stir. Patience. Rubbery eggs are a choice.",
+    "ost": "Low heat · fold",
+    "shot": "same | soft folds in the pan | overhead"
+   },
+   {
+    "t": "21-29",
+    "speaker": "SUN",
+    "vo": "About twenty-five grams. Add a cup of soy milk, thirty-two. Over sixty-five, that's the target.",
+    "ost": "≈ 25 g · + soy milk ≈ 32 g",
+    "shot": "same | plated; study card inset (PROT-AGE) | medium"
+   },
+   {
+    "t": "29-35",
+    "speaker": "SUN",
+    "vo": "Soy allergy or kidney disease? Skip it, or ask your doctor first.",
+    "ost": "Soy allergy? Kidney disease? Ask.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "35-42",
+    "speaker": "SUN",
+    "vo": "Forty more like it in the book, with his seven-day Reset. {{EBOOK_PRICE}}, one-time. Not a subscription.",
+    "ost": "{{EBOOK_PRICE}} one-time · 40 recipes",
+    "shot": "same | flips pages | insert"
+   },
+   {
+    "t": "42-48",
+    "speaker": "SUN",
+    "vo": "Comment BOOK for the link. Now go eat.",
+    "ost": "Comment BOOK",
+    "shot": "same | slides the plate to camera | medium"
+   }
+  ],
+  "spoken_word_count": 93,
+  "has_movement": false,
+  "movement_tags": [
+   "high_protein",
+   "soy"
+  ],
+  "safety_cue": "Soy allergy and kidney-disease skip line; one-time price wording.",
+  "regression": "",
+  "cta_keyword": "BOOK",
+  "cta_deliverable": "Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)",
+  "cta_line": "Comment BOOK for the link. Now go eat.",
+  "caption": "Comment BOOK for the link and what's inside.\nPage 14: 2 eggs + ⅓ block firm tofu + scallion, folded on low heat, about 25 g protein; add a cup of soy milk for ~32 g (USDA values). PROT-AGE suggests about 25–30 g per meal over 65.\nSoy allergy or kidney disease? Skip it or ask your doctor first.\nThe Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's Strong Kitchen (PDF). {{EBOOK_PRICE}} one-time, not a subscription, yours to keep. Checkout is on our Shopify store; the link comes in the DM.",
+  "hashtags": {
+   "ig": [
+    "#proteinbreakfast",
+    "#strongkitchen",
+    "#sunyoon",
+    "#koreanfood"
+   ],
+   "tt": [
+    "#eggs",
+    "#highprotein",
+    "#koreangrandma",
+    "#sunyoon"
+   ],
+   "yt_title": "Egg, Tofu, Scallion: 30 Grams of Breakfast"
+  },
+  "evidence": [
+   "E28",
+   "E52"
+  ],
+  "evidence_note": "PROT-AGE (A); USDA values.",
+  "running_bit": "",
+  "wink": false,
+  "myth_bust": false,
+  "music": "playful pizzicato",
+  "thumbnail_text": "PAGE 14: 30 GRAMS",
+  "hook_grammar": [
+   "OBJ3",
+   "WATCH",
+   "LAUNCH",
+   "DEMO",
+   "KITCHEN_SERIES"
+  ],
+  "series": "",
+  "launch_week": true,
+  "prop": "the book open to page 14 beside a cracked egg",
+  "skip_line": "Soy allergy or kidney disease? Skip it, or ask your doctor first.",
+  "hook_category": "LCH"
+ },
+ {
+  "id": "S183",
+  "page": "@sunyoon.kitchen",
+  "speaker": "SUN",
+  "format": "F07",
+  "pillar": "P16",
+  "hook_id": "H423",
+  "title": "Not a diet book, not a meal plan",
+  "target_seconds": 46,
+  "hook_line": "Not a diet book, not a meal plan. A cookbook with the grams written in.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "SUN",
+    "vo": "Not a diet book, not a meal plan. A cookbook with the grams written in.",
+    "ost": "NOT A DIET BOOK",
+    "shot": "SET-TABLE | S-CARDI-JADE | Sun drops her book on a stack of glossy diet books and uncaps a red pen | CU"
+   },
+   {
+    "t": "3-11",
+    "speaker": "SUN",
+    "vo": "Nobody here will tell you to eat less. At our age, most of us need more protein, not less food.",
+    "ost": "More protein, not less food",
+    "shot": "same | crosses out 'eat less' on a sticky note | CU"
+   },
+   {
+    "t": "11-19",
+    "speaker": "SUN",
+    "vo": "No weigh-ins. No transformation photos. No fake reviews. I'm AI. I'd know a fake one.",
+    "ost": "No fake reviews. I'd know.",
+    "shot": "same | smirk | CU"
+   },
+   {
+    "t": "19-28",
+    "speaker": "SUN",
+    "vo": "What's inside: breakfasts, soups, a Sunday stew, and grocery lists. Grams for everything.",
+    "ost": "Breakfasts · soups · grocery lists",
+    "shot": "same | flips pages | insert"
+   },
+   {
+    "t": "28-36",
+    "speaker": "SUN",
+    "vo": "Both books, mine and his Reset, {{EBOOK_PRICE}}, one-time. Yours to keep. Not a subscription.",
+    "ost": "{{EBOOK_PRICE}} one-time · yours to keep",
+    "shot": "same | the two books | medium"
+   },
+   {
+    "t": "36-41",
+    "speaker": "SUN",
+    "vo": "Kidney disease? Ask your doctor for your protein number first.",
+    "ost": "Kidney disease? Ask your number.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "41-46",
+    "speaker": "SUN",
+    "vo": "Comment BOOK. Then go eat something with protein in it.",
+    "ost": "Comment BOOK",
+    "shot": "same | caps the pen | medium"
+   }
+  ],
+  "spoken_word_count": 97,
+  "has_movement": false,
+  "movement_tags": [
+   "offer"
+  ],
+  "safety_cue": "T-01 (explicitly no reviews/before-after); kidney-disease protein line; one-time price wording.",
+  "regression": "",
+  "cta_keyword": "BOOK",
+  "cta_deliverable": "Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)",
+  "cta_line": "Comment BOOK. Then go eat something with protein in it.",
+  "caption": "Comment BOOK for the link and what's inside.\nNot a diet book: no weigh-ins, no transformation photos, no reviews. Breakfasts, soups, a Sunday stew and grocery lists, with protein and fiber grams for everything (USDA values; PROT-AGE suggests 25–30 g protein per meal over 65).\nKidney disease? Ask your doctor for your protein number first.\nThe Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's Strong Kitchen (PDF). {{EBOOK_PRICE}} one-time, not a subscription, yours to keep. Checkout is on our Shopify store; the link comes in the DM.",
+  "hashtags": {
+   "ig": [
+    "#strongkitchen",
+    "#proaging",
+    "#sunyoon",
+    "#womenover60"
+   ],
+   "tt": [
+    "#cookbook",
+    "#over60",
+    "#koreangrandma",
+    "#sunyoon"
+   ],
+   "yt_title": "Not a Diet Book. A Cookbook With the Grams In."
+  },
+  "evidence": [
+   "E28"
+  ],
+  "evidence_note": "PROT-AGE (A). 'Most of us need more protein' framed per PROT-AGE consensus.",
+  "running_bit": "",
+  "wink": true,
+  "myth_bust": false,
+  "music": "playful pizzicato",
+  "thumbnail_text": "NOT A DIET BOOK",
+  "hook_grammar": [
+   "LAUNCH"
+  ],
+  "series": "",
+  "launch_week": true,
+  "prop": "the book on top of a stack of diet books, red pen",
+  "skip_line": "Kidney disease? Ask your doctor for your protein number first.",
+  "hook_category": "LCH"
+ },
+ {
+  "id": "S184",
+  "page": "@sunyoon.kitchen",
+  "speaker": "SUN",
+  "format": "F10",
+  "pillar": "P20",
+  "hook_id": "H424",
+  "title": "'Is the membership worth it?' Short version.",
+  "target_seconds": 54,
+  "hook_line": "'Is the membership worth it?' Short version: only if you'll use it. Here's how to know.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "SUN",
+    "vo": "'Is the membership worth it?' Short version: only if you'll use it. Here's how to know.",
+    "ost": "WORTH IT? ONLY IF YOU USE IT.",
+    "shot": "SET-TABLE | S-CARDI-JADE | Sun holds up an index card that says SHORT VERSION | CU"
+   },
+   {
+    "t": "3-11",
+    "speaker": "SUN",
+    "vo": "Start with the two books. If you do the seven days and want more, then join. Not before.",
+    "ost": "Books first. Then decide.",
+    "shot": "same | taps the two books | medium"
+   },
+   {
+    "t": "11-20",
+    "speaker": "SUN",
+    "vo": "Membership is {{FOUNDING_PRICE}} a month, first month charged today. It renews monthly until you cancel.",
+    "ost": "{{FOUNDING_PRICE}}/mo · renews monthly",
+    "shot": "same | terms card, full contrast | CU"
+   },
+   {
+    "t": "20-29",
+    "speaker": "SUN",
+    "vo": "Cancel online, two screens. Fourteen days to change your mind, full refund. Price locked for as long as you stay subscribed.",
+    "ost": "Cancel online · 14-day money-back",
+    "shot": "same | phone inset: cancel screen | insert"
+   },
+   {
+    "t": "29-38",
+    "speaker": "SUN",
+    "vo": "You get his session every morning, my recipes every Sunday, and a strength retest each month.",
+    "ost": "Daily session · Sunday recipes",
+    "shot": "same | product cuts | quick cuts"
+   },
+   {
+    "t": "38-45",
+    "speaker": "SUN",
+    "vo": "Founding seats: the first 5,000. The count on the page is real. I checked. Twice.",
+    "ost": "First 5,000 · real count",
+    "shot": "same | phone inset: live counter | insert"
+   },
+   {
+    "t": "45-49",
+    "speaker": "SUN",
+    "vo": "New to exercise? Check with your doctor first.",
+    "ost": "New? Doctor first.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "49-54",
+    "speaker": "SUN",
+    "vo": "Comment JOIN for the link and every term.",
+    "ost": "Comment JOIN",
+    "shot": "same | pats the card | medium"
+   }
+  ],
+  "spoken_word_count": 117,
+  "has_movement": false,
+  "movement_tags": [
+   "offer"
+  ],
+  "safety_cue": "S-02 terms spoken + OST + caption; T-04 real cap; recommends the cheaper path first (anti-pressure, S-03).",
+  "regression": "",
+  "cta_keyword": "JOIN",
+  "cta_deliverable": "Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)",
+  "cta_line": "Comment JOIN for the link and every term.",
+  "caption": "Comment JOIN for the founding-member link and full terms.\nShort version: start with the books; join only if you'll use it. Members get a new session with Chang every morning, Sun Yoon's recipes every Sunday and a monthly strength retest.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Open to the first 5,000 founding members; the live count is at {{DOMAIN}}/terms#founding.",
+  "hashtags": {
+   "ig": [
+    "#strongyears",
+    "#foundingmember",
+    "#sunyoon",
+    "#honestanswers"
+   ],
+   "tt": [
+    "#strongyears",
+    "#foundingmember",
+    "#sunyoon",
+    "#honestanswers"
+   ],
+   "yt_title": "Is the Membership Worth It? Short Version"
+  },
+  "evidence": [],
+  "evidence_note": "Terms post with anti-pressure framing.",
+  "running_bit": "Short version:",
+  "wink": false,
+  "myth_bust": false,
+  "music": "warm acoustic",
+  "thumbnail_text": "ONLY IF YOU USE IT",
+  "hook_grammar": [
+   "LAUNCH"
+  ],
+  "series": "",
+  "launch_week": true,
+  "prop": "index card titled SHORT VERSION",
+  "skip_line": "New to exercise? Check with your doctor first.",
+  "hook_category": "LCH"
+ },
+ {
+  "id": "S185",
+  "page": "@sunyoon.kitchen",
+  "speaker": "SUN",
+  "format": "F33",
+  "pillar": "P16",
+  "hook_id": "H425",
+  "title": "Buying for your mother? A gift that ends.",
+  "target_seconds": 48,
+  "hook_line": "Buying for your mother? Don't sign her up for something that renews forever.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "SUN",
+    "vo": "Buying for your mother? Don't sign her up for something that renews forever.",
+    "ost": "A GIFT THAT ENDS",
+    "shot": "SET-KITCHEN | S-KITCHEN | Sun writes a card at the kitchen table and slides it into a gift envelope | CU"
+   },
+   {
+    "t": "3-12",
+    "speaker": "SUN",
+    "vo": "The gift is three months for forty-nine dollars, or a year for one-nineteen. Prepaid.",
+    "ost": "3 months $49 · 12 months $119",
+    "shot": "same | gift card design insert | insert"
+   },
+   {
+    "t": "12-20",
+    "speaker": "SUN",
+    "vo": "It starts when she opens it. It ends when it ends. It never auto-renews. Nobody bills her.",
+    "ost": "Never auto-renews",
+    "shot": "same | over-the-glasses look | CU"
+   },
+   {
+    "t": "20-29",
+    "speaker": "SUN",
+    "vo": "She gets his session every morning, with a chair version, and my recipes on Sundays. And a card from me.",
+    "ost": "Daily session · Sunday recipes · my card",
+    "shot": "same | the welcome card insert | insert"
+   },
+   {
+    "t": "29-37",
+    "speaker": "SUN",
+    "vo": "Her numbers stay private unless she says yes. She's an adult. Treat her like one.",
+    "ost": "Her numbers stay private",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "37-42",
+    "speaker": "SUN",
+    "vo": "New to exercise? She checks with her doctor first.",
+    "ost": "New? Her doctor first.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "42-48",
+    "speaker": "SUN",
+    "vo": "Comment FAMILY for the gift link. Then call her.",
+    "ost": "Comment FAMILY",
+    "shot": "same | seals the envelope | medium"
+   }
+  ],
+  "spoken_word_count": 97,
+  "has_movement": false,
+  "movement_tags": [
+   "gift"
+  ],
+  "safety_cue": "S-04 gift with start/end, prepaid, never auto-renews (spoken + caption); privacy line.",
+  "regression": "",
+  "cta_keyword": "FAMILY",
+  "cta_deliverable": "Give Mom & Dad gift page",
+  "cta_line": "Comment FAMILY for the gift link. Then call her.",
+  "caption": "Comment FAMILY for the gift link.\nGive Mom a Strong Years gift: a new session with Chang every morning (chair version of everything), Sun Yoon's Sunday recipes and a welcome card from Sun. Her numbers stay private unless she chooses to share.\nGift: 3 months $49 or 12 months $119, prepaid. It starts the day they open it, ends after 3 or 12 months, and never auto-renews.",
+  "hashtags": {
+   "ig": [
+    "#giftformom",
+    "#agingparents",
+    "#sunyoon",
+    "#strongyears"
+   ],
+   "tt": [
+    "#giftformom",
+    "#agingparents",
+    "#sunyoon",
+    "#strongyears"
+   ],
+   "yt_title": "Buying for Your Mother? Give a Gift That Ends"
+  },
+  "evidence": [],
+  "evidence_note": "Gift terms per OFFER/S-04.",
+  "running_bit": "",
+  "wink": false,
+  "myth_bust": false,
+  "music": "warm acoustic",
+  "thumbnail_text": "A GIFT THAT ENDS",
+  "hook_grammar": [
+   "OBJ3",
+   "LAUNCH",
+   "SHARE"
+  ],
+  "series": "",
+  "launch_week": true,
+  "prop": "gift envelope with a handwritten card from Sun",
+  "skip_line": "New to exercise? She checks with her doctor first.",
+  "hook_category": "LCH"
+ },
+ {
+  "id": "S186",
+  "page": "@changandsun",
+  "speaker": "DUO",
+  "format": "F38",
+  "pillar": "P20",
+  "hook_id": "H426",
+  "title": "Doors open: the honest version",
+  "target_seconds": 57,
+  "hook_line": "Doors open today. Here's the honest version, because he talks too slowly.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "SUN",
+    "vo": "Doors open today. Here's the honest version, because he talks too slowly.",
+    "ost": "DOORS OPEN · HONEST VERSION",
+    "shot": "SET-LIVING | C-CASUAL + S-CARDI-JADE | Sun lays two books and a terms card on the coffee table; Chang opens his mouth, closes it | medium"
+   },
+   {
+    "t": "3-11",
+    "speaker": "CHANG",
+    "vo": "Two books. My 7-Day Strength Reset and her Strong Kitchen. {{EBOOK_PRICE}}, one-time. Yours to keep.",
+    "ost": "Two books · {{EBOOK_PRICE}} one-time",
+    "shot": "same | he holds them up | medium"
+   },
+   {
+    "t": "11-21",
+    "speaker": "SUN",
+    "vo": "After checkout, one optional offer: founding membership. {{FOUNDING_PRICE}} a month, first month charged that day. It renews monthly until you cancel.",
+    "ost": "{{FOUNDING_PRICE}}/mo · renews monthly",
+    "shot": "same | terms card CU | CU"
+   },
+   {
+    "t": "21-30",
+    "speaker": "CHANG",
+    "vo": "Cancel online in two screens. Fourteen days to change your mind. The price is locked for as long as you stay subscribed.",
+    "ost": "Cancel online · 14-day money-back",
+    "shot": "same | phone inset: cancel screen | insert"
+   },
+   {
+    "t": "30-38",
+    "speaker": "SUN",
+    "vo": "First 5,000 founding members. The count on the page is real. No countdown. Nobody's yelling.",
+    "ost": "First 5,000 · real count",
+    "shot": "same | phone inset: live counter | insert"
+   },
+   {
+    "t": "38-45",
+    "speaker": "CHANG",
+    "vo": "Say no to the membership? You keep the books. That's it.",
+    "ost": "Say no? Keep the books.",
+    "shot": "same | shrug | medium"
+   },
+   {
+    "t": "45-51",
+    "speaker": "SUN",
+    "vo": "We're AI. The exercises and recipes are real. New to exercise? Check with your doctor.",
+    "ost": "We're AI · doctor first",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "51-57",
+    "speaker": "CHANG",
+    "vo": "Comment BOOK for the link and what's inside.",
+    "ost": "Comment BOOK",
+    "shot": "same | Sun hands him the books | two-shot"
+   }
+  ],
+  "spoken_word_count": 119,
+  "has_movement": false,
+  "movement_tags": [
+   "offer"
+  ],
+  "safety_cue": "S-02 membership terms spoken + OST + caption; T-04 real cap; one-time book; AI disclosure; doctor line.",
+  "regression": "",
+  "cta_keyword": "BOOK",
+  "cta_deliverable": "Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)",
+  "cta_line": "Comment BOOK for the link and what's inside.",
+  "caption": "Comment BOOK for the link and what's inside.\nDoors are open. The honest version, start to finish.\nThe Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's Strong Kitchen (PDF). {{EBOOK_PRICE}} one-time, not a subscription, yours to keep. Checkout is on our Shopify store; the link comes in the DM.\nAfter checkout you'll see one optional offer, the Founding Membership: {{FOUNDING_PRICE}}/month. If you add it, {{FOUNDING_PRICE}} is charged that day for your first month, then it renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Open to the first 5,000 founding members; the live count is at {{DOMAIN}}/terms#founding.",
+  "hashtags": {
+   "ig": [
+    "#strongyears",
+    "#changandsun",
+    "#foundingmember",
+    "#over60"
+   ],
+   "tt": [
+    "#strongyears",
+    "#changandsun",
+    "#foundingmember",
+    "#over60"
+   ],
+   "yt_title": "Doors Open: The Honest Version (Books + Founding Offer)"
+  },
+  "evidence": [],
+  "evidence_note": "Day-0 announcement; full CANON UPDATE 2 terms.",
+  "running_bit": "Short version: (Sun finishes his story)",
+  "wink": false,
+  "myth_bust": false,
+  "music": "playful swing",
+  "thumbnail_text": "THE HONEST VERSION",
+  "hook_grammar": [
+   "OBJ3",
+   "LAUNCH"
+  ],
+  "series": "",
+  "launch_week": true,
+  "prop": "two books and a terms card on the coffee table",
+  "skip_line": "New to exercise? Check with your doctor.",
+  "hook_category": "LCH"
+ },
+ {
+  "id": "S187",
+  "page": "@changandsun",
+  "speaker": "DUO",
+  "format": "F10",
+  "pillar": "P20",
+  "hook_id": "H427",
+  "title": "Who should NOT buy our books",
+  "target_seconds": 48,
+  "hook_line": "If you already lift three times every week, don't buy our books. Really.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "SUN",
+    "vo": "If you already lift three times every week, don't buy our books. Really.",
+    "ost": "WHO SHOULDN'T BUY THIS",
+    "shot": "SET-TABLE | C-CASUAL + S-CARDI-MUSTARD | Sun stamps a red NO on a sticky note next to the two books | CU"
+   },
+   {
+    "t": "3-11",
+    "speaker": "CHANG",
+    "vo": "The Reset is a start. Seven mornings, one chair. If you're past that, you'll be bored.",
+    "ost": "A start, not an advanced plan",
+    "shot": "same | medium | medium"
+   },
+   {
+    "t": "11-19",
+    "speaker": "SUN",
+    "vo": "And if your doctor gave you a special diet, my recipes come after their plan. Not instead.",
+    "ost": "After your doctor's plan",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "19-28",
+    "speaker": "CHANG",
+    "vo": "Who it's for: you want to start, you want a chair version, and you want the study next to every move.",
+    "ost": "For starters · chair version",
+    "shot": "same | flips the Reset | insert"
+   },
+   {
+    "t": "28-36",
+    "speaker": "SUN",
+    "vo": "{{EBOOK_PRICE}}, one-time. Yours to keep. Not a subscription. No offer you can't say no to.",
+    "ost": "{{EBOOK_PRICE}} one-time · yours to keep",
+    "shot": "same | price card, full contrast | medium"
+   },
+   {
+    "t": "36-42",
+    "speaker": "CHANG",
+    "vo": "Heart condition or new to exercise? Check with your doctor first.",
+    "ost": "Heart condition? Doctor first.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "42-48",
+    "speaker": "SUN",
+    "vo": "Still you? Comment BOOK for the link.",
+    "ost": "Comment BOOK",
+    "shot": "same | peels the NO sticker off | medium"
+   }
+  ],
+  "spoken_word_count": 100,
+  "has_movement": false,
+  "movement_tags": [
+   "offer"
+  ],
+  "safety_cue": "Anti-pressure (S-03): tells non-fit buyers not to buy; one-time price wording; doctor line.",
+  "regression": "",
+  "cta_keyword": "BOOK",
+  "cta_deliverable": "Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)",
+  "cta_line": "Still you? Comment BOOK for the link.",
+  "caption": "Comment BOOK for the link and what's inside.\nWho shouldn't buy: people already lifting 3×/week (the Reset is a beginning) and anyone whose doctor set a special diet (their plan comes first). Who it's for: people starting out who want a chair version and the study next to every move.\nThe Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's Strong Kitchen (PDF). {{EBOOK_PRICE}} one-time, not a subscription, yours to keep. Checkout is on our Shopify store; the link comes in the DM.",
+  "hashtags": {
+   "ig": [
+    "#strongyears",
+    "#changandsun",
+    "#honestanswers",
+    "#over60"
+   ],
+   "tt": [
+    "#strongyears",
+    "#changandsun",
+    "#honest",
+    "#over60"
+   ],
+   "yt_title": "Who Should NOT Buy Our Books (Honestly)"
+  },
+  "evidence": [],
+  "evidence_note": "Anti-pressure fit post; no claims.",
+  "running_bit": "",
+  "wink": false,
+  "myth_bust": false,
+  "music": "playful swing",
+  "thumbnail_text": "DON'T BUY THIS IF…",
+  "hook_grammar": [
+   "IF_EVERY",
+   "LAUNCH"
+  ],
+  "series": "",
+  "launch_week": true,
+  "prop": "red NO stamp and the two books",
+  "skip_line": "Heart condition or new to exercise? Check with your doctor first.",
+  "hook_category": "LCH"
+ },
+ {
+  "id": "S188",
+  "page": "@changandsun",
+  "speaker": "DUO",
+  "format": "F38",
+  "pillar": "P20",
+  "hook_id": "H428",
+  "title": "Founding seats: what 'locked' means",
+  "target_seconds": 55,
+  "hook_line": "'Locked' price. Locked how? She made me explain it properly.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "CHANG",
+    "vo": "'Locked' price. Locked how? She made me explain it properly.",
+    "ost": "LOCKED HOW?",
+    "shot": "SET-GARAGE | C-TRAIN-A + S-TRAIN | Chang hangs a padlock on the pegboard; Sun watches with arms crossed | medium"
+   },
+   {
+    "t": "3-12",
+    "speaker": "SUN",
+    "vo": "Founding membership: {{FOUNDING_PRICE}} a month, first month charged today. It renews monthly until you cancel.",
+    "ost": "{{FOUNDING_PRICE}}/mo · renews monthly",
+    "shot": "same | terms card CU | CU"
+   },
+   {
+    "t": "12-21",
+    "speaker": "CHANG",
+    "vo": "Locked means: for as long as you stay subscribed, your price doesn't go up. Pauses included.",
+    "ost": "Locked while you stay subscribed",
+    "shot": "same | snaps the padlock shut | CU"
+   },
+   {
+    "t": "21-29",
+    "speaker": "SUN",
+    "vo": "Cancel and come back later? Then it's the price on that day. That's fair. We say it now.",
+    "ost": "Cancel + return = that day's price",
+    "shot": "same | over-the-glasses look | CU"
+   },
+   {
+    "t": "29-37",
+    "speaker": "CHANG",
+    "vo": "Cancel online in two screens. Fourteen days to change your mind, full refund.",
+    "ost": "Cancel online · 14-day money-back",
+    "shot": "same | phone inset: cancel screen | insert"
+   },
+   {
+    "t": "37-44",
+    "speaker": "SUN",
+    "vo": "First 5,000 founding members, real count on the page. When it's full, it's full.",
+    "ost": "First 5,000 · real count",
+    "shot": "same | phone inset: live counter | insert"
+   },
+   {
+    "t": "44-50",
+    "speaker": "CHANG",
+    "vo": "We're AI. The sessions are real. New to exercise? Check with your doctor.",
+    "ost": "We're AI · doctor first",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "50-55",
+    "speaker": "SUN",
+    "vo": "Comment JOIN for the link and every term.",
+    "ost": "Comment JOIN",
+    "shot": "same | she pockets the key | two-shot"
+   }
+  ],
+  "spoken_word_count": 107,
+  "has_movement": false,
+  "movement_tags": [
+   "offer"
+  ],
+  "safety_cue": "S-02 terms spoken + OST + caption; explains what 'locked' does and doesn't mean (no lifetime promise); T-04 real cap.",
+  "regression": "",
+  "cta_keyword": "JOIN",
+  "cta_deliverable": "Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)",
+  "cta_line": "Comment JOIN for the link and every term.",
+  "caption": "Comment JOIN for the founding-member link and full terms.\nWhat 'locked' means: your founding price doesn't go up for as long as you stay subscribed, pauses included. Cancel and come back later and it's the price on that day.\nFounding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Open to the first 5,000 founding members; the live count is at {{DOMAIN}}/terms#founding.",
+  "hashtags": {
+   "ig": [
+    "#strongyears",
+    "#foundingmember",
+    "#changandsun",
+    "#honestanswers"
+   ],
+   "tt": [
+    "#strongyears",
+    "#foundingmember",
+    "#changandsun",
+    "#honest"
+   ],
+   "yt_title": "Founding Price 'Locked'? Here's Exactly What That Means"
+  },
+  "evidence": [],
+  "evidence_note": "Terms clarity post (no lifetime promise).",
+  "running_bit": "The hidden kettlebell (she pockets the key)",
+  "wink": false,
+  "myth_bust": false,
+  "music": "warm acoustic",
+  "thumbnail_text": "LOCKED HOW?",
+  "hook_grammar": [
+   "OBJ3",
+   "LAUNCH"
+  ],
+  "series": "",
+  "launch_week": true,
+  "prop": "padlock on the garage pegboard",
+  "skip_line": "New to exercise? Check with your doctor.",
+  "hook_category": "LCH"
+ },
+ {
+  "id": "S189",
+  "page": "@changandsun",
+  "speaker": "DUO",
+  "format": "F26",
+  "pillar": "P20",
+  "hook_id": "H429",
+  "title": "Your questions, launch week",
+  "target_seconds": 54,
+  "hook_line": "Your questions from launch week. Real questions. No fake reviews. Let's go.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "SUN",
+    "vo": "Your questions from launch week. Real questions. No fake reviews. Let's go.",
+    "ost": "YOUR QUESTIONS, ANSWERED",
+    "shot": "SET-LIVING | C-CASUAL + S-CARDI-JADE | Sun tips a shoebox of printed question cards onto the sofa | medium"
+   },
+   {
+    "t": "3-11",
+    "speaker": "CHANG",
+    "vo": "'Do I need equipment?' A sturdy chair and a counter. A band later, if you want one.",
+    "ost": "Chair + counter. That's it.",
+    "shot": "same | he holds up a card | CU"
+   },
+   {
+    "t": "11-19",
+    "speaker": "SUN",
+    "vo": "'Can I print the books?' Yes. {{EBOOK_PRICE}}, one-time, and they're yours. Print them. Spill soup on them.",
+    "ost": "{{EBOOK_PRICE}} one-time · print them",
+    "shot": "same | she holds up a soup-stained page | CU"
+   },
+   {
+    "t": "19-30",
+    "speaker": "CHANG",
+    "vo": "'Do I have to join?' No. After checkout there's one offer: {{FOUNDING_PRICE}} a month, first month charged that day, renews monthly until you cancel.",
+    "ost": "{{FOUNDING_PRICE}}/mo · renews monthly",
+    "shot": "same | terms card | CU"
+   },
+   {
+    "t": "30-39",
+    "speaker": "SUN",
+    "vo": "Cancel online, two screens. Fourteen days to change your mind. Price locked for as long as you stay subscribed. First 5,000 only.",
+    "ost": "Cancel online · 14-day money-back",
+    "shot": "same | phone inset: cancel screen and live count | insert"
+   },
+   {
+    "t": "39-44",
+    "speaker": "CHANG",
+    "vo": "'Are you real?' No. We're AI. The exercises are real.",
+    "ost": "No. We're AI.",
+    "shot": "same | the wink | CU"
+   },
+   {
+    "t": "44-49",
+    "speaker": "SUN",
+    "vo": "New to exercise? Check with your doctor before starting.",
+    "ost": "New? Doctor first.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "49-54",
+    "speaker": "CHANG",
+    "vo": "Comment BOOK for the link and what's inside.",
+    "ost": "Comment BOOK",
+    "shot": "same | puts the lid on the box | medium"
+   }
+  ],
+  "spoken_word_count": 119,
+  "has_movement": false,
+  "movement_tags": [
+   "offer",
+   "faq"
+  ],
+  "safety_cue": "Questions only (no testimonials, T-01); S-02 membership terms spoken + OST + caption; AI disclosure.",
+  "regression": "",
+  "cta_keyword": "BOOK",
+  "cta_deliverable": "Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)",
+  "cta_line": "Comment BOOK for the link and what's inside.",
+  "caption": "Comment BOOK for the link and what's inside.\nLaunch-week questions: you need a sturdy chair and a counter; yes, you can print the books; no, you don't have to join.\nThe Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's Strong Kitchen (PDF). {{EBOOK_PRICE}} one-time, not a subscription, yours to keep. Checkout is on our Shopify store; the link comes in the DM.\nAfter checkout you'll see one optional offer, the Founding Membership: {{FOUNDING_PRICE}}/month. If you add it, {{FOUNDING_PRICE}} is charged that day for your first month, then it renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Open to the first 5,000 founding members; the live count is at {{DOMAIN}}/terms#founding.",
+  "hashtags": {
+   "ig": [
+    "#strongyears",
+    "#changandsun",
+    "#faq",
+    "#over60"
+   ],
+   "tt": [
+    "#strongyears",
+    "#changandsun",
+    "#faq",
+    "#over60"
+   ],
+   "yt_title": "Launch Week: Your Questions, Answered"
+  },
+  "evidence": [],
+  "evidence_note": "FAQ from real question themes (no quotes attributed to people).",
+  "running_bit": "",
+  "wink": true,
+  "myth_bust": false,
+  "music": "playful swing",
+  "thumbnail_text": "YOUR QUESTIONS",
+  "hook_grammar": [
+   "OBJ3",
+   "LAUNCH"
+  ],
+  "series": "",
+  "launch_week": true,
+  "prop": "shoebox of printed question cards",
+  "skip_line": "New to exercise? Check with your doctor before starting.",
+  "hook_category": "LCH"
+ },
+ {
+  "id": "S190",
+  "page": "@changandsun",
+  "speaker": "DUO",
+  "format": "F39",
+  "pillar": "P20",
+  "hook_id": "H430",
+  "title": "End of launch week: nothing jumps at midnight",
+  "target_seconds": 50,
+  "hook_line": "Not a countdown, not a midnight price jump. Launch week ends. Here's what changes.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "CHANG",
+    "vo": "Not a countdown, not a midnight price jump. Launch week ends. Here's what changes.",
+    "ost": "NO COUNTDOWN. HERE'S WHAT CHANGES.",
+    "shot": "SET-KITCHEN | C-KITCHEN + S-KITCHEN | Chang flips the kitchen wall calendar; no date is circled | medium"
+   },
+   {
+    "t": "3-11",
+    "speaker": "SUN",
+    "vo": "Nothing about the books. They stay {{EBOOK_PRICE}}, one-time. Yours to keep.",
+    "ost": "Books: no change",
+    "shot": "same | she holds them up | medium"
+   },
+   {
+    "t": "11-20",
+    "speaker": "CHANG",
+    "vo": "Founding seats, {{FOUNDING_PRICE}} a month, renew monthly, cancel online anytime. Open until 5,000, or a week's notice before we close.",
+    "ost": "{{FOUNDING_PRICE}}/mo · open until 5,000",
+    "shot": "same | phone inset: live counter | insert"
+   },
+   {
+    "t": "20-29",
+    "speaker": "SUN",
+    "vo": "We post more of what you liked. Fewer of what you didn't. You told us. We read it.",
+    "ost": "More of what you liked",
+    "shot": "same | she taps a stack of printed comments | CU"
+   },
+   {
+    "t": "29-38",
+    "speaker": "CHANG",
+    "vo": "And every morning, a new session, same as before. Chair version of everything.",
+    "ost": "Every morning, as before",
+    "shot": "same | Chang in the garage, chair against the wall | medium-full"
+   },
+   {
+    "t": "38-43",
+    "speaker": "SUN",
+    "vo": "New to exercise? Check with your doctor first.",
+    "ost": "New? Doctor first.",
+    "shot": "same | CU | CU"
+   },
+   {
+    "t": "43-50",
+    "speaker": "CHANG",
+    "vo": "Comment BOOK for the link. No rush. Really.",
+    "ost": "Comment BOOK",
+    "shot": "same | Sun hangs the calendar back up | two-shot"
+   }
+  ],
+  "spoken_word_count": 92,
+  "has_movement": false,
+  "movement_tags": [
+   "offer"
+  ],
+  "safety_cue": "T-04: explicitly no countdown or price jump; cohort closure only with a week's public notice; one-time book wording.",
+  "regression": "",
+  "cta_keyword": "BOOK",
+  "cta_deliverable": "Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)",
+  "cta_line": "Comment BOOK for the link. No rush. Really.",
+  "caption": "Comment BOOK for the link and what's inside.\nLaunch week is over and nothing jumps at midnight. Founding seats stay open until 5,000 members or until we close the founding cohort, and we'll announce any closing date at least a week ahead.\nThe Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's Strong Kitchen (PDF). {{EBOOK_PRICE}} one-time, not a subscription, yours to keep. Checkout is on our Shopify store; the link comes in the DM.\nAfter checkout you'll see one optional offer, the Founding Membership: {{FOUNDING_PRICE}}/month. If you add it, {{FOUNDING_PRICE}} is charged that day for your first month, then it renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Open to the first 5,000 founding members; the live count is at {{DOMAIN}}/terms#founding.",
+  "hashtags": {
+   "ig": [
+    "#strongyears",
+    "#changandsun",
+    "#norush",
+    "#over60"
+   ],
+   "tt": [
+    "#strongyears",
+    "#changandsun",
+    "#norush",
+    "#over60"
+   ],
+   "yt_title": "End of Launch Week: No Countdown, Here's What Changes"
+  },
+  "evidence": [],
+  "evidence_note": "Anti-fake-urgency post; pins after launch week.",
+  "running_bit": "",
+  "wink": false,
+  "myth_bust": false,
+  "music": "warm acoustic",
+  "thumbnail_text": "NO COUNTDOWN",
+  "hook_grammar": [
+   "LAUNCH"
+  ],
+  "series": "",
+  "launch_week": true,
+  "prop": "wall calendar with no circled date",
+  "skip_line": "New to exercise? Check with your doctor first.",
+  "hook_category": "LCH"
+ }
+]

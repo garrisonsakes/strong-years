@@ -1,0 +1,1294 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Strong Years Funnel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500&display=swap">
+<style>
+/* Layout: phone-first single screen column; on wide screens a flow rail sits beside a phone-width device frame. */
+:root{
+  --paper:#FBF6EC;        /* warm cream page */
+  --surface:#FFFFFF;      /* rice cards */
+  --ink:#16120E;          /* every piece of text */
+  --line:#16120E;         /* borders */
+  --jade:#1F5A46;         /* secondary buttons, selected answers, chart line */
+  --on-jade:#FFFFFF;
+  --jade-wash:#E4EFE8;    /* selected plan background */
+  --persimmon:#B3311C;    /* primary buttons */
+  --on-persimmon:#FFFFFF;
+  --persimmon-text:#B3311C;
+  --brass:#E7B85A;        /* highlight bars, labels (text on it is always ink) */
+  --on-brass:#16120E;
+  --strip:#16120E;        /* disclosure strip */
+  --on-strip:#FBF6EC;
+  --link:#1F5A46;
+  --bubble-in:#FFFFFF;
+  --bubble-out:#1F5A46;
+  --on-bubble-out:#FFFFFF;
+  --focus:#16120E;
+  --display:"Fraunces", Georgia, "Times New Roman", serif;
+  --body:"Atkinson Hyperlegible", Verdana, "Segoe UI", system-ui, sans-serif;
+  --r:14px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0F1713; --surface:#18231D; --ink:#F6EFE2; --line:#CFE0D6;
+    --jade:#256B52; --on-jade:#FFFFFF; --jade-wash:#1F3329;
+    --persimmon:#B3311C; --on-persimmon:#FFFFFF; --persimmon-text:#FF9A7E;
+    --brass:#E7B85A; --on-brass:#16120E; --strip:#1F5A46; --on-strip:#FFFFFF;
+    --link:#8ED3B5; --bubble-in:#22302A; --bubble-out:#256B52; --on-bubble-out:#FFFFFF; --focus:#F6EFE2;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0F1713; --surface:#18231D; --ink:#F6EFE2; --line:#CFE0D6;
+  --jade:#256B52; --on-jade:#FFFFFF; --jade-wash:#1F3329;
+  --persimmon:#B3311C; --on-persimmon:#FFFFFF; --persimmon-text:#FF9A7E;
+  --brass:#E7B85A; --on-brass:#16120E; --strip:#1F5A46; --on-strip:#FFFFFF;
+  --link:#8ED3B5; --bubble-in:#22302A; --bubble-out:#256B52; --on-bubble-out:#FFFFFF; --focus:#F6EFE2;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 20px/1.55 var(--body)}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;text-wrap:balance;margin:0;font-variation-settings:"opsz" 72}
+h1{font-size:2.05rem}
+h2{font-size:1.6rem}
+h3{font-size:1.3rem}
+p{margin:0}
+a{color:var(--link);text-underline-offset:3px;text-decoration-thickness:2px}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.small{font-size:17px;line-height:1.5}
+input[type=checkbox],input[type=radio]{-webkit-appearance:none;appearance:none;flex:none;margin:0;width:30px;height:30px;border:2px solid var(--line);background:var(--surface);border-radius:7px;display:inline-grid;place-content:center;cursor:pointer}
+input[type=radio]{border-radius:50%}
+input[type=checkbox]:checked{background:var(--jade)}
+input[type=checkbox]:checked::after{content:"";width:8px;height:15px;border:solid var(--on-jade);border-width:0 4px 4px 0;transform:translateY(-2px) rotate(45deg)}
+input[type=radio]:checked{background:var(--jade);box-shadow:inset 0 0 0 5px var(--surface)}
+.num{font-variant-numeric:tabular-nums}
+.stack{display:flex;flex-direction:column;gap:18px}
+.stack-s{display:flex;flex-direction:column;gap:10px}
+.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.row > svg,.row > figure{flex:none}
+
+/* App frame */
+.app{display:grid;grid-template-columns:minmax(0,1fr)}
+.rail{display:none}
+.device{min-width:0;background:var(--paper)}
+@media (min-width:960px){
+  body{padding-inline:24px}
+  .app{grid-template-columns:290px minmax(0,470px);justify-content:center;gap:56px;padding-block:36px}
+  .rail{display:block;position:sticky;top:calc(24px + env(safe-area-inset-top,0px));align-self:start}
+  .device{border:2px solid var(--line);border-radius:30px;overflow:hidden}
+  .jump{display:none}
+}
+.rail h2{font-size:1.5rem;margin-bottom:6px}
+.rail p{font-size:17px;margin-bottom:18px}
+.rail ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.rail button{width:100%;text-align:left;min-height:52px;padding:10px 14px;border-radius:12px;border:2px solid transparent;background:transparent;cursor:pointer;display:flex;gap:12px;align-items:baseline;font-size:18px}
+.rail button .n{font-family:var(--display);font-weight:700;min-width:1.2em}
+.rail button:hover{border-color:var(--line)}
+.rail button[aria-current="step"]{background:var(--jade);color:var(--on-jade);border-color:var(--jade)}
+
+/* Disclosure strip */
+.strip{background:var(--strip);color:var(--on-strip);font-size:17px;line-height:1.45;padding:12px 18px}
+.strip a{color:var(--on-strip);display:inline-flex;align-items:center;min-height:44px;font-weight:700}
+.wrap{padding-inline:18px;padding-block:24px 32px}
+.brandbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border-bottom:2px solid var(--line)}
+.wordmark{font-family:var(--display);font-weight:700;font-size:1.35rem;letter-spacing:-.01em}
+.wordmark i{font-style:italic;font-weight:500;color:var(--persimmon-text)}
+
+/* Buttons */
+.btn{display:flex;align-items:center;justify-content:center;text-align:center;width:100%;min-height:60px;padding:12px 20px;border-radius:var(--r);border:2px solid var(--persimmon);background:var(--persimmon);color:var(--on-persimmon);font-weight:700;font-size:20px;line-height:1.25;cursor:pointer;text-decoration:none}
+.btn.jade{background:var(--jade);border-color:var(--jade);color:var(--on-jade)}
+.btn.outline{background:var(--surface);border-color:var(--line);color:var(--ink)}
+.btn.inline{width:auto}
+.btn:active{transform:translateY(1px)}
+.textbtn{background:none;border:0;padding:10px 0;min-height:48px;color:var(--link);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:2px;cursor:pointer;font-weight:700;text-align:left}
+.micro{font-size:17px;line-height:1.5}
+
+/* Answer options */
+.opt{display:flex;align-items:center;gap:14px;width:100%;min-height:60px;padding:14px 16px;border:2px solid var(--line);border-radius:var(--r);background:var(--surface);text-align:left;cursor:pointer;line-height:1.35}
+.opt .box{flex:none;width:28px;height:28px;border:2px solid currentColor;border-radius:6px;display:grid;place-items:center;font-weight:700}
+.opt .dot{flex:none;width:26px;height:26px;border:2px solid currentColor;border-radius:50%}
+.opt[aria-pressed="true"],.opt[aria-checked="true"]{background:var(--jade);border-color:var(--jade);color:var(--on-jade)}
+.opt[aria-pressed="true"] .dot{box-shadow:inset 0 0 0 5px var(--jade);background:var(--on-jade)}
+.opt[aria-checked="true"] .box::after{content:"✓"}
+
+.qtop{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.qcount{font-weight:700}
+.meter{height:12px;border:2px solid var(--line);border-radius:8px;background:var(--paper);overflow:hidden}
+.meter span{display:block;height:100%;background:var(--jade)}
+
+/* Cards by role */
+.card{background:var(--surface);border:2px solid var(--line);border-radius:18px;padding:20px}
+.alert{background:var(--brass);color:var(--on-brass);border-radius:12px;padding:12px 14px;font-weight:700}
+.alert a,.alert button{color:var(--on-brass)}
+.pill{display:inline-flex;align-items:center;gap:6px;background:var(--brass);color:var(--on-brass);font-size:16px;font-weight:700;line-height:1.2;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.checklist{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+.checklist li{display:flex;gap:12px;align-items:flex-start}
+.checklist li::before{content:"";flex:none;width:14px;height:14px;margin-top:.45em;background:var(--persimmon)}
+.days{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0;border-top:2px solid var(--line)}
+.days li{display:grid;grid-template-columns:4.2em minmax(0,1fr);gap:10px;padding:10px 0;border-bottom:2px solid var(--line)}
+.days b{font-family:var(--display)}
+
+/* Characters */
+.char{display:flex;gap:14px;align-items:center}
+.char figure{margin:0;flex:none;position:relative}
+.char svg{display:block;border-radius:18px}
+.char .pill{position:absolute;left:50%;bottom:-10px;transform:translateX(-50%)}
+
+/* DM mock */
+.dm-head{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:2px solid var(--line);background:var(--surface)}
+.dm-head .who{min-width:0}
+.dm-head .who b{display:block;font-size:18px;overflow-wrap:anywhere}
+.dm-body{padding:18px 14px 28px;display:flex;flex-direction:column;gap:12px}
+.ctx{border:2px solid var(--line);border-radius:16px;padding:12px;display:flex;gap:12px;align-items:center;background:var(--surface)}
+.ctx p{font-size:17px}
+.sep{text-align:center;font-size:16px;font-weight:700;padding:4px 0}
+.msg{max-width:88%;padding:12px 14px;border-radius:18px;line-height:1.45;font-size:19px}
+.msg.in{align-self:flex-start;background:var(--bubble-in);border:2px solid var(--line);border-bottom-left-radius:6px}
+.msg.out{align-self:flex-end;background:var(--bubble-out);color:var(--on-bubble-out);border-bottom-right-radius:6px}
+.msg p+p{margin-top:10px}
+.msg .linkcard{display:block;margin-top:10px;border:2px solid var(--line);border-radius:12px;padding:10px 12px;font-weight:700;overflow-wrap:anywhere}
+.qr{display:flex;flex-wrap:wrap;gap:8px;align-self:flex-start;max-width:100%}
+.qr button{min-height:52px;padding:8px 18px;border-radius:999px;border:2px solid var(--jade);background:var(--surface);color:var(--ink);font-weight:700;cursor:pointer}
+.qr button.primary{background:var(--jade);color:var(--on-jade)}
+.typing{align-self:flex-start;font-size:17px;font-weight:700}
+
+/* Quiz */
+.timer{font-family:var(--display);font-weight:700;font-size:5.5rem;line-height:1;text-align:center;font-variant-numeric:tabular-nums}
+.timerbox{border:3px solid var(--line);border-radius:22px;padding:20px 16px;background:var(--surface);display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center}
+.stepper{display:grid;grid-template-columns:64px minmax(0,1fr) 64px;gap:10px;align-items:center}
+.stepper button{height:64px;border-radius:var(--r);border:2px solid var(--line);background:var(--surface);font-size:30px;font-weight:700;cursor:pointer}
+.stepper input{height:64px;width:100%;text-align:center;font-family:var(--display);font-size:2.2rem;font-weight:700;border:2px solid var(--line);border-radius:var(--r);background:var(--surface)}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-weight:700}
+.field input{min-height:56px;padding:10px 14px;border:2px solid var(--line);border-radius:12px;background:var(--surface);font-size:20px}
+.tick{display:flex;gap:14px;align-items:flex-start;cursor:pointer;line-height:1.45}
+.tick input{margin-top:2px}
+.stage{display:flex;flex-direction:column;gap:10px;padding:14px 0;border-bottom:2px solid var(--line)}
+.stage .btn{min-height:56px;font-size:19px}
+.feet{flex:none}
+
+/* Result */
+.sa{border:3px solid var(--jade);border-radius:22px;background:var(--surface);padding:20px}
+.sa .big{font-family:var(--display);font-weight:700;font-size:4.6rem;line-height:1;color:var(--persimmon-text);display:inline-block;border-bottom:8px solid var(--brass);padding-bottom:2px}
+.sa dl{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;margin:16px 0 0}
+.sa dl div{display:flex;justify-content:space-between;gap:12px;border-top:2px solid var(--line);padding-top:8px}
+.sa dt{font-weight:700}
+.sa dd{margin:0;text-align:right}
+
+/* Offer */
+.plan{display:flex;gap:14px;align-items:flex-start;border:2px solid var(--line);border-radius:18px;padding:18px;background:var(--surface);cursor:pointer}
+.plan input{margin-top:2px}
+.plan:has(input:checked){border:3px solid var(--jade);background:var(--jade-wash);padding:17px}
+.plan .price{font-family:var(--display);font-weight:700;font-size:1.7rem;line-height:1.1}
+.plan ul{margin:8px 0 0;padding-left:1.1em}
+.terms{border:2px solid var(--line);border-radius:16px;padding:16px;background:var(--surface);font-size:20px}
+.terms p+p{margin-top:8px}
+.placeholder{border:3px dashed var(--line);border-radius:18px;padding:18px}
+details{border-top:2px solid var(--line);padding:6px 0}
+summary{cursor:pointer;font-weight:700;min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:12px;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--display);font-size:1.6rem;line-height:1}
+details[open] summary::after{content:"\2212"}
+details p{padding-bottom:10px}
+.pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.pair .char{flex-direction:column;align-items:flex-start}
+.receipt{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.receipt td{padding:8px 0;border-bottom:2px solid var(--line);vertical-align:top}
+.receipt td:last-child{text-align:right;padding-left:12px;white-space:nowrap}
+.receipt tr.total td{font-weight:700;border-bottom:0}
+
+/* Welcome checklist */
+.todo{display:flex;flex-direction:column;gap:10px;list-style:none;margin:0;padding:0}
+.todo label{display:flex;gap:14px;align-items:flex-start;border:2px solid var(--line);border-radius:14px;padding:14px;background:var(--surface);cursor:pointer}
+.todo input{width:32px;height:32px}
+.todo label:has(input:checked){background:var(--jade-wash)}
+.todo span b{display:block}
+
+/* Dashboard */
+.dash-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.tracks{display:flex;gap:8px;flex-wrap:wrap}
+.tracks button{min-height:48px;padding:6px 14px;border-radius:999px;border:2px solid var(--line);background:var(--surface);font-weight:700;cursor:pointer}
+.tracks button[aria-pressed="true"]{background:var(--jade);border-color:var(--jade);color:var(--on-jade)}
+.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;text-align:center}
+.week div{border:2px solid var(--line);border-radius:10px;padding:6px 0;font-size:16px;font-weight:700}
+.week div.done{background:var(--jade);border-color:var(--jade);color:var(--on-jade)}
+.week div.today{outline:3px solid var(--persimmon);outline-offset:1px}
+.chat{display:flex;flex-direction:column;gap:10px}
+.grade{display:inline-block;border:2px solid var(--line);border-radius:8px;padding:2px 8px;font-weight:700;font-size:16px}
+
+/* Footer */
+.foot{border-top:2px solid var(--line);padding:16px 18px calc(18px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:10px;font-size:16px;line-height:1.45}
+.foot .note{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.foot .jump{flex:1 1 100%;min-width:0}
+.foot select{width:100%;min-height:48px;border:2px solid var(--line);border-radius:10px;background:var(--surface);padding:6px 10px;font-size:17px;max-width:100%}
+.foot button{min-height:44px;background:none;border:0;color:var(--link);text-decoration:underline;cursor:pointer;padding:0;font-weight:700;font-size:16px}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:min(440px,calc(100% - 32px));background:var(--strip);color:var(--on-strip);border-radius:14px;padding:14px 16px;font-size:18px;z-index:10;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media (min-width:960px){h1{font-size:2.2rem}}
+</style>
+
+<div class="app">
+  <aside class="rail" aria-label="Funnel steps">
+    <h2>Strong Years funnel</h2>
+    <p>Tap any step to jump. The phone on the right is what a member sees.</p>
+    <ol id="rail"></ol>
+  </aside>
+  <div class="device">
+    <main id="screen" tabindex="-1"></main>
+    <footer class="foot">
+      <div class="note"><span class="pill">Prototype, not live</span><span>No payment is taken and nothing you type is sent anywhere.</span></div>
+      <div class="row">
+        <label class="jump" for="jump"><span class="sr">Jump to a step</span>
+          <select id="jump"></select>
+        </label>
+        <button type="button" data-act="restart">Start over</button>
+      </div>
+    </footer>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script>
+(function(){
+"use strict";
+const DOMAIN = "strongyears.com";
+const FOUNDING = 25;    // founding membership monthly price (blitz test cell $25 vs $30)
+const PRICE = FOUNDING; // the $1 trial renews at the founding test price (not $20)
+const CAP = 5000;       // real founding cohort cap
+const STEPS = [
+  ["dm","Instagram DM"],["quiz","Strength Age quiz"],["result","Your result"],["offer","Offer"],
+  ["checkout","Checkout"],["upsell","After-purchase offer"],["welcome","Welcome and first 72 hours"],["dash","Members home"]
+];
+
+/* ---------- state ---------- */
+function fresh(){
+  return {step:"dm", dm:[], a:{}, qcur:"intro", qstack:[], lead:{name:"",email:"",sms:false,phone:""},
+    sample:false, plan:{arm:"founding",pack:"none"}, offerConsent:false,
+    co:{name:"",email:"",phone:"",sms:false,bump:false,consent:false}, paid:null, upsell:"u1", orders:[],
+    check:[false,false,false,false,false,false,false], track:null, swap:false, voice:true};
+}
+let S = fresh();
+function save(){ try{ localStorage.setItem("sy-proto", JSON.stringify(S)); }catch(e){} }
+function load(){ try{ const t = localStorage.getItem("sy-proto"); if(t){ const o = JSON.parse(t); if(o && o.step) S = Object.assign(fresh(), o); } }catch(e){} }
+
+/* ---------- helpers ---------- */
+const $ = s => document.querySelector(s);
+const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const money = n => "$" + (Math.round(n*100)/100).toFixed(n % 1 ? 2 : 0);
+const clamp = (v,a,b) => Math.max(a, Math.min(b, v));
+const today = new Date();
+const addDays = (d,n) => new Date(d.getFullYear(), d.getMonth(), d.getDate()+n);
+const addMonths = (d,n) => new Date(d.getFullYear(), d.getMonth()+n, d.getDate());
+const fmt = d => d.toLocaleDateString("en-US",{weekday:"long", month:"long", day:"numeric"});
+const fmtShort = d => d.toLocaleDateString("en-US",{month:"long", day:"numeric"});
+const reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+let toastT;
+function toast(msg){ const t = $("#toast"); t.textContent = msg; t.hidden = false; clearTimeout(toastT); toastT = setTimeout(()=>{ t.hidden = true; }, 3800); }
+
+/* ---------- character illustrations (placeholders, clearly labelled) ---------- */
+function chang(size){
+  return `<svg width="${size}" height="${size}" viewBox="0 0 120 120" role="img" aria-label="Illustrated placeholder of Chang Yin, an AI character">
+    <rect width="120" height="120" rx="22" fill="#1F5A46"/>
+    <path d="M8 120c2-26 16-38 34-41h36c18 3 32 15 34 41z" fill="#E9D8BE"/>
+    <path d="M34 120V86c6-3 10-5 14-5l12 10 12-10c4 0 8 2 14 5v34z" fill="#1E2C44"/>
+    <rect x="52" y="64" width="16" height="18" rx="6" fill="#E9D8BE"/>
+    <circle cx="60" cy="46" r="21" fill="#E9D8BE"/>
+    <path d="M39 42c0-14 9-20 21-20s21 6 21 20c-3-6-8-9-21-9s-18 3-21 9z" fill="#FBF6EC"/>
+    <path d="M42 52c2 12 9 18 18 18s16-6 18-18c-3 4-6 5-10 5H52c-4 0-7-1-10-5z" fill="#FBF6EC"/>
+    <text x="104" y="22" text-anchor="end" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="17" fill="#FBF6EC">CY</text>
+  </svg>`;
+}
+function sun(size){
+  return `<svg width="${size}" height="${size}" viewBox="0 0 120 120" role="img" aria-label="Illustrated placeholder of Sun Yoon, an AI character">
+    <rect width="120" height="120" rx="22" fill="#B3311C"/>
+    <path d="M12 120c2-24 15-36 32-39h32c17 3 30 15 32 39z" fill="#2E7A5F"/>
+    <path d="M47 81l13 22 13-22z" fill="#FBF6EC"/>
+    <rect x="53" y="62" width="14" height="18" rx="6" fill="#E9D8BE"/>
+    <path d="M36 50c0-18 10-28 24-28s24 10 24 28v14c0 3-2 5-5 5h-3V46c-6-2-14-7-17-12-3 6-10 10-18 12v23h-1c-3 0-4-2-4-5z" fill="#F4EFE8"/>
+    <ellipse cx="60" cy="50" rx="17" ry="20" fill="#E9D8BE"/>
+    <path d="M42 42c4-10 10-14 18-14 9 0 15 5 18 14-7-1-14-5-18-10-4 6-11 9-18 10z" fill="#F4EFE8"/>
+    <rect x="75" y="34" width="9" height="5" rx="2" fill="#6B3E1F" transform="rotate(-25 79 36)"/>
+    <text x="16" y="22" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="17" fill="#FBF6EC">SY</text>
+  </svg>`;
+}
+function charBlock(who, size, text){
+  return `<div class="char"><figure>${who==="sun"?sun(size):chang(size)}<span class="pill">AI character</span></figure>${text?`<div class="stack-s" style="min-width:0">${text}</div>`:""}</div>`;
+}
+const STRIP = `<div class="strip">Chang Yin and Sun Yoon are AI characters. Every session is built on published exercise guidelines for older adults. <a href="#" data-act="how">How we make this</a></div>`;
+const BRAND = `<div class="brandbar"><span class="wordmark">Strong <i>Years</i></span><span class="pill">AI characters</span></div>`;
+
+/* ---------- navigation ---------- */
+function go(step, keepScroll){
+  stopTimers();
+  S.step = step; save(); render();
+  if(!keepScroll){ window.scrollTo(0,0); const m = $("#screen"); if(m) m.focus({preventScroll:true}); }
+}
+function buildNav(){
+  $("#rail").innerHTML = STEPS.map((s,i)=>`<li><button type="button" data-act="jump" data-step="${s[0]}"><span class="n">${i+1}</span><span>${s[1]}</span></button></li>`).join("");
+  $("#jump").innerHTML = STEPS.map((s,i)=>`<option value="${s[0]}">Jump to step ${i+1}: ${s[1]}</option>`).join("");
+}
+function syncNav(){
+  document.querySelectorAll("#rail button").forEach(b=>{ if(b.dataset.step===S.step) b.setAttribute("aria-current","step"); else b.removeAttribute("aria-current"); });
+  $("#jump").value = S.step;
+}
+function render(){
+  const f = {dm:rDM, quiz:rQuiz, result:rResult, offer:rOffer, checkout:rCheckout, upsell:rUpsell, welcome:rWelcome, dash:rDash}[S.step] || rDM;
+  $("#screen").innerHTML = f();
+  syncNav();
+  if(S.step==="quiz") afterQuizRender();
+}
+
+/* =========================================================
+   1. INSTAGRAM DM (mock)
+   ========================================================= */
+const DM_SCRIPT = {
+  open: [
+    {k:"sep", t:"You commented STRONG on a Reel"},
+    {k:"in", html:`<p>Hi Linda! This is Chang Yin's team assistant (automated). Quick note before anything: Chang Yin is an AI character. Our sessions are real, and they're built on published exercise guidelines for older adults.</p><p>You asked for the 8-minute Chair Builder, the routine that trains the muscles you use to stand up from a chair. Want it?</p>`},
+    {k:"qr", opts:[["send","Yes, send it",1]]}
+  ],
+  send: [
+    {k:"out", t:"Yes, send it"},
+    {k:"in", html:`<p>Here it is:</p><span class="linkcard">${DOMAIN}/s/l1<br>The 8-Minute Chair Builder, free follow-along</span><p>What you need: a sturdy chair against a wall and a kitchen counter.</p><p>Chang Yin's note: "Do it slowly the first time. If you need your hands, use your hands. That's where we start, not where we stay."</p><p>Safety: stop if anything hurts sharply or you feel dizzy or short of breath. If you've had a recent fall, surgery or heart problem, check with your doctor first.</p><p>Want the large-print printable card by email too?</p>`},
+    {k:"qr", opts:[["email","Yes, email it",1],["noemail","No thanks",0]]}
+  ],
+  email: [
+    {k:"out", t:"Yes, email it"},
+    {k:"in", html:`<p>What's your email? (Tap it below if Instagram suggests it.)</p>`},
+    {k:"qr", opts:[["emailgiven","linda.m@example.com",1]]}
+  ],
+  emailgiven: [
+    {k:"out", t:"linda.m@example.com"},
+    {k:"in", html:`<p>Sent to linda.m@example.com. By sharing your email you'll get emails from Strong Years, including your printable card and short daily tips. Unsubscribe anytime with one click.</p>`},
+    {k:"go", to:"checkin"}
+  ],
+  noemail: [
+    {k:"out", t:"No thanks"},
+    {k:"in", html:`<p>No problem. The routine is all yours at the link above.</p>`},
+    {k:"go", to:"checkin"}
+  ],
+  checkin: [
+    {k:"sep", t:"The next day, 22 hours later"},
+    {k:"in", html:`<p>Did you try the Chair Builder? How did your legs feel?</p>`},
+    {k:"qr", opts:[["easy","Easy",0],["hard","Hard",0],["later","Haven't tried yet",0]]}
+  ],
+  easy: [
+    {k:"out", t:"Easy"},
+    {k:"in", html:`<p>Good sign. Then you're ready to find out your Strength Age: a free 3-minute test with the same chair. You'll get a number and a 7-day plan.</p><span class="linkcard">${DOMAIN}/q/a</span>`},
+    {k:"qr", opts:[["test","Take the test",1]]}
+  ],
+  hard: [
+    {k:"out", t:"Hard"},
+    {k:"in", html:`<p>That's honest, and very normal. Here's the fully seated version: <span class="linkcard">${DOMAIN}/s/l1c</span></p><p>Chang Yin's note: "Hard means we found the right place to start." When you're ready, the free Strength Age test will build your plan from exactly where you are.</p>`},
+    {k:"qr", opts:[["test","Take the test",1]]}
+  ],
+  later: [
+    {k:"out", t:"Haven't tried yet"},
+    {k:"in", html:`<p>Here's the 3-minute version for today: <span class="linkcard">${DOMAIN}/s/l1s</span></p><p>Three minutes is still a win. And when you're ready, the free Strength Age test takes 3 minutes too.</p>`},
+    {k:"qr", opts:[["test","Take the test",1]]}
+  ]
+};
+function dmItems(){
+  const out = [];
+  const keys = S.dm.length ? S.dm : ["open"];
+  keys.forEach((k, idx)=>{
+    (DM_SCRIPT[k]||[]).forEach(it=>{
+      if(it.k==="go") return;
+      if(it.k==="qr" && idx !== keys.length-1) return; // old quick replies disappear once answered
+      out.push(it);
+    });
+  });
+  return out;
+}
+function rDM(){
+  if(!S.dm.length) S.dm = ["open"];
+  const items = dmItems().map(it=>{
+    if(it.k==="sep") return `<div class="sep">${esc(it.t)}</div>`;
+    if(it.k==="in") return `<div class="msg in">${it.html}</div>`;
+    if(it.k==="out") return `<div class="msg out">${esc(it.t)}</div>`;
+    if(it.k==="qr") return `<div class="qr" role="group" aria-label="Quick replies">${it.opts.map(o=>`<button type="button" class="${o[2]?"primary":""}" data-act="dm" data-k="${o[0]}">${esc(o[1])}</button>`).join("")}</div>`;
+    return "";
+  }).join("");
+  return `
+  <div class="dm-head">
+    <figure style="margin:0">${chang(52)}</figure>
+    <div class="who"><b>changyin</b><span class="pill">AI-generated profile</span></div>
+  </div>
+  <div class="dm-body" aria-live="polite">
+    <div class="ctx">
+      <figure style="margin:0;flex:none">${chang(64)}</figure>
+      <div class="stack-s" style="min-width:0">
+        <p><b>Reel:</b> "Stand up. I'm 74. Watch." The 8-minute Chair Builder. Caption line 1: Comment STRONG for the full routine.</p>
+        <p><b>linda.m.walks:</b> STRONG</p>
+        <p><b>changyin</b> replied: Sent. Eight minutes, one chair.</p>
+      </div>
+    </div>
+    ${items}
+  </div>
+  <p class="wrap small" style="padding-block:0 24px">This screen mocks the Instagram comment-to-DM flow sent by ManyChat. Linda is an example viewer.</p>`;
+}
+function dmTap(k){
+  if(k==="test"){ S.dm.push("test"); S.qcur="intro"; S.qstack=[]; go("quiz"); return; }
+  S.dm.push(k);
+  const block = DM_SCRIPT[k];
+  const goItem = block && block.find(i=>i.k==="go");
+  if(goItem) S.dm.push(goItem.to);
+  save(); render();
+  const body = document.querySelector(".dm-body");
+  const last = body && body.lastElementChild;
+  if(last) last.scrollIntoView({block:"end", behavior: reduce ? "auto" : "smooth"});
+}
+
+/* =========================================================
+   2. STRENGTH AGE QUIZ (FUNNEL.md 3.1)
+   ========================================================= */
+const Q = {
+  q1:{n:1, t:"Who is taking the test today?", o:["Me","I'm helping my mom, dad or partner take it right now","I'm taking it for someone else who isn't here (you'll answer the questions only; skip the tests)"]},
+  q2:{n:2, t:"Are you a woman or a man?", o:["Woman","Man","Prefer not to say (we'll compare with combined averages)"]},
+  q4:{n:4, t:"Safety check first. In the last few months, has any of these happened?", hint:"Tick all that apply.", multi:true, none:5,
+      o:["Chest pain, pressure or tightness when active","Dizziness, fainting or nearly fainting","A fall","Surgery or a hospital stay","A doctor told you to limit physical activity","None of these"]},
+  q5:{n:5, t:"Do you use any of these to get around?", o:["No","A cane, sometimes","A cane, most of the time","A walker","A wheelchair"]},
+  q6:{n:6, t:"Can you open a new, sealed jar?", o:["Easily","With some effort","I usually need a tool or someone's help","No"]},
+  q7:{n:7, t:"Could you carry two full gallon jugs of water (about 8 pounds each) from the car to the kitchen?", o:["Yes, easily","Yes, with a rest","Only one at a time","No"]},
+  q8:{n:8, t:"If you were sitting on the floor, how would you get up?", o:["Without using my hands","Using one hand or a knee","I'd need furniture to push on","I couldn't get up on my own","I'm not sure, I avoid the floor"]},
+  q9:{n:9, t:"A flight of about 10 stairs. What's true for you?", o:["Up without holding the rail","Up, holding the rail","Up, holding the rail and stopping to rest","I avoid stairs"]},
+  q10:{n:10, t:"Walking with people your age, you usually:", o:["Keep up easily or lead","Keep up, but it takes effort","Fall behind","I don't walk far"]},
+  q11:{n:11, t:"In a normal week, how often do you do strength exercise (weights, bands, bodyweight)?", o:["2 or more times","Once","Rarely","Never"]},
+  q12:{n:12, t:"Anywhere that often aches or feels stiff?", hint:"Tick all that apply.", multi:true, none:5, o:["Knees","Hips","Lower back","Shoulders or neck","Hands or wrists","Nothing in particular"]},
+  q13:{n:13, t:"A year from now, what would you most love to do more easily?", o:["Get down on the floor with my grandchildren, and back up","Travel and walk all day without paying for it","Garden, carry and lift things myself","Keep living independently in my own home","Feel steady and stop worrying about falling","Look and feel strong again"]},
+  q14:{n:14, t:"How many minutes could you give this, most days?", o:["5","10","15","20 or more"]}
+};
+const ORDER = ["q6","q7","q8","q9","q10","q11","q12","q13","q14"];
+function safetyFlag(){ return (S.a.q4||[]).some(i=>i!==5); }
+function seatedRoute(){ return (S.a.q5===3 || S.a.q5===4); }
+function nextOf(cur){
+  const a = S.a;
+  switch(cur){
+    case "intro": return "q1";
+    case "q1": return "q2";
+    case "q2": return "q3";
+    case "q3": return "q4";
+    case "q4": return safetyFlag() ? "safe" : "q5";
+    case "safe": return "q6";
+    case "q5": return seatedRoute() ? "tarm" : (a.q1===2 ? "q6" : "t1");
+    case "tarm": return "q6";
+    case "t1": return "t2";
+    case "t2": return "q6";
+    case "q14": return "lead";
+    case "lead": return "done";
+  }
+  const i = ORDER.indexOf(cur);
+  return i>=0 ? ORDER[i+1] : "intro";
+}
+function qAdvance(){
+  const nx = nextOf(S.qcur);
+  if(nx==="done"){ go("result"); return; }
+  S.qstack.push(S.qcur); S.qcur = nx; save(); stopTimers(); render(); window.scrollTo(0,0);
+  const h = document.querySelector("#screen h1, #screen h2"); if(h){ h.setAttribute("tabindex","-1"); h.focus({preventScroll:true}); }
+}
+function qBack(){
+  stopTimers();
+  if(!S.qstack.length){ go("dm"); return; }
+  S.qcur = S.qstack.pop(); save(); render(); window.scrollTo(0,0);
+}
+function qHeader(label, pct){
+  return `<div class="stack-s">
+    <div class="qtop"><button type="button" class="textbtn" data-act="qback">Back</button><span class="qcount">${label}</span></div>
+    <div class="meter" aria-hidden="true"><span style="width:${pct}%"></span></div></div>`;
+}
+const QFOOT = `<p class="small">Created with AI characters. Not medical advice. The tests come from published senior fitness research (CDC STEADI, Rikli &amp; Jones).</p>`;
+function qPct(){ const seq=["intro","q1","q2","q3","q4","q5","t1","t2",...ORDER,"lead"]; const i = Math.max(0, seq.indexOf(S.qcur==="safe"?"q5":S.qcur==="tarm"?"t1":S.qcur)); return Math.round(i/(seq.length-1)*100); }
+function wrapQuiz(inner){ return `${BRAND}<div class="wrap stack">${inner}${QFOOT}</div>`; }
+
+function rQuiz(){
+  const c = S.qcur, a = S.a;
+  if(c==="intro") return `${STRIP}<div class="wrap stack">
+    ${charBlock("chang", 96, `<p><b>Chang Yin</b> will count you in. "Stand up. Try this with me."</p>`)}
+    <h1>What's your Strength Age?</h1>
+    <p>Your birthday gives you one age. Your legs and balance give you another. Find yours with two simple fitness tests used in senior fitness research, and get a free 7-day plan.</p>
+    <div class="card stack-s"><p><b>You'll need</b></p><p>A sturdy chair without wheels pushed against a wall, a kitchen counter, and 3 minutes. If you can, have someone nearby.</p></div>
+    <button type="button" class="btn" data-act="qnext">Start the test</button>
+    <p class="small">Chang Yin is an AI character. The tests come from published senior fitness research (CDC STEADI, Rikli &amp; Jones).</p>
+    <button type="button" class="textbtn" data-act="qback">Back to the DM</button>
+  </div>`;
+
+  if(Q[c]){
+    const q = Q[c];
+    const label = `Question ${q.n} of 14`;
+    const title = c==="q2" && a.q1>0 ? "Is the person taking the test a woman or a man?" : q.t;
+    let opts;
+    if(q.multi){
+      const sel = a[c] || [];
+      opts = q.o.map((o,i)=>`<button type="button" class="opt" role="checkbox" aria-checked="${sel.includes(i)}" data-act="qmulti" data-i="${i}"><span class="box" aria-hidden="true"></span><span>${esc(o)}</span></button>`).join("");
+      const any = sel.length>0;
+      opts += `<button type="button" class="btn ${any?"jade":"outline"}" data-act="${any?"qnext":"noop"}">${any?"Continue":"Tick at least one to continue"}</button>`;
+    } else {
+      opts = q.o.map((o,i)=>`<button type="button" class="opt" aria-pressed="${a[c]===i}" data-act="qpick" data-i="${i}"><span class="dot" aria-hidden="true"></span><span>${esc(o)}</span></button>`).join("");
+    }
+    return wrapQuiz(`${qHeader(label, qPct())}<h1 style="font-size:1.7rem">${esc(title)}</h1>${q.hint?`<p>${q.hint}</p>`:""}<div class="stack-s" role="group" aria-label="Answers">${opts}</div>`);
+  }
+
+  if(c==="q3"){
+    const v = a.q3 == null ? 68 : a.q3;
+    return wrapQuiz(`${qHeader("Question 3 of 14", qPct())}
+      <h1 style="font-size:1.7rem">${a.q1>0 ? "How old is the person taking the test?" : "How old are you?"}</h1>
+      <div class="stepper"><button type="button" data-act="age" data-d="-1" aria-label="One year younger">−</button>
+        <input id="age" type="number" inputmode="numeric" min="45" max="95" value="${v}" aria-label="Age in years">
+        <button type="button" data-act="age" data-d="1" aria-label="One year older">+</button></div>
+      <p id="agenote" ${v<60?"":"hidden"}>Our comparisons start at age 60, so we'll compare you with 60 to 64-year-olds. You'll likely look younger than you are. Good.</p>
+      <button type="button" class="btn jade" data-act="agego">Continue</button>`);
+  }
+
+  if(c==="safe") return wrapQuiz(`${qHeader("Safety check", qPct())}
+      ${charBlock("chang", 80, `<p><b>Safe Mode is on.</b></p>`)}
+      <h1 style="font-size:1.7rem">Thank you for telling us.</h1>
+      <p>Let's skip the standing tests today. Please show your doctor the plan we'll make you before you start. We'll include a one-page summary you can print or forward.</p>
+      <p>Next: a few short questions about everyday things, no standing needed.</p>
+      <button type="button" class="btn jade" data-act="qnext">Continue with the questions</button>`);
+
+  if(c==="t1"){
+    const r = a.reps == null ? 10 : a.reps;
+    const cane = a.q5===1 || a.q5===2;
+    return wrapQuiz(`${qHeader("Test 1 of 2", qPct())}
+      <h1 style="font-size:1.7rem">Test 1: Stand up, sit down, for 30 seconds.</h1>
+      <ol class="stack-s" style="padding-left:1.3em;margin:0">
+        <li>Push a sturdy chair against a wall so it can't slide.</li>
+        <li>Sit in the middle of the seat, feet flat, about shoulder-width apart.</li>
+        <li>Cross your arms over your chest. If you need your hands to stand, that's okay, just tick the box below.</li>
+        <li>When Chang Yin says "Go", stand all the way up, then sit all the way down. That's one.</li>
+        <li>Repeat as many times as you comfortably can in 30 seconds. Stop anytime if anything hurts, you feel dizzy or short of breath.</li>
+      </ol>
+      ${cane?`<p class="alert">You use a cane: keep the kitchen counter within reach and have someone nearby. Using your hands is fine.</p>`:""}
+      <div class="timerbox">
+        <div class="timer" id="tdisp" aria-hidden="true">30</div>
+        <p id="tmsg" aria-live="assertive">Count your own stands, or let your helper count.</p>
+        <button type="button" class="btn" id="tbtn" data-act="tstart">Start my 30 seconds</button>
+        <label class="tick small" style="align-self:flex-start;text-align:left"><input type="checkbox" id="voice" ${S.voice?"checked":""}> <span>Count out loud with my device's voice (plus a chime at the end)</span></label>
+      </div>
+      <div class="stack-s">
+        <label for="reps"><b>How many full stands did you do?</b></label>
+        <div class="stepper"><button type="button" data-act="reps" data-d="-1" aria-label="One fewer">−</button>
+          <input id="reps" type="number" inputmode="numeric" min="0" max="30" value="${r}">
+          <button type="button" data-act="reps" data-d="1" aria-label="One more">+</button></div>
+        <label class="tick"><input type="checkbox" id="hands" ${a.hands?"checked":""}> <span>I needed to use my hands or arms.</span></label>
+      </div>
+      <button type="button" class="btn jade" data-act="t1go">Save and go to test 2</button>`);
+  }
+
+  if(c==="tarm"){
+    const r = a.curls == null ? 10 : a.curls;
+    return wrapQuiz(`${qHeader("Seated test", qPct())}
+      <h1 style="font-size:1.7rem">A seated test instead: arm curls for 30 seconds.</h1>
+      <p>Hold a full water bottle in your stronger hand. Sit tall. Curl it up to your shoulder and back down, as many times as you comfortably can in 30 seconds. We record this for tracking only; it doesn't set a Strength Age.</p>
+      <div class="timerbox">
+        <div class="timer" id="tdisp" aria-hidden="true">30</div>
+        <p id="tmsg" aria-live="assertive">Count your curls.</p>
+        <button type="button" class="btn" id="tbtn" data-act="tstart">Start my 30 seconds</button>
+      </div>
+      <label for="curls"><b>How many curls?</b></label>
+      <div class="stepper"><button type="button" data-act="curls" data-d="-1" aria-label="One fewer">−</button>
+        <input id="curls" type="number" inputmode="numeric" min="0" max="40" value="${r}">
+        <button type="button" data-act="curls" data-d="1" aria-label="One more">+</button></div>
+      <button type="button" class="btn jade" data-act="tarmgo">Save and continue</button>`);
+  }
+
+  if(c==="t2"){
+    const names = ["Feet side by side, touching","One foot slightly ahead, the arch of the front foot beside the big toe of the back foot","One foot directly in front of the other, heel touching toe","Stand on one foot"];
+    const stages = names.map((n,i)=>`<div class="stage"><div class="row" style="flex-wrap:nowrap;align-items:flex-start">${feet(i)}<p><b>Position ${i+1}.</b> ${n}</p></div>
+      <button type="button" class="btn jade" data-act="bstart" data-i="${i}" id="b${i}">Time 10 seconds</button></div>`).join("");
+    const ans = ["I couldn't hold position 1","Position 1: feet together","Position 2: half step","Position 3: heel to toe","Position 4: one foot"];
+    return wrapQuiz(`${qHeader("Test 2 of 2", qPct())}
+      <h1 style="font-size:1.7rem">Test 2: How steady are you?</h1>
+      <p>Stand next to your kitchen counter with one hand hovering just above it. Do not hold on unless you need to; if you need to, that stage is finished. Hold each position for 10 seconds. Stop at the first one you can't hold for 10 seconds without grabbing the counter or moving your feet.</p>
+      <div>${stages}</div>
+      <p id="bmsg" aria-live="assertive" class="small">Tap a timer when you're in position.</p>
+      <h2 style="font-size:1.35rem">Which was the last position you held for the full 10 seconds?</h2>
+      <div class="stack-s" role="group" aria-label="Answers">${ans.map((o,i)=>`<button type="button" class="opt" aria-pressed="${a.stage===i}" data-act="stage" data-i="${i}"><span class="dot" aria-hidden="true"></span><span>${o}</span></button>`).join("")}</div>`);
+  }
+
+  if(c==="lead"){
+    const L = S.lead;
+    return wrapQuiz(`${qHeader("Last step", 100)}
+      <h1 style="font-size:1.8rem">Your Strength Age is ready.</h1>
+      <p>Where should we send it, along with your 7-day plan and printable cards?</p>
+      <form id="leadform" class="stack" novalidate>
+        <div class="field"><label for="lname">First name</label><input id="lname" autocomplete="given-name" value="${esc(L.name)}"></div>
+        <div class="field"><label for="lemail">Email</label><input id="lemail" type="email" autocomplete="email" value="${esc(L.email)}"></div>
+        <label class="tick small"><input type="checkbox" id="lsms" ${L.sms?"checked":""}> <span>Text me my daily session link. Msg frequency varies, about 1/day. Msg &amp; data rates may apply. Reply STOP to cancel, HELP for help. Consent is not a condition of purchase.</span></label>
+        <div class="field" id="lphonewrap" ${L.sms?"":"hidden"}><label for="lphone">Mobile number</label><input id="lphone" type="tel" autocomplete="tel" value="${esc(L.phone)}"></div>
+        <p class="alert" id="leaderr" hidden></p>
+        <button type="submit" class="btn">Show my Strength Age</button>
+        <p class="small">We never sell your information. Unsubscribe anytime.</p>
+      </form>`);
+  }
+  S.qcur = "intro"; return rQuiz();
+}
+function feet(i){
+  const L = '<rect x="0" y="0" width="12" height="28" rx="6" fill="currentColor"/>';
+  const pos = [
+    [[8,6],[22,6]],
+    [[10,2],[22,12]],
+    [[16,0],[16,30]],
+    [[16,14]]
+  ][i];
+  return `<svg class="feet" width="44" height="60" viewBox="0 0 44 60" aria-hidden="true">${pos.map(p=>`<g transform="translate(${p[0]} ${p[1]})">${L}</g>`).join("")}</svg>`;
+}
+
+/* ---------- timers ---------- */
+let T = null, BT = null, actx = null;
+function stopTimers(){
+  if(T){ clearInterval(T.id); T=null; }
+  if(BT){ clearInterval(BT.id); BT=null; }
+  try{ if(window.speechSynthesis) speechSynthesis.cancel(); }catch(e){}
+  releaseWake();
+}
+let wake=null;
+async function holdWake(){ try{ if(navigator.wakeLock) wake = await navigator.wakeLock.request("screen"); }catch(e){ wake=null; } }
+function releaseWake(){ try{ if(wake) wake.release(); }catch(e){} wake=null; }
+function beep(freq, dur){
+  try{
+    actx = actx || new (window.AudioContext||window.webkitAudioContext)();
+    const o = actx.createOscillator(), g = actx.createGain(), t = actx.currentTime;
+    o.frequency.value = freq||880; o.connect(g); g.connect(actx.destination);
+    g.gain.setValueAtTime(0.001,t); g.gain.exponentialRampToValueAtTime(0.3,t+0.02); g.gain.exponentialRampToValueAtTime(0.001,t+(dur||0.2));
+    o.start(t); o.stop(t+(dur||0.2)+0.05);
+  }catch(e){}
+}
+function say(txt){ if(!S.voice) return; try{ if(window.speechSynthesis){ const u = new SpeechSynthesisUtterance(txt); u.rate=0.9; speechSynthesis.cancel(); speechSynthesis.speak(u);} }catch(e){} }
+function startChairTimer(){
+  if(T){ // stop
+    stopTimers(); $("#tdisp").textContent="30"; $("#tmsg").textContent="Timer stopped. Enter your count below, or start again."; $("#tbtn").textContent="Start my 30 seconds"; return;
+  }
+  const t0 = Date.now(); let said10=false, lastCount=null;
+  beep(660,.12); holdWake();
+  T = {id:null};
+  $("#tbtn").textContent = "Stop the timer";
+  const disp = $("#tdisp"), msg = $("#tmsg");
+  const tick = ()=>{
+    const el = (Date.now()-t0)/1000;
+    if(el < 3){
+      const n = 3-Math.floor(el);
+      if(n!==lastCount){ lastCount=n; disp.textContent=n; msg.textContent="Get ready: "+n; say(String(n)); beep(660,.1); }
+      return;
+    }
+    const left = Math.max(0, Math.ceil(33-el));
+    if(lastCount!=="go"){ lastCount="go"; msg.textContent="Go! Stand up, sit down."; say("Go"); beep(990,.25); }
+    disp.textContent = left;
+    if(left<=10 && !said10 && left>0){ said10=true; msg.textContent="10 seconds left."; say("Ten seconds left"); beep(880,.12); }
+    if(el>=33){
+      clearInterval(T.id); T=null; releaseWake();
+      disp.textContent="0"; msg.textContent="Time. Sit down and rest. How many full stands did you do?";
+      beep(784,.25); setTimeout(()=>beep(1046,.45),260); say("Time. Rest.");
+      $("#tbtn").textContent="Start again";
+      const inp = $("#reps")||$("#curls"); if(inp) inp.focus();
+    }
+  };
+  T.id = setInterval(tick, 200); tick();
+}
+function startBalance(i){
+  if(BT){ clearInterval(BT.id); const pb=$("#b"+BT.i); if(pb) pb.textContent="Time 10 seconds"; BT=null; }
+  const t0 = Date.now(), btn = $("#b"+i), msg = $("#bmsg");
+  beep(880,.12);
+  BT = {i, id:setInterval(()=>{
+    const left = Math.max(0, Math.ceil(10-(Date.now()-t0)/1000));
+    btn.textContent = left + " s left";
+    if(left<=0){ clearInterval(BT.id); BT=null; btn.textContent="Done. Again?"; beep(784,.2); setTimeout(()=>beep(1046,.35),220); msg.textContent = `Position ${i+1}: 10 seconds done. Held it without grabbing the counter? Try position ${i<3?i+2:4} next, or pick your answer below.`; }
+  },200)};
+  msg.textContent = `Position ${i+1}: hold still for 10 seconds.`;
+}
+function afterQuizRender(){
+  const f = $("#leadform");
+  if(f){
+    f.addEventListener("submit", e=>{
+      e.preventDefault();
+      const name = $("#lname").value.trim(), email = $("#lemail").value.trim();
+      const err = $("#leaderr");
+      if(!name){ err.textContent="Please add your first name so we can put it on your plan."; err.hidden=false; $("#lname").focus(); return; }
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ err.textContent="Please check your email address. It should look like name@example.com."; err.hidden=false; $("#lemail").focus(); return; }
+      S.lead = {name, email, sms:$("#lsms").checked, phone:$("#lphone").value.trim()};
+      S.co.name = name; S.co.email = email;
+      S.sample = false;
+      qAdvance();
+    });
+    $("#lsms").addEventListener("change", e=>{ $("#lphonewrap").hidden = !e.target.checked; });
+  }
+  const age = $("#age");
+  if(age) age.addEventListener("input", ()=>{ const v=+age.value; $("#agenote").hidden = !(v && v<60); });
+  const v = $("#voice"); if(v) v.addEventListener("change", ()=>{ S.voice = v.checked; save(); });
+}
+
+/* =========================================================
+   SCORING (FUNNEL.md 3.1 scoring logic)
+   ========================================================= */
+// [age band start, women midpoint, men midpoint, STEADI cutoff W, STEADI cutoff M]
+const NORMS = [[60,14.5,16.5,12,14],[65,13.5,15.0,11,12],[70,12.5,14.5,10,12],[75,12.5,14.0,10,11],[80,11.5,12.5,9,10],[85,10.5,11.0,8,8],[90,7.5,9.5,4,7]];
+const W = { q6:[-1,0,2,3], q7:[-2,0,2,4], q8:[-3,0,3,5,2], q9:[-2,0,2,4], q10:[-2,0,2,4], q11:[-2,-1,0,1] };
+const STAGE_NAME = ["","feet-together position","half-step position","heel-to-toe position","one-foot stand"];
+const SAMPLE = {q1:0,q2:0,q3:68,q4:[5],q5:0,reps:12,hands:false,stage:3,q6:1,q7:1,q8:1,q9:1,q10:0,q11:2,q12:[0],q13:4,q14:1};
+function norm(age, sex){
+  const a = Math.max(60, Math.min(95, age));
+  let row = NORMS[0]; NORMS.forEach(r=>{ if(a>=r[0]) row=r; });
+  const band = row[0]===90 ? "90–94" : `${row[0]}–${row[0]+4}`;
+  const mids = [row[1],row[2]], lows=[row[3],row[4]];
+  let mid, low;
+  if(sex===0){ mid=mids[0]; low=lows[0]; } else if(sex===1){ mid=mids[1]; low=lows[1]; } else { mid=(mids[0]+mids[1])/2; low=(lows[0]+lows[1])/2; }
+  const high = 2*mid-low;
+  const r1 = x => Math.round(x);
+  return {band, mid, low:r1(low), high:r1(high), cutoff:low};
+}
+function compute(){
+  let a = S.a;
+  const complete = a.q3!=null && a.q4 && a.q6!=null && a.q14!=null;
+  if(!complete){ a = Object.assign({}, SAMPLE, a); }
+  const age = a.q3==null?68:a.q3, sex = a.q2==null?2:a.q2;
+  const N = norm(age, sex);
+  const sexWord = sex===0?"women":sex===1?"men":"adults";
+  const sv = k => (W[k][a[k]==null?1:a[k]]||0);
+  const Sself = 0.5*(sv("q6")+sv("q7")+sv("q8")+sv("q9")+sv("q10")+sv("q11"));
+  const safety = (a.q4||[]).filter(i=>i!==5);
+  const seated = a.q5===3 || a.q5===4;
+  const aches = (a.q12||[]).filter(i=>i<=2);
+  const F_joint = aches.length>0 && ((a.q9!=null && a.q9>=2) || a.q8===2 || a.q8===3);
+  const R = {age, sex, sexWord, N, S:Sself, safety, seated, aches, F_joint, helper:a.q1, reps:a.reps, hands:!!a.hands, stage:a.stage, curls:a.curls, q13:a.q13, sample:!complete};
+  if(safety.length || seated){
+    R.mode="safe"; R.SA=null; R.profile="P6";
+    const why = ["chest discomfort","dizziness","a recent fall","surgery or a hospital stay","your doctor's advice"];
+    const rs = safety.map(i=>why[i]); if(a.q5===3) rs.push("using a walker"); if(a.q5===4) rs.push("using a wheelchair");
+    R.reason = listJoin(rs);
+    return R;
+  }
+  if(a.q1===2){
+    R.mode="answers";
+    R.SA = Math.max(40, Math.round(age + clamp(2*Sself,-10,10)));
+    R.gap = R.SA-age;
+    R.profile = F_joint ? "P4" : R.gap<=-5 ? "P1" : R.gap>=5 ? "P5" : "P2";
+    return R;
+  }
+  R.mode="tests";
+  const reps = a.reps==null?10:a.reps, stage = a.stage==null?3:a.stage;
+  R.reps = reps; R.stage = stage;
+  let C = clamp(-2.5*(reps-N.mid), -12, 12);
+  if(a.hands) C = Math.max(C, 8);
+  let B = [10,8,5,0,-3][stage];
+  if(age>=80){ if(stage===3) B=-2; if(stage===4) B=-5; }
+  let SA = Math.round(age + C + B + Sself);
+  SA = Math.max(40, clamp(SA, age-15, age+20));
+  R.C=C; R.B=B; R.SA=SA; R.gap=SA-age;
+  if(reps<5 || stage===0){ R.profile="P6"; R.reason = reps<5 ? "standing up from the chair being hard today" : "balance being hard today"; }
+  else if(stage<=2) R.profile="P3";
+  else if(F_joint) R.profile="P4";
+  else if(R.gap<=-5) R.profile="P1";
+  else if(R.gap>=5) R.profile="P5";
+  else R.profile="P2";
+  return R;
+}
+function listJoin(arr){ if(!arr.length) return ""; if(arr.length===1) return arr[0]; return arr.slice(0,-1).join(", ")+" and "+arr[arr.length-1]; }
+
+/* ---------- profile copy (FUNNEL.md P1–P6) ---------- */
+function profileCopy(R){
+  const nm = S.lead.name ? esc(S.lead.name) : "";
+  const Your = nm ? `${nm}, your` : "Your";
+  const abs = Math.abs(R.gap||0);
+  const tests = R.mode==="tests";
+  const range = `${R.N.low} to ${R.N.high}`;
+  const joints = listJoin(R.aches.map(i=>["knees","hips","back"][i]));
+  const jointsCap = joints ? joints.charAt(0).toUpperCase()+joints.slice(1) : "Joints";
+  const estNote = R.mode==="answers" ? " This is an estimate from answers only." : "";
+  const P = {
+    P1:{name:"Steady Oak", head:"Your legs are younger than your birthday. Now let's keep it that way.",
+      body:[ tests ? `${Your} Strength Age is ${R.SA}, which is ${abs} years younger than you are. You stood up ${R.reps} times in 30 seconds; the typical range for your age is ${range}. You held the ${STAGE_NAME[R.stage]} for 10 seconds.` : `${Your} estimated Strength Age is ${R.SA}, which is ${abs} years younger than your birthday age.${estNote}`,
+        "This is the group that has the most to protect. Strength and especially leg power drop fastest when people “coast,” and it usually happens quietly, over a winter, an illness, or a busy year. Your plan is built to push you a little, so you keep the lead you've built."],
+      track:"Strong (Iron once the reps get easy; Steady on tired days)", trackKey:"Strong",
+      days:["Legs, Strong level: tempo sit-to-stands with a water jug, split squats at the counter (12 min)","Balance + quick feet: side steps, heel-toe walk, single-leg reach (10 min)","Mobility + breath: hip openers, thoracic rotations, 5 minutes of slow-exhale breathing (10 min)","Upper body + grip: band rows, wall push-ups to counter push-ups, farmer carries (12 min)","Power day: “fast up, slow down” chair stands, step-ups (10 min)","20-minute tai chi flow, the long one","Rest, walk, and Sun Yoon's high-protein Sunday soup"],
+      expect:"Most people who train 3+ times a week notice the sessions feel easier within two to three weeks. Your chair-stand number may climb by a couple of reps; if you're already near the top of the range, your goal is to hold it and improve your one-leg balance time.",
+      cta:"Start my Steady Oak plan: 7 days for $1", extra:"Want a finish line? Start the 12-week Strong at 70 program on day 1; all six programs are included."},
+    P2:{name:"Rooted but Rusty", head:"You're right about where most people your age are. That's the problem, and the opportunity.",
+      body:[ tests ? `${Your} Strength Age is ${R.SA}. You did ${R.reps} chair stands (typical for your age: ${range}) and held the ${STAGE_NAME[R.stage]}.` : `${Your} estimated Strength Age is ${R.SA}.${estNote}`,
+        "“Average” at your age means the slide has started for most people: the armrests get used a little more each year. The good news is that “average” responds fast to training because you haven't been asking your legs for much. Three short sessions a week is enough to start moving your number."],
+      track:"Steady (Strong on good days)", trackKey:"Steady",
+      days:["Legs: sit-to-stands to a slow count, counter squats, calf raises (9 min)","Balance: the counter balance ladder, heel-toe walk along the counter (8 min)","Morning mobility + breath (8 min)","Upper body + grip: wall push-ups, band rows or towel rows, jug carries (9 min)","Legs + power: faster chair stands, step-ups on the bottom stair (9 min)","15-minute tai chi flow","Rest, a 15-minute walk after lunch, Sun Yoon's egg-and-tofu breakfast"],
+      expect:"A realistic first goal is 1 to 3 more chair stands and one balance stage further. Sessions that feel hard on day 1 usually feel easy by day 14; that's when Chang Yin moves you up.",
+      cta:"Start my plan: 7 days for $1"},
+    P3:{name:"Wobbly Foundations", head:"Your legs have work to do, but first, let's make you steady.",
+      body:[`${nm?nm+", you":"You"} held the ${STAGE_NAME[R.stage]||"first position"} for 10 seconds but not the next one. That tells us exactly where to start. Balance is one of the most trainable things there is, and it often improves faster than strength. We'll begin at the kitchen counter and move you up a stage as each one gets easy.`,
+        "Please mention this result to your doctor at your next visit, especially if you've felt dizzy or unsteady; some causes of unsteadiness, like medicines or inner-ear issues, need a doctor's eye."],
+      track:"Steady, always at the counter (Rebuild on tired days); program: Balance & Steady Feet", trackKey:"Steady",
+      days:["Steady Feet 1: the counter balance ladder, weight shifts, heel and toe raises (8 min)","Legs: sit-to-stands, counter mini-squats (8 min)","Steady Feet 2: head turns while standing steady, reaching (8 min)","Walking Stronger 1: heel-toe walking along the counter, side steps (8 min)","Steady Feet 3 + legs (10 min)","Gentle tai chi, 12 minutes (tai chi has good evidence for balance in older adults)","Rest, plus Chang Yin's home safety checklist: lighting, rugs, grab bars, night lights"],
+      expect:"Our goal for month one is one balance stage further, or the same stage held more confidently. Balance often improves faster than strength.",
+      cta:"Start my Steady Feet plan: 7 days for $1"},
+    P4:{name:"Stiff Engine", head:`Your ${joints||"joints"} ${R.aches.length===1&&R.aches[0]===2?"is":"are"} talking. Here's how to train around ${R.aches.length===1&&R.aches[0]===2?"it":"them"}, and then through ${R.aches.length===1&&R.aches[0]===2?"it":"them"}.`,
+      body:[`${Your} ${R.mode==="answers"?"estimated ":""}Strength Age is ${R.SA}, and you told us your ${joints||"joints"} ache, with stairs or getting off the floor harder than you'd like. Joint aches are common and, for many people with everyday stiffness or arthritis, moving more (carefully) helps more than resting. Strengthening the muscles around the knee and hip is one of the most commonly recommended approaches for knee and hip osteoarthritis.`,
+        "Our rule: some mild discomfort during exercise that settles within a day is usually okay; sharp pain, swelling that lasts, or pain that's worse the next day means back off, and check with your doctor or physical therapist. If you've had a joint replaced, follow your surgeon's precautions first."],
+      track:"Rebuild or Steady depending on the day (use the “sore knee / sore back” button); program: Back Strong or Strong at 70", trackKey:"Rebuild",
+      days:[`${R.aches.includes(0)?"Knees & Stairs 1":R.aches.includes(2)?"Back & Posture 1":"Hip session 1"}: pain-free-range strength (10 min)`,"Morning Unlock mobility (7 min)","Legs on the Rebuild track: seated knee extensions, sit-to-stands to a higher seat (use a cushion) (9 min)","Upper body + grip (8 min)",`${R.aches.includes(0)?"Knees & Stairs 2":R.aches.includes(2)?"Back & Posture 2":"Hip session 2"} (10 min)`,"12-minute gentle tai chi","Rest + walk + Sun Yoon's ginger-and-greens soup (comfort food, not a treatment)"],
+      expect:"A realistic goal is doing the stairs with less effort or a higher chair-stand number using a slightly higher seat. Joint comfort varies week to week; that's why you choose your level every day.",
+      cta:`Start my ${R.aches.includes(0)?"Knees":R.aches.includes(2)?"Back":"Hips"} plan: 7 days for $1`},
+    P5:{name:"Quiet Slide", head:"Your legs are older than you are. Let's go get those years back.",
+      body:[ tests ? `${Your} Strength Age is ${R.SA}, ${abs} years older than your birthday. You did ${R.reps} chair stands; typical for your age is ${range}. This doesn't mean anything is wrong with you. It means your legs haven't been asked to work hard in a while, which is the most fixable problem on this page.` : `${Your} estimated Strength Age is ${R.SA}, ${abs} years older than your birthday.${estNote} This doesn't mean anything is wrong. It means the legs haven't been asked to work hard in a while, which is the most fixable problem on this page.`,
+        "The research here is genuinely encouraging: in supervised studies, even people in their 80s and 90s gained substantial leg strength in a few months of progressive training. The people who gain the most are usually the ones starting from the lowest point."],
+      track:"Rebuild for week 1, then Steady", trackKey:"Rebuild",
+      days:["The Chair Builder: sit-to-stands from a higher seat (add a firm cushion), seated leg lifts (8 min)","Balance at the counter, stages 1 to 3 (7 min)","Morning mobility + breath (7 min)","Upper body + grip on the Rebuild track (8 min)","The Chair Builder 2 (8 min)","10-minute seated tai chi","Rest + 10-minute walk after your biggest meal + Sun Yoon's 30-gram-protein breakfast"],
+      expect:"For many people starting here, 2 to 4 more chair stands in the first month is realistic, and it often shows up first as “I didn't need the armrest.”",
+      cta:"Start my plan: 7 days for $1"},
+    P6:{name:"Gentle Restart", head:"We'll start gently, and we'll start with your doctor in the loop.",
+      body:[ R.mode==="safe" ? `${nm?nm+", thank":"Thank"} you for being honest in the safety questions. Because of ${R.reason}, we skipped the standing tests today. That's the right call.` : `${nm?nm+", thank":"Thank"} you for doing the tests. Because of ${R.reason}, we'll start seated. That's the right call.`,
+        "Here's what we suggest: print or forward the one-page summary below to your doctor or physical therapist and ask, “Is it okay for me to do seated strength and breathing exercises for 10 minutes a day?” Most people in your situation hear “yes, and here's what to avoid,” and you can bring those notes to your plan."],
+      track:"Rebuild (chair-based)", trackKey:"Rebuild",
+      days:["Seated breathing and posture (6 min)","Seated leg strength: knee extensions, marches, heel raises (7 min)","Seated upper body with a towel (6 min)","Seated mobility: neck, shoulders, ankles (6 min)","Seated leg strength 2 (7 min)","Seated tai chi, 8 minutes","Rest + Sun Yoon's soft-food protein recipes"],
+      expect:"", cta:"Start 7 days for $1"}
+  };
+  return P[R.profile];
+}
+
+/* =========================================================
+   3. RESULT
+   ========================================================= */
+function rResult(){
+  const R = compute();
+  S.track = S.track || profileCopy(R).trackKey;
+  const P = profileCopy(R);
+  const retest = new Date(today.getFullYear(), today.getMonth()+1, 1);
+  let card;
+  if(R.SA==null){
+    card = `<div class="sa stack-s"><p><b>Your starting line</b></p><p style="font-family:var(--display);font-size:1.9rem;font-weight:700;line-height:1.15">The Rebuild track (chair-based)</p>
+      <dl><div><dt>Your birthday age</dt><dd class="num">${R.age}</dd></div>${R.curls!=null&&R.seated?`<div><dt>Seated arm curls</dt><dd class="num">${R.curls} in 30 seconds</dd></div>`:""}<div><dt>Your profile</dt><dd>${P.name}</dd></div><div><dt>Retest date</dt><dd>${fmtShort(retest)}</dd></div></dl>
+      <p class="small">No Strength Age today: we skipped the standing tests for your safety. Strength Age is a motivational estimate from published fitness norms, not a medical test.</p></div>`;
+  } else {
+    const gapLine = R.gap===0 ? "That's the same as your birthday age." : `That's ${Math.abs(R.gap)} ${Math.abs(R.gap)===1?"year":"years"} ${R.gap<0?"younger":"older"} than your birthday age.`;
+    card = `<div class="sa">
+      <div class="row" style="justify-content:space-between;align-items:flex-end">
+        <div><p><b>${R.mode==="answers"?"Estimated Strength Age":"Your Strength Age"}</b></p><span class="big num">${R.SA}</span></div>
+        <div style="text-align:right"><p><b>Birthday age</b></p><p style="font-family:var(--display);font-size:2.4rem;font-weight:700;line-height:1" class="num">${R.age}</p></div>
+      </div>
+      <p style="margin-top:12px">${gapLine}</p>
+      <dl>
+        ${R.mode==="tests"?`<div><dt>Chair stands</dt><dd class="num">${R.reps} in 30 seconds${R.hands?", with hands":""}</dd></div><div><dt>Typical for ${R.N.band} ${R.sexWord}</dt><dd class="num">${R.N.low}–${R.N.high}</dd></div><div><dt>Balance</dt><dd>${R.stage>0?`held position ${R.stage} for 10 seconds`:"position 1 not held yet"}</dd></div>`:""}
+        <div><dt>Your profile</dt><dd>${P.name}</dd></div>
+        <div><dt>Retest date</dt><dd>${fmtShort(retest)}</dd></div>
+      </dl>
+      <p class="small" style="margin-top:12px">${R.mode==="answers"?"Estimated from answers only. Take the two tests together for a real number. ":""}Strength Age is a motivational estimate from published fitness norms, not a medical test.</p>
+    </div>`;
+  }
+  const adult = (R.helper===1||R.helper===2) ? `<div class="card stack-s"><h2 style="font-size:1.4rem">Doing this for your mom or dad?</h2>
+    <p>Two options. Give them Strong Years (3 months $49 or 12 months $119, prepaid, never auto-renews) with a welcome card from Sun Yoon. Or start it yourself for $1 and add them as your partner for $8/month if you live together. Either way, you can do the monthly retest together on a video call.</p>
+    <button type="button" class="btn outline" data-act="gift">Give 3 months ($49)</button><button type="button" class="btn" data-act="toOffer" data-arm="trial">Start 7 days for $1</button></div>` : "";
+  let offer;
+  if(R.profile==="P6"){
+    offer = `<div class="card stack">
+      <p>When you're ready, the full chair-based Rebuild track is inside Strong Years. You can try it for 7 days for $1, and we'll remind you 48 hours before it renews.</p>
+      <button type="button" class="btn jade" data-act="savePlan">Save my plan and start when I'm ready</button>
+      <button type="button" class="btn outline" data-act="toOffer" data-arm="trial">Start 7 days for $1</button>
+      <p class="small">On this path the checkout shows no extra offers, by design.</p></div>`;
+  } else {
+    offer = `<div class="card stack">
+      <p><b>Your plan runs inside Strong Years as your Daily Practice. Start it tomorrow.</b></p>
+      <button type="button" class="btn" data-act="toOffer" data-arm="founding">Join as a founding member: $${FOUNDING} today</button>
+      <p class="micro">Then $${FOUNDING}/month, locked while you stay subscribed (pauses included). 14-day money-back guarantee. Cancel online anytime.</p>
+      ${P.extra?`<p>${P.extra}</p>`:""}
+      <button type="button" class="btn outline" data-act="toOffer" data-arm="trial">Or try it first: ${esc(P.cta.replace(/^Start my (.*) plan: /, "").replace(/^Start my plan: /, "").replace(/^Start /, ""))}</button>
+      <p class="micro">$1 today, then $${PRICE}/month after 7 days unless you cancel.</p>
+      <button type="button" class="textbtn" data-act="toOffer" data-arm="trial" data-pack="reset">Rather own something first? 7-Day Strength Reset, $7.</button>
+    </div>`;
+  }
+  return `${STRIP}${BRAND}<div class="wrap stack">
+    ${R.sample?`<p class="alert">These are sample answers, because the quiz was skipped. Take the quiz to see your own result.</p>`:""}
+    ${card}
+    ${charBlock("chang", 84, `<p><b>Chang Yin:</b> “${R.profile==="P6"?"Safe first, then strong. We start in the chair.":R.profile==="P1"?"Good legs. Now we keep them.":R.profile==="P3"?"Hold the counter. Pride is not a safety rail.":"Legs first. Every day, a little."}”</p>`)}
+    <h1 style="font-size:1.9rem">${P.head}</h1>
+    ${P.body.map(p=>`<p>${p}</p>`).join("")}
+    ${R.profile==="P6"?`<button type="button" class="btn outline" data-act="docpdf">Download your one-page summary for your doctor</button>`:""}
+    <div class="stack-s"><h2 style="font-size:1.4rem">Your track</h2><p>${P.track}</p></div>
+    <div class="stack-s"><h2 style="font-size:1.4rem">${R.profile==="P6"?"Your first 7 days (once your doctor says go)":"Your first 7 days"}</h2>
+      <ul class="days">${P.days.map((d,i)=>`<li><b>Day ${i+1}</b><span>${d}</span></li>`).join("")}</ul></div>
+    ${P.expect?`<div class="stack-s"><h2 style="font-size:1.4rem">What to expect by your first retest</h2><p>${P.expect}</p></div>`:""}
+    ${adult}
+    ${offer}
+  </div>`;
+}
+
+/* =========================================================
+   4. OFFER
+   ========================================================= */
+const PACKS = {
+  none:{label:"Just the membership", price:0},
+  reset:{label:"7-Day Strength Reset", price:7, desc:"Seven follow-along sessions and a printable plan, yours to keep."},
+  kitchen:{label:"Sun Yoon's Strong Kitchen + Chang Yin's 12-Week Printable", price:17, desc:"Cheap, high-protein, easy-to-chew recipes with soft-food versions, a weekly grocery template and the 12-week wall plan. Yours to keep."}
+};
+function planInfo(extra){
+  extra = extra||0;
+  const p = S.plan, pack = PACKS[p.pack]||PACKS.none;
+  const I = {};
+  if(p.arm==="trial"){
+    I.today = p.pack==="none" ? 1 : pack.price;
+    I.next = addDays(today,7); I.monthly = PRICE;
+    I.lines = p.pack==="none" ? [["7-day trial of Strong Years",1]] : [[pack.label+" (yours to keep), includes 7 days of Strong Years", pack.price]];
+    I.name = p.pack==="none" ? "7 days for $1" : pack.label;
+    I.terms = `<p><b>Today: ${money(I.today+extra)}.</b>${extra?" That includes The Wall Plan ($9, one time).":""} ${p.pack==="none"?"Your 7-day trial starts now.":`For the ${esc(pack.label)} (yours to keep). It includes 7 days of Strong Years.`}</p>
+      <p><b>On ${fmt(I.next)}, your Strong Years membership renews at $${PRICE}</b>, then $${PRICE} every month on the same date, until you cancel.</p>
+      <p><b>Cancel anytime</b> online in at most two screens at ${DOMAIN}/account, or by replying “cancel” to any of our emails. Cancel before ${fmtShort(I.next)} and you won't be charged again.</p>
+      <p><b>We'll remind you</b> by email 48 hours before your 7 days end, and before every charge after that.</p>
+      <p><b>14-day money-back guarantee</b> on your first full membership charge ($${PRICE}), for 14 days from the day of that charge, self-serve from your account.</p>`;
+    I.consent = `I agree to the automatic renewal terms above: ${money(I.today+extra)} today, then $${PRICE}/month from ${fmtShort(I.next)} until I cancel. I can cancel online anytime.`;
+    I.pay = p.pack==="none" ? "Start my $1 trial" : `Pay ${money(I.today)} and start`;
+    I.under = `Then $${PRICE}/month from ${fmtShort(I.next)}. Cancel anytime online.`;
+  } else {
+    I.today = FOUNDING + pack.price;
+    I.next = addMonths(today,1); I.monthly = FOUNDING;
+    I.lines = [["Founding membership, first month", FOUNDING]]; if(p.pack!=="none") I.lines.push([pack.label+" (yours to keep)", pack.price]);
+    I.name = "Founding membership"+(p.pack!=="none"?" + "+pack.label:"");
+    I.terms = `<p><b>Today: ${money(I.today+extra)}.</b>${extra?" That includes The Wall Plan ($9, one time).":""} Your first month of Strong Years starts now${p.pack!=="none"?`, plus the ${esc(pack.label)} (yours to keep)`:""}.</p>
+      <p><b>On ${fmt(I.next)}, your membership renews at $${FOUNDING}</b>, then $${FOUNDING} every month on the same date, until you cancel.</p>
+      <p><b>Founding price locked:</b> your price stays $${FOUNDING} a month while you stay subscribed (pauses included).</p>
+      <p><b>14-day money-back guarantee:</b> tap Refund in your account within 14 days of today and we refund today's charge in full.</p>
+      <p><b>We'll remind you</b> by email 48 hours before every charge.</p>
+      <p><b>Cancel anytime</b> online in at most two screens at ${DOMAIN}/account, or by replying “cancel” to any of our emails.</p>`;
+    I.consent = `I agree to the automatic renewal terms above: ${money(I.today+extra)} today, then $${FOUNDING}/month from ${fmtShort(I.next)}, every month until I cancel. I can cancel online anytime.`;
+    I.pay = `Pay ${money(I.today)} and join`;
+    I.under = `Then $${FOUNDING}/month from ${fmtShort(I.next)}. Cancel anytime online.`;
+  }
+  return I;
+}
+function rOffer(){
+  const p = S.plan, I = planInfo();
+  const armCard = (arm, title, price, lines) => `<label class="plan"><input type="radio" name="arm" value="${arm}" ${p.arm===arm?"checked":""} data-act="arm">
+    <span class="stack-s" style="min-width:0"><b style="font-size:1.1rem">${title}</b><span class="price">${price}</span><ul>${lines.map(l=>`<li>${l}</li>`).join("")}</ul></span></label>`;
+  const packCard = (k) => { const pk = PACKS[k]; return `<label class="plan"><input type="radio" name="pack" value="${k}" ${p.pack===k?"checked":""} data-act="pack">
+    <span class="stack-s" style="min-width:0"><b>${pk.label}${pk.price?`, $${pk.price}`:""}</b>${pk.desc?`<span>${pk.desc}</span>`:"<span>Start with the membership only.</span>"}
+    ${pk.price?`<span class="small">${p.arm==="trial"?`Includes 7 days of Strong Years, then $${PRICE}/month unless you cancel.`:`Charged today with your first founding month: $${FOUNDING + pk.price} in total.`}</span>`:""}</span></label>`; };
+  return `${STRIP}${BRAND}<div class="wrap stack">
+    <h1>Start your Strong Years.</h1>
+    <p>Your Daily Practice: one new 8–12 minute follow-along session with Chang Yin every day, at your level, with a chair-based version of everything. Plus Sun Yoon's recipes every Sunday and a Strength Age retest every month.</p>
+    <fieldset class="stack-s" style="border:0;padding:0;margin:0"><legend><h2 style="font-size:1.4rem;margin-bottom:10px">Choose how to join</h2></legend>
+      ${armCard("founding","Founding membership",`$${FOUNDING} a month`,["Your first month is charged today.","14-day money-back guarantee, no questions.",`Founding price locked at $${FOUNDING} while you stay subscribed (pauses included).`,`The founding group is capped at ${CAP.toLocaleString("en-US")} members.`])}
+      ${armCard("trial","Or try it first","7 days for $1",[`Then $${PRICE} a month. Renews monthly until you cancel.`,"We remind you by email 48 hours before your 7 days end, and before every charge.","14-day money-back guarantee on your first full $"+PRICE+" charge, counted from that charge."])}
+    </fieldset>
+    ${p.arm==="founding"?`<div class="placeholder small"><b>Founding spots left:</b> [live count from the member database appears here once the page is live. We will not show a number until it is real.]</div>`:""}
+    <fieldset class="stack-s" style="border:0;padding:0;margin:0"><legend><h2 style="font-size:1.4rem;margin-bottom:10px">Want something to keep, too? (optional)</h2></legend>
+      ${packCard("none")}${packCard("reset")}${packCard("kitchen")}
+    </fieldset>
+    <div class="stack-s" id="terms-wrap">
+      <h2 style="font-size:1.4rem">Your terms, in plain words</h2>
+      <div class="terms">${I.terms}</div>
+      <label class="tick" id="oconsent-wrap"><input type="checkbox" id="oconsent" ${S.offerConsent?"checked":""}> <span>${I.consent} <a href="#" data-act="how">Membership &amp; Cancellation Policy</a></span></label>
+      <p class="alert" id="oerr" hidden>Please tick the box above to confirm the membership terms.</p>
+      <button type="button" class="btn" data-act="toCheckout">Continue: ${money(I.today)} today</button>
+      <p class="micro">${I.under}</p>
+    </div>
+    <div class="stack-s"><h2 style="font-size:1.4rem">What's included</h2>
+      <ul class="checklist">
+        <li>Your Daily Practice every day, auto-levelled across Rebuild, Steady, Strong and Iron, with a “sore knee / sore back / low energy today” button</li>
+        <li>All six 12-week programs: Strong at 70, Back Strong, Balance &amp; Steady Feet, Gut Reset with Sun Yoon, Grip &amp; Hands, Walk Stronger</li>
+        <li>The monthly Strength Age retest with your personal chart</li>
+        <li>Sun Yoon's Kitchen: 3 recipes every Sunday, a grocery list, and one remedy with an honest evidence grade</li>
+        <li>A daily message from Chang Yin (AI coach) at the time you choose, and Ask Chang Yin, an AI coach chat</li>
+        <li>Wednesday Live Q&amp;A with a real human coach from our team</li>
+      </ul></div>
+    <div class="stack-s"><h2 style="font-size:1.4rem">What this is, and what it isn't.</h2>
+      <p>A personal trainer once a week costs about $240–400 a month. Strong Years is not physical therapy and it does not replace your doctor or a trainer who can watch you in person. It's what makes the other 29 days of the month count: less than one personal-training session a month, for a coach who shows up every single day.</p></div>
+    <div class="stack-s"><h2 style="font-size:1.4rem">We're new, so we won't show you reviews we don't have.</h2>
+      <p>Other accounts fill this space with quotes that may not be real. We'd rather show you nothing than make something up.</p>
+      <div class="placeholder"><b>Member quotes appear here once real.</b> Each one will be from a verified member, shared with written permission, with first name, last initial and “Member since”. We never pay for reviews or write them ourselves.</div></div>
+    <div class="stack-s"><h2 style="font-size:1.4rem">Meet the two of them.</h2>
+      <div class="pair">
+        ${charBlock("chang", 110, `<p><b>Chang Yin</b>, 74, a retired welder who trains in his California garage every morning. “Measure twice. Lift once.”</p>`)}
+        ${charBlock("sun", 110, `<p><b>Sun Yoon</b>, 76, his wife. Honest to a fault. She'll tell you your breakfast is too small.</p>`)}
+      </div>
+      <div class="card"><p>Chang Yin and Sun Yoon are AI characters, and their life story is made up. They are not real people, not doctors, and not religious teachers. The practices and recipes are real. Each one is built from published guidelines for older adults.</p></div></div>
+    <div><h2 style="font-size:1.4rem;margin-bottom:8px">Questions</h2>
+      <details><summary>Is Chang Yin real?</summary><p>No. Chang Yin and Sun Yoon are AI characters created by our team. Their story is invented. What is real: the exercises, the progressions and the recipes, built from published exercise and nutrition guidelines for older adults.</p></details>
+      <details><summary>What happens after I join?</summary><p>${p.arm==="trial"?`Your trial costs $1. 48 hours before it ends, we email you a reminder. If you do nothing, your membership continues at $${PRICE} per month until you cancel.`:`Your first month is charged today. If you do nothing, your membership continues at $${FOUNDING} per month on the same date, until you cancel. Changed your mind within 14 days? Tap Refund.`}</p></details>
+      <details><summary>How do I cancel?</summary><p>Go to Account → Membership → Cancel, or reply “cancel” to any of our emails. You'll see one option (pause or a cheaper plan) and a “Finish canceling” button right beside it, the same size. Two screens at most. Nobody will call you, and you never need to call us to cancel.</p></details>
+    </div>
+    <button type="button" class="btn" data-act="toCheckout">Continue: ${money(I.today)} today</button>
+  </div>`;
+}
+
+/* =========================================================
+   5. CHECKOUT (mock)
+   ========================================================= */
+function isGentle(){ return compute().profile==="P6" && !compute().sample; }
+function rCheckout(){
+  const c = S.co, gentle = isGentle(), extra = (c.bump && !gentle) ? 9 : 0;
+  const I = planInfo(extra), total = I.today + extra;
+  const heading = S.plan.arm==="trial" ? (S.plan.pack==="none" ? "Start your 7 days of Strong Years for $1" : S.plan.pack==="reset" ? "Get the 7-Day Strength Reset" : "Get Sun Yoon's Strong Kitchen") : "Become a founding member";
+  return `${STRIP}<div class="wrap stack">
+    <p class="alert">Prototype checkout. No card is charged, and nothing you type leaves this page.</p>
+    <h1 style="font-size:1.9rem">${heading}</h1>
+    <div class="row" style="flex-wrap:nowrap;align-items:flex-start">${chang(64)}<p>Your Daily Practice: a new 8–12 minute session every day · Monthly Strength Age retest · Sun Yoon's Sunday recipes · Wednesday live Q&amp;A with a real human coach.</p></div>
+    <table class="receipt"><tbody>
+      ${I.lines.map(l=>`<tr><td>${esc(l[0])}</td><td>${money(l[1])}</td></tr>`).join("")}
+      ${c.bump&&!gentle?`<tr><td>The Wall Plan</td><td>$9</td></tr>`:""}
+      <tr class="total"><td>Today</td><td>${money(total)}</td></tr></tbody></table>
+    <form id="coform" class="stack" novalidate>
+      <div class="field"><label for="cname">Name</label><input id="cname" autocomplete="name" value="${esc(c.name)}"></div>
+      <div class="field"><label for="cemail">Email</label><input id="cemail" type="email" autocomplete="email" value="${esc(c.email)}"></div>
+      <div class="field"><label for="cphone">Mobile number (optional)</label><input id="cphone" type="tel" autocomplete="tel" value="${esc(c.phone)}"></div>
+      <label class="tick small"><input type="checkbox" id="csms" ${c.sms?"checked":""}> <span>Text me my daily session link. About 1 message a day. Msg &amp; data rates may apply. Reply STOP to cancel, HELP for help. Consent is not a condition of purchase.</span></label>
+      <div class="stack-s"><h2 style="font-size:1.35rem">Your terms</h2><div class="terms">${I.terms}</div></div>
+      <div class="placeholder stack-s"><b>Payment</b><p>Apple Pay, Google Pay or card go here in the live checkout (Stripe). This prototype has no payment fields.</p></div>
+      ${gentle?"":`<label class="plan"><input type="checkbox" id="cbump" ${c.bump?"checked":""}><span class="stack-s" style="min-width:0"><b>Yes, add The Wall Plan for $9.</b><span>A printable 12-week calendar for your fridge plus 12 weekly grocery lists from Sun Yoon. Large print, one page a week. Yours to keep, even if you cancel.</span></span></label>`}
+      <label class="tick" id="cconsent-wrap"><input type="checkbox" id="cconsent" ${c.consent?"checked":""}> <span>${I.consent} <a href="#" data-act="how">Terms</a> · <a href="#" data-act="how">Membership &amp; Cancellation Policy</a></span></label>
+      <p class="alert" id="cerr" hidden></p>
+      <button type="submit" class="btn">${I.pay}${c.bump&&!gentle?" + $9 Wall Plan":""}</button>
+      <p class="micro">${I.under}</p>
+      <ul class="checklist small"><li>Secure payment by Stripe (in the live version)</li><li>Cancel online or by replying to any email. You never need to call</li><li>Built on published exercise guidelines for older adults</li><li>Support: help@${DOMAIN} · On your statement: STRONGYEARS MEMBER</li></ul>
+    </form>
+    <button type="button" class="textbtn" data-act="jump" data-step="offer">Back to the offer</button>
+  </div>`;
+}
+function checkoutSubmit(){
+  const c = S.co, err = $("#cerr");
+  c.name = $("#cname").value.trim(); c.email = $("#cemail").value.trim(); c.phone = $("#cphone").value.trim(); c.sms = $("#csms").checked;
+  const b = $("#cbump"); c.bump = b ? b.checked : false; c.consent = $("#cconsent").checked;
+  save();
+  if(!c.name){ err.textContent="Please add your name for the receipt."; err.hidden=false; $("#cname").focus(); return; }
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(c.email)){ err.textContent="Please check your email address. It should look like name@example.com."; err.hidden=false; $("#cemail").focus(); return; }
+  if(!c.consent){ err.textContent="Please tick the box above to confirm the membership terms."; err.hidden=false; $("#cconsent-wrap").scrollIntoView({block:"center"}); $("#cconsent").focus({preventScroll:true}); return; }
+  const I = planInfo();
+  S.orders = I.lines.map(l=>({label:l[0], price:l[1]}));
+  if(c.bump && !isGentle()) S.orders.push({label:"The Wall Plan", price:9});
+  S.paid = {arm:S.plan.arm, next:I.next.toISOString(), monthly:I.monthly};
+  S.upsell = "u1";
+  go(isGentle() ? "welcome" : "upsell");
+}
+
+/* =========================================================
+   6. UPSELL LADDER
+   ========================================================= */
+const PROGRAMS = ["Strong at 70","Back Strong","Balance & Steady Feet","Gut Reset with Sun Yoon","Grip & Hands","Walk Stronger"];
+function rUpsell(){
+  const u = S.upsell;
+  const head = `<div class="strip">Your order is confirmed. One more thing before your first session.</div>${BRAND}`;
+  if(u==="u1"){
+    const sel = S.prog || "Strong at 70";
+    return `${head}<div class="wrap stack">
+      ${charBlock("chang", 88, `<p><b>Chang Yin:</b> “Something you can finish. Twelve weeks.”</p>`)}
+      <h1>Pick the program you want to keep forever.</h1>
+      <p>Your membership includes all six 12-week programs while you're a member. For $27 once, choose one and keep it forever, even if you cancel one day. Twelve weeks of sessions, a printable progress booklet, and Strength Age checkpoints at weeks 0, 6 and 12.</p>
+      <div class="stack-s" role="radiogroup" aria-label="Programs">${PROGRAMS.map(p=>`<button type="button" class="opt" aria-pressed="${sel===p}" data-act="prog" data-p="${esc(p)}"><span class="dot" aria-hidden="true"></span><span>${esc(p)}</span></button>`).join("")}</div>
+      <p class="terms small">One payment of $27, charged to the card you just used. No subscription.</p>
+      <button type="button" class="btn" data-act="upyes" data-k="u1">Yes, I'll keep ${esc(sel)} forever for $27</button>
+      <button type="button" class="btn outline" data-act="upno" data-k="u1">No thanks, continue</button>
+    </div>`;
+  }
+  if(u==="down"){
+    return `${head}<div class="wrap stack">
+      <h1>Just the paper, then?</h1>
+      <p>The large-print exercise cards, the weekly plan sheets and the fridge Strength Age chart for your program, to print at home or at any drugstore photo counter. $7, yours to keep.</p>
+      <p class="terms small">One payment of $7, charged to the card you just used. No subscription.</p>
+      <button type="button" class="btn" data-act="upyes" data-k="down">Yes, add the printables for $7</button>
+      <button type="button" class="btn outline" data-act="upno" data-k="down">No thanks</button>
+    </div>`;
+  }
+  return `${head}<div class="wrap stack">
+    <h1>Want the three things Chang Yin uses?</h1>
+    <p>You don't need equipment to start. By week 3 or 4, many people are ready for more resistance, and a kit on the table is a good reminder to press play. Inside: 3 resistance loops (light, medium, heavy), a door anchor, and a grip trainer, with a large-print card showing how Chang Yin uses each one.</p>
+    <p class="terms small">One payment of $29, shipped to you. No subscription.</p>
+    <button type="button" class="btn" data-act="upyes" data-k="kit">Yes, send me the kit ($29)</button>
+    <button type="button" class="btn outline" data-act="upno" data-k="kit">No thanks, I'll use water jugs</button>
+  </div>`;
+}
+function upsellAnswer(k, yes){
+  if(k==="u1"){ if(yes){ S.orders.push({label:`Keep ${S.prog||"Strong at 70"} forever`, price:27}); S.upsell="kit"; } else S.upsell="down"; }
+  else if(k==="down"){ if(yes) S.orders.push({label:"Printables", price:7}); S.upsell="kit"; }
+  else { if(yes) S.orders.push({label:"Strong Years Kit", price:29}); go("welcome"); return; }
+  save(); render(); window.scrollTo(0,0);
+}
+
+/* =========================================================
+   7. WELCOME + FIRST 72 HOURS
+   ========================================================= */
+const TODO = [
+  ["Do your first session","Any level, any length. Even the 3-minute version counts."],
+  ["Check your track for tomorrow","Rebuild, Steady, Strong or Iron. Tap “too easy”, “just right” or “too hard”."],
+  ["Set your daily reminder time","Text, email or app notification. When do you have your morning tea?"],
+  ["Find your Strength Age","Your starting line for the monthly retest."],
+  ["Pick your track","“Where should I begin?” Tap the sentence that sounds like you."],
+  ["Print your card or wall chart","Put it on the fridge."],
+  ["Say hello in the Courtyard, ask Chang Yin one question, or add your partner","Any one of the three counts."]
+];
+function rWelcome(){
+  const R = compute();
+  if(!S.orders.length){ const I = planInfo(); S.orders = I.lines.map(l=>({label:l[0], price:l[1]})); S.paid = {arm:S.plan.arm, next:I.next.toISOString(), monthly:I.monthly}; }
+  if(!S.check[3] && R.SA!=null && !R.sample && !S._auto4){ S.check[3]=true; S._auto4=true; save(); }
+  const paid = S.paid || {arm:"trial", next:addDays(today,7).toISOString(), monthly:PRICE};
+  const next = new Date(paid.next);
+  const total = S.orders.reduce((s,o)=>s+o.price,0);
+  const done = S.check.filter(Boolean).length;
+  const nm = S.co.name || S.lead.name;
+  return `${STRIP}${BRAND}<div class="wrap stack">
+    <h1>Welcome to Strong Years${nm?", "+esc(nm.split(" ")[0]):""}.</h1>
+    <p>You're in. Your first Daily Practice takes 8 minutes.</p>
+    <button type="button" class="btn" data-act="firstSession">Start Day 1 now</button>
+    <div class="stack-s">
+      <div class="row" style="justify-content:space-between"><h2 style="font-size:1.45rem">Your first 3 days</h2><span class="qcount num" id="todo-count">${done} of 7 done</span></div>
+      <p>Tap each one when it's done. Any order is fine, and nothing is locked.</p>
+      <ul class="todo">${TODO.map((t,i)=>`<li><label><input type="checkbox" data-act="todo" data-i="${i}" ${S.check[i]?"checked":""}><span><b>${t[0]}</b>${i===3&&R.SA!=null&&!R.sample?`Done in the quiz: Strength Age ${R.SA}.`:t[1]}</span></label></li>`).join("")}</ul>
+      <div class="card" id="reward" ${done===7?"":"hidden"}>${charBlock("sun", 72, `<p><b>First Three Days, done.</b> Sun Yoon's printable Strong Kitchen starter card is unlocked, and a badge is on your calendar. “Good. Now go eat.”</p>`)}</div>
+    </div>
+    <div class="stack-s"><h2 style="font-size:1.45rem">Your receipt</h2>
+      <table class="receipt"><tbody>${S.orders.map(o=>`<tr><td>${esc(o.label)}</td><td>${money(o.price)}</td></tr>`).join("")}<tr class="total"><td>Charged today</td><td>${money(total)}</td></tr></tbody></table>
+      <p class="terms small">${paid.arm==="trial"?`Trial ends ${fmt(next)}. You'll be charged $${PRICE} then, and monthly after that, unless you cancel.`:`Founding membership. Next charge $${FOUNDING} on ${fmt(next)}, then monthly at the same locked price. 14-day money-back guarantee on today's charge.`} Cancel at ${DOMAIN}/account or reply “cancel” to any email. On your statement: STRONGYEARS MEMBER.</p>
+    </div>
+    <button type="button" class="btn jade" data-act="jump" data-step="dash">Go to my Strong Years home</button>
+  </div>`;
+}
+
+/* =========================================================
+   8. MEMBERS DASHBOARD
+   ========================================================= */
+const WEEK = [
+  ["Sunday","Rest + stretch","Gentle full-body stretch and a short walk",8],
+  ["Monday","Strength","Legs: sit-to-stands to a slow count, counter squats, calf raises",9],
+  ["Tuesday","Mobility","Morning Unlock: bed-to-standing mobility, hip hinges at the counter",8],
+  ["Wednesday","Balance","Steady Feet: the counter balance ladder, heel-toe walk along the counter",8],
+  ["Thursday","Strength","Upper body + grip: wall push-ups, towel rows, jug carries",9],
+  ["Friday","Breath + qigong flow","Slow-exhale breathing, 4 seconds in, 6 out, then a gentle qigong flow",10],
+  ["Saturday","Walk-and-talk","A 15-minute walk with Chang Yin talking you through posture and pace",15]
+];
+function rDash(){
+  const R = compute(), P = profileCopy(R);
+  const d = today.getDay(), W0 = WEEK[d];
+  const track = S.track || P.trackKey;
+  const nm = S.co.name || S.lead.name;
+  const sessions = S.check[0] ? 1 : 0;
+  const mondayIdx = [1,2,3,4,5,6,0];
+  const dayCells = mondayIdx.map(i=>`<div class="${i===d?"today ":""}${i===d&&sessions?"done":""}"><span aria-hidden="true">${WEEK[i][0].slice(0,2)}</span><span class="sr">${WEEK[i][0]}${i===d&&sessions?", session done":""}</span></div>`).join("");
+  const swapTxt = S.swap ? `<p class="alert">Swapped for today: the seated version. Same session, no deep knee bends, no standing balance without the counter.</p>` : "";
+  const mins = S.swap ? Math.max(6, W0[3]-2) : W0[3];
+  return `<div class="strip">Chang Yin and Sun Yoon are AI characters. Your coach chat is an AI, not a doctor or physical therapist.</div>
+  <div class="wrap stack">
+    <div class="dash-top"><span class="wordmark">Strong <i>Years</i></span><span class="pill">Members home</span></div>
+    <h1 style="font-size:1.9rem">Good morning${nm?", "+esc(nm.split(" ")[0]):""}.</h1>
+
+    <section class="card stack" aria-labelledby="dp-h">
+      <div class="row" style="justify-content:space-between"><h2 id="dp-h" style="font-size:1.45rem">Today's Daily Practice</h2><span class="qcount">${W0[0]}</span></div>
+      ${charBlock("chang", 80, `<p><b>${W0[1]}, ${mins} minutes</b></p><p>${W0[2]}.</p>`)}
+      ${swapTxt}
+      <div class="stack-s"><p><b>Your track</b></p><div class="tracks" role="group" aria-label="Track">${["Rebuild","Steady","Strong","Iron"].map(t=>`<button type="button" aria-pressed="${t===track}" data-act="track" data-t="${t}">${t}</button>`).join("")}</div></div>
+      <button type="button" class="btn" data-act="firstSession">Start today's session</button>
+      <button type="button" class="btn outline" data-act="swap">${S.swap?"Back to the regular version":"Sore knee, sore back or low energy today?"}</button>
+    </section>
+
+    <section class="card stack-s" aria-labelledby="sw-h">
+      <h2 id="sw-h" style="font-size:1.45rem">Strong Weeks streak</h2>
+      <p>A Strong Week is 3 or more sessions. You get 2 grace days a month, because life happens.</p>
+      <div class="week">${dayCells}</div>
+      <p><b class="num">This week: ${sessions} of 3 sessions.</b> Strong Weeks so far: <span class="num">0</span>. Your first one is ${3-sessions} ${3-sessions===1?"session":"sessions"} away.</p>
+      <p>Strength Age: <b class="num">${R.SA!=null&&!R.sample?R.SA:"not tested yet"}</b> · Retest on ${fmtShort(new Date(today.getFullYear(), today.getMonth()+1, 1))}</p>
+    </section>
+
+    <section class="card stack" aria-labelledby="k-h">
+      <h2 id="k-h" style="font-size:1.45rem">Sun Yoon's Kitchen</h2>
+      ${charBlock("sun", 80, `<p><b>This Sunday:</b> “Grams, not vibes. Thirty grams of protein at breakfast. I checked.”</p>`)}
+      <ul class="checklist">
+        <li>Doenjang jjigae with tofu and zucchini (soft-food version included)</li>
+        <li>Egg-and-tofu breakfast scramble, about 30g protein</li>
+        <li>Miyeok-guk, her seaweed soup, with beef or mussels</li>
+      </ul>
+      <p><b>This week's remedy:</b> ginger tea for an upset stomach. <span class="grade">Some evidence</span></p>
+      <button type="button" class="btn outline" data-act="groceries">Open the grocery list</button>
+    </section>
+
+    <section class="card stack-s" aria-labelledby="c-h">
+      <div class="row" style="justify-content:space-between"><h2 id="c-h" style="font-size:1.45rem">Ask Chang Yin</h2><span class="pill">AI coach</span></div>
+      <p class="small"><b>You're chatting with an AI.</b> Chang Yin is an AI character, not a doctor or physical therapist. For chest pain, a fall with injury or stroke signs, call 911.</p>
+      <div class="chat">
+        <div class="msg in"><p>I'm Chang Yin, an AI character. I'm not a doctor or physical therapist. I can change today's session for you, or explain why we do it. What do you need?</p></div>
+        <div class="msg out">My knee is sore today. Should I skip?</div>
+        <div class="msg in"><p>Don't skip. Swap. Today we do the sore-knee version: seated knee extensions, slow. Mild ache that settles by tomorrow is okay. Sharp pain or swelling, stop and call your doctor. Legs first, but safe first.</p></div>
+      </div>
+      <p class="small">Example conversation. Memory is opt-in, and you can see or delete what the coach remembers.</p>
+      <button type="button" class="btn jade" data-act="chat">Ask Chang Yin a question</button>
+      <button type="button" class="textbtn" data-act="human">Talk to a human coach instead</button>
+    </section>
+
+    <section class="stack-s"><h2 style="font-size:1.35rem">Wednesday Live Q&amp;A</h2><p>A real human coach from our team answers member questions live for 30 minutes. Introduced as a human, always.</p></section>
+  </div>`;
+}
+
+/* =========================================================
+   EVENTS
+   ========================================================= */
+document.addEventListener("click", e=>{
+  const el = e.target.closest("[data-act]"); if(!el) return;
+  const act = el.dataset.act;
+  if(el.tagName==="A") e.preventDefault();
+  switch(act){
+    case "jump": go(el.dataset.step); break;
+    case "restart": stopTimers(); S = fresh(); save(); go("dm"); break;
+    case "dm": dmTap(el.dataset.k); break;
+    case "qnext": qAdvance(); break;
+    case "qback": qBack(); break;
+    case "noop": break;
+    case "qpick": {
+      S.a[S.qcur] = +el.dataset.i; save();
+      el.parentElement.querySelectorAll(".opt").forEach(b=>b.setAttribute("aria-pressed", b===el ? "true":"false"));
+      setTimeout(qAdvance, reduce?120:280); break;
+    }
+    case "qmulti": {
+      const q = Q[S.qcur], i = +el.dataset.i; let sel = (S.a[S.qcur]||[]).slice();
+      if(i===q.none) sel = sel.includes(i) ? [] : [i];
+      else { sel = sel.filter(x=>x!==q.none); sel = sel.includes(i) ? sel.filter(x=>x!==i) : sel.concat(i); }
+      S.a[S.qcur] = sel; save(); render(); break;
+    }
+    case "age": { const inp=$("#age"); inp.value = clamp((+inp.value||68)+ +el.dataset.d,45,95); $("#agenote").hidden = !(+inp.value<60); break; }
+    case "agego": { S.a.q3 = clamp(Math.round(+$("#age").value||68),45,95); qAdvance(); break; }
+    case "reps": case "curls": { const inp=$("#"+act); inp.value = clamp((+inp.value||0)+ +el.dataset.d,0,act==="reps"?30:40); break; }
+    case "tstart": startChairTimer(); break;
+    case "t1go": { S.a.reps = clamp(Math.round(+$("#reps").value||0),0,30); S.a.hands = $("#hands").checked; qAdvance(); break; }
+    case "tarmgo": { S.a.curls = clamp(Math.round(+$("#curls").value||0),0,40); qAdvance(); break; }
+    case "bstart": startBalance(+el.dataset.i); break;
+    case "stage": {
+      S.a.stage = +el.dataset.i; save();
+      el.parentElement.querySelectorAll(".opt").forEach(b=>b.setAttribute("aria-pressed", b===el ? "true":"false"));
+      setTimeout(qAdvance, reduce?120:280); break;
+    }
+    case "toOffer": { S.plan.arm = el.dataset.arm||"trial"; S.plan.pack = el.dataset.pack||"none"; S.offerConsent=false; go("offer"); break; }
+    case "gift": toast("The gift page (3 months $49, 12 months $119, never auto-renews) is a separate page, not built in this prototype."); break;
+    case "savePlan": toast("Saved. In the live funnel we email the plan and the doctor summary, then a “Doctor said yes?” email in 3 days."); break;
+    case "docpdf": toast("In the live funnel this downloads a one-page PDF: your answers, the chair-based plan, the stop rules and a line for your doctor's notes."); break;
+    case "how": toast("“How we make this” lists the published guidelines behind each session and recipe (CDC STEADI, ACSM, PROT-AGE)."); break;
+    case "toCheckout": {
+      const cb = $("#oconsent");
+      if(!cb.checked){ const er=$("#oerr"); er.hidden=false; $("#oconsent-wrap").scrollIntoView({block:"center", behavior: reduce?"auto":"smooth"}); cb.focus({preventScroll:true}); break; }
+      S.offerConsent = true; S.co.consent = false; go("checkout"); break;
+    }
+    case "prog": { S.prog = el.dataset.p; save(); render(); break; }
+    case "upyes": upsellAnswer(el.dataset.k, true); break;
+    case "upno": upsellAnswer(el.dataset.k, false); break;
+    case "firstSession": { S.check[0] = true; save(); toast("The follow-along video player opens here: Chang Yin counts every rep, big captions, a pause button the size of a coaster."); if(S.step==="welcome"||S.step==="dash") render(); break; }
+    case "track": { S.track = el.dataset.t; save(); render(); break; }
+    case "swap": { S.swap = !S.swap; save(); render(); break; }
+    case "groceries": toast("Sun Yoon's printable grocery list opens here, large print, one page."); break;
+    case "chat": toast("The Ask Chang Yin chat opens here, with the AI label on every message."); break;
+    case "human": toast("A real person on our team replies within a day (Mon–Fri)."); break;
+  }
+});
+document.addEventListener("change", e=>{
+  const el = e.target;
+  if(el.dataset && el.dataset.act==="arm"){ S.plan.arm = el.value; S.offerConsent=false; save(); render(); document.querySelector('input[name="arm"]:checked').focus(); }
+  else if(el.dataset && el.dataset.act==="pack"){ S.plan.pack = el.value; S.offerConsent=false; save(); render(); document.querySelector('input[name="pack"]:checked').focus(); }
+  else if(el.id==="oconsent"){ S.offerConsent = el.checked; if(el.checked) $("#oerr").hidden=true; save(); }
+  else if(el.id==="cbump"){ S.co.bump = el.checked; S.co.consent = $("#cconsent").checked; S.co.name=$("#cname").value; S.co.email=$("#cemail").value; S.co.phone=$("#cphone").value; S.co.sms=$("#csms").checked; save(); const y=window.scrollY; render(); window.scrollTo(0,y); $("#cbump").focus({preventScroll:true}); }
+  else if(el.id==="cconsent"){ S.co.consent = el.checked; if(el.checked) $("#cerr").hidden=true; }
+  else if(el.dataset && el.dataset.act==="todo"){
+    S.check[+el.dataset.i] = el.checked; save();
+    const n = S.check.filter(Boolean).length; $("#todo-count").textContent = n+" of 7 done"; $("#reward").hidden = n!==7;
+  }
+  else if(el.id==="jump"){ go(el.value); }
+});
+document.addEventListener("submit", e=>{
+  if(e.target.id==="coform"){ e.preventDefault(); checkoutSubmit(); }
+});
+
+buildNav();
+load();
+render();
+})();
+</script>

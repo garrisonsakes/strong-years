@@ -1,0 +1,13 @@
+{
+  "name": "strong-years-offers",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": ["extensions/*"],
+  "scripts": {
+    "deploy": "shopify app deploy",
+    "dev": "shopify app dev"
+  },
+  "devDependencies": {
+    "@shopify/cli": "^4.8.3"
+  }
+}
