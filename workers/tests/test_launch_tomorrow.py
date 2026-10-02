@@ -69,7 +69,7 @@ def test_time_words_become_evergreen_but_safety_lines_stay():
 def test_handle_allowlist_blocks_foreign_handles_only():
     r = caption_rules.apply("Made with @changyin and @sunyoon.kitchen. Inspired by @yangmunus. mail team@strongyears.com")
     assert r["ok"] is False and r["blocked_handles"] == ["@yangmunus"]
-    assert caption_rules.apply("Follow @changandsun.")["ok"] is True
+    assert caption_rules.apply("Follow @sunyoon.")["ok"] is True
 
 
 def test_fallback_pack_rewrites_time_words_and_holds_foreign_handles(tmp_path):

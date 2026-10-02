@@ -69,7 +69,7 @@ describe("/b keyword and page parsing (pure)", () => {
     expect(cleanKeywordParam("x".repeat(60))).toBeNull();
     expect(cleanPageParam("cy")).toBe("changyin");
     expect(cleanPageParam("yt-sk")).toBe("yt-sunyoon.kitchen");
-    expect(cleanPageParam("changandsun")).toBe("changandsun");
+    expect(cleanPageParam("sunyoon")).toBe("sunyoon");
     expect(cleanPageParam("../etc")).toBeNull();
   });
 });

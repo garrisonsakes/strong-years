@@ -15,7 +15,7 @@ NOW = datetime(2026, 10, 2, 9, 0, tzinfo=timezone.utc)
 PAGES = [
     {"id": "A", "slug": "changyin", "status": "active", "locale": "en-US", "page_dna": {"pillars": ["P01", "P02"], "speakers": ["CHANG", "DUO"]}},
     {"id": "B", "slug": "sunyoon-kitchen", "status": "active", "locale": "en-US", "page_dna": {"pillars": ["P11"], "speakers": ["SUN", "DUO"]}},
-    {"id": "C", "slug": "changandsun", "status": "active", "locale": "en-US", "page_dna": {"pillars": ["P01"], "speakers": ["DUO", "CHANG", "SUN"]}},
+    {"id": "C", "slug": "sunyoon", "status": "active", "locale": "en-US", "page_dna": {"pillars": ["P01"], "speakers": ["DUO", "CHANG", "SUN"]}},
     {"id": "D", "slug": "changyin-strength", "status": "active", "locale": "en-US", "page_dna": {"pillars": ["P01"], "speakers": ["CHANG"]}},
 ]
 CARD = {"post_id": "p1", "page_id": "A", "platform": "instagram",

@@ -171,7 +171,7 @@ def test_loser_downweight_observations_cool_an_arm(cfg):
 
 
 def test_running_bits_every_duo_and_every_third_solo_with_cooldown(cfg):
-    duo_page = {"id": "C", "slug": "changandsun", "page_dna": {"pillars": ["P17", "P16", "P15"], "speakers": ["DUO"]}}
+    duo_page = {"id": "C", "slug": "sunyoon", "page_dna": {"pillars": ["P17", "P16", "P15"], "speakers": ["DUO"]}}
     plan = AL.plan_day(duo_page, "instagram", "2026-10-02", [], cfg, cadence=9, seed=3, now=NOW)
     bits = [s["running_bit"] for s in plan["slots"]]
     cool = cfg["allocator"]["bit_cooldown"]

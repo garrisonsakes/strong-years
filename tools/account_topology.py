@@ -29,18 +29,20 @@ CONTENT = ROOT / "data" / "content"
 ACCOUNTS_CSV = CONTENT / "posting_plan_accounts_90d.csv"
 
 # ---- the topology (canon 6). Each entry is a config row; the governor's scale ladder flips `live_from_rung`.
-YT_CHANNEL = "@strongyears"                 # ONE Shorts channel for every page's distinct cut
-YT_PER_DAY_UNTIL_QUOTA_RAISE = 4             # 10,000 units/day default quota; the raise request is filed on D0 (docs/platform_reviews)
+# Chang and Sun never share an account (Garrison, Oct 2): one YT channel and one FB page PER CHARACTER.
+PAGE_CHARACTER = {"@changyin": "CHANG", "@changyin.strength": "CHANG", "@sunyoon.kitchen": "SUN", "@sunyoon": "SUN"}
+YT_CHANNELS = {"CHANG": "@changyin", "SUN": "@sunyoon"}   # each in its own Google Cloud project = its own quota
+YT_PER_DAY_UNTIL_QUOTA_RAISE = 4             # 10,000 units/day default quota per project; the raise request is filed on D0
 YT_PER_DAY_AFTER_QUOTA_RAISE = 6
 YT_QUOTA_RAISED = False                       # flip when Google approves the extension (LAUNCH_RUNBOOK §11)
-FB_PAGES = {"Strong Years": {"pages": ["@changyin", "@sunyoon.kitchen", "@changandsun", "@changyin.strength"], "live_from_rung": 0},
-            "Strong Years Kitchen": {"pages": [], "live_from_rung": 30_000}}   # page 2 opens at $30K retained (config)
+FB_PAGES = {"Chang Yin": {"pages": ["@changyin", "@changyin.strength"], "live_from_rung": 0},
+            "Sun Yoon": {"pages": ["@sunyoon.kitchen", "@sunyoon"], "live_from_rung": 0}}
 FB_VIDEOS_PER_DAY = 12                       # native Reels per FB page
 FB_LONG_PER_DAY = 2                          # 60-180 s long cuts per FB page
 FB_TEXT_PER_DAY = 1
 FB_PHOTO_PER_DAY = 1
 TT_ACCOUNTS = {                               # IG page -> its own TikTok account (separate handle, separate login, separate device)
-    "@changyin": "@changyin.tt", "@sunyoon.kitchen": "@sunyoon.kitchen.tt", "@changandsun": "@changandsun.tt",
+    "@changyin": "@changyin.tt", "@sunyoon.kitchen": "@sunyoon.kitchen.tt", "@sunyoon": "@sunyoon.tt",
     "@changyin.strength": "@changyin.strength.tt",
     "@donchuy": "@donchuy.tt", "@lupe.cocina": "@lupe.cocina.tt", "@chuyylupe": "@chuyylupe.tt",
 }
@@ -68,7 +70,7 @@ def account_for(page: str, platform: str) -> str | None:
     if platform == "tiktok":
         return TT_ACCOUNTS.get(page)
     if platform == "yt_shorts":
-        return YT_CHANNEL
+        return YT_CHANNELS.get(PAGE_CHARACTER.get(page, ""))
     if platform in ("fb_reels", "fb_text", "fb_photo"):
         return fb_page_for(page)
     return None
@@ -183,16 +185,16 @@ def validate(acc_rows: list[dict], vrows: list[dict]) -> list[str]:
         if r["platform"] == "tiktok" and r["account"] == r["page"]:
             err.append(f"tiktok account equals the IG page handle for {r['file_id']} (canon 6: separate accounts)")
     for (account, plat, variant, d), n in per.items():
-        if plat == "yt_shorts" and (account != YT_CHANNEL or n > yt_per_day()):
-            err.append(f"youtube D{d:+d}: {n} on {account} > {yt_per_day()} (one channel; quota)")
+        if plat == "yt_shorts" and (account not in YT_CHANNELS.values() or n > yt_per_day()):
+            err.append(f"youtube D{d:+d}: {n} on {account} > {yt_per_day()} (one channel per character; quota)")
         if plat == "fb_reels" and variant == "fb_long" and n > FB_LONG_PER_DAY:
             err.append(f"facebook long cuts D{d:+d}: {n} > {FB_LONG_PER_DAY} on {account}")
         if plat == "fb_reels" and variant != "fb_long" and n > FB_VIDEOS_PER_DAY:
             err.append(f"facebook videos D{d:+d}: {n} > {FB_VIDEOS_PER_DAY} on {account}")
     yt_days = Counter(int(r["day_index"]) for r in acc_rows if r["publish"] == "y" and r["platform"] == "yt_shorts")
     for d, n in yt_days.items():
-        if n > yt_per_day():
-            err.append(f"youtube network D{d:+d}: {n} > {yt_per_day()}")
+        if n > yt_per_day() * len(YT_CHANNELS):
+            err.append(f"youtube network D{d:+d}: {n} > {yt_per_day() * len(YT_CHANNELS)}")
     st: Counter = Counter()
     kinds: dict[tuple, set] = defaultdict(set)
     for r in vrows:

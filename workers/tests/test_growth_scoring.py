@@ -114,7 +114,10 @@ def test_winner_needs_six_hours_and_enough_views_and_components(cfg):
     cfg2 = G.load({"scoring": {"classes": {"WINNER": {"min_components": 3}}}})
     r = SC.score_post([snap(900000, h=6)], base, cfg2)                                # views only -> but breakout
     assert r["class"] == "WINNER" and r["breakout"]
-    r = SC.score_post([snap(90000, h=6)], base, cfg2)                                 # one component, no breakout
+    r = SC.score_post([snap(90000, h=6)], base, cfg2)                                 # one component, but >= 5x the page median
+    assert r["class"] == "WINNER" and r["breakout"]
+    cfg3 = G.load({"scoring": {"classes": {"WINNER": {"min_components": 3}, "breakout_rel_median": 0}}})
+    r = SC.score_post([snap(90000, h=6)], base, cfg3)                                 # one component, no breakout
     assert r["class"] != "WINNER"
 
 

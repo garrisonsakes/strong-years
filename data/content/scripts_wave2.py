@@ -203,7 +203,7 @@ dict(id="S198", group="UG-CY--04-5", lane="talking_head", page="@changyin", spea
  yt="Wring a Towel for Stronger Hands (Over 60)", ev=["E06"],
  note="EWGSOP2 (A) as a screening measure only; no cut-off or risk claim.", bitn=8, bit="Mandu the cat", thumb="WRING IT OUT", music="warm soul instrumental"),
 
-dict(id="S199", group="UG-CS--04-5", lane="talking_head", page="@changandsun", speaker="DUO", format="F02", pillar="P03", hcat="CPL",
+dict(id="S199", group="UG-CS--04-5", lane="talking_head", page="@sunyoon", speaker="DUO", format="F02", pillar="P03", hcat="CPL",
  title="Fridge door balance: him versus me", prop="fridge-door mirror reflecting two people standing on one leg", obj="fridge", grammar=["OBJ3","TEST_NOW"],
  beats=[
   ("SUN","Fridge door, both of us, one leg. Stand where you can grab the counter. Try it with us right now.","FRIDGE DOOR BALANCE",f"{DK} | VEO INSERT: the fridge door swings open, both reflected in its steel, each on one leg | CU"),
@@ -218,7 +218,7 @@ dict(id="S199", group="UG-CS--04-5", lane="talking_head", page="@changandsun", s
  regression="Let the raised foot's toes rest lightly on the floor.", cta="WAITLIST",
  skip="Recent ankle sprain? Wait until it heals.",
  caption="Comment WAITLIST for the free waitlist link and Chang's day-1 session.\nFridge-door balance, couples edition: one leg, fingertips over the counter, eyes on something still, up to 10 seconds a side (the one-leg stage of the CDC STEADI 4-Stage Balance Test). Tell us who won in your house.\nWobbly? Keep your toes down. Recent ankle sprain? Wait until it heals.\n" + WL,
- ig=["#couplechallenge","#balancetraining","#changandsun","#over60"], tt=["#couplechallenge","#balance","#over60","#changandsun"],
+ ig=["#couplechallenge","#balancetraining","#sunyoon","#over60"], tt=["#couplechallenge","#balance","#over60","#sunyoon"],
  yt="One-Leg Balance at the Fridge: Husband vs Wife", ev=["E50"],
  note="STEADI one-leg stage (A, tool); no risk claim.", bitn=1, bit="NO MIRROR FLEXING (fridge door)", thumb="WHO HOLDS LONGER?", music="playful swing"),
 
@@ -318,7 +318,7 @@ dict(id="S204", group="UG-CY--03-5", lane="talking_head", page="@changyin", spea
  yt="Stiff Hips in the Morning? Do This in Bed", ev=["E30"],
  note="Hayden 2021 (A) at grade as 'modest'; no cure language.", bitn=13, bit="The welding metaphors", thumb="SEND TO YOUR SISTER", music="soft piano"),
 
-dict(id="S205", group="UG-CS--03-2", lane="talking_head", page="@changandsun", speaker="DUO", format="F09", pillar="P18", hcat="CPL",
+dict(id="S205", group="UG-CS--03-2", lane="talking_head", page="@sunyoon", speaker="DUO", format="F09", pillar="P18", hcat="CPL",
  title="Reply: 'Where do I even begin?'", prop="phone showing a comment, propped on the fruit bowl", obj="comment", grammar=["IF_EVERY"],
  beats=[
   ("SUN","If you ask us every week where to begin, here's the answer. Read it, Chang.","WHERE DO I BEGIN?",f"{DT} | VEO INSERT: a phone propped on the fruit bowl shows the comment 'I'm 71, where do I even start?' | CU"),
@@ -333,11 +333,11 @@ dict(id="S205", group="UG-CS--03-2", lane="talking_head", page="@changandsun", s
  regression="", cta="BEGIN",
  skip="New to exercise and on heart or diabetes medicine? Have a word with your doctor first.",
  caption="Comment BEGIN for the 'Where should I begin?' start menu.\nOur answer to 'where do I even start?': week 1, five chair stands twice a day; then 10 seconds of balance at the counter; then a walk after dinner. The NSCA says start light and progress gradually.\nNew to exercise and on heart or diabetes medicine? Talk to your doctor first.",
- ig=["#beginner","#strengthafter60","#changandsun","#over60"], tt=["#beginnerworkout","#over60","#changandsun","#wheretostart"],
+ ig=["#beginner","#strengthafter60","#sunyoon","#over60"], tt=["#beginnerworkout","#over60","#sunyoon","#wheretostart"],
  yt="'I'm 71. Where Do I Even Start?' Our Answer", ev=["E02","E43"],
  note="NSCA (A) start-light; ACSM screening (E43).", bitn=20, bit="The hidden kettlebell", thumb="WHERE TO BEGIN", music="playful swing"),
 
-dict(id="S206", group="UG-CS--03-3", lane="talking_head", page="@changandsun", speaker="DUO", format="F10", pillar="P18", hcat="MYT",
+dict(id="S206", group="UG-CS--03-3", lane="talking_head", page="@sunyoon", speaker="DUO", format="F10", pillar="P18", hcat="MYT",
  title="Q&A: is walking enough?", prop="question sticker on a printed page", obj="walking", grammar=["MYTH_NOT"],
  beats=[
   ("SUN","Not enough, not useless. Walking is wonderful. It just doesn't train your legs to stand up.","WALKING: NOT ENOUGH ALONE",f"{DL} | VEO INSERT: a printed question sticker 'Isn't walking enough?' slides across the coffee table | CU"),
@@ -352,11 +352,11 @@ dict(id="S206", group="UG-CS--03-3", lane="talking_head", page="@changandsun", s
  regression="", cta="BEGIN",
  skip="Chest pain or unusual breathlessness when you walk? Stop and get checked before adding anything.",
  caption="Comment BEGIN for the 'Where should I begin?' start menu.\nIs walking enough? Walking is great for the heart and mood; the NSCA position statement adds resistance training 2–3 times a week plus balance work for older adults. Walk, then add chair stands and carries.\nChest pain or unusual breathlessness? Get checked first (ACSM).",
- ig=["#walking","#strengthafter60","#changandsun","#over60"], tt=["#walking","#over60","#mythbusting","#changandsun"],
+ ig=["#walking","#strengthafter60","#sunyoon","#over60"], tt=["#walking","#over60","#mythbusting","#sunyoon"],
  yt="Is Walking Enough After 60? Not Quite", ev=["E02","E43"],
  note="NSCA (A); no outcome promise.", bitn=15, bit="Printer ink", thumb="IS WALKING ENOUGH?", music="playful swing"),
 
-dict(id="S207", group="UG-CS--03-4", lane="talking_head", page="@changandsun", speaker="DUO", format="F02", pillar="P01", hcat="CPL",
+dict(id="S207", group="UG-CS--03-4", lane="talking_head", page="@sunyoon", speaker="DUO", format="F02", pillar="P01", hcat="CPL",
  title="Arm curl test with the milk jugs", prop="two milk jugs on the kitchen table", obj="milk", grammar=["WATCH","TEST_NOW"],
  beats=[
   ("SUN","Milk jug curls for thirty seconds. Watch how many I get before he finishes talking.","MILK JUG CURL TEST",f"{DT} | VEO INSERT: two full milk jugs thud onto the kitchen table | CU"),
@@ -371,11 +371,11 @@ dict(id="S207", group="UG-CS--03-4", lane="talking_head", page="@changandsun", s
  regression="A half-full jug.", cta="WAITLIST",
  skip="Elbow or wrist surgery recently? Skip it this time.",
  caption="Comment WAITLIST for the free waitlist link and Chang's day-1 session.\nThe 30-second arm curl from the Senior Fitness Test (7,183 US adults aged 60–94): seated, elbow at your side, 5 lb for women and 8 lb for men. A full gallon of milk is close to 8 lb; a half-full jug is easier.\nElbow or wrist surgery recently? Skip it.\n" + WL,
- ig=["#couplechallenge","#strengthafter60","#changandsun","#over60"], tt=["#couplechallenge","#armcurl","#over60","#changandsun"],
+ ig=["#couplechallenge","#strengthafter60","#sunyoon","#over60"], tt=["#couplechallenge","#armcurl","#over60","#sunyoon"],
  yt="Milk Jug Curl Test: Husband vs Wife", ev=["E49"],
  note="Senior Fitness Test norms (A); Sun's range stated approximately.", bitn=2, bit="I'm older, so I'm right", thumb="MILK JUG TEST", music="playful swing"),
 
-dict(id="S208", group="UG-CS--03-5", lane="insert", page="@changandsun", speaker="DUO", format="F16", pillar="P01", hcat="NUM",
+dict(id="S208", group="UG-CS--03-5", lane="insert", page="@sunyoon", speaker="DUO", format="F16", pillar="P01", hcat="NUM",
  title="The dumpling count and the floor test", prop="two chalked score lines on the garage floor", obj="score", grammar=["TEST_NOW"],
  beats=[
   ("SUN-VO","Score yourself right now. Get down to the floor, then back up. Count what you leaned on.","FLOOR TEST · SCORE YOURSELF",f"{DG} | {HO} | Veo: two chalk score lines on the garage mat, a sturdy chair beside them | CU"),
@@ -390,14 +390,14 @@ dict(id="S208", group="UG-CS--03-5", lane="insert", page="@changandsun", speaker
  regression="Practice only the half-kneel with both hands on the chair.", cta="WAITLIST",
  skip="Can't get down easily, or sore knees? Practice the half-kneel by the chair only.",
  caption="Comment WAITLIST for the free waitlist link and Chang's day-1 session.\nThe sitting-rising test: sit on the floor and stand up, starting at 10 points and losing 1 per hand, knee or forearm support (studied in 2,002 adults aged 51–80). Practice getting up before you need it: kneel, half-kneel, hands on a sturdy chair, stand.\nCan't get down easily or sore knees? Practice the half-kneel at the chair.\n" + WL,
- ig=["#floortest","#strengthafter60","#changandsun","#over60"], tt=["#floortest","#over60","#strengthtraining","#changandsun"],
+ ig=["#floortest","#strengthafter60","#sunyoon","#over60"], tt=["#floortest","#over60","#strengthtraining","#sunyoon"],
  yt="Sit on the Floor and Get Up: Score Yourself", ev=["E08","E45"],
  note="Sitting-rising test described as a score only (no mortality framing); floor-rise practice (E45).", bitn=5, bit="Dumpling count", thumb="SCORE YOURSELF", music="playful pizzicato"),
 ]
 
 SCRIPTS += [
-# ===================================================================== D−1 Wed Oct 7 · @changandsun
-dict(id="S209", group="UG-CS--01-4", lane="talking_head", page="@changandsun", speaker="DUO", format="F07", pillar="P16", hcat="IDN",
+# ===================================================================== D−1 Wed Oct 7 · @sunyoon
+dict(id="S209", group="UG-CS--01-4", lane="talking_head", page="@sunyoon", speaker="DUO", format="F07", pillar="P16", hcat="IDN",
  title="Too old to start? Send her this", prop="phone slid across the table", obj="send", grammar=["SHARE"],
  beats=[
   ("SUN","Send this to the woman who says she's too old to start.","SEND THIS TO HER",f"{DT} | VEO INSERT: Sun slides her phone across the table toward the lens | CU"),
@@ -412,11 +412,11 @@ dict(id="S209", group="UG-CS--01-4", lane="talking_head", page="@changandsun", s
  regression="Hands on the armrests.", cta="WAITLIST",
  skip="Never exercised, or your heart gives you trouble? Your doctor first. Then the chair.",
  caption="Comment WAITLIST for the free waitlist link and Chang's day-1 session.\nToo old to start is a feeling, not a fact. Five chair stands, chair against the wall, hands on the armrests if you need them. Send this to the woman who keeps saying she's too old.\nNew to exercise or a heart condition? Doctor first.\n" + WL,
- ig=["#womenover60","#strengthafter60","#changandsun","#agingwell"], tt=["#over60","#neverlate","#changandsun","#agingwell"],
+ ig=["#womenover60","#strengthafter60","#sunyoon","#agingwell"], tt=["#over60","#neverlate","#sunyoon","#agingwell"],
  yt="Too Old to Start? Send Her This", ev=[],
  note="Opinion/mindset (P16); backstory stated 'in our story', not used as proof.", bitn=6, bit="The tank top in January", thumb="SEND THIS TO HER", music="warm acoustic"),
 
-dict(id="S210", group="UG-CS--01-5", lane="talking_head", page="@changandsun", speaker="DUO", format="F35", pillar="P16", hcat="CPL",
+dict(id="S210", group="UG-CS--01-5", lane="talking_head", page="@sunyoon", speaker="DUO", format="F35", pillar="P16", hcat="CPL",
  title="Asking for help is a strength move", prop="a stubborn jar passed across the counter", obj="watch", grammar=["DEMO","WATCH"],
  beats=[
   ("SUN","Watch me hand him this jar. That's the whole lesson. Asking for help is a strength move too.","ASKING IS A STRENGTH MOVE",f"{DK} | VEO INSERT: Sun hands Chang a stubborn jar across the counter, he pops it | CU"),
@@ -431,12 +431,12 @@ dict(id="S210", group="UG-CS--01-5", lane="talking_head", page="@changandsun", s
  regression="", cta="WAITLIST",
  skip="Feeling low most days for two weeks or more? Tell your doctor.",
  caption="Comment WAITLIST for the free waitlist link and Chang's day-1 session.\nAsking for help is a strength move. Hand someone the jar, call someone this week, then train so you need a little less help next month.\nFeeling low most days for two weeks or more? Tell your doctor. You deserve real support.\n" + WL,
- ig=["#marriage","#agingwell","#changandsun","#over60"], tt=["#couplegoals","#over60","#changandsun","#agingwell"],
+ ig=["#marriage","#agingwell","#sunyoon","#over60"], tt=["#couplegoals","#over60","#sunyoon","#agingwell"],
  yt="Asking for Help Is a Strength Move", ev=[],
  note="Heart-to-heart (P16); no health claim.", bitn=7, bit="Seven out of ten", thumb="HAND SOMEONE THE JAR", music="soft piano"),
 
-# ===================================================================== D0 Thu Oct 8 · @changandsun
-dict(id="S211", group="UG-CS-+00-5", lane="talking_head", page="@changandsun", speaker="DUO", format="F04", pillar="P15", hcat="MYT", myth=True,
+# ===================================================================== D0 Thu Oct 8 · @sunyoon
+dict(id="S211", group="UG-CS-+00-5", lane="talking_head", page="@sunyoon", speaker="DUO", format="F04", pillar="P15", hcat="MYT", myth=True,
  title="'Squats ruin old knees'", prop="Mandu the cat curled on the exercise mat", obj="squats", grammar=["OBJ3","MYTH"],
  beats=[
   ("SUN","Squats ruin old knees? Show me the study. He'll squat to a chair while you watch.","MYTH? SQUATS RUIN KNEES",f"{DL} | VEO INSERT: Mandu the cat curls up in the middle of the exercise mat | CU"),
@@ -451,11 +451,11 @@ dict(id="S211", group="UG-CS-+00-5", lane="talking_head", page="@changandsun", s
  regression="Shallower squat, sit all the way down on the chair between reps.", cta="TEST",
  skip="Knee replaced this year, or a knee that swells up? Ask your doctor or physio first.",
  caption="Comment TEST for the free 3-minute Strength Age test.\nMyth: squats ruin older knees. The NSCA position statement: resistance training is safe and effective for older adults when it starts light and progresses gradually. Squat to a chair against the wall, knees following the toes. A mild ache (about 3/10) that settles by the next morning is acceptable; sharper, go less deep.\nNew knee or a knee that swells? Ask your doctor or physio first.",
- ig=["#mythbusting","#strengthafter60","#changandsun","#legday"], tt=["#mythbusting","#over60","#squats","#changandsun"],
+ ig=["#mythbusting","#strengthafter60","#sunyoon","#legday"], tt=["#mythbusting","#over60","#squats","#sunyoon"],
  yt="'Squats Ruin Old Knees'? Show Me the Study", ev=["E02","E41"],
  note="NSCA (A); pain-monitoring model (E41) with conservative threshold.", bitn=8, bit="Mandu the cat", thumb="SQUATS VS KNEES", music="playful swing"),
 
-dict(id="S212", group="UG-CS-+00-6", lane="insert", page="@changandsun", speaker="DUO", format="F28", pillar="P15", hcat="MYT", myth=True,
+dict(id="S212", group="UG-CS-+00-6", lane="insert", page="@sunyoon", speaker="DUO", format="F28", pillar="P15", hcat="MYT", myth=True,
  title="Short walks don't count? The study card", prop="kitchen timer set to five minutes by the front door", obj="if", grammar=["IF_EVERY","MYTH"],
  beats=[
   ("SUN-VO","If you sit down after every dinner, here's the study. Short walks count. Two minutes counts.","SHORT WALKS DON'T COUNT? ✗",f"{DT} | {HO} | Veo: a kitchen timer set to 5 minutes beside two pairs of walking shoes by the door | CU"),
@@ -470,12 +470,12 @@ dict(id="S212", group="UG-CS-+00-6", lane="insert", page="@changandsun", speaker
  regression="", cta="TEST",
  skip="On insulin or sugar-lowering medicine? Ask your doctor how walking fits with your doses.",
  caption="Comment TEST for the free 3-minute Strength Age test.\nMyth: short walks don't count. A meta-analysis found light walking after meals, even 2–5 minutes, lowered the post-meal glucose rise compared with sitting (Buffey et al., Sports Med 2022).\nOn insulin or sugar-lowering medicine? Ask your doctor how walking fits with your doses.",
- ig=["#walking","#afterdinnerwalk","#changandsun","#over60"], tt=["#walking","#over60","#mythbusting","#changandsun"],
+ ig=["#walking","#afterdinnerwalk","#sunyoon","#over60"], tt=["#walking","#over60","#mythbusting","#sunyoon"],
  yt="Short Walks After Dinner: Do They Count?", ev=["E23"],
  note="Buffey 2022 (A− meta) at grade; no disease claim.", bitn=9, bit="Fridge balance leaderboard", thumb="2 MINUTES COUNTS", music="light acoustic"),
 
-# ===================================================================== D+1 Fri Oct 9 · @changandsun (movement lane opens)
-dict(id="S213", group="UG-CS-+01-5", lane="movement", clip="DRV-heaven_earth-easier", page="@changandsun", speaker="DUO", format="F21", pillar="P07", hcat="CUR",
+# ===================================================================== D+1 Fri Oct 9 · @sunyoon (movement lane opens)
+dict(id="S213", group="UG-CS-+01-5", lane="movement", clip="DRV-heaven_earth-easier", page="@sunyoon", speaker="DUO", format="F21", pillar="P07", hcat="CUR",
  title="Not deeper, not faster: the long breath out", prop="two chairs facing the window", obj="not", grammar=["MYTH_NOT"],
  beats=[
   ("SUN","Not deeper, not faster. The long breath out is the one that settles you. Sit with us.","LONGER OUT. THAT'S IT.",f"{DL} | MC DRV-heaven_earth-easier: both seated on chairs against the wall, palms rising on the inhale | medium-full"),
@@ -490,11 +490,11 @@ dict(id="S213", group="UG-CS-+01-5", lane="movement", clip="DRV-heaven_earth-eas
  regression="Hands stay in the lap; breathe out only a little longer than in.", cta="BREATH",
  skip="Dizzy or tingly? Breathe normally and rest.",
  caption="Comment BREATH for the 5-minute 4-6 Breath.\nSeated, in through the nose for about 4, out through the mouth for about 6, hands rising and floating down, for 5 minutes. Slow breathing near 6 breaths a minute increases vagally mediated heart-rate variability (Laborde et al., 2022 meta-analysis).\nNever strain. Dizzy or tingly? Breathe normally and rest. Lung disease? Ask your doctor about pacing.",
- ig=["#breathwork","#calm","#changandsun","#over60"], tt=["#breathing","#over60","#calm","#changandsun"],
+ ig=["#breathwork","#calm","#sunyoon","#over60"], tt=["#breathing","#over60","#calm","#sunyoon"],
  yt="Not Deeper, Not Faster: Breathe Out Longer", ev=["E19"],
  note="Laborde 2022 (A− meta) as mechanism; no condition claim.", bitn=10, bit="Short version:", thumb="LONGER OUT", music="soft piano"),
 
-dict(id="S214", group="UG-CS-+01-6", lane="movement", clip="DRV-sky_lift-main", page="@changandsun", speaker="DUO", format="F21", pillar="P07", hcat="CUR",
+dict(id="S214", group="UG-CS-+01-6", lane="movement", clip="DRV-sky_lift-main", page="@sunyoon", speaker="DUO", format="F21", pillar="P07", hcat="CUR",
  title="Arms up, shoulders down", prop="his pink apron folded on the windowsill", obj="lift", grammar=["WATCH"],
  beats=[
   ("CHANG","Lift your arms as you breathe in, and watch your shoulders drop.","ARMS UP. SHOULDERS DOWN.",f"{DL} | MC DRV-sky_lift-main: Chang standing behind a chair, arms lifting overhead on the inhale | medium-full"),
@@ -509,7 +509,7 @@ dict(id="S214", group="UG-CS-+01-6", lane="movement", clip="DRV-sky_lift-main", 
  regression="Arms lift only to chest height; one hand on the chair.", cta="BREATH",
  skip="Shoulder that won't go overhead? Lift only to chest height. Light-headed? Sit down.",
  caption="Comment BREATH for the 5-minute 4-6 Breath.\nArms rise on the inhale, shoulders drop on a long exhale; try two short inhales through the nose and one long sigh out. In a one-month study of 111 adults, 5 minutes a day of cyclic sighing gave the biggest daily mood improvement (Balban et al., 2023).\nShoulder won't go overhead? Chest height. Light-headed? Sit down.",
- ig=["#breathwork","#mobility","#changandsun","#over60"], tt=["#breathing","#over60","#stretching","#changandsun"],
+ ig=["#breathwork","#mobility","#sunyoon","#over60"], tt=["#breathing","#over60","#stretching","#sunyoon"],
  yt="Arms Up, Shoulders Down: A 5-Minute Breath", ev=["E18"],
  note="Balban 2023 (B) at grade; mood only.", bitn=11, bit="The apron", thumb="SHOULDERS DOWN", music="soft piano"),
 
@@ -552,7 +552,7 @@ dict(id="S216", group="UG-SK-+02-6", lane="insert", page="@sunyoon.kitchen", spe
  yt="Toast Every Morning? Here's What's Missing", ev=["E28","E52"],
  note="USDA SR Legacy approximations (bread ≈2.7 g/slice... rounded); PROT-AGE (A consensus).", bitn=2, bit="I'm older, so I'm right", thumb="TOAST IS A SNACK", music="playful pizzicato"),
 
-dict(id="S217", group="UG-CS-+02-5", lane="talking_head", page="@changandsun", speaker="DUO", format="F07", pillar="P16", hcat="IDN",
+dict(id="S217", group="UG-CS-+02-5", lane="talking_head", page="@sunyoon", speaker="DUO", format="F07", pillar="P16", hcat="IDN",
  title="Say it out loud: what you want at 85", prop="Frank's excuse list taped to the fridge", obj="say", grammar=["TEST_NOW"],
  beats=[
   ("SUN","Say it out loud right now. One thing you still want to do at eighty-five. Go.","SAY IT OUT LOUD · NOW",f"{DT} | VEO INSERT: a handwritten list titled FRANK'S EXCUSES taped to the fridge | CU"),
@@ -567,11 +567,11 @@ dict(id="S217", group="UG-CS-+02-5", lane="talking_head", page="@changandsun", s
  regression="", cta="BEGIN",
  skip="New to exercise? Check in with your doctor.",
  caption="Comment BEGIN with your answer for the 'Where should I begin?' start menu.\nSay it out loud: one thing you still want to do at 85. Your answer is your plan: a suitcase means carries, the floor means floor practice.\nNew to exercise? Check in with your doctor.",
- ig=["#agingwell","#goals","#changandsun","#over60"], tt=["#over60","#goals","#changandsun","#agingwell"],
+ ig=["#agingwell","#goals","#sunyoon","#over60"], tt=["#over60","#goals","#sunyoon","#agingwell"],
  yt="Say It Out Loud: What Do You Want to Do at 85?", ev=[],
  note="Mindset (P16).", bitn=12, bit="Frank's excuses", thumb="WHAT DO YOU WANT AT 85?", music="warm acoustic"),
 
-dict(id="S218", group="UG-CS-+02-6", lane="talking_head", page="@changandsun", speaker="DUO", format="F35", pillar="P16", hcat="IDN",
+dict(id="S218", group="UG-CS-+02-6", lane="talking_head", page="@sunyoon", speaker="DUO", format="F35", pillar="P16", hcat="IDN",
  title="For the friend who retired and sat down", prop="retirement card on the mantel", obj="send", grammar=["SHARE"],
  beats=[
   ("CHANG","Send this to the friend who retired, sat down, and stayed down.","SEND THIS TO YOUR FRIEND",f"{DL} | VEO INSERT: a retirement card on the mantel, a recliner in soft focus | CU"),
@@ -586,7 +586,7 @@ dict(id="S218", group="UG-CS-+02-6", lane="talking_head", page="@changandsun", s
  regression="", cta="BEGIN",
  skip="If he seems low for weeks, not just bored, help him talk to his doctor.",
  caption="Comment BEGIN for the 'Where should I begin?' start menu.\nFor the friend who retired and sat down: work gave the day a shape. Give the morning one fixed thing, and send an invitation, not a lecture: 'Walk with me Tuesday.'\nIf he seems low for weeks, help him talk to his doctor.",
- ig=["#retirement","#friendship","#changandsun","#agingwell"], tt=["#retirement","#over60","#changandsun","#agingwell"],
+ ig=["#retirement","#friendship","#sunyoon","#agingwell"], tt=["#retirement","#over60","#sunyoon","#agingwell"],
  yt="For the Friend Who Retired and Sat Down", ev=[],
  note="Heart-to-heart (P16).", bitn=13, bit="The welding metaphors", thumb="SEND AN INVITATION", music="soft piano"),
 ]
@@ -688,7 +688,7 @@ dict(id="S223", group="UG-SK-+03-6", lane="movement", clip="DRV-sit_to_stand-eas
  yt="Day 3 Chair Stands: Hands Still Count", ev=["E02","E46"],
  note="NSCA (A); orthostatic practical rule (E46).", bitn=7, bit="Seven out of ten", thumb="HANDS COUNT", music="playful swing"),
 
-dict(id="S224", group="UG-CS-+03-5", lane="movement", clip="DRV-wall_sit_high-main", page="@changandsun", speaker="DUO", format="F11", pillar="P19", hcat="CPL",
+dict(id="S224", group="UG-CS-+03-5", lane="movement", clip="DRV-wall_sit_high-main", page="@sunyoon", speaker="DUO", format="F11", pillar="P19", hcat="CPL",
  title="High wall sit, both of us", prop="Sun's visor hanging on the garage hook", obj="here's", grammar=["DEMO"], series="Couple Challenge week",
  beats=[
   ("SUN","Here's the high wall sit. Backs on the wall, knees barely bent. Thirty seconds, both of us.","HIGH WALL SIT · 30 SECONDS",f"{DG} | MC DRV-wall_sit_high-main: Chang and Sun slide down the garage wall a few inches | medium-full"),
@@ -703,11 +703,11 @@ dict(id="S224", group="UG-CS-+03-5", lane="movement", clip="DRV-wall_sit_high-ma
  regression="Barely bend the knees, 15 seconds.", cta="STRONG",
  skip="Blood pressure not under control? Ask your doctor before doing holds like this.",
  caption="Comment STRONG for the 8-minute Chair Builder.\nHigh wall sit: backs on the wall, knees barely bent and over the ankles, keep breathing, 30 seconds (45 by day 7). A network meta-analysis of 270 trials found isometric training produced the largest reductions in resting blood pressure, with the wall squat ranking top for systolic (Edwards et al., BJSM 2023).\nBlood pressure not under control? Ask your doctor first.",
- ig=["#couplechallenge","#wallsit","#changandsun","#over60"], tt=["#couplechallenge","#wallsit","#over60","#changandsun"],
+ ig=["#couplechallenge","#wallsit","#sunyoon","#over60"], tt=["#couplechallenge","#wallsit","#over60","#sunyoon"],
  yt="High Wall Sit Challenge: Husband vs Wife", ev=["E20"],
  note="E20 (A meta) at grade; numbers only in caption.", bitn=14, bit="Sun's visor", thumb="30 SECONDS. BOTH OF US.", music="playful swing"),
 
-dict(id="S225", group="UG-CS-+03-6", lane="movement", clip="DRV-step_up-easier", page="@changandsun", speaker="DUO", format="F11", pillar="P19", hcat="CPL",
+dict(id="S225", group="UG-CS-+03-6", lane="movement", clip="DRV-step_up-easier", page="@sunyoon", speaker="DUO", format="F11", pillar="P19", hcat="CPL",
  title="Bottom stair step-ups", prop="study page taped to the banister", obj="bottom", grammar=["OBJ3"], series="Couple Challenge week",
  beats=[
   ("CHANG","Bottom stair, ten step-ups, one hand on the rail. Day four of our challenge.","BOTTOM STAIR · 10 STEP-UPS",f"{DL} | MC DRV-step_up-easier: Chang steps up onto the bottom stair, hand on the rail | medium-full"),
@@ -722,7 +722,7 @@ dict(id="S225", group="UG-CS-+03-6", lane="movement", clip="DRV-step_up-easier",
  regression="A thick book instead of the stair, rail or counter in hand, 5 reps.", cta="STRONG",
  skip="Knee that swells after stairs? Do five, and use a thick book instead of the stair.",
  caption="Comment STRONG for the 8-minute Chair Builder.\nChallenge day 4: 10 step-ups on the bottom stair, one hand on the rail, whole foot on the step, breathe out as you rise. Progressive resistance training improved strength in older adults across 121 trials (Cochrane).\nKnee swells after stairs? 5 reps on a thick book instead.",
- ig=["#couplechallenge","#stairs","#changandsun","#strengthafter60"], tt=["#couplechallenge","#stepups","#over60","#changandsun"],
+ ig=["#couplechallenge","#stairs","#sunyoon","#strengthafter60"], tt=["#couplechallenge","#stepups","#over60","#sunyoon"],
  yt="Bottom-Stair Step-Ups (Day 4 Couple Challenge)", ev=["E01"],
  note="Cochrane PRT (A) at grade.", bitn=15, bit="Printer ink", thumb="BOTTOM STAIR. 10 REPS.", music="driving soul"),
 
@@ -841,7 +841,7 @@ dict(id="S231", group="UG-SK-+04-6", lane="movement", clip="DRV-jar_twist-main",
  yt="Jar Twists: Send This to Your Mother", ev=["E06"],
  note="EWGSOP2 (A) as a screening measure only.", bitn=13, bit="The welding metaphors", thumb="SEND TO YOUR MOTHER", music="playful swing"),
 
-dict(id="S232", group="UG-CS-+04-2", lane="talking_head", page="@changandsun", speaker="DUO", format="F15", pillar="P03", hcat="CPL",
+dict(id="S232", group="UG-CS-+04-2", lane="talking_head", page="@sunyoon", speaker="DUO", format="F15", pillar="P03", hcat="CPL",
  title="Three balance moves inside the microwave minute", prop="microwave counting down with a dumpling plate inside", obj="if", grammar=["IF_EVERY"],
  beats=[
   ("CHANG","If you wait for the microwave every day, do three balance moves.","MICROWAVE = 3 BALANCE MOVES",f"{DK} | VEO INSERT: the microwave counts down from 1:30, a plate of dumplings turning inside | CU"),
@@ -856,11 +856,11 @@ dict(id="S232", group="UG-CS-+04-2", lane="talking_head", page="@changandsun", s
  regression="Feet side by side with one hand flat on the counter.", cta="BOOK",
  skip="Dizzy spells? Keep both feet down.",
  caption="Comment BOOK for the link and what's inside.\nThe microwave minute: feet together, heel to toe (switch halfway), side steps along the counter, hands over the edge. Tandem stance is one stage of the CDC STEADI 4-Stage Balance Test. Dizzy spells? Keep both feet down.\n" + BOOK,
- ig=["#balancetraining","#habitstacking","#changandsun","#over60"], tt=["#balance","#over60","#habitstack","#changandsun"],
+ ig=["#balancetraining","#habitstacking","#sunyoon","#over60"], tt=["#balance","#over60","#habitstack","#sunyoon"],
  yt="Waiting for the Microwave? 3 Balance Moves", ev=["E50"],
  note="STEADI (A, tool); offer terms per CANON UPDATE 2.", bitn=16, bit="Aigo", thumb="MICROWAVE MINUTE", music="playful swing"),
 
-dict(id="S233", group="UG-CS-+04-3", lane="talking_head", page="@changandsun", speaker="DUO", format="F32", pillar="P03", hcat="CPL",
+dict(id="S233", group="UG-CS-+04-3", lane="talking_head", page="@sunyoon", speaker="DUO", format="F32", pillar="P03", hcat="CPL",
  title="Brush on one foot", prop="two toothbrushes in a cup by the sink", obj="not", grammar=["MYTH_NOT"],
  beats=[
   ("SUN","Not a gym, not a class. Two minutes of tooth brushing is balance practice.","BRUSH = BALANCE PRACTICE",f"{BA} | VEO INSERT: two toothbrushes lifted from a cup by the bathroom sink | CU"),
@@ -876,11 +876,11 @@ dict(id="S233", group="UG-CS-+04-3", lane="talking_head", page="@changandsun", s
  regression="Both feet down, one hand holding the sink.", cta="BALANCE",
  skip="Unsteady even standing still? Keep both feet down and hold the sink.",
  caption="Comment BALANCE for Steady Feet + the 10-second test.\nHabit stack: brush with one hand, rest the other on the sink, lift one foot an inch, switch at halfway. Twice a day = 4 minutes of practice. The USPSTF (2024) recommends exercise for community-dwelling adults 65+ at increased risk.\nUnsteady even standing still? Both feet down, hold the sink.",
- ig=["#habitstacking","#balancetraining","#changandsun","#over60"], tt=["#habitstack","#balance","#over60","#changandsun"],
+ ig=["#habitstacking","#balancetraining","#sunyoon","#over60"], tt=["#habitstack","#balance","#over60","#sunyoon"],
  yt="Brush Your Teeth on One Foot (Balance Habit)", ev=["E36"],
  note="USPSTF 2024 (B recommendation); AI wink #3 variant.", bitn=17, bit="The AI winks", thumb="BRUSH ON ONE FOOT", music="playful swing"),
 
-dict(id="S234", group="UG-CS-+04-4", lane="talking_head", page="@changandsun", speaker="DUO", format="F26", pillar="P18", hcat="CPL",
+dict(id="S234", group="UG-CS-+04-4", lane="talking_head", page="@sunyoon", speaker="DUO", format="F26", pillar="P18", hcat="CPL",
  title="Sun reads your comments", prop="printed comments fanned out on the couch", obj="i'm", grammar=["WATCH"],
  beats=[
   ("SUN","I'm reading your comments out loud. Watch his face on the third one.","SUN READS YOUR COMMENTS",f"{DL} | VEO INSERT: printed comments fanned across the couch cushion | CU"),
@@ -895,11 +895,11 @@ dict(id="S234", group="UG-CS-+04-4", lane="talking_head", page="@changandsun", s
  regression="", cta="BEGIN",
  skip="New to exercise at eighty-one? A quick word with your doctor first, then the chair.",
  caption="Comment BEGIN with your question for the 'Where should I begin?' start menu.\nSun reads your comments. Too late at 81? No: the NSCA says resistance training is safe and effective for older adults when it starts light. Husband won't join? Do it next to him anyway.\nNew to exercise? A quick doctor check first.",
- ig=["#sunreadscomments","#changandsun","#over60","#agingwell"], tt=["#readingcomments","#over60","#changandsun","#agingwell"],
+ ig=["#sunreadscomments","#sunyoon","#over60","#agingwell"], tt=["#readingcomments","#over60","#sunyoon","#agingwell"],
  yt="Sun Reads Your Comments (Watch His Face)", ev=["E02"],
  note="NSCA (A) for the 'too late' answer.", bitn=18, bit="The anniversary countdown", thumb="WATCH HIS FACE", music="playful swing"),
 
-dict(id="S235", group="UG-CS-+04-5", lane="talking_head", page="@changandsun", speaker="DUO", format="F09", pillar="P18", hcat="CPL",
+dict(id="S235", group="UG-CS-+04-5", lane="talking_head", page="@sunyoon", speaker="DUO", format="F09", pillar="P18", hcat="CPL",
  title="Reply: 'My wife says I sit all day'", prop="jajangmyeon noodles in a wok", obj="stand", grammar=["TEST_NOW"],
  beats=[
   ("CHANG","Stand up right now. When did you last stand before this? Be honest.","STAND UP RIGHT NOW",f"{DK} | VEO INSERT: a phone shows the comment 'My wife says I sit all day' propped against a wok of black-bean noodles | CU"),
@@ -914,11 +914,11 @@ dict(id="S235", group="UG-CS-+04-5", lane="talking_head", page="@changandsun", s
  regression="", cta="BEGIN",
  skip="Light-headed when you stand? Rise slowly, holding the chair.",
  caption="Comment BEGIN for the 'Where should I begin?' start menu.\nReply to 'my wife says I sit all day': stand up every half hour, walk to the window and back. Light walking after meals lowers the post-meal glucose rise compared with sitting (Buffey et al., 2022).\nLight-headed when you stand? Rise slowly, holding the chair.",
- ig=["#sittingtoomuch","#changandsun","#over60","#agingwell"], tt=["#movemore","#over60","#changandsun","#agingwell"],
+ ig=["#sittingtoomuch","#sunyoon","#over60","#agingwell"], tt=["#movemore","#over60","#sunyoon","#agingwell"],
  yt="'My Wife Says I Sit All Day.' Stand Up Right Now", ev=["E23","E46"],
  note="Buffey 2022 (A− meta); orthostatic rule (E46).", bitn=19, bit="Jajangmyeon Sunday", thumb="STAND UP NOW", music="playful swing"),
 
-dict(id="S236", group="UG-CS-+04-6", lane="talking_head", page="@changandsun", speaker="DUO", format="F07", pillar="P16", hcat="BLT",
+dict(id="S236", group="UG-CS-+04-6", lane="talking_head", page="@sunyoon", speaker="DUO", format="F07", pillar="P16", hcat="BLT",
  title="Rest isn't recovery", prop="kettlebell peeking out behind the rice cooker", obj="share", grammar=["SHARE"],
  beats=[
   ("SUN","Share this with anyone who thinks rest and recovery are the same.","REST ≠ RECOVERY",f"{DK} | VEO INSERT: a kettlebell handle peeks out from behind the rice cooker | CU"),
@@ -933,7 +933,7 @@ dict(id="S236", group="UG-CS-+04-6", lane="talking_head", page="@changandsun", s
  regression="", cta="BEGIN",
  skip="Wiped out for days after light activity? Tell your doctor.",
  caption="Comment BEGIN for the 'Where should I begin?' start menu.\nRest is the couch. Recovery is moving gently (a slow walk, a stretch, a nap) so tomorrow you can move more. Send this to the person who thinks they're the same.\nWiped out for days after light activity? Tell your doctor.",
- ig=["#recoveryday","#changandsun","#over60","#agingwell"], tt=["#recovery","#over60","#changandsun","#agingwell"],
+ ig=["#recoveryday","#sunyoon","#over60","#agingwell"], tt=["#recovery","#over60","#sunyoon","#agingwell"],
  yt="Rest Isn't Recovery (Send This to Someone)", ev=[],
  note="Opinion (P16).", bitn=20, bit="The hidden kettlebell", thumb="REST ≠ RECOVERY", music="warm acoustic"),
 ]
@@ -1169,8 +1169,8 @@ dict(id="S248", group="UG-SK-+05-6", lane="movement", clip="DRV-ball_squeeze-mai
  yt="30-Second Ball Squeeze Bet (Loser Makes Noodles)", ev=["E06"],
  note="EWGSOP2 (A) as screening only.", bitn=19, bit="Jajangmyeon Sunday", thumb="LOSER COOKS", music="playful swing"),
 
-# ===================================================================== D+5 · @changandsun
-dict(id="S249", group="UG-CS-+05-1", lane="talking_head", page="@changandsun", speaker="DUO", format="F08", pillar="P17", hcat="CPL",
+# ===================================================================== D+5 · @sunyoon
+dict(id="S249", group="UG-CS-+05-1", lane="talking_head", page="@sunyoon", speaker="DUO", format="F08", pillar="P17", hcat="CPL",
  title="Mina calls during leg day", prop="tablet video call propped on the mat", obj="here's", grammar=["DEMO"],
  beats=[
   ("SUN","Here's what happens when our daughter calls during leg day.","MINA CALLS ON LEG DAY",f"{DL} | VEO INSERT: a tablet on the mat lights up with MINA calling | CU"),
@@ -1185,11 +1185,11 @@ dict(id="S249", group="UG-CS-+05-1", lane="talking_head", page="@changandsun", s
  regression="", cta="BEGIN",
  skip="If your family worries because of a heart condition, bring them to the doctor visit.",
  caption="Comment BEGIN for the 'Where should I begin?' start menu.\nWhen your grown kids worry: show them your plan, your easy days and the chair version. (Mina is our fictional daughter; she still checks on her father's form.)\nFamily worried because of a heart condition? Bring them to the doctor visit and ask together.",
- ig=["#family","#couplelife","#changandsun","#over60"], tt=["#family","#over60","#couplelife","#changandsun"],
+ ig=["#family","#couplelife","#sunyoon","#over60"], tt=["#family","#over60","#couplelife","#sunyoon"],
  yt="Our Daughter Calls in the Middle of Leg Day", ev=[],
  note="Couple life (P17); side character labeled fictional.", bitn=21, bit="Phone calls from Mina", thumb="MINA IS CALLING", music="playful swing"),
 
-dict(id="S250", group="UG-CS-+05-2", lane="movement", clip="DRV-suitcase_carry-main", page="@changandsun", speaker="DUO", format="F34", pillar="P17", hcat="CPL",
+dict(id="S250", group="UG-CS-+05-2", lane="movement", clip="DRV-suitcase_carry-main", page="@sunyoon", speaker="DUO", format="F34", pillar="P17", hcat="CPL",
  title="Suitcase carry down the hallway", prop="two small suitcases at the end of the hallway beside the chair", obj="suitcase", grammar=["OBJ3"],
  beats=[
   ("CHANG","Suitcase carry, both of us, down the hallway and back. One hand each.","SUITCASE CARRY · BOTH OF US",f"{DL} | MC DRV-suitcase_carry-main: Chang and Sun each carry a small suitcase down the hallway | medium-full"),
@@ -1204,11 +1204,11 @@ dict(id="S250", group="UG-CS-+05-2", lane="movement", clip="DRV-suitcase_carry-m
  regression="A half-packed bag, or two light bags, one per hand.", cta="BEGIN",
  skip="Shoulder or back that flares up with carrying? Use two light bags, one in each hand.",
  caption="Comment BEGIN for the 'Where should I begin?' start menu.\nCouple carry: one small suitcase each, down the hallway (wall within reach) and back, standing tall, shoulders level, switch hands at the chair. The NSCA supports progressive resistance training for older adults.\nBack or shoulder flares with carrying? Two light bags, one in each hand.",
- ig=["#couplechallenge","#strengthafter60","#changandsun","#over60"], tt=["#couplechallenge","#carry","#over60","#changandsun"],
+ ig=["#couplechallenge","#strengthafter60","#sunyoon","#over60"], tt=["#couplechallenge","#carry","#over60","#sunyoon"],
  yt="Suitcase Carry Down the Hallway (Couples)", ev=["E02"],
  note="NSCA (A).", bitn=22, bit="The chair called Coach", thumb="CARRY YOUR OWN BAG", music="playful swing"),
 
-dict(id="S251", group="UG-CS-+05-3", lane="talking_head", page="@changandsun", speaker="DUO", format="F35", pillar="P16", hcat="BLT",
+dict(id="S251", group="UG-CS-+05-3", lane="talking_head", page="@sunyoon", speaker="DUO", format="F35", pillar="P16", hcat="BLT",
  title="'I'm fine' is not an answer", prop="handwritten card propped against the teapot", obj="if", grammar=["IF_EVERY"],
  beats=[
   ("SUN","If you tell your kids 'I'm fine' every time, write this down.","'I'M FINE' ISN'T AN ANSWER",f"{DT} | VEO INSERT: Sun props a handwritten card against the teapot | CU"),
@@ -1223,11 +1223,11 @@ dict(id="S251", group="UG-CS-+05-3", lane="talking_head", page="@changandsun", s
  regression="", cta="BEGIN",
  skip="New pain that wakes you at night, or won't settle? That's a doctor visit, not a family chat.",
  caption="Comment BEGIN for the 'Where should I begin?' start menu.\n'I'm fine' makes people guess. Tell your family one true thing and one plan: 'My knees hurt on stairs, and I'm working on it.'\nNew pain that wakes you at night or won't settle? See your doctor.",
- ig=["#family","#honesty","#changandsun","#agingwell"], tt=["#family","#over60","#changandsun","#agingwell"],
+ ig=["#family","#honesty","#sunyoon","#agingwell"], tt=["#family","#over60","#sunyoon","#agingwell"],
  yt="'I'm Fine' Is Not an Answer", ev=[],
  note="Opinion (P16).", bitn=23, bit="Write this down", thumb="ONE TRUE THING", music="soft piano"),
 
-dict(id="S252", group="UG-CS-+05-4", lane="talking_head", page="@changandsun", speaker="DUO", format="F07", pillar="P16", hcat="BLT",
+dict(id="S252", group="UG-CS-+05-4", lane="talking_head", page="@sunyoon", speaker="DUO", format="F07", pillar="P16", hcat="BLT",
  title="Making a new friend at 75 is brave", prop="illustrated 1976 photo frame on the bookshelf", obj="not", grammar=["MYTH_NOT"],
  beats=[
   ("SUN","Not silly, not desperate. Making a new friend at seventy-five is brave. Do it anyway.","NEW FRIENDS AT 75",f"{DL} | VEO INSERT: an illustrated 1976 photo frame of a young couple on the bookshelf | CU"),
@@ -1242,11 +1242,11 @@ dict(id="S252", group="UG-CS-+05-4", lane="talking_head", page="@changandsun", s
  regression="", cta="BEGIN",
  skip="Feeling low or empty most days for weeks? Talk to your doctor.",
  caption="Comment BEGIN for the 'Where should I begin?' start menu.\nMaking a new friend at 75 is brave. Say one true sentence to a stranger, show up twice (walking group, library, the bench at the market). Our 1976 'photo' is an illustration; our story is fiction, the advice isn't.\nFeeling low or empty most days for weeks? Talk to your doctor.",
- ig=["#friendship","#agingwell","#changandsun","#over60"], tt=["#friendship","#over60","#changandsun","#agingwell"],
+ ig=["#friendship","#agingwell","#sunyoon","#over60"], tt=["#friendship","#over60","#sunyoon","#agingwell"],
  yt="Making a New Friend at 75 Is Brave", ev=[],
  note="Opinion (P16); illustrated vintage frame, not archival proof.", bitn=24, bit="Old photos", thumb="SHOW UP TWICE", music="soft piano"),
 
-dict(id="S253", group="UG-CS-+05-5", lane="insert", page="@changandsun", speaker="DUO", format="F18", pillar="P13", hcat="CPL",
+dict(id="S253", group="UG-CS-+05-5", lane="insert", page="@sunyoon", speaker="DUO", format="F18", pillar="P13", hcat="CPL",
  title="Building a thirty-gram dinner from the pantry", prop="dinner plate built in quarters on the counter", obj="watch", grammar=["WATCH"],
  beats=[
   ("SUN-VO","Watch how we build a thirty-gram dinner plate from the pantry. No shopping trip.","30-GRAM PANTRY PLATE",f"{DK} | {HO} | Veo: four hands build a plate in quarters on the counter | overhead"),
@@ -1261,11 +1261,11 @@ dict(id="S253", group="UG-CS-+05-5", lane="insert", page="@changandsun", speaker
  regression="", cta="SOUP",
  skip="Soy allergy? Swap edamame for an egg cooked through.",
  caption="Comment SOUP for Sun Yoon's Three Soups.\nThe 30-gram pantry plate: canned salmon (~20 g), ½ cup edamame (~8 g), rice and cucumbers (USDA FoodData Central). PROT-AGE suggests 25–30 g per meal for adults over 65.\nSoy allergy? An egg instead. Watching salt? Rinse the salmon.",
- ig=["#highprotein","#pantrymeals","#changandsun","#over60"], tt=["#protein","#pantrymeals","#over60","#changandsun"],
+ ig=["#highprotein","#pantrymeals","#sunyoon","#over60"], tt=["#protein","#pantrymeals","#over60","#sunyoon"],
  yt="A 30-Gram Dinner Plate From the Pantry", ev=["E28","E52"],
  note="USDA approximations; PROT-AGE (A).", bitn=1, bit="NO MIRROR FLEXING (oven door)", thumb="30 GRAMS, NO SHOPPING", music="playful pizzicato"),
 
-dict(id="S254", group="UG-CS-+05-6", lane="insert", page="@changandsun", speaker="DUO", format="F12", pillar="P13", hcat="CPL",
+dict(id="S254", group="UG-CS-+05-6", lane="insert", page="@sunyoon", speaker="DUO", format="F12", pillar="P13", hcat="CPL",
  title="Guess the grams: two breakfasts", prop="two breakfast plates side by side on the table", obj="guess", grammar=["TEST_NOW"],
  beats=[
   ("CHANG-VO","Guess right now: which breakfast has more protein? Left or right. Say it out loud.","GUESS THE GRAMS",f"{DT} | {HO} | Veo: two plates slide into frame, a bagel with cream cheese and a bowl of yogurt with nuts | overhead"),
@@ -1280,7 +1280,7 @@ dict(id="S254", group="UG-CS-+05-6", lane="insert", page="@changandsun", speaker
  regression="", cta="SOUP",
  skip="Nut allergy? Skip the nuts and add an egg on the side.",
  caption="Comment SOUP for Sun Yoon's Three Soups.\nGuess the grams: a bagel with cream cheese is about 12 g protein; a cup of Greek yogurt with a handful of nuts is about 25 g (USDA FoodData Central). PROT-AGE suggests 25–30 g per meal for adults over 65.\nNut allergy? An egg instead.",
- ig=["#highprotein","#breakfastideas","#changandsun","#over60"], tt=["#protein","#breakfast","#over60","#changandsun"],
+ ig=["#highprotein","#breakfastideas","#sunyoon","#over60"], tt=["#protein","#breakfast","#over60","#sunyoon"],
  yt="Guess the Grams: Which Breakfast Wins?", ev=["E28","E52"],
  note="USDA approximations; PROT-AGE (A).", bitn=2, bit="I'm older, so I'm right", thumb="SIZE LIES", music="playful pizzicato"),
 
@@ -1495,8 +1495,8 @@ dict(id="S265", group="UG-SK-+06-6", lane="insert", page="@sunyoon.kitchen", spe
  yt="One Spoon of Kimchi a Meal: Watch It Add Up", ev=["E26"],
  note="Wastyk 2021 (B, small) at grade.", bitn=1, bit="NO MIRROR FLEXING", thumb="1 SPOON A MEAL", music="playful pizzicato"),
 
-# ===================================================================== D+6 Wed Oct 14 · @changandsun
-dict(id="S266", group="UG-CS-+06-1", lane="talking_head", page="@changandsun", speaker="DUO", format="F35", pillar="P17", hcat="CPL",
+# ===================================================================== D+6 Wed Oct 14 · @sunyoon
+dict(id="S266", group="UG-CS-+06-1", lane="talking_head", page="@sunyoon", speaker="DUO", format="F35", pillar="P17", hcat="CPL",
  title="Fifty years, one thermostat", prop="living-room thermostat turned up and down", obj="send", grammar=["SHARE"],
  beats=[
   ("SUN","Send this to the couple who argue about the thermostat. Fifty years.","50 YEARS · 1 THERMOSTAT",f"{DL} | VEO INSERT: one hand turns the thermostat up, another turns it back down | CU"),
@@ -1511,11 +1511,11 @@ dict(id="S266", group="UG-CS-+06-1", lane="talking_head", page="@changandsun", s
  regression="", cta="JOIN",
  skip="Cold out? Layers and a hat.",
  caption="Comment JOIN for the founding-member link and full terms.\nFifty years (in our story), two degrees apart. We settle it with a 10-minute walk. Members get our weekly plans. Cold out? Layers and a hat.\n" + JOIN,
- ig=["#couplegoals","#marriedlife","#changandsun","#over60"], tt=["#couple","#marriage","#over60","#changandsun"],
+ ig=["#couplegoals","#marriedlife","#sunyoon","#over60"], tt=["#couple","#marriage","#over60","#sunyoon"],
  yt="Fifty Years and Still Fighting Over the Thermostat", ev=[],
  note="Couple life (P17); Mandu is a fictional pet; JOIN terms per FUNNEL §4.17.", bitn=8, bit="Mandu the cat", thumb="2 DEGREES · 50 YEARS", music="playful swing"),
 
-dict(id="S267", group="UG-CS-+06-2", lane="talking_head", page="@changandsun", speaker="DUO", format="F08", pillar="P17", hcat="CPL",
+dict(id="S267", group="UG-CS-+06-2", lane="talking_head", page="@sunyoon", speaker="DUO", format="F08", pillar="P17", hcat="CPL",
  title="Dumpling folding is leg day", prop="two pairs of hands folding dumplings on a floured table", obj="here", grammar=["DEMO"],
  beats=[
   ("SUN","Here's how we fold dumplings and train legs at once.","DUMPLINGS = LEG DAY",f"{DT} | VEO INSERT: two pairs of hands fold dumplings on a floured table | overhead"),
@@ -1530,11 +1530,11 @@ dict(id="S267", group="UG-CS-+06-2", lane="talking_head", page="@changandsun", s
  regression="Stand every other fold, hands on the table to push up.", cta="BEGIN",
  skip="Knees cranky? Stand every other fold, and push off the table with your hands.",
  caption="Comment BEGIN for the 'Where should I begin?' start menu.\nDumpling leg day: stand up between folds, chair against the wall, breathe out as you stand. Twenty folds, twenty chair stands. Knees cranky? Every other fold, push off the table with your hands.",
- ig=["#dumplings","#couplegoals","#changandsun","#over60"], tt=["#dumplings","#couple","#over60","#changandsun"],
+ ig=["#dumplings","#couplegoals","#sunyoon","#over60"], tt=["#dumplings","#couple","#over60","#sunyoon"],
  yt="Folding Dumplings Is Leg Day Now", ev=["E02"],
  note="NSCA (A) start-easy framing; couple life (P17).", bitn=5, bit="Dumpling count", thumb="20 FOLDS = 20 STANDS", music="playful swing"),
 
-dict(id="S268", group="UG-CS-+06-3", lane="talking_head", page="@changandsun", speaker="DUO", format="F04", pillar="P15", hcat="MYT",
+dict(id="S268", group="UG-CS-+06-3", lane="talking_head", page="@sunyoon", speaker="DUO", format="F04", pillar="P15", hcat="MYT",
  title="Weights after seventy: the actual study", prop="folded study card pulled from a shorts pocket", obj="weights", grammar=["OBJ3"],
  beats=[
   ("SUN","Weights after seventy wreck your joints? Here's the actual study.","WEIGHTS WRECK JOINTS?",f"{DG} | VEO INSERT: Chang pulls a folded study card from his shorts pocket | CU"),
@@ -1549,11 +1549,11 @@ dict(id="S268", group="UG-CS-+06-3", lane="talking_head", page="@changandsun", s
  regression="", cta="TEST",
  skip="New joint replacement, or pain that wakes you at night? Ask your doctor first.",
  caption="Comment TEST for the free 3-minute Strength Age test.\nThe study: ten frail nursing-home residents around age 90 did 8 weeks of high-intensity leg training; strength rose sharply and walking speed improved (Fiatarone et al., 1990; small). The NSCA position statement: resistance training is safe for older adults, including frail people, when it starts easy and progresses gradually.\nNew joint replacement, or pain that wakes you at night? Ask your doctor first.",
- ig=["#strengthtraining","#mythbusting","#changandsun","#over60"], tt=["#myth","#strength","#over60","#changandsun"],
+ ig=["#strengthtraining","#mythbusting","#sunyoon","#over60"], tt=["#myth","#strength","#over60","#sunyoon"],
  yt="Do Weights After 70 Wreck Your Joints? The Study", ev=["E03","E02","E41"],
  note="Fiatarone 1990 (B, small, no percent in prominent fields); NSCA (A); E41 threshold.", bitn=4, bit="The study card from the shorts pocket", thumb="SHOW ME THE STUDY", music="playful swing"),
 
-dict(id="S269", group="UG-CS-+06-4", lane="insert", page="@changandsun", speaker="DUO", format="F28", pillar="P15", hcat="MYT",
+dict(id="S269", group="UG-CS-+06-4", lane="insert", page="@sunyoon", speaker="DUO", format="F28", pillar="P15", hcat="MYT",
  title="Stretching isn't strength", prop="water jugs carried past a toe reach on the promenade", obj="if", grammar=["IF_EVERY"],
  beats=[
   ("CHANG-VO","If you stretch every morning, you still need strength. Here's why.","STRETCHING ≠ STRENGTH",f"{DP} | {HO} | Veo: one pair of hands reaches down to sneakers, another pair carries two water jugs past | medium"),
@@ -1568,11 +1568,11 @@ dict(id="S269", group="UG-CS-+06-4", lane="insert", page="@changandsun", speaker
  regression="", cta="TEST",
  skip="Heart or lung condition, or recent surgery? Ask your doctor what weight is safe.",
  caption="Comment TEST for the free 3-minute Strength Age test.\nStretching keeps you loose; strength needs muscles working against resistance. The NSCA position statement recommends resistance training 2–3 days a week for older adults, starting easy. Water jugs and soup pots count.\nHeart or lung condition, or recent surgery? Ask your doctor what weight is safe.",
- ig=["#strengthtraining","#mythbusting","#changandsun","#over60"], tt=["#stretching","#strength","#over60","#changandsun"],
+ ig=["#strengthtraining","#mythbusting","#sunyoon","#over60"], tt=["#stretching","#strength","#over60","#sunyoon"],
  yt="If You Stretch Every Morning, You Still Need Strength", ev=["E02"],
  note="NSCA (A) frequency at grade.", bitn=7, bit="Seven out of ten", thumb="LOOSE ≠ STRONG", music="playful swing"),
 
-dict(id="S270", group="UG-CS-+06-5", lane="talking_head", page="@changandsun", speaker="DUO", format="F05", pillar="P09", hcat="BED",
+dict(id="S270", group="UG-CS-+06-5", lane="talking_head", page="@sunyoon", speaker="DUO", format="F05", pillar="P09", hcat="BED",
  title="Not sheep: ten slow breaths", prop="phone placed face-down on the nightstand", obj="not", grammar=["MYTH_NOT"],
  beats=[
   ("SUN","Not counting sheep, not scrolling. Ten slow breaths in bed instead.","NOT SHEEP. 10 BREATHS.","SET-BEDROOM | C-CASUAL + S-CARDI-JADE | VEO INSERT: a hand places a phone face-down on the nightstand | CU"),
@@ -1587,11 +1587,11 @@ dict(id="S270", group="UG-CS-+06-5", lane="talking_head", page="@changandsun", s
  regression="", cta="SLEEP",
  skip="Loud snoring with pauses, or sleepy all day? Tell your doctor.",
  caption="Comment SLEEP for the 10-minute Sleep Wind-Down.\nTen slow breaths in bed: in through the nose for 4, out for 6, never forced, phone face-down. Slow breathing near 6 breaths a minute increases vagally mediated heart-rate variability (Laborde et al., 2022).\nLoud snoring with pauses, or sleepy all day? Tell your doctor.",
- ig=["#bedtimeroutine","#breathwork","#changandsun","#over60"], tt=["#bedtime","#breathing","#over60","#changandsun"],
+ ig=["#bedtimeroutine","#breathwork","#sunyoon","#over60"], tt=["#bedtime","#breathing","#over60","#sunyoon"],
  yt="Not Counting Sheep: Ten Slow Breaths in Bed", ev=["E19","E48"],
  note="Laborde 2022 (A−); OSA red flag (E48).", bitn=13, bit="The welding metaphors", thumb="10 BREATHS. LIGHTS OUT.", music="soft piano"),
 
-dict(id="S271", group="UG-CS-+06-6", lane="talking_head", page="@changandsun", speaker="DUO", format="F05", pillar="P09", hcat="BED",
+dict(id="S271", group="UG-CS-+06-6", lane="talking_head", page="@sunyoon", speaker="DUO", format="F05", pillar="P09", hcat="BED",
  title="Five-minute bedtime stretch, Sun in charge", prop="edge of the bed with a folded quilt", obj="watch", grammar=["WATCH"],
  beats=[
   ("CHANG","Watch my wife boss me through a five-minute bedtime stretch.","5-MINUTE BEDTIME STRETCH","SET-BEDROOM | C-CASUAL + S-CARDI-JADE | VEO INSERT: Sun points at the bed, Chang sits down on its edge beside a folded quilt | medium"),
@@ -1606,7 +1606,7 @@ dict(id="S271", group="UG-CS-+06-6", lane="talking_head", page="@changandsun", s
  regression="Feet flat, lean forward only; skip the ankle cross.", cta="SLEEP",
  skip="New hip? Skip the ankle cross and follow your surgeon's rules.",
  caption="Comment SLEEP for the 10-minute Sleep Wind-Down.\nFive minutes on the bed edge: knees wide and a gentle forward lean breathing out, then a seated figure-4, 30 seconds a side. Qigong and similar slow practice: meta-analyses in older adults report better sleep quality (moderate certainty).\nNew hip? Skip the ankle cross and follow your surgeon's rules.",
- ig=["#bedtimeroutine","#stretching","#changandsun","#over60"], tt=["#bedtime","#stretch","#over60","#changandsun"],
+ ig=["#bedtimeroutine","#stretching","#sunyoon","#over60"], tt=["#bedtime","#stretch","#over60","#sunyoon"],
  yt="Watch My Wife Boss Me Through a 5-Minute Bedtime Stretch", ev=["E17"],
  note="E17 (A−) at grade; no condition claim.", bitn=3, bit="Hips. Now.", thumb="HIPS. NOW.", music="soft piano"),
 
@@ -1859,8 +1859,8 @@ dict(id="S284", group="UG-SK-+07-7", lane="talking_head", page="@sunyoon.kitchen
  yt="Reply: 'I'm 81 and Weak.' Here's the Chair", ev=["E02","E43"],
  note="NSCA (A); ACSM screening (E43).", bitn=22, bit="The chair called Coach", thumb="81 IS NOT TOO LATE", music="warm piano"),
 
-# ===================================================================== D+7 Thu Oct 15 · @changandsun
-dict(id="S285", group="UG-CS-+07-1", lane="movement", clip="DRV-sit_to_stand-main", page="@changandsun", speaker="DUO", format="F34", pillar="P17", hcat="TST",
+# ===================================================================== D+7 Thu Oct 15 · @sunyoon
+dict(id="S285", group="UG-CS-+07-1", lane="movement", clip="DRV-sit_to_stand-main", page="@sunyoon", speaker="DUO", format="F34", pillar="P17", hcat="TST",
  title="Couple chair-stand test", prop="two chairs against the living-room wall with a kitchen timer", obj="count", grammar=["TEST_NOW"],
  beats=[
   ("CHANG","Count your chair stands in thirty seconds. Right now, both of you.","30-SECOND CHAIR STAND · BOTH",f"{DL} | MC DRV-sit_to_stand-main: Chang stands up from a chair against the wall, arms crossed, Sun beside him holding a kitchen timer | medium-full"),
@@ -1875,11 +1875,11 @@ dict(id="S285", group="UG-CS-+07-1", lane="movement", clip="DRV-sit_to_stand-mai
  regression="Hands on the thighs or chair arms to push up.", cta="BOOK",
  skip="Need hands to stand up? Use them.",
  caption="Comment BOOK for the link and what's inside.\nThe couple chair-stand test: chair against the wall, arms crossed, count full stands in 30 seconds and write both numbers down. Do this with your partner tonight. The NSCA position statement supports resistance training for older adults when it starts easy and builds gradually. Need hands to stand up? Use them.\n" + BOOK,
- ig=["#chairexercise","#couplegoals","#changandsun","#over60"], tt=["#chairstand","#couple","#over60","#changandsun"],
+ ig=["#chairexercise","#couplegoals","#sunyoon","#over60"], tt=["#chairstand","#couple","#over60","#sunyoon"],
  yt="The 30-Second Chair-Stand Test, Both of You", ev=["E02"],
  note="NSCA (A); personal baseline only; offer terms per CANON UPDATE 2.", bitn=17, bit="The AI winks", thumb="30 SECONDS · BOTH", music="playful swing"),
 
-dict(id="S286", group="UG-CS-+07-2", lane="talking_head", page="@changandsun", speaker="DUO", format="F35", pillar="P17", hcat="CPL",
+dict(id="S286", group="UG-CS-+07-2", lane="talking_head", page="@sunyoon", speaker="DUO", format="F35", pillar="P17", hcat="CPL",
  title="Fifty years: the one thing I'd redo", prop="anniversary card with a gold 50 on the table", obj="send", grammar=["SHARE"],
  beats=[
   ("CHANG","Send this to your wife. Fifty years, and here's what I'd redo.","50 YEARS · 1 THING I'D REDO",f"{DT} | VEO INSERT: a hand places an anniversary card with a gold 50 on the table | CU"),
@@ -1894,11 +1894,11 @@ dict(id="S286", group="UG-CS-+07-2", lane="talking_head", page="@changandsun", s
  regression="", cta="BEGIN",
  skip="Walking at night? Bright clothes and a flashlight.",
  caption="Comment BEGIN for the 'Where should I begin?' start menu.\nFifty years in our story, and the one thing Chang would redo: walk together sooner, 20 minutes side by side, no phones. And say thank you for the soup.\nWalking at night? Bright clothes and a flashlight.",
- ig=["#couplegoals","#marriedlife","#changandsun","#over60"], tt=["#couple","#marriage","#over60","#changandsun"],
+ ig=["#couplegoals","#marriedlife","#sunyoon","#over60"], tt=["#couple","#marriage","#over60","#sunyoon"],
  yt="Fifty Years Married: The One Thing I'd Redo", ev=[],
  note="Couple life (P17); fictional backstory.", bitn=18, bit="The anniversary countdown", thumb="1 THING I'D REDO", music="warm piano"),
 
-dict(id="S287", group="UG-CS-+07-3", lane="talking_head", page="@changandsun", speaker="DUO", format="F35", pillar="P16", hcat="IDN",
+dict(id="S287", group="UG-CS-+07-3", lane="talking_head", page="@sunyoon", speaker="DUO", format="F35", pillar="P16", hcat="IDN",
  title="Jajangmyeon Sunday: whoever eats, chops", prop="wok of black bean sauce with noodles lifted by chopsticks", obj="this", grammar=["DEMO"],
  beats=[
   ("SUN","This is jajangmyeon Sunday. Twenty years, one rule: everyone helps.","JAJANGMYEON SUNDAY · 1 RULE",f"{DK} | VEO INSERT: black bean sauce stirred in a wok, noodles lifted with chopsticks | CU"),
@@ -1913,11 +1913,11 @@ dict(id="S287", group="UG-CS-+07-3", lane="talking_head", page="@changandsun", s
  regression="", cta="BEGIN",
  skip="Watching salt? Half the sauce, more cabbage.",
  caption="Comment BEGIN for the 'Where should I begin?' start menu.\nJajangmyeon Sunday, twenty years in our story: whoever eats, chops. One fixed day gives the week its shape back. Pick yours and put it on the calendar in pen.\nWatching salt? Half the sauce, more cabbage.",
- ig=["#familydinner","#koreanfood","#changandsun","#over60"], tt=["#familydinner","#jajangmyeon","#over60","#changandsun"],
+ ig=["#familydinner","#koreanfood","#sunyoon","#over60"], tt=["#familydinner","#jajangmyeon","#over60","#sunyoon"],
  yt="Jajangmyeon Sunday: Whoever Eats, Chops", ev=[],
  note="Mindset (P16); fictional backstory.", bitn=19, bit="Jajangmyeon Sunday", thumb="WHOEVER EATS, CHOPS", music="playful swing"),
 
-dict(id="S288", group="UG-CS-+07-4", lane="talking_head", page="@changandsun", speaker="DUO", format="F07", pillar="P16", hcat="BLT",
+dict(id="S288", group="UG-CS-+07-4", lane="talking_head", page="@sunyoon", speaker="DUO", format="F07", pillar="P16", hcat="BLT",
  title="Frank's nine excuses", prop="list titled FRANK'S EXCUSES on the yard table", obj="excuses", grammar=["OBJ3"],
  beats=[
   ("SUN","Excuses at seventy-four: Frank has nine. We counted.","FRANK'S 9 EXCUSES",f"{DY} | VEO INSERT: a hand places a list titled FRANK'S EXCUSES on the yard table | CU"),
@@ -1932,11 +1932,11 @@ dict(id="S288", group="UG-CS-+07-4", lane="talking_head", page="@changandsun", s
  regression="", cta="BEGIN",
  skip="Knee swollen, hot, or giving way? That's a doctor, not an excuse.",
  caption="Comment BEGIN for the 'Where should I begin?' start menu.\nFrank (our fictional neighbor) has nine excuses, and every one is true. We stopped arguing and brought two chairs: five stands on his porch, chairs against the wall. He did six.\nKnee swollen, hot, or giving way? That's a doctor, not an excuse.",
- ig=["#neverstopmoving","#chairexercise","#changandsun","#over60"], tt=["#over60","#excuses","#strength","#changandsun"],
+ ig=["#neverstopmoving","#chairexercise","#sunyoon","#over60"], tt=["#over60","#excuses","#strength","#sunyoon"],
  yt="Frank Has Nine Excuses. We Brought Two Chairs.", ev=[],
  note="Blunt truth (P16); Frank is a fictional side character.", bitn=12, bit="Frank's excuses", thumb="9 EXCUSES · 2 CHAIRS", music="playful swing"),
 
-dict(id="S289", group="UG-CS-+07-5", lane="talking_head", page="@changandsun", speaker="DUO", format="F02", pillar="P03", hcat="TST",
+dict(id="S289", group="UG-CS-+07-5", lane="talking_head", page="@sunyoon", speaker="DUO", format="F02", pillar="P03", hcat="TST",
  title="Kettle time is one-foot time", prop="kettle starting to steam beside a hand on the counter edge", obj="if", grammar=["IF_EVERY"],
  beats=[
   ("SUN","If you wait for the kettle every morning, stand on one foot.","KETTLE = ONE-FOOT TIME",f"{DK} | VEO INSERT: a kettle starts to steam, a hand rests on the counter edge | CU"),
@@ -1951,11 +1951,11 @@ dict(id="S289", group="UG-CS-+07-5", lane="talking_head", page="@changandsun", s
  regression="Heel to toe, or feet together, both hands on the counter.", cta="BALANCE",
  skip="Dizzy, or unsteady lately? Keep both feet down and both hands on the counter.",
  caption="Comment BALANCE for Steady Feet + the 10-second test.\nKettle time is one-foot time: hand on the counter, lift one foot an inch, count to ten, switch, until the kettle clicks. Standing on one leg for 10 seconds is the last stage of the CDC STEADI 4-Stage Balance Test. Can't yet? Heel to toe, still holding the counter.\nDizzy, or unsteady lately? Both feet down, both hands on the counter.",
- ig=["#balancetraining","#habitstacking","#changandsun","#over60"], tt=["#balance","#over60","#habitstack","#changandsun"],
+ ig=["#balancetraining","#habitstacking","#sunyoon","#over60"], tt=["#balance","#over60","#habitstack","#sunyoon"],
  yt="If You Wait for the Kettle Every Morning, Stand on One Foot", ev=["E50"],
  note="STEADI (A, tool); no fall-outcome claim.", bitn=9, bit="Fridge balance leaderboard", thumb="KETTLE = 1 FOOT", music="playful swing"),
 
-dict(id="S290", group="UG-CS-+07-6", lane="talking_head", page="@changandsun", speaker="DUO", format="F15", pillar="P03", hcat="MYT",
+dict(id="S290", group="UG-CS-+07-6", lane="talking_head", page="@sunyoon", speaker="DUO", format="F15", pillar="P03", hcat="MYT",
  title="Balance is a skill, not luck", prop="Sun's visor on the promenade line", obj="not", grammar=["MYTH_NOT"],
  beats=[
   ("SUN","Not age, not bad luck. Balance is a skill you practice.","BALANCE IS A SKILL",f"{DP} | VEO INSERT: Sun in her visor steps heel to toe along a painted promenade line | medium"),
@@ -1970,11 +1970,11 @@ dict(id="S290", group="UG-CS-+07-6", lane="talking_head", page="@changandsun", s
  regression="One hand on the rail, shorter steps.", cta="BALANCE",
  skip="Unsteady? Walk beside the rail with one hand on it.",
  caption="Comment BALANCE for Steady Feet + the 10-second test.\nBalance is a skill: thirty heel-to-toe steps along a line next to a rail, eyes ahead, arms out. Tandem (heel-to-toe) stance is one stage of the CDC STEADI 4-Stage Balance Test.\nUnsteady? Walk beside the rail with one hand on it. Dizzy? Stop and sit.",
- ig=["#balancetraining","#walking","#changandsun","#over60"], tt=["#balance","#over60","#heeltotoe","#changandsun"],
+ ig=["#balancetraining","#walking","#sunyoon","#over60"], tt=["#balance","#over60","#heeltotoe","#sunyoon"],
  yt="Not Age, Not Luck: Balance Is a Skill", ev=["E50"],
  note="STEADI (A, tool); no fall-outcome claim.", bitn=14, bit="Sun's visor", thumb="BALANCE IS A SKILL", music="playful swing"),
 
-dict(id="S291", group="UG-CS-+07-7", lane="talking_head", page="@changandsun", speaker="DUO", format="F10", pillar="P18", hcat="CPL",
+dict(id="S291", group="UG-CS-+07-7", lane="talking_head", page="@sunyoon", speaker="DUO", format="F10", pillar="P18", hcat="CPL",
  title="Reply: how we start a bad day", prop="comment card about bad days on the sofa arm", obj="watch", grammar=["WATCH"],
  beats=[
   ("SUN","You asked about bad days. Watch the first five minutes.","REPLY: OUR BAD-DAY 5 MINUTES",f"{DL} | VEO INSERT: a hand places a comment card reading HOW DO YOU START A BAD DAY? on the sofa arm | CU"),
@@ -1989,7 +1989,7 @@ dict(id="S291", group="UG-CS-+07-7", lane="talking_head", page="@changandsun", s
  regression="Hands on the thighs to push up.", cta="BEGIN",
  skip="Bad days stacking into weeks? Tell your doctor.",
  caption="Comment BEGIN for the 'Where should I begin?' start menu.\nOur bad-day first five minutes: sit on the bed edge before standing, then water, window and five slow breaths, then five chair stands with the chair against the wall. Blood pressure can drop on standing in older adults, so sit first. The NSCA position statement: strength training is safe for older adults when it starts easy.\nBad days stacking into weeks? Tell your doctor.",
- ig=["#morningroutine","#chairexercise","#changandsun","#over60"], tt=["#morning","#routine","#over60","#changandsun"],
+ ig=["#morningroutine","#chairexercise","#sunyoon","#over60"], tt=["#morning","#routine","#over60","#sunyoon"],
  yt="Reply: How We Start a Bad Day (First 5 Minutes)", ev=["E02","E46"],
  note="NSCA (A); orthostatic practical rule (E46).", bitn=10, bit="Short version:", thumb="BAD DAY? 5 MINUTES", music="warm piano"),
 ]

@@ -4,7 +4,7 @@
 #               while runway mode is on (FUNNEL.md §4.18 "runway link rule"). No price, no "$", no subscription talk.
 #   S176–S190 = LAUNCH WEEK (15): the ebook front end (BOOK keyword → Shopify product, FUNNEL.md §4.19) and the Founding
 #               Membership (post-purchase one-click offer, or JOIN for people who want only the membership).
-# Mix: Chang solo 14 (@changyin), Sun solo 13 (@sunyoon.kitchen), Duo 13 (@changandsun).
+# Mix: Chang solo 14 (@changyin), Sun solo 13 (@sunyoon.kitchen), Duo 13 (@sunyoon).
 # Placeholders filled by the pipeline from live config (one value per render, never typed by hand):
 #   {{EBOOK_PRICE}}    the live ebook test-cell price ($7 / $12 / $15; default display $12)
 #   {{FOUNDING_PRICE}} the founding membership price ($25 default; $30 only if cell data supports it)
@@ -372,8 +372,8 @@ dict(id="S167", page="@sunyoon.kitchen", speaker="SUN", format="F26", pillar="P2
  yt="'Are You Even Real?' No. Here's What Is.", ev=[],
  note="Disclosure/wink post; no health claim.", bit="AI wink", wink=True, thumb="NO. I'M AI.", music="playful pizzicato"),
 
-# ================================================================ RUNWAY: @changandsun (Duo) ================
-dict(id="S168", page="@changandsun", speaker="DUO", format="F34", pillar="P01", hook_id="H408", hcat="CPL", title="Loser does dishes: the chair test", secs=48,
+# ================================================================ RUNWAY: @sunyoon (Duo) ================
+dict(id="S168", page="@sunyoon", speaker="DUO", format="F34", pillar="P01", hook_id="H408", hcat="CPL", title="Loser does dishes: the chair test", secs=48,
  prop="yellow dish gloves on the dish rack", obj="thirty-second", grammar=["OBJ3","WATCH","TEST_NOW","DEMO"], series="Loser Does Dishes", demo=True,
  beats=[
   ("0-3","SUN","Thirty-second chair test. Him versus me. Watch his face when I win.","LOSER DOES DISHES",f"{DK} | Sun drops yellow dish gloves on the table between two chairs pushed against the kitchen wall | medium"),
@@ -389,11 +389,11 @@ dict(id="S168", page="@changandsun", speaker="DUO", format="F34", pillar="P01", 
  regression="Hands on thighs to push up.", cta="TEST",
  skip="Chest pain or dizzy? Stop and sit.",
  caption="Comment TEST for the free 3-minute Strength Age test.\nCouple challenge: 30-second chair stand, chairs against the wall, arms crossed. Normal ranges by age and sex come from the Senior Fitness Test norms (7,183 US adults aged 60–94). Loser does dishes.\nChest pain or dizziness? Stop, sit and call your doctor. Tell us both your numbers.",
- ig=["#couplechallenge","#chairtest","#changandsun","#over60"], tt=["#couplechallenge","#over60","#chairtest","#changandsun"],
+ ig=["#couplechallenge","#chairtest","#sunyoon","#over60"], tt=["#couplechallenge","#over60","#chairtest","#sunyoon"],
  yt="Chair Test, Husband vs Wife (Loser Does Dishes)", ev=["E49"],
  note="Senior Fitness Test norms (A); Sun's range stated approximately as a population norm.", bit="Loser does dishes; NO MIRROR FLEXING (oven door)", wink=False, thumb="LOSER DOES DISHES", music="playful swing"),
 
-dict(id="S169", page="@changandsun", speaker="DUO", format="F08", pillar="P17", hook_id="H409", hcat="CPL", title="He flexes in every shiny surface", secs=44,
+dict(id="S169", page="@sunyoon", speaker="DUO", format="F08", pillar="P17", hook_id="H409", hcat="CPL", title="He flexes in every shiny surface", secs=44,
  prop="handwritten sign taped to the oven door", obj="shiny", grammar=["SHARE"], demo=False,
  beats=[
   ("0-3","SUN","If your husband flexes in every shiny surface, you're married to this man.","HE FLEXES IN EVERYTHING",f"{DK} | Chang flexes in the oven door; Sun tapes a handwritten sign to it | medium"),
@@ -408,11 +408,11 @@ dict(id="S169", page="@changandsun", speaker="DUO", format="F08", pillar="P17", 
  regression="", cta="BEGIN",
  skip="Hand on the counter.",
  caption="Comment BEGIN for the where-to-start menu.\nFifty years of fictional marriage. Microwave, car window, her glasses, a spoon. Tag the flexer in your house.\nChang & Sun are AI characters; the sign on the oven is very real.",
- ig=["#marriagehumor","#changandsun","#over60","#couplegoals"], tt=["#marriagehumor","#over60","#couplegoals","#changandsun"],
+ ig=["#marriagehumor","#sunyoon","#over60","#couplegoals"], tt=["#marriagehumor","#over60","#couplegoals","#sunyoon"],
  yt="He Flexes in Every Shiny Surface (50 Years Married)", ev=[],
  note="Couple comedy (P17); wink #1 rotated.", bit="NO MIRROR FLEXING; the hidden kettlebell; Hips. Now.", wink=True, thumb="HE FLEXES IN EVERYTHING", music="playful swing"),
 
-dict(id="S170", page="@changandsun", speaker="DUO", format="F23", pillar="P03", hook_id="H410", hcat="CPL", title="Dishes on one leg, together", secs=47,
+dict(id="S170", page="@sunyoon", speaker="DUO", format="F23", pillar="P03", hook_id="H410", hcat="CPL", title="Dishes on one leg, together", secs=47,
  prop="double sink full of soapy dishes", obj="dishes", grammar=["IF_EVERY","DEMO","SHARE"], demo=True,
  beats=[
   ("0-3","SUN","If you do the dishes every night, take turns standing on one leg at the sink.","DISHES ON ONE LEG",f"{DK} | Chang washes, Sun dries; both lift one foot, fingers on the sink edge | medium"),
@@ -427,11 +427,11 @@ dict(id="S170", page="@changandsun", speaker="DUO", format="F23", pillar="P03", 
  regression="Toes of the lifted foot stay on the floor, hand flat on the sink.", cta="BALANCE",
  skip="Dizzy spells or a new hip? Keep both feet down and tell your doctor.",
  caption="Comment BALANCE for Steady Feet + the 10-second test.\nDishes on one leg: fingers on the sink edge, lift one foot a little, 10 seconds, switch. Standing on one leg is the 4th stage of the CDC STEADI 4-Stage Balance Test.\nDizzy spells or a new hip? Keep both feet down and tell your doctor. Send this to whoever dries.",
- ig=["#balancetraining","#couplechallenge","#changandsun","#over60"], tt=["#balanceexercises","#couplegoals","#over60","#changandsun"],
+ ig=["#balancetraining","#couplechallenge","#sunyoon","#over60"], tt=["#balanceexercises","#couplegoals","#over60","#sunyoon"],
  yt="Do the Dishes on One Leg (Together)", ev=["E50"],
  note="STEADI tool (A) described as a clinic check; no outcome claim.", bit="Towel flick", wink=False, thumb="DISHES ON ONE LEG", music="playful swing"),
 
-dict(id="S171", page="@changandsun", speaker="DUO", format="F35", pillar="P16", hook_id="H411", hcat="BLT", title="Call one person before dinner", secs=45,
+dict(id="S171", page="@sunyoon", speaker="DUO", format="F35", pillar="P16", hook_id="H411", hcat="BLT", title="Call one person before dinner", secs=45,
  prop="landline phone with a long curly cord", obj="not", grammar=["SHARE"], demo=False,
  beats=[
   ("0-3","SUN","Not an app, not a gym. Call one person before dinner tonight.","CALL ONE PERSON TONIGHT",f"{DL} | Sun hands Chang the landline receiver, the curly cord stretched across the sofa | medium"),
@@ -445,11 +445,11 @@ dict(id="S171", page="@changandsun", speaker="DUO", format="F35", pillar="P16", 
  regression="", cta="BEGIN",
  skip="Feeling alone most days? Tell your doctor.",
  caption="Comment BEGIN for the where-to-start menu.\nA meta-analysis of 148 studies (308,849 people) found stronger social relationships were linked with better health outcomes (Holt-Lunstad et al., 2010). The call can be five minutes: 'I was thinking about you.'\nFeeling alone most days? Tell your doctor; it counts as health. Type a first name below, then call them.",
- ig=["#friendship","#agingwell","#changandsun","#callyourmother"], tt=["#friendship","#over60","#changandsun","#callsomeone"],
+ ig=["#friendship","#agingwell","#sunyoon","#callyourmother"], tt=["#friendship","#over60","#sunyoon","#callsomeone"],
  yt="Not an App. Not a Gym. Call One Person Tonight.", ev=["E37"],
  note="Holt-Lunstad (C) stated as 'health outcomes' association; no survival wording.", bit="Frank (offscreen)", wink=False, thumb="CALL ONE PERSON", music="soft piano"),
 
-dict(id="S172", page="@changandsun", speaker="DUO", format="F18", pillar="P13", hook_id="H412", hcat="CPL", title="Fourteen dumplings: the protein count", secs=46,
+dict(id="S172", page="@sunyoon", speaker="DUO", format="F18", pillar="P13", hook_id="H412", hcat="CPL", title="Fourteen dumplings: the protein count", secs=46,
  prop="steamer basket of pork dumplings", obj="fourteen", grammar=["OBJ3","DEMO"], demo=True,
  beats=[
   ("0-3","SUN","Fourteen dumplings. He says twelve. Let's count the protein, not the dumplings.","14 DUMPLINGS (HE SAYS 12)",f"{DT} | Sun lifts the lid on a steamer basket of pork dumplings; Chang reaches, she slaps his hand | medium"),
@@ -464,11 +464,11 @@ dict(id="S172", page="@changandsun", speaker="DUO", format="F18", pillar="P13", 
  regression="", cta="SOUP",
  skip="Kidney disease? Ask your doctor for your protein number.",
  caption="Comment SOUP for Sun Yoon's Three Soups.\nPork dumplings carry roughly 2–3 g protein each (USDA, approximate). PROT-AGE suggests about 25–30 g protein per meal for adults over 65, so the honest count was about 12, plus greens. Dumplings are salty: dip once.\nKidney disease? Ask your doctor for your protein number.",
- ig=["#dumplings","#highprotein","#changandsun","#koreanfood"], tt=["#dumplings","#couplegoals","#highprotein","#changandsun"],
+ ig=["#dumplings","#highprotein","#sunyoon","#koreanfood"], tt=["#dumplings","#couplegoals","#highprotein","#sunyoon"],
  yt="Fourteen Dumplings? Let's Count the Protein", ev=["E28","E52"],
  note="PROT-AGE (A); USDA ranges approximate.", bit="Dumpling count", wink=False, thumb="14. HE SAYS 12.", music="playful swing"),
 
-dict(id="S173", page="@changandsun", speaker="DUO", format="F33", pillar="P01", hook_id="H413", hcat="IDN", title="Do the chair test with your parents Sunday", secs=46,
+dict(id="S173", page="@sunyoon", speaker="DUO", format="F33", pillar="P01", hook_id="H413", hcat="IDN", title="Do the chair test with your parents Sunday", secs=46,
  prop="tablet propped on the table for a Sunday video call", obj="sunday", grammar=["SHARE","TEST_NOW"], demo=True,
  beats=[
   ("0-3","SUN","Sunday video call with your mom? Do the chair test together. She'll say she's fine.","DO THE TEST ON SUNDAY'S CALL",f"{DT} | Sun props a tablet against the fruit bowl; Mina waves from Seattle on screen | medium"),
@@ -483,11 +483,11 @@ dict(id="S173", page="@changandsun", speaker="DUO", format="F33", pillar="P01", 
  regression="Hands on thighs to push up, helper nearby.", cta="TEST",
  skip="Chest pain or dizziness? Stop and sit.",
  caption="Comment TEST for the free 3-minute Strength Age test.\nDo the 30-second chair stand together on a video call: sturdy chair against a wall, arms crossed, someone nearby the first time. Normal ranges by age come from the Senior Fitness Test norms (7,183 US adults aged 60–94).\nChest pain or dizziness? Stop, sit and call the doctor. Send this to your mom.",
- ig=["#agingparents","#chairtest","#changandsun","#familytime"], tt=["#agingparents","#over60","#chairtest","#changandsun"],
+ ig=["#agingparents","#chairtest","#sunyoon","#familytime"], tt=["#agingparents","#over60","#chairtest","#sunyoon"],
  yt="Do the Chair Test With Your Parents This Sunday", ev=["E49"],
  note="Senior Fitness Test norms (A).", bit="Phone calls from Mina", wink=False, thumb="SUNDAY CALL TEST", music="warm acoustic"),
 
-dict(id="S174", page="@changandsun", speaker="DUO", format="F10", pillar="P20", hook_id="H414", hcat="BLT", title="'Is it another course I'll never open?'", secs=46,
+dict(id="S174", page="@sunyoon", speaker="DUO", format="F10", pillar="P20", hook_id="H414", hcat="BLT", title="'Is it another course I'll never open?'", secs=46,
  prop="pile of unopened course binders", obj="is", grammar=["SHARE"], demo=False,
  beats=[
   ("0-3","SUN","'Is it another course I'll never open?' Short version: no. Here's what it is.","ANOTHER COURSE? NO.",f"{DL} | Sun drops a pile of unopened binders on the sofa; Mandu jumps off | medium"),
@@ -502,11 +502,11 @@ dict(id="S174", page="@changandsun", speaker="DUO", format="F10", pillar="P20", 
  regression="", cta="WAITLIST",
  skip="New to exercise? Check with your doctor first, and start on the gentle level.",
  caption="Comment WAITLIST for the free waitlist link and the day-1 session.\nWhat Strong Years is: a new 8–12 minute session with Chang every morning, a chair version of everything, 4 levels, Sun Yoon's recipes every Sunday and a strength number you retest monthly. Every price and term is shown on one page before checkout.\n" + WL,
- ig=["#strongyears","#changandsun","#over60fitness","#homeworkout"], tt=["#strongyears","#over60","#homeworkout","#changandsun"],
+ ig=["#strongyears","#sunyoon","#over60fitness","#homeworkout"], tt=["#strongyears","#over60","#homeworkout","#sunyoon"],
  yt="Another Course You'll Never Open? Here's What It Is", ev=[],
  note="Runway product explainer (P20); no claims.", bit="Mandu the cat", wink=False, thumb="ANOTHER COURSE? NO.", music="playful swing"),
 
-dict(id="S175", page="@changandsun", speaker="DUO", format="F22", pillar="P08", hook_id="H415", hcat="CPL", title="One minute of tai chi while the coffee brews", secs=47,
+dict(id="S175", page="@sunyoon", speaker="DUO", format="F22", pillar="P08", hook_id="H415", hcat="CPL", title="One minute of tai chi while the coffee brews", secs=47,
  prop="French press steeping on the yard bench", obj="coffee", grammar=["IF_EVERY","DEMO"], demo=True,
  beats=[
   ("0-3","CHANG","If you wait for the coffee every morning, give me one minute of tai chi.","COFFEE MINUTE: TAI CHI",f"{DY} | Chang presses the plunger halfway, steps onto the pavers beside the waist-high fence | medium-full"),
@@ -521,7 +521,7 @@ dict(id="S175", page="@changandsun", speaker="DUO", format="F22", pillar="P08", 
  regression="Smaller shifts with both hands on the fence.", cta="WAITLIST",
  skip="Dizzy spells or a recent hip surgery? Ask your doctor first.",
  caption="Comment WAITLIST for the free waitlist link and the day-1 session.\nOne coffee minute: slow tai chi weight shifts, knees soft, fence within reach. Meta-analyses of Baduanjin/qigong in older adults report better sleep quality and fewer depressive symptoms (moderate certainty).\nDizzy spells or recent hip surgery? Ask your doctor first.\n" + WL,
- ig=["#taichi","#qigong","#morningroutine","#changandsun"], tt=["#taichi","#over60","#morningroutine","#changandsun"],
+ ig=["#taichi","#qigong","#morningroutine","#sunyoon"], tt=["#taichi","#over60","#morningroutine","#sunyoon"],
  yt="While the Coffee Brews: One Minute of Tai Chi", ev=["E17"],
  note="Qigong meta (A−) at grade; cultural vocabulary per D-07.", bit="", wink=False, thumb="COFFEE MINUTE", music="soft acoustic"),
 
@@ -720,8 +720,8 @@ dict(id="S185", page="@sunyoon.kitchen", speaker="SUN", format="F33", pillar="P1
  yt="Buying for Your Mother? Give a Gift That Ends", ev=[],
  note="Gift terms per OFFER/S-04.", bit="", wink=False, thumb="A GIFT THAT ENDS", music="warm acoustic"),
 
-# ================================================================ LAUNCH WEEK: @changandsun (Duo) ================
-dict(id="S186", page="@changandsun", speaker="DUO", format="F38", pillar="P20", hook_id="H426", hcat="LCH", title="Doors open: the honest version", secs=57, launch=True,
+# ================================================================ LAUNCH WEEK: @sunyoon (Duo) ================
+dict(id="S186", page="@sunyoon", speaker="DUO", format="F38", pillar="P20", hook_id="H426", hcat="LCH", title="Doors open: the honest version", secs=57, launch=True,
  prop="two books and a terms card on the coffee table", obj="doors", grammar=["OBJ3","LAUNCH"], demo=False,
  beats=[
   ("0-3","SUN","Doors open today. Here's the honest version, because he talks too slowly.","DOORS OPEN · HONEST VERSION",f"{DL} | Sun lays two books and a terms card on the coffee table; Chang opens his mouth, closes it | medium"),
@@ -737,11 +737,11 @@ dict(id="S186", page="@changandsun", speaker="DUO", format="F38", pillar="P20", 
  regression="", cta="BOOK",
  skip="New to exercise? Check with your doctor.",
  caption="Comment BOOK for the link and what's inside.\nDoors are open. The honest version, start to finish.\n" + BOOK + "\n" + MEMBER,
- ig=["#strongyears","#changandsun","#foundingmember","#over60"], tt=["#strongyears","#changandsun","#foundingmember","#over60"],
+ ig=["#strongyears","#sunyoon","#foundingmember","#over60"], tt=["#strongyears","#sunyoon","#foundingmember","#over60"],
  yt="Doors Open: The Honest Version (Books + Founding Offer)", ev=[],
  note="Day-0 announcement; full CANON UPDATE 2 terms.", bit="Short version: (Sun finishes his story)", wink=False, thumb="THE HONEST VERSION", music="playful swing"),
 
-dict(id="S187", page="@changandsun", speaker="DUO", format="F10", pillar="P20", hook_id="H427", hcat="LCH", title="Who should NOT buy our books", secs=48, launch=True,
+dict(id="S187", page="@sunyoon", speaker="DUO", format="F10", pillar="P20", hook_id="H427", hcat="LCH", title="Who should NOT buy our books", secs=48, launch=True,
  prop="red NO stamp and the two books", obj="if", grammar=["IF_EVERY","LAUNCH"], demo=False,
  beats=[
   ("0-3","SUN","If you already lift three times every week, don't buy our books. Really.","WHO SHOULDN'T BUY THIS",f"{DT} | Sun stamps a red NO on a sticky note next to the two books | CU"),
@@ -756,11 +756,11 @@ dict(id="S187", page="@changandsun", speaker="DUO", format="F10", pillar="P20", 
  regression="", cta="BOOK",
  skip="Heart condition or new to exercise? Check with your doctor first.",
  caption="Comment BOOK for the link and what's inside.\nWho shouldn't buy: people already lifting 3×/week (the Reset is a beginning) and anyone whose doctor set a special diet (their plan comes first). Who it's for: people starting out who want a chair version and the study next to every move.\n" + BOOK,
- ig=["#strongyears","#changandsun","#honestanswers","#over60"], tt=["#strongyears","#changandsun","#honest","#over60"],
+ ig=["#strongyears","#sunyoon","#honestanswers","#over60"], tt=["#strongyears","#sunyoon","#honest","#over60"],
  yt="Who Should NOT Buy Our Books (Honestly)", ev=[],
  note="Anti-pressure fit post; no claims.", bit="", wink=False, thumb="DON'T BUY THIS IF…", music="playful swing"),
 
-dict(id="S188", page="@changandsun", speaker="DUO", format="F38", pillar="P20", hook_id="H428", hcat="LCH", title="Founding seats: what 'locked' means", secs=55, launch=True,
+dict(id="S188", page="@sunyoon", speaker="DUO", format="F38", pillar="P20", hook_id="H428", hcat="LCH", title="Founding seats: what 'locked' means", secs=55, launch=True,
  prop="padlock on the garage pegboard", obj="locked", grammar=["OBJ3","LAUNCH"], demo=False,
  beats=[
   ("0-3","CHANG","'Locked' price. Locked how? She made me explain it properly.","LOCKED HOW?",f"{DG} | Chang hangs a padlock on the pegboard; Sun watches with arms crossed | medium"),
@@ -776,11 +776,11 @@ dict(id="S188", page="@changandsun", speaker="DUO", format="F38", pillar="P20", 
  regression="", cta="JOIN",
  skip="New to exercise? Check with your doctor.",
  caption="Comment JOIN for the founding-member link and full terms.\nWhat 'locked' means: your founding price doesn't go up for as long as you stay subscribed, pauses included. Cancel and come back later and it's the price on that day.\n" + JOIN,
- ig=["#strongyears","#foundingmember","#changandsun","#honestanswers"], tt=["#strongyears","#foundingmember","#changandsun","#honest"],
+ ig=["#strongyears","#foundingmember","#sunyoon","#honestanswers"], tt=["#strongyears","#foundingmember","#sunyoon","#honest"],
  yt="Founding Price 'Locked'? Here's Exactly What That Means", ev=[],
  note="Terms clarity post (no lifetime promise).", bit="The hidden kettlebell (she pockets the key)", wink=False, thumb="LOCKED HOW?", music="warm acoustic"),
 
-dict(id="S189", page="@changandsun", speaker="DUO", format="F26", pillar="P20", hook_id="H429", hcat="LCH", title="Your questions, launch week", secs=54, launch=True,
+dict(id="S189", page="@sunyoon", speaker="DUO", format="F26", pillar="P20", hook_id="H429", hcat="LCH", title="Your questions, launch week", secs=54, launch=True,
  prop="shoebox of printed question cards", obj="your", grammar=["OBJ3","LAUNCH"], demo=False,
  beats=[
   ("0-3","SUN","Your questions from launch week. Real questions. No fake reviews. Let's go.","YOUR QUESTIONS, ANSWERED",f"{DL} | Sun tips a shoebox of printed question cards onto the sofa | medium"),
@@ -796,11 +796,11 @@ dict(id="S189", page="@changandsun", speaker="DUO", format="F26", pillar="P20", 
  regression="", cta="BOOK",
  skip="New to exercise? Check with your doctor before starting.",
  caption="Comment BOOK for the link and what's inside.\nLaunch-week questions: you need a sturdy chair and a counter; yes, you can print the books; no, you don't have to join.\n" + BOOK + "\n" + MEMBER,
- ig=["#strongyears","#changandsun","#faq","#over60"], tt=["#strongyears","#changandsun","#faq","#over60"],
+ ig=["#strongyears","#sunyoon","#faq","#over60"], tt=["#strongyears","#sunyoon","#faq","#over60"],
  yt="Launch Week: Your Questions, Answered", ev=[],
  note="FAQ from real question themes (no quotes attributed to people).", bit="", wink=True, thumb="YOUR QUESTIONS", music="playful swing"),
 
-dict(id="S190", page="@changandsun", speaker="DUO", format="F39", pillar="P20", hook_id="H430", hcat="LCH", title="End of launch week: nothing jumps at midnight", secs=50, launch=True,
+dict(id="S190", page="@sunyoon", speaker="DUO", format="F39", pillar="P20", hook_id="H430", hcat="LCH", title="End of launch week: nothing jumps at midnight", secs=50, launch=True,
  prop="wall calendar with no circled date", obj="not", grammar=["LAUNCH"], demo=False,
  beats=[
   ("0-3","CHANG","Not a countdown, not a midnight price jump. Launch week ends. Here's what changes.","NO COUNTDOWN. HERE'S WHAT CHANGES.",f"{DK} | Chang flips the kitchen wall calendar; no date is circled | medium"),
@@ -815,7 +815,7 @@ dict(id="S190", page="@changandsun", speaker="DUO", format="F39", pillar="P20", 
  regression="", cta="BOOK",
  skip="New to exercise? Check with your doctor first.",
  caption="Comment BOOK for the link and what's inside.\nLaunch week is over and nothing jumps at midnight. The founding price stays open until we close the founding cohort, and we'll announce any closing date at least a week ahead.\n" + BOOK + "\n" + MEMBER,
- ig=["#strongyears","#changandsun","#norush","#over60"], tt=["#strongyears","#changandsun","#norush","#over60"],
+ ig=["#strongyears","#sunyoon","#norush","#over60"], tt=["#strongyears","#sunyoon","#norush","#over60"],
  yt="End of Launch Week: No Countdown, Here's What Changes", ev=[],
  note="Anti-fake-urgency post; pins after launch week.", bit="", wink=False, thumb="NO COUNTDOWN", music="warm acoustic"),
 ]

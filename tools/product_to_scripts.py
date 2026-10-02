@@ -37,7 +37,7 @@ TYPE = {  # session type -> (page, cta keyword, habit phrase for IF_EVERY, myth 
     "Mobility": ("@changyin", "BACK", "feel stiff getting out of bed", "Stiff joints should rest?"),
     "Balance": ("@changyin", "BALANCE", "hold the wall to put on socks", "Balance just goes with age?"),
     "Breath + qigong": ("@changyin", "BREATH", "rush your breathing when you feel stressed", "Breathing is automatic, why practice?"),
-    "Walk-and-talk": ("@changandsun", "BEGIN", "walk less than you used to", "Walking is not real exercise?"),
+    "Walk-and-talk": ("@sunyoon", "BEGIN", "walk less than you used to", "Walking is not real exercise?"),
     "Rest + stretch": ("@changyin", "SLEEP", "go to bed with a tight back", "Rest days are lazy days?"),
 }
 PROGRAM_CTA = {"S70": "STRONG", "BKS": "BACK", "BAL": "BALANCE", "GRP": "STRONG", "WLK": "BEGIN", "GUT": "GUT"}
@@ -173,7 +173,7 @@ def program_brief(p: dict, grammar: str, wk: int) -> dict:
         _beat("38-42", f"Comment {cta}. I'll send you the program.", f"Comment {cta}", "same | Chang points to camera | medium CU"),
     ]
     caption = f"{name}: {test}. Comment {cta} for the {weeks}-week program.\n{FOOTER}"
-    return {"page": "@changandsun", "speaker": "CHANG", "pillar": "P01", "has_movement": True,
+    return {"page": "@sunyoon", "speaker": "CHANG", "pillar": "P01", "has_movement": True,
             "movement_tags": ["sit_to_stand"], "evidence": re.findall(r"\bE\d+\b", str(cp.get("evidence") or "")),
             "regression": "Use your hands on your thighs; a higher seat.",
             "safety_cue": "Chair against the wall, stop rule (spoken).", "cta_keyword": cta, "target_seconds": 42,

@@ -11,7 +11,7 @@ from __future__ import annotations
 import re
 
 OUR_HANDLES = frozenset({
-    "@changyin", "@sunyoon.kitchen", "@changandsun", "@changyin.strength", "@changyin.mobility", "@sunyoon",
+    "@changyin", "@sunyoon.kitchen", "@sunyoon", "@changyin.strength", "@changyin.mobility",
     "@changyin.espanol", "@donchuyylupe", "@strongyears",
 })
 # longest phrases first; replacement keeps the original's leading capital

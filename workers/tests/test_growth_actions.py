@@ -13,7 +13,7 @@ NOW = datetime(2026, 10, 2, 9, 0, tzinfo=timezone.utc)
 PAGES = [
     {"id": "A", "slug": "changyin", "status": "active", "locale": "en-US", "page_dna": {"pillars": ["P01", "P02", "P15"], "speakers": ["CHANG", "DUO"]}},
     {"id": "B", "slug": "sunyoon-kitchen", "status": "active", "locale": "en-US", "page_dna": {"pillars": ["P11", "P12", "P15"], "speakers": ["SUN", "DUO"]}},
-    {"id": "C", "slug": "changandsun", "status": "active", "locale": "en-US", "page_dna": {"pillars": ["P15", "P17"], "speakers": ["DUO", "CHANG", "SUN"]}},
+    {"id": "C", "slug": "sunyoon", "status": "active", "locale": "en-US", "page_dna": {"pillars": ["P15", "P17"], "speakers": ["DUO", "CHANG", "SUN"]}},
     {"id": "D", "slug": "changyin-strength", "status": "active", "locale": "en-US", "page_dna": {"pillars": ["P01", "P02"], "speakers": ["CHANG"]}},
     {"id": "E", "slug": "changyin-espanol", "status": "active", "locale": "es-US", "page_dna": {"pillars": ["P01"], "speakers": ["CHANG"]}},
     {"id": "F", "slug": "paused", "status": "paused", "locale": "en-US", "page_dna": {"pillars": ["P15"]}},
@@ -204,3 +204,15 @@ def test_nothing_in_the_plan_publishes_or_spends(cfg):
 def test_missing_post_context_and_unknown_page_are_tolerated(cfg):
     out = A.plan([score(page="ZZZ")], [], PAGES, cfg, now=NOW, judge_fn=judge_ok)
     assert out["remix_jobs"] == [] and len(out["boost_candidates"]) == 1
+
+
+def test_breakout_fans_out_to_more_variants_including_its_own_page(cfg):
+    """POSTDB §8 rule 11: a breakout gets 5-10 new-object variants within days, its own page included."""
+    out = A.plan([score(breakout=True)], [post()], PAGES, cfg, now=NOW, judge_fn=judge_ok)
+    jobs = out["remix_jobs"]
+    assert len(jobs) == cfg["remix"]["variants_per_breakout"]
+    assert any(j["same_page_new_object"] and j["target_page_id"] == "A" for j in jobs)
+    assert {j["target_page_id"] for j in jobs} <= {"A", "B", "C", "D"}
+    assert len({j["earliest_at"] for j in jobs}) >= 2                    # later rounds are staggered by a day
+    yt = A.plan([score(breakout=True, platform="youtube")], [post()], PAGES, cfg, now=NOW, judge_fn=judge_ok)
+    assert len(yt["remix_jobs"]) <= cfg["remix"]["youtube"]["max_remixes_per_source"]

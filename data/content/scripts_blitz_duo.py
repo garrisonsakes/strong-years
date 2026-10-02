@@ -1,4 +1,4 @@
-# Blitz expansion: Duo scripts S125–S134 (@changandsun). Every duo script carries >=1 running bit (CHARACTERS.md §7).
+# Blitz expansion: Duo scripts S125–S134 (@sunyoon). Every duo script carries >=1 running bit (CHARACTERS.md §7).
 # Same schema as scripts_duo.py plus the v2 keys documented in scripts_blitz_chang.py.
 K = "SET-KITCHEN | C-CASUAL + S-KITCHEN"
 L = "SET-LIVING | C-CASUAL + S-CARDI-JADE"
@@ -10,7 +10,7 @@ FR = "SET-FRANK | C-CASUAL + S-CARDI-MUSTARD"
 LF = "SET-LIVING | C-FORMAL + S-FORMAL"
 
 SCRIPTS = [
-dict(id="S125", page="@changandsun", speaker="DUO", format="F34", pillar="P17", hook_id="H365", hcat="CPL", title="Walk backwards along the counter. Loser does dishes.", secs=46,
+dict(id="S125", page="@sunyoon", speaker="DUO", format="F34", pillar="P17", hook_id="H365", hcat="CPL", title="Walk backwards along the counter. Loser does dishes.", secs=46,
  prop="fridge whiteboard leaderboard", obj="walk", grammar=["OBJ3","TEST_NOW","DEMO"], series="Loser Does Dishes", demo=True,
  beats=[
   ("0-3","SUN","Walk backwards along the counter. Ten steps. Loser does the dishes.","BACKWARDS · LOSER DOES DISHES",f"{K} | Sun uncaps a marker at the fridge whiteboard; Chang already at the counter | two-shot"),
@@ -26,11 +26,11 @@ dict(id="S125", page="@changandsun", speaker="DUO", format="F34", pillar="P17", 
  regression="Both hands on the counter, tiny steps, or sideways steps instead.", cta="BALANCE",
  skip="Dizzy turning around? Keep both hands on the counter. Tiny steps.",
  caption="Comment BALANCE for Steady Feet.\nBackward walking along the counter is one of the Otago home-program moves. Otago was studied in 7 trials (1,503 people, mean age 81.6). Hand on the counter, look ahead, toes to heel.\nDizzy turning? Both hands on and tiny steps. (The fridge says it was a tie. Sun disagrees.)",
- ig=["#couplegoals","#balanceexercises","#otago","#changandsun"], tt=["#couplechallenge","#loserdoesdishes","#over70","#balance"],
+ ig=["#couplegoals","#balanceexercises","#otago","#sunyoon"], tt=["#couplechallenge","#loserdoesdishes","#over70","#balance"],
  yt="Walk Backwards Along the Counter: Loser Does the Dishes (74 & 76)", ev=["E13"],
  note="Otago meta (A−).", bit="Fridge leaderboard; seven out of ten; I'm older so I'm right", wink=False, thumb="LOSER DOES DISHES", music="playful jazz"),
 
-dict(id="S126", page="@changandsun", speaker="DUO", format="F08", pillar="P17", hook_id="H366", hcat="CPL", title="41 degrees. Tank top again.", secs=46,
+dict(id="S126", page="@sunyoon", speaker="DUO", format="F08", pillar="P17", hook_id="H366", hcat="CPL", title="41 degrees. Tank top again.", secs=46,
  prop="garage thermometer reading 41°F", obj="forty-one", grammar=["OBJ3","DEMO"], demo=True,
  beats=[
   ("0-3","SUN","Forty-one degrees in the garage. He's in the tank top again.","41°F · TANK TOP",f"{G} | CU garage thermometer reads 41°F; pan to Chang in the navy tank top | CU then two-shot"),
@@ -46,11 +46,11 @@ dict(id="S126", page="@changandsun", speaker="DUO", format="F08", pillar="P17", 
  regression="Seated marching and arm swings only.", cta="BACK",
  skip="Chest pain in the cold? Stop. That's for your doctor.",
  caption="Comment BACK for Morning Unlock.\nCold garage rule: warm up first (5 minutes of marching and arm swings), then slow chair stands with the chair against the wall. The NSCA position statement: progress resistance training gradually. Neck: nods and half-turns, never full circles.\nChest pain in the cold: stop and call your doctor.",
- ig=["#couplegoals","#warmup","#over70","#changandsun"], tt=["#tanktopinjanuary","#couplegoals","#over70","#grandpa"],
+ ig=["#couplegoals","#warmup","#over70","#sunyoon"], tt=["#tanktopinjanuary","#couplegoals","#over70","#grandpa"],
  yt="41 Degrees in the Garage and He's in a Tank Top (Warm-Up Rules Over 70)", ev=["E02"],
  note="NSCA (A) gradual progression; neck rule per §4.2.", bit="The tank top in January; NO MIRROR FLEXING", wink=False, thumb="41° · TANK TOP", music="playful jazz"),
 
-dict(id="S127", page="@changandsun", speaker="DUO", format="F31", pillar="P17", hook_id="H367", hcat="KIT", title="Jajangmyeon Sunday: I brought the kimchi", secs=47,
+dict(id="S127", page="@sunyoon", speaker="DUO", format="F31", pillar="P17", hook_id="H367", hcat="KIT", title="Jajangmyeon Sunday: I brought the kimchi", secs=47,
  prop="bowl of jajangmyeon with a kimchi side", obj="jajangmyeon", grammar=["OBJ3","WATCH","SHARE","DEMO"], series="Jajangmyeon Sunday", demo=True,
  beats=[
   ("0-3","SUN","Jajangmyeon Sunday. He cooked. I brought the kimchi. Watch what the kimchi does that the sauce can't.","JAJANGMYEON SUNDAY",f"{KA} | glossy black-bean noodles set down; Sun places a kimchi dish and julienned cucumber beside it | overhead"),
@@ -66,11 +66,11 @@ dict(id="S127", page="@changandsun", speaker="DUO", format="F31", pillar="P17", 
  regression="", cta="GUT",
  skip="Kimchi and black-bean sauce are both salty. Watching sodium? Small portions.",
  caption="Comment GUT for Sun Yoon's 7-Day Fiber Ladder.\nJajangmyeon Sunday, rebuilt: smaller noodle pile, cucumber on top, kimchi on the side. In a small Stanford study (36 adults, 10 weeks, Cell 2021), a high-fermented-food diet increased microbiome diversity and lowered 19 inflammatory proteins.\nKimchi and black-bean sauce are salty: small portions if you watch sodium. Still seven out of ten.",
- ig=["#jajangmyeon","#koreanfood","#fermentedfoods","#changandsun"], tt=["#jajangmyeon","#koreanchinese","#couplegoals","#koreangrandma"],
+ ig=["#jajangmyeon","#koreanfood","#fermentedfoods","#sunyoon"], tt=["#jajangmyeon","#koreanchinese","#couplegoals","#koreangrandma"],
  yt="Jajangmyeon Sunday: He Cooks, She Grades (and Adds Kimchi)", ev=["E26"],
  note="Wastyk 2021 (B small) with size.", bit="Jajangmyeon Sunday; the apron; seven out of ten", wink=False, thumb="SEVEN OUT OF TEN", music="playful jazz"),
 
-dict(id="S128", page="@changandsun", speaker="DUO", format="F34", pillar="P17", hook_id="H368", hcat="CPL", title="Toy under the couch: who gets down and up first?", secs=48,
+dict(id="S128", page="@sunyoon", speaker="DUO", format="F34", pillar="P17", hook_id="H368", hcat="CPL", title="Toy under the couch: who gets down and up first?", secs=48,
  prop="toy truck under the sofa", obj="toy", grammar=["OBJ3","TEST_NOW","DEMO"], demo=True,
  beats=[
   ("0-3","SUN","Toy truck under the couch. Who gets down, grabs it, and gets back up first?","DOWN · GRAB · UP",f"{L} | a toy truck rolls under the sofa; both look at each other | two-shot"),
@@ -85,11 +85,11 @@ dict(id="S128", page="@changandsun", speaker="DUO", format="F34", pillar="P17", 
  regression="Sun's version: chair support and one knee; or reach with a grabber from the sofa.", cta="TEST",
  skip="New hip or knee? Skip the floor. Ask your surgeon.",
  caption="Comment TEST for the free Strength Age check.\nFloor practice, couple edition: a sturdy chair beside each of you, someone home, hand on the chair, knee, knee, reach, foot forward, breathe out, stand. Floor-rise strategies can be taught to older adults (J Am Geriatr Soc 2002).\nNew hip or knee? Skip the floor and ask your surgeon. Dizzy after? Sit a moment, then stand slowly. (Mandu keeps the truck.)",
- ig=["#couplegoals","#floortransfer","#over70","#changandsun"], tt=["#couplechallenge","#floorchallenge","#over70","#catsoftiktok"],
+ ig=["#couplegoals","#floortransfer","#over70","#sunyoon"], tt=["#couplechallenge","#floorchallenge","#over70","#catsoftiktok"],
  yt="Toy Under the Couch: Who Gets Down and Back Up First? (74 vs 76)", ev=["E45"],
  note="E45 (B, known literature). M-07 label on Chang. Grandkids referenced, never shown.", bit="Mandu the cat; I'm older so I'm right", wink=False, thumb="WHO GETS UP FIRST?", music="playful jazz"),
 
-dict(id="S129", page="@changandsun", speaker="DUO", format="F28", pillar="P17", hook_id="H369", hcat="CPL", title="Printer ink: the friendship study", secs=47,
+dict(id="S129", page="@sunyoon", speaker="DUO", format="F28", pillar="P17", hook_id="H369", hcat="CPL", title="Printer ink: the friendship study", secs=47,
  prop="stack of freshly printed pages", obj="printer", grammar=["OBJ3","SHARE"], demo=False,
  beats=[
   ("0-3","SUN","Printer's out of ink again. Thirty pages, one study, and it's about your friends, not your pills.","THE PRINTER IS TIRED",f"{T} | the printer wheezes out a last page; Sun holds up a thick stack | medium"),
@@ -105,11 +105,11 @@ dict(id="S129", page="@changandsun", speaker="DUO", format="F28", pillar="P17", 
  regression="", cta="BEGIN",
  skip="Feeling alone most days, for weeks? Tell your doctor.",
  caption="Comment BEGIN and tell us who you're inviting.\nIn a PLoS Medicine meta-analysis (148 studies, 308,849 people), people with stronger social relationships tended to have longer lives; the link was comparable in size to well-known factors like smoking. Short version: one name, one night this week. Frank comes Tuesdays.\nFeeling alone most days for weeks? Tell your doctor.",
- ig=["#friendship","#cookingforone","#couplegoals","#changandsun"], tt=["#printerink","#couplegoals","#friendship","#over70"],
+ ig=["#friendship","#cookingforone","#couplegoals","#sunyoon"], tt=["#printerink","#couplegoals","#friendship","#over70"],
  yt="He Printed 30 Pages About Friendship. Here's the One Line That Matters.", ev=["E37"],
  note="Holt-Lunstad 2010 (C) 'linked'.", bit="Printer ink; Short version; Frank's Tuesday dinner", wink=False, thumb="THE PRINTER IS TIRED", music="playful jazz"),
 
-dict(id="S130", page="@changandsun", speaker="DUO", format="F25", pillar="P17", hook_id="H370", hcat="CPL", title="Frank's porch steps: stepping down", secs=47,
+dict(id="S130", page="@sunyoon", speaker="DUO", format="F25", pillar="P17", hook_id="H370", hcat="CPL", title="Frank's porch steps: stepping down", secs=47,
  prop="Frank's porch steps and rail", obj="frank's", grammar=["WATCH","OBJ3","DEMO"], series="Frank's Comeback", demo=True,
  beats=[
   ("0-3","SUN","Frank's porch steps. Going down is the hard part. Watch his knee.","GOING DOWN = THE HARD PART",f"{FR} | Frank's porch, baseball on the radio; Frank at the top step, hand on the rail | medium-full"),
@@ -126,11 +126,11 @@ dict(id="S130", page="@changandsun", speaker="DUO", format="F25", pillar="P17", 
  regression="Frank's version: rail + one step at a time, good leg up, operated leg down.", cta="KNEES",
  skip="New knee? Your surgeon and PT set the plan.",
  caption="Comment KNEES for the Step Builder.\nStepping down is the hard part: hand on the rail, good leg up, operated leg down, lower slowly for a count of three, knee over the toes. Cochrane (121 trials): strength training improved strength and chair rising in older adults; stairs use the same muscles.\nNew knee? Your surgeon and PT set your plan first.",
- ig=["#kneestrength","#stairs","#over70","#changandsun"], tt=["#frankscomeback","#kneestrength","#over70","#stairs"],
+ ig=["#kneestrength","#stairs","#over70","#sunyoon"], tt=["#frankscomeback","#kneestrength","#over70","#stairs"],
  yt="Frank's New Knee vs the Porch Steps: Going Down Safely", ev=["E01"],
  note="Cochrane (A). Frank shows effort only (T-03).", bit="Frank's excuses; Frank's Comeback", wink=False, thumb="GOING DOWN", music="warm acoustic"),
 
-dict(id="S131", page="@changandsun", speaker="DUO", format="F08", pillar="P17", hook_id="H371", hcat="CPL", title="Hips. Now. (Mandu is on the mat.)", secs=46,
+dict(id="S131", page="@sunyoon", speaker="DUO", format="F08", pillar="P17", hook_id="H371", hcat="CPL", title="Hips. Now. (Mandu is on the mat.)", secs=46,
  prop="yoga mat with the cat on it", obj="hips", grammar=["OBJ3","DEMO"], demo=True,
  beats=[
   ("0-3","SUN","Hips. Now. I don't care that the cat is on the mat.","HIPS. NOW.",f"{L} | Sun points at the floor; Mandu is sprawled on the exercise mat; Chang holds a kettlebell | two-shot"),
@@ -146,11 +146,11 @@ dict(id="S131", page="@changandsun", speaker="DUO", format="F08", pillar="P17", 
  regression="Smaller step back; hold 10 s.", cta="BACK",
  skip="Sharp? Stop.",
  caption="Comment BACK for Morning Unlock.\nThe counter hip stretch: hand on the counter, one foot back, tuck your tail, breathe, 20 seconds a side. Exercise for chronic low back pain improved pain by about 15 points (0–100) at 3 months (Cochrane 2021, 249 trials).\nUp to 3/10 is okay if it settles by morning. Sharp: stop. The kettlebell stays hidden until both sides are done.",
- ig=["#hipstretch","#couplegoals","#over60","#changandsun"], tt=["#hipsnow","#couplegoals","#catsoftiktok","#over60"],
+ ig=["#hipstretch","#couplegoals","#over60","#sunyoon"], tt=["#hipsnow","#couplegoals","#catsoftiktok","#over60"],
  yt="Hips. Now. (The Cat Is on the Mat, So We Stretch in the Kitchen)", ev=["E30","E41"],
  note="Hayden 2021 (A); E41.", bit="Hips. Now.; Mandu on the mat; hidden kettlebell", wink=False, thumb="HIPS. NOW.", music="playful jazz"),
 
-dict(id="S132", page="@changandsun", speaker="DUO", format="F27", pillar="P17", hook_id="H372", hcat="CPL", title="1976: he carried me over the threshold", secs=47,
+dict(id="S132", page="@sunyoon", speaker="DUO", format="F27", pillar="P17", hook_id="H372", hcat="CPL", title="1976: he carried me over the threshold", secs=47,
  prop="illustrated 1976 wedding photo", obj="1976", grammar=["OBJ3","DEMO"], demo=True,
  beats=[
   ("0-3","SUN","1976. He carried me over the threshold. He still wants to. Absolutely not.","1976 · ABSOLUTELY NOT",f"{LF} | cutaway to an obviously illustrated vintage-frame wedding photo; back to both in formal wear | CU then two-shot"),
@@ -166,11 +166,11 @@ dict(id="S132", page="@changandsun", speaker="DUO", format="F27", pillar="P17", 
  regression="Lift a lighter basket from a higher surface.", cta="STRONG",
  skip="Hernia or back injury? No heavy lifting until your doctor says so.",
  caption="Comment STRONG for the 8-minute Chair Builder.\nLifting anything heavy: get close, squat don't fold, breathe out as you lift; practice from a chair seat against the wall. Cochrane (121 trials): progressive strength training gave older adults large strength gains; side effects were mostly minor soreness.\nHernia or back injury? Wait for your doctor's OK. (Fifty years, fictional. The hand on the stairs is the carry that counts.)",
- ig=["#couplegoals","#marriedlife","#strengthafter60","#changandsun"], tt=["#1976","#couplegoals","#over70","#lovestory"],
+ ig=["#couplegoals","#marriedlife","#strengthafter60","#sunyoon"], tt=["#1976","#couplegoals","#over70","#lovestory"],
  yt="He Carried Me Over the Threshold in 1976. He Still Wants To. No.", ev=["E01"],
  note="Cochrane (A). Illustrated vintage frame per bit 24 (not archival proof).", bit="Old photos (illustrated); tender beat", wink=False, thumb="ABSOLUTELY NOT", music="soft piano"),
 
-dict(id="S133", page="@changandsun", speaker="DUO", format="F29", pillar="P17", hook_id="H373", hcat="CPL", title="The visor walk: six to eight thousand", secs=47,
+dict(id="S133", page="@sunyoon", speaker="DUO", format="F29", pillar="P17", hook_id="H373", hcat="CPL", title="The visor walk: six to eight thousand", secs=47,
  prop="wide-brim sun visor", obj="visor", grammar=["IF_EVERY","DEMO"], demo=True,
  beats=[
   ("0-3","CHANG","If you walk every evening, six to eight thousand steps is the number that mattered.","6–8K STEPS · NOT 10K",f"{P} | Sun adjusts her wide-brim beige visor; fog on the promenade | two-shot tracking"),
@@ -186,11 +186,11 @@ dict(id="S133", page="@changandsun", speaker="DUO", format="F29", pillar="P17", 
  regression="Start with 2,000 steps; bench stands with hands on thighs.", cta="BEGIN",
  skip="Chest pain or breathless walking? Stop. That's for your doctor first.",
  caption="Comment BEGIN and we'll send where to start.\nIn adults 60+ (Lancet Public Health 2022), people taking more steps tended to have longer lives, with the benefit leveling off around 6,000–8,000 a day. Start where you are; stop at a bench for 5 sit-to-stands beside the railing.\nChest pain or unusual breathlessness walking: stop and see your doctor.",
- ig=["#walking","#couplegoals","#over60","#changandsun"], tt=["#10000steps","#couplegoals","#over70","#walktok"],
+ ig=["#walking","#couplegoals","#over60","#sunyoon"], tt=["#10000steps","#couplegoals","#over70","#walktok"],
  yt="Not 10,000 Steps: The Number That Mattered Over 60 (Walk With Us)", ev=["E22"],
  note="Paluch 2022 (C) 'linked'.", bit="Sun's visor", wink=False, thumb="NOT 10K", music="warm acoustic"),
 
-dict(id="S134", page="@changandsun", speaker="DUO", format="F08", pillar="P17", hook_id="H374", hcat="CPL", title="His first deadlift story: the short version", secs=46,
+dict(id="S134", page="@sunyoon", speaker="DUO", format="F08", pillar="P17", hook_id="H374", hcat="CPL", title="His first deadlift story: the short version", secs=46,
  prop="old garage clipboard log, page one", obj="page", grammar=["OBJ3","DEMO"], demo=True,
  beats=[
   ("0-3","CHANG","Page one of my training log. 2012. My first deadlift. It was a cold morning—","PAGE ONE · 2012",f"{G} | Chang opens a faded clipboard log to page one; Sun already sighing in the doorway | two-shot"),
@@ -206,7 +206,7 @@ dict(id="S134", page="@changandsun", speaker="DUO", format="F08", pillar="P17", 
  regression="Hands on thighs; higher seat.", cta="STRONG",
  skip="Heart condition or new chest symptoms? Get cleared first.",
  caption="Comment STRONG for the 8-minute Chair Builder.\nChang's first deadlift, short version: empty bar, sore for a week. The lesson: start light and add a little. The NSCA position statement: resistance training is safe and effective for older adults, frail people included, when progressed gradually. Your page one: 5 chair stands and today's date.\nHeart condition or new chest symptoms? Get cleared first.",
- ig=["#trainingjournal","#strengthafter60","#couplegoals","#changandsun"], tt=["#shortversion","#couplegoals","#over70","#startsmall"],
+ ig=["#trainingjournal","#strengthafter60","#couplegoals","#sunyoon"], tt=["#shortversion","#couplegoals","#over70","#startsmall"],
  yt="His First Deadlift Story (Her 10-Word Short Version)", ev=["E02","E43"],
  note="NSCA (A); E43 clearance. Backstory used as flavor, not evidence (D-06).", bit="Short version; training log page 1,400", wink=False, thumb="SHORT VERSION", music="playful jazz"),
 ]

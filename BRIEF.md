@@ -109,3 +109,11 @@ Working assumptions (client asleep; these are our reasonable readings, flagged a
 - **No limit on founding seats.** The 5,000 cap is removed everywhere (store inventory, theme, app, scripts, DMs). Founding $25 is open to everyone until `FOUNDING_CLOSE_DATE` (default 2027-01-09), then $35 standard. Any "first 5,000", "seats left" or "live count" claim is false and is blocked by `tools/build_content.py`.
 - **Coaching ascension is deferred.** No ascension to Garrison's coaching at launch. It starts over the first few weeks to a month. Keep the coached tier out of launch plans and the day-10 model start.
 - **Price split tests on the membership.** Test prices around $25 and judge each on conversion, upfront cash, retention/churn and LTV, not on conversion alone.
+
+
+## CANON UPDATE 8 (Oct 2 2026, Garrison): every account belongs to one character
+
+- **4 IG pages: 2 Chang + 2 Sun** (decision card). Chang: main + strength/demo page. Sun: main + kitchen/recipe page. Each page has its own Threads, TikTok and X. The @changandsun duo page is retired; duo bits post on Sun's main page with Chang as the guest.
+- **Facebook: one page per character. YouTube: one Shorts channel per character**, each in its own Google Cloud project (its own quota). This replaces CANON 6's single FB page and single YT channel.
+- **Handles:** shortest and most memorable available. Instagram gets its cleanest free name even if other platforms can't match; other platforms match IG when possible. Never .co, "official", numbers or similar.
+- Account setup runs through the ChatGPT agent prompt (v3, AdsPower: one profile per page with its own fixed US proxy, plus an OPS profile with no proxy for Shopify, Meta, Google and dev portals).

@@ -535,95 +535,95 @@ The machine version is `data/content/calendar_30d.csv`. Regenerate it with `pyth
 | Day | Theme | Page | 06:45 AM routine | 08:30 Test/Challenge | 11:00 Myth/Numbers | 12:45 Kitchen/Lunch | 16:00 Story/Couple | 19:00 Series | 21:00 Before bed |
 |---|---|---|---|---|---|---|---|---|---|
 | 1 | Launch: the 3 tests | @changyin | **S136** (F39·BEGIN) | **S01** (F02·STRONG) | **S06** (F28·STRONG) | **S04** (F16·TEST) | **S135** (F38·JOIN) | **S19** (F11·STRONG) | **S10** (F21·BREATH) |
-| 1 | Launch: the 3 tests | @sunyoon.kitchen | **S144** (F39·BEGIN) | **S33** (F06·GUT) | **S31** (F04·SOUP) | **S141** (F38·JOIN) | **S40** (F07·KNEES) | Fiber Ladder D1 | **S39** (F06·SOUP) |
-| 1 | Launch: the 3 tests | @changandsun | **S146** (F39·JOIN) | **S147** (F11·STRONG) | **S51** (F08·STRONG) | **S52** (F34·BALANCE) | **S145** (F38·JOIN) | Frank's Comeback ep1 | **S53** (F33·FAMILY) |
+| 1 | Launch: the 3 tests | @sunyoon.kitchen | **S144** (F39·BEGIN) | **S33** (F06·GUT) | **S31** (F04·SOUP) | **S141** (F38·JOIN) | **S111** (F18·SOUP) | Fiber Ladder D1 | **S39** (F06·SOUP) |
+| 1 | Launch: the 3 tests | @sunyoon | **S146** (F39·JOIN) | **S147** (F11·STRONG) | **S43** (F28·STRONG) | **S51** (F08·STRONG) | **S145** (F38·JOIN) | Frank's Comeback ep1 | **S52** (F34·BALANCE) |
 | 2 | Legs first | @changyin | **S02** (F02·BALANCE) | **S03** (F02·TEST) | **S07** (F28·STRONG) | **S139** (F33·FAMILY) | **S05** (F16·STRONG) | 7-Day Strong D2 | **S11** (F05·SLEEP) |
-| 2 | Legs first | @sunyoon.kitchen | **S32** (F18·SOUP) | **S35** (F06·GUT) | **S34** (F04·GUT) | **S36** (F31·GUT) | **S41** (F07·BEGIN) | Fiber Ladder D2 | **S46** (F35·BEGIN) |
-| 2 | Legs first | @changandsun | **S54** (F08·BACK) | **S55** (F18·SOUP) | **S56** (F34·STRONG) | **S57** (F08·SLEEP) | **S58** (F35·BREATH) | Frank's Comeback ep2 | **S59** (F08·TEST) |
+| 2 | Legs first | @sunyoon.kitchen | **S32** (F18·SOUP) | **S35** (F06·GUT) | **S34** (F04·GUT) | **S36** (F31·GUT) | H127 (F07·STRONG) | Fiber Ladder D2 | H241 (F07·KNEES) |
+| 2 | Legs first | @sunyoon | **S53** (F33·FAMILY) | **S54** (F08·BACK) | **S55** (F18·SOUP) | **S56** (F34·STRONG) | **S40** (F07·KNEES) | Frank's Comeback ep2 | **S57** (F08·SLEEP) |
 | 3 | Balance week begins | @changyin | **S15** (F02·KNEES) | **S16** (F02·STRONG) | **S08** (F28·BALANCE) | **S18** (F14·STRONG) | **S140** (F38·JOIN) | 7-Day Strong D3 | **S12** (F05·SLEEP) |
-| 3 | Balance week begins | @sunyoon.kitchen | **S38** (F06·GUT) | **S44** (F18·SOUP) | **S43** (F28·STRONG) | **S45** (F06·GUT) | **S42** (F07·STRONG) | Fiber Ladder D3 | **S50** (F07·BALANCE) |
-| 3 | Balance week begins | @changandsun | **S125** (F34·BALANCE) | **S126** (F08·BACK) | **S128** (F34·TEST) | **S148** (F33·FAMILY) | **S129** (F28·BEGIN) | Loser does dishes | **S130** (F25·KNEES) |
+| 3 | Balance week begins | @sunyoon.kitchen | **S38** (F06·GUT) | **S44** (F18·SOUP) | **S99** (F04·SOUP) | **S45** (F06·GUT) | H243 (F07·BEGIN) | Fiber Ladder D3 | H160 (F06·GUT) |
+| 3 | Balance week begins | @sunyoon | **S58** (F35·BREATH) | **S59** (F08·TEST) | **S116** (F04·BREATH) | **S148** (F33·FAMILY) | **S41** (F07·BEGIN) | Loser does dishes | **S115** (F04·SLEEP) |
 | 4 | Myth day | @changyin | **S17** (F23·STRONG) | **S61** (F02·TEST) | **S09** (F22·BALANCE) | **S20** (F03·BACK) | **S21** (F13·STRONG) | 7-Day Strong D4 | REPLY video (F09) |
-| 4 | Myth day | @sunyoon.kitchen | **S48** (F18·SOUP) | **S102** (F06·GUT) | **S99** (F04·SOUP) | **S104** (F31·GUT) | **S143** (F07·JOIN) | Fiber Ladder D4 | REPLY video (F09) |
-| 4 | Myth day | @changandsun | **S131** (F08·BACK) | **S132** (F27·STRONG) | **S133** (F29·BEGIN) | **S127** (F31·GUT) | **S134** (F08·STRONG) | Frank's Comeback ep4 | REPLY video (F09) |
+| 4 | Myth day | @sunyoon.kitchen | **S48** (F18·SOUP) | **S102** (F06·GUT) | **S100** (F04·SOUP) | **S104** (F31·GUT) | **S143** (F07·JOIN) | Fiber Ladder D4 | REPLY video (F09) |
+| 4 | Myth day | @sunyoon | **S125** (F34·BALANCE) | **S126** (F08·BACK) | **S128** (F34·TEST) | **S123** (F10·SOUP) | **S42** (F07·STRONG) | Frank's Comeback ep4 | REPLY video (F09) |
 | 5 | Kitchen protein | @changyin | **S22** (F20·BACK) | **S64** (F32·BALANCE) | **S13** (F03·BACK) | **S25** (F14·KNEES) | **S27** (F15·STRONG) | 7-Day Strong D5 | **S24** (F32·BALANCE) |
-| 5 | Kitchen protein | @sunyoon.kitchen | **S101** (F04·SOUP) | **S106** (F18·SOUP) | **S100** (F04·SOUP) | **S142** (F33·FAMILY) | **S111** (F18·SOUP) | Fiber Ladder D5 | H243 (F07·BEGIN) |
-| 5 | Kitchen protein | @changandsun | H028 (F08·BEGIN) | H047 (F08·BALANCE) | H090 (F07·BEGIN) | H216 (F08·STRONG) | **S149** (F38·JOIN) | Frank's Comeback ep5 | H159 (F07·BEGIN) |
+| 5 | Kitchen protein | @sunyoon.kitchen | **S101** (F04·SOUP) | **S106** (F18·SOUP) | **S103** (F04·GUT) | **S142** (F33·FAMILY) | H124 (F07·STRONG) | Fiber Ladder D5 | H174 (F06·GUT) |
+| 5 | Kitchen protein | @sunyoon | **S129** (F28·BEGIN) | **S130** (F25·KNEES) | **S131** (F08·BACK) | **S127** (F31·GUT) | **S149** (F38·JOIN) | Frank's Comeback ep5 | **S132** (F27·STRONG) |
 | 6 | Couple challenge | @changyin | **S62** (F32·STRONG) | **S67** (F02·TEST) | **S14** (F03·BACK) | **S28** (F13·STRONG) | **S138** (F38·JOIN) | 7-Day Strong D6 | **S30** (F22·SLEEP) |
-| 6 | Couple challenge | @sunyoon.kitchen | **S108** (F19·GUT) | **S110** (F06·SOUP) | **S103** (F04·GUT) | **S113** (F18·SOUP) | H124 (F07·STRONG) | Fiber Ladder D6 | H160 (F06·GUT) |
-| 6 | Couple challenge | @changandsun | H217 (F08·STRONG) | H056 (F34·STRONG) | **S150** (F10·JOIN) | H218 (F35·BEGIN) | H122 (F07·BEGIN) | Frank's Comeback ep6 | H163 (F08·SLEEP) |
+| 6 | Couple challenge | @sunyoon.kitchen | **S108** (F19·GUT) | **S110** (F06·SOUP) | **S105** (F04·GUT) | **S113** (F18·SOUP) | H129 (F07·SOUP) | Fiber Ladder D6 | H244 (F07·STRONG) |
+| 6 | Couple challenge | @sunyoon | **S133** (F29·BEGIN) | **S134** (F08·STRONG) | **S150** (F10·JOIN) | H216 (F08·STRONG) | **S46** (F35·BEGIN) | Frank's Comeback ep6 | H159 (F07·BEGIN) |
 | 7 | Rest & breath | @changyin | **S63** (F02·BALANCE) | **S70** (F13·STRONG) | **S23** (F28·STRONG) | **S29** (F15·BALANCE) | **S137** (F11·BALANCE) | 7-Day Strong D7 | H154 (F05·BACK) |
-| 7 | Rest & breath | @sunyoon.kitchen | **S112** (F04·GUT) | **S114** (F06·GUT) | **S105** (F04·GUT) | H181 (F31·SOUP) | H129 (F07·SOUP) | Fiber Ladder D7 | H174 (F06·GUT) |
-| 7 | Rest & breath | @changandsun | H219 (F34·BALANCE) | H220 (F28·STRONG) | H221 (F08·STRONG) | H222 (F35·BEGIN) | H242 (F07·FAMILY) | Frank's Comeback ep7 | H170 (F07·BEGIN) |
+| 7 | Rest & breath | @sunyoon.kitchen | **S112** (F04·GUT) | **S114** (F06·GUT) | **S107** (F04·BACK) | H181 (F31·SOUP) | H134 (F07·STRONG) | Fiber Ladder D7 | H246 (F18·SOUP) |
+| 7 | Rest & breath | @sunyoon | H028 (F08·BEGIN) | H047 (F08·BALANCE) | H090 (F07·BEGIN) | H217 (F08·STRONG) | **S50** (F07·BALANCE) | Frank's Comeback ep7 | H163 (F08·SLEEP) |
 | 8 | Grip & hands | @changyin | **S66** (F03·BACK) | **S71** (F01·STRONG) | REMIX wk1 winner | **S68** (F17·STRONG) | **S69** (F33·FAMILY) | 30-Day Balance D1 | REPLY video (F09) |
-| 8 | Grip & hands | @sunyoon.kitchen | H182 (F18·SOUP) | H050 (F18·SOUP) | REMIX wk1 winner | H185 (F31·SOUP) | H134 (F07·STRONG) | Sun Answers #1 | REPLY video (F09) |
-| 8 | Grip & hands | @changandsun | H223 (F34·STRONG) | H224 (F29·GUT) | REMIX wk1 winner | H225 (F08·BEGIN) | H125 (F33·FAMILY) | Frank's Comeback ep8 | REPLY video (F09) |
+| 8 | Grip & hands | @sunyoon.kitchen | H182 (F18·SOUP) | H050 (F18·SOUP) | REMIX wk1 winner | H185 (F31·SOUP) | H138 (F31·SOUP) | Sun Answers #1 | REPLY video (F09) |
+| 8 | Grip & hands | @sunyoon | H218 (F35·BEGIN) | H056 (F34·STRONG) | REMIX wk1 winner | H219 (F34·BALANCE) | **S117** (F07·TEST) | Frank's Comeback ep8 | REPLY video (F09) |
 | 9 | Floor skills | @changyin | **S72** (F03·BACK) | **S75** (F02·TEST) | **S26** (F28·KNEES) | **S73** (F15·BALANCE) | H001 (F27·STRONG) | 30-Day Balance D2 | H155 (F21·SLEEP) |
-| 9 | Floor skills | @sunyoon.kitchen | H005 (F06·GUT) | H060 (F11·GUT) | **S107** (F04·BACK) | H186 (F18·SOUP) | H138 (F31·SOUP) | Sun Answers #2 | H244 (F07·STRONG) |
-| 9 | Floor skills | @changandsun | H226 (F25·KNEES) | H227 (F35·BEGIN) | H228 (F08·STRONG) | H230 (F08·STRONG) | H135 (F34·STRONG) | Frank's Comeback ep9 | H177 (F08·BACK) |
+| 9 | Floor skills | @sunyoon.kitchen | H005 (F06·GUT) | H060 (F11·GUT) | **S109** (F04·SOUP) | H186 (F18·SOUP) | H139 (F31·SOUP) | Sun Answers #2 | H249 (F07·STRONG) |
+| 9 | Floor skills | @sunyoon | H220 (F28·STRONG) | H221 (F08·STRONG) | H222 (F35·BEGIN) | H223 (F34·STRONG) | **S118** (F35·BEGIN) | Frank's Comeback ep9 | H170 (F07·BEGIN) |
 | 10 | Tai chi day | @changyin | H121 (F27·STRONG) | H271 (F16·TEST) | REMIX wk1 winner | H092 (F02·STRONG) | H004 (F02·BALANCE) | 30-Day Balance D3 | H156 (F05·KNEES) |
-| 10 | Tai chi day | @sunyoon.kitchen | H010 (F31·SOUP) | H187 (F31·SOUP) | REMIX wk1 winner | H189 (F12·SOUP) | H139 (F31·SOUP) | Sun Answers #3 | H246 (F18·SOUP) |
-| 10 | Tai chi day | @changandsun | H231 (F08·BEGIN) | H233 (F08·BEGIN) | REMIX wk1 winner | H234 (F18·SOUP) | H144 (F07·BEGIN) | Loser does dishes | H180 (F07·BEGIN) |
+| 10 | Tai chi day | @sunyoon.kitchen | H010 (F31·SOUP) | H187 (F31·SOUP) | REMIX wk1 winner | H189 (F12·SOUP) | H143 (F18·SOUP) | Sun Answers #3 | H251 (F07·STRONG) |
+| 10 | Tai chi day | @sunyoon | H224 (F29·GUT) | H225 (F08·BEGIN) | REMIX wk1 winner | H226 (F25·KNEES) | **S119** (F14·STRONG) | Loser does dishes | H177 (F08·BACK) |
 | 11 | Gut week begins | @changyin | H006 (F21·BREATH) | H272 (F16·BALANCE) | **S65** (F28·STRONG) | H007 (F13·KNEES) | H008 (F15·BACK) | 30-Day Balance D4 | H157 (F22·SLEEP) |
-| 11 | Gut week begins | @sunyoon.kitchen | H017 (F06·GUT) | H191 (F31·SOUP) | **S109** (F04·SOUP) | H192 (F06·SOUP) | H143 (F18·SOUP) | Sun Answers #4 | H249 (F07·STRONG) |
-| 11 | Gut week begins | @changandsun | H235 (F27·BEGIN) | H236 (F28·STRONG) | H238 (F35·BEGIN) | H240 (F35·BEGIN) | H147 (F07·BEGIN) | Frank's Comeback ep11 | NEW P03/F15·BALANCE |
+| 11 | Gut week begins | @sunyoon.kitchen | H017 (F06·GUT) | H191 (F31·SOUP) | H067 (F04·GUT) | H192 (F06·SOUP) | H252 (F07·GUT) | Sun Answers #4 | H254 (F07·STRONG) |
+| 11 | Gut week begins | @sunyoon | H227 (F35·BEGIN) | H228 (F08·STRONG) | H230 (F08·STRONG) | H231 (F08·BEGIN) | **S120** (F07·BALANCE) | Frank's Comeback ep11 | H180 (F07·BEGIN) |
 | 12 | Knees & stairs | @changyin | H009 (F05·SLEEP) | H273 (F16·TEST) | REMIX wk1 winner | H012 (F17·STRONG) | H013 (F13·STRONG) | 30-Day Balance D5 | REPLY video (F09) |
-| 12 | Knees & stairs | @sunyoon.kitchen | H020 (F07·STRONG) | H193 (F31·SOUP) | REMIX wk1 winner | H194 (F18·SOUP) | H251 (F07·STRONG) | Sun Answers #5 | REPLY video (F09) |
-| 12 | Knees & stairs | @changandsun | NEW P03/F15·BALANCE | NEW P01/F02·TEST | REMIX wk1 winner | NEW P03/F15·BALANCE | H150 (F29·BALANCE) | Frank's Comeback ep12 | REPLY video (F09) |
+| 12 | Knees & stairs | @sunyoon.kitchen | H020 (F07·STRONG) | H193 (F31·SOUP) | REMIX wk1 winner | H194 (F18·SOUP) | H255 (F07·STRONG) | Sun Answers #5 | REPLY video (F09) |
+| 12 | Knees & stairs | @sunyoon | H233 (F08·BEGIN) | H234 (F18·SOUP) | REMIX wk1 winner | H235 (F27·BEGIN) | **S121** (F26·KNEES) | Frank's Comeback ep12 | REPLY video (F09) |
 | 13 | Sun answers comments | @changyin | H015 (F22·BALANCE) | H034 (F02·STRONG) | H064 (F28·BACK) | H016 (F15·STRONG) | H018 (F02·TEST) | 30-Day Balance D6 | H161 (F05·SLEEP) |
-| 13 | Sun answers comments | @sunyoon.kitchen | H022 (F06·GUT) | H195 (F31·GUT) | H067 (F04·GUT) | H196 (F31·SOUP) | H252 (F07·GUT) | Sun Answers #6 | H254 (F07·STRONG) |
-| 13 | Sun answers comments | @changandsun | NEW P16/F07·BEGIN | NEW P07/F21·BREATH | H294 (F07·BEGIN) | NEW P01/F02·TEST | H247 (F07·BEGIN) | Frank's Comeback ep13 | NEW P13/F18·SOUP |
+| 13 | Sun answers comments | @sunyoon.kitchen | H022 (F06·GUT) | H195 (F31·GUT) | H070 (F04·BACK) | H196 (F31·SOUP) | H256 (F08·BACK) | Sun Answers #6 | H258 (F18·SOUP) |
+| 13 | Sun answers comments | @sunyoon | H236 (F28·STRONG) | H238 (F35·BEGIN) | H240 (F35·BEGIN) | NEW P03/F15·BALANCE | H122 (F07·BEGIN) | Frank's Comeback ep13 | NEW P07/F21·BREATH |
 | 14 | Sunday soup | @changyin | H019 (F16·STRONG) | H035 (F02·STRONG) | REMIX wk1 winner | H023 (F02·BALANCE) | H024 (F13·BREATH) | 30-Day Balance D7 | H162 (F21·BREATH) |
-| 14 | Sunday soup | @sunyoon.kitchen | H026 (F31·GUT) | H197 (F06·GUT) | REMIX wk1 winner | H198 (F31·SOUP) | H255 (F07·STRONG) | Sunday Soup | H256 (F08·BACK) |
-| 14 | Sunday soup | @changandsun | NEW P15/F28·BEGIN | NEW P19/F11·STRONG | REMIX wk1 winner | NEW P03/F15·BALANCE | H248 (F35·BEGIN) | Frank's Comeback ep14 | NEW P18/F10·BEGIN |
+| 14 | Sunday soup | @sunyoon.kitchen | H026 (F31·GUT) | H197 (F06·GUT) | REMIX wk1 winner | H198 (F31·SOUP) | H259 (F07·STRONG) | Sunday Soup | H261 (F07·GUT) |
+| 14 | Sunday soup | @sunyoon | NEW P01/F02·TEST | NEW P19/F11·STRONG | REMIX wk1 winner | NEW P03/F15·BALANCE | H242 (F07·FAMILY) | Frank's Comeback ep14 | NEW P07/F21·BREATH |
 | 15 | Back day | @changyin | H025 (F13·STRONG) | H036 (F02·BALANCE) | H069 (F04·BALANCE) | H027 (F14·BACK) | H029 (F27·STRONG) | 30-Day Balance D8 | H164 (F05·BACK) |
-| 15 | Back day | @sunyoon.kitchen | H199 (F31·GUT) | H200 (F11·GUT) | H070 (F04·BACK) | H201 (F28·GUT) | H258 (F18·SOUP) | Sun Answers #8 | H259 (F07·STRONG) |
-| 15 | Back day | @changandsun | H101 (F07·BEGIN) | H113 (F33·FAMILY) | H250 (F35·BEGIN) | H253 (F07·BEGIN) | H257 (F35·BEGIN) | Frank's Comeback ep15 | H260 (F07·BEGIN) |
+| 15 | Back day | @sunyoon.kitchen | H199 (F31·GUT) | H200 (F11·GUT) | H071 (F28·SOUP) | H201 (F28·GUT) | H262 (F07·STRONG) | Sun Answers #8 | H266 (F07·STRONG) |
+| 15 | Back day | @sunyoon | H101 (F07·BEGIN) | H113 (F33·FAMILY) | H294 (F07·BEGIN) | H125 (F33·FAMILY) | H135 (F34·STRONG) | Frank's Comeback ep15 | H144 (F07·BEGIN) |
 | 16 | Numbers day | @changyin | H030 (F13·STRONG) | H037 (F02·TEST) | REMIX wk2 winner | H094 (F16·STRONG) | H097 (F17·STRONG) | 30-Day Balance D9 | REPLY video (F09) |
-| 16 | Numbers day | @sunyoon.kitchen | H203 (F06·SOUP) | H204 (F06·SOUP) | REMIX wk2 winner | H205 (F12·SOUP) | H261 (F07·GUT) | Sun Answers #9 | REPLY video (F09) |
-| 16 | Numbers day | @changandsun | H264 (F35·BEGIN) | H265 (F07·BEGIN) | REMIX wk2 winner | H267 (F07·BEGIN) | H269 (F07·BEGIN) | Frank's Comeback ep16 | REPLY video (F09) |
+| 16 | Numbers day | @sunyoon.kitchen | H203 (F06·SOUP) | H204 (F06·SOUP) | REMIX wk2 winner | H205 (F12·SOUP) | H270 (F07·STRONG) | Sun Answers #9 | REPLY video (F09) |
+| 16 | Numbers day | @sunyoon | H147 (F07·BEGIN) | H150 (F29·BALANCE) | REMIX wk2 winner | H247 (F07·BEGIN) | H248 (F35·BEGIN) | Frank's Comeback ep16 | REPLY video (F09) |
 | 17 | Women who lift | @changyin | H038 (F02·BACK) | H041 (F32·BALANCE) | H073 (F21·BREATH) | H098 (F15·BALANCE) | H099 (F02·TEST) | 30-Day Balance D10 | H165 (F05·SLEEP) |
-| 17 | Women who lift | @sunyoon.kitchen | H206 (F18·SOUP) | H208 (F28·SOUP) | H071 (F28·SOUP) | H209 (F31·GUT) | H262 (F07·STRONG) | Sun Answers #10 | H266 (F07·STRONG) |
-| 17 | Women who lift | @changandsun | NEW P03/F15·BALANCE | NEW P01/F02·TEST | NEW P13/F18·SOUP | NEW P19/F11·STRONG | NEW P07/F21·BREATH | Loser does dishes | NEW P03/F15·BALANCE |
+| 17 | Women who lift | @sunyoon.kitchen | H206 (F18·SOUP) | H208 (F28·SOUP) | H076 (F06·GUT) | H209 (F31·GUT) | H080 (F04·GUT) | Sun Answers #10 | H087 (F31·GUT) |
+| 17 | Women who lift | @sunyoon | H250 (F35·BEGIN) | H253 (F07·BEGIN) | H257 (F35·BEGIN) | H260 (F07·BEGIN) | H264 (F35·BEGIN) | Loser does dishes | H265 (F07·BEGIN) |
 | 18 | Walk after dinner | @changyin | H042 (F02·BACK) | H043 (F02·TEST) | REMIX wk2 winner | H100 (F14·BACK) | H102 (F15·KNEES) | 30-Day Balance D11 | H168 (F15·BALANCE) |
-| 18 | Walk after dinner | @sunyoon.kitchen | H210 (F31·SOUP) | H279 (F18·GUT) | REMIX wk2 winner | H076 (F06·GUT) | H270 (F07·STRONG) | Sun Answers #11 | H080 (F04·GUT) |
-| 18 | Walk after dinner | @changandsun | NEW P18/F10·BEGIN | NEW P01/F02·TEST | REMIX wk2 winner | NEW P13/F18·SOUP | NEW P15/F28·BEGIN | Frank's Comeback ep18 | NEW P19/F11·STRONG |
+| 18 | Walk after dinner | @sunyoon.kitchen | H210 (F31·SOUP) | H279 (F18·GUT) | REMIX wk2 winner | H104 (F18·SOUP) | H111 (F06·GUT) | Sun Answers #11 | H117 (F18·SOUP) |
+| 18 | Walk after dinner | @sunyoon | H267 (F07·BEGIN) | H269 (F07·BEGIN) | REMIX wk2 winner | NEW P03/F15·BALANCE | NEW P01/F02·TEST | Frank's Comeback ep18 | NEW P13/F18·SOUP |
 | 19 | Sleep week | @changyin | H046 (F02·BALANCE) | H048 (F02·BACK) | H074 (F28·STRONG) | H103 (F05·SLEEP) | H105 (F16·TEST) | 30-Day Balance D12 | H169 (F05·BACK) |
-| 19 | Sleep week | @sunyoon.kitchen | H087 (F31·GUT) | H286 (F06·GUT) | H287 (F06·GUT) | H104 (F18·SOUP) | H111 (F06·GUT) | Sun Answers #12 | H117 (F18·SOUP) |
-| 19 | Sleep week | @changandsun | NEW P07/F21·BREATH | NEW P03/F15·BALANCE | NEW P18/F10·BEGIN | NEW P01/F02·TEST | NEW P13/F18·SOUP | Frank's Comeback ep19 | NEW P15/F28·BEGIN |
+| 19 | Sleep week | @sunyoon.kitchen | H286 (F06·GUT) | H287 (F06·GUT) | H291 (F06·GUT) | H293 (F18·SOUP) | H295 (F28·GUT) | Sun Answers #12 | NEW P11/F31·SOUP |
+| 19 | Sleep week | @sunyoon | NEW P19/F11·STRONG | NEW P03/F15·BALANCE | NEW P18/F10·BEGIN | NEW P01/F02·TEST | NEW P13/F18·SOUP | Frank's Comeback ep19 | NEW P19/F11·STRONG |
 | 20 | Family share day | @changyin | H049 (F05·SLEEP) | H051 (F17·STRONG) | REMIX wk2 winner | H106 (F15·BACK) | H107 (F16·BALANCE) | 30-Day Balance D13 | REPLY video (F09) |
-| 20 | Family share day | @sunyoon.kitchen | H291 (F06·GUT) | H293 (F18·SOUP) | REMIX wk2 winner | H295 (F28·GUT) | NEW P11/F31·SOUP | Sun Answers #13 | REPLY video (F09) |
-| 20 | Family share day | @changandsun | NEW P19/F11·STRONG | NEW P07/F21·BREATH | REMIX wk2 winner | NEW P03/F15·BALANCE | NEW P18/F10·BEGIN | 50th countdown | REPLY video (F09) |
+| 20 | Family share day | @sunyoon.kitchen | NEW P11/F31·SOUP | NEW P11/F31·SOUP | REMIX wk2 winner | NEW P11/F31·SOUP | NEW P11/F31·SOUP | Sun Answers #13 | REPLY video (F09) |
+| 20 | Family share day | @sunyoon | NEW P07/F21·BREATH | NEW P03/F15·BALANCE | REMIX wk2 winner | NEW P18/F10·BEGIN | NEW P01/F02·TEST | 50th countdown | REPLY video (F09) |
 | 21 | Fermentation day | @changyin | H052 (F02·STRONG) | H053 (F21·BREATH) | H077 (F03·KNEES) | H108 (F15·STRONG) | H112 (F16·STRONG) | 30-Day Balance D14 | H171 (F21·BREATH) |
-| 21 | Fermentation day | @sunyoon.kitchen | NEW P11/F31·SOUP | NEW P11/F31·SOUP | NEW P11/F31·SOUP | NEW P11/F31·SOUP | NEW P11/F31·SOUP | Sunday Soup | NEW P11/F31·SOUP |
-| 21 | Fermentation day | @changandsun | NEW P01/F02·TEST | NEW P13/F18·SOUP | NEW P15/F28·BEGIN | NEW P19/F11·STRONG | NEW P03/F15·BALANCE | 50th countdown | NEW P07/F21·BREATH |
+| 21 | Fermentation day | @sunyoon.kitchen | NEW P11/F31·SOUP | NEW P11/F31·SOUP | NEW P11/F31·SOUP | NEW P12/F06·SOUP | NEW P11/F31·SOUP | Sunday Soup | NEW P12/F06·SOUP |
+| 21 | Fermentation day | @sunyoon | NEW P13/F18·SOUP | NEW P19/F11·STRONG | NEW P03/F15·BALANCE | NEW P07/F21·BREATH | NEW P01/F02·TEST | 50th countdown | NEW P13/F18·SOUP |
 | 22 | Strength Age retest prompt | @changyin | H054 (F11·BALANCE) | H055 (F14·STRONG) | REMIX wk3 winner | H114 (F16·TEST) | H115 (F17·STRONG) | 30-Day Balance D15 | H172 (F05·SLEEP) |
 | 22 | Strength Age retest prompt | @sunyoon.kitchen | NEW P11/F31·SOUP | NEW P12/F06·SOUP | REMIX wk3 winner | NEW P11/F31·SOUP | NEW P12/F06·SOUP | Sun Answers #15 | NEW P11/F31·SOUP |
-| 22 | Strength Age retest prompt | @changandsun | NEW P09/F05·SLEEP | NEW P01/F02·TEST | REMIX wk3 winner | NEW P13/F18·SOUP | NEW P15/F28·BEGIN | 50th countdown | NEW P19/F11·STRONG |
+| 22 | Strength Age retest prompt | @sunyoon | NEW P15/F28·BEGIN | NEW P19/F11·STRONG | REMIX wk3 winner | NEW P03/F15·BALANCE | NEW P18/F10·BEGIN | 50th countdown | NEW P07/F21·BREATH |
 | 23 | Myth day II | @changyin | H057 (F02·BALANCE) | H058 (F02·STRONG) | H081 (F28·STRONG) | H116 (F21·BREATH) | H118 (F14·BACK) | 30-Day Balance D16 | H173 (F17·STRONG) |
-| 23 | Myth day II | @sunyoon.kitchen | NEW P11/F31·SOUP | NEW P12/F06·SOUP | NEW P11/F31·SOUP | NEW P12/F06·SOUP | NEW P10/F06·GUT | Sun Answers #16 | NEW P11/F31·SOUP |
-| 23 | Myth day II | @changandsun | NEW P03/F15·BALANCE | NEW P18/F10·BEGIN | NEW P07/F21·BREATH | NEW P03/F15·BALANCE | NEW P18/F10·BEGIN | 50th countdown | NEW P01/F02·TEST |
+| 23 | Myth day II | @sunyoon.kitchen | NEW P10/F06·GUT | NEW P11/F31·SOUP | NEW P12/F06·SOUP | NEW P10/F06·GUT | NEW P11/F31·SOUP | Sun Answers #16 | NEW P10/F06·GUT |
+| 23 | Myth day II | @sunyoon | NEW P09/F05·SLEEP | NEW P01/F02·TEST | NEW P13/F18·SOUP | NEW P03/F15·BALANCE | NEW P18/F10·BEGIN | 50th countdown | NEW P15/F28·BEGIN |
 | 24 | Qigong evening | @changyin | H059 (F02·BALANCE) | H274 (F16·STRONG) | REMIX wk3 winner | H119 (F27·STRONG) | H120 (F05·SLEEP) | 30-Day Balance D17 | REPLY video (F09) |
-| 24 | Qigong evening | @sunyoon.kitchen | NEW P10/F06·GUT | NEW P12/F06·SOUP | REMIX wk3 winner | NEW P11/F31·SOUP | NEW P10/F06·GUT | Sun Answers #17 | REPLY video (F09) |
-| 24 | Qigong evening | @changandsun | NEW P13/F18·SOUP | NEW P15/F28·BEGIN | REMIX wk3 winner | NEW P16/F07·BEGIN | NEW P19/F11·STRONG | 50th countdown | REPLY video (F09) |
+| 24 | Qigong evening | @sunyoon.kitchen | NEW P12/F06·SOUP | NEW P11/F31·SOUP | REMIX wk3 winner | NEW P17/F08·BEGIN | NEW P10/F06·GUT | Sun Answers #17 | REPLY video (F09) |
+| 24 | Qigong evening | @sunyoon | NEW P19/F11·STRONG | NEW P07/F21·BREATH | REMIX wk3 winner | NEW P03/F15·BALANCE | NEW P18/F10·BEGIN | 50th countdown | REPLY video (F09) |
 | 25 | Steady-feet home | @changyin | H123 (F27·STRONG) | H275 (F16·STRONG) | H082 (F28·BALANCE) | H126 (F27·STRONG) | H128 (F33·FAMILY) | 30-Day Balance D18 | H175 (F05·BALANCE) |
-| 25 | Steady-feet home | @sunyoon.kitchen | NEW P11/F31·SOUP | NEW P12/F06·SOUP | NEW P11/F31·SOUP | NEW P10/F06·GUT | NEW P12/F06·SOUP | Sun Answers #18 | NEW P11/F31·SOUP |
-| 25 | Steady-feet home | @changandsun | NEW P09/F05·SLEEP | NEW P16/F07·BEGIN | NEW P07/F21·BREATH | NEW P03/F15·BALANCE | NEW P01/F02·TEST | 50th countdown | NEW P13/F18·SOUP |
+| 25 | Steady-feet home | @sunyoon.kitchen | NEW P11/F31·SOUP | NEW P12/F06·SOUP | NEW P11/F31·SOUP | NEW P10/F06·GUT | NEW P13/F18·SOUP | Sun Answers #18 | NEW P12/F06·SOUP |
+| 25 | Steady-feet home | @sunyoon | NEW P01/F02·TEST | NEW P13/F18·SOUP | NEW P15/F28·BEGIN | NEW P19/F11·STRONG | NEW P09/F05·SLEEP | 50th countdown | NEW P07/F21·BREATH |
 | 26 | Cooking for one | @changyin | H130 (F15·BALANCE) | H276 (F16·BALANCE) | REMIX wk3 winner | H131 (F15·STRONG) | H132 (F14·KNEES) | 30-Day Balance D19 | H176 (F11·STRONG) |
-| 26 | Cooking for one | @sunyoon.kitchen | NEW P10/F06·GUT | NEW P13/F18·SOUP | REMIX wk3 winner | NEW P11/F31·SOUP | NEW P12/F06·SOUP | Sun Answers #19 | NEW P17/F08·BEGIN |
-| 26 | Cooking for one | @changandsun | NEW P16/F07·BEGIN | NEW P15/F28·BEGIN | REMIX wk3 winner | NEW P19/F11·STRONG | NEW P03/F15·BALANCE | 50th countdown | NEW P16/F07·BEGIN |
+| 26 | Cooking for one | @sunyoon.kitchen | NEW P11/F31·SOUP | NEW P10/F06·GUT | REMIX wk3 winner | NEW P13/F18·SOUP | NEW P11/F31·SOUP | Sun Answers #19 | NEW P12/F06·SOUP |
+| 26 | Cooking for one | @sunyoon | NEW P03/F15·BALANCE | NEW P01/F02·TEST | REMIX wk3 winner | NEW P13/F18·SOUP | NEW P15/F28·BEGIN | 50th countdown | NEW P19/F11·STRONG |
 | 27 | Anniversary countdown | @changyin | H133 (F17·BEGIN) | H277 (F16·STRONG) | H083 (F28·STRONG) | H136 (F27·STRONG) | H137 (F22·BALANCE) | 30-Day Balance D20 | H178 (F21·BREATH) |
-| 27 | Anniversary countdown | @sunyoon.kitchen | NEW P11/F31·SOUP | NEW P10/F06·GUT | NEW P13/F18·SOUP | NEW P12/F06·SOUP | NEW P11/F31·SOUP | Sun Answers #20 | NEW P10/F06·GUT |
-| 27 | Anniversary countdown | @changandsun | NEW P18/F10·BEGIN | NEW P07/F21·BREATH | NEW P09/F05·SLEEP | NEW P01/F02·TEST | **S60** (F27·BEGIN) | 50th countdown | NEW P16/F07·BEGIN |
+| 27 | Anniversary countdown | @sunyoon.kitchen | NEW P17/F08·BEGIN | NEW P11/F31·SOUP | NEW P10/F06·GUT | NEW P13/F18·SOUP | NEW P12/F06·SOUP | Sun Answers #20 | NEW P11/F31·SOUP |
+| 27 | Anniversary countdown | @sunyoon | NEW P03/F15·BALANCE | NEW P18/F10·BEGIN | NEW P07/F21·BREATH | NEW P01/F02·TEST | **S60** (F27·BEGIN) | 50th countdown | NEW P13/F18·SOUP |
 | 28 | Power (fast feet) | @changyin | H140 (F14·STRONG) | H278 (F02·TEST) | REMIX wk3 winner | H141 (F05·SLEEP) | H142 (F15·STRONG) | 30-Day Balance D21 | REPLY video (F09) |
-| 28 | Power (fast feet) | @sunyoon.kitchen | NEW P13/F18·SOUP | NEW P11/F31·SOUP | REMIX wk3 winner | NEW P12/F06·SOUP | NEW P17/F08·BEGIN | Sunday Soup | REPLY video (F09) |
-| 28 | Power (fast feet) | @changandsun | NEW P13/F18·SOUP | NEW P15/F28·BEGIN | REMIX wk3 winner | NEW P19/F11·STRONG | NEW P03/F15·BALANCE | 50th countdown | REPLY video (F09) |
+| 28 | Power (fast feet) | @sunyoon.kitchen | NEW P10/F06·GUT | NEW P13/F18·SOUP | REMIX wk3 winner | NEW P11/F31·SOUP | NEW P15/F28·BEGIN | Sunday Soup | REPLY video (F09) |
+| 28 | Power (fast feet) | @sunyoon | NEW P15/F28·BEGIN | NEW P19/F11·STRONG | REMIX wk3 winner | NEW P09/F05·SLEEP | NEW P03/F15·BALANCE | 50th countdown | REPLY video (F09) |
 | 29 | Recap: your numbers | @changyin | H145 (F15·BACK) | H281 (F21·BREATH) | H084 (F24·STRONG) | H146 (F14·BACK) | H148 (F11·STRONG) | 30-Day Balance D22 | H179 (F14·SLEEP) |
-| 29 | Recap: your numbers | @sunyoon.kitchen | NEW P11/F31·SOUP | NEW P10/F06·GUT | NEW P13/F18·SOUP | NEW P11/F31·SOUP | NEW P12/F06·SOUP | Sun Answers #22 | NEW P10/F06·GUT |
-| 29 | Recap: your numbers | @changandsun | NEW P16/F07·BEGIN | NEW P07/F21·BREATH | NEW P01/F02·TEST | NEW P16/F07·BEGIN | NEW P13/F18·SOUP | 50th countdown | NEW P15/F28·BEGIN |
+| 29 | Recap: your numbers | @sunyoon.kitchen | NEW P12/F06·SOUP | NEW P11/F31·SOUP | NEW P10/F06·GUT | NEW P13/F18·SOUP | NEW P14/F13·STRONG | Sun Answers #22 | NEW P11/F31·SOUP |
+| 29 | Recap: your numbers | @sunyoon | NEW P16/F07·BEGIN | NEW P07/F21·BREATH | NEW P01/F02·TEST | NEW P16/F07·BEGIN | NEW P13/F18·SOUP | 50th countdown | NEW P15/F28·BEGIN |
 | 30 | Day 30: retest + celebrate | @changyin | H149 (F27·BEGIN) | H282 (F16·STRONG) | REMIX wk4 winner | H086 (F28·BREATH) | H088 (F28·KNEES) | 30-Day Balance D23 | H089 (F16·TEST) |
-| 30 | Day 30: retest + celebrate | @sunyoon.kitchen | NEW P13/F18·SOUP | NEW P11/F31·SOUP | REMIX wk4 winner | NEW P15/F28·BEGIN | NEW P12/F06·SOUP | Sun Answers #23 | NEW P10/F06·GUT |
-| 30 | Day 30: retest + celebrate | @changandsun | NEW P19/F11·STRONG | NEW P03/F15·BALANCE | REMIX wk4 winner | NEW P18/F10·BEGIN | NEW P16/F07·BEGIN | 50th countdown | NEW P09/F05·SLEEP |
+| 30 | Day 30: retest + celebrate | @sunyoon.kitchen | NEW P15/F28·BEGIN | NEW P12/F06·SOUP | REMIX wk4 winner | NEW P10/F06·GUT | NEW P13/F18·SOUP | Sun Answers #23 | NEW P11/F31·SOUP |
+| 30 | Day 30: retest + celebrate | @sunyoon | NEW P19/F11·STRONG | NEW P03/F15·BALANCE | REMIX wk4 winner | NEW P18/F10·BEGIN | NEW P16/F07·BEGIN | 50th countdown | NEW P09/F05·SLEEP |
 <!-- CALENDAR:END -->
 
 ### Day themes (the whole network aligns on a theme each day so cross-promotion feels natural)

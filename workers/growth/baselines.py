@@ -126,7 +126,9 @@ def compute(page_id: str, platform: str, horizon_h: int, page_history: list[dict
     page_cols = _history_components(page_hist, cfg)
     cold = cold_prior(platform, horizon_h, cfg)
     net_cols = _history_components(network_history or [], cfg)
+    vs = sorted(float(s["views"]) for s in page_hist if isinstance(s.get("views"), (int, float)))
     out = {"page_id": page_id, "platform": platform, "horizon_h": horizon_h, "n_posts": len(page_hist),
+           "median_views": (vs[len(vs) // 2] if len(vs) % 2 else (vs[len(vs) // 2 - 1] + vs[len(vs) // 2]) / 2) if vs else None,
            "config_version": cfg.get("version"), "components": {}}
     for comp in COMPONENTS:
         nv = net_cols[comp]

@@ -4,8 +4,8 @@
   python3 tools/topology.py [--date YYYY-MM-DD] [--json]          print the D1..D7 slot counts per account
   python3 tools/slots_ics.py --canon6 [--date ...] [--out DIR]    one .ics per ACCOUNT for launch day and the week
 
-Accounts at launch: 4 Instagram pages (each with its own Threads and X), 4 TikTok accounts, ONE Facebook page, ONE
-YouTube Shorts channel. Steady state per CANON 6 (reached on D7 of the ramp): IG page 6 main + 20 Trial Reels +
+Accounts at launch: 4 Instagram pages (each with its own Threads and X), 4 TikTok accounts, one Facebook page and one
+YouTube Shorts channel PER CHARACTER (Chang and Sun never share an account). Steady state per CANON 6 (reached on D7 of the ramp): IG page 6 main + 20 Trial Reels +
 3 Stories/day, Threads 12 and X 6 per page, TikTok 26/account, Facebook 16/day (12 videos + 2 long cuts + 1 text +
 1 photo), YouTube 4/day until the quota raise (then 6). The ramp is an [A] assumption for brand-new accounts: feed
 posts exist before Trial Reels start, volume steps up daily, and any "limit"/"unavailable" message stops trials for
@@ -23,12 +23,14 @@ from datetime import date, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-IG_PAGES = ("@changyin", "@sunyoon.kitchen", "@changandsun", "@changyin.strength")
-X_HANDLE = {"@changyin": "@changyin", "@sunyoon.kitchen": "@sunyoon_kitchen", "@changandsun": "@changandsun",
-            "@changyin.strength": "@changyinstrong"}
-FB_PAGE = "@changandsun"          # the ONE Facebook page (Chang & Sun) [verify name in Business Suite]
-YT_CHANNEL = "@changandsun"       # the ONE YouTube Shorts channel [verify handle]
-PAGE_CTA = {"@changyin": "WAITLIST", "@sunyoon.kitchen": "SOUP", "@changandsun": "WAITLIST", "@changyin.strength": "STRONG"}
+IG_PAGES = ("@changyin", "@changyin.strength", "@sunyoon.kitchen", "@sunyoon")   # 2 Chang + 2 Sun (Garrison, Oct 2)
+# Handles are first choices; the setup agent takes the cleanest free one per page and the same on every platform.
+X_HANDLE = {"@changyin": "@changyin", "@changyin.strength": "@changyinstrong", "@sunyoon.kitchen": "@sunyoon_kitchen",
+            "@sunyoon": "@sunyoon"}
+CHARACTER = {"@changyin": "CHANG", "@changyin.strength": "CHANG", "@sunyoon.kitchen": "SUN", "@sunyoon": "SUN"}
+FB_PAGE = {"CHANG": "@changyin", "SUN": "@sunyoon"}      # one Facebook page per character; never shared
+YT_CHANNEL = {"CHANG": "@changyin", "SUN": "@sunyoon"}   # one YouTube channel per character, own Cloud project each
+PAGE_CTA = {"@changyin": "WAITLIST", "@sunyoon.kitchen": "SOUP", "@sunyoon": "WAITLIST", "@changyin.strength": "STRONG"}
 
 # account -> (platform, handle). Account ids double as calendar file names.
 ACCOUNTS: list[dict] = (
@@ -36,8 +38,8 @@ ACCOUNTS: list[dict] = (
     + [{"account": f"th_{p.lstrip('@').replace('.', '_')}", "platform": "threads", "handle": p, "page": p} for p in IG_PAGES]
     + [{"account": f"x_{X_HANDLE[p].lstrip('@')}", "platform": "x", "handle": X_HANDLE[p], "page": p} for p in IG_PAGES]
     + [{"account": f"tt_{p.lstrip('@').replace('.', '_')}", "platform": "tiktok", "handle": p, "page": p} for p in IG_PAGES]
-    + [{"account": "fb_changandsun", "platform": "facebook", "handle": FB_PAGE, "page": FB_PAGE},
-       {"account": "yt_changandsun", "platform": "youtube", "handle": YT_CHANNEL, "page": YT_CHANNEL}])
+    + [{"account": f"fb_{h.lstrip('@')}", "platform": "facebook", "handle": h, "page": h, "character": c} for c, h in FB_PAGE.items()]
+    + [{"account": f"yt_{h.lstrip('@')}", "platform": "youtube", "handle": h, "page": h, "character": c} for c, h in YT_CHANNEL.items()])
 
 STEADY = {"ig_reels": 6, "ig_trial": 20, "ig_story": 3, "threads": 12, "x": 6, "tiktok": 26,
           "fb_reels": 12, "fb_long": 2, "fb_text": 1, "fb_photo": 1, "yt_shorts": 4}
@@ -46,7 +48,7 @@ RAMP = {"ig_reels": (3, 3, 4, 5, 6, 6, 6), "ig_trial": (0, 2, 5, 10, 15, 20, 20)
         "threads": (3, 6, 8, 10, 12, 12, 12), "x": (2, 3, 4, 5, 6, 6, 6), "tiktok": (1, 3, 6, 10, 16, 20, 26),
         "fb_reels": (2, 4, 6, 8, 10, 12, 12), "fb_long": (0, 0, 1, 1, 2, 2, 2), "fb_text": (1, 1, 1, 1, 1, 1, 1),
         "fb_photo": (0, 1, 1, 1, 1, 1, 1), "yt_shorts": (1, 2, 3, 4, 4, 4, 4)}
-D1_IG_MAIN_NEW_PAGE = 1           # @changandsun / @changyin.strength have no rendered day-1 post: one intro, GEN-needed
+D1_IG_MAIN_NEW_PAGE = 1           # @sunyoon / @changyin.strength have no rendered day-1 post: one intro, GEN-needed
 ACCOUNT_LANES = {"instagram": ("ig_reels", "ig_trial", "ig_story"), "threads": ("threads",), "x": ("x",),
                  "tiktok": ("tiktok",), "facebook": ("fb_reels", "fb_long", "fb_text", "fb_photo"), "youtube": ("yt_shorts",)}
 WINDOW = {"ig_reels": ("08:00", "21:00"), "ig_trial": ("07:30", "22:00"), "threads": ("07:00", "21:30"),
@@ -83,7 +85,7 @@ def day1_posts() -> list[dict]:
 
 def count(lane: str, day_index: int, page: str | None = None) -> int:
     n = RAMP[lane][min(day_index, 7) - 1]
-    if lane == "ig_reels" and day_index == 1 and page in ("@changandsun", "@changyin.strength"):
+    if lane == "ig_reels" and day_index == 1 and page in ("@sunyoon", "@changyin.strength"):
         return D1_IG_MAIN_NEW_PAGE
     return n
 
@@ -111,8 +113,8 @@ def rows_for_day(launch: date, i: int) -> list[dict]:
             if i == 1 and lane in ("ig_reels", "fb_reels"):
                 plat = "ig" if lane == "ig_reels" else "fb"
                 mine = [p for p in d1 if (p["page"] == acc["page"] if plat == "ig" else True)]
-                if plat == "fb":   # ONE FB page: the first post of each day-1 page, at their FB times
-                    mine = [p for p in d1 if p["post_id"].endswith("-1")][:n]
+                if plat == "fb":   # each character's FB page: the first post of each of that character's day-1 pages
+                    mine = [p for p in d1 if p["post_id"].endswith("-1") and CHARACTER.get(p["page"]) == acc["character"]][:n]
                 for p in mine[:n]:
                     t = p["variants"][plat]["scheduled_at"][11:16]
                     out.append(_row(day, i, acc, lane, t, file_id=p["post_id"], script_id=p["script_id"],

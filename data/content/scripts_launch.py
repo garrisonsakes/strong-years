@@ -1,4 +1,4 @@
-# Founding launch week scripts S135–S150 (day-1 pages only: @changyin S135–S140, @sunyoon.kitchen S141–S144, @changandsun S145–S150).
+# Founding launch week scripts S135–S150 (day-1 pages only: @changyin S135–S140, @sunyoon.kitchen S141–S144, @sunyoon S145–S150).
 # Built to drive MRR fast (BLITZ.md): charge-today founding membership, gift-for-parents, challenge kickoffs, pinned-post variants.
 # REAL COHORT FACTS ONLY (BLITZ.md §3, SAFETY T-04, S-02, S-04). Placeholders are filled by the pipeline from live config:
 #   {{FOUNDING_PRICE}} = the live founding price ($25 or $30 per the day 1–5 split test; one value per render)
@@ -218,8 +218,8 @@ dict(id="S144", page="@sunyoon.kitchen", speaker="SUN", format="F39", pillar="P2
  yt="The 4 Rules of Sun Yoon's Kitchen Page (Read Before You Follow)", ev=[],
  note="Disclosure pinned variant; no health claim.", bit="Fridge leaderboard in shot; Now go eat", wink=True, thumb="MY 4 RULES", music="playful pizzicato"),
 
-# ---------------------------------------------------------------- @changandsun ----------------
-dict(id="S145", page="@changandsun", speaker="DUO", format="F38", pillar="P20", hook_id="H385", hcat="LCH", title="Doors open: fifty years (fictional), founding members (real)", secs=50, launch=True,
+# ---------------------------------------------------------------- @sunyoon ----------------
+dict(id="S145", page="@sunyoon", speaker="DUO", format="F38", pillar="P20", hook_id="H385", hcat="LCH", title="Doors open: fifty years (fictional), founding members (real)", secs=50, launch=True,
  prop="anniversary countdown whiteboard", obj="fifty", grammar=["OBJ3","LAUNCH"], demo=True,
  beats=[
   ("0-3","SUN","Fifty years married. Fictional. Founding members: real. Doors are open.","DOORS OPEN · FOUNDING PRICE",f"{DL} | Sun flips the living-room whiteboard from '50 YEARS' to 'DOORS OPEN' | two-shot"),
@@ -235,11 +235,11 @@ dict(id="S145", page="@changandsun", speaker="DUO", format="F38", pillar="P20", 
  regression="", cta="JOIN",
  skip="Heart condition, or new to exercise? Doctor first.",
  caption="Comment JOIN for the founding-member link and full terms.\nStrong Years with Chang & Sun (AI characters, fictional 50-year marriage): a daily 8–12 minute session with a chair version of everything, Sunday recipes, a monthly strength retest and a live Wednesday Q&A with a real person on the team.\n" + TERMS,
- ig=["#strongyears","#foundingmember","#couplegoals","#changandsun"], tt=["#strongyears","#couplegoals","#foundingmember","#over60"],
+ ig=["#strongyears","#foundingmember","#couplegoals","#sunyoon"], tt=["#strongyears","#couplegoals","#foundingmember","#over60"],
  yt="Chang & Sun: Doors Open for Founding Members", ev=[],
  note="Offer facts per BLITZ.md §3.", bit="Seven out of ten; anniversary whiteboard", wink=False, thumb="DOORS OPEN", music="playful jazz"),
 
-dict(id="S146", page="@changandsun", speaker="DUO", format="F39", pillar="P20", hook_id="H386", hcat="LCH", title="PIN 1-D (founding week): Hi, we're AI. Doors are open.", secs=46, launch=True,
+dict(id="S146", page="@sunyoon", speaker="DUO", format="F39", pillar="P20", hook_id="H386", hcat="LCH", title="PIN 1-D (founding week): Hi, we're AI. Doors are open.", secs=46, launch=True,
  prop="the sofa, Mandu between them", obj="before", grammar=["LAUNCH","WATCH"], demo=False,
  beats=[
   ("0-3","SUN","Before you follow us, or join us: we're AI. Not real, not doctors. Watch what is real.","WE'RE AI. WATCH WHAT'S REAL.",f"{DL} | both on the sofa, Mandu between them | two-shot"),
@@ -255,11 +255,11 @@ dict(id="S146", page="@changandsun", speaker="DUO", format="F39", pillar="P20", 
  regression="", cta="JOIN",
  skip="Heart condition or new to exercise? Doctor first. Always.",
  caption="Comment JOIN for the founding-member link and full terms.\nChang Yin and Sun Yoon are AI characters made by a team; their 50-year marriage is fiction. The research is real and cited in every caption, and the free videos stay free.\n" + TERMS,
- ig=["#aicharacter","#changandsun","#strongyears","#couplegoals"], tt=["#aicharacter","#changandsun","#couplegoals","#strongyears"],
+ ig=["#aicharacter","#sunyoon","#strongyears","#couplegoals"], tt=["#aicharacter","#sunyoon","#couplegoals","#strongyears"],
  yt="Hi, We're AI. (And the Membership Is Open.)", ev=[],
  note="PIN 1 variant (CHARACTERS §9.2) with FALLBACK wording; offer facts per BLITZ.md.", bit="His arms are also not real; I'm AI, I don't get tired", wink=True, thumb="HI, WE'RE AI", music="playful jazz"),
 
-dict(id="S147", page="@changandsun", speaker="DUO", format="F11", pillar="P19", hook_id="H387", hcat="LCH", title="7-Day Strong for two: kickoff", secs=48, launch=True,
+dict(id="S147", page="@sunyoon", speaker="DUO", format="F11", pillar="P19", hook_id="H387", hcat="LCH", title="7-Day Strong for two: kickoff", secs=48, launch=True,
  prop="two chairs against the garage wall", obj="two", grammar=["OBJ3","LAUNCH","DEMO","TEST_NOW"], series="7-Day Strong (couples kickoff)", demo=True,
  beats=[
   ("0-3","SUN","Two chairs. Seven days. Ten minutes. Loser does dishes all week.","7-DAY STRONG · FOR TWO",f"{DG} | Sun drags a second chair against the garage wall next to Chang's | two-shot"),
@@ -274,11 +274,11 @@ dict(id="S147", page="@changandsun", speaker="DUO", format="F11", pillar="P19", 
  regression="Hands on thighs; firm cushion on the seat.", cta="STRONG",
  skip="Chest pain or dizziness? Stop, and call your doctor.",
  caption="Comment STRONG for the 8-minute Chair Builder, and type your two starting numbers.\n7-Day Strong, couples edition: two chairs against a wall, 30 seconds of chair stands each, then ten minutes a day together. A Cochrane review of 121 trials: training 2–3×/week improved strength and getting out of a chair in older adults.\nChest pain or dizziness: stop and call your doctor.",
- ig=["#7daychallenge","#couplegoals","#chairexercises","#changandsun"], tt=["#7daychallenge","#couplechallenge","#over60","#loserdoesdishes"],
+ ig=["#7daychallenge","#couplegoals","#chairexercises","#sunyoon"], tt=["#7daychallenge","#couplechallenge","#over60","#loserdoesdishes"],
  yt="7-Day Strong for Two: Loser Does Dishes All Week (Day 1)", ev=["E01"],
  note="Cochrane (A). Cross-promo to @changyin's 7-Day Strong series (≤1 in 7 rule).", bit="Loser does dishes; fridge leaderboard", wink=False, thumb="7 DAYS · FOR TWO", music="upbeat soul"),
 
-dict(id="S148", page="@changandsun", speaker="DUO", format="F33", pillar="P16", hook_id="H388", hcat="LCH", title="To the kids who call on Sundays: the gift that shows up every morning", secs=47, launch=True,
+dict(id="S148", page="@sunyoon", speaker="DUO", format="F33", pillar="P16", hook_id="H388", hcat="LCH", title="To the kids who call on Sundays: the gift that shows up every morning", secs=47, launch=True,
  prop="tablet on a stand, Sunday video call", obj="kids", grammar=["SHARE","LAUNCH"], demo=True,
  beats=[
   ("0-3","SUN","To the kids who call on Sundays: here's a gift that shows up every morning.","A GIFT THAT SHOWS UP DAILY",f"{DT} | tablet on a stand, Mina's video call just ended (voice only, face soft) | two-shot"),
@@ -293,11 +293,11 @@ dict(id="S148", page="@changandsun", speaker="DUO", format="F33", pillar="P16", 
  regression="", cta="FAMILY",
  skip="Heart condition or dizzy spells? They check with their doctor first.",
  caption="Comment FAMILY for the 'Give Mom & Dad' gift page.\nA daily session with Chang (AI character), Sun's Sunday recipes and a monthly retest you can do together on the phone. Your parent can choose to send you a monthly note; their numbers stay private unless they opt in.\n" + GIFT,
- ig=["#agingparents","#giftideas","#strongyears","#changandsun"], tt=["#giftforparents","#agingparents","#couplegoals","#strongyears"],
+ ig=["#agingparents","#giftideas","#strongyears","#sunyoon"], tt=["#giftforparents","#agingparents","#couplegoals","#strongyears"],
  yt="The Gift for Parents Who Say They Want 'Nothing'", ev=[],
  note="Gift terms per OFFER.md; gifter updates opt-in per ADS concept 17. Mina voice only.", bit="Phone calls from Mina", wink=False, thumb="THEY SAY 'NOTHING'", music="warm acoustic"),
 
-dict(id="S149", page="@changandsun", speaker="DUO", format="F38", pillar="P20", hook_id="H389", hcat="LCH", title="Founding price, locked: Sun cross-examines Chang", secs=47, launch=True,
+dict(id="S149", page="@sunyoon", speaker="DUO", format="F38", pillar="P20", hook_id="H389", hcat="LCH", title="Founding price, locked: Sun cross-examines Chang", secs=47, launch=True,
  prop="terms card pulled from his shorts pocket", obj="founding", grammar=["OBJ3","LAUNCH"], demo=False,
  beats=[
   ("0-3","SUN","'Founding price, locked.' Locked how? Show me the terms.","SHOW ME THE TERMS",f"{DK} | Sun, arms crossed; Chang pulls a folded terms card out of his shorts pocket | two-shot then insert"),
@@ -314,11 +314,11 @@ dict(id="S149", page="@changandsun", speaker="DUO", format="F38", pillar="P20", 
  regression="", cta="JOIN",
  skip="Heart condition? Doctor first.",
  caption="Comment JOIN for the founding-member link and full terms.\nSun's cross-examination, answered: the founding price stays as long as you stay subscribed; 14 days for a full refund; cancel online anytime in two screens; a reminder email before every renewal; the founding price is open until the close date on the page.\n" + TERMS,
- ig=["#strongyears","#foundingmember","#couplegoals","#changandsun"], tt=["#showmetheterms","#couplegoals","#strongyears","#over60"],
+ ig=["#strongyears","#foundingmember","#couplegoals","#sunyoon"], tt=["#showmetheterms","#couplegoals","#strongyears","#over60"],
  yt="'Founding Price, Locked.' She Made Him Show the Terms.", ev=[],
  note="Offer facts per BLITZ.md; the study-card bit becomes a terms card.", bit="Study card from the shorts pocket (terms edition); seven out of ten", wink=False, thumb="SHOW ME THE TERMS", music="playful jazz"),
 
-dict(id="S150", page="@changandsun", speaker="DUO", format="F10", pillar="P20", hook_id="H390", hcat="LCH", title="Founding week Q&A: 'Is it a subscription?' Yes.", secs=48, launch=True,
+dict(id="S150", page="@sunyoon", speaker="DUO", format="F10", pillar="P20", hook_id="H390", hcat="LCH", title="Founding week Q&A: 'Is it a subscription?' Yes.", secs=48, launch=True,
  prop="IG question stickers on screen", obj="subscription", grammar=["LAUNCH"], demo=False,
  beats=[
   ("0-3","SUN","'Is it a subscription?' Yes. Four more questions. Fast answers.","5 QUESTIONS · FAST ANSWERS",f"{DT} | IG question-sticker graphics stack on screen; both at the table with tea | two-shot"),
@@ -333,7 +333,7 @@ dict(id="S150", page="@changandsun", speaker="DUO", format="F10", pillar="P20", 
  regression="", cta="JOIN",
  skip="Ask your doctor first. We can't answer that for you.",
  caption="Comment JOIN for the founding-member link and full terms.\nFounding-week answers: yes, it's a monthly subscription; you need a chair and a counter; the Rebuild level is all chair; we're AI characters (the exercises and studies are real; a real team member answers live on Wednesdays); heart condition questions go to your doctor.\n" + TERMS,
- ig=["#strongyears","#qanda","#changandsun","#foundingmember"], tt=["#qanda","#strongyears","#couplegoals","#over60"],
+ ig=["#strongyears","#qanda","#sunyoon","#foundingmember"], tt=["#qanda","#strongyears","#couplegoals","#over60"],
  yt="Founding Week Q&A: Is It a Subscription? (Yes. Here Are the Terms.)", ev=[],
  note="Offer facts per BLITZ.md; no health claim.", bit="The team reads me your comments (wink)", wink=True, thumb="IS IT A SUBSCRIPTION?", music="playful jazz"),
 ]

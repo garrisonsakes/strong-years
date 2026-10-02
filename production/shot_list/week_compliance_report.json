@@ -1,19 +1,19 @@
 {
   "summary": {
-    "pass": 37
+    "pass": 36
   },
-  "total": 37,
+  "total": 36,
   "files": {
-    "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json": {
-      "total": 37,
-      "pass": 37
+    "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json": {
+      "total": 36,
+      "pass": 36
     }
   },
   "judge": "not requested (deterministic only)",
   "results": [
     {
       "id": "S158",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
         "script_id": "S158",
         "pass_no": 1,
@@ -47,7 +47,7 @@
     },
     {
       "id": "S01",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
         "script_id": "S01",
         "pass_no": 1,
@@ -84,7 +84,7 @@
     },
     {
       "id": "S167",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
         "script_id": "S167",
         "pass_no": 1,
@@ -118,7 +118,7 @@
     },
     {
       "id": "S33",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
         "script_id": "S33",
         "pass_no": 1,
@@ -161,7 +161,7 @@
     },
     {
       "id": "S169",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
         "script_id": "S169",
         "pass_no": 1,
@@ -194,10 +194,10 @@
       }
     },
     {
-      "id": "S52",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "id": "S51",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
-        "script_id": "S52",
+        "script_id": "S51",
         "pass_no": 1,
         "kind": "script",
         "blocks": [],
@@ -205,7 +205,6 @@
         "flags": [],
         "required_missing": [],
         "auto_inserted": [
-          "movement_addon_en (M-03 stop rule appended to caption before the footer)",
           "caption_footer_en"
         ],
         "human_review_reasons": [],
@@ -213,10 +212,10 @@
         "neutralized": [],
         "regex_hits": [],
         "evidence": [
-          "E09"
+          "E21"
         ],
         "myth_bust": false,
-        "has_movement": true,
+        "has_movement": false,
         "verdict": "pass",
         "pass": true,
         "requires_llm_confirmation": false
@@ -232,7 +231,7 @@
     },
     {
       "id": "S04",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
         "script_id": "S04",
         "pass_no": 1,
@@ -280,7 +279,7 @@
     },
     {
       "id": "S19",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
         "script_id": "S19",
         "pass_no": 1,
@@ -316,53 +315,10 @@
       }
     },
     {
-      "id": "S40",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "id": "S111",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
-        "script_id": "S40",
-        "pass_no": 1,
-        "kind": "script",
-        "blocks": [],
-        "rewrites": [],
-        "flags": [
-          {
-            "rule": "3.2",
-            "term": "arthritis",
-            "evidence_present": true
-          }
-        ],
-        "required_missing": [],
-        "auto_inserted": [
-          "movement_addon_en (M-03 stop rule appended to caption before the footer)",
-          "caption_footer_en"
-        ],
-        "human_review_reasons": [],
-        "mbex_candidates": [],
-        "neutralized": [],
-        "regex_hits": [],
-        "evidence": [
-          "E01"
-        ],
-        "myth_bust": false,
-        "has_movement": true,
-        "verdict": "pass",
-        "pass": true,
-        "requires_llm_confirmation": false
-      },
-      "judge": null,
-      "final": {
-        "verdict": "pass",
-        "deterministic": "pass",
-        "judge": null,
-        "judge_passed": false,
-        "reasons": []
-      }
-    },
-    {
-      "id": "S51",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
-      "scan": {
-        "script_id": "S51",
+        "script_id": "S111",
         "pass_no": 1,
         "kind": "script",
         "blocks": [],
@@ -377,7 +333,7 @@
         "neutralized": [],
         "regex_hits": [],
         "evidence": [
-          "E21"
+          "E28"
         ],
         "myth_bust": false,
         "has_movement": false,
@@ -395,8 +351,62 @@
       }
     },
     {
+      "id": "S43",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S43",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [
+          {
+            "rule": "3.2",
+            "term": "bone density",
+            "evidence_present": true
+          },
+          {
+            "rule": "3.2",
+            "term": "menopause",
+            "evidence_present": true
+          },
+          {
+            "rule": "3.2",
+            "term": "osteoporosis",
+            "evidence_present": true
+          }
+        ],
+        "required_missing": [],
+        "auto_inserted": [
+          "movement_addon_en (M-03 stop rule appended to caption before the footer)",
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E29",
+          "E40"
+        ],
+        "myth_bust": true,
+        "has_movement": true,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
       "id": "S159",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
         "script_id": "S159",
         "pass_no": 1,
@@ -433,7 +443,7 @@
     },
     {
       "id": "S06",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
         "script_id": "S06",
         "pass_no": 1,
@@ -471,7 +481,7 @@
     },
     {
       "id": "S31",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
         "script_id": "S31",
         "pass_no": 1,
@@ -513,7 +523,7 @@
     },
     {
       "id": "S39",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
         "script_id": "S39",
         "pass_no": 1,
@@ -548,10 +558,10 @@
       }
     },
     {
-      "id": "S53",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "id": "S52",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
-        "script_id": "S53",
+        "script_id": "S52",
         "pass_no": 1,
         "kind": "script",
         "blocks": [],
@@ -559,6 +569,7 @@
         "flags": [],
         "required_missing": [],
         "auto_inserted": [
+          "movement_addon_en (M-03 stop rule appended to caption before the footer)",
           "caption_footer_en"
         ],
         "human_review_reasons": [],
@@ -566,10 +577,10 @@
         "neutralized": [],
         "regex_hits": [],
         "evidence": [
-          "E12"
+          "E09"
         ],
         "myth_bust": false,
-        "has_movement": false,
+        "has_movement": true,
         "verdict": "pass",
         "pass": true,
         "requires_llm_confirmation": false
@@ -584,10 +595,10 @@
       }
     },
     {
-      "id": "S55",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "id": "S54",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
-        "script_id": "S55",
+        "script_id": "S54",
         "pass_no": 1,
         "kind": "script",
         "blocks": [],
@@ -595,6 +606,7 @@
         "flags": [],
         "required_missing": [],
         "auto_inserted": [
+          "movement_addon_en (M-03 stop rule appended to caption before the footer)",
           "caption_footer_en"
         ],
         "human_review_reasons": [],
@@ -602,10 +614,10 @@
         "neutralized": [],
         "regex_hits": [],
         "evidence": [
-          "E28"
+          "E30"
         ],
         "myth_bust": false,
-        "has_movement": false,
+        "has_movement": true,
         "verdict": "pass",
         "pass": true,
         "requires_llm_confirmation": false
@@ -621,7 +633,7 @@
     },
     {
       "id": "S10",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
         "script_id": "S10",
         "pass_no": 1,
@@ -657,7 +669,7 @@
     },
     {
       "id": "S03",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
         "script_id": "S03",
         "pass_no": 1,
@@ -694,7 +706,7 @@
     },
     {
       "id": "S160",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
         "script_id": "S160",
         "pass_no": 1,
@@ -730,7 +742,7 @@
     },
     {
       "id": "S35",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
         "script_id": "S35",
         "pass_no": 1,
@@ -773,7 +785,7 @@
     },
     {
       "id": "S168",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
         "script_id": "S168",
         "pass_no": 1,
@@ -809,23 +821,18 @@
       }
     },
     {
-      "id": "S57",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "id": "S56",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
-        "script_id": "S57",
+        "script_id": "S56",
         "pass_no": 1,
         "kind": "script",
         "blocks": [],
         "rewrites": [],
-        "flags": [
-          {
-            "rule": "3.2",
-            "term": "sleep apnea",
-            "evidence_present": true
-          }
-        ],
+        "flags": [],
         "required_missing": [],
         "auto_inserted": [
+          "movement_addon_en (M-03 stop rule appended to caption before the footer)",
           "caption_footer_en"
         ],
         "human_review_reasons": [],
@@ -833,10 +840,10 @@
         "neutralized": [],
         "regex_hits": [],
         "evidence": [
-          "E48"
+          "E01"
         ],
         "myth_bust": false,
-        "has_movement": false,
+        "has_movement": true,
         "verdict": "pass",
         "pass": true,
         "requires_llm_confirmation": false
@@ -852,7 +859,7 @@
     },
     {
       "id": "S02",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
         "script_id": "S02",
         "pass_no": 1,
@@ -889,7 +896,7 @@
     },
     {
       "id": "S36",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
         "script_id": "S36",
         "pass_no": 1,
@@ -930,10 +937,10 @@
       }
     },
     {
-      "id": "S54",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "id": "S53",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
-        "script_id": "S54",
+        "script_id": "S53",
         "pass_no": 1,
         "kind": "script",
         "blocks": [],
@@ -941,7 +948,6 @@
         "flags": [],
         "required_missing": [],
         "auto_inserted": [
-          "movement_addon_en (M-03 stop rule appended to caption before the footer)",
           "caption_footer_en"
         ],
         "human_review_reasons": [],
@@ -949,10 +955,10 @@
         "neutralized": [],
         "regex_hits": [],
         "evidence": [
-          "E30"
+          "E12"
         ],
         "myth_bust": false,
-        "has_movement": true,
+        "has_movement": false,
         "verdict": "pass",
         "pass": true,
         "requires_llm_confirmation": false
@@ -968,7 +974,7 @@
     },
     {
       "id": "S152",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
         "script_id": "S152",
         "pass_no": 1,
@@ -1005,7 +1011,7 @@
     },
     {
       "id": "S05",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
         "script_id": "S05",
         "pass_no": 1,
@@ -1042,7 +1048,7 @@
     },
     {
       "id": "S32",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
         "script_id": "S32",
         "pass_no": 1,
@@ -1077,46 +1083,10 @@
       }
     },
     {
-      "id": "S41",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "id": "S40",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
-        "script_id": "S41",
-        "pass_no": 1,
-        "kind": "script",
-        "blocks": [],
-        "rewrites": [],
-        "flags": [],
-        "required_missing": [],
-        "auto_inserted": [
-          "caption_footer_en"
-        ],
-        "human_review_reasons": [],
-        "mbex_candidates": [],
-        "neutralized": [],
-        "regex_hits": [],
-        "evidence": [
-          "E37"
-        ],
-        "myth_bust": false,
-        "has_movement": false,
-        "verdict": "pass",
-        "pass": true,
-        "requires_llm_confirmation": false
-      },
-      "judge": null,
-      "final": {
-        "verdict": "pass",
-        "deterministic": "pass",
-        "judge": null,
-        "judge_passed": false,
-        "reasons": []
-      }
-    },
-    {
-      "id": "S58",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
-      "scan": {
-        "script_id": "S58",
+        "script_id": "S40",
         "pass_no": 1,
         "kind": "script",
         "blocks": [],
@@ -1124,47 +1094,10 @@
         "flags": [
           {
             "rule": "3.2",
-            "term": "hrv",
+            "term": "arthritis",
             "evidence_present": true
           }
         ],
-        "required_missing": [],
-        "auto_inserted": [
-          "caption_footer_en"
-        ],
-        "human_review_reasons": [],
-        "mbex_candidates": [],
-        "neutralized": [],
-        "regex_hits": [],
-        "evidence": [
-          "E18",
-          "E19"
-        ],
-        "myth_bust": false,
-        "has_movement": false,
-        "verdict": "pass",
-        "pass": true,
-        "requires_llm_confirmation": false
-      },
-      "judge": null,
-      "final": {
-        "verdict": "pass",
-        "deterministic": "pass",
-        "judge": null,
-        "judge_passed": false,
-        "reasons": []
-      }
-    },
-    {
-      "id": "S56",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
-      "scan": {
-        "script_id": "S56",
-        "pass_no": 1,
-        "kind": "script",
-        "blocks": [],
-        "rewrites": [],
-        "flags": [],
         "required_missing": [],
         "auto_inserted": [
           "movement_addon_en (M-03 stop rule appended to caption before the footer)",
@@ -1193,8 +1126,44 @@
       }
     },
     {
+      "id": "S55",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
+      "scan": {
+        "script_id": "S55",
+        "pass_no": 1,
+        "kind": "script",
+        "blocks": [],
+        "rewrites": [],
+        "flags": [],
+        "required_missing": [],
+        "auto_inserted": [
+          "caption_footer_en"
+        ],
+        "human_review_reasons": [],
+        "mbex_candidates": [],
+        "neutralized": [],
+        "regex_hits": [],
+        "evidence": [
+          "E28"
+        ],
+        "myth_bust": false,
+        "has_movement": false,
+        "verdict": "pass",
+        "pass": true,
+        "requires_llm_confirmation": false
+      },
+      "judge": null,
+      "final": {
+        "verdict": "pass",
+        "deterministic": "pass",
+        "judge": null,
+        "judge_passed": false,
+        "reasons": []
+      }
+    },
+    {
       "id": "S07",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
         "script_id": "S07",
         "pass_no": 1,
@@ -1232,7 +1201,7 @@
     },
     {
       "id": "S11",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
         "script_id": "S11",
         "pass_no": 1,
@@ -1270,7 +1239,7 @@
     },
     {
       "id": "S161",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
         "script_id": "S161",
         "pass_no": 1,
@@ -1306,7 +1275,7 @@
     },
     {
       "id": "S34",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
         "script_id": "S34",
         "pass_no": 1,
@@ -1342,7 +1311,7 @@
     },
     {
       "id": "S172",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
         "script_id": "S172",
         "pass_no": 1,
@@ -1378,15 +1347,21 @@
       }
     },
     {
-      "id": "S59",
-      "file": "/home/claude/rebuild/production/shot_list/week_scripts_for_scan.json",
+      "id": "S57",
+      "file": "/home/user/strong-years/production/shot_list/week_scripts_for_scan.json",
       "scan": {
-        "script_id": "S59",
+        "script_id": "S57",
         "pass_no": 1,
         "kind": "script",
         "blocks": [],
         "rewrites": [],
-        "flags": [],
+        "flags": [
+          {
+            "rule": "3.2",
+            "term": "sleep apnea",
+            "evidence_present": true
+          }
+        ],
         "required_missing": [],
         "auto_inserted": [
           "caption_footer_en"
@@ -1396,9 +1371,7 @@
         "neutralized": [],
         "regex_hits": [],
         "evidence": [
-          "E08",
-          "E09",
-          "E11"
+          "E48"
         ],
         "myth_bust": false,
         "has_movement": false,

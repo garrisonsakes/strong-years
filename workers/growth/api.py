@@ -25,7 +25,7 @@ from common import supabase
 from common.auth import require_token
 from growth import approvals
 from growth import actions, adapters, allocator, baselines, config as G, governor, scoring, snapshots
-from growth import learning, scorecard, variants
+from growth import health, learning, scorecard, variants
 
 router = APIRouter(prefix="/growth", tags=["growth"], dependencies=[Depends(require_token)])
 
@@ -308,6 +308,22 @@ def boost_approval_endpoint(req: BoostApprovalIn) -> dict:
     if res.get("ok"):
         governor.append_audit({"boost_approval": res["record"]}, actor=f"human:{res['record']['approval']['by']}")
     return res
+
+
+class HealthRequest(BaseModel):
+    posts: list[dict[str, Any]]                                        # account, platform, published_at, views, likes
+    now: Optional[str] = None
+    config_overrides: dict[str, Any] = Field(default_factory=dict)
+
+
+@router.post("/health")
+def health_endpoint(req: HealthRequest) -> dict:
+    """POSTDB Rule 0: per-account distribution state (SUPPRESSED / WATCH / DORMANCY_RISK / HEALTHY / NEW)."""
+    cfg = G.load(req.config_overrides)
+    now = health._dt(req.now) if req.now else None
+    rows = health.check(req.posts, cfg, now)
+    return {"accounts": rows, "alerts": [r for r in rows if r["state"] in ("SUPPRESSED", "DORMANCY_RISK")],
+            "config_version": cfg["version"]}
 
 
 @router.get("/summary")

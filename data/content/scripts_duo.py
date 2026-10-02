@@ -4,7 +4,7 @@ L = "SET-LIVING | C-CASUAL + S-CARDI-JADE"
 G = "SET-GARAGE | C-TRAIN-A + S-CARDI-MUSTARD"
 
 SCRIPTS = [
-dict(id="S51", page="@changandsun", speaker="DUO", format="F08", pillar="P17", hook_id="H211", title="Microwave flexing / the sign", secs=40,
+dict(id="S51", page="@sunyoon", speaker="DUO", format="F08", pillar="P17", hook_id="H211", title="Microwave flexing / the sign", secs=40,
  beats=[
   ("0-3","SUN","He flexes in the microwave every morning at seventy-four. So I made a sign. Watch him find it.","NO MIRROR FLEXING",f"{K} | Chang flexing at his reflection in the microwave door; cut to taped sign 'NO MIRROR FLEXING — S.Y.' | medium, then insert"),
   ("3-6","CHANG","I'm checking the popcorn.","","same | Chang, caught | CU"),
@@ -24,7 +24,7 @@ dict(id="S51", page="@changandsun", speaker="DUO", format="F08", pillar="P17", h
  yt="He Flexes in the Microwave, So She Made a Sign (74 & 76)", ev=["E21"],
  note="Momma 2022 (C) 'linked'.", bit="NO MIRROR FLEXING + study card from shorts + seven out of ten", wink=False, thumb="NO FLEXING", music="playful jazz"),
 
-dict(id="S52", page="@changandsun", speaker="DUO", format="F34", pillar="P17", hook_id="H212", title="Balance showdown: loser does dishes", secs=40,
+dict(id="S52", page="@sunyoon", speaker="DUO", format="F34", pillar="P17", hook_id="H212", title="Balance showdown: loser does dishes", secs=40,
  beats=[
   ("0-3","SUN","Fifty years married. I still beat him at balance.","BALANCE SHOWDOWN",f"{K} | both at the counter, fingers hovering; fridge whiteboard behind | medium two-shot"),
   ("3-7","CHANG","One leg. Fingers over the counter. Loser does the dishes.","Fingers over the counter","same | both lift a foot | medium-full"),
@@ -42,7 +42,7 @@ dict(id="S52", page="@changandsun", speaker="DUO", format="F34", pillar="P17", h
  yt="50 Years Married: One-Leg Balance Showdown (Loser Does Dishes)", ev=["E09"],
  note="Araújo 2022 (C).", bit="Fridge balance leaderboard; I'm older so I'm right (implicit)", wink=False, thumb="LOSER DOES DISHES", music="playful jazz"),
 
-dict(id="S53", page="@changandsun", speaker="DUO", format="F33", pillar="P17", hook_id="H213", title="Our daughter thinks we train too much", secs=41,
+dict(id="S53", page="@sunyoon", speaker="DUO", format="F33", pillar="P17", hook_id="H213", title="Our daughter thinks we train too much", secs=41,
  beats=[
   ("0-3","SUN","Our daughter called. She thinks we train too much.","OUR DAUGHTER CALLED…",f"{L} | tablet on a stand, video call with Mina (face blurred/soft, voice only) | two-shot"),
   ("3-6","MINA","Dad, you're seventy-four. Should you really be lifting?","","same | tablet CU | CU"),
@@ -60,7 +60,7 @@ dict(id="S53", page="@changandsun", speaker="DUO", format="F33", pillar="P17", h
  yt="Our Daughter Thinks We Train Too Much (We're 74 and 76)", ev=["E12"],
  note="Sherrington 2019 (A). Targets 35–55 adult children (gift buyer).", bit="Phone calls from Mina / 'Your father is vain'", wink=False, thumb="SHOULD I BE SITTING?", music="warm jazz"),
 
-dict(id="S54", page="@changandsun", speaker="DUO", format="F08", pillar="P17", hook_id="H214", title="He says he stretched", secs=39,
+dict(id="S54", page="@sunyoon", speaker="DUO", format="F08", pillar="P17", hook_id="H214", title="He says he stretched", secs=39,
  beats=[
   ("0-3","SUN","He says he stretched. The kettlebell is still hidden.","THE KETTLEBELL IS HIDDEN",f"{G} | Chang staring at an empty spot on the rack | medium two-shot"),
   ("3-6","CHANG","I stretched.","","same | CU | CU"),
@@ -78,7 +78,7 @@ dict(id="S54", page="@changandsun", speaker="DUO", format="F08", pillar="P17", h
  yt="He Said He Stretched. The Kettlebell Is Still Hidden.", ev=["E30"],
  note="General exercise for LBP evidence (A); stretch is technique content, no outcome claim.", bit="Hidden kettlebell + seven out of ten + K-drama 3 a.m.", wink=False, thumb="SHOW ME.", music="playful jazz"),
 
-dict(id="S55", page="@changandsun", speaker="DUO", format="F18", pillar="P13", hook_id="H215", title="Dumpling count = protein count", secs=40,
+dict(id="S55", page="@sunyoon", speaker="DUO", format="F18", pillar="P13", hook_id="H215", title="Dumpling count = protein count", secs=40,
  beats=[
   ("0-3","SUN","He counts reps. I count dumplings. That's fourteen, and here's what fourteen is in protein.","THAT'S FOURTEEN","SET-TABLE | C-CASUAL + S-CARDI-JADE | plate of dumplings, Chang reaching | overhead then two-shot"),
   ("3-6","CHANG","Twelve.","","same | CU | CU"),
@@ -98,7 +98,7 @@ dict(id="S55", page="@changandsun", speaker="DUO", format="F18", pillar="P13", h
  yt="He Counts Reps, She Counts Dumplings (Protein After 65)", ev=["E28"],
  note="PROT-AGE (A); dumpling protein approximate.", bit="Dumpling count", wink=False, thumb="THAT'S 14", music="playful jazz"),
 
-dict(id="S56", page="@changandsun", speaker="DUO", format="F34", pillar="P17", hook_id="H229", title="Couples workout, nobody gets divorced", secs=41,
+dict(id="S56", page="@sunyoon", speaker="DUO", format="F34", pillar="P17", hook_id="H229", title="Couples workout, nobody gets divorced", secs=41,
  beats=[
   ("0-3","CHANG","A couples workout where nobody gets divorced.","COUPLES WORKOUT",f"{L} | two armless chairs against the wall, facing each other | wide"),
   ("3-5","SUN","Mostly nobody.","","same | CU | CU"),
@@ -115,7 +115,7 @@ dict(id="S56", page="@changandsun", speaker="DUO", format="F34", pillar="P17", h
  yt="A Couples Workout Where Nobody Gets Divorced (74 & 76)", ev=["E01"],
  note="PRT (A). Deliberately avoids partner-balance holds.", bit="Loser makes tea", wink=False, thumb="NOBODY GETS DIVORCED", music="upbeat soul instrumental"),
 
-dict(id="S57", page="@changandsun", speaker="DUO", format="F08", pillar="P17", hook_id="H232", title="He snores: the study says see the doctor", secs=38,
+dict(id="S57", page="@sunyoon", speaker="DUO", format="F08", pillar="P17", hook_id="H232", title="He snores: the study says see the doctor", secs=38,
  beats=[
   ("0-3","SUN","He snores. I found a study, one page, and the study says: see the doctor. Watch his face.","SNORING → SEE THE DOCTOR","SET-BED | C-BED + S-BED | night, Chang snoring, Sun sitting up with phone | medium two-shot"),
   ("3-5","CHANG","I don't snore.","","same | Chang wakes | CU"),
@@ -133,7 +133,7 @@ dict(id="S57", page="@changandsun", speaker="DUO", format="F08", pillar="P17", h
  yt="He Snores. The Study Says: See the Doctor (Sleep Apnea Signs)", ev=["E48"],
  note="AASM guideline (A, known literature). Referral-only content.", bit="Sun's phone evidence", wink=False, thumb="HE SNORES", music="playful jazz"),
 
-dict(id="S58", page="@changandsun", speaker="DUO", format="F35", pillar="P17", hook_id="H237", title="When we fight, we exhale", secs=39,
+dict(id="S58", page="@sunyoon", speaker="DUO", format="F35", pillar="P17", hook_id="H237", title="When we fight, we exhale", secs=39,
  beats=[
   ("0-3","SUN","When we fight, one of us says 'exhale,' in for four, out for six. Here's why it works.","WHEN WE FIGHT: EXHALE",f"{L} | mid-argument by the thermostat | medium two-shot"),
   ("3-11","CHANG","A long exhale works like a brake. Slow breathing raises heart-rate variability. That's the calm side of your nervous system.","Slow breathing ↑ HRV","same | study card inset (Laborde 2022) | medium"),
@@ -151,7 +151,7 @@ dict(id="S58", page="@changandsun", speaker="DUO", format="F35", pillar="P17", h
  yt="When We Fight, One of Us Says 'Exhale' (50 Years Married)", ev=["E19","E18"],
  note="Slow breathing ↑ vmHRV (A−). No therapy claim.", bit="Thermostat argument; I'm older so I'm right (implicit)", wink=False, thumb="EXHALE FIRST", music="soft piano"),
 
-dict(id="S59", page="@changandsun", speaker="DUO", format="F08", pillar="P20", hook_id="H239", title="We're AI. The advice isn't fake.", secs=40,
+dict(id="S59", page="@sunyoon", speaker="DUO", format="F08", pillar="P20", hook_id="H239", title="We're AI. The advice isn't fake.", secs=40,
  beats=[
   ("0-3","SUN","We're AI. The marriage is fictional. The advice isn't. Watch the three tests that are real.","WE'RE AI.",f"{L} | both on sofa, Mandu between them | medium two-shot"),
   ("3-8","CHANG","A team made us. Real people check every video against the research.","Checked against real research","same | CU | CU"),
@@ -168,7 +168,7 @@ dict(id="S59", page="@changandsun", speaker="DUO", format="F08", pillar="P20", h
  yt="We're AI Characters. Here's What's Real (3 Tests to Try)", ev=["E11","E09","E08"],
  note="Disclosure + test explainer; pin-worthy (PIN 1 alternative).", bit="His arms are also not real (wink)", wink=True, thumb="WE'RE AI", music="warm jazz"),
 
-dict(id="S60", page="@changandsun", speaker="DUO", format="F27", pillar="P17", hook_id="H235", title="50th anniversary in 23 days", secs=41,
+dict(id="S60", page="@sunyoon", speaker="DUO", format="F27", pillar="P17", hook_id="H235", title="50th anniversary in 23 days", secs=41,
  beats=[
   ("0-3","CHANG","Fiftieth anniversary in twenty-three days, and she still says my wedding dumplings were over-salted. Watch her face.","50 YEARS IN 23 DAYS",f"{L} | holding an illustrated vintage-style 1976 wedding portrait (clearly artwork) | medium two-shot"),
   ("3-7","SUN","They were. Then you over-corrected.","","same | CU smile | CU"),

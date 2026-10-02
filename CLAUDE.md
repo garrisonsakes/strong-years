@@ -19,7 +19,7 @@ The product is the "Strong Years" MRR membership on Shopify. Growth is organic-f
 **Content:** 25–30 unique videos/day for ≤$1K/mo. Fully automated, minimal manual work.
 
 ## Canon (read in this order)
-1. `BRIEF.md`. The CANON UPDATE 2–7 sections at the end override the earlier text, and **7 is newest** (no seat cap, ascension deferred, price tests).
+1. `BRIEF.md`. The CANON UPDATE 2–8 sections at the end override the earlier text, and **8 is newest** (8: every account belongs to one character; 7: no seat cap, ascension deferred, price tests).
 2. `CHANGELOG.md` is the append-only log of every decision. Append to it after each round.
 3. `LAUNCH_RUNBOOK.md` gives the order of operations, and `LAUNCH_CHECKLIST_TOMORROW.md` is the day-1 checklist.
 4. `INTEGRATION.md` holds the Shopify decisions with citations. `AUDIT_FINAL.md` covers audit rounds 1–5; round 6 is partial.
@@ -32,10 +32,10 @@ The product is the "Strong Years" MRR membership on Shopify. Growth is organic-f
 - No $1 trial, ever.
 
 **Accounts**
-- IG: 4 pages, going to 6 at $30K retained MRR. Each page posts 6 main + 20 Trial Reels + 3 Stories per day, and gets its own Threads (12/day) and X (6/day).
+- IG: 4 pages (2 Chang + 2 Sun, CANON 8; Chang and Sun never share an account), going to 6 at $30K retained MRR. Each page posts 6 main + 20 Trial Reels + 3 Stories per day, and gets its own Threads (12/day) and X (6/day).
 - TikTok: 4→6 accounts × 26/day. Posted manually until the API audit passes.
-- FB: ONE page (→2 only if easy) × 16/day.
-- YT: ONE Shorts channel × 6/day (4/day until the quota is raised).
+- FB: one page per character × 16/day (CANON 8).
+- YT: one Shorts channel per character × 6/day each (4/day until the quota is raised), each in its own Cloud project.
 - Total: 300→458 posts/day.
 - No collabs.
 
@@ -157,7 +157,7 @@ At last report: app 595 unit / 18 e2e, workers 737, shopify 128.
 - Meta app review.
 - Reviewers: attorney, PT/dietitian, cultural.
 - Performer shoot.
-- Names for the single FB page and the single YT channel.
+- Final handles: the ChatGPT setup agent reports a free/taken table first (CANON 8).
 - The POSTDB data files (`data/posts.csv`, `data/transcripts/`) from the old claude.ai sandbox, if he saved them. Otherwise re-run the POSTDB crawl.
 - Hetzner CCX33 ops box (+ Backups) per `deploy/README.md` "Capacity".
 

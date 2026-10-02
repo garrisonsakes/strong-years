@@ -63,8 +63,8 @@ SLOTS_ET = PRIME_ET   # back-compat name
 HASHTAG_MAX = {"ig_reels": 5, "fb_reels": 3, "tiktok": 5, "yt_shorts": 3, "threads": 1, "x": 2}
 TRIAL_REEL_DAYS = 14
 REMIX_TOP_N, REMIX_DUE_H = 3, 24
-PAGE_START = {"@changyin": -7, "@sunyoon.kitchen": -7, "@changandsun": -7, "@changyin.strength": -7,
-              "@changyin.mobility": 15, "@sunyoon": 22, "@changyin.espanol": 30}
+PAGE_START = {"@changyin": -7, "@sunyoon.kitchen": -7, "@sunyoon": -7, "@changyin.strength": -7,
+              "@changyin.mobility": 15, "@changyin.espanol": 30}
 
 
 def _m(hhmm: str) -> int:

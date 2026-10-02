@@ -19,7 +19,7 @@ from zoneinfo import ZoneInfo
 
 from compliance import caption_rules, scanner
 
-PAGE_CODE = {"CY": "@changyin", "SK": "@sunyoon.kitchen", "CS": "@changandsun", "ST": "@changyin.strength",
+PAGE_CODE = {"CY": "@changyin", "SK": "@sunyoon.kitchen", "CS": "@sunyoon", "ST": "@changyin.strength",
              "MB": "@changyin.mobility", "SY": "@sunyoon"}
 SPEAKER_SIGN = {"CHANG": "— Chang Yin (AI character)", "SUN": "— Sun Yoon (AI character)",
                 "BOTH": "— Chang & Sun (AI characters)"}

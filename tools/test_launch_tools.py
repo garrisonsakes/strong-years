@@ -32,15 +32,15 @@ def _load_secrets():
 # ------------------------------------------------------------------ 7. topology + calendar
 def test_canon6_accounts_and_steady_state_on_day7():
     by = collections.Counter(a["platform"] for a in T.ACCOUNTS)
-    assert by == {"instagram": 4, "threads": 4, "x": 4, "tiktok": 4, "facebook": 1, "youtube": 1}
+    assert by == {"instagram": 4, "threads": 4, "x": 4, "tiktok": 4, "facebook": 2, "youtube": 2}
     assert {a["handle"] for a in T.ACCOUNTS if a["platform"] == "instagram"} == {
-        "@changyin", "@sunyoon.kitchen", "@changandsun", "@changyin.strength"}
+        "@changyin", "@changyin.strength", "@sunyoon.kitchen", "@sunyoon"}
     d7 = [r for r in T.rows_for_day(LAUNCH, 7)]
     per = collections.Counter((r["page"], r["platform"]) for r in d7)
     for a in T.ACCOUNTS:
         for lane in T.ACCOUNT_LANES[a["platform"]]:
             assert per[(a["account"], lane)] == T.STEADY[lane], (a["account"], lane)
-    assert sum(per.values()) == 4 * (6 + 20 + 3 + 12 + 6 + 26) + 16 + 4
+    assert sum(per.values()) == 4 * (6 + 20 + 3 + 12 + 6 + 26) + 2 * (16 + 4)   # FB + YT per character
 
 
 def test_day1_ramp_uses_the_rendered_posts_and_no_trials():
@@ -49,7 +49,7 @@ def test_day1_ramp_uses_the_rendered_posts_and_no_trials():
     assert sorted(r["file_id"] for r in ig if r["file_id"]) == sorted(
         p["post_id"] for p in T.day1_posts())                      # all 6 day-1 renders, on their own pages
     assert not [r for r in d1 if r["platform"] == "ig_trial"]
-    assert [r["file_id"] for r in d1 if r["platform"] == "fb_reels"] == ["D1-CY-1", "D1-SK-1"]   # ONE FB page
+    assert [r["file_id"] for r in d1 if r["platform"] == "fb_reels" and r["file_id"]] == ["D1-CY-1", "D1-SK-1"]   # one FB page per character
     stories = [r for r in d1 if r["platform"] == "ig_story"]
     assert len(stories) == 4 and all(r["variant_role"] == "STORY" for r in stories)
     for i in range(1, 8):                                          # hook pre-screen: 10 Threads probes every day

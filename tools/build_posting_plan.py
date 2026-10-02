@@ -38,11 +38,11 @@ VIDEO_PLATFORMS = PLATFORMS[:4]
 PAGES = {  # handle: (start D, code, lead character, max cadence override). CANON UPDATE 4: 4 IG pages, all from D-7
     "@changyin": (-7, "CY", "CHANG", None),
     "@sunyoon.kitchen": (-7, "SK", "SUN", None),
-    "@changandsun": (-7, "CS", "DUO", None),
+    "@sunyoon": (-7, "CS", "DUO", None),   # Sun's main page; carries the duo bits (Chang as guest)
     "@changyin.strength": (-7, "CYS", "CHANG", None),
 }
 # Library scripts written for pages that are no longer in the canon roster post on the nearest canon page.
-PAGE_REMAP = {"@changyin.mobility": "@changyin.strength", "@sunyoon": "@sunyoon.kitchen", "@changyin.espanol": "@changyin"}
+PAGE_REMAP = {"@changyin.mobility": "@changyin.strength", "@changyin.espanol": "@changyin"}
 FULL_CADENCE = 6                  # CANON UPDATE 4: 6 videos/day per page from D0 (ramp 3/day D-7..D-5, 5/day D-4..D-1)
 MAX_MOVEMENT_PER_PAGE_DAY = 1     # movement only where the script has an exercise demo, ~1 in 6
 BROLL_SHARE = 0.25                # B-roll ("insert" lane) <= 25% of masters; 1 Nano Banana still + push-in, Veo only if flagged
@@ -61,7 +61,7 @@ SLOTS = {
 SHARE = {  # CONTENT_SYSTEM §3 (%), pillar -> per page
     "@changyin": dict(P01=12, P02=9, P03=12, P04=6, P05=5, P06=5, P07=4, P08=5, P09=4, P10=2, P13=3, P14=7, P15=8, P16=4, P17=2, P18=4, P19=6, P20=2),
     "@sunyoon.kitchen": dict(P10=15, P11=22, P12=13, P13=15, P14=2, P15=12, P16=8, P17=3, P18=5, P19=5),
-    "@changandsun": dict(P01=6, P03=8, P07=5, P09=2, P13=6, P15=6, P16=15, P17=35, P18=8, P19=6, P20=3),
+    "@sunyoon": dict(P01=6, P03=8, P07=5, P09=2, P13=6, P15=6, P16=15, P17=35, P18=8, P19=6, P20=3),
     "@changyin.strength": dict(P01=20, P02=22, P04=15, P06=8, P13=4, P14=10, P15=8, P18=5, P19=8),
 }
 PILLAR_FORMATS = {  # CONTENT_SYSTEM §1 primary formats

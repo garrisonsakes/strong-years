@@ -14,7 +14,7 @@ def test_r30a_reproduces_the_approved_projection_column_for_column():
     """Every cell of data/projection_aggressive_central.csv (180 days × 37 columns) to its display rounding: integers
     ±0.5, margin ±0.05, and cash_plus_contracted ±1 (the sum of two rounded columns)."""
     ref = list(csv.DictReader(open(os.path.join(ROOT, "data", "projection_aggressive_central.csv"))))
-    rows = oe.sc_run(oe.R30A, days=len(ref))
+    rows = oe.sc_run(dict(oe.R30A, cash0=-15000), days=len(ref))   # the approved CSV predates cash0 = 0 (Oct 2)
     assert len(rows) == len(ref) == 180
     for w, x in zip(rows, ref):
         for c in oe.SC_CSV_COLS:

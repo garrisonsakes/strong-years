@@ -34,7 +34,7 @@ Machine-readable copies: `data/content/hooks.json` and `data/content/hooks.csv` 
 | WAITLIST | Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only) |
 | BOOK | Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19) |
 
-**Page codes:** CY = @changyin · ST = @changyin.strength · MB = @changyin.mobility · SK = @sunyoon.kitchen · SY = @sunyoon · CS = @changandsun
+**Page codes:** CY = @changyin · ST = @changyin.strength · MB = @changyin.mobility · SK = @sunyoon.kitchen · SY = @sunyoon · CS = @sunyoon
 
 ---
 

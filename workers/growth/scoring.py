@@ -7,7 +7,8 @@ score(snapshots_for_post, baseline_lookup, cfg) -> post_scores row:
   z_c    = clip((value_c - centre_c) / spread_c, -z_clip, z_clip)             from growth/baselines
   score  = sum(w_c * z_c) / sum(w_c) over the components available for this snapshot
   class  (evaluated on the latest available horizon, top-down):
-    WINNER     score >= 1.5 at >= 6 h with >= 1,000 views and >= 2 components,  OR  breakout (>= 500K views at >= 3 h)
+    WINNER     score >= 1.5 at >= 6 h with >= 1,000 views and >= 2 components,  OR  breakout (>= 500K views at >= 3 h,
+               or >= 5x the page's median views at >= 6 h once the page has 5 posts at that horizon)
     PROMISING  score >= 0.75 at >= 1 h
     LOSER      score <= -1.0 at >= 24 h
     NORMAL     otherwise (including anything that is too young or too small to call)
@@ -74,11 +75,16 @@ def reward(score: float | None, conv: float | None, cfg: dict, share_save_z: flo
     return max(0.0, min(1.0, v)) if math.isfinite(v) else 0.5
 
 
-def classify(score: float | None, horizon_h: int, views: int | None, n_components: int, cfg: dict) -> tuple[str, list[str]]:
+def classify(score: float | None, horizon_h: int, views: int | None, n_components: int, cfg: dict,
+             page_median_views: float | None = None) -> tuple[str, list[str]]:
     c = cfg["scoring"]["classes"]
     views = views or 0
     if views >= int(c["breakout_views"]) and horizon_h >= int(c["breakout_min_horizon_h"]):
         return "WINNER", [f"breakout: {views} views at {horizon_h} h"]
+    rel = float(c.get("breakout_rel_median", 0) or 0)
+    if rel and page_median_views and page_median_views > 0 and views >= int(c.get("breakout_rel_min_views", 0)) \
+            and horizon_h >= int(c.get("breakout_rel_min_horizon_h", 6)) and views >= rel * page_median_views:
+        return "WINNER", [f"breakout: {views} views = {views / page_median_views:.1f}x the page median at {horizon_h} h"]
     if score is None:
         return "NORMAL", ["no scorable components"]
     w = c["WINNER"]
@@ -124,7 +130,9 @@ def score_post(snapshots: list[dict], baseline_lookup: dict[tuple, dict], cfg: d
                       "views": s.get("views"), "interpolated": bool(s.get("interpolated")), "baseline_n": base.get("n_posts", 0)})
     latest = per_h[-1]
     last_snap = snaps[-1]
-    cls, reasons = classify(latest["score"], latest["horizon_h"], last_snap.get("views"), len(latest["components_used"]), cfg)
+    lb = baseline_lookup.get((last_snap.get("page_id"), last_snap.get("platform"), int(last_snap["horizon_h"]))) or {}
+    cls, reasons = classify(latest["score"], latest["horizon_h"], last_snap.get("views"), len(latest["components_used"]), cfg,
+                            lb.get("median_views") if int(lb.get("n_posts") or 0) >= 5 else None)
     conv = conversion_norm(last_snap, cfg)
     return {"post_id": last_snap["post_id"], "page_id": last_snap.get("page_id"), "platform": last_snap.get("platform"),
             "horizon_h": latest["horizon_h"], "score": latest["score"], "z": latest["z"],

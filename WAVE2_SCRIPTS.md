@@ -4,7 +4,7 @@
 
 One source script per `uniqueness_group` that `data/content/posting_plan_90d.csv` marked `GEN-needed` from D-7 (Oct 1) to D+7 (Oct 15): 71 groups, 426 plan rows (each group posts once on all 6 platforms; Threads/X get the text cut). Source: `data/content/scripts_wave2.py`; machine-readable copy `data/content/wave2_scripts.json`. `python3 tools/assign_scripts.py` writes these ids into the plan's `script_id` column. Validated by `python3 tools/build_content.py` (validate_wave2) and `cd workers && python3 -m compliance scan ../data/content/wave2_scripts.json`.
 
-- **Pages:** @changandsun 33 · @changyin 21 · @sunyoon.kitchen 17 · **speakers** DUO 33 · CHANG 21 · SUN 17 · **lanes** talking_head 48 · insert 16 · movement 7.
+- **Pages:** @sunyoon 33 · @changyin 21 · @sunyoon.kitchen 17 · **speakers** DUO 33 · CHANG 21 · SUN 17 · **lanes** talking_head 48 · insert 16 · movement 7.
 - **CTAs:** BEGIN 24 · STRONG 10 · WAITLIST 10 · SOUP 7 · BALANCE 4 · SLEEP 4 · BOOK 3 · JOIN 3 · TEST 3 · BACK 2 · BREATH 1. Runway rows (D<0) carry no price, no '$' and no membership talk; WAITLIST says it's free. BOOK states `{{EBOOK_PRICE}}` one-time / not a subscription / yours to keep; JOIN carries price per month, monthly renewal, cancel online anytime, the 14-day money-back guarantee, 'locked for as long as you stay subscribed' and the real 5,000 cap. Every offer script has a spoken AI line.
 - **Proven hook grammar: 35/71 = 49%** (floor 45%): NOT_X 12 · IF_EVERY 11 · WATCH 11 · MYTH 1. Plan grammars: MYTH_NOT 12 · IF_EVERY 11 · TEST_NOW 11 · DEMO 10 · OBJ3 9 · SHARE 9 · WATCH 9.
 - **Render lanes:** movement scripts cite a performer clip from `production/performer/call_sheet.csv` in frame 1 (`MC DRV-…`); insert scripts are voice-over only (every beat speaker `-VO`, hands and props, no face); talking-head scripts use at most 2 Veo inserts.
@@ -24,39 +24,39 @@ One source script per `uniqueness_group` that `data/content/posting_plan_90d.csv
 | S196 | @changyin | CHANG | F13 | P14 | HW196 | 42 | 115 | STRONG | E05 | SHARE |
 | S197 | @changyin | CHANG | F30 | P14 | HW197 | 42 | 115 | WAITLIST | E40 | DEMO WATCH |
 | S198 | @changyin | CHANG | F15 | P04 | HW198 | 42 | 108 | WAITLIST | E06 | OBJ3 TEST_NOW |
-| S199 | @changandsun | DUO | F02 | P03 | HW199 | 42 | 104 | WAITLIST | E50 | OBJ3 TEST_NOW |
+| S199 | @sunyoon | DUO | F02 | P03 | HW199 | 42 | 104 | WAITLIST | E50 | OBJ3 TEST_NOW |
 | S200 | @changyin | CHANG | F11 | P19 | HW200 | 42 | 110 | STRONG | E02 | IF_EVERY · 7-Day Strong #1 |
 | S201 | @changyin | CHANG | F11 | P19 | HW201 | 42 | 100 | STRONG | E03, E43 | MYTH_NOT · 7-Day Strong #2 |
 | S202 | @changyin | CHANG | F15 | P03 | HW202 | 42 | 99 | BALANCE | E36 | WATCH |
 | S203 | @changyin | CHANG | F32 | P03 | HW203 | 42 | 113 | WAITLIST | E50, E46 | TEST_NOW |
 | S204 | @changyin | CHANG | F05 | P05 | HW204 | 42 | 112 | WAITLIST | E30 | SHARE |
-| S205 | @changandsun | DUO | F09 | P18 | HW205 | 42 | 106 | BEGIN | E02, E43 | IF_EVERY |
-| S206 | @changandsun | DUO | F10 | P18 | HW206 | 42 | 99 | BEGIN | E02, E43 | MYTH_NOT |
-| S207 | @changandsun | DUO | F02 | P01 | HW207 | 42 | 117 | WAITLIST | E49 | WATCH TEST_NOW |
-| S208 | @changandsun | DUO | F16 | P01 | HW208 | 42 | 104 | WAITLIST | E08, E45 | TEST_NOW |
-| S209 | @changandsun | DUO | F07 | P16 | HW209 | 42 | 102 | WAITLIST | none (opinion/offer) | SHARE |
-| S210 | @changandsun | DUO | F35 | P16 | HW210 | 42 | 113 | WAITLIST | none (opinion/offer) | DEMO WATCH |
-| S211 | @changandsun | DUO | F04 | P15 | HW211 | 42 | 111 | TEST | E02, E41 | OBJ3 MYTH |
-| S212 | @changandsun | DUO | F28 | P15 | HW212 | 42 | 102 | TEST | E23 | IF_EVERY MYTH |
-| S213 | @changandsun | DUO | F21 | P07 | HW213 | 42 | 113 | BREATH | E19 | MYTH_NOT |
+| S205 | @sunyoon | DUO | F09 | P18 | HW205 | 42 | 106 | BEGIN | E02, E43 | IF_EVERY |
+| S206 | @sunyoon | DUO | F10 | P18 | HW206 | 42 | 99 | BEGIN | E02, E43 | MYTH_NOT |
+| S207 | @sunyoon | DUO | F02 | P01 | HW207 | 42 | 117 | WAITLIST | E49 | WATCH TEST_NOW |
+| S208 | @sunyoon | DUO | F16 | P01 | HW208 | 42 | 104 | WAITLIST | E08, E45 | TEST_NOW |
+| S209 | @sunyoon | DUO | F07 | P16 | HW209 | 42 | 102 | WAITLIST | none (opinion/offer) | SHARE |
+| S210 | @sunyoon | DUO | F35 | P16 | HW210 | 42 | 113 | WAITLIST | none (opinion/offer) | DEMO WATCH |
+| S211 | @sunyoon | DUO | F04 | P15 | HW211 | 42 | 111 | TEST | E02, E41 | OBJ3 MYTH |
+| S212 | @sunyoon | DUO | F28 | P15 | HW212 | 42 | 102 | TEST | E23 | IF_EVERY MYTH |
+| S213 | @sunyoon | DUO | F21 | P07 | HW213 | 42 | 113 | BREATH | E19 | MYTH_NOT |
 | S215 | @sunyoon.kitchen | SUN | F31 | P11 | HW215 | 42 | 109 | SOUP | E28, E52, E54 | OBJ3 · Recipe in 40 |
 | S216 | @sunyoon.kitchen | SUN | F12 | P11 | HW216 | 42 | 108 | SOUP | E28, E52 | IF_EVERY |
-| S217 | @changandsun | DUO | F07 | P16 | HW217 | 42 | 103 | BEGIN | none (opinion/offer) | TEST_NOW |
-| S218 | @changandsun | DUO | F35 | P16 | HW218 | 42 | 109 | BEGIN | none (opinion/offer) | SHARE |
+| S217 | @sunyoon | DUO | F07 | P16 | HW217 | 42 | 103 | BEGIN | none (opinion/offer) | TEST_NOW |
+| S218 | @sunyoon | DUO | F35 | P16 | HW218 | 42 | 109 | BEGIN | none (opinion/offer) | SHARE |
 | S219 | @sunyoon.kitchen | SUN | F31 | P11 | HW219 | 42 | 121 | BOOK | E52, E54, E28 | MYTH_NOT · Recipe in 40 |
 | S220 | @sunyoon.kitchen | SUN | F12 | P11 | HW220 | 42 | 114 | JOIN | E28, E52 | WATCH |
 | S221 | @sunyoon.kitchen | SUN | F09 | P18 | HW221 | 42 | 99 | BEGIN | E28 | TEST_NOW |
 | S222 | @sunyoon.kitchen | SUN | F10 | P18 | HW222 | 42 | 114 | BEGIN | E54, E55 | SHARE |
 | S223 | @sunyoon.kitchen | SUN | F11 | P19 | HW223 | 42 | 114 | STRONG | E02, E46 | DEMO · Sun's 7-Day Chair |
-| S224 | @changandsun | DUO | F11 | P19 | HW224 | 42 | 109 | STRONG | E20 | DEMO · Couple Challenge week |
+| S224 | @sunyoon | DUO | F11 | P19 | HW224 | 42 | 109 | STRONG | E20 | DEMO · Couple Challenge week |
 | S226 | @sunyoon.kitchen | SUN | F31 | P11 | HW226 | 42 | 116 | BOOK | E52, E54 | OBJ3 · Recipe in 40 |
 | S227 | @sunyoon.kitchen | SUN | F12 | P11 | HW227 | 42 | 112 | JOIN | E28, E52 | IF_EVERY |
 | S230 | @sunyoon.kitchen | SUN | F11 | P19 | HW230 | 42 | 92 | STRONG | E47 | TEST_NOW · Sun's 7-Day Chair |
-| S232 | @changandsun | DUO | F15 | P03 | HW232 | 42 | 88 | BOOK | E50 | IF_EVERY |
-| S233 | @changandsun | DUO | F32 | P03 | HW233 | 42 | 97 | BALANCE | E36 | MYTH_NOT |
-| S234 | @changandsun | DUO | F26 | P18 | HW234 | 42 | 102 | BEGIN | E02 | WATCH |
-| S235 | @changandsun | DUO | F09 | P18 | HW235 | 42 | 99 | BEGIN | E23, E46 | TEST_NOW |
-| S236 | @changandsun | DUO | F07 | P16 | HW236 | 42 | 100 | BEGIN | none (opinion/offer) | SHARE |
+| S232 | @sunyoon | DUO | F15 | P03 | HW232 | 42 | 88 | BOOK | E50 | IF_EVERY |
+| S233 | @sunyoon | DUO | F32 | P03 | HW233 | 42 | 97 | BALANCE | E36 | MYTH_NOT |
+| S234 | @sunyoon | DUO | F26 | P18 | HW234 | 42 | 102 | BEGIN | E02 | WATCH |
+| S235 | @sunyoon | DUO | F09 | P18 | HW235 | 42 | 99 | BEGIN | E23, E46 | TEST_NOW |
+| S236 | @sunyoon | DUO | F07 | P16 | HW236 | 42 | 100 | BEGIN | none (opinion/offer) | SHARE |
 | S237 | @changyin | CHANG | F22 | P08 | HW237 | 42 | 110 | BALANCE | E17 | DEMO |
 | S239 | @changyin | CHANG | F05 | P09 | HW239 | 42 | 103 | SLEEP | E46 | IF_EVERY |
 | S240 | @changyin | CHANG | F05 | P09 | HW240 | 42 | 105 | SLEEP | E19, E48 | MYTH_NOT |
@@ -66,27 +66,27 @@ One source script per `uniqueness_group` that `data/content/posting_plan_90d.csv
 | S244 | @sunyoon.kitchen | SUN | F12 | P11 | HW244 | 42 | 103 | SOUP | E28, E52, E54 | OBJ3 |
 | S247 | @sunyoon.kitchen | SUN | F08 | P17 | HW247 | 42 | 103 | BEGIN | none (opinion/offer) | WATCH |
 | S248 | @sunyoon.kitchen | SUN | F34 | P17 | HW248 | 42 | 94 | BEGIN | E06 | TEST_NOW |
-| S249 | @changandsun | DUO | F08 | P17 | HW249 | 42 | 104 | BEGIN | none (opinion/offer) | DEMO |
-| S250 | @changandsun | DUO | F34 | P17 | HW250 | 42 | 109 | BEGIN | E02 | OBJ3 |
-| S251 | @changandsun | DUO | F35 | P16 | HW251 | 42 | 109 | BEGIN | none (opinion/offer) | IF_EVERY |
-| S252 | @changandsun | DUO | F07 | P16 | HW252 | 42 | 109 | BEGIN | none (opinion/offer) | MYTH_NOT |
-| S253 | @changandsun | DUO | F18 | P13 | HW253 | 42 | 92 | SOUP | E28, E52 | WATCH |
-| S254 | @changandsun | DUO | F12 | P13 | HW254 | 42 | 90 | SOUP | E28, E52 | TEST_NOW |
+| S249 | @sunyoon | DUO | F08 | P17 | HW249 | 42 | 104 | BEGIN | none (opinion/offer) | DEMO |
+| S250 | @sunyoon | DUO | F34 | P17 | HW250 | 42 | 109 | BEGIN | E02 | OBJ3 |
+| S251 | @sunyoon | DUO | F35 | P16 | HW251 | 42 | 109 | BEGIN | none (opinion/offer) | IF_EVERY |
+| S252 | @sunyoon | DUO | F07 | P16 | HW252 | 42 | 109 | BEGIN | none (opinion/offer) | MYTH_NOT |
+| S253 | @sunyoon | DUO | F18 | P13 | HW253 | 42 | 92 | SOUP | E28, E52 | WATCH |
+| S254 | @sunyoon | DUO | F12 | P13 | HW254 | 42 | 90 | SOUP | E28, E52 | TEST_NOW |
 | S255 | @changyin | CHANG | F05 | P05 | HW255 | 42 | 112 | BACK | E30 | SHARE |
 | S259 | @changyin | CHANG | F07 | P16 | HW259 | 42 | 95 | BEGIN | E43 | MYTH_NOT |
 | S261 | @sunyoon.kitchen | SUN | F12 | P11 | HW261 | 42 | 103 | SOUP | E28, E52, E54 | DEMO |
-| S266 | @changandsun | DUO | F35 | P17 | HW266 | 42 | 110 | JOIN | none (opinion/offer) | SHARE |
-| S267 | @changandsun | DUO | F08 | P17 | HW267 | 42 | 85 | BEGIN | E02 | DEMO |
-| S269 | @changandsun | DUO | F28 | P15 | HW269 | 42 | 91 | TEST | E02 | IF_EVERY |
-| S270 | @changandsun | DUO | F05 | P09 | HW270 | 42 | 93 | SLEEP | E19, E48 | MYTH_NOT |
-| S271 | @changandsun | DUO | F05 | P09 | HW271 | 42 | 94 | SLEEP | E17 | WATCH |
+| S266 | @sunyoon | DUO | F35 | P17 | HW266 | 42 | 110 | JOIN | none (opinion/offer) | SHARE |
+| S267 | @sunyoon | DUO | F08 | P17 | HW267 | 42 | 85 | BEGIN | E02 | DEMO |
+| S269 | @sunyoon | DUO | F28 | P15 | HW269 | 42 | 91 | TEST | E02 | IF_EVERY |
+| S270 | @sunyoon | DUO | F05 | P09 | HW270 | 42 | 93 | SLEEP | E19, E48 | MYTH_NOT |
+| S271 | @sunyoon | DUO | F05 | P09 | HW271 | 42 | 94 | SLEEP | E17 | WATCH |
 | S273 | @changyin | CHANG | F03 | P06 | HW273 | 42 | 102 | BACK | E41, E30 | TEST_NOW |
 | S282 | @sunyoon.kitchen | SUN | F07 | P16 | HW282 | 42 | 94 | BEGIN | none (opinion/offer) | IF_EVERY |
 | S283 | @sunyoon.kitchen | SUN | F35 | P16 | HW283 | 42 | 92 | BEGIN | none (opinion/offer) | MYTH_NOT |
-| S286 | @changandsun | DUO | F35 | P17 | HW286 | 42 | 87 | BEGIN | none (opinion/offer) | SHARE |
-| S287 | @changandsun | DUO | F35 | P16 | HW287 | 42 | 91 | BEGIN | none (opinion/offer) | DEMO |
-| S288 | @changandsun | DUO | F07 | P16 | HW288 | 42 | 99 | BEGIN | none (opinion/offer) | OBJ3 |
-| S290 | @changandsun | DUO | F15 | P03 | HW290 | 42 | 98 | BALANCE | E50 | MYTH_NOT |
+| S286 | @sunyoon | DUO | F35 | P17 | HW286 | 42 | 87 | BEGIN | none (opinion/offer) | SHARE |
+| S287 | @sunyoon | DUO | F35 | P16 | HW287 | 42 | 91 | BEGIN | none (opinion/offer) | DEMO |
+| S288 | @sunyoon | DUO | F07 | P16 | HW288 | 42 | 99 | BEGIN | none (opinion/offer) | OBJ3 |
+| S290 | @sunyoon | DUO | F15 | P03 | HW290 | 42 | 98 | BALANCE | E50 | MYTH_NOT |
 
 ---
 
@@ -409,7 +409,7 @@ The waitlist is free: one email when Strong Years opens, plus at most 3 launch e
 
 ## S199: Fridge door balance: him versus me
 **Plan group** `UG-CS--04-5` · **First post** 2026-10-04 (D-4) · **Render lane** talking_head · **Running bit** #1 NO MIRROR FLEXING · **Plan grammar** OBJ3  
-**Page** @changandsun · **Speaker** DUO · **Format** F02 · **Pillar** P03 (Balance & steady feet) · **Hook** HW199 · **Target** 42 s · **Spoken words** 104 · **CTA** `WAITLIST` → Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)
+**Page** @sunyoon · **Speaker** DUO · **Format** F02 · **Pillar** P03 (Balance & steady feet) · **Hook** HW199 · **Target** 42 s · **Spoken words** 104 · **CTA** `WAITLIST` → Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)
 
 **Hook line:** "Fridge door, both of us, one leg. Stand where you can grab the counter. Try it with us right now."
 
@@ -441,7 +441,7 @@ Fridge-door balance, couples edition: one leg, fingertips over the counter, eyes
 Wobbly? Keep your toes down. Recent ankle sprain? Wait until it heals.
 The waitlist is free: one email when Strong Years opens, plus at most 3 launch emails in the 72 hours after. No card. Unsubscribe in one click.
 ```
-**Hashtags:** IG/FB #couplechallenge #balancetraining #changandsun #over60 · TikTok #couplechallenge #balance #over60 #changandsun  
+**Hashtags:** IG/FB #couplechallenge #balancetraining #sunyoon #over60 · TikTok #couplechallenge #balance #over60 #sunyoon  
 **YouTube Shorts title:** One-Leg Balance at the Fridge: Husband vs Wife  
 **Evidence:** E50: STEADI one-leg stage (A, tool); no risk claim.  
 **Production:** Running bit: NO MIRROR FLEXING (fridge door) · Wink: no · Thumbnail: "WHO HOLDS LONGER?" · Music: playful swing
@@ -652,7 +652,7 @@ The waitlist is free: one email when Strong Years opens, plus at most 3 launch e
 
 ## S205: Reply: 'Where do I even begin?'
 **Plan group** `UG-CS--03-2` · **First post** 2026-10-05 (D-3) · **Render lane** talking_head · **Running bit** #20 The hidden kettlebell · **Plan grammar** IF_EVERY  
-**Page** @changandsun · **Speaker** DUO · **Format** F09 · **Pillar** P18 (Community replies & Q&A) · **Hook** HW205 · **Target** 42 s · **Spoken words** 106 · **CTA** `BEGIN` → Where should I begin? start menu
+**Page** @sunyoon · **Speaker** DUO · **Format** F09 · **Pillar** P18 (Community replies & Q&A) · **Hook** HW205 · **Target** 42 s · **Spoken words** 106 · **CTA** `BEGIN` → Where should I begin? start menu
 
 **Hook line:** "If you ask us every week where to begin, here's the answer. Read it, Chang."
 
@@ -681,7 +681,7 @@ Comment BEGIN for the 'Where should I begin?' start menu.
 Our answer to 'where do I even start?': week 1, five chair stands twice a day; then 10 seconds of balance at the counter; then a walk after dinner. The NSCA says start light and progress gradually.
 New to exercise and on heart or diabetes medicine? Talk to your doctor first.
 ```
-**Hashtags:** IG/FB #beginner #strengthafter60 #changandsun #over60 · TikTok #beginnerworkout #over60 #changandsun #wheretostart  
+**Hashtags:** IG/FB #beginner #strengthafter60 #sunyoon #over60 · TikTok #beginnerworkout #over60 #sunyoon #wheretostart  
 **YouTube Shorts title:** 'I'm 71. Where Do I Even Start?' Our Answer  
 **Evidence:** E02, E43: NSCA (A) start-light; ACSM screening (E43).  
 **Production:** Running bit: The hidden kettlebell · Wink: no · Thumbnail: "WHERE TO BEGIN" · Music: playful swing
@@ -690,7 +690,7 @@ New to exercise and on heart or diabetes medicine? Talk to your doctor first.
 
 ## S206: Q&A: is walking enough?
 **Plan group** `UG-CS--03-3` · **First post** 2026-10-05 (D-3) · **Render lane** talking_head · **Running bit** #15 Printer ink · **Plan grammar** MYTH_NOT  
-**Page** @changandsun · **Speaker** DUO · **Format** F10 · **Pillar** P18 (Community replies & Q&A) · **Hook** HW206 · **Target** 42 s · **Spoken words** 99 · **CTA** `BEGIN` → Where should I begin? start menu
+**Page** @sunyoon · **Speaker** DUO · **Format** F10 · **Pillar** P18 (Community replies & Q&A) · **Hook** HW206 · **Target** 42 s · **Spoken words** 99 · **CTA** `BEGIN` → Where should I begin? start menu
 
 **Hook line:** "Not enough, not useless. Walking is wonderful. It just doesn't train your legs to stand up."
 
@@ -719,7 +719,7 @@ Comment BEGIN for the 'Where should I begin?' start menu.
 Is walking enough? Walking is great for the heart and mood; the NSCA position statement adds resistance training 2–3 times a week plus balance work for older adults. Walk, then add chair stands and carries.
 Chest pain or unusual breathlessness? Get checked first (ACSM).
 ```
-**Hashtags:** IG/FB #walking #strengthafter60 #changandsun #over60 · TikTok #walking #over60 #mythbusting #changandsun  
+**Hashtags:** IG/FB #walking #strengthafter60 #sunyoon #over60 · TikTok #walking #over60 #mythbusting #sunyoon  
 **YouTube Shorts title:** Is Walking Enough After 60? Not Quite  
 **Evidence:** E02, E43: NSCA (A); no outcome promise.  
 **Production:** Running bit: Printer ink · Wink: no · Thumbnail: "IS WALKING ENOUGH?" · Music: playful swing
@@ -728,7 +728,7 @@ Chest pain or unusual breathlessness? Get checked first (ACSM).
 
 ## S207: Arm curl test with the milk jugs
 **Plan group** `UG-CS--03-4` · **First post** 2026-10-05 (D-3) · **Render lane** talking_head · **Running bit** #2 I'm older, so I'm right · **Plan grammar** WATCH  
-**Page** @changandsun · **Speaker** DUO · **Format** F02 · **Pillar** P01 (Strength proof & tests) · **Hook** HW207 · **Target** 42 s · **Spoken words** 117 · **CTA** `WAITLIST` → Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)
+**Page** @sunyoon · **Speaker** DUO · **Format** F02 · **Pillar** P01 (Strength proof & tests) · **Hook** HW207 · **Target** 42 s · **Spoken words** 117 · **CTA** `WAITLIST` → Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)
 
 **Hook line:** "Milk jug curls for thirty seconds. Watch how many I get before he finishes talking."
 
@@ -760,7 +760,7 @@ The 30-second arm curl from the Senior Fitness Test (7,183 US adults aged 60–9
 Elbow or wrist surgery recently? Skip it.
 The waitlist is free: one email when Strong Years opens, plus at most 3 launch emails in the 72 hours after. No card. Unsubscribe in one click.
 ```
-**Hashtags:** IG/FB #couplechallenge #strengthafter60 #changandsun #over60 · TikTok #couplechallenge #armcurl #over60 #changandsun  
+**Hashtags:** IG/FB #couplechallenge #strengthafter60 #sunyoon #over60 · TikTok #couplechallenge #armcurl #over60 #sunyoon  
 **YouTube Shorts title:** Milk Jug Curl Test: Husband vs Wife  
 **Evidence:** E49: Senior Fitness Test norms (A); Sun's range stated approximately.  
 **Production:** Running bit: I'm older, so I'm right · Wink: no · Thumbnail: "MILK JUG TEST" · Music: playful swing
@@ -769,7 +769,7 @@ The waitlist is free: one email when Strong Years opens, plus at most 3 launch e
 
 ## S208: The dumpling count and the floor test
 **Plan group** `UG-CS--03-5` · **First post** 2026-10-05 (D-3) · **Render lane** insert · **Running bit** #5 Dumpling count · **Plan grammar** TEST_NOW  
-**Page** @changandsun · **Speaker** DUO · **Format** F16 · **Pillar** P01 (Strength proof & tests) · **Hook** HW208 · **Target** 42 s · **Spoken words** 104 · **CTA** `WAITLIST` → Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)
+**Page** @sunyoon · **Speaker** DUO · **Format** F16 · **Pillar** P01 (Strength proof & tests) · **Hook** HW208 · **Target** 42 s · **Spoken words** 104 · **CTA** `WAITLIST` → Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)
 
 **Hook line:** "Score yourself right now. Get down to the floor, then back up. Count what you leaned on."
 
@@ -801,7 +801,7 @@ The sitting-rising test: sit on the floor and stand up, starting at 10 points an
 Can't get down easily or sore knees? Practice the half-kneel at the chair.
 The waitlist is free: one email when Strong Years opens, plus at most 3 launch emails in the 72 hours after. No card. Unsubscribe in one click.
 ```
-**Hashtags:** IG/FB #floortest #strengthafter60 #changandsun #over60 · TikTok #floortest #over60 #strengthtraining #changandsun  
+**Hashtags:** IG/FB #floortest #strengthafter60 #sunyoon #over60 · TikTok #floortest #over60 #strengthtraining #sunyoon  
 **YouTube Shorts title:** Sit on the Floor and Get Up: Score Yourself  
 **Evidence:** E08, E45: Sitting-rising test described as a score only (no mortality framing); floor-rise practice (E45).  
 **Production:** Running bit: Dumpling count · Wink: no · Thumbnail: "SCORE YOURSELF" · Music: playful pizzicato
@@ -810,7 +810,7 @@ The waitlist is free: one email when Strong Years opens, plus at most 3 launch e
 
 ## S209: Too old to start? Send her this
 **Plan group** `UG-CS--01-4` · **First post** 2026-10-07 (D-1) · **Render lane** talking_head · **Running bit** #6 The tank top in January · **Plan grammar** SHARE  
-**Page** @changandsun · **Speaker** DUO · **Format** F07 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** HW209 · **Target** 42 s · **Spoken words** 102 · **CTA** `WAITLIST` → Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)
+**Page** @sunyoon · **Speaker** DUO · **Format** F07 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** HW209 · **Target** 42 s · **Spoken words** 102 · **CTA** `WAITLIST` → Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)
 
 **Hook line:** "Send this to the woman who says she's too old to start."
 
@@ -842,7 +842,7 @@ Too old to start is a feeling, not a fact. Five chair stands, chair against the 
 New to exercise or a heart condition? Doctor first.
 The waitlist is free: one email when Strong Years opens, plus at most 3 launch emails in the 72 hours after. No card. Unsubscribe in one click.
 ```
-**Hashtags:** IG/FB #womenover60 #strengthafter60 #changandsun #agingwell · TikTok #over60 #neverlate #changandsun #agingwell  
+**Hashtags:** IG/FB #womenover60 #strengthafter60 #sunyoon #agingwell · TikTok #over60 #neverlate #sunyoon #agingwell  
 **YouTube Shorts title:** Too Old to Start? Send Her This  
 **Evidence:** none (opinion content, no health claim): Opinion/mindset (P16); backstory stated 'in our story', not used as proof.  
 **Production:** Running bit: The tank top in January · Wink: no · Thumbnail: "SEND THIS TO HER" · Music: warm acoustic
@@ -851,7 +851,7 @@ The waitlist is free: one email when Strong Years opens, plus at most 3 launch e
 
 ## S210: Asking for help is a strength move
 **Plan group** `UG-CS--01-5` · **First post** 2026-10-07 (D-1) · **Render lane** talking_head · **Running bit** #7 Seven out of ten · **Plan grammar** DEMO  
-**Page** @changandsun · **Speaker** DUO · **Format** F35 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** HW210 · **Target** 42 s · **Spoken words** 113 · **CTA** `WAITLIST` → Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)
+**Page** @sunyoon · **Speaker** DUO · **Format** F35 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** HW210 · **Target** 42 s · **Spoken words** 113 · **CTA** `WAITLIST` → Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)
 
 **Hook line:** "Watch me hand him this jar. That's the whole lesson. Asking for help is a strength move too."
 
@@ -881,7 +881,7 @@ Asking for help is a strength move. Hand someone the jar, call someone this week
 Feeling low most days for two weeks or more? Tell your doctor. You deserve real support.
 The waitlist is free: one email when Strong Years opens, plus at most 3 launch emails in the 72 hours after. No card. Unsubscribe in one click.
 ```
-**Hashtags:** IG/FB #marriage #agingwell #changandsun #over60 · TikTok #couplegoals #over60 #changandsun #agingwell  
+**Hashtags:** IG/FB #marriage #agingwell #sunyoon #over60 · TikTok #couplegoals #over60 #sunyoon #agingwell  
 **YouTube Shorts title:** Asking for Help Is a Strength Move  
 **Evidence:** none (opinion content, no health claim): Heart-to-heart (P16); no health claim.  
 **Production:** Running bit: Seven out of ten · Wink: no · Thumbnail: "HAND SOMEONE THE JAR" · Music: soft piano
@@ -890,7 +890,7 @@ The waitlist is free: one email when Strong Years opens, plus at most 3 launch e
 
 ## S211: 'Squats ruin old knees'
 **Plan group** `UG-CS-+00-5` · **First post** 2026-10-08 (D+0) · **Render lane** talking_head · **Running bit** #8 Mandu the cat · **Plan grammar** OBJ3  
-**Page** @changandsun · **Speaker** DUO · **Format** F04 · **Pillar** P15 (Myth-busting) · **Hook** HW211 · **Target** 42 s · **Spoken words** 111 · **CTA** `TEST` → Strength Age test (quiz)
+**Page** @sunyoon · **Speaker** DUO · **Format** F04 · **Pillar** P15 (Myth-busting) · **Hook** HW211 · **Target** 42 s · **Spoken words** 111 · **CTA** `TEST` → Strength Age test (quiz)
 
 **Hook line:** "Squats ruin old knees? Show me the study. He'll squat to a chair while you watch."
 
@@ -921,7 +921,7 @@ Comment TEST for the free 3-minute Strength Age test.
 Myth: squats ruin older knees. The NSCA position statement: resistance training is safe and effective for older adults when it starts light and progresses gradually. Squat to a chair against the wall, knees following the toes. A mild ache (about 3/10) that settles by the next morning is acceptable; sharper, go less deep.
 New knee or a knee that swells? Ask your doctor or physio first.
 ```
-**Hashtags:** IG/FB #mythbusting #strengthafter60 #changandsun #legday · TikTok #mythbusting #over60 #squats #changandsun  
+**Hashtags:** IG/FB #mythbusting #strengthafter60 #sunyoon #legday · TikTok #mythbusting #over60 #squats #sunyoon  
 **YouTube Shorts title:** 'Squats Ruin Old Knees'? Show Me the Study  
 **Evidence:** E02, E41: NSCA (A); pain-monitoring model (E41) with conservative threshold.  
 **Production:** Running bit: Mandu the cat · Wink: no · Thumbnail: "SQUATS VS KNEES" · Music: playful swing · Myth-bust exception MB-EX applies
@@ -930,7 +930,7 @@ New knee or a knee that swells? Ask your doctor or physio first.
 
 ## S212: Short walks don't count? The study card
 **Plan group** `UG-CS-+00-6` · **First post** 2026-10-08 (D+0) · **Render lane** insert · **Running bit** #9 Fridge balance leaderboard · **Plan grammar** IF_EVERY  
-**Page** @changandsun · **Speaker** DUO · **Format** F28 · **Pillar** P15 (Myth-busting) · **Hook** HW212 · **Target** 42 s · **Spoken words** 102 · **CTA** `TEST` → Strength Age test (quiz)
+**Page** @sunyoon · **Speaker** DUO · **Format** F28 · **Pillar** P15 (Myth-busting) · **Hook** HW212 · **Target** 42 s · **Spoken words** 102 · **CTA** `TEST` → Strength Age test (quiz)
 
 **Hook line:** "If you sit down after every dinner, here's the study. Short walks count. Two minutes counts."
 
@@ -959,7 +959,7 @@ Comment TEST for the free 3-minute Strength Age test.
 Myth: short walks don't count. A meta-analysis found light walking after meals, even 2–5 minutes, lowered the post-meal glucose rise compared with sitting (Buffey et al., Sports Med 2022).
 On insulin or sugar-lowering medicine? Ask your doctor how walking fits with your doses.
 ```
-**Hashtags:** IG/FB #walking #afterdinnerwalk #changandsun #over60 · TikTok #walking #over60 #mythbusting #changandsun  
+**Hashtags:** IG/FB #walking #afterdinnerwalk #sunyoon #over60 · TikTok #walking #over60 #mythbusting #sunyoon  
 **YouTube Shorts title:** Short Walks After Dinner: Do They Count?  
 **Evidence:** E23: Buffey 2022 (A− meta) at grade; no disease claim.  
 **Production:** Running bit: Fridge balance leaderboard · Wink: no · Thumbnail: "2 MINUTES COUNTS" · Music: light acoustic · Myth-bust exception MB-EX applies
@@ -968,7 +968,7 @@ On insulin or sugar-lowering medicine? Ask your doctor how walking fits with you
 
 ## S213: Not deeper, not faster: the long breath out
 **Plan group** `UG-CS-+01-5` · **First post** 2026-10-09 (D+1) · **Render lane** movement · **Performer clip** `DRV-heaven_earth-easier` · **Running bit** #10 Short version: · **Plan grammar** MYTH_NOT  
-**Page** @changandsun · **Speaker** DUO · **Format** F21 · **Pillar** P07 (Breathwork & nervous system) · **Hook** HW213 · **Target** 42 s · **Spoken words** 113 · **CTA** `BREATH` → The 4-6 Breath (5 min)
+**Page** @sunyoon · **Speaker** DUO · **Format** F21 · **Pillar** P07 (Breathwork & nervous system) · **Hook** HW213 · **Target** 42 s · **Spoken words** 113 · **CTA** `BREATH` → The 4-6 Breath (5 min)
 
 **Hook line:** "Not deeper, not faster. The long breath out is the one that settles you. Sit with us."
 
@@ -999,7 +999,7 @@ Comment BREATH for the 5-minute 4-6 Breath.
 Seated, in through the nose for about 4, out through the mouth for about 6, hands rising and floating down, for 5 minutes. Slow breathing near 6 breaths a minute increases vagally mediated heart-rate variability (Laborde et al., 2022 meta-analysis).
 Never strain. Dizzy or tingly? Breathe normally and rest. Lung disease? Ask your doctor about pacing.
 ```
-**Hashtags:** IG/FB #breathwork #calm #changandsun #over60 · TikTok #breathing #over60 #calm #changandsun  
+**Hashtags:** IG/FB #breathwork #calm #sunyoon #over60 · TikTok #breathing #over60 #calm #sunyoon  
 **YouTube Shorts title:** Not Deeper, Not Faster: Breathe Out Longer  
 **Evidence:** E19: Laborde 2022 (A− meta) as mechanism; no condition claim.  
 **Production:** Running bit: Short version: · Wink: no · Thumbnail: "LONGER OUT" · Music: soft piano
@@ -1084,7 +1084,7 @@ Kidney disease or a protein limit from your doctor? Follow their number.
 
 ## S217: Say it out loud: what you want at 85
 **Plan group** `UG-CS-+02-5` · **First post** 2026-10-10 (D+2) · **Render lane** talking_head · **Running bit** #12 Frank's excuses · **Plan grammar** TEST_NOW  
-**Page** @changandsun · **Speaker** DUO · **Format** F07 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** HW217 · **Target** 42 s · **Spoken words** 103 · **CTA** `BEGIN` → Where should I begin? start menu
+**Page** @sunyoon · **Speaker** DUO · **Format** F07 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** HW217 · **Target** 42 s · **Spoken words** 103 · **CTA** `BEGIN` → Where should I begin? start menu
 
 **Hook line:** "Say it out loud right now. One thing you still want to do at eighty-five. Go."
 
@@ -1113,7 +1113,7 @@ Comment BEGIN with your answer for the 'Where should I begin?' start menu.
 Say it out loud: one thing you still want to do at 85. Your answer is your plan: a suitcase means carries, the floor means floor practice.
 New to exercise? Check in with your doctor.
 ```
-**Hashtags:** IG/FB #agingwell #goals #changandsun #over60 · TikTok #over60 #goals #changandsun #agingwell  
+**Hashtags:** IG/FB #agingwell #goals #sunyoon #over60 · TikTok #over60 #goals #sunyoon #agingwell  
 **YouTube Shorts title:** Say It Out Loud: What Do You Want to Do at 85?  
 **Evidence:** none (opinion content, no health claim): Mindset (P16).  
 **Production:** Running bit: Frank's excuses · Wink: no · Thumbnail: "WHAT DO YOU WANT AT 85?" · Music: warm acoustic
@@ -1122,7 +1122,7 @@ New to exercise? Check in with your doctor.
 
 ## S218: For the friend who retired and sat down
 **Plan group** `UG-CS-+02-6` · **First post** 2026-10-10 (D+2) · **Render lane** talking_head · **Running bit** #13 The welding metaphors · **Plan grammar** SHARE  
-**Page** @changandsun · **Speaker** DUO · **Format** F35 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** HW218 · **Target** 42 s · **Spoken words** 109 · **CTA** `BEGIN` → Where should I begin? start menu
+**Page** @sunyoon · **Speaker** DUO · **Format** F35 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** HW218 · **Target** 42 s · **Spoken words** 109 · **CTA** `BEGIN` → Where should I begin? start menu
 
 **Hook line:** "Send this to the friend who retired, sat down, and stayed down."
 
@@ -1151,7 +1151,7 @@ Comment BEGIN for the 'Where should I begin?' start menu.
 For the friend who retired and sat down: work gave the day a shape. Give the morning one fixed thing, and send an invitation, not a lecture: 'Walk with me Tuesday.'
 If he seems low for weeks, help him talk to his doctor.
 ```
-**Hashtags:** IG/FB #retirement #friendship #changandsun #agingwell · TikTok #retirement #over60 #changandsun #agingwell  
+**Hashtags:** IG/FB #retirement #friendship #sunyoon #agingwell · TikTok #retirement #over60 #sunyoon #agingwell  
 **YouTube Shorts title:** For the Friend Who Retired and Sat Down  
 **Evidence:** none (opinion content, no health claim): Heart-to-heart (P16).  
 **Production:** Running bit: The welding metaphors · Wink: no · Thumbnail: "SEND AN INVITATION" · Music: soft piano
@@ -1353,7 +1353,7 @@ Dizzy when you stand? Sit, pump your ankles, rise slowly.
 
 ## S224: High wall sit, both of us
 **Plan group** `UG-CS-+03-5` · **First post** 2026-10-11 (D+3) · **Render lane** movement · **Performer clip** `DRV-wall_sit_high-main` · **Running bit** #14 Sun's visor · **Plan grammar** DEMO  
-**Page** @changandsun · **Speaker** DUO · **Format** F11 · **Pillar** P19 (Challenges & series) · **Hook** HW224 · **Target** 42 s · **Spoken words** 109 · **CTA** `STRONG` → 8-Minute Chair Builder
+**Page** @sunyoon · **Speaker** DUO · **Format** F11 · **Pillar** P19 (Challenges & series) · **Hook** HW224 · **Target** 42 s · **Spoken words** 109 · **CTA** `STRONG` → 8-Minute Chair Builder
 
 **Hook line:** "Here's the high wall sit. Backs on the wall, knees barely bent. Thirty seconds, both of us."
 
@@ -1384,7 +1384,7 @@ Comment STRONG for the 8-minute Chair Builder.
 High wall sit: backs on the wall, knees barely bent and over the ankles, keep breathing, 30 seconds (45 by day 7). A network meta-analysis of 270 trials found isometric training produced the largest reductions in resting blood pressure, with the wall squat ranking top for systolic (Edwards et al., BJSM 2023).
 Blood pressure not under control? Ask your doctor first.
 ```
-**Hashtags:** IG/FB #couplechallenge #wallsit #changandsun #over60 · TikTok #couplechallenge #wallsit #over60 #changandsun  
+**Hashtags:** IG/FB #couplechallenge #wallsit #sunyoon #over60 · TikTok #couplechallenge #wallsit #over60 #sunyoon  
 **YouTube Shorts title:** High Wall Sit Challenge: Husband vs Wife  
 **Evidence:** E20: E20 (A meta) at grade; numbers only in caption.  
 **Production:** Running bit: Sun's visor · Wink: no · Thumbnail: "30 SECONDS. BOTH OF US." · Music: playful swing
@@ -1510,7 +1510,7 @@ One calf suddenly swollen, red or sore? No exercise; call your doctor today.
 
 ## S232: Three balance moves inside the microwave minute
 **Plan group** `UG-CS-+04-2` · **First post** 2026-10-12 (D+4) · **Render lane** talking_head · **Running bit** #16 Aigo · **Plan grammar** IF_EVERY  
-**Page** @changandsun · **Speaker** DUO · **Format** F15 · **Pillar** P03 (Balance & steady feet) · **Hook** HW232 · **Target** 42 s · **Spoken words** 88 · **CTA** `BOOK` → Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)
+**Page** @sunyoon · **Speaker** DUO · **Format** F15 · **Pillar** P03 (Balance & steady feet) · **Hook** HW232 · **Target** 42 s · **Spoken words** 88 · **CTA** `BOOK` → Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)
 
 **Hook line:** "If you wait for the microwave every day, do three balance moves."
 
@@ -1541,7 +1541,7 @@ Comment BOOK for the link and what's inside.
 The microwave minute: feet together, heel to toe (switch halfway), side steps along the counter, hands over the edge. Tandem stance is one stage of the CDC STEADI 4-Stage Balance Test. Dizzy spells? Keep both feet down.
 The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's Strong Kitchen (PDF). {{EBOOK_PRICE}} one-time, not a subscription, yours to keep. Checkout is on our Shopify store; the link comes in the DM.
 ```
-**Hashtags:** IG/FB #balancetraining #habitstacking #changandsun #over60 · TikTok #balance #over60 #habitstack #changandsun  
+**Hashtags:** IG/FB #balancetraining #habitstacking #sunyoon #over60 · TikTok #balance #over60 #habitstack #sunyoon  
 **YouTube Shorts title:** Waiting for the Microwave? 3 Balance Moves  
 **Evidence:** E50: STEADI (A, tool); offer terms per CANON UPDATE 2.  
 **Production:** Running bit: Aigo · Wink: no · Thumbnail: "MICROWAVE MINUTE" · Music: playful swing
@@ -1550,7 +1550,7 @@ The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's St
 
 ## S233: Brush on one foot
 **Plan group** `UG-CS-+04-3` · **First post** 2026-10-12 (D+4) · **Render lane** talking_head · **Running bit** #17 The AI winks · **Plan grammar** MYTH_NOT  
-**Page** @changandsun · **Speaker** DUO · **Format** F32 · **Pillar** P03 (Balance & steady feet) · **Hook** HW233 · **Target** 42 s · **Spoken words** 97 · **CTA** `BALANCE` → Steady Feet + the 10-second test
+**Page** @sunyoon · **Speaker** DUO · **Format** F32 · **Pillar** P03 (Balance & steady feet) · **Hook** HW233 · **Target** 42 s · **Spoken words** 97 · **CTA** `BALANCE` → Steady Feet + the 10-second test
 
 **Hook line:** "Not a gym, not a class. Two minutes of tooth brushing is balance practice."
 
@@ -1582,7 +1582,7 @@ Comment BALANCE for Steady Feet + the 10-second test.
 Habit stack: brush with one hand, rest the other on the sink, lift one foot an inch, switch at halfway. Twice a day = 4 minutes of practice. The USPSTF (2024) recommends exercise for community-dwelling adults 65+ at increased risk.
 Unsteady even standing still? Both feet down, hold the sink.
 ```
-**Hashtags:** IG/FB #habitstacking #balancetraining #changandsun #over60 · TikTok #habitstack #balance #over60 #changandsun  
+**Hashtags:** IG/FB #habitstacking #balancetraining #sunyoon #over60 · TikTok #habitstack #balance #over60 #sunyoon  
 **YouTube Shorts title:** Brush Your Teeth on One Foot (Balance Habit)  
 **Evidence:** E36: USPSTF 2024 (B recommendation); AI wink #3 variant.  
 **Production:** Running bit: The AI winks · Wink: no · Thumbnail: "BRUSH ON ONE FOOT" · Music: playful swing
@@ -1591,7 +1591,7 @@ Unsteady even standing still? Both feet down, hold the sink.
 
 ## S234: Sun reads your comments
 **Plan group** `UG-CS-+04-4` · **First post** 2026-10-12 (D+4) · **Render lane** talking_head · **Running bit** #18 The anniversary countdown · **Plan grammar** WATCH  
-**Page** @changandsun · **Speaker** DUO · **Format** F26 · **Pillar** P18 (Community replies & Q&A) · **Hook** HW234 · **Target** 42 s · **Spoken words** 102 · **CTA** `BEGIN` → Where should I begin? start menu
+**Page** @sunyoon · **Speaker** DUO · **Format** F26 · **Pillar** P18 (Community replies & Q&A) · **Hook** HW234 · **Target** 42 s · **Spoken words** 102 · **CTA** `BEGIN` → Where should I begin? start menu
 
 **Hook line:** "I'm reading your comments out loud. Watch his face on the third one."
 
@@ -1620,7 +1620,7 @@ Comment BEGIN with your question for the 'Where should I begin?' start menu.
 Sun reads your comments. Too late at 81? No: the NSCA says resistance training is safe and effective for older adults when it starts light. Husband won't join? Do it next to him anyway.
 New to exercise? A quick doctor check first.
 ```
-**Hashtags:** IG/FB #sunreadscomments #changandsun #over60 #agingwell · TikTok #readingcomments #over60 #changandsun #agingwell  
+**Hashtags:** IG/FB #sunreadscomments #sunyoon #over60 #agingwell · TikTok #readingcomments #over60 #sunyoon #agingwell  
 **YouTube Shorts title:** Sun Reads Your Comments (Watch His Face)  
 **Evidence:** E02: NSCA (A) for the 'too late' answer.  
 **Production:** Running bit: The anniversary countdown · Wink: no · Thumbnail: "WATCH HIS FACE" · Music: playful swing
@@ -1629,7 +1629,7 @@ New to exercise? A quick doctor check first.
 
 ## S235: Reply: 'My wife says I sit all day'
 **Plan group** `UG-CS-+04-5` · **First post** 2026-10-12 (D+4) · **Render lane** talking_head · **Running bit** #19 Jajangmyeon Sunday · **Plan grammar** TEST_NOW  
-**Page** @changandsun · **Speaker** DUO · **Format** F09 · **Pillar** P18 (Community replies & Q&A) · **Hook** HW235 · **Target** 42 s · **Spoken words** 99 · **CTA** `BEGIN` → Where should I begin? start menu
+**Page** @sunyoon · **Speaker** DUO · **Format** F09 · **Pillar** P18 (Community replies & Q&A) · **Hook** HW235 · **Target** 42 s · **Spoken words** 99 · **CTA** `BEGIN` → Where should I begin? start menu
 
 **Hook line:** "Stand up right now. When did you last stand before this? Be honest."
 
@@ -1658,7 +1658,7 @@ Comment BEGIN for the 'Where should I begin?' start menu.
 Reply to 'my wife says I sit all day': stand up every half hour, walk to the window and back. Light walking after meals lowers the post-meal glucose rise compared with sitting (Buffey et al., 2022).
 Light-headed when you stand? Rise slowly, holding the chair.
 ```
-**Hashtags:** IG/FB #sittingtoomuch #changandsun #over60 #agingwell · TikTok #movemore #over60 #changandsun #agingwell  
+**Hashtags:** IG/FB #sittingtoomuch #sunyoon #over60 #agingwell · TikTok #movemore #over60 #sunyoon #agingwell  
 **YouTube Shorts title:** 'My Wife Says I Sit All Day.' Stand Up Right Now  
 **Evidence:** E23, E46: Buffey 2022 (A− meta); orthostatic rule (E46).  
 **Production:** Running bit: Jajangmyeon Sunday · Wink: no · Thumbnail: "STAND UP NOW" · Music: playful swing
@@ -1667,7 +1667,7 @@ Light-headed when you stand? Rise slowly, holding the chair.
 
 ## S236: Rest isn't recovery
 **Plan group** `UG-CS-+04-6` · **First post** 2026-10-12 (D+4) · **Render lane** talking_head · **Running bit** #20 The hidden kettlebell · **Plan grammar** SHARE  
-**Page** @changandsun · **Speaker** DUO · **Format** F07 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** HW236 · **Target** 42 s · **Spoken words** 100 · **CTA** `BEGIN` → Where should I begin? start menu
+**Page** @sunyoon · **Speaker** DUO · **Format** F07 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** HW236 · **Target** 42 s · **Spoken words** 100 · **CTA** `BEGIN` → Where should I begin? start menu
 
 **Hook line:** "Share this with anyone who thinks rest and recovery are the same."
 
@@ -1696,7 +1696,7 @@ Comment BEGIN for the 'Where should I begin?' start menu.
 Rest is the couch. Recovery is moving gently (a slow walk, a stretch, a nap) so tomorrow you can move more. Send this to the person who thinks they're the same.
 Wiped out for days after light activity? Tell your doctor.
 ```
-**Hashtags:** IG/FB #recoveryday #changandsun #over60 #agingwell · TikTok #recovery #over60 #changandsun #agingwell  
+**Hashtags:** IG/FB #recoveryday #sunyoon #over60 #agingwell · TikTok #recovery #over60 #sunyoon #agingwell  
 **YouTube Shorts title:** Rest Isn't Recovery (Send This to Someone)  
 **Evidence:** none (opinion content, no health claim): Opinion (P16).  
 **Production:** Running bit: The hidden kettlebell · Wink: no · Thumbnail: "REST ≠ RECOVERY" · Music: warm acoustic
@@ -2055,7 +2055,7 @@ Painful, swollen knuckles? Sponge, gently, 10 times.
 
 ## S249: Mina calls during leg day
 **Plan group** `UG-CS-+05-1` · **First post** 2026-10-13 (D+5) · **Render lane** talking_head · **Running bit** #21 Phone calls from Mina · **Plan grammar** DEMO  
-**Page** @changandsun · **Speaker** DUO · **Format** F08 · **Pillar** P17 (Couple life & relationships) · **Hook** HW249 · **Target** 42 s · **Spoken words** 104 · **CTA** `BEGIN` → Where should I begin? start menu
+**Page** @sunyoon · **Speaker** DUO · **Format** F08 · **Pillar** P17 (Couple life & relationships) · **Hook** HW249 · **Target** 42 s · **Spoken words** 104 · **CTA** `BEGIN` → Where should I begin? start menu
 
 **Hook line:** "Here's what happens when our daughter calls during leg day."
 
@@ -2084,7 +2084,7 @@ Comment BEGIN for the 'Where should I begin?' start menu.
 When your grown kids worry: show them your plan, your easy days and the chair version. (Mina is our fictional daughter; she still checks on her father's form.)
 Family worried because of a heart condition? Bring them to the doctor visit and ask together.
 ```
-**Hashtags:** IG/FB #family #couplelife #changandsun #over60 · TikTok #family #over60 #couplelife #changandsun  
+**Hashtags:** IG/FB #family #couplelife #sunyoon #over60 · TikTok #family #over60 #couplelife #sunyoon  
 **YouTube Shorts title:** Our Daughter Calls in the Middle of Leg Day  
 **Evidence:** none (opinion content, no health claim): Couple life (P17); side character labeled fictional.  
 **Production:** Running bit: Phone calls from Mina · Wink: no · Thumbnail: "MINA IS CALLING" · Music: playful swing
@@ -2093,7 +2093,7 @@ Family worried because of a heart condition? Bring them to the doctor visit and 
 
 ## S250: Suitcase carry down the hallway
 **Plan group** `UG-CS-+05-2` · **First post** 2026-10-13 (D+5) · **Render lane** movement · **Performer clip** `DRV-suitcase_carry-main` · **Running bit** #22 The chair called Coach · **Plan grammar** OBJ3  
-**Page** @changandsun · **Speaker** DUO · **Format** F34 · **Pillar** P17 (Couple life & relationships) · **Hook** HW250 · **Target** 42 s · **Spoken words** 109 · **CTA** `BEGIN` → Where should I begin? start menu
+**Page** @sunyoon · **Speaker** DUO · **Format** F34 · **Pillar** P17 (Couple life & relationships) · **Hook** HW250 · **Target** 42 s · **Spoken words** 109 · **CTA** `BEGIN` → Where should I begin? start menu
 
 **Hook line:** "Suitcase carry, both of us, down the hallway and back. One hand each."
 
@@ -2124,7 +2124,7 @@ Comment BEGIN for the 'Where should I begin?' start menu.
 Couple carry: one small suitcase each, down the hallway (wall within reach) and back, standing tall, shoulders level, switch hands at the chair. The NSCA supports progressive resistance training for older adults.
 Back or shoulder flares with carrying? Two light bags, one in each hand.
 ```
-**Hashtags:** IG/FB #couplechallenge #strengthafter60 #changandsun #over60 · TikTok #couplechallenge #carry #over60 #changandsun  
+**Hashtags:** IG/FB #couplechallenge #strengthafter60 #sunyoon #over60 · TikTok #couplechallenge #carry #over60 #sunyoon  
 **YouTube Shorts title:** Suitcase Carry Down the Hallway (Couples)  
 **Evidence:** E02: NSCA (A).  
 **Production:** Running bit: The chair called Coach · Wink: no · Thumbnail: "CARRY YOUR OWN BAG" · Music: playful swing
@@ -2133,7 +2133,7 @@ Back or shoulder flares with carrying? Two light bags, one in each hand.
 
 ## S251: 'I'm fine' is not an answer
 **Plan group** `UG-CS-+05-3` · **First post** 2026-10-13 (D+5) · **Render lane** talking_head · **Running bit** #23 Write this down · **Plan grammar** IF_EVERY  
-**Page** @changandsun · **Speaker** DUO · **Format** F35 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** HW251 · **Target** 42 s · **Spoken words** 109 · **CTA** `BEGIN` → Where should I begin? start menu
+**Page** @sunyoon · **Speaker** DUO · **Format** F35 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** HW251 · **Target** 42 s · **Spoken words** 109 · **CTA** `BEGIN` → Where should I begin? start menu
 
 **Hook line:** "If you tell your kids 'I'm fine' every time, write this down."
 
@@ -2162,7 +2162,7 @@ Comment BEGIN for the 'Where should I begin?' start menu.
 'I'm fine' makes people guess. Tell your family one true thing and one plan: 'My knees hurt on stairs, and I'm working on it.'
 New pain that wakes you at night or won't settle? See your doctor.
 ```
-**Hashtags:** IG/FB #family #honesty #changandsun #agingwell · TikTok #family #over60 #changandsun #agingwell  
+**Hashtags:** IG/FB #family #honesty #sunyoon #agingwell · TikTok #family #over60 #sunyoon #agingwell  
 **YouTube Shorts title:** 'I'm Fine' Is Not an Answer  
 **Evidence:** none (opinion content, no health claim): Opinion (P16).  
 **Production:** Running bit: Write this down · Wink: no · Thumbnail: "ONE TRUE THING" · Music: soft piano
@@ -2171,7 +2171,7 @@ New pain that wakes you at night or won't settle? See your doctor.
 
 ## S252: Making a new friend at 75 is brave
 **Plan group** `UG-CS-+05-4` · **First post** 2026-10-13 (D+5) · **Render lane** talking_head · **Running bit** #24 Old photos · **Plan grammar** MYTH_NOT  
-**Page** @changandsun · **Speaker** DUO · **Format** F07 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** HW252 · **Target** 42 s · **Spoken words** 109 · **CTA** `BEGIN` → Where should I begin? start menu
+**Page** @sunyoon · **Speaker** DUO · **Format** F07 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** HW252 · **Target** 42 s · **Spoken words** 109 · **CTA** `BEGIN` → Where should I begin? start menu
 
 **Hook line:** "Not silly, not desperate. Making a new friend at seventy-five is brave. Do it anyway."
 
@@ -2200,7 +2200,7 @@ Comment BEGIN for the 'Where should I begin?' start menu.
 Making a new friend at 75 is brave. Say one true sentence to a stranger, show up twice (walking group, library, the bench at the market). Our 1976 'photo' is an illustration; our story is fiction, the advice isn't.
 Feeling low or empty most days for weeks? Talk to your doctor.
 ```
-**Hashtags:** IG/FB #friendship #agingwell #changandsun #over60 · TikTok #friendship #over60 #changandsun #agingwell  
+**Hashtags:** IG/FB #friendship #agingwell #sunyoon #over60 · TikTok #friendship #over60 #sunyoon #agingwell  
 **YouTube Shorts title:** Making a New Friend at 75 Is Brave  
 **Evidence:** none (opinion content, no health claim): Opinion (P16); illustrated vintage frame, not archival proof.  
 **Production:** Running bit: Old photos · Wink: no · Thumbnail: "SHOW UP TWICE" · Music: soft piano
@@ -2209,7 +2209,7 @@ Feeling low or empty most days for weeks? Talk to your doctor.
 
 ## S253: Building a thirty-gram dinner from the pantry
 **Plan group** `UG-CS-+05-5` · **First post** 2026-10-13 (D+5) · **Render lane** insert · **Running bit** #1 NO MIRROR FLEXING · **Plan grammar** WATCH  
-**Page** @changandsun · **Speaker** DUO · **Format** F18 · **Pillar** P13 (Protein & muscle food) · **Hook** HW253 · **Target** 42 s · **Spoken words** 92 · **CTA** `SOUP` → Sun Yoon's Three Soups
+**Page** @sunyoon · **Speaker** DUO · **Format** F18 · **Pillar** P13 (Protein & muscle food) · **Hook** HW253 · **Target** 42 s · **Spoken words** 92 · **CTA** `SOUP` → Sun Yoon's Three Soups
 
 **Hook line:** "Watch how we build a thirty-gram dinner plate from the pantry. No shopping trip."
 
@@ -2238,7 +2238,7 @@ Comment SOUP for Sun Yoon's Three Soups.
 The 30-gram pantry plate: canned salmon (~20 g), ½ cup edamame (~8 g), rice and cucumbers (USDA FoodData Central). PROT-AGE suggests 25–30 g per meal for adults over 65.
 Soy allergy? An egg instead. Watching salt? Rinse the salmon.
 ```
-**Hashtags:** IG/FB #highprotein #pantrymeals #changandsun #over60 · TikTok #protein #pantrymeals #over60 #changandsun  
+**Hashtags:** IG/FB #highprotein #pantrymeals #sunyoon #over60 · TikTok #protein #pantrymeals #over60 #sunyoon  
 **YouTube Shorts title:** A 30-Gram Dinner Plate From the Pantry  
 **Evidence:** E28, E52: USDA approximations; PROT-AGE (A).  
 **Production:** Running bit: NO MIRROR FLEXING (oven door) · Wink: no · Thumbnail: "30 GRAMS, NO SHOPPING" · Music: playful pizzicato
@@ -2247,7 +2247,7 @@ Soy allergy? An egg instead. Watching salt? Rinse the salmon.
 
 ## S254: Guess the grams: two breakfasts
 **Plan group** `UG-CS-+05-6` · **First post** 2026-10-13 (D+5) · **Render lane** insert · **Running bit** #2 I'm older, so I'm right · **Plan grammar** TEST_NOW  
-**Page** @changandsun · **Speaker** DUO · **Format** F12 · **Pillar** P13 (Protein & muscle food) · **Hook** HW254 · **Target** 42 s · **Spoken words** 90 · **CTA** `SOUP` → Sun Yoon's Three Soups
+**Page** @sunyoon · **Speaker** DUO · **Format** F12 · **Pillar** P13 (Protein & muscle food) · **Hook** HW254 · **Target** 42 s · **Spoken words** 90 · **CTA** `SOUP` → Sun Yoon's Three Soups
 
 **Hook line:** "Guess right now: which breakfast has more protein? Left or right. Say it out loud."
 
@@ -2276,7 +2276,7 @@ Comment SOUP for Sun Yoon's Three Soups.
 Guess the grams: a bagel with cream cheese is about 12 g protein; a cup of Greek yogurt with a handful of nuts is about 25 g (USDA FoodData Central). PROT-AGE suggests 25–30 g per meal for adults over 65.
 Nut allergy? An egg instead.
 ```
-**Hashtags:** IG/FB #highprotein #breakfastideas #changandsun #over60 · TikTok #protein #breakfast #over60 #changandsun  
+**Hashtags:** IG/FB #highprotein #breakfastideas #sunyoon #over60 · TikTok #protein #breakfast #over60 #sunyoon  
 **YouTube Shorts title:** Guess the Grams: Which Breakfast Wins?  
 **Evidence:** E28, E52: USDA approximations; PROT-AGE (A).  
 **Production:** Running bit: I'm older, so I'm right · Wink: no · Thumbnail: "SIZE LIES" · Music: playful pizzicato
@@ -2401,7 +2401,7 @@ Soy allergy? Two eggs and some chicken. Watching salt? Rinse the kimchi.
 
 ## S266: Fifty years, one thermostat
 **Plan group** `UG-CS-+06-1` · **First post** 2026-10-14 (D+6) · **Render lane** talking_head · **Running bit** #8 Mandu the cat · **Plan grammar** SHARE  
-**Page** @changandsun · **Speaker** DUO · **Format** F35 · **Pillar** P17 (Couple life & relationships) · **Hook** HW266 · **Target** 42 s · **Spoken words** 110 · **CTA** `JOIN` → Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)
+**Page** @sunyoon · **Speaker** DUO · **Format** F35 · **Pillar** P17 (Couple life & relationships) · **Hook** HW266 · **Target** 42 s · **Spoken words** 110 · **CTA** `JOIN` → Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)
 
 **Hook line:** "Send this to the couple who argue about the thermostat. Fifty years."
 
@@ -2430,7 +2430,7 @@ Comment JOIN for the founding-member link and full terms.
 Fifty years (in our story), two degrees apart. We settle it with a 10-minute walk. Members get our weekly plans. Cold out? Layers and a hat.
 Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.
 ```
-**Hashtags:** IG/FB #couplegoals #marriedlife #changandsun #over60 · TikTok #couple #marriage #over60 #changandsun  
+**Hashtags:** IG/FB #couplegoals #marriedlife #sunyoon #over60 · TikTok #couple #marriage #over60 #sunyoon  
 **YouTube Shorts title:** Fifty Years and Still Fighting Over the Thermostat  
 **Evidence:** none (opinion content, no health claim): Couple life (P17); Mandu is a fictional pet; JOIN terms per FUNNEL §4.17.  
 **Production:** Running bit: Mandu the cat · Wink: no · Thumbnail: "2 DEGREES · 50 YEARS" · Music: playful swing
@@ -2439,7 +2439,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 
 ## S267: Dumpling folding is leg day
 **Plan group** `UG-CS-+06-2` · **First post** 2026-10-14 (D+6) · **Render lane** talking_head · **Running bit** #5 Dumpling count · **Plan grammar** DEMO  
-**Page** @changandsun · **Speaker** DUO · **Format** F08 · **Pillar** P17 (Couple life & relationships) · **Hook** HW267 · **Target** 42 s · **Spoken words** 85 · **CTA** `BEGIN` → Where should I begin? start menu
+**Page** @sunyoon · **Speaker** DUO · **Format** F08 · **Pillar** P17 (Couple life & relationships) · **Hook** HW267 · **Target** 42 s · **Spoken words** 85 · **CTA** `BEGIN` → Where should I begin? start menu
 
 **Hook line:** "Here's how we fold dumplings and train legs at once."
 
@@ -2469,7 +2469,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 Comment BEGIN for the 'Where should I begin?' start menu.
 Dumpling leg day: stand up between folds, chair against the wall, breathe out as you stand. Twenty folds, twenty chair stands. Knees cranky? Every other fold, push off the table with your hands.
 ```
-**Hashtags:** IG/FB #dumplings #couplegoals #changandsun #over60 · TikTok #dumplings #couple #over60 #changandsun  
+**Hashtags:** IG/FB #dumplings #couplegoals #sunyoon #over60 · TikTok #dumplings #couple #over60 #sunyoon  
 **YouTube Shorts title:** Folding Dumplings Is Leg Day Now  
 **Evidence:** E02: NSCA (A) start-easy framing; couple life (P17).  
 **Production:** Running bit: Dumpling count · Wink: no · Thumbnail: "20 FOLDS = 20 STANDS" · Music: playful swing
@@ -2478,7 +2478,7 @@ Dumpling leg day: stand up between folds, chair against the wall, breathe out as
 
 ## S269: Stretching isn't strength
 **Plan group** `UG-CS-+06-4` · **First post** 2026-10-14 (D+6) · **Render lane** insert · **Running bit** #7 Seven out of ten · **Plan grammar** IF_EVERY  
-**Page** @changandsun · **Speaker** DUO · **Format** F28 · **Pillar** P15 (Myth-busting) · **Hook** HW269 · **Target** 42 s · **Spoken words** 91 · **CTA** `TEST` → Strength Age test (quiz)
+**Page** @sunyoon · **Speaker** DUO · **Format** F28 · **Pillar** P15 (Myth-busting) · **Hook** HW269 · **Target** 42 s · **Spoken words** 91 · **CTA** `TEST` → Strength Age test (quiz)
 
 **Hook line:** "If you stretch every morning, you still need strength. Here's why."
 
@@ -2507,7 +2507,7 @@ Comment TEST for the free 3-minute Strength Age test.
 Stretching keeps you loose; strength needs muscles working against resistance. The NSCA position statement recommends resistance training 2–3 days a week for older adults, starting easy. Water jugs and soup pots count.
 Heart or lung condition, or recent surgery? Ask your doctor what weight is safe.
 ```
-**Hashtags:** IG/FB #strengthtraining #mythbusting #changandsun #over60 · TikTok #stretching #strength #over60 #changandsun  
+**Hashtags:** IG/FB #strengthtraining #mythbusting #sunyoon #over60 · TikTok #stretching #strength #over60 #sunyoon  
 **YouTube Shorts title:** If You Stretch Every Morning, You Still Need Strength  
 **Evidence:** E02: NSCA (A) frequency at grade.  
 **Production:** Running bit: Seven out of ten · Wink: no · Thumbnail: "LOOSE ≠ STRONG" · Music: playful swing
@@ -2516,7 +2516,7 @@ Heart or lung condition, or recent surgery? Ask your doctor what weight is safe.
 
 ## S270: Not sheep: ten slow breaths
 **Plan group** `UG-CS-+06-5` · **First post** 2026-10-14 (D+6) · **Render lane** talking_head · **Running bit** #13 The welding metaphors · **Plan grammar** MYTH_NOT  
-**Page** @changandsun · **Speaker** DUO · **Format** F05 · **Pillar** P09 (Sleep & evening) · **Hook** HW270 · **Target** 42 s · **Spoken words** 93 · **CTA** `SLEEP` → Sleep Wind-Down (10 min)
+**Page** @sunyoon · **Speaker** DUO · **Format** F05 · **Pillar** P09 (Sleep & evening) · **Hook** HW270 · **Target** 42 s · **Spoken words** 93 · **CTA** `SLEEP` → Sleep Wind-Down (10 min)
 
 **Hook line:** "Not counting sheep, not scrolling. Ten slow breaths in bed instead."
 
@@ -2545,7 +2545,7 @@ Comment SLEEP for the 10-minute Sleep Wind-Down.
 Ten slow breaths in bed: in through the nose for 4, out for 6, never forced, phone face-down. Slow breathing near 6 breaths a minute increases vagally mediated heart-rate variability (Laborde et al., 2022).
 Loud snoring with pauses, or sleepy all day? Tell your doctor.
 ```
-**Hashtags:** IG/FB #bedtimeroutine #breathwork #changandsun #over60 · TikTok #bedtime #breathing #over60 #changandsun  
+**Hashtags:** IG/FB #bedtimeroutine #breathwork #sunyoon #over60 · TikTok #bedtime #breathing #over60 #sunyoon  
 **YouTube Shorts title:** Not Counting Sheep: Ten Slow Breaths in Bed  
 **Evidence:** E19, E48: Laborde 2022 (A−); OSA red flag (E48).  
 **Production:** Running bit: The welding metaphors · Wink: no · Thumbnail: "10 BREATHS. LIGHTS OUT." · Music: soft piano
@@ -2554,7 +2554,7 @@ Loud snoring with pauses, or sleepy all day? Tell your doctor.
 
 ## S271: Five-minute bedtime stretch, Sun in charge
 **Plan group** `UG-CS-+06-6` · **First post** 2026-10-14 (D+6) · **Render lane** talking_head · **Running bit** #3 Hips. Now. · **Plan grammar** WATCH  
-**Page** @changandsun · **Speaker** DUO · **Format** F05 · **Pillar** P09 (Sleep & evening) · **Hook** HW271 · **Target** 42 s · **Spoken words** 94 · **CTA** `SLEEP` → Sleep Wind-Down (10 min)
+**Page** @sunyoon · **Speaker** DUO · **Format** F05 · **Pillar** P09 (Sleep & evening) · **Hook** HW271 · **Target** 42 s · **Spoken words** 94 · **CTA** `SLEEP` → Sleep Wind-Down (10 min)
 
 **Hook line:** "Watch my wife boss me through a five-minute bedtime stretch."
 
@@ -2585,7 +2585,7 @@ Comment SLEEP for the 10-minute Sleep Wind-Down.
 Five minutes on the bed edge: knees wide and a gentle forward lean breathing out, then a seated figure-4, 30 seconds a side. Qigong and similar slow practice: meta-analyses in older adults report better sleep quality (moderate certainty).
 New hip? Skip the ankle cross and follow your surgeon's rules.
 ```
-**Hashtags:** IG/FB #bedtimeroutine #stretching #changandsun #over60 · TikTok #bedtime #stretch #over60 #changandsun  
+**Hashtags:** IG/FB #bedtimeroutine #stretching #sunyoon #over60 · TikTok #bedtime #stretch #over60 #sunyoon  
 **YouTube Shorts title:** Watch My Wife Boss Me Through a 5-Minute Bedtime Stretch  
 **Evidence:** E17: E17 (A−) at grade; no condition claim.  
 **Production:** Running bit: Hips. Now. · Wink: no · Thumbnail: "HIPS. NOW." · Music: soft piano
@@ -2710,7 +2710,7 @@ A sore on the lip that lasts weeks? Show your doctor.
 
 ## S286: Fifty years: the one thing I'd redo
 **Plan group** `UG-CS-+07-2` · **First post** 2026-10-15 (D+7) · **Render lane** talking_head · **Running bit** #18 The anniversary countdown · **Plan grammar** SHARE  
-**Page** @changandsun · **Speaker** DUO · **Format** F35 · **Pillar** P17 (Couple life & relationships) · **Hook** HW286 · **Target** 42 s · **Spoken words** 87 · **CTA** `BEGIN` → Where should I begin? start menu
+**Page** @sunyoon · **Speaker** DUO · **Format** F35 · **Pillar** P17 (Couple life & relationships) · **Hook** HW286 · **Target** 42 s · **Spoken words** 87 · **CTA** `BEGIN` → Where should I begin? start menu
 
 **Hook line:** "Send this to your wife. Fifty years, and here's what I'd redo."
 
@@ -2739,7 +2739,7 @@ Comment BEGIN for the 'Where should I begin?' start menu.
 Fifty years in our story, and the one thing Chang would redo: walk together sooner, 20 minutes side by side, no phones. And say thank you for the soup.
 Walking at night? Bright clothes and a flashlight.
 ```
-**Hashtags:** IG/FB #couplegoals #marriedlife #changandsun #over60 · TikTok #couple #marriage #over60 #changandsun  
+**Hashtags:** IG/FB #couplegoals #marriedlife #sunyoon #over60 · TikTok #couple #marriage #over60 #sunyoon  
 **YouTube Shorts title:** Fifty Years Married: The One Thing I'd Redo  
 **Evidence:** none (opinion content, no health claim): Couple life (P17); fictional backstory.  
 **Production:** Running bit: The anniversary countdown · Wink: no · Thumbnail: "1 THING I'D REDO" · Music: warm piano
@@ -2748,7 +2748,7 @@ Walking at night? Bright clothes and a flashlight.
 
 ## S287: Jajangmyeon Sunday: whoever eats, chops
 **Plan group** `UG-CS-+07-3` · **First post** 2026-10-15 (D+7) · **Render lane** talking_head · **Running bit** #19 Jajangmyeon Sunday · **Plan grammar** DEMO  
-**Page** @changandsun · **Speaker** DUO · **Format** F35 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** HW287 · **Target** 42 s · **Spoken words** 91 · **CTA** `BEGIN` → Where should I begin? start menu
+**Page** @sunyoon · **Speaker** DUO · **Format** F35 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** HW287 · **Target** 42 s · **Spoken words** 91 · **CTA** `BEGIN` → Where should I begin? start menu
 
 **Hook line:** "This is jajangmyeon Sunday. Twenty years, one rule: everyone helps."
 
@@ -2777,7 +2777,7 @@ Comment BEGIN for the 'Where should I begin?' start menu.
 Jajangmyeon Sunday, twenty years in our story: whoever eats, chops. One fixed day gives the week its shape back. Pick yours and put it on the calendar in pen.
 Watching salt? Half the sauce, more cabbage.
 ```
-**Hashtags:** IG/FB #familydinner #koreanfood #changandsun #over60 · TikTok #familydinner #jajangmyeon #over60 #changandsun  
+**Hashtags:** IG/FB #familydinner #koreanfood #sunyoon #over60 · TikTok #familydinner #jajangmyeon #over60 #sunyoon  
 **YouTube Shorts title:** Jajangmyeon Sunday: Whoever Eats, Chops  
 **Evidence:** none (opinion content, no health claim): Mindset (P16); fictional backstory.  
 **Production:** Running bit: Jajangmyeon Sunday · Wink: no · Thumbnail: "WHOEVER EATS, CHOPS" · Music: playful swing
@@ -2786,7 +2786,7 @@ Watching salt? Half the sauce, more cabbage.
 
 ## S288: Frank's nine excuses
 **Plan group** `UG-CS-+07-4` · **First post** 2026-10-15 (D+7) · **Render lane** talking_head · **Running bit** #12 Frank's excuses · **Plan grammar** OBJ3  
-**Page** @changandsun · **Speaker** DUO · **Format** F07 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** HW288 · **Target** 42 s · **Spoken words** 99 · **CTA** `BEGIN` → Where should I begin? start menu
+**Page** @sunyoon · **Speaker** DUO · **Format** F07 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** HW288 · **Target** 42 s · **Spoken words** 99 · **CTA** `BEGIN` → Where should I begin? start menu
 
 **Hook line:** "Excuses at seventy-four: Frank has nine. We counted."
 
@@ -2815,7 +2815,7 @@ Comment BEGIN for the 'Where should I begin?' start menu.
 Frank (our fictional neighbor) has nine excuses, and every one is true. We stopped arguing and brought two chairs: five stands on his porch, chairs against the wall. He did six.
 Knee swollen, hot, or giving way? That's a doctor, not an excuse.
 ```
-**Hashtags:** IG/FB #neverstopmoving #chairexercise #changandsun #over60 · TikTok #over60 #excuses #strength #changandsun  
+**Hashtags:** IG/FB #neverstopmoving #chairexercise #sunyoon #over60 · TikTok #over60 #excuses #strength #sunyoon  
 **YouTube Shorts title:** Frank Has Nine Excuses. We Brought Two Chairs.  
 **Evidence:** none (opinion content, no health claim): Blunt truth (P16); Frank is a fictional side character.  
 **Production:** Running bit: Frank's excuses · Wink: no · Thumbnail: "9 EXCUSES · 2 CHAIRS" · Music: playful swing
@@ -2824,7 +2824,7 @@ Knee swollen, hot, or giving way? That's a doctor, not an excuse.
 
 ## S290: Balance is a skill, not luck
 **Plan group** `UG-CS-+07-6` · **First post** 2026-10-15 (D+7) · **Render lane** talking_head · **Running bit** #14 Sun's visor · **Plan grammar** MYTH_NOT  
-**Page** @changandsun · **Speaker** DUO · **Format** F15 · **Pillar** P03 (Balance & steady feet) · **Hook** HW290 · **Target** 42 s · **Spoken words** 98 · **CTA** `BALANCE` → Steady Feet + the 10-second test
+**Page** @sunyoon · **Speaker** DUO · **Format** F15 · **Pillar** P03 (Balance & steady feet) · **Hook** HW290 · **Target** 42 s · **Spoken words** 98 · **CTA** `BALANCE` → Steady Feet + the 10-second test
 
 **Hook line:** "Not age, not bad luck. Balance is a skill you practice."
 
@@ -2855,7 +2855,7 @@ Comment BALANCE for Steady Feet + the 10-second test.
 Balance is a skill: thirty heel-to-toe steps along a line next to a rail, eyes ahead, arms out. Tandem (heel-to-toe) stance is one stage of the CDC STEADI 4-Stage Balance Test.
 Unsteady? Walk beside the rail with one hand on it. Dizzy? Stop and sit.
 ```
-**Hashtags:** IG/FB #balancetraining #walking #changandsun #over60 · TikTok #balance #over60 #heeltotoe #changandsun  
+**Hashtags:** IG/FB #balancetraining #walking #sunyoon #over60 · TikTok #balance #over60 #heeltotoe #sunyoon  
 **YouTube Shorts title:** Not Age, Not Luck: Balance Is a Skill  
 **Evidence:** E50: STEADI (A, tool); no fall-outcome claim.  
 **Production:** Running bit: Sun's visor · Wink: no · Thumbnail: "BALANCE IS A SKILL" · Music: playful swing

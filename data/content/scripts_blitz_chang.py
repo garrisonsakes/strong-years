@@ -695,7 +695,7 @@ dict(id="S96", page="@changyin.mobility", speaker="CHANG", format="F32", pillar=
  regression="Feet side by side, or semi-tandem (one foot slightly ahead).", cta="BALANCE",
  skip="Wet floor? Mat down first, and shoes on.",
  caption="Comment BALANCE for Steady Feet.\nHeel-to-toe at the sink: hips against the counter, switch feet every plate. A Cochrane review (2019) pooled 108 trials of balance and functional exercise like this, often combined with strength work.\nMat down and shoes on. Too wobbly? Feet side by side.",
- ig=["#balanceexercises","#habitstacking","#over65","#changandsun"], tt=["#dishestok","#over65","#balance","#habitstack"],
+ ig=["#balanceexercises","#habitstacking","#over65","#sunyoon"], tt=["#dishestok","#over65","#balance","#habitstack"],
  yt="Do the Dishes Heel-to-Toe: Balance Practice Every Night", ev=["E12"],
  note="Sherrington 2019 (A) 'reduced'.", bit="Fridge balance leaderboard", wink=False, thumb="DISHES = BALANCE", music="playful jazz"),
 
@@ -714,7 +714,7 @@ dict(id="S97", page="@changyin.mobility", speaker="CHANG", format="F33", pillar=
  regression="Smaller range on each; seated only.", cta="BACK",
  skip="Sharp pain means stop.",
  caption="Comment BACK for Morning Unlock.\nFour minutes for the man who 'doesn't stretch': seated hamstring on a chair edge, hip-flexor stretch holding the counter, doorway chest stretch. 20 seconds each, breathe. Exercise for chronic low back pain improved pain and function (Cochrane 2021, 249 trials).\nSharp pain means stop.",
- ig=["#stretching","#over60","#marriedlife","#changandsun"], tt=["#sendthistohim","#over60","#stretching","#husbandsoftiktok"],
+ ig=["#stretching","#over60","#marriedlife","#sunyoon"], tt=["#sendthistohim","#over60","#stretching","#husbandsoftiktok"],
  yt="Send This to the Man Who Won't Stretch (4 Minutes, Over 60)", ev=["E30"],
  note="Hayden 2021 (A).", bit="Seven out of ten", wink=False, thumb="SEND TO HIM", music="playful jazz"),
 

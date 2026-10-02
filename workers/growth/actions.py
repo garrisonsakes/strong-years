@@ -64,7 +64,8 @@ def remix_jobs_for(score: dict, post: dict, pages: dict[str, dict], cfg: dict, n
     arm = _arm(post)
     platform = score["platform"]
     # per-source cap: YouTube allows 1 remix per source (mass-produced policy), others variants_per_winner
-    n_max = int(r["youtube"]["max_remixes_per_source"]) if platform == "youtube" else int(r["variants_per_winner"])
+    n_max = int(r["youtube"]["max_remixes_per_source"]) if platform == "youtube" else \
+        int(r.get("variants_per_breakout", r["variants_per_winner"])) if score.get("breakout") else int(r["variants_per_winner"])
     existing = [j for j in recent_remixes if str(j.get("source_post_id")) == str(score["post_id"])]
     if len(existing) >= n_max:
         return []
@@ -76,8 +77,13 @@ def remix_jobs_for(score: dict, post: dict, pages: dict[str, dict], cfg: dict, n
             day_counts[str(j.get("target_page_id"))] = day_counts.get(str(j.get("target_page_id")), 0) + 1
     # candidate target pages: active, same locale family, not the source, not the localized child of the source
     cands = []
+    breakout = bool(score.get("breakout")) and platform != "youtube"
     for pid, p in pages.items():
-        if pid == str(src_page["id"]) or pid in taken_targets:
+        if pid == str(src_page["id"]):
+            if breakout:   # POSTDB §8 rule 11: a breakout also gets new-object variants on its own page
+                cands.append((3, p.get("slug") or pid, p))
+            continue
+        if pid in taken_targets:
             continue
         if p.get("status") not in (None, "active"):
             continue
@@ -95,7 +101,12 @@ def remix_jobs_for(score: dict, post: dict, pages: dict[str, dict], cfg: dict, n
     jobs = []
     earliest = now + timedelta(hours=float(r["min_stagger_h"]))
     src_when = S.parse_dt(post.get("published_at")) or now
-    for fit, _, target in cands[: n_max - len(existing)]:
+    picks = [c for c in cands]
+    if breakout and cands:   # fill 5-10 variants: cycle the pages, one more day of stagger per round
+        picks = [cands[i % len(cands)] for i in range(n_max)]
+    for i, (fit, _, target) in enumerate(picks[: n_max - len(existing)]):
+        rnd = i // max(1, len(cands)) if breakout else 0
+        same_page = str(target["id"]) == str(src_page["id"])
         fmt = arm["format"]
         speaker = _pick_speaker(target, arm["speaker"], fmt)
         th = {**guard.T, **(r.get("uniqueness_overrides") or {})}
@@ -110,7 +121,8 @@ def remix_jobs_for(score: dict, post: dict, pages: dict[str, dict], cfg: dict, n
             "source_post_id": score["post_id"], "source_page_id": str(src_page["id"]), "source_platform": platform,
             "source_score": score.get("score"), "source_class": score.get("class"),
             "target_page_id": str(target["id"]), "target_page_slug": target.get("slug"),
-            "earliest_at": earliest.isoformat(), "preferred_slot_hour": hour,
+            "earliest_at": (earliest + timedelta(days=rnd)).isoformat(), "preferred_slot_hour": hour,
+            "breakout": breakout, "same_page_new_object": same_page,
             "level": "L3", "grammar": arm["grammar"], "pillar": arm["pillar"], "editorial_format": fmt,
             "speaker": speaker, "length_bucket": arm["length"],
             "requirements": {

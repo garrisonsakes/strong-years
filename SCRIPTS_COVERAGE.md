@@ -18,9 +18,9 @@ Classified from the spoken hook text by `proven_grammar()` in tools/build_conten
 | …and just watch what happens | 26 | 14% | S02: "Stand on one leg next to the counter, and just watch what happens by second ten." |
 | **Any proven grammar** (a hook can match two) | **111** | **58%** | |
 
-| Proven share by page | @changyin | @sunyoon.kitchen | @changandsun | @changyin.strength | @changyin.mobility | @sunyoon |
+| Proven share by page | @changyin | @sunyoon.kitchen | @sunyoon | @changyin.strength | @changyin.mobility |
 |---|---|---|---|---|---|---|
-| Scripts | 31/48 | 34/46 | 13/39 | 7/17 | 18/23 | 8/17 |
+| Scripts | 31/48 | 34/46 | 21/56 | 7/17 | 18/23 |
 
 Hashtags: no script carries a condition hashtag (validator rule `CONDITION_HASHTAG`, AUDIT_BUSINESS F15).
 
@@ -51,107 +51,107 @@ Hook classes: IF_EVERY 52 · OBJ3 40 · MYTH 25 · WATCH 23 · STATEMENT 19 · N
 
 Pillar names: P01 Strength proof & tests · P02 Legs & chair strength · P03 Balance & steady feet · P04 Grip, upper body & carry · P05 Mobility & stretching · P06 Back / knee / shoulder relief & rehab · P07 Breathwork & nervous system · P08 Tai chi / qigong / gentle yoga · P09 Sleep & evening · P10 Digestion & gut · P11 Sun's kitchen: recipes · P12 Kitchen remedies with evidence · P13 Protein & muscle food · P14 Physiology in 30s · P15 Myth-busting · P16 Blunt truths: aging, mindset, women 60+ · P17 Couple life & relationships · P18 Community replies & Q&A · P19 Challenges & series · P20 Behind the AI / trust.
 
-| Key | @changyin | @sunyoon.kitchen | @changandsun | @changyin.strength | @changyin.mobility | @sunyoon | Total |
-|---|---|---|---|---|---|---|---|
-| P01 | 7 | · | 2 | 1 | · | 1 | 11 |
-| P02 | 5 | · | · | 6 | · | · | 11 |
-| P03 | 7 | · | 1 | · | 2 | 2 | 12 |
-| P04 | 2 | · | · | 8 | · | · | 10 |
-| P05 | · | · | · | · | 3 | · | 3 |
-| P06 | 2 | · | · | 1 | 6 | · | 9 |
-| P07 | 1 | · | · | · | 2 | · | 3 |
-| P08 | · | · | 1 | · | 5 | · | 6 |
-| P09 | · | · | · | · | 3 | 1 | 4 |
-| P10 | · | 8 | · | · | · | · | 8 |
-| P11 | · | 4 | · | · | · | 1 | 5 |
-| P12 | · | 5 | · | · | · | · | 5 |
-| P13 | 1 | 7 | 2 | · | · | 1 | 11 |
-| P14 | 5 | · | · | · | · | · | 5 |
-| P15 | 7 | 12 | · | 1 | 2 | 3 | 25 |
-| P16 | 1 | 4 | 2 | · | · | 7 | 14 |
-| P17 | · | · | 19 | · | · | · | 19 |
-| P18 | · | · | · | · | · | 1 | 1 |
-| P19 | 2 | · | 1 | · | · | · | 3 |
-| P20 | 8 | 6 | 11 | · | · | · | 25 |
-| **Total** | **48** | **46** | **39** | **17** | **23** | **17** | **190** |
+| Key | @changyin | @sunyoon.kitchen | @sunyoon | @changyin.strength | @changyin.mobility | Total |
+|---|---|---|---|---|---|---|
+| P01 | 7 | · | 3 | 1 | · | 11 |
+| P02 | 5 | · | · | 6 | · | 11 |
+| P03 | 7 | · | 3 | · | 2 | 12 |
+| P04 | 2 | · | · | 8 | · | 10 |
+| P05 | · | · | · | · | 3 | 3 |
+| P06 | 2 | · | · | 1 | 6 | 9 |
+| P07 | 1 | · | · | · | 2 | 3 |
+| P08 | · | · | 1 | · | 5 | 6 |
+| P09 | · | · | 1 | · | 3 | 4 |
+| P10 | · | 8 | · | · | · | 8 |
+| P11 | · | 4 | 1 | · | · | 5 |
+| P12 | · | 5 | · | · | · | 5 |
+| P13 | 1 | 7 | 3 | · | · | 11 |
+| P14 | 5 | · | · | · | · | 5 |
+| P15 | 7 | 12 | 3 | 1 | 2 | 25 |
+| P16 | 1 | 4 | 9 | · | · | 14 |
+| P17 | · | · | 19 | · | · | 19 |
+| P18 | · | · | 1 | · | · | 1 |
+| P19 | 2 | · | 1 | · | · | 3 |
+| P20 | 8 | 6 | 11 | · | · | 25 |
+| **Total** | **48** | **46** | **56** | **17** | **23** | **190** |
 
 ## Page × format
 
 F38 = Doors Open / Offer Card and F39 = Pinned Post were added for the launch week (CONTENT_SYSTEM.md §2).
 
-| Key | @changyin | @sunyoon.kitchen | @changandsun | @changyin.strength | @changyin.mobility | @sunyoon | Total |
-|---|---|---|---|---|---|---|---|
-| F01 | 2 | · | · | · | · | · | 2 |
-| F02 | 8 | · | · | 3 | · | · | 11 |
-| F03 | 2 | · | · | 2 | 4 | · | 8 |
-| F04 | 1 | 11 | · | · | · | 2 | 14 |
-| F05 | · | · | · | · | 3 | · | 3 |
-| F06 | · | 9 | · | · | · | · | 9 |
-| F07 | · | 4 | · | · | · | 8 | 12 |
-| F08 | 1 | · | 8 | · | · | · | 9 |
-| F10 | 1 | 1 | 3 | · | · | 1 | 6 |
-| F11 | 2 | · | 1 | · | · | · | 3 |
-| F12 | 1 | 1 | · | · | · | · | 2 |
-| F13 | 3 | · | · | 1 | · | · | 4 |
-| F14 | 2 | · | · | · | 3 | 1 | 6 |
-| F15 | 3 | · | · | 6 | · | · | 9 |
-| F16 | 1 | · | · | 1 | · | · | 2 |
-| F17 | 2 | · | · | · | · | · | 2 |
-| F18 | · | 7 | 2 | · | · | · | 9 |
-| F19 | · | 1 | · | · | · | · | 1 |
-| F20 | · | · | · | · | 2 | · | 2 |
-| F21 | 1 | · | · | · | 2 | · | 3 |
-| F22 | · | · | 1 | · | 4 | · | 5 |
-| F23 | · | · | 1 | 1 | · | · | 2 |
-| F24 | 1 | · | · | · | · | · | 1 |
-| F25 | · | · | 1 | 2 | · | · | 3 |
-| F26 | · | 1 | 1 | · | · | 1 | 3 |
-| F27 | · | · | 2 | · | · | · | 2 |
-| F28 | 5 | 1 | 1 | 1 | 2 | 1 | 11 |
-| F29 | · | · | 1 | · | · | · | 1 |
-| F31 | · | 5 | 1 | · | · | 1 | 7 |
-| F32 | 4 | · | · | · | 2 | · | 6 |
-| F33 | 2 | 2 | 3 | · | 1 | · | 8 |
-| F34 | · | · | 5 | · | · | · | 5 |
-| F35 | · | · | 2 | · | · | 2 | 4 |
-| F38 | 5 | 2 | 4 | · | · | · | 11 |
-| F39 | 1 | 1 | 2 | · | · | · | 4 |
-| **Total** | **48** | **46** | **39** | **17** | **23** | **17** | **190** |
+| Key | @changyin | @sunyoon.kitchen | @sunyoon | @changyin.strength | @changyin.mobility | Total |
+|---|---|---|---|---|---|---|
+| F01 | 2 | · | · | · | · | 2 |
+| F02 | 8 | · | · | 3 | · | 11 |
+| F03 | 2 | · | · | 2 | 4 | 8 |
+| F04 | 1 | 11 | 2 | · | · | 14 |
+| F05 | · | · | · | · | 3 | 3 |
+| F06 | · | 9 | · | · | · | 9 |
+| F07 | · | 4 | 8 | · | · | 12 |
+| F08 | 1 | · | 8 | · | · | 9 |
+| F10 | 1 | 1 | 4 | · | · | 6 |
+| F11 | 2 | · | 1 | · | · | 3 |
+| F12 | 1 | 1 | · | · | · | 2 |
+| F13 | 3 | · | · | 1 | · | 4 |
+| F14 | 2 | · | 1 | · | 3 | 6 |
+| F15 | 3 | · | · | 6 | · | 9 |
+| F16 | 1 | · | · | 1 | · | 2 |
+| F17 | 2 | · | · | · | · | 2 |
+| F18 | · | 7 | 2 | · | · | 9 |
+| F19 | · | 1 | · | · | · | 1 |
+| F20 | · | · | · | · | 2 | 2 |
+| F21 | 1 | · | · | · | 2 | 3 |
+| F22 | · | · | 1 | · | 4 | 5 |
+| F23 | · | · | 1 | 1 | · | 2 |
+| F24 | 1 | · | · | · | · | 1 |
+| F25 | · | · | 1 | 2 | · | 3 |
+| F26 | · | 1 | 2 | · | · | 3 |
+| F27 | · | · | 2 | · | · | 2 |
+| F28 | 5 | 1 | 2 | 1 | 2 | 11 |
+| F29 | · | · | 1 | · | · | 1 |
+| F31 | · | 5 | 2 | · | · | 7 |
+| F32 | 4 | · | · | · | 2 | 6 |
+| F33 | 2 | 2 | 3 | · | 1 | 8 |
+| F34 | · | · | 5 | · | · | 5 |
+| F35 | · | · | 4 | · | · | 4 |
+| F38 | 5 | 2 | 4 | · | · | 11 |
+| F39 | 1 | 1 | 2 | · | · | 4 |
+| **Total** | **48** | **46** | **56** | **17** | **23** | **190** |
 
 ## Page × CTA keyword
 
-| Key | @changyin | @sunyoon.kitchen | @changandsun | @changyin.strength | @changyin.mobility | @sunyoon | Total |
-|---|---|---|---|---|---|---|---|
-| BACK | 2 | 1 | 3 | 1 | 8 | · | 15 |
-| BALANCE | 7 | · | 3 | 1 | 4 | 3 | 18 |
-| BEGIN | 1 | 4 | 5 | · | · | 3 | 13 |
-| BOOK | 4 | 3 | 4 | · | · | · | 11 |
-| BREATH | 1 | · | 1 | · | 2 | 1 | 5 |
-| FAMILY | 2 | 2 | 2 | · | · | · | 6 |
-| GUT | · | 14 | 1 | · | · | · | 15 |
-| JOIN | 4 | 3 | 5 | · | · | · | 12 |
-| KNEES | 1 | · | 1 | 2 | 4 | 2 | 10 |
-| SLEEP | · | · | 1 | · | 5 | 1 | 7 |
-| SOUP | 1 | 16 | 2 | · | · | 2 | 21 |
-| STRONG | 16 | · | 5 | 11 | · | 4 | 36 |
-| TEST | 6 | · | 4 | 2 | · | 1 | 13 |
-| WAITLIST | 3 | 3 | 2 | · | · | · | 8 |
-| **Total** | **48** | **46** | **39** | **17** | **23** | **17** | **190** |
+| Key | @changyin | @sunyoon.kitchen | @sunyoon | @changyin.strength | @changyin.mobility | Total |
+|---|---|---|---|---|---|---|
+| BACK | 2 | 1 | 3 | 1 | 8 | 15 |
+| BALANCE | 7 | · | 6 | 1 | 4 | 18 |
+| BEGIN | 1 | 4 | 8 | · | · | 13 |
+| BOOK | 4 | 3 | 4 | · | · | 11 |
+| BREATH | 1 | · | 2 | · | 2 | 5 |
+| FAMILY | 2 | 2 | 2 | · | · | 6 |
+| GUT | · | 14 | 1 | · | · | 15 |
+| JOIN | 4 | 3 | 5 | · | · | 12 |
+| KNEES | 1 | · | 3 | 2 | 4 | 10 |
+| SLEEP | · | · | 2 | · | 5 | 7 |
+| SOUP | 1 | 16 | 4 | · | · | 21 |
+| STRONG | 16 | · | 9 | 11 | · | 36 |
+| TEST | 6 | · | 5 | 2 | · | 13 |
+| WAITLIST | 3 | 3 | 2 | · | · | 8 |
+| **Total** | **48** | **46** | **56** | **17** | **23** | **190** |
 
 ## Page × hook grammar (expansion scripts only; a script can carry several)
 
-| Grammar | @changyin | @sunyoon.kitchen | @changandsun | @changyin.strength | @changyin.mobility | @sunyoon | Total |
-|---|---|---|---|---|---|---|---|
-| DEMO | 29 | 18 | 14 | 11 | 11 | 7 | 90 |
-| OBJ3 | 14 | 18 | 17 | 8 | 5 | 3 | 65 |
-| IF_EVERY | 12 | 8 | 4 | 3 | 5 | 5 | 37 |
-| LAUNCH | 11 | 9 | 11 | · | · | · | 31 |
-| KITCHEN_SERIES | 1 | 22 | · | 2 | · | · | 25 |
-| WATCH | 5 | 5 | 4 | 3 | 4 | · | 21 |
-| TEST_NOW | 10 | · | 5 | 1 | 1 | 2 | 19 |
-| SHARE | 4 | 2 | 8 | · | 1 | 4 | 19 |
-| MYTH | 4 | 12 | · | 1 | · | 2 | 19 |
-| DEBUNK | · | 10 | · | · | · | 2 | 12 |
+| Grammar | @changyin | @sunyoon.kitchen | @sunyoon | @changyin.strength | @changyin.mobility | Total |
+|---|---|---|---|---|---|---|
+| DEMO | 29 | 18 | 21 | 11 | 11 | 90 |
+| OBJ3 | 14 | 18 | 20 | 8 | 5 | 65 |
+| IF_EVERY | 12 | 8 | 9 | 3 | 5 | 37 |
+| LAUNCH | 11 | 9 | 11 | · | · | 31 |
+| KITCHEN_SERIES | 1 | 22 | · | 2 | · | 25 |
+| WATCH | 5 | 5 | 4 | 3 | 4 | 21 |
+| TEST_NOW | 10 | · | 7 | 1 | 1 | 19 |
+| SHARE | 4 | 2 | 12 | · | 1 | 19 |
+| MYTH | 4 | 12 | 2 | 1 | · | 19 |
+| DEBUNK | · | 10 | 2 | · | · | 12 |
 
 ## Page × pillar × format × CTA (every combination in use)
 
@@ -219,38 +219,51 @@ F38 = Doors Open / Offer Card and F39 = Pinned Post were added for the launch we
 | @sunyoon.kitchen | P20 | F38 | BOOK | S181 |
 | @sunyoon.kitchen | P20 | F38 | JOIN | S141 |
 | @sunyoon.kitchen | P20 | F39 | BEGIN | S144 |
-| @changandsun | P01 | F33 | TEST | S173 |
-| @changandsun | P01 | F34 | TEST | S168 |
-| @changandsun | P03 | F23 | BALANCE | S170 |
-| @changandsun | P08 | F22 | WAITLIST | S175 |
-| @changandsun | P13 | F18 | SOUP | S55, S172 |
-| @changandsun | P16 | F33 | FAMILY | S148 |
-| @changandsun | P16 | F35 | BEGIN | S171 |
-| @changandsun | P17 | F08 | BACK | S54, S126, S131 |
-| @changandsun | P17 | F08 | BEGIN | S169 |
-| @changandsun | P17 | F08 | SLEEP | S57 |
-| @changandsun | P17 | F08 | STRONG | S51, S134 |
-| @changandsun | P17 | F25 | KNEES | S130 |
-| @changandsun | P17 | F27 | BEGIN | S60 |
-| @changandsun | P17 | F27 | STRONG | S132 |
-| @changandsun | P17 | F28 | BEGIN | S129 |
-| @changandsun | P17 | F29 | BEGIN | S133 |
-| @changandsun | P17 | F31 | GUT | S127 |
-| @changandsun | P17 | F33 | FAMILY | S53 |
-| @changandsun | P17 | F34 | BALANCE | S52, S125 |
-| @changandsun | P17 | F34 | STRONG | S56 |
-| @changandsun | P17 | F34 | TEST | S128 |
-| @changandsun | P17 | F35 | BREATH | S58 |
-| @changandsun | P19 | F11 | STRONG | S147 |
-| @changandsun | P20 | F08 | TEST | S59 |
-| @changandsun | P20 | F10 | BOOK | S187 |
-| @changandsun | P20 | F10 | JOIN | S150 |
-| @changandsun | P20 | F10 | WAITLIST | S174 |
-| @changandsun | P20 | F26 | BOOK | S189 |
-| @changandsun | P20 | F38 | BOOK | S186 |
-| @changandsun | P20 | F38 | JOIN | S145, S149, S188 |
-| @changandsun | P20 | F39 | BOOK | S190 |
-| @changandsun | P20 | F39 | JOIN | S146 |
+| @sunyoon | P01 | F14 | STRONG | S119 |
+| @sunyoon | P01 | F33 | TEST | S173 |
+| @sunyoon | P01 | F34 | TEST | S168 |
+| @sunyoon | P03 | F07 | BALANCE | S50, S120 |
+| @sunyoon | P03 | F23 | BALANCE | S170 |
+| @sunyoon | P08 | F22 | WAITLIST | S175 |
+| @sunyoon | P09 | F07 | BALANCE | S122 |
+| @sunyoon | P11 | F31 | SOUP | S49 |
+| @sunyoon | P13 | F10 | SOUP | S123 |
+| @sunyoon | P13 | F18 | SOUP | S55, S172 |
+| @sunyoon | P15 | F04 | BREATH | S116 |
+| @sunyoon | P15 | F04 | SLEEP | S115 |
+| @sunyoon | P15 | F28 | STRONG | S43 |
+| @sunyoon | P16 | F07 | BEGIN | S41 |
+| @sunyoon | P16 | F07 | KNEES | S40 |
+| @sunyoon | P16 | F07 | STRONG | S42, S124 |
+| @sunyoon | P16 | F07 | TEST | S117 |
+| @sunyoon | P16 | F33 | FAMILY | S148 |
+| @sunyoon | P16 | F35 | BEGIN | S46, S118, S171 |
+| @sunyoon | P17 | F08 | BACK | S54, S126, S131 |
+| @sunyoon | P17 | F08 | BEGIN | S169 |
+| @sunyoon | P17 | F08 | SLEEP | S57 |
+| @sunyoon | P17 | F08 | STRONG | S51, S134 |
+| @sunyoon | P17 | F25 | KNEES | S130 |
+| @sunyoon | P17 | F27 | BEGIN | S60 |
+| @sunyoon | P17 | F27 | STRONG | S132 |
+| @sunyoon | P17 | F28 | BEGIN | S129 |
+| @sunyoon | P17 | F29 | BEGIN | S133 |
+| @sunyoon | P17 | F31 | GUT | S127 |
+| @sunyoon | P17 | F33 | FAMILY | S53 |
+| @sunyoon | P17 | F34 | BALANCE | S52, S125 |
+| @sunyoon | P17 | F34 | STRONG | S56 |
+| @sunyoon | P17 | F34 | TEST | S128 |
+| @sunyoon | P17 | F35 | BREATH | S58 |
+| @sunyoon | P18 | F26 | KNEES | S121 |
+| @sunyoon | P19 | F11 | STRONG | S147 |
+| @sunyoon | P20 | F08 | TEST | S59 |
+| @sunyoon | P20 | F10 | BOOK | S187 |
+| @sunyoon | P20 | F10 | JOIN | S150 |
+| @sunyoon | P20 | F10 | WAITLIST | S174 |
+| @sunyoon | P20 | F26 | BOOK | S189 |
+| @sunyoon | P20 | F38 | BOOK | S186 |
+| @sunyoon | P20 | F38 | JOIN | S145, S149, S188 |
+| @sunyoon | P20 | F39 | BOOK | S190 |
+| @sunyoon | P20 | F39 | JOIN | S146 |
 | @changyin.strength | P01 | F25 | STRONG | S81 |
 | @changyin.strength | P02 | F02 | KNEES | S15 |
 | @changyin.strength | P02 | F02 | STRONG | S78 |
@@ -279,20 +292,6 @@ F38 = Doors Open / Offer Card and F39 = Pinned Post were added for the launch we
 | @changyin.mobility | P09 | F05 | SLEEP | S11, S12, S92 |
 | @changyin.mobility | P15 | F03 | BACK | S13 |
 | @changyin.mobility | P15 | F28 | KNEES | S26 |
-| @sunyoon | P01 | F14 | STRONG | S119 |
-| @sunyoon | P03 | F07 | BALANCE | S50, S120 |
-| @sunyoon | P09 | F07 | BALANCE | S122 |
-| @sunyoon | P11 | F31 | SOUP | S49 |
-| @sunyoon | P13 | F10 | SOUP | S123 |
-| @sunyoon | P15 | F04 | BREATH | S116 |
-| @sunyoon | P15 | F04 | SLEEP | S115 |
-| @sunyoon | P15 | F28 | STRONG | S43 |
-| @sunyoon | P16 | F07 | BEGIN | S41 |
-| @sunyoon | P16 | F07 | KNEES | S40 |
-| @sunyoon | P16 | F07 | STRONG | S42, S124 |
-| @sunyoon | P16 | F07 | TEST | S117 |
-| @sunyoon | P16 | F35 | BEGIN | S46, S118 |
-| @sunyoon | P18 | F26 | KNEES | S121 |
 
 ## Paid ads: format × audience × offer
 

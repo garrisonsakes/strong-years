@@ -23,7 +23,7 @@ def test_slots_hashtags_trial_reels():
     assert PR.hashtag_ok("ig_reels", "#a #b #c #d #e") and not PR.hashtag_ok("ig_reels", "#a #b #c #d #e #f")
     assert not PR.hashtag_ok("threads", "#a #b")
     assert PR.ig_trial_reel("@changyin", -7) and PR.ig_trial_reel("@changyin", 6) and not PR.ig_trial_reel("@changyin", 7)
-    assert PR.ig_trial_reel("@sunyoon", 22) and not PR.ig_trial_reel("@sunyoon", 21)
+    assert PR.ig_trial_reel("@changyin.mobility", 15) and not PR.ig_trial_reel("@changyin.mobility", 14)
 
 
 def test_remix_top3_within_24h():

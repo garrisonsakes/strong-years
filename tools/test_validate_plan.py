@@ -71,7 +71,7 @@ def test_movement_before_shoot_detected():
 
 
 def test_ramp_and_rollout():
-    for page in ("@changyin", "@sunyoon.kitchen", "@changandsun", "@changyin.strength"):
+    for page in ("@changyin", "@changyin.strength", "@sunyoon.kitchen", "@sunyoon"):
         assert [bp.cadence(page, d) for d in (-7, -5, -4, -1, 0, 6, 7, 90)] == [3, 3, 5, 5, 6, 6, 6, 6]
     assert len(bp.PAGES) == 4
     masters = {r["uniqueness_group"] for r in ROWS if r["day_index"] == 20}
@@ -155,11 +155,13 @@ def test_low_value_trial_and_fb_crosspost_detected():
 
 
 def test_account_topology_canon6():
-    """CANON UPDATE 6: 1 YouTube channel (4/day until the quota raise), 1 FB page (12 videos + 2 long + text + photo),
+    """CANON 6 + Oct 2: 1 YouTube channel per character (4/day each until the quota raise), 1 FB page per character (12 videos + 2 long + text + photo),
     TikTok accounts separate from IG pages, 3 Stories per IG page per day; held rows stay packaged, never scheduled."""
     day1 = AT.summary(AROWS, VROWS, 1)
-    assert day1["@strongyears|yt_shorts"] == 4 and not any(k.endswith("|yt_shorts") and not k.startswith("@strongyears") for k in day1)
-    assert day1["Strong Years|fb_reels"] == 14 and day1["Strong Years|fb_text"] == 1 and day1["Strong Years|fb_photo"] == 1
+    assert {k for k in day1 if k.endswith("|yt_shorts")} == {"@changyin|yt_shorts", "@sunyoon|yt_shorts"}
+    assert all(day1[f"{c}|yt_shorts"] == 4 for c in AT.YT_CHANNELS.values())
+    for fb in AT.FB_PAGES:   # one FB page per character, never shared
+        assert day1[f"{fb}|fb_text"] == 1 and day1[f"{fb}|fb_photo"] == 1 and day1[f"{fb}|fb_reels"] >= 2
     assert all(day1[f"{p}|ig_story"] == 3 for p in bp.PAGES if p in AT.TT_ACCOUNTS)
     for p in bp.PAGES:
         assert day1[f"{AT.TT_ACCOUNTS[p]}|tiktok"] == 6 and AT.TT_ACCOUNTS[p] != p

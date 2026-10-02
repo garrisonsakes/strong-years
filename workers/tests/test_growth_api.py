@@ -73,7 +73,9 @@ def test_baselines_score_actions_allocate_round_trip(client):
                                              "pages": pages, "now": NOW.isoformat()}, headers=AUTH)
     assert r.status_code == 200
     out = r.json()
-    assert out["counts"]["remix_jobs"] == 1 and out["remix_jobs"][0]["target_page_id"] == "pg2"
+    # 90K views = 35x pg1's median: a relative breakout (POSTDB §8 rule 11) fans out to 6 variants over both pages
+    assert scores[0]["breakout"] and out["counts"]["remix_jobs"] == 6
+    assert {j["target_page_id"] for j in out["remix_jobs"]} == {"pg1", "pg2"}
     assert out["boost_candidates"][0]["status"] in ("needs_human", "flagged_human")      # no judge key in tests -> human
     r = client.post("/growth/allocate", json={"page": pages[0], "platform": "instagram", "cadence": 7, "seed": 1,
                                               "observations": [{"arm_key": "pillar=P01|grammar=IF_EVERY|format=F02|speaker=CHANG|length=M",

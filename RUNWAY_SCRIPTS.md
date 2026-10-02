@@ -31,14 +31,14 @@ Written for CANON UPDATE 2 (Oct 1 2026): organic-first, Shopify ebook front end,
 | S165 | @sunyoon.kitchen | SUN | F07 | P16 | H405 | 46 | 95 | BEGIN | E29, E40 | DEMO |
 | S166 | @sunyoon.kitchen | SUN | F31 | P11 | H406 | 47 | 92 | SOUP | E28, E52 | OBJ3 WATCH DEMO KITCHEN_SERIES · Sun Checks Your Kitchen #21: tofu |
 | S167 | @sunyoon.kitchen | SUN | F26 | P20 | H407 | 45 | 105 | WAITLIST | none (opinion/offer) | DEMO |
-| S168 | @changandsun | DUO | F34 | P01 | H408 | 48 | 94 | TEST | E49 | OBJ3 WATCH TEST_NOW DEMO · Loser Does Dishes |
-| S169 | @changandsun | DUO | F08 | P17 | H409 | 44 | 78 | BEGIN | none (opinion/offer) | SHARE |
-| S170 | @changandsun | DUO | F23 | P03 | H410 | 47 | 102 | BALANCE | E50 | IF_EVERY DEMO SHARE |
-| S171 | @changandsun | DUO | F35 | P16 | H411 | 45 | 86 | BEGIN | E37 | SHARE |
-| S172 | @changandsun | DUO | F18 | P13 | H412 | 46 | 84 | SOUP | E28, E52 | OBJ3 DEMO |
-| S173 | @changandsun | DUO | F33 | P01 | H413 | 46 | 91 | TEST | E49 | SHARE TEST_NOW |
-| S174 | @changandsun | DUO | F10 | P20 | H414 | 46 | 103 | WAITLIST | none (opinion/offer) | SHARE |
-| S175 | @changandsun | DUO | F22 | P08 | H415 | 47 | 93 | WAITLIST | E17 | IF_EVERY DEMO |
+| S168 | @sunyoon | DUO | F34 | P01 | H408 | 48 | 94 | TEST | E49 | OBJ3 WATCH TEST_NOW DEMO · Loser Does Dishes |
+| S169 | @sunyoon | DUO | F08 | P17 | H409 | 44 | 78 | BEGIN | none (opinion/offer) | SHARE |
+| S170 | @sunyoon | DUO | F23 | P03 | H410 | 47 | 102 | BALANCE | E50 | IF_EVERY DEMO SHARE |
+| S171 | @sunyoon | DUO | F35 | P16 | H411 | 45 | 86 | BEGIN | E37 | SHARE |
+| S172 | @sunyoon | DUO | F18 | P13 | H412 | 46 | 84 | SOUP | E28, E52 | OBJ3 DEMO |
+| S173 | @sunyoon | DUO | F33 | P01 | H413 | 46 | 91 | TEST | E49 | SHARE TEST_NOW |
+| S174 | @sunyoon | DUO | F10 | P20 | H414 | 46 | 103 | WAITLIST | none (opinion/offer) | SHARE |
+| S175 | @sunyoon | DUO | F22 | P08 | H415 | 47 | 93 | WAITLIST | E17 | IF_EVERY DEMO |
 | S176 | @changyin | CHANG | F38 | P20 | H416 | 50 | 96 | BOOK | none (opinion/offer) | OBJ3 LAUNCH DEMO |
 | S177 | @changyin | CHANG | F38 | P20 | H417 | 52 | 109 | JOIN | none (opinion/offer) | OBJ3 LAUNCH |
 | S178 | @changyin | CHANG | F01 | P02 | H418 | 50 | 107 | BOOK | E01 | LAUNCH DEMO |
@@ -49,11 +49,11 @@ Written for CANON UPDATE 2 (Oct 1 2026): organic-first, Shopify ebook front end,
 | S183 | @sunyoon.kitchen | SUN | F07 | P16 | H423 | 46 | 97 | BOOK | E28 | LAUNCH |
 | S184 | @sunyoon.kitchen | SUN | F10 | P20 | H424 | 54 | 118 | JOIN | none (opinion/offer) | LAUNCH |
 | S185 | @sunyoon.kitchen | SUN | F33 | P16 | H425 | 48 | 97 | FAMILY | none (opinion/offer) | OBJ3 LAUNCH SHARE |
-| S186 | @changandsun | DUO | F38 | P20 | H426 | 57 | 117 | BOOK | none (opinion/offer) | OBJ3 LAUNCH |
-| S187 | @changandsun | DUO | F10 | P20 | H427 | 48 | 100 | BOOK | none (opinion/offer) | IF_EVERY LAUNCH |
-| S188 | @changandsun | DUO | F38 | P20 | H428 | 55 | 108 | JOIN | none (opinion/offer) | OBJ3 LAUNCH |
-| S189 | @changandsun | DUO | F26 | P20 | H429 | 54 | 116 | BOOK | none (opinion/offer) | OBJ3 LAUNCH |
-| S190 | @changandsun | DUO | F39 | P20 | H430 | 50 | 91 | BOOK | none (opinion/offer) | LAUNCH |
+| S186 | @sunyoon | DUO | F38 | P20 | H426 | 57 | 117 | BOOK | none (opinion/offer) | OBJ3 LAUNCH |
+| S187 | @sunyoon | DUO | F10 | P20 | H427 | 48 | 100 | BOOK | none (opinion/offer) | IF_EVERY LAUNCH |
+| S188 | @sunyoon | DUO | F38 | P20 | H428 | 55 | 108 | JOIN | none (opinion/offer) | OBJ3 LAUNCH |
+| S189 | @sunyoon | DUO | F26 | P20 | H429 | 54 | 116 | BOOK | none (opinion/offer) | OBJ3 LAUNCH |
+| S190 | @sunyoon | DUO | F39 | P20 | H430 | 50 | 91 | BOOK | none (opinion/offer) | LAUNCH |
 
 ---
 
@@ -702,7 +702,7 @@ The waitlist is free: one email when Strong Years opens, plus at most 3 launch e
 ---
 
 ## S168: Loser does dishes: the chair test
-**Page** @changandsun · **Speaker** DUO · **Format** F34 · **Pillar** P01 (Strength proof & tests) · **Hook** H408 · **Target** 48 s · **Spoken words** 94 · **CTA** `TEST` → Strength Age test (quiz)
+**Page** @sunyoon · **Speaker** DUO · **Format** F34 · **Pillar** P01 (Strength proof & tests) · **Hook** H408 · **Target** 48 s · **Spoken words** 94 · **CTA** `TEST` → Strength Age test (quiz)
 
 **Hook line:** "Thirty-second chair test. Him versus me. Watch his face when I win."
 
@@ -734,7 +734,7 @@ Comment TEST for the free 3-minute Strength Age test.
 Couple challenge: 30-second chair stand, chairs against the wall, arms crossed. Normal ranges by age and sex come from the Senior Fitness Test norms (7,183 US adults aged 60–94). Loser does dishes.
 Chest pain or dizziness? Stop, sit and call your doctor. Tell us both your numbers.
 ```
-**Hashtags:** IG/FB #couplechallenge #chairtest #changandsun #over60 · TikTok #couplechallenge #over60 #chairtest #changandsun  
+**Hashtags:** IG/FB #couplechallenge #chairtest #sunyoon #over60 · TikTok #couplechallenge #over60 #chairtest #sunyoon  
 **YouTube Shorts title:** Chair Test, Husband vs Wife (Loser Does Dishes)  
 **Evidence:** E49: Senior Fitness Test norms (A); Sun's range stated approximately as a population norm.  
 **Production:** Running bit: Loser does dishes; NO MIRROR FLEXING (oven door) · Wink: no · Thumbnail: "LOSER DOES DISHES" · Music: playful swing
@@ -742,7 +742,7 @@ Chest pain or dizziness? Stop, sit and call your doctor. Tell us both your numbe
 ---
 
 ## S169: He flexes in every shiny surface
-**Page** @changandsun · **Speaker** DUO · **Format** F08 · **Pillar** P17 (Couple life & relationships) · **Hook** H409 · **Target** 44 s · **Spoken words** 78 · **CTA** `BEGIN` → Where should I begin? start menu
+**Page** @sunyoon · **Speaker** DUO · **Format** F08 · **Pillar** P17 (Couple life & relationships) · **Hook** H409 · **Target** 44 s · **Spoken words** 78 · **CTA** `BEGIN` → Where should I begin? start menu
 
 **Hook line:** "If your husband flexes in every shiny surface, you're married to this man."
 
@@ -771,7 +771,7 @@ Comment BEGIN for the where-to-start menu.
 Fifty years of fictional marriage. Microwave, car window, her glasses, a spoon. Tag the flexer in your house.
 Chang & Sun are AI characters; the sign on the oven is very real.
 ```
-**Hashtags:** IG/FB #marriagehumor #changandsun #over60 #couplegoals · TikTok #marriagehumor #over60 #couplegoals #changandsun  
+**Hashtags:** IG/FB #marriagehumor #sunyoon #over60 #couplegoals · TikTok #marriagehumor #over60 #couplegoals #sunyoon  
 **YouTube Shorts title:** He Flexes in Every Shiny Surface (50 Years Married)  
 **Evidence:** none (opinion content, no health claim): Couple comedy (P17); wink #1 rotated.  
 **Production:** Running bit: NO MIRROR FLEXING; the hidden kettlebell; Hips. Now. · Wink: yes · Thumbnail: "HE FLEXES IN EVERYTHING" · Music: playful swing
@@ -779,7 +779,7 @@ Chang & Sun are AI characters; the sign on the oven is very real.
 ---
 
 ## S170: Dishes on one leg, together
-**Page** @changandsun · **Speaker** DUO · **Format** F23 · **Pillar** P03 (Balance & steady feet) · **Hook** H410 · **Target** 47 s · **Spoken words** 102 · **CTA** `BALANCE` → Steady Feet + the 10-second test
+**Page** @sunyoon · **Speaker** DUO · **Format** F23 · **Pillar** P03 (Balance & steady feet) · **Hook** H410 · **Target** 47 s · **Spoken words** 102 · **CTA** `BALANCE` → Steady Feet + the 10-second test
 
 **Hook line:** "If you do the dishes every night, take turns standing on one leg at the sink."
 
@@ -810,7 +810,7 @@ Comment BALANCE for Steady Feet + the 10-second test.
 Dishes on one leg: fingers on the sink edge, lift one foot a little, 10 seconds, switch. Standing on one leg is the 4th stage of the CDC STEADI 4-Stage Balance Test.
 Dizzy spells or a new hip? Keep both feet down and tell your doctor. Send this to whoever dries.
 ```
-**Hashtags:** IG/FB #balancetraining #couplechallenge #changandsun #over60 · TikTok #balanceexercises #couplegoals #over60 #changandsun  
+**Hashtags:** IG/FB #balancetraining #couplechallenge #sunyoon #over60 · TikTok #balanceexercises #couplegoals #over60 #sunyoon  
 **YouTube Shorts title:** Do the Dishes on One Leg (Together)  
 **Evidence:** E50: STEADI tool (A) described as a clinic check; no outcome claim.  
 **Production:** Running bit: Towel flick · Wink: no · Thumbnail: "DISHES ON ONE LEG" · Music: playful swing
@@ -818,7 +818,7 @@ Dizzy spells or a new hip? Keep both feet down and tell your doctor. Send this t
 ---
 
 ## S171: Call one person before dinner
-**Page** @changandsun · **Speaker** DUO · **Format** F35 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** H411 · **Target** 45 s · **Spoken words** 86 · **CTA** `BEGIN` → Where should I begin? start menu
+**Page** @sunyoon · **Speaker** DUO · **Format** F35 · **Pillar** P16 (Blunt truths: aging, mindset, women 60+) · **Hook** H411 · **Target** 45 s · **Spoken words** 86 · **CTA** `BEGIN` → Where should I begin? start menu
 
 **Hook line:** "Not an app, not a gym. Call one person before dinner tonight."
 
@@ -846,7 +846,7 @@ Comment BEGIN for the where-to-start menu.
 A meta-analysis of 148 studies (308,849 people) found stronger social relationships were linked with better health outcomes (Holt-Lunstad et al., 2010). The call can be five minutes: 'I was thinking about you.'
 Feeling alone most days? Tell your doctor; it counts as health. Type a first name below, then call them.
 ```
-**Hashtags:** IG/FB #friendship #agingwell #changandsun #callyourmother · TikTok #friendship #over60 #changandsun #callsomeone  
+**Hashtags:** IG/FB #friendship #agingwell #sunyoon #callyourmother · TikTok #friendship #over60 #sunyoon #callsomeone  
 **YouTube Shorts title:** Not an App. Not a Gym. Call One Person Tonight.  
 **Evidence:** E37: Holt-Lunstad (C) stated as 'health outcomes' association; no survival wording.  
 **Production:** Running bit: Frank (offscreen) · Wink: no · Thumbnail: "CALL ONE PERSON" · Music: soft piano
@@ -854,7 +854,7 @@ Feeling alone most days? Tell your doctor; it counts as health. Type a first nam
 ---
 
 ## S172: Fourteen dumplings: the protein count
-**Page** @changandsun · **Speaker** DUO · **Format** F18 · **Pillar** P13 (Protein & muscle food) · **Hook** H412 · **Target** 46 s · **Spoken words** 84 · **CTA** `SOUP` → Sun Yoon's Three Soups
+**Page** @sunyoon · **Speaker** DUO · **Format** F18 · **Pillar** P13 (Protein & muscle food) · **Hook** H412 · **Target** 46 s · **Spoken words** 84 · **CTA** `SOUP` → Sun Yoon's Three Soups
 
 **Hook line:** "Fourteen dumplings. He says twelve. Let's count the protein, not the dumplings."
 
@@ -883,7 +883,7 @@ Comment SOUP for Sun Yoon's Three Soups.
 Pork dumplings carry roughly 2–3 g protein each (USDA, approximate). PROT-AGE suggests about 25–30 g protein per meal for adults over 65, so the honest count was about 12, plus greens. Dumplings are salty: dip once.
 Kidney disease? Ask your doctor for your protein number.
 ```
-**Hashtags:** IG/FB #dumplings #highprotein #changandsun #koreanfood · TikTok #dumplings #couplegoals #highprotein #changandsun  
+**Hashtags:** IG/FB #dumplings #highprotein #sunyoon #koreanfood · TikTok #dumplings #couplegoals #highprotein #sunyoon  
 **YouTube Shorts title:** Fourteen Dumplings? Let's Count the Protein  
 **Evidence:** E28, E52: PROT-AGE (A); USDA ranges approximate.  
 **Production:** Running bit: Dumpling count · Wink: no · Thumbnail: "14. HE SAYS 12." · Music: playful swing
@@ -891,7 +891,7 @@ Kidney disease? Ask your doctor for your protein number.
 ---
 
 ## S173: Do the chair test with your parents Sunday
-**Page** @changandsun · **Speaker** DUO · **Format** F33 · **Pillar** P01 (Strength proof & tests) · **Hook** H413 · **Target** 46 s · **Spoken words** 91 · **CTA** `TEST` → Strength Age test (quiz)
+**Page** @sunyoon · **Speaker** DUO · **Format** F33 · **Pillar** P01 (Strength proof & tests) · **Hook** H413 · **Target** 46 s · **Spoken words** 91 · **CTA** `TEST` → Strength Age test (quiz)
 
 **Hook line:** "Sunday video call with your mom? Do the chair test together. She'll say she's fine."
 
@@ -922,7 +922,7 @@ Comment TEST for the free 3-minute Strength Age test.
 Do the 30-second chair stand together on a video call: sturdy chair against a wall, arms crossed, someone nearby the first time. Normal ranges by age come from the Senior Fitness Test norms (7,183 US adults aged 60–94).
 Chest pain or dizziness? Stop, sit and call the doctor. Send this to your mom.
 ```
-**Hashtags:** IG/FB #agingparents #chairtest #changandsun #familytime · TikTok #agingparents #over60 #chairtest #changandsun  
+**Hashtags:** IG/FB #agingparents #chairtest #sunyoon #familytime · TikTok #agingparents #over60 #chairtest #sunyoon  
 **YouTube Shorts title:** Do the Chair Test With Your Parents This Sunday  
 **Evidence:** E49: Senior Fitness Test norms (A).  
 **Production:** Running bit: Phone calls from Mina · Wink: no · Thumbnail: "SUNDAY CALL TEST" · Music: warm acoustic
@@ -930,7 +930,7 @@ Chest pain or dizziness? Stop, sit and call the doctor. Send this to your mom.
 ---
 
 ## S174: 'Is it another course I'll never open?'
-**Page** @changandsun · **Speaker** DUO · **Format** F10 · **Pillar** P20 (Behind the AI / trust) · **Hook** H414 · **Target** 46 s · **Spoken words** 103 · **CTA** `WAITLIST` → Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)
+**Page** @sunyoon · **Speaker** DUO · **Format** F10 · **Pillar** P20 (Behind the AI / trust) · **Hook** H414 · **Target** 46 s · **Spoken words** 103 · **CTA** `WAITLIST` → Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)
 
 **Hook line:** "'Is it another course I'll never open?' Short version: no. Here's what it is."
 
@@ -959,7 +959,7 @@ Comment WAITLIST for the free waitlist link and the day-1 session.
 What Strong Years is: a new 8–12 minute session with Chang every morning, a chair version of everything, 4 levels, Sun Yoon's recipes every Sunday and a strength number you retest monthly. Every price and term is shown on one page before checkout.
 The waitlist is free: one email when Strong Years opens, plus at most 3 launch emails in the 72 hours after. No card. Unsubscribe in one click.
 ```
-**Hashtags:** IG/FB #strongyears #changandsun #over60fitness #homeworkout · TikTok #strongyears #over60 #homeworkout #changandsun  
+**Hashtags:** IG/FB #strongyears #sunyoon #over60fitness #homeworkout · TikTok #strongyears #over60 #homeworkout #sunyoon  
 **YouTube Shorts title:** Another Course You'll Never Open? Here's What It Is  
 **Evidence:** none (opinion content, no health claim): Runway product explainer (P20); no claims.  
 **Production:** Running bit: Mandu the cat · Wink: no · Thumbnail: "ANOTHER COURSE? NO." · Music: playful swing
@@ -967,7 +967,7 @@ The waitlist is free: one email when Strong Years opens, plus at most 3 launch e
 ---
 
 ## S175: One minute of tai chi while the coffee brews
-**Page** @changandsun · **Speaker** DUO · **Format** F22 · **Pillar** P08 (Tai chi / qigong / gentle yoga) · **Hook** H415 · **Target** 47 s · **Spoken words** 93 · **CTA** `WAITLIST` → Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)
+**Page** @sunyoon · **Speaker** DUO · **Format** F22 · **Pillar** P08 (Tai chi / qigong / gentle yoga) · **Hook** H415 · **Target** 47 s · **Spoken words** 93 · **CTA** `WAITLIST` → Free waitlist (email, optional web push) + the day-1 starter session now (FUNNEL.md §4.18; runway mode only)
 
 **Hook line:** "If you wait for the coffee every morning, give me one minute of tai chi."
 
@@ -999,7 +999,7 @@ One coffee minute: slow tai chi weight shifts, knees soft, fence within reach. M
 Dizzy spells or recent hip surgery? Ask your doctor first.
 The waitlist is free: one email when Strong Years opens, plus at most 3 launch emails in the 72 hours after. No card. Unsubscribe in one click.
 ```
-**Hashtags:** IG/FB #taichi #qigong #morningroutine #changandsun · TikTok #taichi #over60 #morningroutine #changandsun  
+**Hashtags:** IG/FB #taichi #qigong #morningroutine #sunyoon · TikTok #taichi #over60 #morningroutine #sunyoon  
 **YouTube Shorts title:** While the Coffee Brews: One Minute of Tai Chi  
 **Evidence:** E17: Qigong meta (A−) at grade; cultural vocabulary per D-07.  
 **Production:** Wink: no · Thumbnail: "COFFEE MINUTE" · Music: soft acoustic
@@ -1388,7 +1388,7 @@ Gift: 3 months $49 or 12 months $119, prepaid. It starts the day they open it, e
 ---
 
 ## S186: Doors open: the honest version
-**Page** @changandsun · **Speaker** DUO · **Format** F38 · **Pillar** P20 (Behind the AI / trust) · **Hook** H426 · **Target** 57 s · **Spoken words** 117 · **CTA** `BOOK` → Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)
+**Page** @sunyoon · **Speaker** DUO · **Format** F38 · **Pillar** P20 (Behind the AI / trust) · **Hook** H426 · **Target** 57 s · **Spoken words** 117 · **CTA** `BOOK` → Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)
 
 **Hook line:** "Doors open today. Here's the honest version, because he talks too slowly."
 
@@ -1419,7 +1419,7 @@ Doors are open. The honest version, start to finish.
 The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's Strong Kitchen (PDF). {{EBOOK_PRICE}} one-time, not a subscription, yours to keep. Checkout is on our Shopify store; the link comes in the DM.
 After checkout you'll see one optional offer, the Founding Membership: {{FOUNDING_PRICE}}/month. If you add it, {{FOUNDING_PRICE}} is charged that day for your first month, then it renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.
 ```
-**Hashtags:** IG/FB #strongyears #changandsun #foundingmember #over60 · TikTok #strongyears #changandsun #foundingmember #over60  
+**Hashtags:** IG/FB #strongyears #sunyoon #foundingmember #over60 · TikTok #strongyears #sunyoon #foundingmember #over60  
 **YouTube Shorts title:** Doors Open: The Honest Version (Books + Founding Offer)  
 **Evidence:** none (opinion content, no health claim): Day-0 announcement; full CANON UPDATE 2 terms.  
 **Production:** Running bit: Short version: (Sun finishes his story) · Wink: no · Thumbnail: "THE HONEST VERSION" · Music: playful swing
@@ -1427,7 +1427,7 @@ After checkout you'll see one optional offer, the Founding Membership: {{FOUNDIN
 ---
 
 ## S187: Who should NOT buy our books
-**Page** @changandsun · **Speaker** DUO · **Format** F10 · **Pillar** P20 (Behind the AI / trust) · **Hook** H427 · **Target** 48 s · **Spoken words** 100 · **CTA** `BOOK` → Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)
+**Page** @sunyoon · **Speaker** DUO · **Format** F10 · **Pillar** P20 (Behind the AI / trust) · **Hook** H427 · **Target** 48 s · **Spoken words** 100 · **CTA** `BOOK` → Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)
 
 **Hook line:** "If you already lift three times every week, don't buy our books. Really."
 
@@ -1456,7 +1456,7 @@ Comment BOOK for the link and what's inside.
 Who shouldn't buy: people already lifting 3×/week (the Reset is a beginning) and anyone whose doctor set a special diet (their plan comes first). Who it's for: people starting out who want a chair version and the study next to every move.
 The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's Strong Kitchen (PDF). {{EBOOK_PRICE}} one-time, not a subscription, yours to keep. Checkout is on our Shopify store; the link comes in the DM.
 ```
-**Hashtags:** IG/FB #strongyears #changandsun #honestanswers #over60 · TikTok #strongyears #changandsun #honest #over60  
+**Hashtags:** IG/FB #strongyears #sunyoon #honestanswers #over60 · TikTok #strongyears #sunyoon #honest #over60  
 **YouTube Shorts title:** Who Should NOT Buy Our Books (Honestly)  
 **Evidence:** none (opinion content, no health claim): Anti-pressure fit post; no claims.  
 **Production:** Wink: no · Thumbnail: "DON'T BUY THIS IF…" · Music: playful swing
@@ -1464,7 +1464,7 @@ The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's St
 ---
 
 ## S188: Founding seats: what 'locked' means
-**Page** @changandsun · **Speaker** DUO · **Format** F38 · **Pillar** P20 (Behind the AI / trust) · **Hook** H428 · **Target** 55 s · **Spoken words** 108 · **CTA** `JOIN` → Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)
+**Page** @sunyoon · **Speaker** DUO · **Format** F38 · **Pillar** P20 (Behind the AI / trust) · **Hook** H428 · **Target** 55 s · **Spoken words** 108 · **CTA** `JOIN` → Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)
 
 **Hook line:** "'Locked' price. Locked how? She made me explain it properly."
 
@@ -1494,7 +1494,7 @@ Comment JOIN for the founding-member link and full terms.
 What 'locked' means: your founding price doesn't go up for as long as you stay subscribed, pauses included. Cancel and come back later and it's the price on that day.
 Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.
 ```
-**Hashtags:** IG/FB #strongyears #foundingmember #changandsun #honestanswers · TikTok #strongyears #foundingmember #changandsun #honest  
+**Hashtags:** IG/FB #strongyears #foundingmember #sunyoon #honestanswers · TikTok #strongyears #foundingmember #sunyoon #honest  
 **YouTube Shorts title:** Founding Price 'Locked'? Here's Exactly What That Means  
 **Evidence:** none (opinion content, no health claim): Terms clarity post (no lifetime promise).  
 **Production:** Running bit: The hidden kettlebell (she pockets the key) · Wink: no · Thumbnail: "LOCKED HOW?" · Music: warm acoustic
@@ -1502,7 +1502,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 ---
 
 ## S189: Your questions, launch week
-**Page** @changandsun · **Speaker** DUO · **Format** F26 · **Pillar** P20 (Behind the AI / trust) · **Hook** H429 · **Target** 54 s · **Spoken words** 116 · **CTA** `BOOK` → Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)
+**Page** @sunyoon · **Speaker** DUO · **Format** F26 · **Pillar** P20 (Behind the AI / trust) · **Hook** H429 · **Target** 54 s · **Spoken words** 116 · **CTA** `BOOK` → Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)
 
 **Hook line:** "Your questions from launch week. Real questions. No fake reviews. Let's go."
 
@@ -1533,7 +1533,7 @@ Launch-week questions: you need a sturdy chair and a counter; yes, you can print
 The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's Strong Kitchen (PDF). {{EBOOK_PRICE}} one-time, not a subscription, yours to keep. Checkout is on our Shopify store; the link comes in the DM.
 After checkout you'll see one optional offer, the Founding Membership: {{FOUNDING_PRICE}}/month. If you add it, {{FOUNDING_PRICE}} is charged that day for your first month, then it renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.
 ```
-**Hashtags:** IG/FB #strongyears #changandsun #faq #over60 · TikTok #strongyears #changandsun #faq #over60  
+**Hashtags:** IG/FB #strongyears #sunyoon #faq #over60 · TikTok #strongyears #sunyoon #faq #over60  
 **YouTube Shorts title:** Launch Week: Your Questions, Answered  
 **Evidence:** none (opinion content, no health claim): FAQ from real question themes (no quotes attributed to people).  
 **Production:** Wink: yes · Thumbnail: "YOUR QUESTIONS" · Music: playful swing
@@ -1541,7 +1541,7 @@ After checkout you'll see one optional offer, the Founding Membership: {{FOUNDIN
 ---
 
 ## S190: End of launch week: nothing jumps at midnight
-**Page** @changandsun · **Speaker** DUO · **Format** F39 · **Pillar** P20 (Behind the AI / trust) · **Hook** H430 · **Target** 50 s · **Spoken words** 91 · **CTA** `BOOK` → Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)
+**Page** @sunyoon · **Speaker** DUO · **Format** F39 · **Pillar** P20 (Behind the AI / trust) · **Hook** H430 · **Target** 50 s · **Spoken words** 91 · **CTA** `BOOK` → Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)
 
 **Hook line:** "Not a countdown, not a midnight price jump. Launch week ends. Here's what changes."
 
@@ -1571,7 +1571,7 @@ Launch week is over and nothing jumps at midnight. The founding price stays open
 The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's Strong Kitchen (PDF). {{EBOOK_PRICE}} one-time, not a subscription, yours to keep. Checkout is on our Shopify store; the link comes in the DM.
 After checkout you'll see one optional offer, the Founding Membership: {{FOUNDING_PRICE}}/month. If you add it, {{FOUNDING_PRICE}} is charged that day for your first month, then it renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.
 ```
-**Hashtags:** IG/FB #strongyears #changandsun #norush #over60 · TikTok #strongyears #changandsun #norush #over60  
+**Hashtags:** IG/FB #strongyears #sunyoon #norush #over60 · TikTok #strongyears #sunyoon #norush #over60  
 **YouTube Shorts title:** End of Launch Week: No Countdown, Here's What Changes  
 **Evidence:** none (opinion content, no health claim): Anti-fake-urgency post; pins after launch week.  
 **Production:** Wink: no · Thumbnail: "NO COUNTDOWN" · Music: warm acoustic

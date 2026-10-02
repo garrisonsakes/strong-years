@@ -86,15 +86,32 @@ DEFAULTS: dict = {
             "LOSER": {"max_score": -1.0, "min_horizon_h": 24, "min_views_or_age": True},
             "breakout_views": 500000,     # PIPELINE §7.2 breakout: >= 500K views -> WINNER at >= 3 h
             "breakout_min_horizon_h": 3,
+            # POSTDB_FINDINGS §8 rule 11: 3 posts made 80%+ of Yang Mun's views; a post at >= 5x its page's median
+            # views is a breakout on THAT page (small pages never reach 500K) -> remix it hard within 24 h
+            "breakout_rel_median": 5.0,
+            "breakout_rel_min_views": 1000,
+            "breakout_rel_min_horizon_h": 6,
         },
         # bandit reward = clip(w_v * Phi(score / scale) + w_c * conversion_norm, 0, 1)
         # VIRALITY_SYSTEM.md §4: reward = w_ss * Phi(z_share_save / scale) + w_v * Phi(score / scale) + w_c * conversion
         "reward": {"share_save_weight": 0.45, "velocity_weight": 0.25, "conversion_weight": 0.3, "score_scale": 1.5,
                    "target_optins_per_1k": 2.0, "target_buyers_per_1k": 0.5, "target_members_per_1k": 0.2},
     },
+    # ---------------------------------------------------------------- account health (growth/health.py)
+    # POSTDB_FINDINGS §2 Rule 0: Yang Mun's identical creative did 40-100x better on a healthy account; TikTok median
+    # reach fell 97% after a 279-day gap with like rate unchanged. Watch every account's distribution, not the creative.
+    "health": {
+        "recent_days": 7, "prior_days": 21, "min_posts_recent": 5, "min_posts_prior": 8,
+        "suppressed_ratio": 0.30,         # recent median views / prior median below this = SUPPRESSED
+        "watch_ratio": 0.60,              # below this = WATCH
+        "sibling_ratio": 0.20,            # recent median below 20% of the same-platform sibling median = SUPPRESSED
+        "engagement_stable_band": 0.35,   # like rate within +-35% of prior while views collapse = distribution, not creative
+        "max_gap_h": 36,                  # no post for 36 h = DORMANCY_RISK (the 279-day gap preceded the collapse)
+    },
     # ---------------------------------------------------------------- winner actions
     "remix": {
         "variants_per_winner": 3,         # N remix requests for OTHER pages per winner [C]
+        "variants_per_breakout": 6,       # POSTDB §8 rule 11: 5-10 new variants (new object, same grammar) per breakout
         "max_per_target_page_per_day": 1,
         "min_stagger_h": 48,              # PIPELINE §2.3 / CONTENT_SYSTEM §8.2
         "priority": 90,                   # briefs.priority for remix of winners (PIPELINE)

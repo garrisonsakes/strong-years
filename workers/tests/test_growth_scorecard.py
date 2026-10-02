@@ -16,7 +16,7 @@ from growth import scorecard as SC
 
 NOW = datetime(2026, 10, 20, 12, tzinfo=timezone.utc)
 PAGES = [{"id": f"pg{i}", "slug": s, "status": "active", "locale": "en-US"} for i, s in
-         enumerate(["@changyin", "@sunyoon.kitchen", "@changandsun", "@changyin.strength"])]
+         enumerate(["@changyin", "@sunyoon.kitchen", "@sunyoon", "@changyin.strength"])]
 
 
 def _read(**kw):

@@ -39,7 +39,7 @@ RUNNING_BITS: tuple[str, ...] = (
 
 # CONTENT_SYSTEM §8.1: page slugs -> lead speakers (defaults; a request's page profile overrides)
 PAGE_SPEAKERS: dict[str, tuple[str, ...]] = {
-    "changyin": ("CHANG", "DUO"), "sunyoon-kitchen": ("SUN", "DUO"), "changandsun": ("DUO", "CHANG", "SUN"),
-    "changyin-strength": ("CHANG",), "changyin-mobility": ("CHANG",), "sunyoon": ("SUN",),
+    "changyin": ("CHANG", "DUO"), "sunyoon-kitchen": ("SUN", "DUO"), "sunyoon": ("SUN", "DUO", "CHANG"),
+    "changyin-strength": ("CHANG",), "changyin-mobility": ("CHANG",),
     "changyin-espanol": ("CHANG",),
 }

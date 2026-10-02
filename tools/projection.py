@@ -36,7 +36,7 @@ def mix_full(rung: bool) -> dict:
     return {"ig": p * 26, "stories": p * 3, "thx": p * 18, "tt": p * 26, "fb": 32 if rung else 16, "yt": 4}
 
 
-# tools/topology.py D1..D7 (4 IG, 4 TT, 1 FB, 1 YT), then canon 6 steady state
+# tools/topology.py D1..D7 per FB page / YT channel (4 IG, 4 TT; FB and YT doubled per character in run()), then steady state
 RAMP = {1: {"ig": 8, "stories": 4, "thx": 20, "tt": 4, "fb": 3, "yt": 1},
         2: {"ig": 20, "stories": 8, "thx": 36, "tt": 12, "fb": 6, "yt": 2},
         3: {"ig": 36, "stories": 12, "thx": 48, "tt": 24, "fb": 9, "yt": 3},
@@ -59,6 +59,8 @@ def run(name: str, days: int = 90) -> list[dict]:
         m = RAMP[d] if (s["ramp"] and d in RAMP) else mix_full(rung)
         if not s["ramp"] and d >= 8:
             m = dict(m, yt=6)
+        if s["ramp"]:   # Oct 2: one FB page and one YT channel PER CHARACTER (Chang and Sun never share an account)
+            m = dict(m, fb=m["fb"] * 2, yt=m["yt"] * 2)
         vpv = views_per_video(d)
         v_ig = m["ig"] * vpv
         v_st = 0.08 * v_ig

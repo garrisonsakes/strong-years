@@ -35,7 +35,9 @@ export function cleanKeywordParam(t: string | null | undefined): string | null {
 const PAGE_ALIASES: Record<string, string> = {
   cy: "changyin",
   sk: "sunyoon.kitchen",
-  cs: "changandsun",
+  sy: "sunyoon",
+  st: "changyin.strength",
+  cs: "sunyoon", // retired duo page alias: old links land on Sun's main page
 };
 export function cleanPageParam(p: string | null | undefined): string | null {
   if (!p) return null;
