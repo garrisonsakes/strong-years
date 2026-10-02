@@ -216,8 +216,28 @@ DEFAULTS: dict = {
         "pre_gate_cold_daily_usd": 0,     # 0 = no cold budget before §11 passes. BLITZ §12 R7 runs $3K/day flat on
                                           # days 1-10 to buy the gate's numbers: set 3000 to allow that [C]
         "max_abs_usd": 1_000_000,         # sanity bound: any money input above this is treated as invalid
+        # CANON UPDATE 5 (BLITZ.md §14): NO paid media of any kind until TRAILING-7-DAY RETAINED MRR >= the gate
+        # (retained = 50% of first-cycle members + every renewed member, x $25 x 0.95; days with no report count as $0).
+        "spend_gate": {"retained_mrr_usd": 30000,     # client may RAISE it (to $50K); validate() refuses anything lower
+                       "window_days": 7},
+        # After the gate: all paid spend per day <= cap_share x trailing-7-day retained MRR / 30 - fixed - generation
+        # (the day's fixed tools + generation cost, reported in state.costs; unknown cost -> no paid room at all).
+        "all_in_cap": {"share_of_mrr": 0.25},          # config 0.20-0.30
+        # Scale-on-MRR ladder (CANON UPDATE 5). One row per milestone; the allocator's cadence (= masters_per_page) and
+        # the plan builder read the row governor.scale_plan() returns. Evaluated on trailing-7-day RETAINED MRR. The
+        # ladder only steps UP automatically; a reach anomaly pauses it (no step); stepping down is a human edit.
+        # Same rows as tools/organic_engine.py SC_LADDER (tools/test_scale_engine.py keeps them equal).
+        "scale_rules": [
+            {"retained_mrr_usd": 0, "pages_open": 4, "masters_per_page": 6, "trial_reels_per_page": 20, "generation_tier": "standard"},
+            {"retained_mrr_usd": 10000, "pages_open": 5, "masters_per_page": 8, "trial_reels_per_page": 20, "generation_tier": "standard"},
+            {"retained_mrr_usd": 30000, "pages_open": 7, "masters_per_page": 9, "trial_reels_per_page": 20, "generation_tier": "standard"},
+            {"retained_mrr_usd": 50000, "pages_open": 7, "masters_per_page": 9, "trial_reels_per_page": 20, "generation_tier": "standard"},
+            {"retained_mrr_usd": 100000, "pages_open": 7, "masters_per_page": 9, "trial_reels_per_page": 20, "generation_tier": "pro"},
+        ],
     },
 }
+
+GENERATION_TIERS = ("standard", "pro")          # ordered: a ladder row may never lower the tier
 
 
 def _deep_merge(base: dict, over: dict) -> dict:
@@ -274,7 +294,51 @@ def validate(cfg: dict) -> dict:
               "initial_daily_usd", "max_abs_usd"):
         if num(g[k], lo=0) is None:
             raise ValueError(f"growth config: governor.{k} must be a finite number >= 0")
+    gate = g["spend_gate"]
+    if num(gate["retained_mrr_usd"], lo=30000) is None:
+        raise ValueError("growth config: governor.spend_gate.retained_mrr_usd must be >= 30000 (CANON UPDATE 5; raise only)")
+    if not 1 <= int(gate["window_days"]) <= 31:
+        raise ValueError("growth config: governor.spend_gate.window_days must be 1..31")
+    if num(g["all_in_cap"]["share_of_mrr"], lo=0.20, hi=0.30) is None:
+        raise ValueError("growth config: governor.all_in_cap.share_of_mrr must be 0.20..0.30 (CANON UPDATE 5)")
+    rules = g["scale_rules"]
+    if not rules or num(rules[0].get("retained_mrr_usd"), lo=0, hi=0) is None:
+        raise ValueError("growth config: governor.scale_rules must start at retained_mrr_usd 0")
+    prev = None
+    for i, row in enumerate(rules):
+        thr = num(row.get("retained_mrr_usd"), lo=0)
+        ints = [row.get(k) for k in ("pages_open", "masters_per_page", "trial_reels_per_page")]
+        if thr is None or any(isinstance(x, bool) or not isinstance(x, int) or x < 1 for x in ints):
+            raise ValueError(f"growth config: governor.scale_rules[{i}] needs a threshold >= 0 and positive integer capacities")
+        if row.get("generation_tier") not in GENERATION_TIERS:
+            raise ValueError(f"growth config: governor.scale_rules[{i}].generation_tier must be one of {GENERATION_TIERS}")
+        if row["masters_per_page"] > int(a["max_cadence"]):
+            raise ValueError(f"growth config: governor.scale_rules[{i}].masters_per_page exceeds allocator.max_cadence")
+        if row["trial_reels_per_page"] > 20:
+            raise ValueError(f"growth config: governor.scale_rules[{i}].trial_reels_per_page must be <= 20 (CANON 5 cap)")
+        if prev is not None:
+            if thr <= prev["retained_mrr_usd"]:
+                raise ValueError("growth config: governor.scale_rules thresholds must strictly increase")
+            if any(row[k] < prev[k] for k in ("pages_open", "masters_per_page", "trial_reels_per_page")) or \
+                    GENERATION_TIERS.index(row["generation_tier"]) < GENERATION_TIERS.index(prev["generation_tier"]):
+                raise ValueError("growth config: governor.scale_rules capacity must never fall as MRR rises (monotonic ladder)")
+        prev = row
     return cfg
+
+
+def scale_rules(cfg: dict | None = None) -> list[dict]:
+    """The ladder rows (copies), lowest threshold first. Allocator / plan builder entry point."""
+    return [dict(r) for r in (cfg or load())["governor"]["scale_rules"]]
+
+
+def scale_level_for(retained_mrr: float | None, cfg: dict | None = None) -> int:
+    """Highest ladder row whose threshold <= the trailing retained MRR (0 for missing / invalid input)."""
+    v = num(retained_mrr, lo=0)
+    lv = 0
+    for i, r in enumerate(scale_rules(cfg)):
+        if v is not None and v >= float(r["retained_mrr_usd"]):
+            lv = i
+    return lv
 
 
 _cache: dict = {}

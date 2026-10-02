@@ -409,3 +409,60 @@ The §11 gate on this ladder: cold Meta at $8K/day must deliver a net paying mem
 3. **The dates are reachable only with a seeded audience or cold Meta on upside inputs.** On central inputs with no seeded list, the closest honest configuration is cell B + $1,500/day boosts/retargeting + 2 shoutouts/day: $10K on day 6, $50K on day 26, $100K on day 59, peak cash −$185K, $30K retained on day 30. Adding a 20K-name seeded waitlist pulls $100K to day 30 at −$118K. With no seeded list and no media, cell B reaches $10K on day 37 and $100K on day 202 at −$84K.
 4. **The $12 is real cash.** R20 earns $6.6K of front-end revenue by day 30 and $96K by day 180 with zero media; R23 earns $43K by day 30 against $78K of media, which is what makes boosts self-liquidating.
 5. **Organic alone cannot carry the dates** under any evidence-based reach assumption: even at Yang Mun's launch-era per-post reach (×12.8), cell B with no media reaches $10K on day 2 but $100K only on day 48, at a cash low that needs the same seeded list or paid tiers.
+
+## 14. Scale plan to $250K — runs R30–R36 (engine `tools/organic_engine.py` `sc_run`, `--scale`; sheet `Organic_Max`; chart columns `r30…r36_{booked_MRR,retained_MRR,cash_scale,views_scale,posts_scale}` in `mrr_blitz_daily.csv`)
+
+**What it is.** A port of the client-approved projection `data/projection_aggressive_central.csv` (sheet `Projection_Aggressive`, kept). Run **R30A** reproduces that file cell-for-cell to its display rounding (180 days × 37 columns, every cell within ±0.5; `tools/test_scale_engine.py`). The canonical runs R30–R36 change ONE rule, per CANON UPDATE 5: the scale-ladder milestones, the $30K paid-media gate and the 25% all-in cap are read on **trailing-7-day RETAINED MRR** (exactly what `workers/growth/governor.py` gates on). The approved file steps them on the previous day's BOOKED MRR (ladder day 4 / day 9, paid from day 9 while retained MRR was $17K), which the canon does not allow; that is the only difference between R30 and R30A.
+
+**Definitions.** booked MRR = 0.95 × ($25 × active members + $147 × coached members). **Retained MRR = 0.95 × $25 × (50% of first-cycle members + every renewed member): plan on this one** (coached revenue is never in it). cash = −$15K + $12 per buyer + $25 per renewal + coached $147/30 per day − 3% fees − daily cost (generation $1.28/master + $0.225/Trial Reel, $16 tools, review 20 s/post at $20/h, paid media); no team opex in this family. contracted_30d = renewals due in the next 30 days from survivors = retained MRR (monthly billing). margin = 1 − 30 × cost/day ÷ booked MRR. Every input (views/post $6K at age 15 growing ×1.6/30 days, learning +3%/week linear, platform lanes IG 1.0 / FB 0.8 / TT 0.7 / YT 0.5 / Threads+X 0.3, Trial Reels 10/page/day in week 1 then 20 at 0.35 reach + 0.1695 graduation bonus, 600K views/page/day ceiling, 0.4% clicks × 70% loads × 5% buy, lists 1.5% over 14 days, waitlist 10% over 3 days, $85 paid CPA, first renewal 50% then 7%/month, coached 5% from member day 10) is labelled ASSUMPTION with range and source in `SC_INPUTS` and in sheet `Organic_Max` §1.
+
+**Ladder (config `governor.scale_rules` = engine `SC_LADDER`; never steps down).** $0: 4 pages × 6 masters × 20 Trial Reels · $10K: 5 × 8 × 20 · $30K: 7 × 9 × 20 + paid gate · $50K: 7 × 9 × 20 (second character show, second coach: not volume-modelled) · $100K: 7 × 9 × 20, tier `pro` (PT/DE clones and the Pro-tier cost are NOT in the approved projection; flagged).
+
+### 14.1 Run table (days 1–180)
+
+| Run | Definition | Booked $10K / 30K / 50K / 100K / 250K (day) | Retained $10K / 30K / 50K / 100K / 250K (day) | Booked d30 / d60 / d90 / d180 | **Retained d30 / d60 / d90 / d180** | Cash low (day) | Breakeven day | Margin d30 / d60 | Gate open | Ladder $10K / 30K / 50K / 100K (day) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| **R30** | central: lists 30K, waitlist 1.5K | 3 / 9 / 12 / 20 / 35 | 6 / 15 / 21 / **33 / 58** | $207K / $542K / $859K / $1.64M | **$89K / $268K / $477K / $1.06M** | −$13.1K (1) | 9 | 90.5% / 88.6% | 19 | 10 / 19 / 25 / 37 |
+| R31 | lists 150K, waitlist 5K | 2 / 4 / 7 / 12 / 26 | 3 / 8 / 13 / 25 / 52 | $302K / $605K / $915K / $1.69M | $127K / $311K / $519K / $1.10M | −$10.2K (1) | 4 | 90.5% / 88.0% | 12 | 7 / 12 / 17 / 29 |
+| R32 | upside: clicks 0.5%, buy 6.5%, renewal-1 58%, churn 5%/mo, trial reach 50% | 2 / 6 / 9 / 14 / 23 | 4 / 9 / 13 / 20 / 36 | $386K / $998K / $1.57M / $3.16M | $193K / $558K / $963K / $2.16M | −$12.3K (1) | 6 | 89.5% / 87.2% | 13 | 8 / 13 / 17 / 24 |
+| R33 | conservative: Trial Reel cap 5, reach ×0.6, funnel ×0.5 | 5 / 17 / 29 / 55 / 90 | 12 / 40 / 54 / 78 / 127 | $54K / $119K / $254K / $680K | $22K / $61K / $134K / $426K | −$13.8K (1) | 21 | 94.3% / 87.6% | 43 | 16 / 43 / 58 / 82 |
+| R34 | R30, ladder OFF | 3 / 9 / 13 / 24 / 53 | 6 / 17 / 27 / 46 / 85 | $138K / $300K / $491K / $939K | $58K / $153K / $272K / $608K | −$13.1K (1) | 9 | 90.5% / 88.3% | 21 | — |
+| R35 | R30, ascension OFF | 3 / 9 / 13 / 21 / 39 | 6 / 15 / 21 / 33 / 58 | $179K / $450K / $697K / $1.31M | $89K / $268K / $477K / $1.06M | −$13.1K (1) | 9 | 89.0% / 86.2% | 19 | 10 / 19 / 25 / 37 |
+| R36 | R30, Facebook OFF | 3 / 10 / 14 / 23 / 42 | 7 / 18 / 25 / 39 / 66 | $157K / $432K / $765K / $1.57M | $68K / $213K / $414K / $1.01M | −$13.3K (1) | 11 | 90.5% / 88.7% | 22 | 11 / 22 / 29 / 43 |
+| R30A | the approved file (booked-basis ladder/gate/cap) | 3 / 8 / 11 / 16 / 30 | 5 / 12 / 17 / 29 / 53 | $255K / $609K / $941K / $1.80M | $109K / $305K / $527K / $1.17M | −$13.1K (1) | 8 | 75.6% / 75.2% | 9 | 4 / 9 / 12 / 17 |
+
+Read: on central inputs the canon targets hold on RETAINED MRR — $100K on day 33 (target: within 45 days) and $250K on day 58 (target: 60–90). Booked MRR runs 2–3 weeks ahead and is not the planning number. Ascension (R35) changes booked MRR only, never retained. The ladder is worth $456K of day-180 retained MRR (R30 vs R34); Facebook is worth $56K by day 180 but 8 days on the $250K date (R36). Gating on retained instead of booked costs R30 4 days on $100K and 5 on $250K versus the approved file, and keeps margin near 89–90% instead of 75% because the 25% cap sits on a smaller number. On conservative inputs (R33) $250K retained slips to day 127.
+
+### 14.2 Sensitivity (R30, one input at a time)
+
+| Change | Retained d30 / d60 / d90 / d180 | Retained $100K day | Retained $250K day | Gate open | All pages at ceiling |
+|---|---|---|---|---|---|
+| R30 base | $89K / $268K / $477K / $1.06M | 33 | 58 | 19 | 67 |
+| Funnel rates −50% (views → clicks ×0.5) | $42K / $127K / $230K / $524K | 52 | 96 | 28 | 74 |
+| Funnel rates +50% | $139K / $412K / $726K / $1.61M | 25 | 44 | 15 | 63 |
+| Trial Reel reach 35% → 15% | $80K / $246K / $453K / $1.04M | 35 | 61 | 20 | 73 |
+| Trial Reel cap 20 → 5 per page per day | $72K / $224K / $428K / $1.02M | 37 | 65 | 21 | 79 |
+| Page ceiling 600K → 300K views/page/day | $80K / $186K / $289K / $577K | 36 | 79 | 19 | 31 |
+
+**Binding constraint: the per-page view ceiling, then the funnel.** The first page hits 600K views/day on day 45 and all 7 by day 67; from then views are flat at 4.2M/day and growth comes only from member compounding. Halving the ceiling cuts day-180 retained MRR 46% and moves $250K from day 58 to day 79; the funnel (views → clicks) moves the $250K date by −14 / +38 days at ±50%. The Trial Reel lane is NOT binding: reach 15% or a 5/day cap costs 2–4% of day-180 retained MRR (3–7 days on $250K). So the next capacity lever after the $30K step is more pages (the $100K PT/DE clones, not modelled) or a better funnel, not more trials.
+
+### 14.3 Three-way comparison
+
+| Measure | ORIGINAL (Yang-Mun style: 1 page, 3/day, $19.99 ebook + Whop $19.99/mo; POSTDB) | CURRENT (R20) | UPDATED (R30) |
+|---|---|---|---|
+| Posts/day (d30) | 3 | 42 | 511 |
+| Views/day d30 / d90 | 28K / 73K | 371K / 950K | 2.74M / 4.20M |
+| Retained MRR d30 / d60 / d90 / d180 | $15 / $34 / $61 / $191 | $4.6K / $11.8K / $20.9K / $64.2K | $89K / $268K / $477K / $1.06M |
+| Cost/day d30 (model basis) | $19 | $1,085 (incl. $1,018 team opex + plan) · $67 ex-opex | $654 (no team opex) |
+| Margin d30 / d90 (1 − 30 × cost ÷ MRR) | negative | −260% / −23% | 90.5% / 86.7% |
+| Breakeven day (cumulative cash ≥ 0) | 124 (no opex) | 235 | 9 |
+| Features (SYSTEM_RECAP §2 rows) | 8 (observed) | 79 | 81 (+ spend gate / all-in cap, + scale ladder) |
+
+ORIGINAL uses POSTDB's ~1.75 ebook buyers per 100K views, 15% Whop trial starts, 42% trial→paid and our central per-post reach on one page (at Yang Mun's launch-era reach ×12.8 its MRR is ×12.8 too). CURRENT's cost carries the $30.5K/month team opex; UPDATED's projection basis does not, so compare the ex-opex row.
+
+### 14.4 Governor (CANON UPDATE 5, `workers/growth/governor.py` + `config.py`)
+
+- **Spend gate:** no paid media of any kind (boost, retarget, cold) unless trailing-7-day retained MRR ≥ `governor.spend_gate.retained_mrr_usd` ($30K; config refuses anything lower; days not reported count as $0, so a short history keeps the gate shut). Below it the plan is all zeros with the reason.
+- **All-in cap:** paid room per day = `all_in_cap.share_of_mrr` (0.25, config 0.20–0.30) × trailing-7-day retained MRR ÷ 30 − fixed − generation − already spent today; unknown costs → no room. It is a further envelope under the existing budget, cash-floor and §9/§11 rules.
+- **Scale ladder:** `governor.scale_rules` (retained-MRR threshold → pages_open, masters_per_page, trial_reels_per_page, generation_tier); `governor.scale_plan()` returns the row (also in every decision as `scale`); `cadence` = masters_per_page is the value the allocator's `plan_day(cadence=…)` takes and the plan builder reads pages/trials/tier from the same row (allocator.py and the n8n plan builder are unchanged this round: they consume it through these existing parameters). It only steps up; a reach anomaly pauses it; stepping down is a human edit. Config validation refuses a ladder whose capacity falls as MRR rises.
+- **Property tests:** 3,000 random states (cap never exceeded, gate never open below the threshold, ladder never below its input) + 100 random 30-day MRR paths (monotonic), `workers/tests/test_growth_scale_gate.py`; the existing 1,500-state governor property test now also checks the gate and the cap.

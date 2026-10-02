@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
 """
-organic_max_sheet.py — writes the Organic-max family (R30–R35, tools/organic_engine.py main_max) into
-economics.xlsx sheet `Organic_Max` (created or replaced; every other sheet is left untouched and verified) and
-appends r20/r30…r35 views/posts and r30…r35 MRR/cash columns to mrr_blitz_daily.csv (existing columns unchanged).
+organic_max_sheet.py — writes the SCALE family (R30–R36, "Scale plan to $250K", tools/organic_engine.py sc_run; BLITZ.md
+§14) into economics.xlsx sheet `Organic_Max` (rebuilt from scratch; every other sheet is left untouched and verified,
+Projection_Aggressive kept) and appends r30…r36 *_booked_MRR / *_retained_MRR / *_cash_scale / *_views_scale /
+*_posts_scale columns to mrr_blitz_daily.csv (the 69 existing columns, incl. the frozen legacy Organic-max r30_MRR…
+r35_posts, are left byte-identical).
 
     python3 tools/organic_max_sheet.py
 
-Sheet layout: inputs (row 5+), run table (formulas over the daily block), solver, ascension, sensitivity,
-3-way comparison, sources; daily block from row DAILY0 (day, then MRR / views / posts / cash per run).
+Sheet layout: definitions, inputs block (row 6+), ladder, run table, sensitivity, 3-way comparison, R30A check against
+data/projection_aggressive_central.csv; daily block from row DAILY0 (day, then booked / retained / cash / views / posts
+per run).
 """
-import csv, hashlib, os, sys
+import csv, hashlib, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment
@@ -20,10 +23,18 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 XLSX = os.path.join(ROOT, "economics.xlsx")
 CSV = os.path.join(ROOT, "mrr_blitz_daily.csv")
 SHEET = "Organic_Max"
-DAILY0 = 260           # header row of the daily block; day 1 on DAILY0 + 1
-TAGS = ["r20", "r30", "r31", "r32", "r33", "r34", "r35"]
+DAILY0 = 200           # header row of the daily block; day 1 on DAILY0 + 1
+DAYS = 360             # csv horizon (the approved projection is 180 days; days 181–360 are model extrapolation)
+SERIES = [("booked_MRR", "booked_MRR"), ("retained_MRR", "retained_MRR"), ("cash_scale", "cash"),
+          ("views_scale", "views_day"), ("posts_scale", "posts_day")]
+CHECK3 = ["Projection_Aggressive", "Organic_First", "Costs"]
 B = Font(bold=True)
 HEAD = PatternFill("solid", fgColor="000000"); HF = Font(bold=True, color="FFFFFF")
+WRAP = Alignment(wrap_text=True, vertical="top")
+
+
+def cells(ws):
+    return {c.coordinate: c.value for row in ws.iter_rows() for c in row if c.value is not None}
 
 
 def snapshot(wb, skip):
@@ -42,179 +53,176 @@ def snapshot(wb, skip):
 
 def hdr(ws, r, vals):
     for j, v in enumerate(vals, 1):
-        c = ws.cell(r, j, v); c.font = HF; c.fill = HEAD; c.alignment = Alignment(wrap_text=True, vertical="top")
+        c = ws.cell(r, j, v); c.font = HF; c.fill = HEAD; c.alignment = WRAP
+
+
+def put(ws, r, vals):
+    for j, v in enumerate(vals, 1):
+        ws.cell(r, j, round(v, 2) if isinstance(v, float) else v)
+
+
+def feature_count():
+    s = open(os.path.join(ROOT, "SYSTEM_RECAP.md")).read()
+    sec = s.split("## 2. Features by layer")[1].split("\n## 3.")[0]
+    rows = [x for x in sec.splitlines() if x.startswith("|") and not re.match(r"^\|\s*-", x)]
+    return len([x for x in rows if not x.lower().startswith("| feature")])
+
+
+def compute():
+    runs = [(r, oe.sc_run(r, DAYS)) for r in oe.RUNS_SCALE]
+    r30a = oe.sc_run(oe.R30A, 180)
+    sums = [(r, rows, oe.sc_summary(rows[:180])) for r, rows in runs]
+    sens = [(nm, oe.sc_summary(oe.sc_run(dict(oe.R30, **ch), 180))) for nm, ch in oe.SENS_SCALE]
+    orig_rows, osm = oe.original_ym()
+    rows20, pre20, info20 = oe.run(oe.RUNS[0]); s20 = oe.summ(rows20, pre20, info20)
+    return dict(runs=runs, sums=sums, r30a=r30a, sens=sens, orig=(orig_rows, osm), r20=(rows20, s20),
+                verify=oe.sc_verify_csv(), features=feature_count())
+
+
+def comparison(out):
+    o_rows, osm = out["orig"]; rows20, s20 = out["r20"]; r30 = out["sums"][0][2]; rows30 = out["runs"][0][1]
+    og = lambda d, k: o_rows[d - 1][k]; g20 = lambda d, k: rows20[d - 1][k]; g30 = lambda d, k: rows30[d - 1][k]
+    opex = (oe.SH["fixed"] + oe.SH["shop_plan"]) / 30
+    mg = lambda cost, mrr: 100 * (1 - 30 * cost / mrr) if mrr > 0 else None
+    nf = out["features"]
+    return [
+        ("posts/day (d30)", 3, g20(30, "posts"), g30(30, "posts_day")),
+        ("views/day d30", og(30, "views"), g20(30, "views"), g30(30, "views_day")),
+        ("views/day d90", og(90, "views"), g20(90, "views"), g30(90, "views_day")),
+        ("retained MRR d30", og(30, "mrr"), g20(30, "ret"), g30(30, "retained_MRR")),
+        ("retained MRR d60", og(60, "mrr"), g20(60, "ret"), g30(60, "retained_MRR")),
+        ("retained MRR d90", og(90, "mrr"), g20(90, "ret"), g30(90, "retained_MRR")),
+        ("retained MRR d180", og(180, "mrr"), g20(180, "ret"), g30(180, "retained_MRR")),
+        ("cost/day d30 (model basis)", og(30, "cost"), g20(30, "costs"), g30(30, "cost_day")),
+        ("cost/day d30 excluding team opex", og(30, "cost"), g20(30, "costs") - opex, g30(30, "cost_day")),
+        ("margin d30 % = 1 − 30 × cost/day ÷ MRR (booked; ORIGINAL paid MRR)", mg(og(30, "cost"), og(30, "mrr")),
+         mg(g20(30, "costs"), g20(30, "mrr")), r30["mg30"]),
+        ("margin d90 %", mg(og(90, "cost"), og(90, "mrr")), mg(g20(90, "costs"), g20(90, "mrr")), g30(90, "margin_pct")),
+        ("breakeven day (cumulative cash ≥ 0)", osm["be"], s20["beday"], r30["be"]),
+        ("features (SYSTEM_RECAP §2 rows; ORIGINAL observed; UPDATED = + spend gate/cap + scale ladder)", 8, nf, nf + 2),
+    ]
 
 
 def main():
-    out = oe.main_max()
-    res = out["res"]
-    series = {"r20": out["rows20"]}
-    for tag, x in zip(TAGS[1:], res):
-        series[tag] = x[1]
+    out = compute()
+    runs, sums = out["runs"], out["sums"]
 
     # ---------------- csv ----------------
     with open(CSV, newline="") as f:
         rd = csv.DictReader(f); fields = list(rd.fieldnames); data = list(rd)
-    new = ["r20_views", "r20_posts"] + [f"{t}_{k}" for k in ("MRR", "cash", "views", "posts") for t in TAGS[1:]]
+    new = [f"{t}_{k}" for t in oe.SC_TAGS for k, _ in SERIES]
     fields += [c for c in new if c not in fields]
     byday = {int(float(x["day"])): x for x in data}
-    for tag, rows in series.items():
-        for d in rows:
-            x = byday.get(d["d"])
+    for tag, (r, rows) in zip(oe.SC_TAGS, runs):
+        for w in rows:
+            x = byday.get(w["day"])
             if x is None:
                 continue
-            if tag != "r20":
-                x[f"{tag}_MRR"] = f"{d['mrr']:.2f}"; x[f"{tag}_cash"] = f"{d['cash']:.2f}"
-            x[f"{tag}_views"] = f"{d['views']:.0f}"; x[f"{tag}_posts"] = f"{d['posts']:.1f}"
+            for k, src in SERIES:
+                x[f"{tag}_{k}"] = f"{w[src]:.2f}" if k in ("booked_MRR", "retained_MRR", "cash_scale") else f"{w[src]:.0f}"
     with open(CSV, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fields); w.writeheader(); w.writerows(data)
 
     # ---------------- workbook ----------------
     wb = openpyxl.load_workbook(XLSX)
     before = snapshot(wb, SHEET)
+    before3 = {n: cells(wb[n]) for n in CHECK3}
+    assert "Projection_Aggressive" in wb.sheetnames
     if SHEET in wb.sheetnames:
         del wb[SHEET]
     ws = wb.create_sheet(SHEET)
-    ws.column_dimensions["A"].width = 46; ws.column_dimensions["B"].width = 60
-    for j in range(3, 30):
+    ws.column_dimensions["A"].width = 48; ws.column_dimensions["B"].width = 62
+    for j in range(3, 40):
         ws.column_dimensions[L(j)].width = 12
-    ws["A1"] = "Organic-max plan: 80 Trial Reels/day, $0 media (runs R30–R35; engine tools/organic_engine.py main_max; writer tools/organic_max_sheet.py; BLITZ.md §14)"
+    ws["A1"] = "Scale plan to $250K — runs R30–R36 (engine tools/organic_engine.py sc_run; writer tools/organic_max_sheet.py; BLITZ.md §14)"
     ws["A1"].font = Font(bold=True, size=13)
-    ws["A2"] = ("Every input is labelled; ASSUMPTION = no published source. MRR = membership MRR only (cell B members at $25 contracted). "
-                "Ascension (coached, labs, supplements) is reported separately and never added to MRR. Cash in R34/R35 includes ascension contribution. "
-                "Result cells in the run table are formulas over the daily block from row %d." % DAILY0)
-    ws["A2"].alignment = Alignment(wrap_text=True)
-
-    # daily block first (formulas point at it)
-    cols = {}
-    hdrs = ["day"]
-    for k in ("MRR", "views", "posts", "cash"):
-        for t in TAGS:
-            cols[(t, k)] = len(hdrs) + 1; hdrs.append(f"{t}_{k}")
-    ws.cell(DAILY0 - 1, 1, "Daily series (day 1 = checkout opens). r20 = current plan for reference.").font = B
-    hdr(ws, DAILY0, hdrs)
-    for i in range(360):
-        r = DAILY0 + 1 + i
-        ws.cell(r, 1, i + 1)
-        for t in TAGS:
-            d = series[t][i]
-            ws.cell(r, cols[(t, "MRR")], round(d["mrr"], 2)); ws.cell(r, cols[(t, "views")], round(d["views"]))
-            ws.cell(r, cols[(t, "posts")], round(d["posts"], 1)); ws.cell(r, cols[(t, "cash")], round(d["cash"], 2))
-    last = DAILY0 + 360
-    rng = lambda t, k: f"${L(cols[(t, k)])}${DAILY0 + 1}:${L(cols[(t, k)])}${last}"
-
-    # inputs
+    ws["A2"] = ("Port of the client-approved projection (data/projection_aggressive_central.csv, sheet Projection_Aggressive). "
+                "booked_MRR = 0.95 × ($25 × active members + $147 × coached). retained_MRR = 0.95 × $25 × (50% of first-cycle members "
+                "+ every renewed member): PLAN ON THIS ONE. cash = −$15K + $12 per buyer + $25 per renewal + coached $147/30 per day − 3% fees "
+                "− daily cost (no team opex). contracted_30d = renewals due in 30 days from survivors = retained_MRR (monthly billing). "
+                "R30–R36 step the ladder, open the $30K paid gate and size the 25% all-in cap on TRAILING-7-DAY RETAINED MRR "
+                "(= workers/growth/governor.py); R30A is the approved file exactly (it steps them on the previous day's BOOKED MRR).")
+    ws["A2"].alignment = WRAP; ws.row_dimensions[2].height = 75
     r = 4
-    ws.cell(r, 1, "1. New inputs (central / upside)").font = B; r += 1
-    hdr(ws, r, ["key", "label", "central", "upside", "unit", "source / rationale"]); r += 1
-    for k, lab, c, u, unit, src in oe.MX_INPUTS:
-        for j, v in enumerate([k, lab, str(c) if not isinstance(c, (int, float)) else c, str(u) if not isinstance(u, (int, float)) else u, unit, src], 1):
-            ws.cell(r, j, v).alignment = Alignment(wrap_text=True, vertical="top")
-        r += 1
-
-    # run table with formulas
+    ws.cell(r, 1, "1. Inputs (central, range, source). Every value without a citation is an ASSUMPTION.").font = B; r += 1
+    hdr(ws, r, ["key", "input", "central", "low", "high", "unit", "source / rationale"]); r += 1
+    for key, label, c, lo, hi, unit, src in oe.SC_INPUTS:
+        put(ws, r, [key, label, c, lo, hi, unit, src]); ws.cell(r, 7).alignment = WRAP; r += 1
     r += 1
-    ws.cell(r, 1, "2. Runs (formulas over the daily block; cf+ / breakeven / retained / cost are engine values)").font = B; r += 1
-    hdr(ws, r, ["run", "description", "posts/day d30", "views/day d1", "views/day d30", "views/day d90", "MRR d4", "MRR d14", "MRR d30", "MRR d60",
-                "MRR d90", "MRR d180", "retained d30", "$10K day", "$50K day", "$100K day", "cash low", "low day", "cf+ day", "breakeven day", "cost/day d30", "seeded waitlist"]); r += 1
-    allruns = [("r20", "R20 (CURRENT reference)", out["s20"])] + [(t, x[0]["name"], x[5]) for t, x in zip(TAGS[1:], res)]
-    for t, nm, sm in allruns:
-        ws.cell(r, 1, t.upper()); ws.cell(r, 2, nm).alignment = Alignment(wrap_text=True, vertical="top")
-        mr, vr, pr, cr = rng(t, "MRR"), rng(t, "views"), rng(t, "posts"), rng(t, "cash")
-        ws.cell(r, 3, f"=INDEX({pr},30)"); ws.cell(r, 4, f"=INDEX({vr},1)"); ws.cell(r, 5, f"=INDEX({vr},30)"); ws.cell(r, 6, f"=INDEX({vr},90)")
-        for j, d in zip(range(7, 13), (4, 14, 30, 60, 90, 180)):
-            ws.cell(r, j, f"=INDEX({mr},{d})")
-        ws.cell(r, 13, round(sm["ret30"], 2))
-        for j, tgt in zip((14, 15, 16), (10000, 50000, 100000)):
-            ws.cell(r, j, f'=IFERROR(MATCH(TRUE,INDEX({mr}>={tgt},0),0),"none")')
-        ws.cell(r, 17, f"=MIN({cr})"); ws.cell(r, 18, f"=MATCH(MIN({cr}),{cr},0)")
-        ws.cell(r, 19, sm["cfpos"] if sm["cfpos"] < 999 else "none"); ws.cell(r, 20, sm["beday"] if sm["beday"] < 999 else "none")
-        ws.cell(r, 21, round(sm["cost30"], 2)); ws.cell(r, 22, round(sm.get("seed", 0)))
+    ws.cell(r, 1, "2. Scale-on-MRR ladder (= workers/growth/config.py governor.scale_rules; never steps down)").font = B; r += 1
+    hdr(ws, r, ["trailing-7-day retained MRR ≥", "pages open", "masters/page/day", "Trial Reels/page/day", "generation tier"]); r += 1
+    for row in oe.SC_LADDER:
+        put(ws, r, list(row)); r += 1
+    r += 1
+
+    ws.cell(r, 1, "3. Run table (days 1–180)").font = B; r += 1
+    ms = oe.SC_MILESTONES
+    cols = (["run", "definition"] + [f"booked ${x // 1000}K day" for x in ms] + [f"retained ${x // 1000}K day" for x in ms]
+            + [f"booked d{d}" for d in (30, 60, 90, 180)] + [f"retained d{d}" for d in (30, 60, 90, 180)]
+            + ["cash low", "cash low day", "breakeven day", "margin d30 %", "margin d60 %", "gate open day",
+               "ladder $10K day", "ladder $30K day", "ladder $50K day", "ladder $100K day", "page ceiling first binds", "all pages at ceiling",
+               "posts/day d30", "views/day d30", "views/day d90", "cost/day d30"])
+    hdr(ws, r, cols); r += 1
+    allsum = sums + [(oe.R30A, out["r30a"], oe.sc_summary(out["r30a"]))]
+    for (rr, rows, sm) in allsum:
+        tag = rr["name"].split()[0]
+        put(ws, r, [tag, rr["name"]] + [sm[f"bk{x // 1000}K"] for x in ms] + [sm[f"rt{x // 1000}K"] for x in ms]
+            + [sm[f"bk{d}"] for d in (30, 60, 90, 180)] + [sm[f"rt{d}"] for d in (30, 60, 90, 180)]
+            + [sm["low"], sm["lowday"], sm["be"], sm["mg30"], sm["mg60"], sm["gate"]] + [sm["ladder"][x] for x in (10000, 30000, 50000, 100000)]
+            + [sm["ceil1"], sm["ceil_all"], sm["p30"], sm["v30"], sm["v90"], sm["c30"]])
         r += 1
-    u = out["r34u"]
-    ws.cell(r, 1, "R34U"); ws.cell(r, 2, "R34 with every organic input at upside (values)")
-    for j, v in zip(range(3, 23), [u["p30"], u["v1"], u["v30"], u["v90"], u["m4"], u["m14"], u["m30"], None, u["m90"], u["m180"], u["ret30"], u["d10"], u["d50"], u["d100"], u["low"], u["lowday"], u["cfpos"], u["beday"], u["cost30"], 0]):
-        ws.cell(r, j, round(v, 2) if isinstance(v, float) else v)
+    ws.cell(r, 1, "Blank milestone = not reached within 180 days. Ladder day = first day the row is in effect.").alignment = WRAP
     r += 2
 
-    # solver
-    sol, ref = out["sol"], out["sol_ref"]
-    ws.cell(r, 1, "3. Solver: organic input REQUIRED (one at a time, all others at R34 central) for $100K MRR by day 30 with $0 media").font = B; r += 1
-    hdr(ws, r, ["input", "central", "upside", "required", "required ÷ central", "required ÷ upside", "note"]); r += 1
-    vpt = ref["vpt30"]; dmr = ref["dm_rate"]
-    rows = [
-        ("Views per Trial Reel at day 30 (mean, after decay)", vpt, vpt * oe.MXU["tr_rel"] / oe.MXC["tr_rel"], vpt * sol["tr_rel"] / oe.MXC["tr_rel"] if sol["tr_rel"] else None, "tr_rel solved"),
-        ("Graduation rate (share of trials → feed)", oe.MXC["grad_rate"], oe.MXU["grad_rate"], sol["grad_rate"], "not reachable even at 100% (graduates are capped by 6 feed slots/page)" if sol["grad_rate"] is None else ""),
-        ("Graduate uplift at 100% graduation", oe.MXC["grad_up"], oe.MXU["grad_up"], sol["grad_both"], "every feed post a graduate"),
-        ("DM→purchase per keyword commenter (open × click × load × conversion × subB × intent)", dmr, dmr * oe.MXU["dm_mult"], dmr * sol["dm_mult"] if sol["dm_mult"] else None, "vendor band 2–5% unqualified, 12–25% qualified (V-)"),
-        ("Landing visitor → $12 subscription purchase (cvr_org, before subB)", 0.05, 0.08, sol["cvr_org"], "tripwire benchmarks 1.5–15%"),
-        ("Seeded waitlist on day 1 (names)", 0, oe.MXU["seed_opt"] * (100000 + 50000 * 0.35), sol["seed_wl"], "R35 default lists seed %d" % round(oe.prep(oe.R35)["seed_wl"])),
-        ("Organic reach multiplier (all lanes); views/day d30", ref["v30"], ref["v30"] * 1.75, ref["v30"] * sol["reach"] if sol["reach"] else None, "×%.2f central reach" % sol["reach"] if sol["reach"] else ""),
-    ]
-    for nm, c, up, req, note in rows:
-        ws.cell(r, 1, nm); ws.cell(r, 2, c); ws.cell(r, 3, up); ws.cell(r, 4, req if req is not None else "not reachable")
-        if req is not None and c:
-            ws.cell(r, 5, f"=D{r}/B{r}")
-        if req is not None and up:
-            ws.cell(r, 6, f"=D{r}/C{r}")
-        ws.cell(r, 7, note); r += 1
-    r += 1
-
-    # ascension
-    ws.cell(r, 1, "4. Ascension lines (NOT MRR)").font = B; r += 1
-    hdr(ws, r, ["run", "supplement MRR d90", "supplement MRR d180", "coached run-rate d90 ($/mo)", "coached run-rate d180", "labs gross cumulative d180"]); r += 1
-    for t, x in zip(TAGS[1:], res):
-        sm = x[5]
-        if "supp90" in sm:
-            for j, v in enumerate([t.upper(), sm["supp90"], sm["supp180"], sm["coach90"], sm["coach180"], sm["labs180"]], 1):
-                ws.cell(r, j, round(v) if isinstance(v, float) else v)
-            r += 1
-    r += 1
-
-    # sensitivity
-    ws.cell(r, 1, "5. Sensitivity (FLAG = moves day-30 MRR by > $5K)").font = B; r += 1
-    hdr(ws, r, ["base", "change", "MRR d30", "Δ d30", "retained d30", "MRR d90", "MRR d180", "cash low", "$100K day", "flag"]); r += 1
-    for x in out["sens"]:
-        sm = x["summ"]
-        for j, v in enumerate([x["base"], x["name"], sm["m30"], x["d30_delta"], sm["ret30"], sm["m90"], sm["m180"], sm["low"], sm["d100"], "FLAG" if x["flag"] else None], 1):
-            ws.cell(r, j, round(v, 2) if isinstance(v, float) else v)
+    ws.cell(r, 1, "4. Sensitivity on R30 (one input at a time)").font = B; r += 1
+    hdr(ws, r, ["change", "", "retained d30", "retained d60", "retained d90", "retained d180", "retained $100K day", "retained $250K day",
+                "booked $250K day", "gate open day", "all pages at ceiling"]); r += 1
+    s30 = sums[0][2]
+    for nm, sm in [("R30 base", s30)] + out["sens"]:
+        put(ws, r, [nm, "", sm["rt30"], sm["rt60"], sm["rt90"], sm["rt180"], sm["rt100K"], sm["rt250K"], sm["bk250K"], sm["gate"], sm["ceil_all"]])
         r += 1
     r += 1
 
-    # comparison
-    o_rows, osm = out["orig"]; _, oym = out["orig_ym"]; s20 = out["s20"]; s34 = res[4][5]; s35 = res[5][5]
-    ws.cell(r, 1, "6. 3-way comparison").font = B; r += 1
-    hdr(ws, r, ["measure", "ORIGINAL (YM-style, 1 page, 3/day, $19.99 ebook + Whop)", "ORIGINAL at YM launch-era reach ×12.8", "CURRENT (R20)", "UPDATED R34", "UPDATED R35"]); r += 1
-    rows20 = out["rows20"]; rows34 = res[4][1]; rows35 = res[5][1]
-    comp = [
-        ("posts/day (d30)", 3, 3, s20["p30"], s34["p30"], s35["p30"]),
-        ("views/day d30", osm["v30"], oym["v30"], s20["v30"], s34["v30"], s35["v30"]),
-        ("views/day d90", osm["v90"], oym["v90"], s20["v90"], s34["v90"], s35["v90"]),
-        ("MRR d30", osm["m30"], oym["m30"], s20["m30"], s34["m30"], s35["m30"]),
-        ("MRR d90", osm["m90"], oym["m90"], s20["m90"], s34["m90"], s35["m90"]),
-        ("MRR d180", osm["m180"], oym["m180"], s20["m180"], s34["m180"], s35["m180"]),
-        ("cost/day (d30)", osm["cost"], oym["cost"], s20["cost30"], s34["cost30"], s35["cost30"]),
-        ("breakeven day (cumulative cash ≥ 0)", osm["be"], oym["be"], s20["beday"], s34["beday"], s35["beday"]),
-        ("features (SYSTEM_RECAP §2 rows; ORIGINAL = observed)", 8, 8, 79, 98, 98),
-    ]
-    for row in comp:
-        for j, v in enumerate(row, 1):
-            ws.cell(r, j, round(v, 1) if isinstance(v, float) else v)
-        r += 1
-    ws.cell(r, 1, "ORIGINAL cost = 3 posts × $1.12 + $16/day tools (no team opex); with our $30.5K/month opex it never breaks even. CURRENT/UPDATED cost includes $1,017/day fixed opex.").alignment = Alignment(wrap_text=True)
+    ws.cell(r, 1, "5. 3-way comparison").font = B; r += 1
+    hdr(ws, r, ["measure", "", "ORIGINAL (YM-style: 1 page, 3/day, $19.99 ebook + Whop $19.99/mo; POSTDB)", "CURRENT (R20)", "UPDATED (R30)"]); r += 1
+    for row in comparison(out):
+        put(ws, r, [row[0], ""] + list(row[1:])); r += 1
+    ws.cell(r, 1, ("ORIGINAL retained = paid Whop members after the 3-day trial (S curve); cost 3 posts × $1.12 + $16/day, no opex. "
+                   "CURRENT cost includes $30.5K/month team opex + Shopify plan ($1,018/day); UPDATED (projection basis) carries no team opex."))
+    ws.cell(r, 1).alignment = WRAP
     r += 2
 
-    ws.cell(r, 1, "7. Sources").font = B; r += 1
-    for nm, src in oe.MX_SOURCES:
-        ws.cell(r, 1, nm); ws.cell(r, 2, src); r += 1
+    ws.cell(r, 1, "6. R30A vs data/projection_aggressive_central.csv (max abs error, max relative error, day)").font = B; r += 1
+    hdr(ws, r, ["column", "", "max abs error", "relative", "day"]); r += 1
+    for c, (err, rel, day) in out["verify"].items():
+        put(ws, r, [c, "", err, rel, day]); r += 1
     assert r < DAILY0 - 2, f"layout overflow: row {r} reaches the daily block"
+
+    ws.cell(DAILY0 - 1, 1, f"Daily rows (days 1–{DAYS}; days 181–{DAYS} extrapolate beyond the approved 180-day file)").font = B
+    hdr(ws, DAILY0, ["day"] + [f"{t} {k}" for t in oe.SC_TAGS for k, _ in SERIES])
+    for i in range(DAYS):
+        vals = [i + 1]
+        for _, rows in runs:
+            w = rows[i]
+            vals += [round(w[src], 2) for _, src in SERIES]
+        for j, v in enumerate(vals, 1):
+            ws.cell(DAILY0 + 1 + i, j, v)
     wb.save(XLSX)
 
-    # verify other sheets untouched
+    # ---------------- verify ----------------
     wb2 = openpyxl.load_workbook(XLSX)
     after = snapshot(wb2, SHEET)
     assert before == after, "another sheet changed"
-    print("Organic_Max written; other sheets verified identical:", len(after), "sheets")
+    for n in CHECK3:
+        assert cells(wb2[n]) == before3[n], f"{n} changed"
+    ws2 = wb2[SHEET]
+    for i in (0, 29, 179, DAYS - 1):
+        for k, (_, rows) in enumerate(runs):
+            for m, (_, src) in enumerate(SERIES):
+                assert ws2.cell(DAILY0 + 1 + i, 2 + k * len(SERIES) + m).value == round(rows[i][src], 2)
+    print(f"Organic_Max rebuilt; {len(after)} other sheets hash-identical; cell-for-cell identical: {', '.join(CHECK3)}; "
+          f"csv +{len(new)} columns")
+    return out
 
 
 if __name__ == "__main__":

@@ -17,6 +17,12 @@ Hard invariants (property-tested in tests/test_growth_governor.py):
       is all zeros with status STOP and valid=false
   I7  the decision is identical for identical inputs (no clock reads inside decide; `now` is an argument)
   I8  SPEND_ENABLED=0 or dry_run -> mode "dry_run": the plan is advisory and execute() refuses
+  I9  CANON UPDATE 5 spend gate: no paid media of any kind (boost, retarget, cold) unless TRAILING-7-DAY RETAINED MRR
+      >= governor.spend_gate.retained_mrr_usd ($30K; days without a report count as $0); below it the plan is all zeros
+  I10 all-in cap: planned_total <= share_of_mrr x trailing retained MRR / 30 - fixed - generation - spent_today (>= 0);
+      unknown fixed/generation cost -> no room
+  I11 scale ladder (governor.scale_rules): scale_plan() never returns a lower level than the one it was given; a
+      reach anomaly pauses it (holds the level); stepping down is a human config/state edit, never automatic
 
 BLITZ.md §9 rules (price-aware, days 1-7 learning lines) and §11 graduation thresholds are read from config
 ["governor"]; nothing is hard-coded here.
@@ -34,6 +40,7 @@ from growth import config as G
 from growth import snapshots as S
 
 STATUS_RANK = {"SCALE": 0, "HOLD": 1, "CUT": 2, "STOP": 3}
+MRR_MAX = 1e9            # sanity bound for an MRR figure (money inputs use governor.max_abs_usd)
 
 
 class GovernorRefused(RuntimeError):
@@ -150,6 +157,20 @@ def validate_state(state: dict, cfg: dict, now: datetime) -> tuple[dict, list[st
     out["grad_days_over_4k"] = G.num(gr.get("days_at_min_spend", 0), lo=0, hi=1000)
     if gr.get("factor") is not None and out["grad_factor"] is None:
         errs.append("graduation.factor invalid")
+    mrr = _dict(st.get("mrr"), errs, "mrr")
+    hist = []
+    for i, x in enumerate(_list(mrr.get("retained_daily_usd"), errs, "mrr.retained_daily_usd")):
+        val = G.num(x, lo=0, hi=MRR_MAX)
+        if val is None:
+            errs.append(f"mrr.retained_daily_usd[{i}] invalid")
+        else:
+            hist.append(val)
+    out["retained_hist"] = hist
+    costs = _dict(st.get("costs"), errs, "costs")
+    for k in ("fixed_daily_usd", "generation_daily_usd"):
+        out[k] = None if costs.get(k) is None else _money(costs.get(k), cfg)
+        if costs.get(k) is not None and out[k] is None:
+            errs.append(f"costs.{k} invalid")
     boosts = []
     for i, b in enumerate(_list(st.get("boosts"), errs, "boosts")):
         b = _dict(b, errs, f"boosts[{i}]")
@@ -269,6 +290,74 @@ def graduation(v: dict, cfg: dict) -> dict:
     return {"passed": all(c["pass"] for c in checks.values()), "checks": checks}
 
 
+def trailing_retained(hist: list[float], window: int) -> float:
+    """Mean retained MRR over the last `window` days; days not reported count as $0 (fail-safe: a short or empty
+    history can only keep the gate shut)."""
+    w = max(1, int(window))
+    return sum(hist[-w:]) / float(w)
+
+
+def spend_gate(v: dict, cfg: dict) -> dict:
+    sg = cfg["governor"]["spend_gate"]
+    t7 = trailing_retained(v.get("retained_hist") or [], sg["window_days"])
+    thr = float(sg["retained_mrr_usd"])
+    return {"open": t7 >= thr, "trailing_retained_mrr_usd": round(t7, 2), "threshold_usd": thr,
+            "window_days": int(sg["window_days"]), "days_reported": len(v.get("retained_hist") or [])}
+
+
+def all_in_cap(v: dict, cfg: dict, gate: dict) -> dict:
+    """Daily room for ALL paid media: share x trailing retained MRR / 30 - fixed - generation - already spent today."""
+    share = float(cfg["governor"]["all_in_cap"]["share_of_mrr"])
+    cap = share * gate["trailing_retained_mrr_usd"] / 30.0
+    fx, gen = v.get("fixed_daily_usd"), v.get("generation_daily_usd")
+    if fx is None or gen is None:
+        return {"cap_daily_usd": _round(cap), "room_usd": 0.0, "why": "fixed / generation cost not reported: no paid room"}
+    room = max(0.0, cap - fx - gen - (v.get("spent_today_usd") or 0.0))
+    return {"cap_daily_usd": _round(cap), "fixed_daily_usd": fx, "generation_daily_usd": gen, "room_usd": _round(room)}
+
+
+def scale_plan(state: dict, cfg: dict | None = None) -> dict:
+    """Scale-on-MRR ladder (CANON UPDATE 5) on trailing-7-day RETAINED MRR. state: {"mrr": {"retained_daily_usd": [..]},
+    "ladder": {"level": int, "reach_anomaly": bool}}. Steps UP to the highest row the MRR reaches; never steps down;
+    a reach anomaly (or junk MRR input) holds the current level. The returned row is what the allocator (cadence =
+    masters_per_page) and the plan builder (pages_open, trial_reels_per_page, generation_tier) read."""
+    cfg = cfg or G.load()
+    rules = G.scale_rules(cfg)
+    st = state if isinstance(state, dict) else {}
+    lad = st.get("ladder") if isinstance(st.get("ladder"), dict) else {}
+    why: list[str] = []
+    cur = lad.get("level", 0)
+    if isinstance(cur, bool) or not isinstance(cur, int) or cur < 0:
+        if cur is not None:
+            why.append("ladder.level invalid: read as 0")
+        cur = 0
+    elif cur >= len(rules):
+        why.append("ladder.level above the last row: held at the last row")
+        cur = len(rules) - 1
+    mrr = st.get("mrr") if isinstance(st.get("mrr"), dict) else {}
+    raw = mrr.get("retained_daily_usd")
+    hist = [G.num(x, lo=0, hi=MRR_MAX) for x in raw] if isinstance(raw, list) else None
+    t7 = None if hist is None or any(x is None for x in hist) else \
+        trailing_retained(hist, cfg["governor"]["spend_gate"]["window_days"])
+    target = G.scale_level_for(t7, cfg) if t7 is not None else cur
+    anomaly = lad.get("reach_anomaly") is True
+    if t7 is None:
+        why.append("retained MRR history missing or invalid: hold")
+        level = cur
+    elif anomaly:
+        why.append("reach anomaly flagged: ladder paused at the current level (no step up, no step down)")
+        level = cur
+    else:
+        level = max(cur, target)
+        if target < cur:
+            why.append("MRR is below the current row: the ladder never steps down automatically (human edit only)")
+    row = rules[level]
+    return {"level": level, "previous_level": cur, "stepped_up": level > cur, "paused": anomaly,
+            "trailing_retained_mrr_usd": None if t7 is None else round(t7, 2), "row": row,
+            "pages_open": row["pages_open"], "masters_per_page": row["masters_per_page"], "cadence": row["masters_per_page"],
+            "trial_reels_per_page": row["trial_reels_per_page"], "generation_tier": row["generation_tier"], "why": why}
+
+
 def _zero_plan(reasons: list[str], *, mode: str, spend_enabled: bool, now: datetime, cfg: dict, state_hash: str,
                valid: bool = False, status: str = "STOP", extra: dict | None = None) -> dict:
     d = {"mode": mode, "spend_enabled": spend_enabled, "valid": valid, "status": status, "reasons": reasons,
@@ -291,20 +380,34 @@ def decide(state: dict, cfg: dict | None = None, *, spend_enabled: bool | None =
     mode = "live" if (spend_enabled and not dry_run) else "dry_run"
     state_hash = hashlib.sha256(json.dumps(state, sort_keys=True, default=str).encode()).hexdigest()[:16]
     v, errs = validate_state(state, cfg, now)
+    scale = scale_plan(state, cfg)
     if errs:
         return _zero_plan(["invalid input: " + "; ".join(errs)], mode=mode, spend_enabled=spend_enabled, now=now, cfg=cfg,
-                          state_hash=state_hash)
+                          state_hash=state_hash, extra={"scale": scale})
     status, rule_detail = rules_status(v, cfg)
     grad = graduation(v, cfg)
     reasons = [f"{k}: {r['status']}" + (f" ({r['why']})" if r.get("why") else "") for k, r in rule_detail["rules"].items()]
     remaining_daily = max(0.0, v["daily_cap_usd"] - v["spent_today_usd"])
     remaining_month = max(0.0, v["monthly_cap_usd"] - v["spent_month_usd"])
     cash_head = max(0.0, v["balance_usd"] - v["cash_floor_usd"])
-    envelope = min(remaining_daily, remaining_month, cash_head)
+    gate = spend_gate(v, cfg)
+    cap = all_in_cap(v, cfg, gate)
+    envelope = min(remaining_daily, remaining_month, cash_head, cap["room_usd"])
+    if not gate["open"]:
+        return _zero_plan(reasons + [f"spend gate closed: trailing-{gate['window_days']}-day retained MRR "
+                                     f"${gate['trailing_retained_mrr_usd']:,.0f} < ${gate['threshold_usd']:,.0f} (CANON UPDATE 5): "
+                                     "no paid media of any kind"],
+                          mode=mode, spend_enabled=spend_enabled, now=now, cfg=cfg, state_hash=state_hash, valid=True,
+                          status="STOP", extra={"gates": {"rules": rule_detail, "graduation": grad}, "spend_gate": gate,
+                                                "all_in_cap": cap, "scale": scale,
+                                                "totals": {"planned_daily_usd": 0.0, "remaining_daily_cap": _round(remaining_daily),
+                                                           "remaining_monthly_cap": _round(remaining_month),
+                                                           "cash_headroom_usd": _round(cash_head), "envelope": 0.0}})
     if status == "STOP":
         return _zero_plan(reasons + ["STOP rule tripped: all spend classes 0"], mode=mode, spend_enabled=spend_enabled,
                           now=now, cfg=cfg, state_hash=state_hash, valid=True, status="STOP",
-                          extra={"gates": {"rules": rule_detail, "graduation": grad},
+                          extra={"gates": {"rules": rule_detail, "graduation": grad}, "spend_gate": gate,
+                                 "all_in_cap": cap, "scale": scale,
                                  "totals": {"planned_daily_usd": 0.0, "remaining_daily_cap": _round(remaining_daily),
                                             "remaining_monthly_cap": _round(remaining_month), "cash_headroom_usd": _round(cash_head)}})
     # ---- boosts first: proven winners, compliance PASS + judge, human approval, per-boost cap
@@ -378,7 +481,8 @@ def decide(state: dict, cfg: dict | None = None, *, spend_enabled: bool | None =
             "totals": {"planned_daily_usd": _round(planned), "remaining_daily_cap": _round(remaining_daily),
                        "remaining_monthly_cap": _round(remaining_month), "cash_headroom_usd": _round(cash_head),
                        "envelope": _round(envelope)},
-            "gates": {"rules": rule_detail, "graduation": grad}, "budget_id": v["budget_id"],
+            "gates": {"rules": rule_detail, "graduation": grad}, "spend_gate": gate, "all_in_cap": cap, "scale": scale,
+            "budget_id": v["budget_id"],
             "decided_at": now.isoformat(), "config_version": cfg.get("version"), "config_fingerprint": G.fingerprint(cfg),
             "state_hash": state_hash}
 

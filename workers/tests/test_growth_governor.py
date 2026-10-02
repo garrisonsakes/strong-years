@@ -40,7 +40,10 @@ def state(**k):
          "refund_rate_14d": 0.05, "chargeback_rate_30d": 0.001, "chargeback_count_30d": 3,
          "renewal1": {"rate": 0.62, "cohort_n": 400},
          "graduation": {"charge_today_purchases": 800, "factor": 0.7, "media_cost_case": "central", "days_at_min_spend": 8},
-         "boosts": [boost()]}
+         "boosts": [boost()],
+         # CANON UPDATE 5: gate open (trailing-7-day retained MRR $2M) with an all-in cap ($16,667/day - $128) above the
+         # budget caps, so the pre-existing budget/envelope tests keep exercising the same paths.
+         "mrr": {"retained_daily_usd": [2_000_000] * 7}, "costs": {"fixed_daily_usd": 16, "generation_daily_usd": 112}}
     d.update(k)
     return d
 
@@ -71,6 +74,11 @@ def check_invariants(st: dict, d: dict, cfg: dict) -> None:
     assert total <= max(0.0, v["daily_cap_usd"] - v["spent_today_usd"]) + 0.011
     assert total <= max(0.0, v["monthly_cap_usd"] - v["spent_month_usd"]) + 0.011
     assert total <= max(0.0, v["balance_usd"] - v["cash_floor_usd"]) + 0.011
+    # I9 / I10: CANON UPDATE 5 spend gate on trailing-7-day retained MRR and the all-in cap
+    gate = GV.spend_gate(v, cfg)
+    if not gate["open"]:
+        assert total == 0
+    assert total <= GV.all_in_cap(v, cfg, gate)["room_usd"] + 0.011
     # I2 / I3: boosts
     by_id = {b["post_id"]: b for b in v["boosts"]}
     for b in d["boosts"]:
@@ -334,7 +342,10 @@ def _rand_state(rng: random.Random, hostile: bool = True) -> dict:
             "renewal1": {"rate": rng.choice([None, 0.3, 0.55, 0.7]), "cohort_n": rng.choice([0, 50, 500])},
             "graduation": {"charge_today_purchases": rng.choice([0, 100, 300, 1000]), "factor": rng.choice([None, 0.1, 0.5, 0.7, 1.0]),
                            "media_cost_case": rng.choice(["central", "upside"]), "days_at_min_spend": rng.choice([0, 5, 10])},
-            "boosts": boosts}
+            "boosts": boosts,
+            "mrr": rng.choice([None, {"retained_daily_usd": [rng.choice([0, 9999, 29999.99, 30000, 45000, 2e6]) for _ in range(rng.randint(0, 9))]}]
+                              + ([{"retained_daily_usd": [float("nan")]}, {"retained_daily_usd": "x"}, "junk"] if hostile else [])),
+            "costs": rng.choice([None, {"fixed_daily_usd": _rand_money(rng, pb), "generation_daily_usd": _rand_money(rng, pb)}])}
 
 
 @pytest.mark.parametrize("hostile,min_valid", [(True, 5), (False, 1200)])
