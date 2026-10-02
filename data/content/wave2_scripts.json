@@ -7872,6 +7872,142 @@
   "day_index": 6
  },
  {
+  "id": "S261",
+  "page": "@sunyoon.kitchen",
+  "speaker": "SUN",
+  "format": "F12",
+  "pillar": "P11",
+  "hook_id": "HW261",
+  "title": "Ten-minute tofu kimchi bowl",
+  "target_seconds": 42,
+  "hook_line": "Here's lunch in ten minutes: tofu, kimchi, rice, one egg.",
+  "beats": [
+   {
+    "t": "0-3",
+    "speaker": "SUN-VO",
+    "vo": "Here's lunch in ten minutes: tofu, kimchi, rice, one egg.",
+    "ost": "10-MINUTE TOFU BOWL",
+    "shot": "SET-TABLE | S-CARDI-JADE | hands and props only, no face | Veo: cubes of firm tofu slide into a hot pan beside a bowl of rice | CU"
+   },
+   {
+    "t": "3-10",
+    "speaker": "SUN-VO",
+    "vo": "Firm tofu, half a block, cubed. Brown it four minutes. Then kimchi on top for one more.",
+    "ost": "½ block tofu · 4 minutes",
+    "shot": "same | hands and props only, no face | Veo: tofu turns golden, kimchi tumbles on | CU"
+   },
+   {
+    "t": "10-17",
+    "speaker": "SUN-VO",
+    "vo": "Rice in a bowl, tofu and kimchi over it, and a fried egg cooked until the yolk is firm.",
+    "ost": "Yolk cooked firm",
+    "shot": "same | hands and props only, no face | Veo: the bowl assembles | overhead"
+   },
+   {
+    "t": "17-24",
+    "speaker": "SUN-VO",
+    "vo": "Call it twenty-five grams of protein per bowl. PROT-AGE suggests twenty-five to thirty per meal past sixty-five.",
+    "ost": "≈25 g protein",
+    "shot": "same | hands and props only, no face | Veo: study card (Bauer et al., PROT-AGE 2013) by the bowl | insert"
+   },
+   {
+    "t": "24-31",
+    "speaker": "SUN-VO",
+    "vo": "Our daughter Mina called mid-chop to ask what I'm eating. I told her: grams, not vibes.",
+    "ost": "Mina: 'What are you eating?'",
+    "shot": "same | hands and props only, no face | Veo: a phone buzzes on the table, MINA on the screen | insert"
+   },
+   {
+    "t": "31-37",
+    "speaker": "SUN-VO",
+    "vo": "Soy allergy? Use two eggs and some chicken. Watching salt? Rinse the kimchi.",
+    "ost": "Soy allergy? Eggs + chicken.",
+    "shot": "same | hands and props only, no face | Veo: kimchi rinsed in a small sieve | CU"
+   },
+   {
+    "t": "37-42",
+    "speaker": "SUN-VO",
+    "vo": "Screenshot the bowl. Comment SOUP for my three soups with grams.",
+    "ost": "Comment SOUP",
+    "shot": "same | hands and props only, no face | Veo: chopsticks lift a bite | CU"
+   }
+  ],
+  "spoken_word_count": 103,
+  "has_movement": false,
+  "movement_tags": [
+   "protein"
+  ],
+  "safety_cue": "Soy-allergy swap; sodium rinse; yolk cooked firm (E54).",
+  "regression": "",
+  "cta_keyword": "SOUP",
+  "cta_deliverable": "Sun Yoon's Three Soups",
+  "cta_line": "Screenshot the bowl. Comment SOUP for my three soups with grams.",
+  "caption": "Comment SOUP for Sun Yoon's Three Soups.\nTen-minute tofu kimchi bowl: half a block of firm tofu browned 4 minutes, kimchi on top for 1 more, over rice with a fried egg cooked until the yolk is firm. About 25 g protein (USDA FoodData Central). PROT-AGE suggests 25–30 g per meal for adults over 65.\nSoy allergy? Two eggs and some chicken. Watching salt? Rinse the kimchi.",
+  "hashtags": {
+   "ig": [
+    "#tofurecipes",
+    "#kimchi",
+    "#highprotein",
+    "#sunyoon"
+   ],
+   "tt": [
+    "#tofu",
+    "#kimchi",
+    "#protein",
+    "#sunyoon"
+   ],
+   "yt_title": "Lunch in 10 Minutes: Tofu Kimchi Rice Bowl"
+  },
+  "evidence": [
+   "E28",
+   "E52",
+   "E54"
+  ],
+  "evidence_note": "USDA approximations; PROT-AGE (A); Mina is a fictional side character.",
+  "running_bit": "Phone calls from Mina",
+  "wink": false,
+  "myth_bust": false,
+  "music": "playful pizzicato",
+  "thumbnail_text": "25 g IN 10 MINUTES",
+  "demo": false,
+  "hook_object": "here",
+  "virality": {
+   "score": 78.3,
+   "gate": "PASS",
+   "top_decile": false,
+   "hook_class": "OBJ3",
+   "parts": {
+    "hook_class": 16.07,
+    "first_line": 10.0,
+    "number": 10.0,
+    "demo_on_self": 11.25,
+    "open_loop": 10.0,
+    "share": 0.0,
+    "save": 7.0,
+    "length": 10.0,
+    "emotion": 1.0,
+    "cta_friction": 3.0
+   },
+   "why": [
+    "no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c)"
+   ]
+  },
+  "hook_grammar": [
+   "DEMO"
+  ],
+  "series": "",
+  "launch_week": false,
+  "prop": "firm tofu cubes browning in a pan beside a rice bowl",
+  "skip_line": "Soy allergy? Use two eggs and some chicken.",
+  "hook_category": "KIT",
+  "plan_group": "UG-SK-+06-2",
+  "render_lane": "insert",
+  "performer_clip": "",
+  "running_bit_n": 21,
+  "first_post_date": "2026-10-14",
+  "day_index": 6
+ },
+ {
   "id": "S266",
   "page": "@changandsun",
   "speaker": "DUO",

@@ -1406,7 +1406,7 @@ dict(id="S261", group="UG-SK-+06-2", lane="insert", page="@sunyoon.kitchen", spe
   ("SUN-VO","Here's lunch in ten minutes: tofu, kimchi, rice, one egg.","10-MINUTE TOFU BOWL",f"{STB} | {HO} | Veo: cubes of firm tofu slide into a hot pan beside a bowl of rice | CU"),
   ("SUN-VO","Firm tofu, half a block, cubed. Brown it four minutes. Then kimchi on top for one more.","½ block tofu · 4 minutes",f"same | {HO} | Veo: tofu turns golden, kimchi tumbles on | CU"),
   ("SUN-VO","Rice in a bowl, tofu and kimchi over it, and a fried egg cooked until the yolk is firm.","Yolk cooked firm",f"same | {HO} | Veo: the bowl assembles | overhead"),
-  ("SUN-VO","About twenty-five grams of protein. PROT-AGE suggests twenty-five to thirty per meal past sixty-five.","≈25 g protein",f"same | {HO} | Veo: study card (Bauer et al., PROT-AGE 2013) by the bowl | insert"),
+  ("SUN-VO","Call it twenty-five grams of protein per bowl. PROT-AGE suggests twenty-five to thirty per meal past sixty-five.","≈25 g protein",f"same | {HO} | Veo: study card (Bauer et al., PROT-AGE 2013) by the bowl | insert"),
   ("SUN-VO","Our daughter Mina called mid-chop to ask what I'm eating. I told her: grams, not vibes.","Mina: 'What are you eating?'",f"same | {HO} | Veo: a phone buzzes on the table, MINA on the screen | insert"),
   ("SUN-VO","Soy allergy? Use two eggs and some chicken. Watching salt? Rinse the kimchi.","Soy allergy? Eggs + chicken.",f"same | {HO} | Veo: kimchi rinsed in a small sieve | CU"),
   ("SUN-VO","Screenshot the bowl. Comment SOUP for my three soups with grams.","Comment SOUP",f"same | {HO} | Veo: chopsticks lift a bite | CU"),
