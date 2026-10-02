@@ -20,7 +20,7 @@ from common import config
 @dataclass
 class CaptionStyle:
     font: str = "Figtree"
-    size_px: int = 60                 # 52–64 px (CHARACTERS §13.2, SAFETY V-04 min 52)
+    size_px: int = 60                 # 56–64 px (ENGINE_100X §4.4: captions >= 56 px; SAFETY V-04 min 52)
     fill: str = "#FFFFFF"
     highlight: str = "#FFD84D"
     pill: str = "#111111"
@@ -35,7 +35,7 @@ class CaptionStyle:
         d = d or {}
         known = {k: d[k] for k in cls.__dataclass_fields__ if k in d}
         st = cls(**known)
-        st.size_px = int(min(64, max(52, st.size_px)))
+        st.size_px = int(min(64, max(CAPTION_MIN_PX, st.size_px)))
         validate_text_colours(st.fill, st.pill, "caption fill")
         validate_text_colours(st.highlight, st.pill, "caption highlight")
         return st
@@ -47,6 +47,25 @@ def font(size: int, path: str | None = None) -> ImageFont.FreeTypeFont:
     if not p.exists():
         raise FileNotFoundError(f"caption font missing: {p} (run from repo with workers/fonts present)")
     return ImageFont.truetype(str(p), size)
+
+
+# ENGINE_100X §4.4 / holes #3 (older eyes, [S43]): hook text >= 72 px cap height on 1080x1920, captions and other
+# on-screen text >= 56 px. The hook size is derived from the font's real cap height, never assumed.
+CAPTION_MIN_PX = 56
+HOOK_MIN_CAP_PX = 72
+
+
+def cap_height(size: int) -> int:
+    b = font(size).getbbox("H")
+    return int(b[3] - b[1])
+
+
+@lru_cache(maxsize=4)
+def hook_min_size(min_cap_px: int = HOOK_MIN_CAP_PX) -> int:
+    s = CAPTION_MIN_PX
+    while cap_height(s) < min_cap_px and s < 200:
+        s += 2
+    return s
 
 
 def _rgba(hexcol: str, alpha: float = 1.0) -> tuple[int, int, int, int]:
@@ -220,20 +239,21 @@ def render_state(plan: OverlayPlan, key: tuple) -> Image.Image:
             t = plan.texts[item[1]]
             words = t["text"].split()
             if t.get("style") == "hook":
-                draw_text_block(img, words, size=78, fill="#FFF6E5", pill="#111111", pill_alpha=0.9,
+                hs = hook_min_size()
+                draw_text_block(img, words, size=max(78, hs), fill="#FFF6E5", pill="#111111", pill_alpha=0.9,
                                 center_x=W // 2, max_w=z.width + 40, anchor_y=z.top + 90, anchor="top",
-                                max_lines=3, min_size=60)
+                                max_lines=4, min_size=hs)
             else:
                 draw_text_block(img, words, size=64, fill="#FFFFFF", pill="#111111", pill_alpha=0.88,
                                 center_x=z.center_x, max_w=z.width, anchor_y=int(H * 0.40), anchor="top",
-                                max_lines=2, min_size=52)
+                                max_lines=2, min_size=CAPTION_MIN_PX)
     for item in key:
         if item[0] == "cap":
             ch = chunks[item[1]]
             words = [w.text.upper() if st.uppercase else w.text for w in ch.words]
             draw_text_block(img, words, size=st.size_px, fill=st.fill, pill=st.pill, pill_alpha=st.pill_alpha,
                             center_x=z.center_x, max_w=z.width, anchor_y=z.bottom, anchor="bottom",
-                            highlight_idx=item[2], highlight=st.highlight, max_lines=2, min_size=52)
+                            highlight_idx=item[2], highlight=st.highlight, max_lines=2, min_size=CAPTION_MIN_PX)
     if plan.ai_tag:
         draw_ai_tag(img, plan.ai_tag, z)
     return img

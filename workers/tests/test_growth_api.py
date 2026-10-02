@@ -121,3 +121,15 @@ def test_request_level_overrides_cannot_flip_the_env_switches(client):
     body["config_overrides"] = {"governor": {"max_boost_daily_usd": 999999}}
     r = client.post("/growth/governor/plan", json=body, headers=AUTH)
     assert r.status_code == 422
+
+
+def test_scorecard_variants_readout_endpoints(client):
+    read = {"post_id": "p1", "page_id": "pg1", "platform": "facebook", "horizon_h": 24, "reach": 4000, "shares": 200,
+            "hold_3s": 0.9, "hook_family": "IF_EVERY", "body_family": "P01:F02", "close_family": "STRONG"}
+    r = client.post("/growth/scorecard", json={"reads": [read], "pages": [{"id": "pg1", "slug": "@changyin"}]}, headers=AUTH)
+    assert r.status_code == 200 and r.json()["rows"][0]["shares_score"] > 90
+    m = {"master_id": "M1", "page": "@changyin", "duration_s": 42, "hook_pool": [{"id": "H-a", "text": "x"}]}
+    r = client.post("/growth/variants", json={"master": m, "n": 5, "page_age_days": 3}, headers=AUTH)
+    assert r.status_code == 200 and r.json()["budget"] == 3 and len(r.json()["variants"]) == 3
+    r = client.post("/growth/readout", json={"cards": [], "week_of": "2026-10-19", "post": False}, headers=AUTH)
+    assert r.status_code == 200 and "Next week's tests" in r.json()["text"]

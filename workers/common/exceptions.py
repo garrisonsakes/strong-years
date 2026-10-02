@@ -17,7 +17,8 @@ import httpx
 log = logging.getLogger("workers.exceptions")
 
 TYPES = {"compliance_flag", "judge_disagreement", "upload_auth_failure", "refund_review", "chargeback_review",
-         "plan_switch_request", "consent_price_mismatch", "crisis_escalation", "boost_approval"}
+         "plan_switch_request", "consent_price_mismatch", "crisis_escalation", "boost_approval",
+         "growth_readout"}   # growth_readout: weekly readout; the app must list it in EXCEPTION_TYPES to accept it
 
 
 def _cfg() -> tuple[str, str]:

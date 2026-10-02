@@ -52,3 +52,21 @@ def test_rubric_orders_hook_classes_by_measured_rel():
     assert good["pass"] and good["top_decile"] and not bad["pass"]
     assert good["parts"]["first_line"] == V.WEIGHTS["first_line"]          # first clause <= 12 words
     assert bad["parts"]["share"] == 0 and bad["parts"]["length"] < V.WEIGHTS["length"]
+
+
+def test_refit_gate_dry_run_and_floor():
+    R = _load("refit_gate")
+    lib = R.load_scripts()
+    ids = sorted(lib)[:120]
+    rows = [{"script_id": i, "composite": 40 + 4 * V.score(lib[i])["parts"]["share"], "horizon_h": 24} for i in ids]
+    assert R.refit(rows[:10], lib)["status"] == "insufficient_data"
+    rep = R.refit(rows, lib)
+    assert rep["status"] == "ok" and not rep["applied"]
+    assert abs(sum(rep["new"].values()) - 100) < 0.05 and min(rep["new"].values()) >= 1.0
+    share = next(c for c in rep["changes"] if c["component"] == "share")
+    assert share["new"] > share["old"] and share["new"] <= share["old"] * 1.3 + 0.1     # <= 30% per week
+
+
+def test_trial_cap_ramp_by_page_day():
+    assert [PR.trial_cap("@changyin", d) for d in (-7, 6, 7, 13, 14, 40)] == [3, 3, 6, 6, 12, 12]
+    assert PR.IG_PUBLISH_HARD_STOP < PR.IG_PUBLISH_LIMIT_24H and PR.fb_long_target(6) == 2 and PR.fb_long_target(3) == 1

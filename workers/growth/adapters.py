@@ -50,8 +50,11 @@ def _watch_pct_from_seconds(avg_s, duration_s) -> float | None:
     return min(100.0, 100.0 * a / d)
 
 
-def _capture(values: dict, *, captured_at, missing: list[str], source: str) -> dict:
+def _capture(values: dict, *, captured_at, missing: list[str], source: str, scorecard: dict | None = None) -> dict:
     out = {"captured_at": _iso(captured_at), "source": source, "missing": sorted(set(missing))}
+    sc = {k: v for k, v in (scorecard or {}).items() if v is not None}
+    if sc:
+        out["scorecard"] = sc            # extra inputs for growth/scorecard.py (hook hold, retention curve, ...)
     for k in PLATFORM_COUNTERS:
         if k in values and values[k] is not None:
             out[k] = values[k]
@@ -93,7 +96,8 @@ def _graph_insights(raw: dict) -> dict:
 
 
 # ---------------------------------------------------------------- Instagram (Reels)
-IG_METRICS = "views,reach,likes,comments,shares,saved,profile_visits,follows,ig_reels_avg_watch_time,total_interactions"
+IG_METRICS = ("views,reach,likes,comments,shares,saved,profile_visits,follows,ig_reels_avg_watch_time,total_interactions,"
+              "reels_skip_rate")   # reels_skip_rate: share of viewers who skip in the first 3 s ("in development") [S17]
 
 
 def ig_parse(raw: dict, *, duration_s: float | None = None, captured_at=None) -> dict:
@@ -103,7 +107,8 @@ def ig_parse(raw: dict, *, duration_s: float | None = None, captured_at=None) ->
             "profile_visits": _n(m.get("profile_visits")), "follows": _n(m.get("follows")),
             "avg_watch_pct": _watch_pct_from_seconds((m.get("ig_reels_avg_watch_time") or 0) / 1000.0
                                                      if m.get("ig_reels_avg_watch_time") is not None else None, duration_s)}
-    return _capture(vals, captured_at=captured_at, missing=["link_clicks"], source="instagram_graph")
+    return _capture(vals, captured_at=captured_at, missing=["link_clicks"], source="instagram_graph",
+                    scorecard={"skip_rate": None if _pct(m.get("reels_skip_rate")) is None else _pct(m.get("reels_skip_rate")) / 100.0})
 
 
 def ig_fetch(post: dict, token: str, client=None) -> dict:
@@ -114,7 +119,33 @@ def ig_fetch(post: dict, token: str, client=None) -> dict:
 
 # ---------------------------------------------------------------- Facebook (Reels / video posts)
 FB_METRICS = ("fb_reels_total_plays,post_video_views,post_impressions_unique,post_video_avg_time_watched,"
-              "post_video_social_actions,post_reactions_like_total,post_video_followers")
+              "post_video_social_actions,post_reactions_like_total,post_video_followers,"
+              "post_video_retention_graph,blue_reels_play_count")   # retention graph + first plays [S16]
+
+
+def fb_retention_curve(raw: dict, duration_s: float | None) -> list[list[float]] | None:
+    """post_video_retention_graph (lifetime): {"0": 1.0, "1": 0.93, ...} keyed by bucket (the share of viewers still
+    watching). Buckets are seconds for Reels; with 40+ buckets on a long video they are percent-of-length steps, so
+    they are mapped onto seconds when duration_s is known. Returns [[t_s, fraction], ...] sorted by t."""
+    for item in raw.get("data") or []:
+        if item.get("name") != "post_video_retention_graph":
+            continue
+        v = (item.get("values") or [{}])[-1]
+        g = v.get("value") if isinstance(v, dict) else None
+        if not isinstance(g, dict) or not g:
+            return None
+        pts = []
+        for k, val in g.items():
+            t, f = G.num(k, lo=0), G.num(val, lo=0)
+            if t is not None and f is not None:
+                pts.append([t, f / 100.0 if f > 1.0 else f])
+        pts.sort()
+        d = G.num(duration_s, lo=0.5)
+        if d and len(pts) >= 40 and pts[-1][0] > d:          # percent-of-length buckets -> seconds
+            last = pts[-1][0] or 1.0
+            pts = [[round(t / last * d, 3), f] for t, f in pts]
+        return pts or None
+    return None
 
 
 def fb_parse(raw: dict, *, duration_s: float | None = None, captured_at=None) -> dict:
@@ -133,7 +164,23 @@ def fb_parse(raw: dict, *, duration_s: float | None = None, captured_at=None) ->
             "follows": _n(m.get("post_video_followers")),
             "avg_watch_pct": _watch_pct_from_seconds((m["post_video_avg_time_watched"] or 0) / 1000.0
                                                      if m.get("post_video_avg_time_watched") is not None else None, duration_s)}
-    return _capture(vals, captured_at=captured_at, missing=["saves", "profile_visits", "link_clicks"], source="facebook_graph")
+    curve = fb_retention_curve(raw, duration_s)
+    return _capture(vals, captured_at=captured_at, missing=["saves", "profile_visits", "link_clicks"], source="facebook_graph",
+                    scorecard={"retention_curve": curve, "first_plays": _n(m.get("blue_reels_play_count")),
+                               "hold_3s": _curve_hold(curve, 3.0)})
+
+
+def _curve_hold(curve, t: float) -> float | None:
+    if not curve:
+        return None
+    prev = curve[0]
+    for p in curve:
+        if p[0] >= t:
+            if p[0] == prev[0]:
+                return p[1]
+            return prev[1] + (p[1] - prev[1]) * (t - prev[0]) / (p[0] - prev[0])
+        prev = p
+    return curve[-1][1]
 
 
 def fb_fetch(post: dict, token: str, client=None) -> dict:
@@ -165,7 +212,7 @@ def tt_fetch(post: dict, token: str, client=None) -> dict:
 
 
 # ---------------------------------------------------------------- YouTube (Analytics API v2)
-YT_METRICS = "views,likes,comments,shares,subscribersGained,averageViewPercentage,averageViewDuration"
+YT_METRICS = "views,engagedViews,likes,comments,shares,subscribersGained,averageViewPercentage,averageViewDuration"
 
 
 def yt_parse(raw: dict, *, duration_s: float | None = None, captured_at=None) -> dict:
@@ -191,7 +238,7 @@ def yt_parse(raw: dict, *, duration_s: float | None = None, captured_at=None) ->
     vals = {"views": _n(m.get("views")), "likes": _n(m.get("likes")), "comments": _n(m.get("comments")),
             "shares": _n(m.get("shares")), "follows": _n(m.get("subscribersGained")), "avg_watch_pct": pct}
     return _capture(vals, captured_at=captured_at, missing=["reach", "saves", "profile_visits", "link_clicks"],
-                    source="youtube_analytics")
+                    source="youtube_analytics", scorecard={"engaged_views": _n(m.get("engagedViews"))})
 
 
 def yt_fetch(post: dict, token: str, client=None, *, start: str, end: str) -> dict:

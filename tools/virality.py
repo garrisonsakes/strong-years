@@ -30,6 +30,21 @@ WEIGHTS = {            # sum = 100
     "emotion": 2,      # identity / family / relief trigger in the first two beats [A]
     "cta_friction": 3, # last line short, one keyword, said once (CONTENT_SYSTEM §4)
 }
+def _load_override() -> None:
+    """data/content/rubric_weights.json (written only by `tools/refit_gate.py --apply`) replaces WEIGHTS when it
+    names the same rows and sums to 100; anything else is ignored."""
+    import json as _json
+    import os as _os
+    p = _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), "data", "content", "rubric_weights.json")
+    try:
+        w = _json.load(open(p))
+    except (OSError, ValueError):
+        return
+    if isinstance(w, dict) and set(w) == set(WEIGHTS) and abs(sum(float(v) for v in w.values()) - 100) < 0.5:
+        WEIGHTS.update({k: float(v) for k, v in w.items()})
+
+
+_load_override()
 THRESHOLD = 60         # below this a script is rejected (build fails for S61+ and every new script)
 TOP_DECILE = 85        # the launch-day 6 must clear this (a fixed bar, ~ the library's top decile)
 # Hook classes, valued by the measured relative performance they stand on (POSTDB §3b TikTok return era, n = 45, and

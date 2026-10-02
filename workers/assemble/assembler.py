@@ -14,7 +14,7 @@ import re
 import time
 from pathlib import Path
 
-from assemble import c2pa_sign, graphics, virality_gate
+from assemble import accessibility, c2pa_sign, graphics, virality_gate
 from assemble import captions as C
 from assemble.layout import FPS, H, W, safe_zone
 from assemble.overlay import CaptionStyle, OverlayPlan, burned_in_strings, render_track
@@ -103,8 +103,15 @@ def plan_timeline(timeline: list[dict], total: float) -> tuple[list[dict], list[
     return base, overlays, warns
 
 
-def mix_audio(voice: Path | None, music: Path | None, total: float, gain_db: float, jobdir: Path) -> Path:
-    """voice + music ducked under voice (sidechain) -> loudnorm two-pass to −14 LUFS / −1.5 dBTP, 48 kHz stereo."""
+def _mute_expr(spans: list[tuple[float, float]]) -> str:
+    return "+".join(f"between(t,{a:.3f},{b:.3f})" for a, b in spans)
+
+
+def mix_audio(voice: Path | None, music: Path | None, total: float, gain_db: float, jobdir: Path,
+              speech_spans: list[tuple[float, float]] | None = None) -> Path:
+    """voice + music bed that is MUTED in every speech span (no music under speech: 55+ accessibility,
+    assemble/accessibility.py) -> loudnorm two-pass to −14 LUFS / −1.5 dBTP, 48 kHz stereo. Without spans the bed is
+    muted for the whole voice track."""
     mix = jobdir / "mix.wav"
     fmt = "aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo"
     if voice is None and music is None:
@@ -117,9 +124,10 @@ def mix_audio(voice: Path | None, music: Path | None, total: float, gain_db: flo
         args += ["-stream_loop", "-1", "-i", str(music)]
     if voice is not None and music is not None:
         fade_out = max(0.0, total - 1.2)
-        fc = [f"[0:a]{fmt},apad=whole_dur={total:.3f},asplit=2[v1][v2]",
-              f"[1:a]{fmt},atrim=0:{total:.3f},volume={gain_db}dB,afade=t=in:d=0.8,afade=t=out:st={fade_out:.3f}:d=1.2[m]",
-              "[m][v2]sidechaincompress=threshold=0.02:ratio=6:attack=15:release=350[md]",
+        spans = speech_spans if speech_spans else [(0.0, total)]
+        fc = [f"[0:a]{fmt},apad=whole_dur={total:.3f}[v1]",
+              f"[1:a]{fmt},atrim=0:{total:.3f},volume={gain_db}dB,afade=t=in:d=0.8,afade=t=out:st={fade_out:.3f}:d=1.2,"
+              f"volume=0:enable='{_mute_expr(spans)}'[md]",
               "[v1][md]amix=inputs=2:duration=first:normalize=0[out]"]
     elif voice is not None:
         fc = [f"[0:a]{fmt},apad=whole_dur={total:.3f}[out]"]
@@ -185,6 +193,15 @@ def assemble(manifest: dict, workdir: Path | None = None) -> dict:
         else:
             raise AssemblyError("virality gate: " + "; ".join(vg["errors"]))
 
+    # 0b) accessibility (55+): caption size, contrast, speech rate <= 2.5 w/s, sentence pauses, no music under speech
+    acc = accessibility.check(manifest, C.clean_words(manifest.get("words") or []), total)
+    warns += acc["warnings"]
+    if acc["errors"]:
+        if acc["mode"] == "warn":
+            warns += [f"accessibility (warn mode): {e}" for e in acc["errors"]]
+        else:
+            raise AssemblyError("accessibility: " + "; ".join(acc["errors"]))
+
     # 1) base video
     base, pips, w = plan_timeline(timeline, total)
     warns += w
@@ -231,7 +248,7 @@ def assemble(manifest: dict, workdir: Path | None = None) -> dict:
         music = storage.fetch(mus.get("url") or mus.get("src"), jobdir)
     elif mus.get("mood") not in (None, "none"):
         warns.append("music.mood set but no music.url: rendered without a music bed")
-    audio = mix_audio(voice, music, total, float(mus.get("gain_db", -20)), jobdir)
+    audio = mix_audio(voice, music, total, float(mus.get("gain_db", -20)), jobdir, acc["speech_spans"])
 
     # 4) final composite: base + PiP + overlay track -> master and clean mezzanine
     args = ["-i", str(base_mp4), "-f", "concat", "-safe", "0", "-i", str(ov_full),
@@ -312,5 +329,6 @@ def assemble(manifest: dict, workdir: Path | None = None) -> dict:
         "words": [{"word": w.text, "start_s": w.start, "end_s": w.end} for w in words],
         "burned_in_text": burned, "expected_on_screen": [t["text"] for t in (manifest.get("on_screen") or [])],
         "phash_seq": phash_seq, "audio_fp": audio_fp, "c2pa": c2pa_info, "frames": frames,
-        "loudness": media.loudness(master), "virality_preflight": vg, "warnings": warns, "render_s": round(time.time() - t0, 1),
+        "loudness": media.loudness(master), "virality_preflight": vg,
+        "accessibility": {k: acc[k] for k in ("speech_rate_wps", "speech_spans", "warnings")}, "warnings": warns, "render_s": round(time.time() - t0, 1),
     }

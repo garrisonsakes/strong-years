@@ -14,6 +14,7 @@ from __future__ import annotations
 import csv
 import json
 import re
+import sys
 from collections import Counter, defaultdict
 from datetime import date, timedelta
 from pathlib import Path
@@ -21,6 +22,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CONTENT = ROOT / "data/content"
 OUT_CSV = CONTENT / "posting_plan_90d.csv"
+VAR_CSV = CONTENT / "posting_plan_variants_90d.csv"   # Trial Reels (TEST) + Facebook text/photo slots
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import posting_rules as PR  # noqa: E402  (also puts workers/ on sys.path)
+from growth import variants as GV  # noqa: E402
 
 D0 = date(2026, 10, 8)            # tonight 2026-10-01 is D-7 (7-day runway)
 D_FIRST, D_LAST = -7, 90
@@ -320,24 +325,41 @@ def build() -> list[dict]:
                         need -= 1
             for m in masters:
                 pillar_count[page][m["pillar"]] += 1
-            # 4) rows: one group = one render (render_id) -> 4 packaged video files + Threads/X text variants
+            # 4) rows: one group = one render (render_id) -> 4 packaged video files + Threads/X text variants.
+            # Facebook is a native upload with its own caption and close; fb_long_target(n) of the day's masters
+            # (movement first, then the longest) get their Facebook placement as a 60-180 s long cut instead.
+            fb_long_i = set(sorted(range(n), key=lambda i: (masters[i]["lane"] != "movement", -masters[i]["seconds"], i))
+                            [:PR.fb_long_target(n)])
             for i, m in enumerate(masters):
                 grp = f"UG-{code}-{d:+03d}-{i + 1}"
                 placed_group[m["script_id"]] = grp
                 for plat in PLATFORMS:
                     slot = sorted(SLOTS[plat][:n])[i]
                     is_text = plat in ("threads", "x")
+                    surface = PR.PLAT_SURFACE[plat]
+                    variant = "yt_distinct_cut" if plat == "yt_shorts" else ("text_post" if is_text else "platform_package")
+                    secs = 0 if is_text else m["seconds"]
+                    if plat == "fb_reels":
+                        variant = "fb_long" if i in fb_long_i else "fb_native"
+                        if variant == "fb_long":
+                            secs = int(min(PR.FB_LONG_S[1], max(PR.FB_LONG_S[0], 2 * m["seconds"] + 10)))
+                    trial_feed = plat == "ig_reels" and PR.ig_trial_reel(page, d)
                     rows.append({
                         "date": day.isoformat(), "day_index": d, "stage": stage(d), "page": page, "platform": plat,
                         "slot_et": slot, "render_lane": "carousel_text" if is_text else m["lane"],
                         "pillar": m["pillar"], "format": "F37" if is_text and plat == "threads" else ("F37/F36" if is_text else m["format"]),
                         "character": m["character"], "hook_grammar": m["hook_grammar"], "cta_type": m["cta_type"],
                         "cta_keyword": m["cta_keyword"], "cta_source": m["cta_source"], "uniqueness_group": grp,
-                        "file_id": f"{grp}-{plat}",
-                        "variant": "yt_distinct_cut" if plat == "yt_shorts" else ("text_post" if is_text else "platform_package"),
-                        "script_id": m["script_id"], "seconds": 0 if is_text else m["seconds"],
+                        "file_id": f"{grp}-{plat}", "variant": variant,
+                        "script_id": m["script_id"], "seconds": secs,
                         "cadence_target": n, "render_id": "" if is_text else f"R-{grp}",
                         "demo": m["demo"], "veo_flag": m["veo"] if not is_text else "n",
+                        "variant_role": "PLACEMENT", "body_id": f"B-{grp}", "hook_id": f"H-{grp}",
+                        "close_id": f"C-{grp}-{surface}",
+                        "caption_source": "fb_native" if plat == "fb_reels" else "platform_native",
+                        "close_line": GV.CLOSE_BY_PLATFORM.get(surface, ""),
+                        "graduation_strategy": "SS_PERFORMANCE" if trial_feed else "",
+                        "feed_rule": "graduation" if plat == "ig_reels" else "",
                     })
     build.wave2_map = [(s["id"], s.get("group") or "", placed_group.get(s["id"], "")) for s in w2]  # type: ignore[attr-defined]
     return rows
@@ -345,12 +367,73 @@ def build() -> list[dict]:
 
 FIELDS = ["date", "day_index", "stage", "page", "platform", "slot_et", "render_lane", "pillar", "format", "character",
           "hook_grammar", "cta_type", "cta_keyword", "cta_source", "uniqueness_group", "file_id", "variant",
-          "script_id", "seconds", "cadence_target", "render_id", "demo", "veo_flag"]
+          "script_id", "seconds", "cadence_target", "render_id", "demo", "veo_flag",
+          "variant_role", "body_id", "hook_id", "close_id", "caption_source", "close_line", "graduation_strategy",
+          "feed_rule"]
+VFIELDS = ["date", "day_index", "stage", "page", "platform", "slot_et", "variant_role", "target_group", "body_id",
+           "hook_id", "variant_id", "file_id", "ops", "dims_changed", "signature", "graduation_strategy", "seconds",
+           "cost_usd", "script_id", "pillar", "hook_grammar", "cta_keyword"]
+TRIAL_SLOTS = [f"{(375 + 45 * k) // 60:02d}:{(375 + 45 * k) % 60:02d}" for k in range(20)]   # 06:15 ... 20:30 ET
+FB_TEXT_PHOTO_SLOTS = {"fb_text": "11:30", "fb_photo": "16:30"}
+ALT_HOOKS_PER_MASTER = 3          # the writer drafts 3 alternative hooks per master (same claim, new opening)
 
 
-def write_csv(rows: list[dict], path: Path = OUT_CSV) -> None:
+def build_variants(rows: list[dict]) -> list[dict]:
+    """TEST rows (IG Trial Reels) and Facebook text/photo slots from the placement plan.
+    Trial Reels published on day d test the hooks of day d+1's masters (>= 10 h before their feed slot, so the 6 h
+    read decides graduation). Per page-day count = posting_rules.trial_cap (3 / 6 / configured cap), spread over the
+    next day's masters (<= max_trials_per_body each); variants come from workers/growth/variants.generate."""
+    ig = [r for r in rows if r["platform"] == "ig_reels"]
+    by_day: dict[tuple, list[dict]] = defaultdict(list)
+    for r in ig:
+        by_day[(r["page"], int(r["day_index"]))].append(r)
+    out: list[dict] = []
+    for page, (start, code, _, _) in PAGES.items():
+        for d in range(D_FIRST, D_LAST + 1):
+            today, nxt = by_day.get((page, d)), by_day.get((page, d + 1))
+            if not today:
+                continue
+            day = today[0]["date"]
+            for p, slot in FB_TEXT_PHOTO_SLOTS.items():
+                out.append({"date": day, "day_index": d, "stage": stage(d), "page": page, "platform": p, "slot_et": slot,
+                            "variant_role": "PLACEMENT", "target_group": "", "body_id": "", "hook_id": "",
+                            "variant_id": f"FB-{code}-{d:+03d}-{p}", "file_id": f"FB-{code}-{d:+03d}-{p}", "ops": p,
+                            "dims_changed": "", "signature": "", "graduation_strategy": "", "seconds": 0,
+                            "cost_usd": GV._vcfg(None)["op_cost_usd"][p], "script_id": "GEN-needed", "pillar": "",
+                            "hook_grammar": "", "cta_keyword": ""})
+            if not nxt:
+                continue
+            cap = PR.trial_cap(page, d)
+            per_body = min(int(PR.VCFG["max_trials_per_body"]), -(-cap // len(nxt)))
+            pools = []
+            for r in nxt:
+                m = {"master_id": r["uniqueness_group"], "page": page, "duration_s": int(r["seconds"]), "pillar": r["pillar"],
+                     "format": r["format"], "hook_grammar": r["hook_grammar"], "character": r["character"],
+                     "hook_id": r["hook_id"], "body_id": r["body_id"], "close_id": f"C-{r['uniqueness_group']}",
+                     "hook_pool": [{"id": f"{r['hook_id']}-alt{k + 1}", "text": ""} for k in range(ALT_HOOKS_PER_MASTER)]}
+                auto = {(page, r["body_id"])} if r.get("graduation_strategy") == "SS_PERFORMANCE" else set()
+                pools.append((r, GV.assign_trial_params(GV.generate(m, per_body), auto)))
+            picked = []
+            for j in range(per_body):                   # round-robin: every master gets its first test first
+                for r, vs in pools:
+                    if j < len(vs) and len(picked) < cap:
+                        picked.append((r, vs[j]))
+            for k, (r, v) in enumerate(picked):
+                out.append({"date": day, "day_index": d, "stage": stage(d), "page": page, "platform": "ig_trial",
+                            "slot_et": TRIAL_SLOTS[k], "variant_role": "TEST", "target_group": r["uniqueness_group"],
+                            "body_id": v["body_id"], "hook_id": v["hook_id"], "variant_id": v["variant_id"],
+                            "file_id": f"{v['variant_id']}-ig_trial", "ops": "|".join(v["ops"]),
+                            "dims_changed": "|".join(v["dims_changed"]),
+                            "signature": json.dumps(v["signature"], sort_keys=True, separators=(",", ":")),
+                            "graduation_strategy": v["trial_params"]["graduation_strategy"], "seconds": v["length_s"],
+                            "cost_usd": v["cost_usd"], "script_id": r["script_id"], "pillar": r["pillar"],
+                            "hook_grammar": r["hook_grammar"], "cta_keyword": r["cta_keyword"]})
+    return out
+
+
+def write_csv(rows: list[dict], path: Path = OUT_CSV, fields: list[str] = FIELDS) -> None:
     with path.open("w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=FIELDS)
+        w = csv.DictWriter(f, fieldnames=fields)
         w.writeheader()
         w.writerows(rows)
 
@@ -358,6 +441,10 @@ def write_csv(rows: list[dict], path: Path = OUT_CSV) -> None:
 if __name__ == "__main__":
     rows = build()
     write_csv(rows)
+    vrows = build_variants(rows)
+    write_csv(vrows, VAR_CSV, VFIELDS)
+    print(f"{len(vrows)} variant rows ({sum(r['platform'] == 'ig_trial' for r in vrows)} Trial Reels, "
+          f"{sum(r['platform'] != 'ig_trial' for r in vrows)} FB text/photo) -> {VAR_CSV.relative_to(ROOT)}")
     wm = build.wave2_map  # type: ignore[attr-defined]
     if wm:
         with (CONTENT / "wave2_group_map.csv").open("w", newline="", encoding="utf-8") as f:

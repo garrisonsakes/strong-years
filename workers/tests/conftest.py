@@ -92,7 +92,10 @@ def build_manifest(synth: dict, stitched: dict, **over) -> dict:
          "on_screen": [{"text": "CHAIR TEST", "start_s": 0, "end_s": 2.0, "style": "hook"}],
          "study_cards": [{"title": "Chair stand: a screening test", "evidence_id": "E11", "start_s": 0.5, "end_s": 2.5}],
          "music": {"url": str(synth["music"]), "gain_db": -20}, "c2pa": {"sign": True},
-         "qa": {"export_frames": 6, "phash": True, "chromaprint": True}}
+         "qa": {"export_frames": 6, "phash": True, "chromaprint": True},
+         # the flite test voice runs ~3.2 words/s (sped up to keep the suite fast); production voices come from
+         # assemble.voice.tts_request (speed cap + sentence pauses) and are enforced. Unit tests cover enforce mode.
+         "accessibility": {"mode": "warn"}}
     m.update(over)
     return m
 

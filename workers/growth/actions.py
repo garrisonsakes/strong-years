@@ -15,6 +15,7 @@ plan(scores, posts, pages, cfg, *, now, recent_remixes, ad_texts, judge_fn) -> {
 """
 from __future__ import annotations
 
+import copy
 from datetime import datetime, timedelta, timezone
 
 from growth import adpolicy
@@ -196,5 +197,96 @@ def plan(scores: list[dict], posts: list[dict], pages: list[dict], cfg: dict | N
                                        "weight_multiplier": float(cfg["loser"]["weight_multiplier"])})
         else:
             out["skipped"].append({"post_id": sc["post_id"], "class": sc.get("class")})
+    out["counts"] = {k: len(v) for k, v in out.items() if isinstance(v, list)}
+    return out
+
+
+# ---------------------------------------------------------------- scorecard actions (growth/scorecard.py)
+def _final(cards: list[dict], min_h: int = 6) -> dict[str, dict]:
+    """Latest non-provisional read per post at >= min_h."""
+    out: dict[str, dict] = {}
+    for c in cards:
+        if c.get("provisional") or int(c.get("horizon_h") or 0) < min_h:
+            continue
+        k = str(c["post_id"])
+        if k not in out or int(c["horizon_h"]) > int(out[k]["horizon_h"]):
+            out[k] = c
+    return out
+
+
+def genes_of(card: dict) -> list[str]:
+    return [f"{k}:{card[f'{k}_family']}" for k in ("hook", "body", "close") if card.get(f"{k}_family")]
+
+
+def scorecard_plan(cards: list[dict], posts: list[dict], pages: list[dict], cfg: dict | None = None, *,
+                   now: datetime | None = None, recent_remixes: list[dict] | None = None,
+                   gene_history: dict[str, list[float]] | None = None, benched: dict[str, str] | None = None,
+                   ad_texts: dict[str, dict] | None = None, judge_fn=None) -> dict:
+    """Scorecard rules -> queued jobs (never publishing or spending):
+      hook >= 85                        -> 2 new bodies for that hook block
+      body >= 85 and hook < 50          -> 3 new hooks for that body block (they run as Trial Reels)
+      shares or saves >= 90             -> remix to every other page + a boost candidate (still WINNER-gated)
+      non_follower >= 80                -> double that topic's (pillar) slots on the page for the next plan
+      a gene's 24 h composite < 30 twice in a row -> bench the gene 14 days (allocator skips it)
+    gene_history: gene -> earlier 24 h composites (oldest first); updated copy is returned as `gene_history`."""
+    cfg = cfg or G.load()
+    a = cfg["scorecard"]["actions"]
+    now = now or datetime.now(timezone.utc)
+    posts_by = {str(p["post_id"]): p for p in posts}
+    pages_by = _page_by_id(pages)
+    hist = {g: list(v) for g, v in (gene_history or {}).items()}
+    bench = dict(benched or {})
+    recent = list(recent_remixes or [])
+    out = {"new_bodies": [], "new_hooks": [], "remix_jobs": [], "boost_candidates": [], "topic_boosts": [],
+           "bench": [], "skipped_provisional": sorted({str(c["post_id"]) for c in cards if c.get("provisional")})}
+    for pid, c in sorted(_final(cards).items(), key=lambda kv: -(kv[1].get("composite") or 0)):
+        s, post = c.get("scores") or {}, posts_by.get(pid, {"post_id": pid})
+        base = {"source_post_id": pid, "page_id": c.get("page_id"), "platform": c.get("platform"),
+                "horizon_h": c.get("horizon_h"), "status": "queued", "created_at": now.isoformat()}
+        if (s.get("hook") or 0) >= a["hook_strong"]:
+            for k in range(int(a["new_bodies"])):
+                out["new_bodies"].append({**base, "kind": "new_body", "n": k + 1, "keep_hook_block_id": c.get("hook_block_id"),
+                                          "hook_family": c.get("hook_family"), "exclude_body_block_id": c.get("body_block_id"),
+                                          "rule": f"hook {s['hook']:.0f} >= {a['hook_strong']}"})
+        if (s.get("body") or 0) >= a["body_strong"] and s.get("hook") is not None and s["hook"] < a["hook_weak"]:
+            for k in range(int(a["new_hooks"])):
+                out["new_hooks"].append({**base, "kind": "new_hook", "n": k + 1, "keep_body_block_id": c.get("body_block_id"),
+                                         "variant_role": "TEST", "exclude_hook_block_id": c.get("hook_block_id"),
+                                         "rule": f"body {s['body']:.0f} >= {a['body_strong']} and hook {s['hook']:.0f} < {a['hook_weak']}"})
+        if max(s.get("shares") or 0, s.get("saves") or 0) >= a["share_save_viral"]:
+            r = copy.deepcopy(cfg)
+            r["remix"]["variants_per_winner"] = max(1, len(pages_by) - 1)          # every other page
+            sc_like = {"post_id": pid, "page_id": c.get("page_id"), "platform": c.get("platform"),
+                       "score": c.get("composite"), "class": post.get("class") or "PROMISING"}
+            jobs = remix_jobs_for(sc_like, post, pages_by, r, now, recent)
+            for j in jobs:
+                j["rule"] = "share/save >= 90: remix to all pages"
+            out["remix_jobs"] += jobs
+            recent += jobs
+            if post.get("class") == "WINNER":
+                bc = boost_candidate_for({**sc_like, "class": "WINNER", "views": c.get("denominator_value")}, post, cfg,
+                                         now, (ad_texts or {}).get(pid), judge_fn)
+            else:   # the governor only funds WINNERs: hold the candidate until the velocity class gets there
+                bc = {"kind": "boost", "status": "watch_until_winner", "post_id": pid, "page_id": c.get("page_id"),
+                      "platform": c.get("platform"), "class": post.get("class"), "created_at": now.isoformat()}
+            if bc:
+                bc["rule"] = "share/save >= 90"
+                out["boost_candidates"].append(bc)
+        if (s.get("non_follower") or 0) >= a["non_follower_strong"]:
+            out["topic_boosts"].append({**base, "kind": "topic_boost", "pillar": post.get("pillar"),
+                                        "multiplier": float(a["topic_slot_multiplier"]),
+                                        "rule": f"non-follower {s['non_follower']:.0f} >= {a['non_follower_strong']}"})
+    for c in sorted((c for c in cards if int(c.get("horizon_h") or 0) == 24 and not c.get("provisional")
+                     and c.get("composite") is not None), key=lambda c: str(c.get("post_id"))):
+        for g in genes_of(c):
+            hist.setdefault(g, []).append(float(c["composite"]))
+            tail = hist[g][-int(a["gene_bench_strikes"]):]
+            if len(tail) == int(a["gene_bench_strikes"]) and all(v < a["gene_bench_below"] for v in tail) and g not in bench:
+                until = (now + timedelta(days=int(a["bench_days"]))).isoformat()
+                bench[g] = until
+                out["bench"].append({"gene": g, "until": until, "rule": f"composite < {a['gene_bench_below']} "
+                                                                        f"{a['gene_bench_strikes']}x in a row"})
+    out["gene_history"] = hist
+    out["benched"] = bench
     out["counts"] = {k: len(v) for k, v in out.items() if isinstance(v, list)}
     return out

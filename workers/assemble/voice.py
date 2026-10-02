@@ -18,6 +18,24 @@ import numpy as np
 from common import config, storage
 
 SR = 48000
+# 55+ pacing (ENGINE_100X §4.2, [S40][S41]): cap the TTS speed and leave 250-400 ms at sentence ends.
+SPEED_CAP = 0.95            # ElevenLabs voice_settings.speed (0.7-1.2, default 1.0) [A: verify per model]
+SPEED_MIN = 0.7
+SENTENCE_PAUSE_S = 0.3
+LINE_GAP_MS = 300           # silence between stitched lines (was 180)
+BREAK_TAG_MODELS = {"eleven_multilingual_v2", "eleven_turbo_v2", "eleven_turbo_v2_5", "eleven_flash_v2",
+                    "eleven_flash_v2_5"}     # SSML <break time="0.3s" /> support
+V3_PAUSE_TAG = "[short pause]"              # eleven_v3 has no SSML breaks; it takes audio tags [A: verify tag name]
+_SENT_RX = re.compile(r"(?<=[.!?])\s+(?=\S)")
+
+
+def tts_request(text: str, *, model_id: str = "eleven_v3", voice_settings: dict | None = None) -> dict:
+    """ElevenLabs /with-timestamps body with the 55+ defaults: speed capped at SPEED_CAP and a pause after every
+    sentence (SSML break or the v3 pause tag). Tags are dropped again by words_from_alignment."""
+    vs = dict(voice_settings or {})
+    vs["speed"] = round(max(SPEED_MIN, min(SPEED_CAP, float(vs.get("speed", SPEED_CAP)))), 2)
+    pause = f' <break time="{SENTENCE_PAUSE_S}s" /> ' if model_id in BREAK_TAG_MODELS else f" {V3_PAUSE_TAG} "
+    return {"text": _SENT_RX.sub(pause, (text or "").strip()), "model_id": model_id, "voice_settings": vs}
 
 
 def decode_pcm(path: Path, sr: int = SR) -> np.ndarray:
@@ -48,10 +66,10 @@ def words_from_alignment(alignment: dict | None, text_fallback: str, duration: f
     if chars and len(chars) == len(starts) == len(ends):
         in_tag, cur, cs, ce = False, "", None, None
         for ch, s, e in zip(chars, starts, ends):
-            if ch == "[":
+            if ch in "[<":
                 in_tag = True
             if in_tag:
-                if ch == "]":
+                if ch in "]>":
                     in_tag = False
                 continue
             if ch.isspace():
@@ -65,7 +83,7 @@ def words_from_alignment(alignment: dict | None, text_fallback: str, duration: f
         if cur:
             words.append({"word": cur, "start_s": cs, "end_s": ce})
         return words
-    toks = re.sub(r"\[[^\]]*\]", " ", text_fallback or "").split()
+    toks = re.sub(r"\[[^\]]*\]|<[^>]*>", " ", text_fallback or "").split()
     total = sum(len(t) + 1 for t in toks) or 1
     t = 0.0
     for tok in toks:
@@ -79,7 +97,7 @@ def stitch(req: dict, workdir: Path | None = None) -> dict:
     brief = storage.safe_id(req.get("brief_id") or storage.new_id(), "brief_id")      # AUDIT H9: no traversal
     workdir = storage.confine(Path(workdir or config.WORK_DIR), f"voice_{brief}")
     workdir.mkdir(parents=True, exist_ok=True)
-    gap = int(SR * float(req.get("gap_ms", 180)) / 1000)
+    gap = int(SR * float(req.get("gap_ms", LINE_GAP_MS)) / 1000)
     lines = sorted(req.get("lines") or [], key=lambda l: l.get("i", 0))
     if not lines:
         raise ValueError("no voice lines")

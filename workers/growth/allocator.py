@@ -162,6 +162,54 @@ def hook_family_posterior(observations: list[dict], cfg: dict, now: datetime) ->
     return out
 
 
+def body_family(arm: dict) -> str:
+    return f"{arm['pillar']}:{arm['format']}"
+
+
+def body_family_posterior(observations: list[dict], cfg: dict, now: datetime) -> dict[str, dict]:
+    """Body-family arm (block-level learning): one Beta per body family (pillar:format), pooled across hook grammar,
+    speaker and length. An observation may carry an explicit `body_family` (from a scorecard row's body block);
+    otherwise it is derived from the arm."""
+    a = cfg["allocator"]
+    hl, k0, m0 = float(a["half_life_days"]), float(a.get("body_family_prior_strength", 10.0)), float(a.get("prior_mean", 0.5))
+    stats: dict[str, list[float]] = {}
+    for o in observations or []:
+        key = o.get("arm_key") or (arm_key(o["arm"]) if o.get("arm") else None)
+        r = G.num(o.get("reward"), lo=0, hi=1)
+        if r is None or not (key or o.get("body_family")):
+            continue
+        fam = o.get("body_family") or body_family(parse_arm_key(key))
+        try:
+            t = datetime.fromisoformat(str(o.get("at")).replace("Z", "+00:00")) if o.get("at") else now
+            t = t if t.tzinfo else t.replace(tzinfo=timezone.utc)
+        except ValueError:
+            t = now
+        w = decay_weight((now - t).total_seconds() / 86400.0, hl) * float(G.num(o.get("weight"), lo=0, hi=10) or 1.0)
+        st = stats.setdefault(fam, [0.0, 0.0])
+        st[0] += w * r
+        st[1] += w * (1.0 - r)
+    out = {}
+    for f, (succ, fail) in stats.items():
+        al, be = 1.0 + succ + m0 * k0, 1.0 + fail + (1.0 - m0) * k0
+        out[f] = {"alpha": al, "beta": be, "n": round(succ + fail, 3), "mean": round(al / (al + be), 4)}
+    return out
+
+
+def is_benched(arm: dict, benched: dict[str, str] | None, now: datetime) -> bool:
+    """benched: gene -> ISO 'until' (growth.actions.scorecard_plan). Genes: hook:<grammar>, body:<pillar:format>."""
+    for gene in (f"hook:{arm['grammar']}", f"body:{body_family(arm)}"):
+        until = (benched or {}).get(gene)
+        if until:
+            try:
+                u = datetime.fromisoformat(str(until).replace("Z", "+00:00"))
+                u = u if u.tzinfo else u.replace(tzinfo=timezone.utc)
+            except ValueError:
+                return True
+            if u > now:
+                return True
+    return False
+
+
 def _bit_for(slot_i: int, speaker: str, used: list[str], cfg: dict, rng: random.Random, solo_count: int) -> str | None:
     a = cfg["allocator"]
     need = speaker == "DUO" or (solo_count % int(a["solo_bit_every"]) == 0)
@@ -187,18 +235,23 @@ def _render_format(fmt: str, speaker: str, cfg: dict) -> str:
 
 def plan_day(page: dict, platform: str, date: str, observations: list[dict], cfg: dict | None = None, *,
              cadence: int | None = None, recent: list[dict] | None = None, used_bits: list[str] | None = None,
-             seed: int | None = None, now: datetime | None = None) -> dict:
+             seed: int | None = None, now: datetime | None = None, benched: dict[str, str] | None = None) -> dict:
     cfg = cfg or G.load()
     a = cfg["allocator"]
     now = now or datetime.now(timezone.utc)
     rng = random.Random(seed if seed is not None else f"{page.get('id')}|{platform}|{date}")
     arms = eligible_arms(page, platform, cfg)
+    n_all = len(arms)
+    arms = [x for x in arms if not is_benched(x, benched, now)]     # benched genes sit out (scorecard: 14 d)
     if not arms:
         raise ValueError("no eligible arms for this page/platform")
     post = posterior(observations, arms, cfg, now)
     fam = hook_family_posterior(observations, cfg, now)
     fam_theta = {g: rng.betavariate(f["alpha"], f["beta"]) for g, f in sorted(fam.items())}
     fam_w = float(a.get("hook_family_weight", 0.35))
+    bfam = body_family_posterior(observations, cfg, now)
+    bfam_theta = {f: rng.betavariate(b["alpha"], b["beta"]) for f, b in sorted(bfam.items())}
+    bfam_w = float(a.get("body_family_weight", 0.0)) if bfam else 0.0
     n = max(1, min(int(a["max_cadence"]), int(cadence or page.get("daily_post_target") or a["max_cadence"])))
     explore_floor = max(G.MIN_EXPLORE_FLOOR, float(a["explore_floor"]))
     n_explore = max(1, int(math.ceil(n * explore_floor))) if n > 1 else (1 if rng.random() < explore_floor else 0)
@@ -239,8 +292,10 @@ def plan_day(page: dict, platform: str, date: str, observations: list[dict], cfg
     min_direct = float(a.get("exploit_min_direct", 1.0))
     min_factors = int(a.get("exploit_min_factors", 3))
     # each arm's Thompson draw is blended with its hook family's draw (the hook-family arm)
-    draws = [((1 - fam_w) * rng.betavariate(post[arm_key(x)]["alpha"], post[arm_key(x)]["beta"])
-              + fam_w * fam_theta.get(x["grammar"], 0.5), i, x) for i, x in enumerate(arms)]
+    # (and, once body-family evidence exists, with its body family's draw)
+    draws = [((1 - fam_w - bfam_w) * rng.betavariate(post[arm_key(x)]["alpha"], post[arm_key(x)]["beta"])
+              + fam_w * fam_theta.get(x["grammar"], 0.5) + bfam_w * bfam_theta.get(body_family(x), 0.5), i, x)
+             for i, x in enumerate(arms)]
     draws.sort(key=lambda d: (-d[0], d[1]))
     neutral = float(a.get("prior_mean", 0.5))
     tiers = (lambda p: p["n"] >= min_direct and p["mean"] >= neutral,            # proven, not below baseline
@@ -288,12 +343,15 @@ def plan_day(page: dict, platform: str, date: str, observations: list[dict], cfg
                       "render_format": _render_format(arm["format"], arm["speaker"], cfg), "running_bit": bit,
                       "arm_key": arm_key(arm), "mode": c["mode"], "theta": c["theta"],
                       "posterior_mean": round(c["posterior"]["mean"], 4), "observations": c["posterior"]["n"],
-                      "proven_grammar": arm["grammar"] in CAT.PROVEN_GRAMMARS, "priority": 50})
+                      "proven_grammar": arm["grammar"] in CAT.PROVEN_GRAMMARS, "priority": 50,
+                      "hook_family": arm["grammar"], "body_family": body_family(arm)})
     explore_share = sum(1 for s in slots if s["mode"] == "explore") / max(1, len(slots))
     return {"page_id": page.get("id"), "page_slug": page.get("slug"), "platform": platform, "date": date,
             "cadence": n, "slots": slots, "explore_share": round(explore_share, 3),
-            "explore_floor": explore_floor, "arms_considered": len(arms), "config_version": cfg.get("version"),
+            "explore_floor": explore_floor, "arms_considered": len(arms), "arms_benched": n_all - len(arms),
+            "config_version": cfg.get("version"),
             "hook_families": {g: {"mean": f["mean"], "n": f["n"]} for g, f in sorted(fam.items(), key=lambda kv: -kv[1]["mean"])},
+            "body_families": {f: {"mean": b["mean"], "n": b["n"]} for f, b in sorted(bfam.items(), key=lambda kv: -kv[1]["mean"])},
             "seed": seed, "used_bits": bits_used[-int(a["bit_cooldown"]):]}
 
 

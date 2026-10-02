@@ -92,6 +92,21 @@ How the reach and breakeven columns are worked out:
 
 Paid spend stays under the spend governor's caps (BLITZ §9/§11) and boosts only WINNER posts. At $500/day or more, amplification costs more than the whole production engine.
 
+## 2b. Canon config with variants: 4 pages × 6 masters, Trial Reels and Facebook slots (Oct 2 2026)
+
+`build_costs.scenario(cfg, 4, 6, 0)` for the CANON UPDATE 4 roster, plus the variant layer from `data/content/posting_plan_variants_90d.csv` (ENGINE_100X cost lines: a new hook ≈ **$0.45** (≈ 4–8 s of new lip-sync plus TTS), new first frame / on-screen text / caption style / length cut **$0**, character-swap voice-over ≈ $0.02, FB long cut ≈ $0.20 assembly, FB photo ≈ $0.05 (one library still), FB text $0).
+
+| Per full-cadence day | Count | $/day |
+|---|---|---|
+| Masters (one render each) → placements on 6 platforms | 24 → 144 | full **$210.75** · lean $185.40 |
+| IG Trial Reels (12 per page): new-hook variants | 24 | $10.80 |
+| IG Trial Reels: frame / on-screen / length variants | 24 | $0 |
+| Facebook long cuts (2 of each page's 6 FB videos, 60–180 s, same blocks) | 8 | $1.60 |
+| Facebook text + photo posts | 4 + 4 | $0.20 |
+| **Total** | **200 posts/day** | **full $223.35 · lean $198.00** |
+
+That is **full $6,790/month ($1.12 per post), breakeven ≈ $8,041 MRR (322 members)**; lean $6,019/month, ≈ $7,128 MRR (285 members). Variants add **$12.60/day (~$383/month, +6%)** for +56 posts/day. Not in the total: if every Trial Reel and FB text/photo post also gets the 20 s human review, add $6.22/day.
+
 ## 3. Breakeven: the cadence each MRR level pays for (no amp; posts/day/platform/page, max 9)
 
 | MRR | full 3 pages | full 5 | full 7 | lean 3 | lean 5 | lean 7 |
@@ -111,6 +126,8 @@ The full 7-page × 7/day plan needs about **$14.0K MRR (~560 retained members)**
 - Lean also loses the exercise demos, which are the safety moat (PIPELINE §driving-video library) and 26% of the plan's masters. The case for lean is speed (no shoot on the critical path), not cost.
 
 ## 5. This plan (POSTING_PLAN.md, D−7…D+90, no amp)
+
+**Variant layer (Oct 2 2026, current 4 × 6 plan): +$1,146 over 98 days**: 2,160 new-hook Trial Reels × $0.45 = $972, 772 FB long cuts × $0.20 = $154, 392 FB photo posts × $0.05 = $20 (1,824 frame/on-screen/length Trial Reels and 392 FB text posts cost $0). The base figure below is from the Oct 1 build of the earlier 21,756-post plan and has not been re-run against the 13,800-placement canon plan.
 
 **≈ $29.7K over 98 days** (≈ $24.9K generation, review and Claude; $4.4K fixed plus the shoot; ElevenLabs ≈ $0.4K), or **$1.37 per post**. By month: Oct ≈ $4.5K variable, Nov ≈ $8.9K, Dec ≈ $9.6K.
 

@@ -13,7 +13,7 @@ from tests.test_schema_sql import BASE, SCHEMA, SQL, _psql, as_role, denied
 
 GROWTH = config.SPEC_DIR / "schema_growth.sql"
 PAGE = "00000000-0000-0000-0000-00000000000a"
-TABLES = ["post_metrics", "page_baselines", "post_scores", "winners", "remix_jobs", "boost_queue", "bandit_arms",
+TABLES = ["post_metrics", "page_baselines", "post_scores", "post_scores_components", "winners", "remix_jobs", "boost_queue", "bandit_arms",
           "spend_budgets", "spend_ledger", "governor_decisions"]
 pytestmark = pytest.mark.skipif(BASE is None, reason="no Postgres available (set PGTEST_DSN)")
 
@@ -156,3 +156,19 @@ def test_ledger_and_decisions_are_append_only_for_every_role(db):
             assert p.returncode != 0 and "append-only" in p.stderr, (role, stmt)
     p = _psql(db, sql="begin; set local role service_role; select count(*) from governor_decisions; rollback;")
     assert _val(p) == "1"
+
+
+def test_scorecard_components_bounded_and_unique(db):
+    post = "00000000-0000-0000-0000-0000000000e1"
+    ok = _psql(db, sql=f"insert into post_scores_components (post_id, platform, horizon_h, provisional, hook_score, "
+                        f"conversion_score, composite, hook_block_id) values ('{post}', 'instagram', 6, true, 91.5, 40, 62.1, 'H-x') "
+                        f"returning id", check=False)
+    assert ok.returncode == 0
+    bad = _psql(db, sql=f"insert into post_scores_components (post_id, platform, horizon_h, hook_score) "
+                         f"values ('{post}', 'instagram', 24, 101)", check=False)
+    assert bad.returncode != 0 and "check" in (bad.stderr + bad.stdout).lower()
+    dup = _psql(db, sql=f"insert into post_scores_components (post_id, platform, horizon_h) values ('{post}', 'instagram', 6)",
+                check=False)
+    assert dup.returncode != 0
+    assert denied(as_role(db, "authenticated", "insert into post_scores_components (post_id, platform, horizon_h) "
+                                               f"values ('{post}', 'instagram', 12)"))

@@ -39,7 +39,7 @@ def test_high_contrast_rules():
         validate_text_colours("#888888", "#111111")          # gray text is refused (client rule)
     with pytest.raises(ValueError):
         CaptionStyle.from_manifest({"fill": "#9A9A9A"})
-    assert CaptionStyle.from_manifest({"size_px": 40}).size_px == 52   # V-04 minimum
+    assert CaptionStyle.from_manifest({"size_px": 40}).size_px == 56   # 55+ minimum (ENGINE_100X §4.4)
 
 
 def test_safe_zones_respect_v04_and_platforms():

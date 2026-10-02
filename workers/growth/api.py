@@ -25,6 +25,7 @@ from common import supabase
 from common.auth import require_token
 from growth import approvals
 from growth import actions, adapters, allocator, baselines, config as G, governor, scoring, snapshots
+from growth import learning, scorecard, variants
 
 router = APIRouter(prefix="/growth", tags=["growth"], dependencies=[Depends(require_token)])
 
@@ -182,6 +183,7 @@ class AllocateRequest(BaseModel):
     used_bits: list[str] = Field(default_factory=list)
     seed: Optional[int] = None
     now: Optional[str] = None
+    benched: dict[str, str] = Field(default_factory=dict)             # gene -> until (scorecard bench)
     config_overrides: dict[str, Any] = Field(default_factory=dict)
 
 
@@ -192,7 +194,74 @@ def allocate_endpoint(req: AllocateRequest) -> dict:
         raise ValueError("platform must be one of " + ", ".join(G.PLATFORMS))
     now = _now(req.now)
     return allocator.plan_day(req.page, req.platform, req.date or allocator.tomorrow(now), req.observations, cfg,
-                              cadence=req.cadence, recent=req.recent, used_bits=req.used_bits, seed=req.seed, now=now)
+                              cadence=req.cadence, recent=req.recent, used_bits=req.used_bits, seed=req.seed, now=now,
+                              benched=req.benched)
+
+
+class ScorecardRequest(BaseModel):
+    reads: list[dict[str, Any]]                                       # scorecard.read_from_capture rows
+    history: list[dict[str, Any]] = Field(default_factory=list)       # [{page_id, platform, horizon_h, raw}] oldest first
+    posts: list[dict[str, Any]] = Field(default_factory=list)
+    pages: list[dict[str, Any]] = Field(default_factory=list)
+    recent_remixes: list[dict[str, Any]] = Field(default_factory=list)
+    gene_history: dict[str, list[float]] = Field(default_factory=dict)
+    benched: dict[str, str] = Field(default_factory=dict)
+    now: Optional[str] = None
+    config_overrides: dict[str, Any] = Field(default_factory=dict)
+
+
+@router.post("/scorecard")
+def scorecard_endpoint(req: ScorecardRequest) -> dict:
+    """Score reads (0-100 per component, table post_scores_components) and queue the scorecard actions."""
+    cfg = G.load(req.config_overrides)
+    hist: dict[tuple, list[dict]] = {}
+    for h in req.history:
+        hist.setdefault((h.get("page_id"), h.get("platform"), int(h.get("horizon_h") or 0)), []).append(h.get("raw") or {})
+    cards = scorecard.score_many(req.reads, hist, cfg)
+    plan = actions.scorecard_plan(cards, req.posts, req.pages, cfg, now=_now(req.now), recent_remixes=req.recent_remixes,
+                                  gene_history=req.gene_history, benched=req.benched)
+    return {"cards": cards, "rows": [scorecard.db_row(c) for c in cards], "actions": plan, "config_version": cfg["version"]}
+
+
+class VariantsRequest(BaseModel):
+    master: dict[str, Any]
+    n: int = Field(default=2, ge=0, le=20)
+    page_age_days: int = 30
+    trials_today: int = 0
+    ig_published_24h: int = 0
+    live: list[dict[str, Any]] = Field(default_factory=list)          # live variants on the page (30 d)
+    auto_taken: list[list[str]] = Field(default_factory=list)         # [page, body_id] with an SS_PERFORMANCE trial
+    now: Optional[str] = None
+    config_overrides: dict[str, Any] = Field(default_factory=dict)
+
+
+@router.post("/variants")
+def variants_endpoint(req: VariantsRequest) -> dict:
+    """TEST variants (IG Trial Reels) for one master, capped by the ramp and the IG hard stop, gated by uniqueness."""
+    cfg = G.load(req.config_overrides)
+    budget = variants.trial_budget(req.page_age_days, req.trials_today, req.ig_published_24h, cfg)
+    vs = variants.generate(req.master, min(req.n, budget), existing=[v for v in req.live if v.get("master_id") ==
+                                                                     req.master.get("master_id")], cfg=cfg)
+    variants.assign_trial_params(vs, {tuple(x) for x in req.auto_taken})
+    acc, rej = variants.gate(vs, req.live, now=_now(req.now))
+    return {"variants": acc, "rejected": rej, "budget": budget, "config_version": cfg["version"]}
+
+
+class ReadoutRequest(BaseModel):
+    cards: list[dict[str, Any]]
+    benched: dict[str, str] = Field(default_factory=dict)
+    gate_report: dict[str, Any] = Field(default_factory=dict)        # tools/refit_gate.py report
+    plan: dict[str, Any] = Field(default_factory=dict)               # last /growth/scorecard actions
+    week_of: str
+    post: bool = True
+
+
+@router.post("/readout")
+def readout_endpoint(req: ReadoutRequest) -> dict:
+    """Weekly plain-English readout -> /admin/exceptions (and so the 07:00 digest). Best effort."""
+    text = learning.weekly_readout(req.cards, req.benched, req.gate_report, learning.next_tests_from(req.plan), req.week_of)
+    posted = learning.post_readout(text, req.week_of) if req.post else {"status": "not_posted"}
+    return {"text": text, "posted": posted}
 
 
 class GovernorRequest(BaseModel):

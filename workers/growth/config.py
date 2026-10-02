@@ -121,6 +121,8 @@ DEFAULTS: dict = {
         "hook_family_weight": 0.35,       # VIRALITY_SYSTEM.md §4: share of each exploit draw taken from the hook-family arm [A]
         "hook_family_prior_strength": 10.0,
         "hook_family_proven_bonus": 0.05, # proven grammars (POSTDB §8 rule 3) start at 0.55 instead of 0.5 [A]
+        "body_family_weight": 0.15,       # body-family arm (pillar:format), from block-level scores [A]
+        "body_family_prior_strength": 10.0,
         "half_life_days": 14,             # arm-level decay: evidence halves every 14 days [A]
         "prior_mean": 0.5,                # neutral reward: a baseline post scores ~0.5 (growth/scoring.reward)
         "prior_strength": 20.0,           # neutral pseudo-observations on every arm (~1,000 arms per page x platform:
@@ -141,6 +143,45 @@ DEFAULTS: dict = {
             "prop": ["F04", "F06", "F18", "F19", "F28", "F30", "F31"],
             "text_formats": ["F36", "F37"],
         },
+    },
+    # ---------------------------------------------------------------- modular variants + Trial Reels (ENGINE_100X §2.1, §5)
+    "variants": {
+        "trial_reels_per_page_day": 12,   # configurable cap after warm-up; validate() refuses > trial_reels_max
+        "trial_reels_max": 20,
+        "trial_ramp": [[14, 3], [21, 6]], # page age < 14 d -> 3/day, < 21 d -> 6/day, then the configured cap
+        "ig_publish_limit_24h": 100,      # Graph content_publishing_limit per IG account (Trial Reels count) [S18]
+        "ig_publish_hard_stop": 90,       # our stop line, always below the API limit
+        "max_trials_per_body": 4,         # Trial Reels of one body on one page (each differs in >= 2 dimensions)
+        "min_dims_changed": 2,            # of hook_audio / first_frame / on_screen_text / caption / length
+        "body_repeat_days": 30,           # same body never twice on one page x surface within 30 days
+        "graduation_horizon_h": 6,        # a Trial Reel graduates when its 6 h composite beats the page baseline
+        "remix_min_dims": 3,              # ENGINE_100X §5.3: a REMIX changes >= 3 cheap dimensions incl. a new voice take
+        "length_cuts_s": [15, 30, 45],
+        "fb_long_s": [60, 180],           # Facebook-only long cuts (ENGINE_100X §1.3)
+        "fb_long_per_page_day": 2,
+        "fb_text_photo_per_page_day": 2,  # one text post + one photo post (ENGINE_100X §1.4)
+        "fb_page_daily_max": 25,          # all Facebook post types share this per-Page budget (ENGINE_100X §1.5)
+        "op_cost_usd": {"new_hook": 0.45, "new_first_frame": 0.0, "new_on_screen_text": 0.0, "caption_style": 0.0,
+                        "length_cut": 0.0, "character_swap_vo": 0.02, "reaction_overlay": 0.0,
+                        "fb_long": 0.20, "fb_text": 0.0, "fb_photo": 0.05},
+    },
+    # ---------------------------------------------------------------- scorecard (per post, per read, 0-100 per component)
+    "scorecard": {
+        "horizons_h": [1, 6, 12, 24, 168],
+        "provisional_before_h": {"instagram": 24},   # IG insights can lag up to 48 h [S17]
+        "window_posts": 30,               # rolling page baseline
+        "prior_strength": 8.0,            # empirical-Bayes pseudo-posts toward the network/prior centre [A]
+        "rate_pseudo_count": 200.0,       # beta-binomial pseudo-reach on each post's own rate [A]
+        "min_spread": 0.25,               # floor on the logit spread
+        # conversion carries the most weight (BRIEF priority 1: passive MRR); sums to 1.0
+        "weights": {"conversion": 0.22, "shares": 0.14, "hook": 0.12, "body": 0.12, "saves": 0.10, "close": 0.10,
+                    "non_follower": 0.08, "conversation": 0.06, "novelty": 0.06},
+        "prior_rates": {"hook": 0.60, "body": 0.45, "close": 0.004, "shares": 0.004, "saves": 0.006,
+                        "conversation": 0.006, "non_follower": 0.55, "conversion": 0.0005, "novelty": 0.5},
+        "prior_spread": 0.8,
+        "actions": {"hook_strong": 85, "body_strong": 85, "hook_weak": 50, "share_save_viral": 90,
+                    "non_follower_strong": 80, "gene_bench_below": 30, "gene_bench_strikes": 2, "bench_days": 14,
+                    "new_bodies": 2, "new_hooks": 3, "topic_slot_multiplier": 2.0},
     },
     # ---------------------------------------------------------------- spend governor (BLITZ.md §9, §11)
     "governor": {
@@ -207,6 +248,19 @@ def validate(cfg: dict) -> dict:
         raise ValueError(f"growth config: allocator.explore_floor must be >= {MIN_EXPLORE_FLOOR}")
     if not 1 <= int(a["max_cadence"]) <= 9:
         raise ValueError("growth config: allocator.max_cadence must be 1..9")
+    v = cfg.get("variants") or {}
+    if v:
+        if not 1 <= int(v["trial_reels_per_page_day"]) <= int(v["trial_reels_max"]) <= 20:
+            raise ValueError("growth config: variants.trial_reels_per_page_day must be 1..trial_reels_max (max 20)")
+        if not int(v["ig_publish_hard_stop"]) < int(v["ig_publish_limit_24h"]):
+            raise ValueError("growth config: variants.ig_publish_hard_stop must stay below the 100/24 h API limit")
+        if int(v["min_dims_changed"]) < 2:
+            raise ValueError("growth config: variants.min_dims_changed must be >= 2 (low-value edits, Meta S3)")
+    sc = cfg.get("scorecard") or {}
+    if sc and abs(sum(float(x) for x in sc["weights"].values()) - 1.0) > 1e-6:
+        raise ValueError("growth config: scorecard.weights must sum to 1")
+    if sc and max(sc["weights"], key=lambda k: float(sc["weights"][k])) != "conversion":
+        raise ValueError("growth config: scorecard conversion weight must be the highest")
     c = cfg["scoring"]["classes"]
     if not c["WINNER"]["min_score"] > c["PROMISING"]["min_score"] > c["LOSER"]["max_score"]:
         raise ValueError("growth config: class thresholds must satisfy WINNER > PROMISING > LOSER")

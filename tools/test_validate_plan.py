@@ -100,3 +100,51 @@ def test_broll_cap_detected():
         if r["day_index"] == 40 and r["platform"] in bp.VIDEO_PLATFORMS:
             r["render_lane"] = "insert"
     assert _fails(rows, "B-roll cap")
+
+
+# ---- variants: Trial Reels + Facebook native (ENGINE_100X §1, §2.1, §5) ------------------------------------------
+VROWS = bp.build_variants(ROWS)
+
+
+def _vfails(rows, vrows, needle):
+    return any(needle in e for e in vp.validate_all(rows, vrows))
+
+
+def test_variant_plan_valid_and_ramped():
+    assert vp.validate_all(ROWS, VROWS) == []
+    trials = [r for r in VROWS if r["platform"] == "ig_trial"]
+    per = lambda d: sum(1 for r in trials if r["page"] == "@changyin" and r["day_index"] == d)
+    assert (per(-7), per(7), per(14), per(60)) == (3, 6, 12, 12)
+    assert all(r["variant_role"] == "TEST" for r in trials)
+    assert sum(r["platform"] == "fb_text" for r in VROWS) == sum(r["platform"] == "fb_photo" for r in VROWS) > 0
+
+
+def test_trial_cap_body_repeat_and_ss_performance_detected():
+    v = copy.deepcopy(VROWS)
+    t = [r for r in v if r["platform"] == "ig_trial" and r["page"] == "@changyin" and r["day_index"] == 2]
+    v.append({**t[0], "file_id": "extra", "variant_id": "extra"})
+    assert _vfails(ROWS, v, "ramp cap")
+    rows = copy.deepcopy(ROWS)
+    a, b = [r for r in rows if r["platform"] == "tiktok" and r["page"] == "@changyin"][:2]
+    b["body_id"] = a["body_id"]
+    assert _vfails(rows, VROWS, "twice on @changyin x tiktok within 30 d")
+    v = copy.deepcopy(VROWS)
+    t = [r for r in v if r["platform"] == "ig_trial" and r["day_index"] == 40]
+    for r in t:
+        r["graduation_strategy"] = "SS_PERFORMANCE"
+    assert _vfails(ROWS, v, "SS_PERFORMANCE trials")
+
+
+def test_low_value_trial_and_fb_crosspost_detected():
+    v = copy.deepcopy(VROWS)
+    t = next(r for r in v if r["platform"] == "ig_trial")
+    t["dims_changed"] = "caption|length"
+    assert _vfails(ROWS, v, "incl. the opening")
+    rows = copy.deepcopy(ROWS)
+    fb = next(r for r in rows if r["platform"] == "fb_reels")
+    fb["variant"], fb["caption_source"] = "platform_package", "ig_crosspost"
+    assert _vfails(rows, VROWS, "native upload")
+    rows = copy.deepcopy(ROWS)
+    fb = next(r for r in rows if r["variant"] == "fb_long")
+    fb["seconds"] = 200
+    assert _vfails(rows, VROWS, "outside 60-180 s")

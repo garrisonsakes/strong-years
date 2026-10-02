@@ -5,6 +5,8 @@ script used once network-wide, cadence per page x platform x day, page start dat
 §3.2, §5.2 + the plan's D+7 rule), movement lane only after the performer shoot, 55+ slot window, allocator pillar cap.
 CANON UPDATE 4: 4 pages; ONE render per master (one render_id shared by the 4 video files, Threads/X are text);
 movement only on demo scripts and <= 1 per page per day (~1 in 6); B-roll ("insert") <= 25% of the day's masters.
+Variants (ENGINE_100X §1, §2.1, §5): data/content/posting_plan_variants_90d.csv (Trial Reels + FB text/photo) is
+checked together with the placement plan by tools/posting_rules.check_variants (validate_all).
 """
 from __future__ import annotations
 
@@ -15,6 +17,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import build_posting_plan as bp  # noqa: E402
+import posting_rules as PR  # noqa: E402
 
 
 def load(path: Path = bp.OUT_CSV) -> list[dict]:
@@ -122,13 +125,18 @@ def validate(rows: list[dict]) -> list[str]:
     return err
 
 
+def validate_all(rows: list[dict], vrows: list[dict]) -> list[str]:
+    return validate(rows) + PR.check_variants(rows, vrows)
+
+
 def main() -> int:
     rows = load()
-    errs = validate(rows)
+    vrows = load(bp.VAR_CSV) if bp.VAR_CSV.exists() else []
+    errs = validate_all(rows, vrows)
     for e in errs[:50]:
         print("FAIL", e)
-    print(f"{len(rows)} posts, {len({r['uniqueness_group'] for r in rows})} groups: "
-          f"{'OK' if not errs else f'{len(errs)} violations'}")
+    print(f"{len(rows)} placements + {len(vrows)} variant rows (Trial Reels, FB text/photo), "
+          f"{len({r['uniqueness_group'] for r in rows})} groups: {'OK' if not errs else f'{len(errs)} violations'}")
     return 1 if errs else 0
 
 

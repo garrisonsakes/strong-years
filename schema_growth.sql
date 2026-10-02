@@ -79,6 +79,38 @@ create table if not exists post_scores (
 );
 create index if not exists ix_post_scores_class on post_scores(class, scored_at desc);
 
+-- ---------- 3b. post_scores_components: the scorecard (workers/growth/scorecard.py) -----------------------------------
+-- One row per post x read (1 / 6 / 12 / 24 h, 7 d = 168 h). Every component is 0-100 against the page's rolling
+-- baseline (empirical-Bayes shrunk); 50 = the page's typical post. Instagram reads under 24 h are provisional.
+create table if not exists post_scores_components (
+  id                  bigserial primary key,
+  post_id             uuid not null references posts(id) on delete cascade,
+  page_id             uuid references pages(id),
+  platform            platform_code not null,
+  horizon_h           int  not null check (horizon_h in (1, 6, 12, 24, 168)),
+  provisional         boolean not null default false,
+  denominator         text not null default 'reach' check (denominator in ('reach','views','engaged_views')),
+  hook_score          numeric(5,2) check (hook_score between 0 and 100),
+  body_score          numeric(5,2) check (body_score between 0 and 100),
+  close_score         numeric(5,2) check (close_score between 0 and 100),
+  shares_score        numeric(5,2) check (shares_score between 0 and 100),
+  saves_score         numeric(5,2) check (saves_score between 0 and 100),
+  conversation_score  numeric(5,2) check (conversation_score between 0 and 100),
+  non_follower_score  numeric(5,2) check (non_follower_score between 0 and 100),
+  conversion_score    numeric(5,2) check (conversion_score between 0 and 100),
+  novelty_score       numeric(5,2) check (novelty_score between 0 and 100),
+  composite           numeric(5,2) check (composite between 0 and 100),
+  raw                 jsonb not null default '{}',
+  hook_block_id       text,
+  body_block_id       text,
+  close_block_id      text,
+  config_version      text,
+  scored_at           timestamptz not null default now(),
+  unique (post_id, horizon_h)
+);
+create index if not exists ix_psc_blocks on post_scores_components(hook_block_id, body_block_id, close_block_id);
+create index if not exists ix_psc_page on post_scores_components(page_id, platform, horizon_h, scored_at desc);
+
 -- ---------- 4. winners: first/last time a post was WINNER and what was queued for it ------------------------------
 create table if not exists winners (
   post_id         uuid primary key references posts(id) on delete cascade,
@@ -269,8 +301,8 @@ order by r.priority desc, r.earliest_at;
 -- SECURITY (same policy as schema.sql §11): deny by default, service_role only, append-only guards above.
 -- =============================================================================
 do $$ declare t text; begin
-  foreach t in array array['post_metrics','page_baselines','post_scores','winners','remix_jobs','boost_queue',
-                           'bandit_arms','spend_budgets','spend_ledger','governor_decisions'] loop
+  foreach t in array array['post_metrics','page_baselines','post_scores','post_scores_components','winners',
+                           'remix_jobs','boost_queue','bandit_arms','spend_budgets','spend_ledger','governor_decisions'] loop
     execute format('alter table public.%I enable row level security', t);
     execute format('alter table public.%I force row level security', t);
     execute format('revoke all on table public.%I from public, anon, authenticated', t);
