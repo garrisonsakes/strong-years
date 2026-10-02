@@ -1747,6 +1747,92 @@ Live from checkout open (D0). Used by the launch-week BOOK scripts (S176, S178�
 
 **Never in this flow:** a countdown, a midnight price change, a "spots left" number that isn't the live count, a membership mention without the full terms, a reply in Chang Yin's or Sun Yoon's first person, or any message after 24 hours without a human.
 
+### 4.20 LISTA flow (Spanish WAITLIST; @donchuyylupe runway → `{{DOMAIN}}/es/lista`)
+
+Spanish clone of §4.18 for Don Chuy & Doña Lupe (CHARACTERS_ES.md; offer copy OFFER_ES.md). Live only during the Spanish page's own runway (`ES_RUNWAY_DAYS` after the governor opens the page at the **$30K retained-MRR rung**, tools/build_posting_plan.py). Used by the LISTA scripts ES07, ES10, ES14, ES19, ES22, ES24, ES25 (SCRIPTS_ES.md). Same app endpoints and double opt-in as §4.18 with `lang=es`; every Spanish string here goes through the certified translator before launch (OFFER_ES.md ⚖ flag). All §4.3–4.13 Spanish keyword flows (FUERTE, EQUILIBRIO, ESPALDA, RODILLAS, SUEÑO, RESPIRA, SOPA, EMPEZAR, PRUEBA, FAMILIA) follow the §4.18 runway link rule with **[Quiero enterarme primero (gratis)]**.
+
+**Trigger:** keyword LISTA (variants: `lista, la lista, lista de espera, avísame, avisame, aviso, quiero, waitlist, 🔔`). Tags `kw_lista`, `lang_es`, `runway_es`, `src_ig`/`src_fb`, `post_{id}`. Public replies: "Te mandé mensaje. Es gratis." / "Ya está en tus mensajes. Un correo cuando abramos, nada más."
+
+**Before every message:** the §4.1 global intents and the §4.14 classifier run first (Spanish classifier prompts; crisis lines in Spanish: 988 "Para español, oprima 2").
+
+**DM 1 (immediate):**
+> ¡Hola, {first_name}! Mensaje automático del equipo de Don Chuy y Doña Lupe (personajes de IA, no personas reales). Responde ALTO cuando quieras.
+>
+> La lista de espera es gratis. Te llega:
+> • El día 1 del plan de Don Chuy, ahorita (8 minutos, una silla contra la pared).
+> • Un correo cuando abra Años Fuertes, y máximo 3 correos de lanzamiento en las 72 horas siguientes. Nada más.
+> Sin tarjeta. Te das de baja con un clic.
+>
+> [Quiero enterarme primero (gratis)] [¿Qué es Años Fuertes?]
+
+- **¿Qué es Años Fuertes?** → "Una sesión nueva cada mañana con Don Chuy, de 8 a 12 minutos, con versión de silla para todo; las recetas de Doña Lupe cada domingo; y unas pruebas que repites cada mes. Todos los precios y términos van en una sola página antes de pagar, cuando abramos. [Quiero enterarme primero (gratis)]"
+
+**DM 2 (on the button):**
+> Aquí está: {{DOMAIN}}/es/lista?t={first_kw}&mc_id={{user_id}}&utm_source=ig&utm_medium=dm&utm_campaign=lista
+>
+> Escribe tu correo en la página y marca la casilla que dice: "Mándenme un correo cuando abra Años Fuertes, y máximo 3 correos de lanzamiento en las 72 horas siguientes. Puedo darme de baja con un clic en cada correo." Luego confirma desde tu correo y se abre el día 1.
+> [Respuesta rápida: Usar mi correo] [Respuesta rápida: Uso la página]
+
+**Email capture:** as §4.18 (`source=dm_lista`, `lang=es`, consent text = the exact Spanish string above). Confirmation: "Listo, lo mandé a {email}. Toca el botón de ese correo para confirmar y se abre el día 1. Es el único correo hasta que abramos."
+
+**Nudge (+20 minutes, only if neither link nor email):** "El día 1 son 8 minutos y es gratis, {first_name}: {{DOMAIN}}/es/lista. Primero la silla contra la pared."
+
+**Check-in (+22 hours):** "¿Te llegó el día 1?" [Sí, ya lo hice] [Todavía no] [Tengo una pregunta] → as §4.18 in Spanish (the referral reward is the Spanish printable; never a "better place in line").
+
+**When the Spanish checkout opens:** LISTA becomes a variant of LIBRO (§4.21); DM 1's first line changes to "Ya abrimos."
+
+**Never in this flow:** a price, a queue position, a countdown other than the real opening date, a second email before opening, SMS, or a reply in Don Chuy's or Doña Lupe's first person.
+
+### 4.21 LIBRO flow (Spanish BOOK; launch → `/b?lang=es` → the `/es` Shopify product page)
+
+Spanish clone of §4.19. Live from the Spanish checkout opening. Used by ES26, ES27, ES29, ES31, ES33, ES35, ES37, ES39, ES40. Same cells as the US (default cell B "$12 hoy = los dos libros + tu primer mes, luego $25 al mes"; cell A books only at `{{EBOOK_PRICE}}`); the DM states both honestly and never says which one the person will get.
+
+**Trigger:** keyword LIBRO (variants: `libro, libros, el libro, librito, recetario, plan, 📕, 📖` + `lista` and its variants from the opening). Tags `kw_libro`, `lang_es`, `launch_es`, `cell_{A|B}`. Public replies: "Te mandé el enlace y lo que trae." / "En tus mensajes. Todo escrito antes de pagar." Never a link or a price in public.
+
+**DM 1 (immediate):**
+> ¡Hola, {first_name}! Mensaje automático del equipo de Don Chuy y Doña Lupe (personajes de IA, no personas reales). Responde ALTO cuando quieras.
+>
+> Los libros de inicio, claro y sin letras chiquitas:
+> • "Fuerza en 7 Días" de Don Chuy: siete mañanas, una silla, unos 8 minutos al día, con versión fácil de cada movimiento.
+> • "La Cocina Fuerte" de Doña Lupe: recetas de casa con los gramos de proteína y fibra, y una cajita de quién debe saltarse cada una.
+> • $12 hoy. La página te dice exactamente qué incluyen esos $12: para la mayoría, los dos libros + tu primer mes de Años Fuertes (luego $25 al mes hasta que canceles; cancelas en línea cuando quieras); algunas personas ven solo los libros, un solo pago. De cualquier forma, los libros son tuyos para quedártelos (PDF, se descargan al momento).
+>
+> [Mándame el enlace] [¿Qué trae?] [¿Es suscripción?]
+
+- **¿Qué trae?** → three sample pages as images (día 1, página 14 de La Cocina Fuerte, the "quién debe saltarse esto" box) + [Mándame el enlace].
+- **¿Es suscripción?** → "Depende de la página que te salga, y la página lo dice antes de pagar. La oferta de inicio es: $12 hoy por los dos libros y tu primer mes de la Membresía Fundadora, luego {{FOUNDING_PRICE}} al mes hasta que canceles. La página de solo libros es $12 una vez, no es suscripción, y la membresía se ofrece después por correo. En los dos casos: cancelas en línea cuando quieras en dos pantallas, garantía de devolución de 14 días en el cobro de la membresía (una vez por persona), y el precio fundador queda bloqueado mientras sigas suscrito, pausas incluidas. Abierta a los primeros 5,000 miembros fundadores: {{COUNT_LINE}}." [Mándame el enlace]
+
+**DM 2:** "Aquí está: {{DOMAIN}}/b?t={first_kw}&lang=es&mc_id={{user_id}}&utm_source=ig&utm_medium=dm&utm_campaign=libro. Abre la página de la oferta en nuestra tienda Shopify (el precio, qué se renueva y cuándo, y cómo se cancela, todo está ahí antes de pagar). Shop Pay, Apple Pay, Google Pay y PayPal. Nada viene marcado. ¿Te lo mando también por correo para decidir con calma? [Sí, mándamelo] [No, gracias]"
+
+**Email capture, nudge (+20 min) and check-in (+22 h):** as §4.19 in Spanish ("Prueba el día 1 gratis primero: {{DOMAIN}}/es/s/l1. El precio de los libros no cambia a medianoche."). Book buyers (`book_buyer` tag) get no more sales DMs; the founding offer for books-only buyers lives on the thank-you page and in the 3 Spanish onboarding emails (OFFER_ES.md §4).
+
+**Never in this flow:** as §4.19, plus: any Spanish health result ("más fuerte en 7 días"), "de por vida", or "garantía" outside "garantía de devolución de 14 días".
+
+### 4.22 UNIRME flow (Spanish JOIN → `/join?lang=es`)
+
+Spanish clone of §4.17 for people who want only the membership. Live from the Spanish checkout opening. Used by ES28, ES32, ES36.
+
+**Trigger:** keyword UNIRME (variants: `unirme, unirse, me uno, membresía, membresia, inscribirme, join`). Tags `kw_unirme`, `lang_es`, `launch_es`.
+
+**DM 1 (immediate; full terms BEFORE any link, S-02):**
+> ¡Hola, {first_name}! Mensaje automático del equipo de Don Chuy y Doña Lupe (personajes de IA, no personas reales). Responde ALTO cuando quieras.
+>
+> La Membresía Fundadora de Años Fuertes, completa:
+> • {{FOUNDING_PRICE}} al mes. El primer mes se cobra hoy y se renueva cada mes al mismo precio hasta que canceles.
+> • Cancela en línea cuando quieras, en máximo dos pantallas.
+> • Garantía de devolución de 14 días en el cobro de la membresía, una vez por persona.
+> • Tu precio fundador queda bloqueado mientras sigas suscrito, pausas incluidas.
+> • Abierta a los primeros 5,000 miembros fundadores: {{COUNT_LINE}}.
+> • Te avisamos por correo antes de cada renovación anual (si eliges el plan anual después).
+>
+> [Mándame el enlace] [¿Qué trae?] [Mejor para mi mamá/papá]
+
+- **¿Qué trae?** → the OFFER_ES.md §3.4 value stack, then [Mándame el enlace].
+- **Mejor para mi mamá/papá** → the FAMILIA gift flow (§4.13 in Spanish: 3 meses $49 o 12 meses $119, pagados una vez, nunca se renueva solo).
+- **DM 2:** "Aquí está: {{DOMAIN}}/join?t=unirme&lang=es&mc_id={{user_id}}. La página repite todos los términos y tiene una casilla sin marcar que tú decides."
+
+**Never in this flow:** a link before the terms, urgency, a "spots left" number other than the live count, "de por vida", or a reply in a character's first person. Refund and cancel questions go to the Spanish-speaking human inbox (EXPANSION.md §3.2), which offers Essentials or a pause first, once, and then does what the person asked.
+
 ---
 
 ## 5. Checkout, order bumps, upsells and trial terms (prices and take rates as modelled in OFFER.md 2.2)

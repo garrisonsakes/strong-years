@@ -74,7 +74,8 @@ def validate(rows: list[dict]) -> list[str]:
     for (page, p, d), cts in by.items():
         c = Counter(cts)
         off = c["book"] + c["join"]
-        if d < 0:
+        ld = bp.local_d(page, d)          # Spanish page: its own runway/launch clock (CHARACTERS_ES.md); US pages: ld == d
+        if ld < 0:
             if off:
                 err.append(f"offer CTA in runway {page} {p} D{d:+d}")
             if c["waitlist"] < bp.waitlist_target(len(cts)) or c["waitlist"] > (len(cts) + 1) // 2:
@@ -82,8 +83,8 @@ def validate(rows: list[dict]) -> list[str]:
         else:
             if c["waitlist"]:
                 err.append(f"waitlist CTA after D0 {page} {p} D{d:+d}")
-            if off > bp.offer_cap(d):
-                err.append(f"offer cap {page} {p} D{d:+d}: {off} > {bp.offer_cap(d)}")
+            if off > bp.offer_cap(ld):
+                err.append(f"offer cap {page} {p} D{d:+d}: {off} > {bp.offer_cap(ld)}")
             post_launch += len(cts)
             offers_post += off
     if post_launch and offers_post / post_launch > 0.20:

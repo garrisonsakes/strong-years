@@ -1,0 +1,42 @@
+{
+  "version": "2026-10-02",
+  "rule": "Designed voices only. Never cloned from a real person (CHARACTERS_ES.md §13.3; VIDEO_RE §9.4). A person plus the community cultural reviewer pick one candidate per character; the voice_id is then locked and never regenerated. Generation spend is gated on the Spanish page's $30K retained-MRR rung (CANON UPDATE 5). Carmen is STAGED.",
+  "model": "Eleven v3 (multilingual; Flash v2.5 fallback)",
+  "language": "es-US (Mexican Spanish)",
+  "candidates": 8,
+  "voices": {
+    "chuy": {
+      "description": "Warm, deep baritone male voice in his mid-70s, a native Mexican Spanish speaker from Zacatecas who has lived decades in Los Angeles. Unhurried, clear articulation for older listeners, slight gravel, laughs from the chest, gentle northern-central Mexican cadence, neutral enough for all Latin American listeners. Intimate and calm, as if talking to a neighbor on a patio. No English accent, no exaggeration.",
+      "settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.8,
+        "style": 0.2
+      },
+      "target_wpm": 135,
+      "stage": "LOCKED",
+      "preview_text": "Buenos días. Soy Don Chuy, un personaje de inteligencia artificial. La silla sí es de verdad. Póngala contra la pared. Siéntese. Saque el aire... y levántese. Despacio, pero diario."
+    },
+    "lupe": {
+      "description": "Bright, crisp mid-pitch female voice in her early 70s, a native Mexican Spanish speaker from Guadalajara living in Los Angeles. Quick dry comic timing, affectionate scolding, a small tongue click before punchlines, warm underneath, precise consonants, a light Guadalajara lilt. Natural and current, never theatrical or telenovela-exaggerated.",
+      "settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.8,
+        "style": 0.35
+      },
+      "target_wpm": 155,
+      "stage": "LOCKED",
+      "preview_text": "No. Eso no sirve. Mira: dos huevos y una taza de frijoles, casi veinticinco gramos de proteína. Gramos, no cuentos. ¿Usas insulina? Pregúntale a tu doctor, que no muerde."
+    },
+    "carmen": {
+      "description": "Low-mid warm alto female voice in her early 70s, a native Mexican Spanish speaker from Puebla who taught elementary school for decades in San Antonio. Warm authority, slow and clear when teaching, quick and funny when joking, a grandmother who lifts. Natural, never theatrical.",
+      "settings": {
+        "stability": 0.5,
+        "similarity_boost": 0.8,
+        "style": 0.25
+      },
+      "target_wpm": 140,
+      "stage": "STAGED",
+      "preview_text": "Siéntese. Levántese. Sin manos, si puede. Las piernas no se jubilan, mija. Primero la proteína, luego el pan dulce."
+    }
+  }
+}

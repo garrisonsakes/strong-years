@@ -1,0 +1,39 @@
+{
+  "purpose": "Calibration lines (es-US): run every candidate voice through all of them; score native Mexican Spanish, consistency, numbers and prices, rep-count cadence against real rep timing, food words, English brand names inside Spanish, safety lines (clear and calm, never cute). Pick by ear with the cultural reviewer, then measure wpm.",
+  "chuy": [
+    "Buenos días. Soy Don Chuy, un personaje de IA. La silla sí es de verdad.",
+    "Uno... dos... saque el aire... tres... cuatro... cinco.",
+    "Dos cubetas de veinte libras. Diez pasos. Hombros abajo.",
+    "¿Dolor en el pecho, mareo, dolor fuerte? Pare. Siéntese. Llame a su médico.",
+    "Si necesita las manos, use las manos. Ahí empezamos, no ahí nos quedamos.",
+    "Lupe dice que el caldo ya está. Yo digo cinco más.",
+    "Diecisiete pulgadas de alto. La silla contra la pared, siempre.",
+    "Ja. Tiene razón. Siempre tiene razón.",
+    "Setenta y cuatro años. Albañil jubilado. Todavía cargo mi mandado.",
+    "Doce dólares hoy. Luego veinticinco dólares al mes, y cancela en línea cuando quiera."
+  ],
+  "lupe": [
+    "Doña Lupe. Chuy hace sillas. Yo hago caldo.",
+    "Veintiocho gramos de proteína. Catorce de fibra. Apuntado en el cuaderno.",
+    "¿Quién debe saltarse esto? Si tu doctor te pidió poca sal, lee la etiqueta.",
+    "El nopal es comida, no milagro.",
+    "Comal, olla de barro, báscula. Mi cocina, mis reglas.",
+    "Frijoles de olla, huevos a la mexicana, caldo de pollo, avena con canela.",
+    "Pirata, quítate del tapete.",
+    "¡Ay, Jesús! Ahora resulta que él inventó caminar.",
+    "Setenta y dos años. Un metro cincuenta y dos. Más alta que mis excusas.",
+    "Si tienes una enfermedad de los riñones, pregúntale a tu doctor antes de comer más proteína."
+  ],
+  "carmen": [
+    "Soy Doña Carmen, personaje de inteligencia artificial. Aquí la tarea es suya.",
+    "Siéntese. Levántese. Sin manos. ¿Cuántas en treinta segundos?",
+    "Una cubeta con arena: quince libras. Hombros abajo, pasos cortos.",
+    "Si se marea al pararse, pare y siéntese. Y cuénteselo a su médico.",
+    "Las piernas no se jubilan.",
+    "Dos huevos y una taza de frijoles: casi veinticinco gramos de proteína.",
+    "Nopales, frijoles, avena: así llego a veinticinco gramos de fibra.",
+    "Don Álvaro solo entrena los pulmones. Con la trompeta.",
+    "Primero la proteína, luego el pan dulce.",
+    "Cuarenta y nueve dólares por tres meses, pagados una vez. No se renueva solo."
+  ]
+}

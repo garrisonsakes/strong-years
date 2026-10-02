@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import csv
 import json
+import os
 import re
 import sys
 from collections import Counter, defaultdict
@@ -76,7 +77,47 @@ PILLAR_CTA = {"P01": "STRONG", "P02": "STRONG", "P03": "BALANCE", "P04": "STRONG
               "P19": "STRONG", "P20": "BEGIN"}
 ES_KEYWORD = {"STRONG": "FUERTE", "BALANCE": "EQUILIBRIO", "BACK": "ESPALDA", "KNEES": "RODILLAS", "SLEEP": "SUEÑO",
               "BREATH": "RESPIRA", "SOUP": "SOPA", "BEGIN": "EMPEZAR", "TEST": "PRUEBA", "FAMILY": "FAMILIA",
-              "GUT": "SOPA", "BOOK": "LIBROS", "JOIN": "UNIRME"}
+              "GUT": "SOPA", "BOOK": "LIBRO", "JOIN": "UNIRME", "WAITLIST": "LISTA"}   # FUNNEL.md §4.20–4.22
+# ---- Spanish rows (CHARACTERS_ES.md; BRIEF.md CANON UPDATE 5) ----------------------------------------------------------
+# The Spanish page opens at the $30K retained-MRR rung of the scale-on-MRR ladder (workers/growth/config.py
+# governor.scale_rules), not on a calendar date. ES_START_D = the plan day the governor flipped that rung: None (default)
+# = not in this plan (output unchanged); set it here, or with the env var ES_START_D, once the rung is hit. The page then
+# runs its own runway (ES_RUNWAY_DAYS: LISTA waitlist, no offers), then a launch week (LIBRO/UNIRME rows under the same
+# offer caps), then steady state; GEN rows use the Spanish keyword map and the ES library (data/content/scripts_es.json).
+ES_OPEN_RUNG_MRR = 30_000
+ES_START_D: int | None = None
+ES_RUNWAY_DAYS = 7
+ES_PAGES = {  # handle: (code, lead, CONTENT_SYSTEM §3-style pillar share for the duo page)
+    "@donchuyylupe": ("DCL", "DUO_ES", dict(P01=10, P02=10, P03=10, P04=8, P05=4, P07=3, P09=3, P10=7, P11=8, P12=5, P13=8,
+                                            P15=8, P16=6, P17=6, P19=2, P20=2)),
+}
+if re.fullmatch(r"[+-]?\d+", os.environ.get("ES_START_D", "").strip()):
+    ES_START_D = int(os.environ["ES_START_D"])
+if ES_START_D is not None:
+    for _h, (_code, _lead, _share) in ES_PAGES.items():
+        PAGES[_h] = (ES_START_D, _code, _lead, None)
+        SHARE[_h] = _share
+
+
+def local_d(page: str, d: int) -> int:
+    """Offer/runway clock for a page: the global D for the US pages; for a Spanish page, days since its own checkout
+    opened (negative during its ES_RUNWAY_DAYS runway)."""
+    if page in ES_PAGES and ES_START_D is not None:
+        return d - (ES_START_D + ES_RUNWAY_DAYS)
+    return d
+
+
+def load_es_library() -> list[dict]:
+    path = CONTENT / "scripts_es.json"
+    if ES_START_D is None or not path.exists():
+        return []
+    out = []
+    for s in json.loads(path.read_text(encoding="utf-8")):
+        g = s.get("hook_grammar") or ["CUR"]
+        out.append({**s, "hook_grammar": "+".join(g) if isinstance(g, list) else g})
+    return out
+
+
 MOTION_FORMATS = {"F01", "F11", "F14", "F17", "F20", "F21", "F22", "F23", "F25", "F34"}   # config render_format.motion
 INSERT_FORMATS = {"F06", "F12", "F16", "F18", "F19", "F28", "F30", "F31"}                # no-face prop/kitchen/stat cuts
 GEN_GRAMMARS = ["OBJ3", "IF_EVERY", "MYTH_NOT", "WATCH", "TEST_NOW", "SHARE", "DEMO"]   # POSTDB §8 grammars
@@ -161,11 +202,12 @@ def load_wave2() -> list[dict]:
 
 def load_all() -> dict:
     lib, _, _ = load_library()
-    return {**lib, **{s["id"]: s for s in load_wave2()}}
+    return {**lib, **{s["id"]: s for s in load_wave2()}, **{s["id"]: s for s in load_es_library()}}
 
 
 def cta_type_of(kw: str) -> str:
-    return {"WAITLIST": "waitlist", "BOOK": "book", "JOIN": "join"}.get((kw or "").upper(), "none")
+    return {"WAITLIST": "waitlist", "BOOK": "book", "JOIN": "join",
+            "LISTA": "waitlist", "LIBRO": "book", "UNIRME": "join"}.get((kw or "").upper(), "none")
 
 
 def previous_assignments() -> dict[str, dict]:
@@ -192,6 +234,9 @@ def build() -> list[dict]:
     for sid in sorted(lib, key=lambda x: int(x[1:])):
         if sid not in seen:
             queues[lib[sid]["page"]].append(sid); seen.add(sid)
+    for s in load_es_library():                       # Spanish library, only when ES_START_D is set
+        lib[s["id"]] = s
+        queues[s["page"]].append(s["id"])
     pins: dict[str, str] = {}
     for s in w2:
         lib[s["id"]] = s
@@ -223,7 +268,8 @@ def build() -> list[dict]:
                 continue
             slots: list[dict | None] = [None] * n
             st = {"pill": Counter(), "offers": 0, "mv": 0, "br": 0}
-            o_target, o_cap = offer_target(page, d), offer_cap(d)
+            ld = local_d(page, d)
+            o_target, o_cap = offer_target(page, ld), offer_cap(ld)
             br_page, br_net = broll_caps(page, d)
 
             def broll_ok() -> bool:
@@ -243,9 +289,9 @@ def build() -> list[dict]:
             def take(sid: str, i: int) -> bool:
                 s = lib[sid]
                 ct = cta_type_of(s.get("cta_keyword"))
-                if ct == "waitlist" and d >= 0:
+                if ct == "waitlist" and ld >= 0:
                     return False
-                if ct in ("book", "join") and (d < 0 or st["offers"] >= min(o_target, o_cap)):
+                if ct in ("book", "join") and (ld < 0 or st["offers"] >= min(o_target, o_cap)):
                     return False
                 if st["pill"][s["pillar"]] >= MAX_PER_PILLAR_PER_DAY:
                     return False
@@ -306,6 +352,8 @@ def build() -> list[dict]:
                     alt_offer[page] += 1
                     st["offers"] += 1
                     kw = ct.upper()
+                if page in ES_PAGES:
+                    kw = ES_KEYWORD.get(kw, kw)
                 k = gen_n[(page, "all")]; gen_n[(page, "all")] += 1
                 slots[i] = {"script_id": "GEN-needed", "pillar": p, "format": fmt, "character": lead,
                             "hook_grammar": GEN_GRAMMARS[k % len(GEN_GRAMMARS)], "cta_keyword": kw, "cta_type": ct,
@@ -314,13 +362,13 @@ def build() -> list[dict]:
             net_broll += st["br"]
             masters = slots
             # 3) runway waitlist ratio: swap the last line of value masters to WAITLIST until ~1 in 3
-            if d < 0:
+            if ld < 0:
                 need = waitlist_target(n) - sum(m["cta_type"] == "waitlist" for m in masters)
                 for m in reversed(masters):
                     if need <= 0:
                         break
                     if m["cta_type"] == "none":
-                        m.update(cta_type="waitlist", cta_keyword="WAITLIST",
+                        m.update(cta_type="waitlist", cta_keyword=ES_KEYWORD["WAITLIST"] if page in ES_PAGES else "WAITLIST",
                                  cta_source="swap" if m["script_id"] != "GEN-needed" else "generated")
                         need -= 1
             for m in masters:
@@ -345,7 +393,7 @@ def build() -> list[dict]:
                             secs = int(min(PR.FB_LONG_S[1], max(PR.FB_LONG_S[0], 2 * m["seconds"] + 10)))
                     trial_feed = plat == "ig_reels" and PR.ig_trial_reel(page, d)
                     rows.append({
-                        "date": day.isoformat(), "day_index": d, "stage": stage(d), "page": page, "platform": plat,
+                        "date": day.isoformat(), "day_index": d, "stage": stage(ld), "page": page, "platform": plat,
                         "slot_et": slot, "render_lane": "carousel_text" if is_text else m["lane"],
                         "pillar": m["pillar"], "format": "F37" if is_text and plat == "threads" else ("F37/F36" if is_text else m["format"]),
                         "character": m["character"], "hook_grammar": m["hook_grammar"], "cta_type": m["cta_type"],

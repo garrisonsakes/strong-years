@@ -1,0 +1,44 @@
+# Spanish hooks HES01–HES40 for @donchuyylupe (CHARACTERS_ES.md). One hook per script ES01–ES40, used verbatim as the
+# script's first spoken line (validated by tools/build_content_es.py). Proven grammars (POSTDB_FINDINGS §3/§8, Spanish
+# detectors in build_content_es.py): IF_EVERY ("Si … cada …"), NOT_X ("No …, no …"), MYTH, WATCH ("mire lo que pasa /
+# mire cómo / mire lo que trae"); plus OBJ3, TEST_NOW, SHARE. Format: stage|speaker|pillar|format|cta|grammar(+)|evidence(,)|hook|EN gloss
+runway|CHUY|P04|F15|FUERTE|OBJ3+WATCH|E01|Dos cubetas de arena, diez pasos, hombros abajo. Mire lo que pasa.|Two sand buckets, ten steps, shoulders down. Watch what happens.
+runway|CHUY|P02|F32|FUERTE|IF_EVERY|E01,E11|Si ve la novela cada noche, levántese sin manos en cada comercial.|If you watch the novela every night, stand up without hands at every commercial.
+runway|LUPE|P15|F04|SOPA|MYTH|E28|¿Agua de cebolla en ayunas? No, mija. La cebolla va en el caldo.|Onion water on an empty stomach? No, honey. The onion goes in the soup.
+runway|DUO|P05|F08|ESPALDA|WATCH|E30|Chuy dice que ya calentó. Mire lo que pasa cuando escondo las cubetas.|Chuy says he warmed up. Watch what happens when I hide the buckets.
+runway|CHUY|P01|F02|PRUEBA|TEST_NOW|E11,E49|Prueba de la silla, hoy: ¿cuántas veces se levanta en 30 segundos?|Chair test, today: how many times can you stand up in 30 seconds?
+runway|LUPE|P13|F07|SOPA|NOT_X|E28|No es la edad, no es el clima: es tu desayuno sin proteína.|It's not your age, it's not the weather: it's your breakfast with no protein.
+runway|CHUY|P02|F14|LISTA|IF_EVERY|E01,E02|Si sube los escalones de su casa cada día, ya tiene gimnasio.|If you climb your front steps every day, you already have a gym.
+runway|DUO|P03|F02|EQUILIBRIO|WATCH|E50|Lupe dice que aguanta más que yo en un pie. Mire lo que pasa.|Lupe says she lasts longer than me on one foot. Watch what happens.
+runway|LUPE|P12|F04|SOPA|MYTH|E24|¿Té para limpiar por dentro? No. Tu cuerpo ya tiene quien haga ese trabajo.|Tea to clean you out inside? No. Your body already has someone doing that job.
+runway|CHUY|P03|F15|LISTA|OBJ3|E50|La mesa de la cocina es su barra de equilibrio.|The kitchen table is your balance bar.
+runway|LUPE|P10|F18|SOPA|OBJ3|E24,E52|Nopales, frijoles, avena: así llego a 25 gramos de fibra.|Nopales, beans, oats: that's how I get to 25 grams of fiber.
+runway|DUO|P04|F08|FUERTE|OBJ3|E01|Las bolsas del mandado son pesas. Eso dice él. Y por una vez tiene razón.|Grocery bags are weights. That's what he says. And for once he's right.
+runway|CHUY|P01|F02|PRUEBA|TEST_NOW|E45|Prueba del piso, hoy: ¿se puede sentar en el piso y pararse, con la silla cerca?|Floor test, today: can you sit on the floor and get up, with the chair close?
+runway|LUPE|P10|F07|LISTA|NOT_X|E23|No es flojera, no es la edad: después de comer, nadie se sienta.|It's not laziness, it's not age: after eating, nobody sits down.
+runway|DUO|P15|F04|FUERTE|MYTH|E01,E02|"A tu edad ya no se cargan pesas." ¿Quién dijo? Chuy, enséñales.|"At your age you don't lift weights anymore." Who said so? Chuy, show them.
+runway|CHUY|P02|F32|FUERTE|IF_EVERY|E47|Si se lava los dientes cada noche, haga diez elevaciones de talón en el lavabo.|If you brush your teeth every night, do ten heel raises at the sink.
+runway|LUPE|P13|F18|SOPA|OBJ3|E28,E52|Dos huevos y una taza de frijoles: casi 25 gramos de proteína.|Two eggs and a cup of beans: almost 25 grams of protein.
+runway|CHUY|P07|F21|RESPIRA|WATCH|E19|Saque el aire largo, como soplando las velitas del pastel, y mire lo que pasa.|Breathe out long, like blowing out the birthday candles, and watch what happens.
+runway|DUO|P16|F33|LISTA|SHARE|E01|Mándeselo a su hija: así le contestamos a Marisol cuando dice que hacemos demasiado.|Send this to your daughter: this is how we answer Marisol when she says we do too much.
+runway|LUPE|P15|F07|FUERTE|MYTH|E01,E29|¿Que caminar ya es suficiente? No, comadre. Las piernas también piden carga.|Walking is enough? No, comadre. Legs ask for load too.
+runway|CHUY|P04|F15|FUERTE|OBJ3|E01,E40|Costal de arena: lo cosí yo. Así se carga con la espalda derecha.|Sandbag: I sewed it myself. This is how you carry it with a straight back.
+runway|DUO|P17|F08|LISTA|IF_EVERY||Si bailan danzón en cada fiesta, ya saben que el cuerpo todavía responde.|If you dance danzón at every party, you already know the body still answers.
+runway|LUPE|P09|F05|SUEÑO|NOT_X|E19|No es el colchón, no es la almohada: son tres minutos de calma antes de dormir.|It's not the mattress, it's not the pillow: it's three calm minutes before sleep.
+runway|CHUY|P20|F08|LISTA|NOT_X||No soy de verdad, no tengo rodillas: soy de inteligencia artificial. La silla sí es real.|I'm not real, I don't have knees: I'm artificial intelligence. The chair is real.
+runway|DUO|P19|F11|LISTA|SHARE|E01|Etiquete a su compadre: siete días, una silla, ocho minutos, empezando el lunes.|Tag your compadre: seven days, one chair, eight minutes, starting Monday.
+launch|CHUY|P02|F17|LIBRO|IF_EVERY|E01,E11|Si quiere empezar cada mañana con una silla, aquí está el plan de siete días.|If you want to start every morning with a chair, here's the seven-day plan.
+launch|LUPE|P11|F31|LIBRO|OBJ3|E28,E52|Mi cuaderno de recetas, con los gramos apuntados, ahora es libro.|My recipe notebook, with the grams written in, is now a book.
+launch|DUO|P20|F08|UNIRME|NOT_X|E01|No es magia, no es un reto de una semana: es todos los días, con nosotros.|It's not magic, it's not a one-week challenge: it's every day, with us.
+launch|DUO|P13|F08|LIBRO|WATCH|E28|Chuy contó las tortillas del libro de Lupe. Mire lo que pasa.|Chuy counted the tortillas in Lupe's book. Watch what happens.
+launch|LUPE|P16|F33|FAMILIA|SHARE||Mándaselo a tu hermana: así se le regala fuerza a mamá.|Send this to your sister: this is how you give Mom strength as a gift.
+launch|CHUY|P01|F02|LIBRO|TEST_NOW|E11,E49|Prueba de la silla, hoy. Y si quiere el plan completo, se lo explico claro.|Chair test, today. And if you want the full plan, I'll explain it plainly.
+launch|LUPE|P20|F07|UNIRME|NOT_X||No te voy a apurar, no hay cuenta regresiva: te digo el precio y ya.|I won't rush you, there's no countdown: I'll tell you the price and that's it.
+launch|CHUY|P02|F17|LIBRO|OBJ3|E01|Una silla, siete mañanas, ocho minutos: eso trae el primer libro.|One chair, seven mornings, eight minutes: that's what the first book has.
+launch|DUO|P16|F33|FAMILIA|IF_EVERY||Si le hablas a tu mamá cada domingo, este domingo regálale algo que use.|If you call your mom every Sunday, this Sunday give her something she'll use.
+launch|LUPE|P11|F31|LIBRO|NOT_X|E28,E52|No es recetario de dieta, no es de antojos: es comida de casa con gramos.|It's not a diet cookbook, it's not a cravings book: it's home food with grams.
+launch|CHUY|P20|F28|UNIRME|WATCH||Mire cómo se cancela, antes de que pague un centavo.|Watch how you cancel, before you pay a cent.
+launch|DUO|P11|F31|LIBRO|OBJ3|E28|El cuaderno de Lupe tiene treinta años de recetas. Ahora le toca a usted.|Lupe's notebook has thirty years of recipes. Now it's your turn.
+launch|LUPE|P16|F33|FAMILIA|OBJ3||Regalo para mamá: tres meses o un año, y nunca se renueva solo.|A gift for Mom: three months or a year, and it never renews on its own.
+launch|CHUY|P02|F17|LIBRO|IF_EVERY|E01,E45|Si cada vez que se para de la silla usa las manos, empiece aquí.|If every time you get up from the chair you use your hands, start here.
+launch|DUO|P20|F08|LIBRO|WATCH||Somos de inteligencia artificial. Los libros son de verdad. Mire lo que trae.|We're artificial intelligence. The books are real. Watch what's inside.

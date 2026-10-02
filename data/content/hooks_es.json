@@ -1,0 +1,640 @@
+[
+ {
+  "id": "HES01",
+  "stage": "runway",
+  "speaker": "CHUY",
+  "pillar": "P04",
+  "format": "F15",
+  "cta": "FUERTE",
+  "grammar": [
+   "OBJ3",
+   "WATCH"
+  ],
+  "ev": [
+   "E01"
+  ],
+  "hook": "Dos cubetas de arena, diez pasos, hombros abajo. Mire lo que pasa.",
+  "gloss": "Two sand buckets, ten steps, shoulders down. Watch what happens."
+ },
+ {
+  "id": "HES02",
+  "stage": "runway",
+  "speaker": "CHUY",
+  "pillar": "P02",
+  "format": "F32",
+  "cta": "FUERTE",
+  "grammar": [
+   "IF_EVERY"
+  ],
+  "ev": [
+   "E01",
+   "E11"
+  ],
+  "hook": "Si ve la novela cada noche, levántese sin manos en cada comercial.",
+  "gloss": "If you watch the novela every night, stand up without hands at every commercial."
+ },
+ {
+  "id": "HES03",
+  "stage": "runway",
+  "speaker": "LUPE",
+  "pillar": "P15",
+  "format": "F04",
+  "cta": "SOPA",
+  "grammar": [
+   "MYTH"
+  ],
+  "ev": [
+   "E28"
+  ],
+  "hook": "¿Agua de cebolla en ayunas? No, mija. La cebolla va en el caldo.",
+  "gloss": "Onion water on an empty stomach? No, honey. The onion goes in the soup."
+ },
+ {
+  "id": "HES04",
+  "stage": "runway",
+  "speaker": "DUO",
+  "pillar": "P05",
+  "format": "F08",
+  "cta": "ESPALDA",
+  "grammar": [
+   "WATCH"
+  ],
+  "ev": [
+   "E30"
+  ],
+  "hook": "Chuy dice que ya calentó. Mire lo que pasa cuando escondo las cubetas.",
+  "gloss": "Chuy says he warmed up. Watch what happens when I hide the buckets."
+ },
+ {
+  "id": "HES05",
+  "stage": "runway",
+  "speaker": "CHUY",
+  "pillar": "P01",
+  "format": "F02",
+  "cta": "PRUEBA",
+  "grammar": [
+   "TEST_NOW"
+  ],
+  "ev": [
+   "E11",
+   "E49"
+  ],
+  "hook": "Prueba de la silla, hoy: ¿cuántas veces se levanta en 30 segundos?",
+  "gloss": "Chair test, today: how many times can you stand up in 30 seconds?"
+ },
+ {
+  "id": "HES06",
+  "stage": "runway",
+  "speaker": "LUPE",
+  "pillar": "P13",
+  "format": "F07",
+  "cta": "SOPA",
+  "grammar": [
+   "NOT_X"
+  ],
+  "ev": [
+   "E28"
+  ],
+  "hook": "No es la edad, no es el clima: es tu desayuno sin proteína.",
+  "gloss": "It's not your age, it's not the weather: it's your breakfast with no protein."
+ },
+ {
+  "id": "HES07",
+  "stage": "runway",
+  "speaker": "CHUY",
+  "pillar": "P02",
+  "format": "F14",
+  "cta": "LISTA",
+  "grammar": [
+   "IF_EVERY"
+  ],
+  "ev": [
+   "E01",
+   "E02"
+  ],
+  "hook": "Si sube los escalones de su casa cada día, ya tiene gimnasio.",
+  "gloss": "If you climb your front steps every day, you already have a gym."
+ },
+ {
+  "id": "HES08",
+  "stage": "runway",
+  "speaker": "DUO",
+  "pillar": "P03",
+  "format": "F02",
+  "cta": "EQUILIBRIO",
+  "grammar": [
+   "WATCH"
+  ],
+  "ev": [
+   "E50"
+  ],
+  "hook": "Lupe dice que aguanta más que yo en un pie. Mire lo que pasa.",
+  "gloss": "Lupe says she lasts longer than me on one foot. Watch what happens."
+ },
+ {
+  "id": "HES09",
+  "stage": "runway",
+  "speaker": "LUPE",
+  "pillar": "P12",
+  "format": "F04",
+  "cta": "SOPA",
+  "grammar": [
+   "MYTH"
+  ],
+  "ev": [
+   "E24"
+  ],
+  "hook": "¿Té para limpiar por dentro? No. Tu cuerpo ya tiene quien haga ese trabajo.",
+  "gloss": "Tea to clean you out inside? No. Your body already has someone doing that job."
+ },
+ {
+  "id": "HES10",
+  "stage": "runway",
+  "speaker": "CHUY",
+  "pillar": "P03",
+  "format": "F15",
+  "cta": "LISTA",
+  "grammar": [
+   "OBJ3"
+  ],
+  "ev": [
+   "E50"
+  ],
+  "hook": "La mesa de la cocina es su barra de equilibrio.",
+  "gloss": "The kitchen table is your balance bar."
+ },
+ {
+  "id": "HES11",
+  "stage": "runway",
+  "speaker": "LUPE",
+  "pillar": "P10",
+  "format": "F18",
+  "cta": "SOPA",
+  "grammar": [
+   "OBJ3"
+  ],
+  "ev": [
+   "E24",
+   "E52"
+  ],
+  "hook": "Nopales, frijoles, avena: así llego a 25 gramos de fibra.",
+  "gloss": "Nopales, beans, oats: that's how I get to 25 grams of fiber."
+ },
+ {
+  "id": "HES12",
+  "stage": "runway",
+  "speaker": "DUO",
+  "pillar": "P04",
+  "format": "F08",
+  "cta": "FUERTE",
+  "grammar": [
+   "OBJ3"
+  ],
+  "ev": [
+   "E01"
+  ],
+  "hook": "Las bolsas del mandado son pesas. Eso dice él. Y por una vez tiene razón.",
+  "gloss": "Grocery bags are weights. That's what he says. And for once he's right."
+ },
+ {
+  "id": "HES13",
+  "stage": "runway",
+  "speaker": "CHUY",
+  "pillar": "P01",
+  "format": "F02",
+  "cta": "PRUEBA",
+  "grammar": [
+   "TEST_NOW"
+  ],
+  "ev": [
+   "E45"
+  ],
+  "hook": "Prueba del piso, hoy: ¿se puede sentar en el piso y pararse, con la silla cerca?",
+  "gloss": "Floor test, today: can you sit on the floor and get up, with the chair close?"
+ },
+ {
+  "id": "HES14",
+  "stage": "runway",
+  "speaker": "LUPE",
+  "pillar": "P10",
+  "format": "F07",
+  "cta": "LISTA",
+  "grammar": [
+   "NOT_X"
+  ],
+  "ev": [
+   "E23"
+  ],
+  "hook": "No es flojera, no es la edad: después de comer, nadie se sienta.",
+  "gloss": "It's not laziness, it's not age: after eating, nobody sits down."
+ },
+ {
+  "id": "HES15",
+  "stage": "runway",
+  "speaker": "DUO",
+  "pillar": "P15",
+  "format": "F04",
+  "cta": "FUERTE",
+  "grammar": [
+   "MYTH"
+  ],
+  "ev": [
+   "E01",
+   "E02"
+  ],
+  "hook": "\"A tu edad ya no se cargan pesas.\" ¿Quién dijo? Chuy, enséñales.",
+  "gloss": "\"At your age you don't lift weights anymore.\" Who said so? Chuy, show them."
+ },
+ {
+  "id": "HES16",
+  "stage": "runway",
+  "speaker": "CHUY",
+  "pillar": "P02",
+  "format": "F32",
+  "cta": "FUERTE",
+  "grammar": [
+   "IF_EVERY"
+  ],
+  "ev": [
+   "E47"
+  ],
+  "hook": "Si se lava los dientes cada noche, haga diez elevaciones de talón en el lavabo.",
+  "gloss": "If you brush your teeth every night, do ten heel raises at the sink."
+ },
+ {
+  "id": "HES17",
+  "stage": "runway",
+  "speaker": "LUPE",
+  "pillar": "P13",
+  "format": "F18",
+  "cta": "SOPA",
+  "grammar": [
+   "OBJ3"
+  ],
+  "ev": [
+   "E28",
+   "E52"
+  ],
+  "hook": "Dos huevos y una taza de frijoles: casi 25 gramos de proteína.",
+  "gloss": "Two eggs and a cup of beans: almost 25 grams of protein."
+ },
+ {
+  "id": "HES18",
+  "stage": "runway",
+  "speaker": "CHUY",
+  "pillar": "P07",
+  "format": "F21",
+  "cta": "RESPIRA",
+  "grammar": [
+   "WATCH"
+  ],
+  "ev": [
+   "E19"
+  ],
+  "hook": "Saque el aire largo, como soplando las velitas del pastel, y mire lo que pasa.",
+  "gloss": "Breathe out long, like blowing out the birthday candles, and watch what happens."
+ },
+ {
+  "id": "HES19",
+  "stage": "runway",
+  "speaker": "DUO",
+  "pillar": "P16",
+  "format": "F33",
+  "cta": "LISTA",
+  "grammar": [
+   "SHARE"
+  ],
+  "ev": [
+   "E01"
+  ],
+  "hook": "Mándeselo a su hija: así le contestamos a Marisol cuando dice que hacemos demasiado.",
+  "gloss": "Send this to your daughter: this is how we answer Marisol when she says we do too much."
+ },
+ {
+  "id": "HES20",
+  "stage": "runway",
+  "speaker": "LUPE",
+  "pillar": "P15",
+  "format": "F07",
+  "cta": "FUERTE",
+  "grammar": [
+   "MYTH"
+  ],
+  "ev": [
+   "E01",
+   "E29"
+  ],
+  "hook": "¿Que caminar ya es suficiente? No, comadre. Las piernas también piden carga.",
+  "gloss": "Walking is enough? No, comadre. Legs ask for load too."
+ },
+ {
+  "id": "HES21",
+  "stage": "runway",
+  "speaker": "CHUY",
+  "pillar": "P04",
+  "format": "F15",
+  "cta": "FUERTE",
+  "grammar": [
+   "OBJ3"
+  ],
+  "ev": [
+   "E01",
+   "E40"
+  ],
+  "hook": "Costal de arena: lo cosí yo. Así se carga con la espalda derecha.",
+  "gloss": "Sandbag: I sewed it myself. This is how you carry it with a straight back."
+ },
+ {
+  "id": "HES22",
+  "stage": "runway",
+  "speaker": "DUO",
+  "pillar": "P17",
+  "format": "F08",
+  "cta": "LISTA",
+  "grammar": [
+   "IF_EVERY"
+  ],
+  "ev": [],
+  "hook": "Si bailan danzón en cada fiesta, ya saben que el cuerpo todavía responde.",
+  "gloss": "If you dance danzón at every party, you already know the body still answers."
+ },
+ {
+  "id": "HES23",
+  "stage": "runway",
+  "speaker": "LUPE",
+  "pillar": "P09",
+  "format": "F05",
+  "cta": "SUEÑO",
+  "grammar": [
+   "NOT_X"
+  ],
+  "ev": [
+   "E19"
+  ],
+  "hook": "No es el colchón, no es la almohada: son tres minutos de calma antes de dormir.",
+  "gloss": "It's not the mattress, it's not the pillow: it's three calm minutes before sleep."
+ },
+ {
+  "id": "HES24",
+  "stage": "runway",
+  "speaker": "CHUY",
+  "pillar": "P20",
+  "format": "F08",
+  "cta": "LISTA",
+  "grammar": [
+   "NOT_X"
+  ],
+  "ev": [],
+  "hook": "No soy de verdad, no tengo rodillas: soy de inteligencia artificial. La silla sí es real.",
+  "gloss": "I'm not real, I don't have knees: I'm artificial intelligence. The chair is real."
+ },
+ {
+  "id": "HES25",
+  "stage": "runway",
+  "speaker": "DUO",
+  "pillar": "P19",
+  "format": "F11",
+  "cta": "LISTA",
+  "grammar": [
+   "SHARE"
+  ],
+  "ev": [
+   "E01"
+  ],
+  "hook": "Etiquete a su compadre: siete días, una silla, ocho minutos, empezando el lunes.",
+  "gloss": "Tag your compadre: seven days, one chair, eight minutes, starting Monday."
+ },
+ {
+  "id": "HES26",
+  "stage": "launch",
+  "speaker": "CHUY",
+  "pillar": "P02",
+  "format": "F17",
+  "cta": "LIBRO",
+  "grammar": [
+   "IF_EVERY"
+  ],
+  "ev": [
+   "E01",
+   "E11"
+  ],
+  "hook": "Si quiere empezar cada mañana con una silla, aquí está el plan de siete días.",
+  "gloss": "If you want to start every morning with a chair, here's the seven-day plan."
+ },
+ {
+  "id": "HES27",
+  "stage": "launch",
+  "speaker": "LUPE",
+  "pillar": "P11",
+  "format": "F31",
+  "cta": "LIBRO",
+  "grammar": [
+   "OBJ3"
+  ],
+  "ev": [
+   "E28",
+   "E52"
+  ],
+  "hook": "Mi cuaderno de recetas, con los gramos apuntados, ahora es libro.",
+  "gloss": "My recipe notebook, with the grams written in, is now a book."
+ },
+ {
+  "id": "HES28",
+  "stage": "launch",
+  "speaker": "DUO",
+  "pillar": "P20",
+  "format": "F08",
+  "cta": "UNIRME",
+  "grammar": [
+   "NOT_X"
+  ],
+  "ev": [
+   "E01"
+  ],
+  "hook": "No es magia, no es un reto de una semana: es todos los días, con nosotros.",
+  "gloss": "It's not magic, it's not a one-week challenge: it's every day, with us."
+ },
+ {
+  "id": "HES29",
+  "stage": "launch",
+  "speaker": "DUO",
+  "pillar": "P13",
+  "format": "F08",
+  "cta": "LIBRO",
+  "grammar": [
+   "WATCH"
+  ],
+  "ev": [
+   "E28"
+  ],
+  "hook": "Chuy contó las tortillas del libro de Lupe. Mire lo que pasa.",
+  "gloss": "Chuy counted the tortillas in Lupe's book. Watch what happens."
+ },
+ {
+  "id": "HES30",
+  "stage": "launch",
+  "speaker": "LUPE",
+  "pillar": "P16",
+  "format": "F33",
+  "cta": "FAMILIA",
+  "grammar": [
+   "SHARE"
+  ],
+  "ev": [],
+  "hook": "Mándaselo a tu hermana: así se le regala fuerza a mamá.",
+  "gloss": "Send this to your sister: this is how you give Mom strength as a gift."
+ },
+ {
+  "id": "HES31",
+  "stage": "launch",
+  "speaker": "CHUY",
+  "pillar": "P01",
+  "format": "F02",
+  "cta": "LIBRO",
+  "grammar": [
+   "TEST_NOW"
+  ],
+  "ev": [
+   "E11",
+   "E49"
+  ],
+  "hook": "Prueba de la silla, hoy. Y si quiere el plan completo, se lo explico claro.",
+  "gloss": "Chair test, today. And if you want the full plan, I'll explain it plainly."
+ },
+ {
+  "id": "HES32",
+  "stage": "launch",
+  "speaker": "LUPE",
+  "pillar": "P20",
+  "format": "F07",
+  "cta": "UNIRME",
+  "grammar": [
+   "NOT_X"
+  ],
+  "ev": [],
+  "hook": "No te voy a apurar, no hay cuenta regresiva: te digo el precio y ya.",
+  "gloss": "I won't rush you, there's no countdown: I'll tell you the price and that's it."
+ },
+ {
+  "id": "HES33",
+  "stage": "launch",
+  "speaker": "CHUY",
+  "pillar": "P02",
+  "format": "F17",
+  "cta": "LIBRO",
+  "grammar": [
+   "OBJ3"
+  ],
+  "ev": [
+   "E01"
+  ],
+  "hook": "Una silla, siete mañanas, ocho minutos: eso trae el primer libro.",
+  "gloss": "One chair, seven mornings, eight minutes: that's what the first book has."
+ },
+ {
+  "id": "HES34",
+  "stage": "launch",
+  "speaker": "DUO",
+  "pillar": "P16",
+  "format": "F33",
+  "cta": "FAMILIA",
+  "grammar": [
+   "IF_EVERY"
+  ],
+  "ev": [],
+  "hook": "Si le hablas a tu mamá cada domingo, este domingo regálale algo que use.",
+  "gloss": "If you call your mom every Sunday, this Sunday give her something she'll use."
+ },
+ {
+  "id": "HES35",
+  "stage": "launch",
+  "speaker": "LUPE",
+  "pillar": "P11",
+  "format": "F31",
+  "cta": "LIBRO",
+  "grammar": [
+   "NOT_X"
+  ],
+  "ev": [
+   "E28",
+   "E52"
+  ],
+  "hook": "No es recetario de dieta, no es de antojos: es comida de casa con gramos.",
+  "gloss": "It's not a diet cookbook, it's not a cravings book: it's home food with grams."
+ },
+ {
+  "id": "HES36",
+  "stage": "launch",
+  "speaker": "CHUY",
+  "pillar": "P20",
+  "format": "F28",
+  "cta": "UNIRME",
+  "grammar": [
+   "WATCH"
+  ],
+  "ev": [],
+  "hook": "Mire cómo se cancela, antes de que pague un centavo.",
+  "gloss": "Watch how you cancel, before you pay a cent."
+ },
+ {
+  "id": "HES37",
+  "stage": "launch",
+  "speaker": "DUO",
+  "pillar": "P11",
+  "format": "F31",
+  "cta": "LIBRO",
+  "grammar": [
+   "OBJ3"
+  ],
+  "ev": [
+   "E28"
+  ],
+  "hook": "El cuaderno de Lupe tiene treinta años de recetas. Ahora le toca a usted.",
+  "gloss": "Lupe's notebook has thirty years of recipes. Now it's your turn."
+ },
+ {
+  "id": "HES38",
+  "stage": "launch",
+  "speaker": "LUPE",
+  "pillar": "P16",
+  "format": "F33",
+  "cta": "FAMILIA",
+  "grammar": [
+   "OBJ3"
+  ],
+  "ev": [],
+  "hook": "Regalo para mamá: tres meses o un año, y nunca se renueva solo.",
+  "gloss": "A gift for Mom: three months or a year, and it never renews on its own."
+ },
+ {
+  "id": "HES39",
+  "stage": "launch",
+  "speaker": "CHUY",
+  "pillar": "P02",
+  "format": "F17",
+  "cta": "LIBRO",
+  "grammar": [
+   "IF_EVERY"
+  ],
+  "ev": [
+   "E01",
+   "E45"
+  ],
+  "hook": "Si cada vez que se para de la silla usa las manos, empiece aquí.",
+  "gloss": "If every time you get up from the chair you use your hands, start here."
+ },
+ {
+  "id": "HES40",
+  "stage": "launch",
+  "speaker": "DUO",
+  "pillar": "P20",
+  "format": "F08",
+  "cta": "LIBRO",
+  "grammar": [
+   "WATCH"
+  ],
+  "ev": [],
+  "hook": "Somos de inteligencia artificial. Los libros son de verdad. Mire lo que trae.",
+  "gloss": "We're artificial intelligence. The books are real. Watch what's inside."
+ }
+]

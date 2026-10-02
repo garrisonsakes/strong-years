@@ -1,6 +1,6 @@
 {
   "version": "2026-09-30",
-  "notes": "Used twice. (1) The n8n Code node 'Regex Pre-Scan' runs every `regex` case-insensitively over spoken text, on-screen text and captions. (2) The whole file is passed to the Compliance Judge for semantic matching. `severity`: block = the script cannot ship; revise = rewrite needed. Evidence IDs refer to EVIDENCE.md.",
+  "notes": "Used twice. (1) The n8n Code node 'Regex Pre-Scan' runs every `regex` case-insensitively over spoken text, on-screen text and captions. (2) The whole file is passed to the Compliance Judge for semantic matching. `severity`: block = the script cannot ship; revise = rewrite needed. Evidence IDs refer to EVIDENCE.md. BC26–BC37 (lang=es, added 2026-10-02 for the Spanish page, CHARACTERS_ES.md §10): Spanish cure, condition-outcome (the diabetes line), pain, falls, remedy-for-condition, medication, detox/CDS, conspiracy/miracle, fake-credential, garantía/'de por vida', speed/weight and breath-hold patterns. Written accent-tolerant ([oó]) so they also match the scanner's accent-folded variant; they run on every text like the English ones.",
   "patterns": [
     {
       "id": "BC01",
@@ -163,6 +163,102 @@
       "regex": "\\b(guaranteeing|zero side[- ]effects|without (any )?side[- ]effects|free of side[- ]effects|side[- ]effect[- ]free|no risks?)\\b",
       "meaning": "Absolute safety/outcome promises ('zero side effects', 'guaranteeing'): SAFETY_RULES §3.1 guarantee/no-side-effects family (AUDIT_FINAL round 3)",
       "allowed_alternative": "State what the study found and who should ask their doctor first"
+    },
+    {
+      "id": "BC26",
+      "severity": "block",
+      "regex": "\\b(cura|curan|curar|curarse|curaci[oó]n|curativ[oa]s?|cur[oó]|curad[oa]s?)\\b",
+      "meaning": "ES: cure language (any form).",
+      "allowed_alternative": "Habla de función y hábitos: 'subir las escaleras con más confianza', 'levantarse de la silla'.",
+      "lang": "es"
+    },
+    {
+      "id": "BC27",
+      "severity": "block",
+      "regex": "\\b(revierte|revertir|revierta|elimina|eliminar|desaparece|desaparecer|adi[oó]s a|quita|quitar|quite|acaba con|termina con|controla|controlar|regula|regular|normaliza|normalizar|baja|bajar|reduce|reducir|sana|sanar|alivia|aliviar|desinflama|desinflamar|previene|prevenir|evita|evitar|combate|combatir|mejora|mejorar)\\b[^.!?\\n]{0,40}\\b(diabet\\w*|az[uú]car|glucosa|presi[oó]n|hipertensi[oó]n|colesterol|triglic[eé]ridos|artritis|artrosis|reumas?|osteoporosis|menopausia|bochornos|ci[aá]tica|neuropat[ií]as?|insomnio|ansiedad|depresi[oó]n|demencia|alzh?eimer|pr[oó]stata|ri[ñn][oó]n(es)?|h[ií]gado|v[aá]rices|gota|colitis|gastritis|estre[ñn]imiento|incontinencia|c[aá]ncer|infartos?|derrames?|embolias?|inflamaci[oó]n)\\b",
+      "meaning": "ES: a verb of treatment/outcome near a condition (the diabetes line: 'baja el azúcar', 'controla la diabetes', 'regula la presión', 'quita la artritis').",
+      "allowed_alternative": "Acknowledge, never treat: 'Muchos viven con diabetes. Aquí hablamos de hábitos que su médico firmaría.' + the insulin skip line.",
+      "lang": "es"
+    },
+    {
+      "id": "BC28",
+      "severity": "block",
+      "regex": "\\b(quita|quitar|quite|elimina|eliminar|desaparece|desaparecer|adi[oó]s al?|alivia|aliviar|acaba con|termina con|sin m[aá]s)\\b[^.!?\\n]{0,25}\\bdolor(es)?\\b",
+      "meaning": "ES: pain-removal promise ('quita el dolor de rodilla', 'adiós al dolor').",
+      "allowed_alternative": "Function framing + the stop rule: 'Si duele fuerte, pare. Esa es para su médico.'",
+      "lang": "es"
+    },
+    {
+      "id": "BC29",
+      "severity": "block",
+      "regex": "\\b(previene|prevenir|evita|evitar|reduce|reducir|baja|bajar|disminuye|disminuir|corta|cortar)\\b[^.!?\\n]{0,40}\\bca[ií]das?\\b|\\bca[ií]das?\\b[^.!?\\n]{0,40}\\b(reduc\\w*|previen\\w*|preven\\w*|evit\\w*|disminu\\w*)\\b|\\briesgo de ca[ií]das?\\b",
+      "meaning": "ES: fall-prevention / fall-reduction claim (same rule as the English FALL_OUTCOME check).",
+      "allowed_alternative": "Equilibrio como habilidad: 'pies firmes', 'practicar levantarse del piso antes de necesitarlo'.",
+      "lang": "es"
+    },
+    {
+      "id": "BC30",
+      "severity": "block",
+      "regex": "\\b(agua|t[eé]|jugo|licuado|remedio|hierbas?|semillas?|vinagre|canela|nopal(es)?|ajo|cebolla|s[aá]bila|lim[oó]n|jengibre|c[uú]rcuma|moringa)\\b[^.!?\\n]{0,30}\\bpara (el |la |los |las )?(bajar |controlar |quitar |curar |regular |limpiar )?(az[uú]car|diabet\\w*|glucosa|presi[oó]n|colesterol|artritis|reumas?|rodillas?|ri[ñn][oó]n(es)?|h[ií]gado|pr[oó]stata|c[aá]ncer|insomnio|ansiedad)\\b",
+      "meaning": "ES: food/drink/remedy 'para' a condition, including when quoted in a myth-bust (a clipped screenshot spreads the myth; Spanish platforms are less moderated).",
+      "allowed_alternative": "Quote the remedy without the condition ('¿Agua de cebolla en ayunas? No.') and give the real habit.",
+      "lang": "es"
+    },
+    {
+      "id": "BC31",
+      "severity": "block",
+      "regex": "\\b(deje|dejar|deja|suspenda|suspender|suspende|quite|quitar|cambie|cambiar|olvide|olv[ií]dese de|tire|tirar)\\b[^.!?\\n]{0,30}\\b(medicinas?|medicamentos?|pastillas|insulina|metformina|tratamiento|receta)\\b|\\bya no (va a |vas a )?(necesitar|tomar)\\w*\\b[^.!?\\n]{0,30}\\b(medicinas?|medicamentos?|pastillas|insulina)\\b|\\bsin (medicinas?|medicamentos?|pastillas)\\b|\\binsulina (vegetal|natural)\\b",
+      "meaning": "ES: medication change or 'no medicine needed' claim.",
+      "allowed_alternative": "'Sus medicinas, con su médico.' Never mention changing them.",
+      "lang": "es"
+    },
+    {
+      "id": "BC32",
+      "severity": "block",
+      "regex": "\\b(desintoxic\\w*|toxinas|limpia(r|n)? (el |tu |su |la |los )?(h[ií]gado|colon|sangre|ri[ñn][oó]n(es)?|intestinos?|cuerpo)|di[oó]xido de cloro|cds|mms)\\b",
+      "meaning": "ES: detox/cleanse and the chlorine-dioxide (CDS/MMS) remedies. English 'detox' stays with BC05 (myth-bust eligible); the Spanish patterns are not MB-EX eligible by design: Spanish myth-busts never quote the blocked phrase.",
+      "allowed_alternative": "'Tu hígado y tus riñones ya hacen ese trabajo. Agua, fibra, y tu doctor.'",
+      "lang": "es"
+    },
+    {
+      "id": "BC33",
+      "severity": "block",
+      "regex": "\\b(lo que (la farmacia|las farmac[eé]uticas|los (doctores|m[eé]dicos)) no (te|le|les) (dice|dicen|quiere|quieren)|los (doctores|m[eé]dicos) (odian|no quieren)|secreto (de la abuela|ancestral|milenario)|remedio (ancestral|milenario)|milagros[oa]s?|milagro)\\b",
+      "meaning": "ES: conspiracy/secret/miracle framing (the Spanish remedy-page playbook).",
+      "allowed_alternative": "Evidence card + 'pregúntale a tu doctor, que no muerde'.",
+      "lang": "es"
+    },
+    {
+      "id": "BC34",
+      "severity": "block",
+      "regex": "\\b(como (doctor|doctora|m[eé]dico|m[eé]dica|enfermera|enfermero|nutri[oó]loga|nutri[oó]logo|fisioterapeuta|terapeuta)|mis pacientes|en mi consultorio|soy (doctor|doctora|m[eé]dico|m[eé]dica|enfermera|enfermero|nutri[oó]loga|nutri[oó]logo|fisioterapeuta|curander[oa]|sobador|huesero|yerbera))\\b",
+      "meaning": "ES: fake credential or healer authority.",
+      "allowed_alternative": "Authority = the body on screen, the study card, the real team.",
+      "lang": "es"
+    },
+    {
+      "id": "BC35",
+      "severity": "revise",
+      "regex": "\\b(garantiza\\w*|garantizad[oa]s?|de por vida|para toda la vida|vitalici[oa]s?)\\b|garant[ií]a(?! de devoluci[oó]n)|garant[ií]a de devoluci[oó]n[^.!?\\n]{0,120}\\b(fuerte|fuerza|duerm\\w*|dolor\\w*|peso|kilos|libras|equilibrio|ca[ií]das?|resultados?|joven|az[uú]car|presi[oó]n)\\b",
+      "meaning": "ES offer words: 'garantía' only as 'garantía de devolución de 14 días' (never next to a health result); 'de por vida' banned (the price is 'bloqueado mientras sigas suscrito').",
+      "allowed_alternative": "'Garantía de devolución de 14 días en el cobro de la membresía, una vez por persona.'",
+      "lang": "es"
+    },
+    {
+      "id": "BC36",
+      "severity": "revise",
+      "regex": "\\b(al instante|instant[aá]ne\\w*|de inmediato|en minutos|en segundos|de la noche a la ma[ñn]ana)\\b[^.!?\\n]{0,50}\\b(baja|bajar|quita|quitar|cura|sana|mejora|desaparece|elimina)\\b|\\b(baja|bajar|pierde|perder|quema|quemar)\\b\\s?\\d*\\s?(kilos|libras|grasa|panza)\\b",
+      "meaning": "ES: speed-of-result or weight-loss claim.",
+      "allowed_alternative": "'Despacio, pero diario.'",
+      "lang": "es"
+    },
+    {
+      "id": "BC37",
+      "severity": "revise",
+      "regex": "\\b(aguante|aguanta|aguantar|contenga|contener) (la )?respiraci[oó]n\\b|\\bsin dolor no hay (ganancia|resultados?)\\b",
+      "meaning": "ES: breath-hold or push-through-pain cue.",
+      "allowed_alternative": "'Saque el aire cuando cueste.' / 'Si duele fuerte, pare.'",
+      "lang": "es"
     }
   ],
   "semantic_only": [

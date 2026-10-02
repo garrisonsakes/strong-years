@@ -1,0 +1,29 @@
+{
+  "note": "Alias fallback for models that ignore IPA phonemes; keep in sync with pronunciation_es.pls. Numbers and prices: the pipeline expands placeholders to words BEFORE TTS (es-US: '$12' -> 'doce dólares', '$25/mes' -> 'veinticinco dólares al mes', '17 in' -> 'diecisiete pulgadas', '20 lb' -> 'veinte libras', '5,000' -> 'cinco mil'); never let the model read '$' or '/' symbols.",
+  "aliases": {
+    "Chuy": "Chui",
+    "IA": "i a",
+    "Shopify": "Shópifai",
+    "Shop Pay": "Shop Pei",
+    "PayPal": "Peipal",
+    "Apple Pay": "Ápel Pei",
+    "Google Pay": "Gúgel Pei",
+    "WhatsApp": "Guatsap",
+    "Strong Years": "Strong Yiers",
+    "Años Fuertes": "Años Fuertes",
+    "OXXO": "Oxo",
+    "4K": "cuatro ka",
+    "E23": "e veintitrés",
+    "{{DOMAIN}}": "nuestra página"
+  },
+  "number_rules": {
+    "$": "dólares (after the number)",
+    "/mes": "al mes",
+    "lb": "libras",
+    "kg": "kilos",
+    "g": "gramos",
+    "in": "pulgadas",
+    "%": "por ciento",
+    "s": "segundos"
+  }
+}

@@ -8,6 +8,52 @@
 
 ---
 
+## 0A. CANON UPDATE (Oct 2 2026): ES → PT → DE on the scale-on-MRR ladder (supersedes conflicting lines below)
+
+**What changed.** BRIEF.md CANON UPDATE 5 replaced calendar triggers with the governor's MRR ladder, and the Spanish build now exists (CHARACTERS_ES.md, OFFER_ES.md, SCRIPTS_ES.md). Where §0–§5 below differ, this section wins:
+- **Spanish opens at the $30K retained-MRR rung** (config row in workers/growth/config.py `governor.scale_rules`; plan rows via `ES_START_D` in tools/build_posting_plan.py), not at "US month 4–5" or the §4 day-0 trigger list.
+- **Native first, no Mode A pilot.** The Spanish page is **Don Chuy & Doña Lupe (@donchuyylupe)** from day one; @changyin.espanol is retired (its scripts post on @changyin). Doña Carmen is staged for the $50K rung or the day-30 switch rule (CHARACTERS_ES.md §0).
+- **US Hispanic first, in USD, on the US Shopify market with Spanish enabled** (same prices and cells as the US, OFFER_ES.md §2). MXN / EUR / LATAM price books in §5.7 become later config rows (after the Spanish Gate 2), each needing its own currency/payment decision. **No $1 trial anywhere** (CANON UPDATE 2): every "7 days for $1" cell in §5.7 is void.
+- **PT-BR and DE open at the $100K rung** ("open PT/DE clones", CANON UPDATE 5), PT first, DE when PT has passed its Gate 1 (§4.2 KPIs, measured from each page's own start). Italy, France and the rest keep the §1.6 order behind them.
+
+### 0A.1 Sequence
+
+| Step | Rung (retained MRR) | Language / market | Show | Why this order |
+|---|---|---|---|---|
+| 1 | $30K | **es-US** (Mexican-American first; MX/ES/LATAM by later price-book rows) | Don Chuy & Doña Lupe (duo); Doña Carmen staged | Full US ARPU in USD, no new entity or tax regime, same Shopify store; largest 55+ language cluster (§0) |
+| 2 | $100K | **pt-BR** | Vô Tonico & Dona Graça (ARCHETYPES.md #4; run the same duo-vs-single test as CHARACTERS_ES.md §0) | Largest single-country 55+ audience, WhatsApp-forward culture like the Spanish one, Pix Automático rails (§3.3); lower ARPU, so it waits for the rung where cost is immaterial |
+| 3 | $100K + PT Gate 1 | **de-DE** (DACH) | Oma Ingrid Brandt (#7), single | Highest EU ARPU but the heaviest compliance (HWG, Kündigungsbutton, Widerruf); 50–69s prefer articles, so pair video with carousels/text posts (§1.6) |
+
+### 0A.2 The clone checklist (the Spanish build is the template; one PR per language)
+
+| # | Step | Spanish artifact (template) | Done when |
+|---|---|---|---|
+| 1 | **Gate.** The ladder row for the language is reached; the governor flips it. No generation, handle or translator spend before. | workers/growth/config.py ladder; BRIEF CANON 5 | The rung is logged in the governor's decision log |
+| 2 | **Research brief** (≤12 searches, cited): platform use for 55+ in that language, health priorities vs the local health-advertising law, the top local 55+ health creators, cultural review needs | CHARACTERS_ES.md §1, §16 | Every number has a source line |
+| 3 | **Duo vs single decision** with a scored table and a day-30 switch rule | CHARACTERS_ES.md §0 | Decision + switch thresholds written |
+| 4 | **Bible in CHARACTERS.md format**: ages, openly fictional AI-disclosed origin, house/kitchen/patio sets, wardrobe codes, voice cards with regional choices and catchphrases, 24 running bits, family cast (no minors on camera), never-say list, the "I'm AI" line, writer system prompts | CHARACTERS_ES.md §2–§12 | The native cultural reviewer signs the bible |
+| 5 | **Reference pack**: 24 prompts per character + duo, same schema and sha256 lock; staged characters marked STAGED | production/refs_es/ (build_manifest.py, manifest.json, ACCEPTANCE.md, render_refs_es.py) | 54 locked images (duo case) with both reviewers' names |
+| 6 | **Voices**: ElevenLabs design prompts (designed, never cloned), 10 calibration lines each, pronunciation lexicon + aliases, number/price reading rules | production/voices/es/ | One voice_id locked per character |
+| 7 | **Claims layer**: the language's patterns added to prompts/blocked_claims.json (new BC ids, `"lang"`, accent-tolerant, not MB-EX eligible: myth-busts never quote "remedy + condition"); a language validator hooked into tools/build_content.py; tests | BC26–BC37; tools/build_content_es.py; tools/test_build_content_es.py | English corpus still 0 hits; workers tests green |
+| 8 | **Content**: 40 scripts (25 runway, 15 launch) + 40 hooks on the proven grammars with language-specific detectors (IF_EVERY / NOT_X / MYTH / WATCH ≥45%) | data/content/hooks_es.psv, scripts_es.py → SCRIPTS_ES.md | Validator PASS + reviewer sign-off on all 40 |
+| 9 | **Offer**: handles, storefront (Shopify Markets language; same price where the market is the US, a currency decision elsewhere), offer copy, legal copy flagged ⚖ for attorney + certified translator, 3 onboarding emails | OFFER_ES.md | Both legal sign-offs logged |
+| 10 | **Funnel**: the waitlist / book / join DM flows in the language | FUNNEL.md §4.20–4.22 | ManyChat flows built with `lang` tags |
+| 11 | **Posting plan**: page rows with a configurable start and the page's own runway → launch clock, keyword map | tools/build_posting_plan.py (`ES_PAGES`, `ES_START_D`, `local_d`), tools/validate_plan.py | Plan validates with the start set |
+| 12 | **People**: two paid cultural reviewers (community + language/health-comms), an in-language human inbox, first 50 scripts reviewed in full, then 10 random per 2 weeks | CHARACTERS_ES.md §14 | Contracts signed |
+| 13 | **Gates**: §4.2 KPIs measured from the page's own start; kill/hold rules unchanged | §4.2 | Gate 1 read at day 14 |
+
+### 0A.3 Per-language deltas for PT and DE (fill steps 2–13 with these)
+
+| Item | pt-BR | de-DE |
+|---|---|---|
+| Keywords (STRONG/BALANCE/SOUP/BEGIN/TEST/FAMILY · WAITLIST/BOOK/JOIN) | FORTE / EQUILÍBRIO / SOPA / COMEÇAR / TESTE / FAMÍLIA · LISTA / LIVRO / ENTRAR | STARK / BALANCE / SUPPE / START / TEST / FAMILIE · LISTE / BUCH / MITMACHEN |
+| Register | *você*, warm; Graça teases, Tonico demonstrates | *Sie* to viewers (test *du* only after reviewer advice); Oma precise and dry |
+| Claims words to add (BC, lang tag) | cura/curar, milagre, desintoxica/limpa o fígado, "baixa a pressão/o açúcar", "controla o diabetes", "pare o remédio", "segredo", garantia outside "garantia de reembolso de 14 dias" (BR statutory withdrawal is 7 days: legal confirms the wording), "vitalício" | heilt/Heilung, Wunder, entgiften/Entschlackung, "senkt Blutzucker/Blutdruck", "gegen Diabetes", "Medikamente absetzen", Geheimnis, Garantie outside "14-Tage-Geld-zurück-Garantie", "lebenslang"; HWG counsel reviews the list |
+| Myth-bust rule | Quote the remedy, never "remedy + condition" (the ARCHETYPES #4 onion-water hook becomes "Água de cebola em jejum? Não."); same for every market | same |
+| Legal copy ⚖ | CONAR/ANVISA, CDC Art. 49 withdrawal, LGPD; attorney + sworn translator | HWG/HCVO, Kündigungsbutton, Widerrufsbelehrung, Impressum, AI Act Art. 50; Abmahnung-proof review before any post |
+| Price / rails | R$ price book (§1.3) + Pix Automático; a currency/MoR decision (Shopify Markets local currency only where its payments support it; verify before build) | EUR via the EU stack (§3.3–3.4), SEPA + PayPal; 14-day Widerruf flow |
+| Format note | WhatsApp Channel for top-of-funnel (free); Kwai labeling if used | Carousels and text posts alongside video (§1.6) |
+
 ## 0. Decision summary
 
 | Question | Answer |

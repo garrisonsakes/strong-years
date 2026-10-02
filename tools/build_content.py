@@ -1418,6 +1418,16 @@ def main():
     w2_problems, w2_summary = build_wave2(scripts, hooks, ev_ids)
     print(w2_summary)
     problems += w2_problems
+    # Spanish validation hook (CHARACTERS_ES.md): ES01–ES40 + HES01–HES40 under the Spanish rules (BC26–BC37 in
+    # blocked_claims.json, garantía / "de por vida" / "bloqueado mientras sigas suscrito"); writes SCRIPTS_ES.md on PASS.
+    es_path = os.path.join(ROOT, "tools", "build_content_es.py")
+    if os.path.exists(es_path):
+        sys.modules.setdefault("cs_build_content", sys.modules[__name__])
+        es_spec = importlib.util.spec_from_file_location("cs_build_content_es", es_path)
+        es_mod = importlib.util.module_from_spec(es_spec); es_spec.loader.exec_module(es_mod)
+        es_problems, es_summary = es_mod.run(sys.modules[__name__])
+        print(es_summary)
+        problems += es_problems
     if problems:
         print("PROBLEMS:"); [print(" -", p) for p in problems]; sys.exit(1)
     print("VALIDATION: PASS")
