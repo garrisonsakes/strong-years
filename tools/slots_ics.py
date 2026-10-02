@@ -3,6 +3,7 @@
 
   python3 tools/slots_ics.py [--date YYYY-MM-DD] [--out DIR] [--tomorrow-platforms ig_reels,fb_reels] [--week-platforms all]
   python3 tools/posting_rules.py --ics [same flags]
+  python3 tools/slots_ics.py --canon6 [--date D]   CANON 6 topology (tools/topology.py): one .ics per account
 
 Writes one .ics per page for the launch day (`<page>_tomorrow.ics`) and for the 7 days from it (`<page>_week.ics`)
 from data/content/posting_plan_90d.csv. Posters subscribe on their phone: each event is one placement with a
@@ -22,11 +23,12 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 PLAN = ROOT / "data" / "content" / "posting_plan_90d.csv"
 ET = ZoneInfo("America/New_York")
 PLATFORM_NAME = {"ig_reels": "Instagram Reel", "fb_reels": "Facebook Reel", "tiktok": "TikTok", "yt_shorts": "YouTube Short",
                  "threads": "Threads", "x": "X", "ig_trial": "Instagram Trial Reel", "fb_text": "Facebook text",
-                 "fb_photo": "Facebook photo"}
+                 "fb_photo": "Facebook photo", "ig_story": "Instagram Story", "fb_long": "Facebook long cut"}
 VTIMEZONE = """BEGIN:VTIMEZONE
 TZID:America/New_York
 BEGIN:DAYLIGHT
@@ -76,11 +78,12 @@ def event(r: dict, stamp: str) -> list[str]:
     desc = "\n".join([
         f"File: {r.get('file_id', '')}", f"Script: {r.get('script_id') or 'GEN-needed'} · {r.get('seconds', '')} s",
         f"CTA keyword: {r.get('cta_keyword') or '-'}", f"Trial: {'yes (Trial toggle ON)' if trial else 'no (feed)'}",
+        *([f"Note: {r['note']}"] if r.get("note") else []),
         "Post only from the fallback pack (caption.txt unchanged, AI label ON, no cross-posting).",
         "More than 30 min late: skip and mark 'skipped' in posted_log.csv. Never post late.",
         "Then: paste the permalink into posted_log.csv.",
     ])
-    uid = re.sub(r"[^A-Za-z0-9._-]", "-", f"{r['date']}-{r.get('file_id') or r['page'] + r['platform'] + r['slot_et']}")
+    uid = re.sub(r"[^A-Za-z0-9._-]", "-", f"{r['date']}-{r['page']}-{r['platform']}-{r['slot_et']}-{r.get('file_id') or ''}")
     return [
         "BEGIN:VEVENT", f"UID:{uid}@strongyears-slots", f"DTSTAMP:{stamp}",
         f"DTSTART;TZID=America/New_York:{start:%Y%m%dT%H%M00}",
@@ -129,10 +132,15 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--out", default=str(ROOT / "production" / "launch_day" / "out" / "calendar"))
     ap.add_argument("--tomorrow-platforms", default="ig_reels,fb_reels", help="launch day is IG + FB Reels by hand; 'all' for every row")
     ap.add_argument("--week-platforms", default="all")
+    ap.add_argument("--canon6", action="store_true", help="CANON 6 topology: one .ics per account (tools/topology.py), all lanes incl. Stories")
     a = ap.parse_args([x for x in (argv if argv is not None else sys.argv[1:]) if x != "--ics"])
     day = date.fromisoformat(a.date) if a.date else next_launch_date()
     sel = lambda s: None if s == "all" else set(s.split(","))  # noqa: E731
-    w = export(day, Path(a.out), tomorrow_platforms=sel(a.tomorrow_platforms), week_platforms=sel(a.week_platforms))
+    if a.canon6:
+        import topology  # noqa: PLC0415
+        w = export(day, Path(a.out), rows=topology.week(day))
+    else:
+        w = export(day, Path(a.out), tomorrow_platforms=sel(a.tomorrow_platforms), week_platforms=sel(a.week_platforms))
     print(f"calendar: {day} → {os.path.relpath(a.out)}; " + "; ".join(f"{p} {v['tomorrow']}/{v['week']}" for p, v in w.items()))
     return 0 if w else 1
 

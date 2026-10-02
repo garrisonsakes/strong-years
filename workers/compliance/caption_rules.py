@@ -27,6 +27,17 @@ TIME_REWRITES: list[tuple[str, str]] = [
     (r"\bright now\b", "now"),
 ]
 _TIME_RX = [(re.compile(p, re.I), r) for p, r in TIME_REWRITES]
+# Required safety wording is never rewritten: the SAFETY_RULES §4.3 red-flag line ("That's for your doctor, today.")
+# and emergency lines ("Call 911 now", "...today" urgency) must stay verbatim or pass 2 reports them missing.
+SAFETY_KEEP_RX = re.compile(r"for your doctor,? today|call 911[^.\n]*|see (a|your) doctor today|seek care today", re.I)
+
+
+def _protected(text: str) -> list[tuple[int, int]]:
+    return [m.span() for m in SAFETY_KEEP_RX.finditer(text or "")]
+
+
+def _inside(span: tuple[int, int], keep: list[tuple[int, int]]) -> bool:
+    return any(a <= span[0] and span[1] <= b for a, b in keep)
 HANDLE_RX = re.compile(r"(?<![\w.@/])@[A-Za-z0-9_](?:[A-Za-z0-9_.]*[A-Za-z0-9_])?")
 
 
@@ -37,17 +48,23 @@ def _keep_case(m: re.Match, repl: str) -> str:
 
 def rewrite_time_words(text: str) -> tuple[str, list[str]]:
     notes = []
+    text = text or ""
     for rx, repl in _TIME_RX:
-        def sub(m, repl=repl):
+        keep = _protected(text)
+
+        def sub(m, repl=repl, keep=keep):
+            if _inside(m.span(), keep):
+                return m.group(0)
             notes.append(f"'{m.group(0)}' -> '{m.expand(repl)}'")
             return _keep_case(m, repl)
-        text = rx.sub(sub, text or "")
+        text = rx.sub(sub, text)
     text = re.sub(r"\bnow now\b", "now", text, flags=re.I)
     return text, notes
 
 
 def time_words(text: str) -> list[str]:
-    return [m.group(0) for rx, _ in _TIME_RX for m in rx.finditer(text or "")]
+    keep = _protected(text)
+    return [m.group(0) for rx, _ in _TIME_RX for m in rx.finditer(text or "") if not _inside(m.span(), keep)]
 
 
 def foreign_handles(text: str, allow: frozenset[str] | set[str] = OUR_HANDLES) -> list[str]:

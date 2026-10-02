@@ -51,6 +51,7 @@ SIGNATURES = [   # (format, headers that must all be present, case-insensitive)
     ("fb", ("page id",)), ("fb", ("page name", "permalink")),
     ("ig", ("account username", "permalink")), ("ig", ("account id", "permalink")),
 ]
+PLATFORM_LONG = {"ig": "instagram", "fb": "facebook", "tt": "tiktok", "yt": "youtube", "th": "threads", "x": "x"}
 PLATFORM_FROM_HOST = (("instagram.com", "ig"), ("facebook.com", "fb"), ("fb.watch", "fb"), ("tiktok.com", "tt"),
                       ("youtube.com", "yt"), ("youtu.be", "yt"), ("threads.", "th"), ("x.com", "x"), ("twitter.com", "x"))
 
@@ -158,8 +159,12 @@ def join_posted_log(rows: list[dict], posted: list[dict]) -> tuple[list[dict], l
         po = r["post"]
         hit = by_link.get((po.get("permalink") or "").rstrip("/")) or by_ext.get((po["platform"], po["external_post_id"]))
         if hit:
+            # posted_at from the log carries the poster's UTC offset; export times are naive local times, so the log
+            # wins. platform becomes the snapshots/scoring name (instagram, tiktok, ...); the short code is kept.
             matched.append({**r, "post": {**po, "post_id": hit.get("post_id"), "variant_id": hit.get("variant_id"),
-                                          "page": hit.get("page"), "published_at": po.get("published_at") or hit.get("posted_at")}})
+                                          "page": hit.get("page"), "platform": PLATFORM_LONG.get(po["platform"], po["platform"]),
+                                          "platform_code": po["platform"],
+                                          "published_at": hit.get("posted_at") or po.get("published_at")}})
         else:
             unmatched.append(r)
     return matched, unmatched

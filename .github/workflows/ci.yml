@@ -72,4 +72,6 @@ jobs:
         run: python3 deploy/scripts/check_secrets.py --repo-only --history
       - name: launch gate (keywords, competitor corpus, caption rules, briefs)
         run: python3 tools/launch_gate.py --ci
+      - name: launch tools tests (topology + .ics, secret scan, product briefs, keywords)
+        run: pip install pytest && python3 -m pytest -q -p no:cacheprovider tools/test_launch_tools.py production/launch_day/tests/test_keywords.py
       - run: LAUNCH_MODE=prelaunch python3 deploy/scripts/n8n_import.py
