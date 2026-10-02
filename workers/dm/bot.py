@@ -27,6 +27,8 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
+from dm import routing
+
 FLOWS_DIR = Path(__file__).resolve().parent / "flows"
 EMAIL_RX = re.compile(r"^[^\s@]{1,64}@[^\s@]{1,190}\.[^\s@]{2,24}$")
 
@@ -211,16 +213,21 @@ class Bot:
                     return it
         return None
 
-    def links(self, text: str, ev: dict, kw: str) -> str:
+    def links(self, text: str, ev: dict, kw: str, answers: dict | None = None) -> str:
         q = {"mc_id": ev["sender"], "utm_source": ev["platform"], "utm_medium": "dm", "utm_campaign": kw.lower()}
         qs = "&".join(f"{k}={v}" for k, v in q.items())
         page = ev.get("page_handle") or ev.get("page") or ""
-        b = f"{self.domain}/b?t={kw.upper()}&p={page}" + (f"&pid={ev['post_id']}" if ev.get("post_id") else "") + f"&{qs}"
-        text = text.replace("{{B_LINK}}", b)
+        # The two qualify answers ride along so /b routes the same way the DM did (MONETIZATION_ENGINE.md §2).
+        qa = "".join(f"&{k}={v}" for k, v in (("g", (answers or {}).get("goal")), ("a", (answers or {}).get("audience"))) if v)
+
+        def blink(k: str) -> str:
+            return f"{self.domain}/b?t={k.upper()}&p={page}" + (f"&pid={ev['post_id']}" if ev.get("post_id") else "") + qa + f"&{qs}"
+        text = text.replace("{{B_LINK}}", blink(kw))
+        text = re.sub(r"\{\{B_LINK:([A-Z]{2,20})\}\}", lambda m: blink(m.group(1)), text)
         return re.sub(r"\{\{L:(/[A-Za-z0-9/_-]*)\}\}", lambda m: f"{self.domain}{m.group(1)}?{qs}", text)
 
     def _render(self, text: str, ev: dict, c: dict, kw: str) -> str:
-        text = self.links(text, ev, kw)
+        text = self.links(text, ev, kw, c.get("answers"))
         return text.replace("{first_name}", c.get("first_name") or "there").replace("{email}", c.get("email") or "your inbox")
 
     def _disclose(self, c: dict, text: str, now: datetime) -> str:
@@ -257,10 +264,43 @@ class Bot:
             else:
                 btns.append({"title": b["label"], "payload": f"{flow['flow_id']}:{b['next']}"})
         for q in state.get("quick_replies") or []:
-            qrs.append({"title": q["label"], "payload": f"{flow['flow_id']}:{q['next']}"})
+            sets = "".join(f"|{k}={v}" for k, v in (q.get("set") or {}).items())
+            qrs.append({"title": q["label"], "payload": f"{flow['flow_id']}:{q['next']}{sets}"})
         return btns, qrs
 
+    def route_state(self, flow: dict, st: dict, ev: dict, c: dict, now: datetime) -> str:
+        """A "route" state picks the next state from the routing table (offer family → state name)."""
+        ctx = routing.context_from_contact(c, ev, mode=self.mode)
+        r = routing.route(ctx)
+        c["last_route"] = {**r, "at": now.isoformat(), "flow": flow["flow_id"]}
+        tag = f"route_{r['offer']}"
+        if tag not in c["tags"]:
+            c["tags"].append(tag)
+        routes = st.get("routes") or {}
+        return routes.get(r["offer"]) or routes["default"]
+
+    def experiment_state(self, st: dict, sid: str, c: dict) -> str:
+        """A state may name an experiment; the contact's sticky arm can swap it for another state (exposure kept)."""
+        x = st.get("experiment")
+        if not x:
+            return sid
+        arm = (c.get("exposures") or {}).get(x["id"]) or routing.assign(x["id"], c["key"])
+        if not arm:
+            return sid
+        c.setdefault("exposures", {})[x["id"]] = arm
+        return (x.get("arm_states") or {}).get(arm, sid)
+
     def _state_actions(self, flow: dict, sid: str, ev: dict, c: dict, now: datetime, reply_to: str | None = None) -> list[dict]:
+        for _ in range(3):  # route / experiment indirection, bounded
+            st = flow["states"][sid]
+            if st.get("route"):
+                sid = self.route_state(flow, st, ev, c, now)
+                continue
+            alt = self.experiment_state(st, sid, c)
+            if alt != sid:
+                sid = alt
+                continue
+            break
         st = flow["states"][sid]
         c["flow_state"] = {"flow": flow["flow_id"], "state": sid}
         for t in st.get("tags") or []:
@@ -334,6 +374,9 @@ class Bot:
         if self._paused(c, now):
             return []  # a person has this conversation (crisis follow-up or human handoff)
         if intent:
+            for t in intent.get("tags") or []:
+                if t not in c["tags"]:
+                    c["tags"].append(t)
             if intent.get("action") == "handoff":
                 c["handoff_until"] = (now + timedelta(days=self.g["human_agent_tag_days"])).isoformat()
             texts = intent.get("dm") or intent.get(f"dm_{self.mode}") or []
@@ -341,6 +384,12 @@ class Bot:
         # 3. Button / quick-reply taps continue a flow.
         if ev["kind"] in ("postback", "quick_reply") and ":" in (ev.get("payload") or ""):
             fid, sid = ev["payload"].split(":", 1)
+            sid, *sets = sid.split("|")
+            qualify = routing.table()["qualify"]
+            for kv in sets[:2]:  # the two qualify answers only, allow-listed values
+                k, _, v = kv.partition("=")
+                if k in ("goal", "audience") and v in qualify[k]:
+                    c.setdefault("answers", {})[k] = v
             f = self.flows.get(fid)
             if f and sid in f["states"] and self._active(f):
                 return self._state_actions(f, sid, ev, c, now)

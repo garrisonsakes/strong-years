@@ -69,6 +69,43 @@
       ]
     },
     {
+      "id": "hardship",
+      "match": [
+        "can't afford",
+        "cant afford",
+        "cannot afford",
+        "can not afford",
+        "too expensive",
+        "fixed income",
+        "on a budget",
+        "money is tight"
+      ],
+      "dm": [
+        "Thank you for telling us. A person on our team reads every one of these and can offer a lower price when money is tight. It's a short form, nothing is charged: {{L:/ask/price}}\n\nDay 1 is free for everyone: {{L:/s/l1}}"
+      ],
+      "tags": [
+        "hardship"
+      ]
+    },
+    {
+      "id": "group",
+      "match": [
+        "senior center",
+        "community center",
+        "our group",
+        "my class",
+        "residents",
+        "for my members",
+        "church group"
+      ],
+      "dm": [
+        "For 5 or more people, a person on our team puts together a group quote: one prepaid gift seat per person, no auto-renew. Tell us about the group here and we'll reply within 2 business days: {{L:/ask/group}}"
+      ],
+      "tags": [
+        "group_lead"
+      ]
+    },
+    {
       "id": "price",
       "match": [
         "price",

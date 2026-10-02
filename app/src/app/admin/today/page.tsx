@@ -4,6 +4,7 @@ import { syncAppExceptions } from "@/lib/exceptions";
 import { moneyExact } from "@/lib/pricing";
 import { computeToday, type GateCheck, type TodayPost } from "@/lib/today";
 import { AdminNav } from "../AdminNav";
+import { MonetizationPanel } from "./MonetizationPanel";
 
 export const metadata: Metadata = { title: "Today", robots: { index: false } };
 export const dynamic = "force-dynamic";
@@ -108,6 +109,8 @@ export default async function TodayPage() {
             <Tile testId="t-founding" label="Founding seats" value={`${t.founding.claimed.toLocaleString("en-US")} / ${t.founding.cap.toLocaleString("en-US")}`} sub={`${t.founding.left.toLocaleString("en-US")} left (real count)`} />
           </div>
         </section>
+
+        <MonetizationPanel />
 
         <Posts title="Top 10 posts" rows={t.top} testId="top-posts" empty="No attributed posts yet. Posts show here once a waitlist sign-up, book buyer or member carries a post id." />
         <Posts title="Weakest 10 posts" rows={t.weakest} testId="weak-posts" empty="Fewer than 11 posts with data, so there is no bottom 10 yet." />

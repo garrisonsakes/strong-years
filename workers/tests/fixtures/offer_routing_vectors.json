@@ -1,0 +1,378 @@
+{
+ "routes": [
+  {
+   "ctx": {
+    "mode": "runway",
+    "keyword": "BOOK"
+   },
+   "offer": "waitlist",
+   "rule": "R01-runway"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "keyword": "BOOK",
+    "surface": "dm"
+   },
+   "offer": "front_end",
+   "rule": "R99-default",
+   "bump_frame": "wall_plan"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "keyword": "KNEES",
+    "surface": "b"
+   },
+   "offer": "front_end",
+   "rule": "R99-default",
+   "bump_frame": "wall_plan"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "keyword": "BOOK",
+    "hardship": true
+   },
+   "offer": "hardship_request",
+   "rule": "R02-hardship"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "audience": "group"
+   },
+   "offer": "group_quote",
+   "rule": "R03-group"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "country": "CA"
+   },
+   "offer": "waitlist",
+   "rule": "R04-market-closed"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "country": "US",
+    "keyword": "SOUP"
+   },
+   "offer": "front_end",
+   "rule": "R99-default",
+   "bump_frame": "grocery_lists"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "prior": [
+     "member",
+     "coached"
+    ],
+    "surface": "app",
+    "plateau": true
+   },
+   "offer": "none",
+   "rule": "R05-coached-quiet"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "prior": [
+     "member"
+    ],
+    "surface": "app",
+    "plateau": true
+   },
+   "offer": "coached",
+   "rule": "R07-plateau"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "prior": [
+     "member"
+    ],
+    "surface": "email",
+    "member_months": 2
+   },
+   "offer": "annual",
+   "rule": "R08-annual"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "prior": [
+     "member",
+     "annual"
+    ],
+    "surface": "email",
+    "member_months": 14
+   },
+   "offer": "none",
+   "rule": "R09-member-quiet"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "prior": [
+     "member"
+    ],
+    "surface": "dm",
+    "member_months": 3
+   },
+   "offer": "none",
+   "rule": "R09-member-quiet"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "lapse_days": 12
+   },
+   "offer": "rejoin",
+   "rule": "R10-rejoin"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "lapse_days": 45
+   },
+   "offer": "winback_12",
+   "rule": "R11-winback-12"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "lapse_days": 200
+   },
+   "offer": "winback_9",
+   "rule": "R12-winback-9"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "prior": [
+     "books"
+    ],
+    "surface": "thank_you"
+   },
+   "offer": "founding_monthly",
+   "rule": "R13-books-thanks"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "prior": [
+     "books"
+    ],
+    "surface": "dm"
+   },
+   "offer": "none",
+   "rule": "R14-books-dm"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "audience": "parent",
+    "prior": [
+     "gift_buyer"
+    ]
+   },
+   "offer": "gift",
+   "rule": "R15-gift-repeat",
+   "variant": "gift12"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "tagger": true,
+    "keyword": "STRONG"
+   },
+   "offer": "gift",
+   "rule": "R16-gift-tagger",
+   "variant": "gift3"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "keyword": "FAMILY"
+   },
+   "offer": "gift",
+   "rule": "R18-gift-keyword",
+   "variant": "gift3"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "platform": "tt",
+    "keyword": "BOOK",
+    "surface": "tt"
+   },
+   "offer": "day1_free",
+   "rule": "R19-tiktok"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "keyword": "JOIN"
+   },
+   "offer": "founding_monthly",
+   "rule": "R20-join"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "keyword": "BOOK",
+    "waitlist_age_days": 45,
+    "opened_recently": false
+   },
+   "offer": "day1_free",
+   "rule": "R21-cold-waitlist"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "keyword": "BOOK",
+    "surface": "dm",
+    "hour": 23
+   },
+   "offer": "front_end",
+   "rule": "R22-late-night",
+   "bump_frame": "wall_plan"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "goal": "start",
+    "follower": false
+   },
+   "offer": "day1_free",
+   "rule": "R23-not-sure"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "goal": "start",
+    "follower": true
+   },
+   "offer": "front_end",
+   "rule": "R99-default",
+   "bump_frame": "wall_plan"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "keyword": "LABS"
+   },
+   "offer": "front_end",
+   "rule": "R99-default",
+   "bump_frame": "wall_plan"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "keyword": "LABS",
+    "prior": [
+     "member"
+    ]
+   },
+   "offer": "labs_interest",
+   "rule": "R06-labs"
+  },
+  {
+   "ctx": {
+    "mode": "launch",
+    "platform": "tt",
+    "keyword": "BOOK",
+    "surface": "b"
+   },
+   "offer": "front_end",
+   "rule": "R99-default",
+   "bump_frame": "wall_plan"
+  }
+ ],
+ "assign": [
+  {
+   "exp": "dm_qualify",
+   "subject": "ig:1784",
+   "arm": "qualify2"
+  },
+  {
+   "exp": "dm_qualify",
+   "subject": "fb:42",
+   "arm": "qualify2"
+  },
+  {
+   "exp": "dm_qualify",
+   "subject": "3f1c2a9e-0d5b-4b7a-9c11-2e8f0a6b7c3d",
+   "arm": "direct"
+  },
+  {
+   "exp": "dm_qualify",
+   "subject": "ig:99",
+   "arm": "qualify2"
+  },
+  {
+   "exp": "bump_frame",
+   "subject": "ig:1784",
+   "arm": "matched"
+  },
+  {
+   "exp": "bump_frame",
+   "subject": "fb:42",
+   "arm": "matched"
+  },
+  {
+   "exp": "bump_frame",
+   "subject": "3f1c2a9e-0d5b-4b7a-9c11-2e8f0a6b7c3d",
+   "arm": "generic"
+  },
+  {
+   "exp": "bump_frame",
+   "subject": "ig:99",
+   "arm": "matched"
+  },
+  {
+   "exp": "thankyou_offer",
+   "subject": "ig:1784",
+   "arm": "default"
+  },
+  {
+   "exp": "thankyou_offer",
+   "subject": "fb:42",
+   "arm": "matched"
+  },
+  {
+   "exp": "thankyou_offer",
+   "subject": "3f1c2a9e-0d5b-4b7a-9c11-2e8f0a6b7c3d",
+   "arm": "matched"
+  },
+  {
+   "exp": "thankyou_offer",
+   "subject": "ig:99",
+   "arm": "matched"
+  },
+  {
+   "exp": "fe_cell",
+   "subject": "ig:1784",
+   "arm": "m12"
+  },
+  {
+   "exp": "fe_cell",
+   "subject": "fb:42",
+   "arm": "m12"
+  },
+  {
+   "exp": "fe_cell",
+   "subject": "3f1c2a9e-0d5b-4b7a-9c11-2e8f0a6b7c3d",
+   "arm": "m12"
+  },
+  {
+   "exp": "fe_cell",
+   "subject": "ig:99",
+   "arm": "m12"
+  }
+ ],
+ "bumps": []
+}

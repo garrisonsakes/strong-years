@@ -291,6 +291,27 @@
           "body": "(daily tip)"
         }
       ]
+    },
+    "second_purchase": {
+      "kind": "marketing",
+      "from": "team",
+      "priority": 7,
+      "audience": "cell B ($12 starter bundle) buyers in their first 7 days with no second purchase yet",
+      "description": "MONETIZATION_ENGINE.md §4: one offer matched to why they came (wall plan or grocery lists) on day 3, a gift for someone they love on day 6. Stops at the first second purchase. Day 1 is the onboarding email, no offer.",
+      "steps": [
+        {
+          "id": "s3",
+          "after_hours": 72,
+          "subject": "{{bump_subject}}",
+          "body": "Hi {{first_name}},\n\n{{bump_line}}\n\nIt's optional and a one-time $9 (a PDF you print at home, yours to keep): {{bump_url}}\n\nIf you'd rather not, change nothing; your membership is the same either way.\n\nThe Strong Years team"
+        },
+        {
+          "id": "s6",
+          "after_hours": 144,
+          "subject": "Someone you'd like to do this with?",
+          "body": "Hi {{first_name}},\n\nA lot of members do the morning session on the phone with a sister, a friend, a grown child. If there's someone you'd like to do it with, you can give them Strong Years: 3 months for $49 or 12 months for $119, paid once, no auto-renew. You choose the start date and they get a welcome email from you: {{gift_url}}\n\nChang Yin and Sun Yoon are AI characters; the sessions are real.\n\nThe Strong Years team"
+        }
+      ]
     }
   },
   "coach_tips": [

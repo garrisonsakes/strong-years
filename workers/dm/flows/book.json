@@ -37,10 +37,20 @@
           "next": "dm2"
         },
         {
+          "label": "Help me choose",
+          "next": "q_goal"
+        },
+        {
           "label": "Is it a subscription?",
           "next": "sub"
         }
-      ]
+      ],
+      "experiment": {
+        "id": "dm_qualify",
+        "arm_states": {
+          "direct": "dm1_direct"
+        }
+      }
     },
     "sub": {
       "dm": [
@@ -99,6 +109,148 @@
       ],
       "end": true,
       "handoff": true
+    },
+    "dm1_direct": {
+      "dm": [
+        "Hi {first_name}! This is the Strong Years team assistant (automated). Chang Yin and Sun Yoon are AI characters, not real people. Reply STOP anytime.\n\nThe starter books, in plain words:\n• Chang Yin's 7-Day Strength Reset: seven mornings, one chair, about 8 minutes a day, an easier version of every move.\n• Sun Yoon's Strong Kitchen: recipes with the protein and fiber grams written in, and a who-should-skip box on every page.\n• $12 today. The page you land on says exactly what that $12 buys: for most people it's both books plus your first month of Strong Years (then $25 a month until you cancel, cancel online anytime); some people see the books alone, one-time. Either way the books are yours to keep."
+      ],
+      "buttons": [
+        {
+          "label": "Send me the link",
+          "next": "dm2"
+        },
+        {
+          "label": "Is it a subscription?",
+          "next": "sub"
+        }
+      ]
+    },
+    "q_goal": {
+      "dm": [
+        "Two quick questions so I send the right thing. What matters most right now?"
+      ],
+      "quick_replies": [
+        {
+          "label": "Legs and getting up",
+          "next": "q_who",
+          "set": {
+            "goal": "strength"
+          }
+        },
+        {
+          "label": "Knees and stairs",
+          "next": "q_who",
+          "set": {
+            "goal": "knees"
+          }
+        },
+        {
+          "label": "Steadier on my feet",
+          "next": "q_who",
+          "set": {
+            "goal": "balance"
+          }
+        },
+        {
+          "label": "Eating for strength",
+          "next": "q_who",
+          "set": {
+            "goal": "kitchen"
+          }
+        },
+        {
+          "label": "Just help me start",
+          "next": "q_who",
+          "set": {
+            "goal": "start"
+          }
+        }
+      ]
+    },
+    "q_who": {
+      "dm": [
+        "And who is it for?"
+      ],
+      "quick_replies": [
+        {
+          "label": "Me",
+          "next": "pick",
+          "set": {
+            "audience": "self"
+          }
+        },
+        {
+          "label": "A parent or loved one",
+          "next": "pick",
+          "set": {
+            "audience": "parent"
+          }
+        },
+        {
+          "label": "A group or center",
+          "next": "pick",
+          "set": {
+            "audience": "group"
+          }
+        }
+      ]
+    },
+    "pick": {
+      "route": true,
+      "dm": [],
+      "routes": {
+        "front_end": "dm2",
+        "founding_monthly": "dm2",
+        "waitlist": "dm2",
+        "gift": "gift",
+        "group_quote": "group",
+        "hardship_request": "price_help",
+        "day1_free": "free",
+        "none": "member",
+        "coached": "member",
+        "annual": "member",
+        "labs_interest": "member",
+        "default": "dm2"
+      }
+    },
+    "gift": {
+      "dm": [
+        "For a parent or someone you love, there's a prepaid gift: 3 months for $49 or 12 months for $119, paid once, no auto-renew. You pick the start date and they get a welcome email from you. Chang Yin and Sun Yoon are AI characters; the sessions are real.\n\nHere it is: {{B_LINK:FAMILY}}"
+      ],
+      "end": true,
+      "tags": [
+        "route_gift_sent"
+      ]
+    },
+    "group": {
+      "dm": [
+        "For 5 or more people (a senior center, a church group, a class), a person on our team puts together a group quote: one gift seat per person, prepaid, no auto-renew. Tell us a little about the group here and we'll reply within 2 business days: {{L:/ask/group}}"
+      ],
+      "end": true,
+      "tags": [
+        "group_lead"
+      ]
+    },
+    "price_help": {
+      "dm": [
+        "Thank you for saying so. A person on our team reads every one of these and can offer a lower price when money is tight. It's a short form, nothing is charged: {{L:/ask/price}}\n\nAnd Day 1 is free for everyone: {{L:/s/l1}}"
+      ],
+      "end": true,
+      "tags": [
+        "hardship"
+      ]
+    },
+    "free": {
+      "dm": [
+        "Then start with Day 1, free, no card: {{L:/s/l1}}. Eight minutes, one chair. If you like it, the starter books link is here whenever you want it: {{B_LINK}}"
+      ],
+      "end": true
+    },
+    "member": {
+      "dm": [
+        "You're already in. Everything is in your account: {{L:/app}}. If you'd like a person to help with anything, reply HUMAN."
+      ],
+      "end": true
     }
   },
   "followups": [

@@ -28,6 +28,8 @@ import { getLaunchState } from "../launch";
 import { moneyExact } from "../pricing";
 import { renewalCertainty } from "../billing/clock";
 import { safeEqual } from "../safeEqual";
+import { bumpFor, ROUTING } from "../offers/route";
+import { shopifyConfig } from "../billing/shopify";
 import type { EmailInput } from "../notify";
 
 export type Kind = "transactional" | "lifecycle" | "marketing";
@@ -150,6 +152,24 @@ export async function candidates(store: Store, now = new Date()): Promise<Candid
 
     // Books only → membership (cell A's 3 emails; email 1 is sent by orders/paid).
     if (books && ms.length === 0) out.push({ sequence: "books_to_membership", ...base(m), anchor: new Date(books.created_at), vars: varsFor(m, { founding_url: `${site}/b?t=JOIN` }) });
+
+    // Second purchase within 7 days (MONETIZATION_ENGINE.md §4): cell B buyers only (cell A has its own 3 emails);
+    // stops at the first bump or gift. The offer is matched to the keyword they came in on (routing table bumps).
+    const bundle = mine.find((o) => /^bundle_m12/.test(o.offer_code) && o.status === "paid");
+    if (bundle && now.getTime() - new Date(bundle.created_at).getTime() <= 7 * DAY && !mine.some((o) => (o.kind === "bump" || o.kind === "gift") && o.status === "paid")) {
+      const kw = typeof m.attribution?.keyword === "string" ? m.attribution.keyword : null;
+      const bump = bumpFor((ROUTING.keyword_pillar as Record<string, string>)[(kw ?? "").toUpperCase()] ?? "general");
+      const grocery = bump?.frame === "grocery_lists";
+      out.push({
+        sequence: "second_purchase", ...base(m), anchor: new Date(bundle.created_at), stepSuffix: bundle.id.slice(0, 8),
+        vars: varsFor(m, {
+          bump_subject: grocery ? "Sun Yoon's grocery lists (optional)" : "The wall plan most people print (optional)",
+          bump_line: grocery ? "Sun Yoon's weekly grocery lists come with the 12-week wall plan: one page per week, the protein grams written in, so the shopping is decided before you go." : "The 12-week wall plan is one large-print page you stick on the fridge and tick each morning.",
+          bump_url: `https://${shopifyConfig.storeDomain()}/products/the-wall-plan`,
+          gift_url: `${site}/b?t=FAMILY`,
+        }),
+      });
+    }
 
     for (const ms1 of live) {
       const start = new Date(ms1.first_paid_at ?? ms1.created_at);

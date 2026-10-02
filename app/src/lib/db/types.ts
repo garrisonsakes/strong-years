@@ -325,7 +325,7 @@ export interface SupportTicket {
   id: string;
   member_id: string | null;
   email: string | null;
-  reason: "talk_to_human" | "crisis_followup" | "grief_followup" | "cancel_by_email" | "retest_drop" | "refund_review" | "dispute" | "privacy_request" | "chat_offline_review" | "shopify_review" | "plan_change";
+  reason: "talk_to_human" | "crisis_followup" | "grief_followup" | "cancel_by_email" | "retest_drop" | "refund_review" | "dispute" | "privacy_request" | "chat_offline_review" | "shopify_review" | "plan_change" | "group_quote" | "price_help";
   message: string;
   status: "open" | "closed";
   created_at: string;
@@ -664,7 +664,9 @@ export type ExceptionType =
   | "affiliate_application"
   | "affiliate_fraud"
   | "coach_flag"
-  | "clinical_interest";
+  | "clinical_interest"
+  | "group_quote"
+  | "price_help";
 
 export type ExceptionStatus = "open" | "approved" | "rejected" | "resolved";
 
@@ -877,6 +879,25 @@ export interface AscensionExposure {
   created_at: string;
 }
 
+/** MONETIZATION_ENGINE.md §5: the offer attribution table (exposures, conversions, asks). Never an email. */
+export interface OfferEvent {
+  id: string;
+  kind: "exposure" | "conversion" | "ask";
+  visitor_id: string | null;
+  member_id: string | null;
+  surface: string;
+  experiment: string | null;
+  arm: string | null;
+  offer: string;
+  rule: string | null;
+  shown_price_cents: number | null;
+  revenue_cents: number;
+  channel: string | null;
+  ref: string | null;
+  day: string;
+  created_at: string;
+}
+
 export interface Rows {
   members: Member;
   memberships: Membership;
@@ -928,6 +949,7 @@ export interface Rows {
   coach_notes: CoachNote;
   clinical_interest: ClinicalInterest;
   ascension_exposures: AscensionExposure;
+  offer_events: OfferEvent;
 }
 
 export type TableName = keyof Rows;

@@ -19,7 +19,9 @@ export type ProductRole =
   | "gift"             // prepaid gift, no auto-renew
   | "bump_wallplan"    // $9 digital bump
   | "bump_kit"         // $29 physical bump
-  | "coached";         // R3: 12-week coached group program (ASCENSION.md), $147/mo default, $97/$197 test cells
+  | "coached"          // R3: 12-week coached group program (ASCENSION.md), $147/mo default, $97/$197 test cells
+  | "prepaid"          // MONETIZATION_ENGINE.md §3: 12 months paid once, no auto-renew (Shop Pay Installments eligible). DRAFT: client decision
+  | "gift_bundle";     // MONETIZATION_ENGINE.md §3: caregiver bundle (3-month gift + Starter Books for the buyer). DRAFT: client decision
 
 export interface VariantSpec {
   /** Value for the single option (Shopify always needs one option). */
@@ -333,6 +335,48 @@ ${DISCLOSURE_P}`,
     publishToOnlineStore: true,
   },
   ...COACHED_CELLS.map(coachedCell),
+
+  // ---------------------------------------------------------------- MONETIZATION_ENGINE.md §3 (proposals, DRAFT)
+  // Both are DRAFT: provisioned so the client can review them in Shopify Admin, NOT sellable, NOT in the members
+  // catalog (verify phase emits no row for them) until the client decides the price and flips the status. Activation
+  // steps are in MONETIZATION_ENGINE.md §3.
+  {
+    handle: "strong-years-12-months-prepaid",
+    role: "prepaid",
+    title: "Strong Years, 12 months prepaid (does not renew)",
+    status: "DRAFT",
+    templateSuffix: "gift",
+    productType: "Prepaid membership",
+    tags: ["sy-prepaid", "no-auto-renew"],
+    optionName: "Length",
+    // Shop Pay Installments can't buy subscription products (help.shopify.com/en/manual/payments/shop-pay-installments/faq),
+    // so the founding annual ($249/yr, a subscription) can never be split. This ONE-TIME product at the same $249 can:
+    // US orders $35–$30,000 qualify. Same price as the annual, so nobody is shown two prices for a year.
+    variants: [{ option: "12 months", price: ANNUAL_PRICE, sku: "SY-PREPAID-12M", requiresShipping: false, tracked: false, inventoryPolicy: "CONTINUE", taxable: true }],
+    collections: ["membership"],
+    subscriptionOnly: false,
+    seoTitle: "Strong Years, 12 months prepaid",
+    seoDescription: "Twelve months of Strong Years, paid once. It does not renew. Pay in installments with Shop Pay where eligible.",
+    descriptionHtml: `<p>Twelve months of Strong Years for <strong>$249, paid once. It does not renew.</strong> Near the end we email you; continuing is your choice. Where Shop Pay Installments is offered at checkout, the lender shows its terms before you agree.</p>${DISCLOSURE_P}`,
+    publishToOnlineStore: false,
+  },
+  {
+    handle: "family-bundle",
+    role: "gift_bundle",
+    title: "Family bundle: a 3-month gift + the Starter Books for you",
+    status: "DRAFT",
+    templateSuffix: "gift",
+    productType: "Gift membership",
+    tags: ["sy-gift", "sy-bundle", "no-auto-renew"],
+    optionName: "Bundle",
+    variants: [{ option: "3-month gift + books", price: "55.00", sku: "SY-FAMILY-55", requiresShipping: false, tracked: false, inventoryPolicy: "CONTINUE", taxable: true }],
+    collections: ["gifts"],
+    subscriptionOnly: false,
+    seoTitle: "Family bundle | Strong Years",
+    seoDescription: "Give a parent 3 months of Strong Years and get the Starter Books yourself. One payment. Nothing renews.",
+    descriptionHtml: `<p>A 3-month prepaid gift for someone you love, and the Starter Books for you, so you can do Day 1 together on a call. <strong>One payment. Nothing renews.</strong></p>${DISCLOSURE_P}`,
+    publishToOnlineStore: false,
+  },
 ];
 
 export interface CollectionSpec { handle: string; title: string; descriptionHtml: string; }
@@ -379,13 +423,17 @@ export const SELLING_PLANS: SellingPlanSpec[] = [
 export interface DiscountSpec {
   code: string;
   title: string;
-  kind: "books_fixed" | "starter_first_payment";
+  kind: "books_fixed" | "starter_first_payment" | "winback_first_payment" | "group_quantity";
   amount: string;
   oncePerCustomer: boolean;
   /** Who it's for: tracking for affiliates and page shoutouts (commission is paid by the members app). */
   owner: string;
-  /** starter_first_payment only: the single membership product the code applies to. */
+  /** starter_first_payment / winback_first_payment: the single membership product the code applies to; group_quantity: the gift product. */
   product?: string;
+  /** group_quantity only: minimum quantity of the product in the cart. */
+  minQuantity?: number;
+  /** group_quantity only: percentage off as a fraction (0.2 = 20%). */
+  percent?: number;
 }
 
 /**
@@ -406,7 +454,53 @@ export const DISCOUNTS: DiscountSpec[] = [
   { code: "CHANG", title: "Page code: Chang Yin page", kind: "books_fixed", amount: "2.00", oncePerCustomer: true, owner: "page:chang" },
   { code: "SUNYOON", title: "Page code: Sun Yoon kitchen page", kind: "books_fixed", amount: "2.00", oncePerCustomer: true, owner: "page:sun" },
   { code: "CHANGANDSUN", title: "Page code: duo page", kind: "books_fixed", amount: "2.00", oncePerCustomer: true, owner: "page:duo" },
+  // MONETIZATION_ENGINE.md §3. Win-back by lapse length (routing table "winback"): first payment only, once per customer,
+  // the membership product only. Sent only to lapsed members by the members app (/b?t=WINBACK applies the code through
+  // the /discount/<CODE> share link); the page shows the code price and the plan price, so the consent record matches.
+  // ≤30 days lapsed: no code (rejoin at the public price). 31–90: $12 first month back. 90+: $9 first month back.
+  { code: "WINBACK12", title: "Win-back 31-90 days: first month back $12 (founding)", kind: "winback_first_payment", amount: "13.00", oncePerCustomer: true, owner: "winback", product: "founding-membership" },
+  { code: "WINBACK12S", title: "Win-back 31-90 days: first month back $12 (standard)", kind: "winback_first_payment", amount: "23.00", oncePerCustomer: true, owner: "winback", product: "strong-years-membership" },
+  { code: "WINBACK9", title: "Win-back 90+ days: first month back $9 (founding)", kind: "winback_first_payment", amount: "16.00", oncePerCustomer: true, owner: "winback", product: "founding-membership" },
+  { code: "WINBACK9S", title: "Win-back 90+ days: first month back $9 (standard)", kind: "winback_first_payment", amount: "26.00", oncePerCustomer: true, owner: "winback", product: "strong-years-membership" },
+  // Group rate: 20% off 5 or more gift seats in one order. Given by a person after the /ask/group quote form; never
+  // advertised as a public code. (Shopify B2B quantity price breaks need Plus; a quantity-minimum code works on Basic.)
+  { code: "GROUP5", title: "Group rate: 20% off 5+ gift seats (quote)", kind: "group_quantity", amount: "0", percent: 0.2, minQuantity: 5, oncePerCustomer: false, owner: "group-quote", product: "gift-strong-years" },
 ];
+
+/** Codes the system issues (never affiliate/page codes): excluded from affiliate crediting. */
+export const SYSTEM_CODES = ["STARTER12", "STARTER12S", "WINBACK12", "WINBACK12S", "WINBACK9", "WINBACK9S", "GROUP5"] as const;
+
+/**
+ * Hardship / "pay what you can" (MONETIZATION_ENGINE.md §3). Never a shared public code. The /ask/price form files an
+ * exception; a person reads it and, if they agree, issues a SINGLE-USE code for that one customer (Discounts → Create
+ * → Amount off products → limit to 1 use, the membership product, recurring for the cycles below). The copy promises a
+ * person reads it, nothing more. Budget cap keeps it sustainable and is reviewed monthly.
+ */
+export const HARDSHIP_POLICY = {
+  method: "human_issued_single_use_code",
+  codePrefix: "SYHELP",
+  options: [
+    { label: "Essentials price on the full membership", firstCyclesPrice: "12.00", cycles: 6 },
+    { label: "Half price", percentOff: 50, cycles: 6 },
+  ],
+  monthlyBudgetSeats: 50,
+  reviewSla: "2 business days",
+} as const;
+
+/**
+ * Regional pricing via Shopify Markets (MONETIZATION_ENGINE.md §3). Launch sells in the US only (USD store). Other
+ * markets stay CLOSED until two things are verified on the live store: (1) the free Shopify Subscriptions app bills
+ * the membership correctly in the market's currency, (2) tax/VAT registration. Price adjustments apply via the market's
+ * price list (percentage) to ONE-TIME products only; membership prices stay the catalog prices. The routing table's
+ * open_countries mirrors the "open" markets; closed countries get the free waitlist.
+ */
+export const MARKETS = [
+  { handle: "us", name: "United States", countries: ["US"], currency: "USD", open: true, priceAdjustmentPercent: 0 },
+  { handle: "ca", name: "Canada", countries: ["CA"], currency: "CAD", open: false, priceAdjustmentPercent: 0 },
+  { handle: "uk-ie", name: "UK and Ireland", countries: ["GB", "IE"], currency: "GBP", open: false, priceAdjustmentPercent: 0 },
+  { handle: "anz", name: "Australia and New Zealand", countries: ["AU", "NZ"], currency: "AUD", open: false, priceAdjustmentPercent: 0 },
+  { handle: "ppp", name: "Lower purchasing-power markets", countries: ["PH", "IN", "MX", "BR", "ZA"], currency: "USD", open: false, priceAdjustmentPercent: -40 },
+] as const;
 
 /** Members app (Next.js, members.<domain>) receives every webhook here; topic is in X-Shopify-Topic. Matches the route the members app already has. */
 export const WEBHOOK_PATH = "/api/webhooks/shopify"; // app/src/app/api/webhooks/shopify/route.ts

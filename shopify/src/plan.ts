@@ -8,7 +8,7 @@
  * resets the founding seat count.
  */
 import {
-  COLLECTIONS, DISCOUNTS, EBOOK_CELLS, FOUNDING_CAP, FOUNDING_CLOSE_DATE_DEFAULT, FUNNEL_ARMS,
+  COLLECTIONS, DISCOUNTS, EBOOK_CELLS, HARDSHIP_POLICY, MARKETS, FOUNDING_CAP, FOUNDING_CLOSE_DATE_DEFAULT, FUNNEL_ARMS,
   METAFIELD_DEFINITIONS, METAFIELD_NAMESPACE, PRODUCTS, REDIRECTS, SELLING_PLANS, STANDARD_PRICE,
   FOUNDING_PRICE, WEBHOOK_PATH, WEBHOOK_TOPICS_APP_ENGINE, WEBHOOK_TOPICS_CORE, type ProductSpec,
 } from "../config/catalog.ts";
@@ -164,6 +164,14 @@ export async function runPlan(gql: GraphQLRunner, o: PlanOptions): Promise<PlanR
     }
   }
 
+  // ---------------------------------------------------------------- 5b. markets + hardship (MONETIZATION_ENGINE.md §3)
+  for (const m of MARKETS) {
+    if (m.handle === "us") continue;
+    r.manual.push(`Settings → Markets → ${m.name} (${m.countries.join(", ")}): keep ${m.open ? "ACTIVE" : "INACTIVE until the Shopify Subscriptions multi-currency check and tax registration pass"}; currency ${m.currency}${m.priceAdjustmentPercent ? `; price list ${m.priceAdjustmentPercent}% on ONE-TIME products only (books, bumps, gifts), never the membership` : ""}. Then add the countries to open_countries in workers/dm/offer_routing.json (and the app copy).`);
+  }
+  r.manual.push(`Hardship requests: never a public code. A person issues a single-use ${HARDSHIP_POLICY.codePrefix}-<n> code per approved /ask/price request (${HARDSHIP_POLICY.options.map((o) => o.label).join(" or ")}, ${HARDSHIP_POLICY.options[0].cycles} cycles), within ${HARDSHIP_POLICY.reviewSla}, capped at ${HARDSHIP_POLICY.monthlyBudgetSeats} seats a month.`);
+  r.manual.push("Settings → Payments → Shop Pay Installments: ON (US). It never applies to subscriptions or gift cards; it applies to the one-time prepaid 12 months ($249, DRAFT until the client decides) and to gifts.");
+
   // ---------------------------------------------------------------- 6. shop metafields (theme config)
   const shopMetafields = [
     { key: "cells", value: JSON.stringify({ ebook: EBOOK_CELLS, arms: FUNNEL_ARMS, test: o.armTestOn !== false, version: 2 }) },
@@ -284,7 +292,21 @@ export function discountInput(d: (typeof DISCOUNTS)[number], nowIso: string, pro
     appliesOncePerCustomer: d.oncePerCustomer,
     combinesWith: { orderDiscounts: false, productDiscounts: false, shippingDiscounts: true },
   };
-  if (d.kind === "starter_first_payment") {
+  if (d.kind === "group_quantity") {
+    // 20% off the gift product when the cart holds 5+ of it (DiscountMinimumRequirementInput.quantity).
+    return {
+      ...base,
+      context: { all: "ALL" },
+      minimumRequirement: { quantity: { greaterThanOrEqualToQuantity: String(d.minQuantity ?? 5) } },
+      customerGets: {
+        value: { percentage: d.percent ?? 0.2 },
+        items: { products: { productsToAdd: [productIds[d.product || "gift-strong-years"]].filter(Boolean) } },
+        appliesOnSubscription: false,
+        appliesOnOneTimePurchase: true,
+      },
+    };
+  }
+  if (d.kind === "starter_first_payment" || d.kind === "winback_first_payment") {
     return {
       ...base,
       context: { all: "ALL" },

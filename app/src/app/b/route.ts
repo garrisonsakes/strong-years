@@ -5,6 +5,13 @@ import { isShopify } from "@/lib/billing/provider";
 import { shopifyJoinUrl } from "@/lib/shopCheckout";
 import { cleanKeywordParam, cleanPageParam, keywordTarget } from "@/lib/bioLinks";
 import { ATTR_COOKIE, LAST_TOUCH_COOKIE, attributionFromUrl, encodeAttribution, touchFromUrl } from "@/lib/analytics/attribution";
+import { bDestination, qualifyFromQuery, route, type RouteContext } from "@/lib/offers/route";
+import { assignArm, logExposure } from "@/lib/offers/experiments";
+import { memberContext } from "@/lib/offers/context";
+import { getVisitorId } from "@/lib/request";
+import { currentMember } from "@/lib/auth/server";
+import { foundingTaken } from "@/lib/founding";
+import { offerRules } from "@/lib/config";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -20,6 +27,12 @@ export const dynamic = "force-dynamic";
  *               /discount/STARTER12 share link), or /join in Stripe mode.
  * Keywords never pick a price: BOOK/STRONG/SOUP… → the front end at the visitor's
  * cell; JOIN → the plain membership; FAMILY → the gift page.
+ *
+ * MONETIZATION_ENGINE.md §2: live, the routing table (lib/offers/route.ts, the same data the DM bot uses) picks the
+ * offer FAMILY from the keyword, the two DM qualify answers (g, a), platform, country and, for a signed-in member,
+ * what they own and how long they've lapsed. Families still go through the sticky cell; free paths (Day 1, the
+ * group-quote and price-help forms) are our own pages; a lapsed member gets the win-back code for their tier.
+ * Every redirect logs one exposure row (offer_events).
  */
 export async function GET(req: Request) {
   const url = new URL(req.url);
@@ -52,7 +65,35 @@ export async function GET(req: Request) {
     forward.set("from", "b");
     location = `/waitlist?${forward.toString()}`;
   } else if (isShopify()) {
-    location = (await shopifyJoinUrl({ ...sp, offer: undefined }, keywordTarget(t), "b", touch)) ?? `/join?${forward.toString()}`;
+    const member = await currentMember().catch(() => null);
+    const visitorId = await getVisitorId();
+    const cohortOpen = (await foundingTaken(store)) < offerRules.foundingCap;
+    const country = (req.headers.get("x-vercel-ip-country") ?? "").toUpperCase();
+    const ctx: RouteContext = {
+      mode: "launch",
+      surface: "b",
+      keyword: t,
+      platform: (sp.utm_source ?? sp.platform ?? "").toLowerCase().slice(0, 12) || null,
+      country: /^[A-Z]{2}$/.test(country) ? country : null,
+      ...qualifyFromQuery(sp.g, sp.a),
+      ...(member ? memberContext(await store.find("memberships", { member_id: member.id }), await store.find("sy_orders", { member_id: member.id })) : {}),
+    };
+    // The keyword's own family (JOIN, FAMILY, ESSENTIALS) is respected for non-members; routing refines everything else.
+    const r = route(ctx);
+    const dest = bDestination(r, cohortOpen);
+    const kwTarget = keywordTarget(t);
+    const target = dest.kind === "family" ? (kwTarget !== "front_end" && dest.target === "front_end" ? kwTarget : dest.target) : null;
+    await logExposure(store, {
+      subject: { visitorId, memberId: member?.id ?? null }, surface: "b", offer: r.offer, rule: r.rule,
+      experiment: target === "front_end" ? "fe_cell" : null, arm: target === "front_end" ? assignArm("fe_cell", visitorId) : null,
+      channel: (sp.utm_medium ?? "").slice(0, 20) || null,
+    });
+    if (dest.kind === "path") {
+      location = `${dest.path}${dest.path.includes("?") ? "&" : "?"}${forward.toString()}`;
+    } else {
+      const shop = await shopifyJoinUrl({ ...sp, offer: undefined }, target ?? "front_end", "b", touch);
+      location = shop && dest.code ? withDiscount(shop, dest.code) : shop ?? `/join?${forward.toString()}`;
+    }
   } else {
     location = `/join?${forward.toString()}`;
   }
@@ -63,4 +104,11 @@ export async function GET(req: Request) {
   if (touch) res.cookies.set(LAST_TOUCH_COOKIE, encodeAttribution(touch), { maxAge: 90 * 86400, path: "/", sameSite: "lax" });
   if (first && !new RegExp(`(^|;\\s*)${ATTR_COOKIE}=`).test(cookieHeader)) res.cookies.set(ATTR_COOKIE, encodeAttribution(first), { maxAge: 90 * 86400, path: "/", sameSite: "lax" });
   return res;
+}
+
+/** Routes a store product URL through Shopify's /discount/<CODE> share link (the win-back code), once. */
+function withDiscount(storeUrl: string, code: string): string {
+  if (!/^[A-Z0-9]{2,32}$/.test(code) || storeUrl.includes("/discount/")) return storeUrl;
+  const u = new URL(storeUrl);
+  return `${u.origin}/discount/${code}?redirect=${encodeURIComponent(u.pathname + u.search)}`;
 }

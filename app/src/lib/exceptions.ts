@@ -24,6 +24,8 @@ export const EXCEPTION_TYPES: readonly ExceptionType[] = [
   "affiliate_fraud",
   "coach_flag",
   "clinical_interest",
+  "group_quote",
+  "price_help",
 ] as const;
 
 export const TYPE_LABEL: Record<ExceptionType, string> = {
@@ -40,6 +42,8 @@ export const TYPE_LABEL: Record<ExceptionType, string> = {
   affiliate_fraud: "Affiliate fraud check",
   coach_flag: "Coach flag",
   clinical_interest: "Labs + clinician interest (client clinical team)",
+  group_quote: "Group quote (5+ gift seats)",
+  price_help: "Price-help request (a person decides)",
 };
 
 /** Which decisions each type offers. Approve/reject are for requests; resolve closes a review. */
@@ -48,6 +52,8 @@ export function actionsFor(type: ExceptionType): ("approve" | "reject" | "resolv
     case "boost_approval":
     case "affiliate_application":
     case "plan_switch_request":
+    case "group_quote":
+    case "price_help":
       return ["approve", "reject"];
     case "refund_review":
     case "chargeback_review":

@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "doc": "MONETIZATION_ENGINE.md §2. Canonical copy; app/src/lib/offers/routing.json must be byte-identical (app test). Rules are first-match, top to bottom. A rule picks an offer FAMILY, never a price: the front-end price comes from the visitor's sticky cell (fe_cell), every other price is the catalog price. Conditions: scalar = equals; list = one of; {in, nin, lt, lte, gt, gte, has, lacks, exists}. A missing field fails every condition except exists:false and lacks.",
+  "open_countries": ["US"],
+  "keyword_pillar": {
+    "STRONG": "strength", "BEGIN": "strength", "TEST": "strength", "JOIN": "strength", "BOOK": "general",
+    "KNEES": "knees", "BACK": "back", "BALANCE": "balance", "SLEEP": "sleep", "BREATH": "sleep",
+    "SOUP": "kitchen", "GUT": "kitchen", "KITCHEN": "kitchen", "FAMILY": "family", "WAITLIST": "general"
+  },
+  "qualify": {
+    "max_questions": 2,
+    "goal": {"strength": "Stronger legs and getting up easily", "knees": "Knees and stairs", "balance": "Steadier on my feet", "kitchen": "Eating for strength", "start": "Just help me start"},
+    "audience": {"self": "Me", "parent": "A parent or someone I love", "group": "A group or senior center"}
+  },
+  "offers": {
+    "front_end":        {"rung": "R0", "target": "front_end", "path": "/b", "sku": null, "enabled": true, "price": "visitor's sticky cell: $12 today = books + first month, then $25/mo (m12) or $12 books, one-time (e12)"},
+    "founding_monthly": {"rung": "R1", "target": "founding", "path": "/b?t=JOIN", "sku": "founding_monthly", "enabled": true, "price": "$25/mo founding while seats remain, then $35/mo"},
+    "rejoin":           {"rung": "R1", "target": "founding", "path": "/b?t=JOIN", "sku": "founding_monthly", "enabled": true, "price": "the public membership price today; no code"},
+    "winback_12":       {"rung": "R1", "target": "founding", "path": "/b?t=WINBACK", "sku": "founding_monthly", "code": "WINBACK12", "enabled": true, "price": "$12 first month back, then the plan price"},
+    "winback_9":        {"rung": "R1", "target": "founding", "path": "/b?t=WINBACK", "sku": "founding_monthly", "code": "WINBACK9", "enabled": true, "price": "$9 first month back, then the plan price"},
+    "essentials":       {"rung": "R1", "target": "essentials", "path": "/b?t=ESSENTIALS", "sku": "essentials_monthly", "enabled": true, "price": "$12/mo save offer"},
+    "annual":           {"rung": "R1", "target": "app", "path": "/app/account?offer=annual", "sku": "founding_annual", "enabled": true, "price": "$249/yr after renewal 1"},
+    "prepaid12":        {"rung": "R1", "target": "app", "path": "/app/account?offer=prepaid12", "sku": "prepaid12", "enabled": false, "price": "$249 once for 12 months, no auto-renew, Shop Pay Installments eligible (client decision)"},
+    "gift":             {"rung": "G", "target": "gift", "path": "/b?t=FAMILY", "sku": "gift3", "enabled": true, "price": "$49 for 3 months or $119 for 12 months, one-time, no auto-renew"},
+    "family_bundle":    {"rung": "G", "target": "gift", "path": "/b?t=FAMILY&offer=family_bundle", "sku": "family_bundle", "enabled": false, "price": "$55: a 3-month gift + the Starter Books for you (client decision)"},
+    "coached":          {"rung": "R3", "target": "app", "path": "/app/programs?offer=coached", "sku": "coached_c147", "enabled": true, "price": "$147/mo, 12 weeks, capped per cohort"},
+    "labs_interest":    {"rung": "R4", "target": "app", "path": "/app?offer=labs", "sku": null, "enabled": true, "price": "interest only; licensed clinicians quote"},
+    "day1_free":        {"rung": "F", "target": "path", "path": "/start", "sku": null, "enabled": true, "price": "free"},
+    "waitlist":         {"rung": "F", "target": "path", "path": "/waitlist", "sku": null, "enabled": true, "price": "free"},
+    "group_quote":      {"rung": "G", "target": "path", "path": "/ask/group", "sku": null, "enabled": true, "price": "quote by a person: 5+ gift seats"},
+    "hardship_request": {"rung": "F", "target": "path", "path": "/ask/price", "sku": null, "enabled": true, "price": "a person reviews; no automatic discount"},
+    "none":             {"rung": "-", "target": "none", "path": null, "sku": null, "enabled": true, "price": "no offer: value only"}
+  },
+  "rules": [
+    {"id": "R01-runway",        "when": {"mode": "runway"}, "offer": "waitlist"},
+    {"id": "R02-hardship",      "when": {"hardship": true}, "offer": "hardship_request"},
+    {"id": "R03-group",         "when": {"audience": "group"}, "offer": "group_quote"},
+    {"id": "R04-market-closed", "when": {"country": {"exists": true, "nin": ["US"]}}, "offer": "waitlist", "why": "market not open: Shopify Subscriptions multi-currency not verified"},
+    {"id": "R05-coached-quiet", "when": {"prior": {"has": "coached"}}, "offer": "none"},
+    {"id": "R06-labs",          "when": {"keyword": ["LABS", "BLOODWORK"], "prior": {"has": "member"}}, "offer": "labs_interest"},
+    {"id": "R07-plateau",       "when": {"prior": {"has": "member"}, "plateau": true, "surface": ["app", "email"]}, "offer": "coached"},
+    {"id": "R08-annual",        "when": {"prior": {"has": "member", "lacks": "annual"}, "member_months": {"gte": 1}, "surface": ["app", "email"]}, "offer": "annual"},
+    {"id": "R09-member-quiet",  "when": {"prior": {"has": "member"}}, "offer": "none"},
+    {"id": "R10-rejoin",        "when": {"lapse_days": {"lte": 30}}, "offer": "rejoin"},
+    {"id": "R11-winback-12",    "when": {"lapse_days": {"gt": 30, "lte": 90}}, "offer": "winback_12"},
+    {"id": "R12-winback-9",     "when": {"lapse_days": {"gt": 90}}, "offer": "winback_9"},
+    {"id": "R13-books-thanks",  "when": {"prior": {"has": "books"}, "surface": ["thank_you", "email", "app"]}, "offer": "founding_monthly"},
+    {"id": "R14-books-dm",      "when": {"prior": {"has": "books"}}, "offer": "none", "why": "FUNNEL §4.19: books-only buyers get the membership offer on the thank-you page and the 3 onboarding emails, not in DMs"},
+    {"id": "R15-gift-repeat",   "when": {"audience": "parent", "prior": {"has": "gift_buyer"}}, "offer": "gift", "variant": "gift12"},
+    {"id": "R16-gift-tagger",   "when": {"tagger": true}, "offer": "gift", "variant": "gift3"},
+    {"id": "R17-gift-parent",   "when": {"audience": "parent"}, "offer": "gift", "variant": "gift3"},
+    {"id": "R18-gift-keyword",  "when": {"keyword": "FAMILY"}, "offer": "gift", "variant": "gift3"},
+    {"id": "R19-tiktok",        "when": {"platform": "tt", "surface": ["tt", "go"]}, "offer": "day1_free", "alt": "front_end", "why": "ENGINE_100X §8.10: TikTok monetizes through the waitlist and the free Day 1"},
+    {"id": "R20-join",          "when": {"keyword": "JOIN"}, "offer": "founding_monthly"},
+    {"id": "R21-cold-waitlist", "when": {"waitlist_age_days": {"gte": 30}, "opened_recently": false}, "offer": "day1_free", "alt": "front_end"},
+    {"id": "R22-late-night",    "when": {"surface": "dm", "hour": {"in": [22, 23, 0, 1, 2, 3, 4, 5]}}, "offer": "front_end", "prefer_email": true},
+    {"id": "R23-not-sure",      "when": {"goal": "start", "follower": false}, "offer": "day1_free", "alt": "front_end"},
+    {"id": "R99-default",       "when": {}, "offer": "front_end"}
+  ],
+  "bumps": {
+    "doc": "Order bump on the product page, matched to the entry pillar. Same $9 SKU, framed by intent; the $29 kit is a second, optional bump for movement pillars. Never pre-ticked.",
+    "by_pillar": {
+      "knees": {"sku": "wallplan", "frame": "wall_plan", "second": "kit"},
+      "strength": {"sku": "wallplan", "frame": "wall_plan", "second": "kit"},
+      "balance": {"sku": "wallplan", "frame": "wall_plan", "second": "kit"},
+      "back": {"sku": "wallplan", "frame": "wall_plan", "second": null},
+      "sleep": {"sku": "wallplan", "frame": "wall_plan", "second": null},
+      "kitchen": {"sku": "wallplan", "frame": "grocery_lists", "second": null},
+      "family": {"sku": null, "frame": null, "second": null},
+      "general": {"sku": "wallplan", "frame": "wall_plan", "second": null}
+    },
+    "frames": {
+      "wall_plan": "Add the 12-week wall plan (large print, tick a box each morning): $9",
+      "grocery_lists": "Add Sun Yoon's weekly grocery lists (with the 12-week wall plan): $9"
+    }
+  },
+  "thank_you": {
+    "doc": "One offer on the thank-you page, matched to the cell and pillar. Cell e12 (books only) always gets the founding membership (canon). Cell m12 is already a member: the kit for movement pillars, the gift otherwise.",
+    "e12": {"default": "founding_monthly"},
+    "m12": {"knees": "kit", "strength": "kit", "balance": "kit", "default": "gift"}
+  },
+  "second_purchase_7d": {
+    "doc": "Email sequence after the first order; max 2 offers in 7 days; stops at the first second purchase, a refund request, or an unsubscribe. Cell e12 buyers are on the 3 onboarding emails instead (canon), so this runs for m12 buyers only.",
+    "cells": ["m12"],
+    "steps": [
+      {"day": 1, "offer": null, "subject": "Day 1 is ready (8 minutes, one chair)"},
+      {"day": 3, "offer": "bump_matched", "unless": "bump_bought", "subject": "The wall plan most people print"},
+      {"day": 6, "offer": "gift", "unless": "gift_buyer", "subject": "Someone you'd like to do this with?"}
+    ]
+  },
+  "referral": {
+    "doc": "Ask once, at the first win moment, never before day 7 or within 24 h of a support ticket or refund request. Reward: the existing one-time bonus PDF (no cash).",
+    "triggers": ["strength_age_improved", "day7_complete", "retest_better"],
+    "min_day": 7,
+    "copy": "Your Strength Age moved. If someone you know would like this, here's your link: they get Day 1 free, you get the bonus recipe pack."
+  },
+  "winback": {
+    "doc": "By lapse length since the last paid period ended. One code per person, first payment only, the membership product only. Shown price is kept for 30 days (never raised inside that window).",
+    "tiers": [
+      {"max_days": 30, "offer": "rejoin"},
+      {"max_days": 90, "offer": "winback_12", "code": "WINBACK12"},
+      {"max_days": 100000, "offer": "winback_9", "code": "WINBACK9"}
+    ],
+    "touches_days": [30, 60, 90],
+    "max_touches": 3
+  },
+  "experiments": [
+    {"id": "fe_cell", "surface": "b", "arms": ["m12", "e12"], "price_arm": true, "salt": "shopify-cell-v1", "hash": "fnv1a", "owner": "app/src/lib/billing/shopify.ts resolveFrontEnd", "metric": "net revenue per visitor + renewal 1"},
+    {"id": "dm_qualify", "surface": "dm", "arms": ["qualify2", "direct"], "price_arm": false, "salt": "dm-qualify-v1", "metric": "revenue per conversation"},
+    {"id": "bump_frame", "surface": "product_page", "arms": ["matched", "generic"], "price_arm": false, "salt": "bump-frame-v1", "metric": "bump take rate x net revenue per order"},
+    {"id": "thankyou_offer", "surface": "thank_you", "arms": ["matched", "default"], "price_arm": false, "salt": "thankyou-v1", "metric": "second-purchase revenue per buyer, 7 days"},
+    {"id": "referral_moment", "surface": "app", "arms": ["first_win", "day30"], "price_arm": false, "salt": "referral-v1", "metric": "referred paid members per member"}
+  ],
+  "guardrails": {
+    "one_price_per_person": true,
+    "never_raise_shown_price_days": 30,
+    "max_offers_per_dm_thread": 1,
+    "max_sales_dms_per_7d": 2,
+    "no_countdowns": true,
+    "no_preticked_boxes": true
+  }
+}

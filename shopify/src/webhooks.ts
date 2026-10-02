@@ -15,6 +15,7 @@
  *  - order.metafields (strong_years namespace, included via metafieldNamespaces on the subscription)
  */
 import { createHmac, timingSafeEqual } from "node:crypto";
+import { SYSTEM_CODES } from "../config/catalog.ts";
 
 export const ATTRIBUTION_KEYS = ["platform", "page", "post_id", "keyword", "character", "utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "mc_id"] as const;
 export type AttributionKey = (typeof ATTRIBUTION_KEYS)[number];
@@ -151,7 +152,7 @@ export function isStarterCellB(order: OrderLike): boolean {
 
 /** Page/affiliate codes → commission owner (30% recurring for 12 months is computed by the members app). */
 export function affiliateCode(order: OrderLike): string | null {
-  const c = (order.discount_codes || []).map((d) => d.code.toUpperCase()).find((x) => !(STARTER_CODES as readonly string[]).includes(x));
+  const c = (order.discount_codes || []).map((d) => d.code.toUpperCase()).find((x) => !(SYSTEM_CODES as readonly string[]).includes(x));
   return c || null;
 }
 

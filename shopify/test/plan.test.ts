@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import { dryRunner, assertNotForbiddenShop } from "../src/client.ts";
 import { runPlan, type Engine, type Phase } from "../src/plan.ts";
 import { factsFromEnv } from "../src/provision.ts";
-import { PRODUCTS, FOUNDING_CAP, FUNNEL_ARMS } from "../config/catalog.ts";
+import { PRODUCTS, FOUNDING_CAP, FUNNEL_ARMS, SYSTEM_CODES } from "../config/catalog.ts";
 import { readFileSync } from "node:fs";
 
 const facts = factsFromEnv({ COMPANY_LEGAL_NAME: "Strong Years LLC", MAILING_ADDRESS: "1 Test St, Austin, TX 78701", SUPPORT_EMAIL: "help@strongyears.com", BILLING_PHONE: "(555) 010-0000", GOVERNING_STATE: "Texas", SY_DOMAIN: "strongyears.com", LEGAL_EFFECTIVE_DATE: "2026-10-01" } as any);
@@ -81,7 +81,13 @@ describe("plan invariants", () => {
     const { ops } = await plan("shopify_subscriptions", "core");
     for (const o of ops.filter((x) => x.op === "DiscountCodeCreate")) {
       const d = (o.variables as any).basicCodeDiscount;
-      if (d.code === "STARTER12" || d.code === "STARTER12S") continue;
+      if ((SYSTEM_CODES as readonly string[]).includes(d.code)) {
+        // System codes (MONETIZATION_ENGINE.md §3): a membership code discounts the FIRST payment only, once per
+        // customer; the group code applies to gift seats (one-time) only.
+        if (d.customerGets.appliesOnSubscription) expect([d.recurringCycleLimit, d.appliesOncePerCustomer]).toEqual([1, true]);
+        else expect(d.customerGets.items.products.productsToAdd).toEqual(["gid://shopify/Product/DRYRUN-gift-strong-years"]);
+        continue;
+      }
       expect(d.customerGets.appliesOnSubscription).toBe(false);
       expect(d.customerGets.items.products.productsToAdd.every((id: string) => id.includes("starter-books"))).toBe(true);
     }

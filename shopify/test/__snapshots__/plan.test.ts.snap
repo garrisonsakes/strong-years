@@ -1465,6 +1465,151 @@ exports[`provisioning plan (DRY_RUN snapshot) > core phase, Shopify Subscription
     },
   },
   {
+    "op": "ProductByHandle",
+    "variables": {
+      "handle": "strong-years-12-months-prepaid",
+    },
+  },
+  {
+    "op": "ProductUpsert",
+    "variables": {
+      "identifier": {
+        "handle": "strong-years-12-months-prepaid",
+      },
+      "input": {
+        "collections": [
+          "gid://shopify/Collection/DRYRUN-membership",
+        ],
+        "descriptionHtml": "<p>Twelve months of Strong Years for <strong>$249, paid once. It does not renew.</strong> Near the end we email you; continuing is your choice. Where Shop Pay Installments is offered at checkout, the lender shows its terms before you agree.</p><p><strong>Chang Yin and Sun Yoon are AI characters.</strong> Their life story is made up. The exercises and recipes are real, built from published guidelines for older adults. General fitness and nutrition education, not medical advice. Check with your doctor before starting new exercise.</p>",
+        "handle": "strong-years-12-months-prepaid",
+        "metafields": [
+          {
+            "key": "role",
+            "namespace": "strong_years",
+            "type": "single_line_text_field",
+            "value": "prepaid",
+          },
+        ],
+        "productOptions": [
+          {
+            "name": "Length",
+            "values": [
+              {
+                "name": "12 months",
+              },
+            ],
+          },
+        ],
+        "productType": "Prepaid membership",
+        "seo": {
+          "description": "Twelve months of Strong Years, paid once. It does not renew. Pay in installments with Shop Pay where eligible.",
+          "title": "Strong Years, 12 months prepaid",
+        },
+        "status": "DRAFT",
+        "tags": [
+          "sy-prepaid",
+          "no-auto-renew",
+        ],
+        "templateSuffix": "gift",
+        "title": "Strong Years, 12 months prepaid (does not renew)",
+        "variants": [
+          {
+            "inventoryItem": {
+              "requiresShipping": false,
+              "sku": "SY-PREPAID-12M",
+              "tracked": false,
+            },
+            "inventoryPolicy": "CONTINUE",
+            "optionValues": [
+              {
+                "name": "12 months",
+                "optionName": "Length",
+              },
+            ],
+            "position": 1,
+            "price": "249.00",
+            "sku": "SY-PREPAID-12M",
+            "taxable": true,
+          },
+        ],
+        "vendor": "Strong Years",
+      },
+    },
+  },
+  {
+    "op": "ProductByHandle",
+    "variables": {
+      "handle": "family-bundle",
+    },
+  },
+  {
+    "op": "ProductUpsert",
+    "variables": {
+      "identifier": {
+        "handle": "family-bundle",
+      },
+      "input": {
+        "collections": [
+          "gid://shopify/Collection/DRYRUN-gifts",
+        ],
+        "descriptionHtml": "<p>A 3-month prepaid gift for someone you love, and the Starter Books for you, so you can do Day 1 together on a call. <strong>One payment. Nothing renews.</strong></p><p><strong>Chang Yin and Sun Yoon are AI characters.</strong> Their life story is made up. The exercises and recipes are real, built from published guidelines for older adults. General fitness and nutrition education, not medical advice. Check with your doctor before starting new exercise.</p>",
+        "handle": "family-bundle",
+        "metafields": [
+          {
+            "key": "role",
+            "namespace": "strong_years",
+            "type": "single_line_text_field",
+            "value": "gift_bundle",
+          },
+        ],
+        "productOptions": [
+          {
+            "name": "Bundle",
+            "values": [
+              {
+                "name": "3-month gift + books",
+              },
+            ],
+          },
+        ],
+        "productType": "Gift membership",
+        "seo": {
+          "description": "Give a parent 3 months of Strong Years and get the Starter Books yourself. One payment. Nothing renews.",
+          "title": "Family bundle | Strong Years",
+        },
+        "status": "DRAFT",
+        "tags": [
+          "sy-gift",
+          "sy-bundle",
+          "no-auto-renew",
+        ],
+        "templateSuffix": "gift",
+        "title": "Family bundle: a 3-month gift + the Starter Books for you",
+        "variants": [
+          {
+            "inventoryItem": {
+              "requiresShipping": false,
+              "sku": "SY-FAMILY-55",
+              "tracked": false,
+            },
+            "inventoryPolicy": "CONTINUE",
+            "optionValues": [
+              {
+                "name": "3-month gift + books",
+                "optionName": "Bundle",
+              },
+            ],
+            "position": 1,
+            "price": "55.00",
+            "sku": "SY-FAMILY-55",
+            "taxable": true,
+          },
+        ],
+        "vendor": "Strong Years",
+      },
+    },
+  },
+  {
     "op": "DiscountByCode",
     "variables": {
       "code": "STARTER12",
@@ -1679,6 +1824,222 @@ exports[`provisioning plan (DRY_RUN snapshot) > core phase, Shopify Subscription
         },
         "startsAt": "2026-10-01T00:00:00Z",
         "title": "Page code: duo page",
+      },
+    },
+  },
+  {
+    "op": "DiscountByCode",
+    "variables": {
+      "code": "WINBACK12",
+    },
+  },
+  {
+    "op": "DiscountCodeCreate",
+    "variables": {
+      "basicCodeDiscount": {
+        "appliesOncePerCustomer": true,
+        "code": "WINBACK12",
+        "combinesWith": {
+          "orderDiscounts": false,
+          "productDiscounts": false,
+          "shippingDiscounts": true,
+        },
+        "context": {
+          "all": "ALL",
+        },
+        "customerGets": {
+          "appliesOnOneTimePurchase": false,
+          "appliesOnSubscription": true,
+          "items": {
+            "products": {
+              "productsToAdd": [
+                "gid://shopify/Product/DRYRUN-founding-membership",
+              ],
+            },
+          },
+          "value": {
+            "discountAmount": {
+              "amount": "13.00",
+              "appliesOnEachItem": false,
+            },
+          },
+        },
+        "recurringCycleLimit": 1,
+        "startsAt": "2026-10-01T00:00:00Z",
+        "title": "Win-back 31-90 days: first month back $12 (founding)",
+      },
+    },
+  },
+  {
+    "op": "DiscountByCode",
+    "variables": {
+      "code": "WINBACK12S",
+    },
+  },
+  {
+    "op": "DiscountCodeCreate",
+    "variables": {
+      "basicCodeDiscount": {
+        "appliesOncePerCustomer": true,
+        "code": "WINBACK12S",
+        "combinesWith": {
+          "orderDiscounts": false,
+          "productDiscounts": false,
+          "shippingDiscounts": true,
+        },
+        "context": {
+          "all": "ALL",
+        },
+        "customerGets": {
+          "appliesOnOneTimePurchase": false,
+          "appliesOnSubscription": true,
+          "items": {
+            "products": {
+              "productsToAdd": [
+                "gid://shopify/Product/DRYRUN-strong-years-membership",
+              ],
+            },
+          },
+          "value": {
+            "discountAmount": {
+              "amount": "23.00",
+              "appliesOnEachItem": false,
+            },
+          },
+        },
+        "recurringCycleLimit": 1,
+        "startsAt": "2026-10-01T00:00:00Z",
+        "title": "Win-back 31-90 days: first month back $12 (standard)",
+      },
+    },
+  },
+  {
+    "op": "DiscountByCode",
+    "variables": {
+      "code": "WINBACK9",
+    },
+  },
+  {
+    "op": "DiscountCodeCreate",
+    "variables": {
+      "basicCodeDiscount": {
+        "appliesOncePerCustomer": true,
+        "code": "WINBACK9",
+        "combinesWith": {
+          "orderDiscounts": false,
+          "productDiscounts": false,
+          "shippingDiscounts": true,
+        },
+        "context": {
+          "all": "ALL",
+        },
+        "customerGets": {
+          "appliesOnOneTimePurchase": false,
+          "appliesOnSubscription": true,
+          "items": {
+            "products": {
+              "productsToAdd": [
+                "gid://shopify/Product/DRYRUN-founding-membership",
+              ],
+            },
+          },
+          "value": {
+            "discountAmount": {
+              "amount": "16.00",
+              "appliesOnEachItem": false,
+            },
+          },
+        },
+        "recurringCycleLimit": 1,
+        "startsAt": "2026-10-01T00:00:00Z",
+        "title": "Win-back 90+ days: first month back $9 (founding)",
+      },
+    },
+  },
+  {
+    "op": "DiscountByCode",
+    "variables": {
+      "code": "WINBACK9S",
+    },
+  },
+  {
+    "op": "DiscountCodeCreate",
+    "variables": {
+      "basicCodeDiscount": {
+        "appliesOncePerCustomer": true,
+        "code": "WINBACK9S",
+        "combinesWith": {
+          "orderDiscounts": false,
+          "productDiscounts": false,
+          "shippingDiscounts": true,
+        },
+        "context": {
+          "all": "ALL",
+        },
+        "customerGets": {
+          "appliesOnOneTimePurchase": false,
+          "appliesOnSubscription": true,
+          "items": {
+            "products": {
+              "productsToAdd": [
+                "gid://shopify/Product/DRYRUN-strong-years-membership",
+              ],
+            },
+          },
+          "value": {
+            "discountAmount": {
+              "amount": "26.00",
+              "appliesOnEachItem": false,
+            },
+          },
+        },
+        "recurringCycleLimit": 1,
+        "startsAt": "2026-10-01T00:00:00Z",
+        "title": "Win-back 90+ days: first month back $9 (standard)",
+      },
+    },
+  },
+  {
+    "op": "DiscountByCode",
+    "variables": {
+      "code": "GROUP5",
+    },
+  },
+  {
+    "op": "DiscountCodeCreate",
+    "variables": {
+      "basicCodeDiscount": {
+        "appliesOncePerCustomer": false,
+        "code": "GROUP5",
+        "combinesWith": {
+          "orderDiscounts": false,
+          "productDiscounts": false,
+          "shippingDiscounts": true,
+        },
+        "context": {
+          "all": "ALL",
+        },
+        "customerGets": {
+          "appliesOnOneTimePurchase": true,
+          "appliesOnSubscription": false,
+          "items": {
+            "products": {
+              "productsToAdd": [
+                "gid://shopify/Product/DRYRUN-gift-strong-years",
+              ],
+            },
+          },
+          "value": {
+            "percentage": 0.2,
+          },
+        },
+        "minimumRequirement": {
+          "quantity": {
+            "greaterThanOrEqualToQuantity": "5",
+          },
+        },
+        "startsAt": "2026-10-01T00:00:00Z",
+        "title": "Group rate: 20% off 5+ gift seats (quote)",
       },
     },
   },
@@ -2324,6 +2685,10 @@ exports[`provisioning plan (DRY_RUN snapshot) > core phase, Shopify Subscription
   "mutation ProductUpsert              Create product coached-12-week-c97 (coached, cell c97)",
   "query    ProductByHandle            Find product coached-12-week-c197",
   "mutation ProductUpsert              Create product coached-12-week-c197 (coached, cell c197)",
+  "query    ProductByHandle            Find product strong-years-12-months-prepaid",
+  "mutation ProductUpsert              Create product strong-years-12-months-prepaid (prepaid)",
+  "query    ProductByHandle            Find product family-bundle",
+  "mutation ProductUpsert              Create product family-bundle (gift_bundle)",
   "query    DiscountByCode             Find discount STARTER12",
   "mutation DiscountCodeCreate         Create discount STARTER12 (cell-B)",
   "query    DiscountByCode             Find discount STARTER12S",
@@ -2334,6 +2699,16 @@ exports[`provisioning plan (DRY_RUN snapshot) > core phase, Shopify Subscription
   "mutation DiscountCodeCreate         Create discount SUNYOON (page:sun)",
   "query    DiscountByCode             Find discount CHANGANDSUN",
   "mutation DiscountCodeCreate         Create discount CHANGANDSUN (page:duo)",
+  "query    DiscountByCode             Find discount WINBACK12",
+  "mutation DiscountCodeCreate         Create discount WINBACK12 (winback)",
+  "query    DiscountByCode             Find discount WINBACK12S",
+  "mutation DiscountCodeCreate         Create discount WINBACK12S (winback)",
+  "query    DiscountByCode             Find discount WINBACK9",
+  "mutation DiscountCodeCreate         Create discount WINBACK9 (winback)",
+  "query    DiscountByCode             Find discount WINBACK9S",
+  "mutation DiscountCodeCreate         Create discount WINBACK9S (winback)",
+  "query    DiscountByCode             Find discount GROUP5",
+  "mutation DiscountCodeCreate         Create discount GROUP5 (group-quote)",
   "mutation MetafieldsSet              Set shop metafields (cells, founding, links)",
   "query    WebhookList                List existing webhook subscriptions",
   "mutation WebhookCreate              Subscribe webhook ORDERS_PAID → members app",
@@ -2441,6 +2816,10 @@ exports[`provisioning plan (DRY_RUN snapshot) > core phase, app engine: creates 
   "mutation ProductUpsert              Create product coached-12-week-c97 (coached, cell c97)",
   "query    ProductByHandle            Find product coached-12-week-c197",
   "mutation ProductUpsert              Create product coached-12-week-c197 (coached, cell c197)",
+  "query    ProductByHandle            Find product strong-years-12-months-prepaid",
+  "mutation ProductUpsert              Create product strong-years-12-months-prepaid (prepaid)",
+  "query    ProductByHandle            Find product family-bundle",
+  "mutation ProductUpsert              Create product family-bundle (gift_bundle)",
   "query    ProductByHandle            Check selling plan groups on founding-membership",
   "mutation SellingPlanGroupCreate     Create selling plan group sy-founding (app-owned)",
   "query    ProductByHandle            Check selling plan groups on strong-years-membership",
@@ -2457,6 +2836,16 @@ exports[`provisioning plan (DRY_RUN snapshot) > core phase, app engine: creates 
   "mutation DiscountCodeCreate         Create discount SUNYOON (page:sun)",
   "query    DiscountByCode             Find discount CHANGANDSUN",
   "mutation DiscountCodeCreate         Create discount CHANGANDSUN (page:duo)",
+  "query    DiscountByCode             Find discount WINBACK12",
+  "mutation DiscountCodeCreate         Create discount WINBACK12 (winback)",
+  "query    DiscountByCode             Find discount WINBACK12S",
+  "mutation DiscountCodeCreate         Create discount WINBACK12S (winback)",
+  "query    DiscountByCode             Find discount WINBACK9",
+  "mutation DiscountCodeCreate         Create discount WINBACK9 (winback)",
+  "query    DiscountByCode             Find discount WINBACK9S",
+  "mutation DiscountCodeCreate         Create discount WINBACK9S (winback)",
+  "query    DiscountByCode             Find discount GROUP5",
+  "mutation DiscountCodeCreate         Create discount GROUP5 (group-quote)",
   "mutation MetafieldsSet              Set shop metafields (cells, founding, links)",
   "query    WebhookList                List existing webhook subscriptions",
   "mutation WebhookCreate              Subscribe webhook ORDERS_PAID → members app",
@@ -2844,6 +3233,8 @@ exports[`provisioning plan (DRY_RUN snapshot) > verify phase snapshot (after the
   "mutation ProductUpdate              Make coached-12-week-c97 subscription-only",
   "query    ProductByHandle            Verify coached-12-week-c197 (selling plans)",
   "mutation ProductUpdate              Make coached-12-week-c197 subscription-only",
+  "query    ProductByHandle            Verify strong-years-12-months-prepaid",
+  "query    ProductByHandle            Verify family-bundle",
   "query    DiscountByCode             Verify STARTER12 discount exists",
   "query    DiscountByCode             Verify STARTER12S discount exists",
 ]

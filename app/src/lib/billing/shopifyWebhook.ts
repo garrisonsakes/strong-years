@@ -24,6 +24,7 @@ import { alertOnCall, sendEmail } from "../notify";
 import { isCheckoutOpen } from "../launch";
 import { createGift } from "../gifts";
 import { creditAffiliateOrder } from "../affiliates";
+import { logConversion } from "../offers/experiments";
 import { linkWaitlistToMember } from "../waitlist";
 import { issueMagicLink } from "../auth/verification";
 import { catalog, cartContextFromAttributes, consentMatchesCharge, idGreater, matchLine, orderDiscountCodes, shopifyAdmin, shopifyConfig, shopifyId, type ShopifyAdmin } from "./shopify";
@@ -350,6 +351,12 @@ async function orderPaid(store: Store, p: Json, now: Date, admin: ShopifyAdmin):
   else if (!renewal && mapped.some((l) => l.row.entitlement === "ebook")) await booksWelcome(store, member);
   // Affiliates (30% x 12 months, 60-day link window, no self-referral). Never throws, never blocks access.
   await creditAffiliateOrder(store, { memberId: member.id, email, shopifyOrderId: orderId, discountCodes: codes, attribution: ctx.attribution, renewal, paidAt });
+  // MONETIZATION_ENGINE.md §5: first-purchase lines → the offer attribution table (RPV / RPC / arm readout). Never throws.
+  if (!renewal) {
+    const lt = ctx.attribution?.last_touch ?? ctx.attribution;
+    const channel = (lt?.utm_medium ?? lt?.utm_source ?? "direct").slice(0, 20);
+    for (const line of mapped) await logConversion(store, { visitorId: ctx.visitorId, memberId: member.id, offer: line.row.sku, revenueCents: line.amountCents, ref: `shopify:${line.lineId}`, channel });
+  }
   return { status: "processed", summary: `order ${orderId}: ${recorded} line(s)${membershipId ? `, membership ${membershipId.slice(0, 8)}` : ""}${renewal ? " (renewal)" : ""}` };
 }
 
