@@ -10,10 +10,11 @@
 import {
   COLLECTIONS, DISCOUNTS, EBOOK_CELLS, HARDSHIP_POLICY, MARKETS, FOUNDING_CAP, FOUNDING_CLOSE_DATE_DEFAULT, FUNNEL_ARMS, TRIAL_DAYS,
   METAFIELD_DEFINITIONS, METAFIELD_NAMESPACE, PRODUCTS, REDIRECTS, SELLING_PLANS, STANDARD_PRICE,
-  FOUNDING_PRICE, WEBHOOK_PATH, WEBHOOK_TOPICS_APP_ENGINE, WEBHOOK_TOPICS_CORE, type ProductSpec,
+  FOUNDING_PRICE, type ProductSpec,
 } from "../config/catalog.ts";
 import { contentPages, shopPolicies, type LegalFacts } from "./legal.ts";
 import type { GraphQLRunner } from "./client.ts";
+import { ensureWebhooks } from "./webhookHeal.ts";
 
 export type Engine = "shopify_subscriptions" | "app";
 export type Phase = "core" | "verify" | "close-founding";
@@ -185,24 +186,10 @@ export async function runPlan(gql: GraphQLRunner, o: PlanOptions): Promise<PlanR
   });
   errs("shop metafields", ms.metafieldsSet);
 
-  // ---------------------------------------------------------------- 7. webhooks → members app
-  const topics: string[] = [...WEBHOOK_TOPICS_CORE, ...(o.engine === "app" ? WEBHOOK_TOPICS_APP_ENGINE : [])];
-  const uri = `${o.membersAppUrl.replace(/\/$/, "")}${WEBHOOK_PATH}`;
-  const existingHooks = ((await gql.run<any>("List existing webhook subscriptions", "WebhookList")).webhookSubscriptions.nodes || []) as any[];
-  for (const topic of topics) {
-    const same = existingHooks.find((h) => h.topic === topic);
-    if (same && same.uri === uri) { r.skipped.push(`webhook:${topic}`); continue; }
-    if (same) {
-      const res = await gql.run<any>(`Repoint webhook ${topic}`, "WebhookUpdate", { id: same.id, webhookSubscription: { uri } });
-      errs(`webhook ${topic}`, res.webhookSubscriptionUpdate); r.updated.push(`webhook:${topic}`);
-    } else {
-      const res = await gql.run<any>(`Subscribe webhook ${topic} → members app`, "WebhookCreate", {
-        topic,
-        webhookSubscription: { uri, format: "JSON", ...(topic.startsWith("ORDERS_") ? { metafieldNamespaces: [METAFIELD_NAMESPACE] } : {}) },
-      });
-      errs(`webhook ${topic}`, res.webhookSubscriptionCreate); r.created.push(`webhook:${topic}`);
-    }
-  }
+  // ---------------------------------------------------------------- 7. webhooks → members app (src/webhookHeal.ts)
+  const wh = await ensureWebhooks(gql, { engine: o.engine, membersAppUrl: o.membersAppUrl });
+  r.created.push(...wh.created); r.updated.push(...wh.updated); r.skipped.push(...wh.skipped);
+  if (wh.duplicates.length) r.warnings.push(`Extra webhook subscriptions left in place: ${wh.duplicates.join(", ")}`);
   if (o.engine === "shopify_subscriptions") {
     r.warnings.push("subscription_contracts/* and subscription_billing_attempts/* webhooks are NOT registered: they only fire for contracts owned by the subscribing app (read_own_subscription_contracts), and Shopify Subscriptions owns these contracts. The members app derives membership state from orders/paid (initial + every renewal order), refunds/create and orders/cancelled (config/webhook-topics.json is the contract).");
   }

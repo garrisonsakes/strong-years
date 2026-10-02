@@ -608,6 +608,12 @@ def stage_post(cx: Ctx, post: dict, pack: dict, voice_ids: dict) -> dict:
             if b - e > 0.3:
                 shots.append({"n": len(shots) + 1, "route": "lipsync_talk", "start_s": e, "duration_s": b - e,
                               "src": talk_seg(e, b), "layout": "full", "camera": "static"})
+        elif k == 0 and b > 3.0:
+            # hook beat runs past second 3 at the 55+ pace: cut to a slow push at 2.6 s (R3 pattern interrupt)
+            shots.append({"n": len(shots) + 1, "route": "lipsync_talk", "start_s": a, "duration_s": 2.6 - a,
+                          "src": talk_seg(a, 2.6), "layout": "full", "camera": "handheld_micro"})
+            shots.append({"n": len(shots) + 1, "route": "lipsync_talk", "start_s": 2.6, "duration_s": b - 2.6,
+                          "src": talk_seg(2.6, b), "layout": "full", "camera": "slow_push"})
         else:
             shots.append({"n": len(shots) + 1, "route": "lipsync_talk", "start_s": a, "duration_s": b - a,
                           "src": talk_seg(a, b), "layout": "full", "camera": "handheld_micro" if k == 0 else "static"})

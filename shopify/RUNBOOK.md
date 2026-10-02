@@ -148,6 +148,7 @@ There is no public Admin API for Digital Downloads attachments, so this step can
 - **Close the founding group** (cap reached or the close date passes): `npm run close-founding -- --yes-close-founding`. It is one-way.
 - **Add an affiliate code:** add a row to `DISCOUNTS` in `config/catalog.ts` → `DRY_RUN=false npm run provision`. Codes take $2 off the books only and never touch the membership. Commission (30% recurring for 12 months) is computed by the members app from `discount_codes`.
 - **Change a price:** edit `config/catalog.ts` → provision. Existing contracts keep their price, which is what makes "founding price locked" true. A price change for existing members needs the 30-day notice (FUNNEL §5.5 E).
+- **Webhook self-heal:** Shopify deletes a webhook subscription after 19 consecutive failed deliveries (about 48 hours of retries), so a members-app outage can silently cut access events. Run `DRY_RUN=false SHOPIFY_STORE=… CONFIRM_STORE=… MEMBERS_APP_URL=https://… npm run webhooks:heal` every 15 minutes from the deploy host's cron. It re-creates missing topics and repoints wrong URIs from `config/webhook-topics.json`, writes nothing when all is well, and never deletes. Exit code 2 means it healed something: deliveries were lost, so reconcile orders since the last webhook the members app received. Shopify's own retries cover shorter outages.
 - **Rollback:** every object has a stable handle or code. Re-running provision restores the configured state. The script never deletes anything.
 
 ---

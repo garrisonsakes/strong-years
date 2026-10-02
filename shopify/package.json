@@ -13,6 +13,7 @@
     "verify": "node src/provision.ts --phase=verify",
     "close-founding": "node src/provision.ts --phase=close-founding",
     "export-ops": "node scripts/export-operations.ts",
+    "webhooks:heal": "node scripts/webhooks-heal.ts",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "theme:check": "node scripts/theme-check.ts",

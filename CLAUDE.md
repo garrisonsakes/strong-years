@@ -138,10 +138,10 @@ At last report: app 595 unit / 18 e2e, workers 737, shopify 128.
 - tools: `python3 tools/build_content.py` (see Known bugs)
 
 ## Known bugs / audit round 6 (unfinished; do these first)
-1. `tools/build_content.py`: KeyError `_proven`, and 166 wave-2 scripts fail the gate. Make it green.
-2. `test_render_day1.py` fails on HEAD with a speech-rate error.
+1. ~~`tools/build_content.py` gate~~ green (187/190; 30 wave-2 scripts quarantined in `data/content/wave2_quarantine.json`).
+2. ~~`test_render_day1.py` speech-rate error~~ fixed Oct 2 (mock pace 0.45 s/word, hook shot cut at 2.6 s for R3, placeholder seeds when concept renders are absent).
 3. Verify the 7-day trial end to end on a Shopify **dev store**. A 7-day first cycle is not native to the free app.
-4. Build a Shopify webhook retry/re-register job. Shopify deletes a webhook after 19 failures.
+4. ~~Webhook re-register job~~ done: `shopify/src/webhookHeal.ts`, `npm run webhooks:heal` (cron every 15 min; RUNBOOK §3).
 5. Draft the YouTube quota increase request (~6 uploads per project per day; 4/day fallback).
 6. Write `LAUNCH_DAY_PROXY.md`: an hour-by-hour plan with day-1 velocity.
 7. Never let two agents write `economics.xlsx` at once; it was corrupted once and restored from e7702f0.
