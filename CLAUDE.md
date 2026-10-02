@@ -157,6 +157,16 @@ At last report: app 595 unit / 18 e2e, workers 737, shopify 128.
 - Performer shoot.
 - Names for the single FB page and the single YT channel.
 
+## Token efficiency (always on)
+Every session here bills Garrison's limited credits, so spend tokens only where they change the result.
+- Search before reading: use Grep/Glob, then Read only the line range you need. Never re-read a file you already have unless it changed.
+- Keep command output short: `pytest -q`, `npm test --silent`, and pipe long output through `tail -n 60` or `grep`. Compute, count and filter in a script and print only the summary.
+- Read the canon docs only when the task needs them. CLAUDE.md is the summary; open BRIEF.md and others for detail, not by default.
+- No subagents or parallel threads unless the work is truly independent and large. Do simple tasks directly.
+- Batch independent tool calls in one step. Make edits with one validated push, not several speculative ones.
+- Keep replies short: lead with the answer, no recaps of the investigation.
+- Repo settings in `.claude/settings.json` cap Bash and MCP output and block reads of generated or binary files (node_modules, lockfiles, PDFs, media). Grep the source instead.
+
 ## Hard rules
 **Never without Garrison:** spend money, create accounts or post from them, message real people, or sign up for anything.
 
