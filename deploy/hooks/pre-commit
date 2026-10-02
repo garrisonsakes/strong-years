@@ -1,0 +1,5 @@
+#!/bin/sh
+# Secret scan before every commit (ENGINE_SAVAGE20 §B(b) item 8, SL-47.1). Install once per clone:
+#   git config core.hooksPath deploy/hooks
+# Blocks the commit if the staged diff adds a key-looking string or a secrets/key file. Prints names, never values.
+exec python3 "$(git rev-parse --show-toplevel)/deploy/scripts/check_secrets.py" --staged

@@ -199,6 +199,35 @@ def run(seeds: dict, crawler: Crawler, *, now: datetime | None = None, mode: str
 
 
 # ---------------------------------------------------------------- live I/O (refuses unless DISCOVER_LIVE=1)
+def public_host_ok(host: str) -> bool:
+    """A public-page seed may only point at a routable internet host: no literal loopback/link-local/private
+    addresses, no `localhost`, and every resolved address must be global (metadata endpoints and LAN hosts refused)."""
+    import ipaddress
+    import socket
+
+    h = (host or "").strip("[]").lower()
+    if not h or h == "localhost" or h.endswith(".localhost") or h.endswith(".internal") or h.endswith(".local"):
+        return False
+    try:
+        return ipaddress.ip_address(h).is_global
+    except ValueError:
+        pass
+    try:
+        infos = socket.getaddrinfo(h, 443, proto=socket.IPPROTO_TCP)
+    except socket.gaierror:
+        return False
+    addrs = {ipaddress.ip_address(i[4][0]) for i in infos}
+    return bool(addrs) and all(a.is_global for a in addrs)
+
+
+class _RefuseRedirect(__import__("urllib.request").request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):   # noqa: D401
+        raise Refused(f"redirect refused ({code} -> {urlparse(newurl).hostname})")
+
+
+_opener = __import__("urllib.request").request.build_opener(_RefuseRedirect())
+
+
 def live_fetcher(env: dict | None = None, timeout_s: float = 20.0, max_bytes: int = 2_000_000):
     """urllib fetcher: https only, no cookie jar, no redirects to other hosts, bearer/key from env by name only."""
     import json as _json
@@ -220,9 +249,14 @@ def live_fetcher(env: dict | None = None, timeout_s: float = 20.0, max_bytes: in
         data = _json.dumps(req["json"]).encode() if req.get("json") is not None else None
         if data:
             headers["Content-Type"] = "application/json"
+        host = urlparse(url).hostname or ""
+        if req.get("kind") == "public" and not public_host_ok(host):
+            raise Refused(f"{host}: not a public internet host")
         r = urllib.request.Request(url, data=data, headers=headers, method=req.get("method", "GET"))
-        with urllib.request.urlopen(r, timeout=timeout_s) as resp:       # noqa: S310  https checked above
-            if urlparse(resp.geturl()).hostname != urlparse(url).hostname:
+        # Round 6: redirects are refused BEFORE they are followed (a redirect to another host, or to a private
+        # address, would otherwise be fetched, bearer header included, before the old post-hoc check ran).
+        with _opener.open(r, timeout=timeout_s) as resp:       # noqa: S310  https checked above
+            if urlparse(resp.geturl()).hostname != host:
                 raise Refused("cross-host redirect")
             body = resp.read(max_bytes + 1)[:max_bytes].decode("utf-8", "replace")
             ctype = resp.headers.get("Content-Type", "")

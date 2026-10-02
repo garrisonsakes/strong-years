@@ -1,0 +1,252 @@
+{
+ "_note": "Wave-2 scripts held out of validation/rendering until rewritten. Written by audit round 6 (Oct 2 2026): the posting plan was regenerated (commit e8f2ae8) after these drafts were written, so 24 no longer match their plan row, and 8 repeat 7-word shingles of the library or of another wave-2 script. Their plan rows stay GEN-needed. Remove an id here once the script is fixed and build_content.py passes.",
+ "quarantined": {
+  "S214": {
+   "reasons": [
+    "pillar 'P07' doesn't match the plan row ('P16')",
+    "format 'F21' doesn't match the plan row ('F07')",
+    "lane 'movement' doesn't match the plan row ('talking_head')",
+    "cta 'BREATH' doesn't match the plan row ('BEGIN')"
+   ],
+   "count": 5
+  },
+  "S225": {
+   "reasons": [
+    "pillar 'P19' doesn't match the plan row ('P03')",
+    "format 'F11' doesn't match the plan row ('F02')",
+    "lane 'movement' doesn't match the plan row ('talking_head')",
+    "cta 'STRONG' doesn't match the plan row ('BALANCE')"
+   ],
+   "count": 5
+  },
+  "S228": {
+   "reasons": [
+    "plan rows of UG-SK-+04-3 already carry script S109",
+    "pillar 'P12' doesn't match the plan row ('P15')",
+    "format 'F06' doesn't match the plan row ('F04')",
+    "lane 'insert' doesn't match the plan row ('talking_head')"
+   ],
+   "count": 6
+  },
+  "S229": {
+   "reasons": [
+    "plan rows of UG-SK-+04-4 already carry script S47",
+    "pillar 'P12' doesn't match the plan row ('P15')",
+    "format 'F06' doesn't match the plan row ('F07')",
+    "lane 'insert' doesn't match the plan row ('talking_head')"
+   ],
+   "count": 6
+  },
+  "S231": {
+   "reasons": [
+    "plan rows of UG-SK-+04-6 already carry script S123",
+    "pillar 'P19' doesn't match the plan row ('P13')",
+    "format 'F11' doesn't match the plan row ('F10')",
+    "lane 'movement' doesn't match the plan row ('talking_head')"
+   ],
+   "count": 6
+  },
+  "S238": {
+   "reasons": [
+    "pillar 'P08' doesn't match the plan row ('P01')",
+    "format 'F22' doesn't match the plan row ('F02')",
+    "lane 'movement' doesn't match the plan row ('talking_head')",
+    "cta 'BALANCE' doesn't match the plan row ('STRONG')"
+   ],
+   "count": 5
+  },
+  "S245": {
+   "reasons": [
+    "plan rows of UG-SK-+05-3 already carry script S115",
+    "pillar 'P13' doesn't match the plan row ('P15')",
+    "format 'F18' doesn't match the plan row ('F04')",
+    "lane 'insert' doesn't match the plan row ('talking_head')"
+   ],
+   "count": 6
+  },
+  "S246": {
+   "reasons": [
+    "plan rows of UG-SK-+05-4 already carry script S116",
+    "pillar 'P13' doesn't match the plan row ('P15')",
+    "format 'F12' doesn't match the plan row ('F04')",
+    "lane 'insert' doesn't match the plan row ('talking_head')"
+   ],
+   "count": 6
+  },
+  "S256": {
+   "reasons": [
+    "7-word shingle repeats the library: 'chair against the wall arms crossed on'",
+    "7-word shingle repeats the library: 'the wall arms crossed on your chest'",
+    "7-word shingle repeats the library: 'against the wall arms crossed on your'"
+   ],
+   "count": 3
+  },
+  "S257": {
+   "reasons": [
+    "pillar 'P07' doesn't match the plan row ('P06')",
+    "format 'F21' doesn't match the plan row ('F03')",
+    "lane 'movement' doesn't match the plan row ('talking_head')",
+    "cta 'BREATH' doesn't match the plan row ('BACK')"
+   ],
+   "count": 14
+  },
+  "S258": {
+   "reasons": [
+    "pillar 'P07' doesn't match the plan row ('P15')",
+    "format 'F21' doesn't match the plan row ('F04')",
+    "lane 'movement' doesn't match the plan row ('talking_head')",
+    "cta 'BREATH' doesn't match the plan row ('TEST')"
+   ],
+   "count": 14
+  },
+  "S260": {
+   "reasons": [
+    "7-word shingle repeats S232: 'starter books are ebook price one time'",
+    "7-word shingle repeats the library: 'ebook price one time not a subscription'"
+   ],
+   "count": 2
+  },
+  "S262": {
+   "reasons": [
+    "plan rows of UG-SK-+06-3 already carry script S50",
+    "pillar 'P10' doesn't match the plan row ('P03')",
+    "format 'F06' doesn't match the plan row ('F07')",
+    "lane 'insert' doesn't match the plan row ('movement')"
+   ],
+   "count": 6
+  },
+  "S263": {
+   "reasons": [
+    "plan rows of UG-SK-+06-4 already carry script S142",
+    "pillar 'P10' doesn't match the plan row ('P16')",
+    "format 'F31' doesn't match the plan row ('F33')",
+    "lane 'insert' doesn't match the plan row ('talking_head')"
+   ],
+   "count": 6
+  },
+  "S264": {
+   "reasons": [
+    "plan rows of UG-SK-+06-5 already carry script S144",
+    "pillar 'P12' doesn't match the plan row ('P20')",
+    "format 'F06' doesn't match the plan row ('F39')",
+    "lane 'insert' doesn't match the plan row ('talking_head')"
+   ],
+   "count": 8
+  },
+  "S265": {
+   "reasons": [
+    "lane 'insert' doesn't match the plan row ('talking_head')",
+    "grammar[0] must be the plan's hook grammar OBJ3"
+   ],
+   "count": 2
+  },
+  "S268": {
+   "reasons": [
+    "7-word shingle repeats the library: 'eight weeks of leg training strength went'",
+    "7-word shingle repeats the library: 'weeks of leg training strength went up'"
+   ],
+   "count": 2
+  },
+  "S272": {
+   "reasons": [
+    "7-word shingle repeats the library: 'your back head upper back and tailbone'",
+    "7-word shingle repeats the library: 'on your back head upper back and'"
+   ],
+   "count": 2
+  },
+  "S274": {
+   "reasons": [
+    "pillar 'P08' doesn't match the plan row ('P01')",
+    "format 'F22' doesn't match the plan row ('F02')",
+    "lane 'movement' doesn't match the plan row ('talking_head')",
+    "cta 'BALANCE' doesn't match the plan row ('JOIN')"
+   ],
+   "count": 6
+  },
+  "S275": {
+   "reasons": [
+    "pillar 'P08' doesn't match the plan row ('P01')",
+    "format 'F22' doesn't match the plan row ('F16')",
+    "lane 'movement' doesn't match the plan row ('talking_head')",
+    "cta 'BALANCE' doesn't match the plan row ('STRONG')"
+   ],
+   "count": 5
+  },
+  "S276": {
+   "reasons": [
+    "7-word shingle repeats the library: 'after meals even two to five minutes'",
+    "7-word shingle repeats the library: 'walk after meals even two to five'"
+   ],
+   "count": 2
+  },
+  "S277": {
+   "reasons": [
+    "group UG-CY-+07-7 not in the posting plan"
+   ],
+   "count": 1
+  },
+  "S278": {
+   "reasons": [
+    "7-word shingle repeats S227: 'back on the membership i'm ai and'",
+    "7-word shingle repeats S227: 'fourteen day money back on the membership'",
+    "7-word shingle repeats S227: 'online fourteen day money back on the'",
+    "7-word shingle repeats S227: 'day money back on the membership i'm'"
+   ],
+   "count": 5
+  },
+  "S279": {
+   "reasons": [
+    "7-word shingle repeats S226: 'in a little oil two cups of'"
+   ],
+   "count": 1
+  },
+  "S280": {
+   "reasons": [
+    "plan rows of UG-SK-+07-3 already carry script S119",
+    "pillar 'P13' doesn't match the plan row ('P01')",
+    "format 'F18' doesn't match the plan row ('F14')",
+    "lane 'insert' doesn't match the plan row ('movement')"
+   ],
+   "count": 10
+  },
+  "S281": {
+   "reasons": [
+    "plan rows of UG-SK-+07-4 already carry script S284",
+    "pillar 'P13' doesn't match the plan row ('P18')",
+    "format 'F12' doesn't match the plan row ('F26')",
+    "lane 'insert' doesn't match the plan row ('talking_head')"
+   ],
+   "count": 6
+  },
+  "S284": {
+   "reasons": [
+    "group UG-SK-+07-7 not in the posting plan"
+   ],
+   "count": 1
+  },
+  "S285": {
+   "reasons": [
+    "7-word shingle repeats the library: 'both of you chair against the wall'",
+    "7-word shingle repeats the library: 'the way up sit all the way'",
+    "7-word shingle repeats the library: 'crossed stand all the way up sit'",
+    "7-word shingle repeats the library: 'time not a subscription yours to keep'"
+   ],
+   "count": 14
+  },
+  "S289": {
+   "reasons": [
+    "7-word shingle repeats the library: 'if you wait for the kettle every'",
+    "7-word shingle repeats the library: 'wait for the kettle every morning stand'",
+    "7-word shingle repeats the library: 'you wait for the kettle every morning'",
+    "7-word shingle repeats S199: 'the counter lift one foot an inch'"
+   ],
+   "count": 7
+  },
+  "S291": {
+   "reasons": [
+    "group UG-CS-+07-7 not in the posting plan"
+   ],
+   "count": 1
+  }
+ }
+}

@@ -163,3 +163,7 @@ def check_variant(candidate: dict, live: list[dict], thresholds: dict | None = N
     if candidate.get("variant_role") == "TEST" and not ({"hook_audio", "first_frame"} & set(candidate.get("dims_changed") or [])):
         reasons.append("dims: a Trial Reel must change the opening (hook audio or first frame)")
     return {"allow": not reasons, "reasons": reasons, "thresholds": th}
+
+
+# SL-22.1: competitor-corpus gate (7-word shingle + TF-IDF cosine), see uniqueness/external.py
+from uniqueness.external import check_external  # noqa: E402,F401

@@ -134,3 +134,19 @@ export function base32Encode(bytes: Uint8Array): string {
   if (bits > 0) out += alphabet[(value << (5 - bits)) & 31];
   return out;
 }
+
+/**
+ * Round 6 (launch eve): browsers re-send HTTP Basic credentials on cross-site form
+ * posts, so every state-changing admin route must refuse a request whose Origin or
+ * Sec-Fetch-Site says it came from another site. A forged page can neither set those
+ * headers to same-origin nor remove them. Returns a reason string when the request
+ * must be refused, else null.
+ */
+export function crossSiteReason(req: Request): string | null {
+  const url = new URL(req.url);
+  const origin = req.headers.get("origin");
+  const site = req.headers.get("sec-fetch-site");
+  if (origin && origin !== url.origin) return `origin ${origin} is not ${url.origin}`;
+  if (site && site !== "same-origin" && site !== "none") return `sec-fetch-site ${site}`;
+  return null;
+}

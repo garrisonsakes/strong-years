@@ -62,10 +62,14 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
+        with: {fetch-depth: 0}          # full history for the secret scan
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
       - run: pip install -r workers/requirements.txt
       - run: make validate-content
       - run: python3 production/shot_list/plan_week.py
-      - run: python3 deploy/scripts/check_secrets.py --repo-only
+      - name: secret scan (tracked files + every commit; SL-47.1)
+        run: python3 deploy/scripts/check_secrets.py --repo-only --history
+      - name: launch gate (keywords, competitor corpus, caption rules, briefs)
+        run: python3 tools/launch_gate.py --ci
       - run: LAUNCH_MODE=prelaunch python3 deploy/scripts/n8n_import.py

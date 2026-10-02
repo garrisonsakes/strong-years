@@ -15,6 +15,7 @@ import re
 from urllib.parse import urlencode
 
 from common import disclosure
+from compliance import caption_rules
 from compliance.rules import CONDITION_HASHTAG_RX
 
 LIMITS = {
@@ -169,5 +170,13 @@ def package(pk: dict, *, page_dna: dict | None = None, script: dict | None = Non
         if len(text) > LIMITS["x"]["total"]:
             notes.append("x: text over 270 chars (truncated)")
         x.update(text=_truncate(text, LIMITS["x"]["total"]), ai_label=True)
-    return {"packaging": out, "notes": notes, "footer": footer, "movement_addon": addon,
+    caption_issues = []                       # SL-06.4 evergreen time words, SL-06.5 handle allowlist
+    for pl, d in out.items():
+        for field in ("caption", "description", "text", "title"):
+            if isinstance(d.get(field), str):
+                r = caption_rules.apply(d[field])
+                d[field] = r["text"]
+                notes += [f"{pl}.{field}: {n}" for n in r["rewrites"]]
+                caption_issues += [f"{pl}.{field}: handle {h} is not one of ours" for h in r["blocked_handles"]]
+    return {"packaging": out, "notes": notes, "footer": footer, "movement_addon": addon, "caption_issues": caption_issues,
             "links": links(page_slug or "page", brief_id or "brief", site_base_url, post_ids=post_ids)}

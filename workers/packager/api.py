@@ -52,6 +52,7 @@ def run(req: PackageRequest) -> dict:
     issues += [{"where": "packaging", "id": "REQUIRE", "match": m, "severity": "block"} for m in comp["required_missing"]]
     issues += [{"where": r.get("where", "packaging"), "id": r["rule"], "match": r["from"], "severity": "revise"}
                for r in comp["rewrites"]]
+    issues += [{"where": "packaging", "id": "SL-06.5", "match": m, "severity": "block"} for m in res.get("caption_issues", [])]
     # Layer 2: the mandatory LLM judge on exactly what gets published (captions, burned-in text, transcript).
     j = None
     if config.REQUIRE_JUDGE:

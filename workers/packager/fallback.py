@@ -28,7 +28,7 @@ import json
 import re
 from pathlib import Path
 
-from compliance import scanner
+from compliance import caption_rules, scanner
 
 AI_LABEL = {
     "ig": "Instagram: tap 'Advanced settings' → turn ON 'AI info' (Add AI label). The account bio already says AI characters.",
@@ -58,6 +58,9 @@ def _hold_reason(it: dict) -> str | None:
             return f"{field} does not pass the compliance scan"
     if it.get("platform") == "x" and re.search(r"https?://", (it.get("caption") or "") + (it.get("first_comment") or "")):
         return "link in an X post"
+    bad = caption_rules.foreign_handles((it.get("caption") or "") + "\n" + (it.get("first_comment") or ""))
+    if bad:
+        return "caption mentions handles that are not ours (SL-06.5): " + ", ".join(bad)
     if "AI" not in (it.get("caption") or ""):
         return "caption lacks the AI-character disclosure"
     return None
@@ -78,7 +81,10 @@ def checklist(it: dict) -> str:
         "- [ ] Post at the scheduled time (the 48 h sibling stagger is already applied).",
         "- [ ] Paste first_comment.txt as the first comment and pin it." if p in ("ig", "fb", "tt", "yt", "th") else
         "- [ ] Post first_comment.txt as a reply in the thread (no link).",
-        "- [ ] Paste the live post URL into the tracker (the post_id ties metrics to /admin/today).",
+        "- [ ] Trial or feed: post exactly as the slot says (trial = Instagram 'Trial' toggle ON; feed = OFF).",
+        "- [ ] Do NOT use Instagram's 'Share to Facebook' toggle or any cross-post option: each platform gets its own file.",
+        "- [ ] More than 30 min past the slot? Skip it and write 'skipped' in posted_log.csv. Never post late.",
+        "- [ ] Fill one row in posted_log.csv: posted_at, the live permalink (required), your name, trial y/n, AI label y/n.",
         "- [ ] Never reply to comments as Chang Yin or Sun Yoon in the first person about personal pain; crisis words → the safety protocol.",
         "",
     ])
@@ -91,7 +97,14 @@ def build_pack(day: str, items: list[dict], out_root: Path) -> dict:
     root.mkdir(parents=True, exist_ok=True)
     packed, held = [], []
     meta_rows, buffer_rows = [], []
+    log_rows = []
     for it in items:
+        it = dict(it)
+        rewrites = []
+        for field in ("caption", "first_comment"):
+            if isinstance(it.get(field), str):
+                it[field], notes = caption_rules.rewrite_time_words(it[field])
+                rewrites += notes
         why = _hold_reason(it)
         if why:
             held.append({"post_id": it.get("post_id", ""), "page": it.get("page", ""), "platform": it.get("platform", ""), "reason": why})
@@ -108,7 +121,10 @@ def build_pack(day: str, items: list[dict], out_root: Path) -> dict:
         (d / "first_comment.txt").write_text(it.get("first_comment", ""), encoding="utf-8")
         (d / "checklist.md").write_text(checklist(it), encoding="utf-8")
         packed.append({"post_id": it.get("post_id"), "page": it["page"], "platform": it["platform"], "variant_id": it["variant_id"],
-                       "dir": str(d.relative_to(root))})
+                       "dir": str(d.relative_to(root)), "caption_rewrites": rewrites})
+        log_rows.append({"post_id": it.get("post_id", ""), "page": it["page"], "platform": it["platform"],
+                         "variant_id": it["variant_id"], "scheduled_at": it.get("scheduled_at", ""),
+                         "trial": "y" if it.get("trial") else "n", "status": "due"})
         when = it.get("scheduled_at", "")
         if it["platform"] in ("ig", "fb"):
             meta_rows.append([PLATFORM_NAME[it["platform"]], it["page"], when, it.get("caption", ""), src, it.get("first_comment", ""), it["variant_id"]])
@@ -126,6 +142,72 @@ def build_pack(day: str, items: list[dict], out_root: Path) -> dict:
         w = csv.DictWriter(f, fieldnames=["post_id", "page", "platform", "reason"])
         w.writeheader()
         w.writerows(held)
+    write_posted_log_template(root / "posted_log.csv", log_rows)
     manifest = {"day": day, "packed": packed, "held": held, "meta_rows": len(meta_rows), "buffer_rows": len(buffer_rows)}
     (root / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     return manifest
+
+
+# ---------------------------------------------------------------- posted log (SAVAGE20 #4 minimal slice)
+POSTED_LOG_FIELDS = ["post_id", "page", "platform", "variant_id", "scheduled_at", "trial", "status", "posted_at",
+                     "permalink", "posted_by", "ai_label", "notes"]
+PERMALINK_HOSTS = {"ig": ("instagram.com",), "fb": ("facebook.com", "fb.watch", "fb.com"), "tt": ("tiktok.com",),
+                   "yt": ("youtube.com", "youtu.be"), "th": ("threads.net", "threads.com"), "x": ("x.com", "twitter.com")}
+SKIP_AFTER_MIN = 30
+
+
+def write_posted_log_template(path: Path, rows: list[dict]) -> None:
+    """One row per packed placement; the poster fills posted_at, permalink, posted_by, ai_label (or status=skipped)."""
+    with Path(path).open("w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=POSTED_LOG_FIELDS)
+        w.writeheader()
+        for r in rows:
+            w.writerow({k: r.get(k, "") for k in POSTED_LOG_FIELDS})
+
+
+def _ts(x: str):
+    from datetime import datetime
+    return datetime.fromisoformat(str(x).strip().replace("Z", "+00:00"))
+
+
+def read_posted_log(path: Path) -> dict:
+    """Validate a filled posted_log.csv -> {posted: [...], skipped: [...], problems: [...]}.
+
+    status=posted needs posted_at (ISO with offset), an https permalink on that platform's host, posted_by and
+    ai_label=y. Posting more than 30 min after the slot is reported as a problem (the rule is skip, not late).
+    posted rows carry external_post_id = the permalink path's last segment, for posts.external_post_id, manual metrics
+    import (growth/manual_import.py) and attribution."""
+    from urllib.parse import urlparse
+    out = {"posted": [], "skipped": [], "due": [], "problems": []}
+    with Path(path).open(encoding="utf-8") as f:
+        for i, r in enumerate(csv.DictReader(f), start=2):
+            st = (r.get("status") or "").strip().lower()
+            where = f"row {i} {r.get('post_id', '')}/{r.get('platform', '')}"
+            if st == "skipped":
+                out["skipped"].append(r)
+                continue
+            if st != "posted":
+                out["due"].append(r)
+                continue
+            u = urlparse((r.get("permalink") or "").strip())
+            host = (u.hostname or "").lower()
+            if u.scheme != "https" or not any(host == h or host.endswith("." + h) for h in PERMALINK_HOSTS.get(r.get("platform", ""), ())):
+                out["problems"].append(f"{where}: permalink missing or not a {r.get('platform')} URL")
+                continue
+            try:
+                posted, sched = _ts(r["posted_at"]), (_ts(r["scheduled_at"]) if r.get("scheduled_at") else None)
+                if posted.tzinfo is None:
+                    raise ValueError
+            except (KeyError, ValueError):
+                out["problems"].append(f"{where}: posted_at must be ISO 8601 with a UTC offset")
+                continue
+            if not (r.get("posted_by") or "").strip():
+                out["problems"].append(f"{where}: posted_by is empty")
+            if (r.get("ai_label") or "").strip().lower() != "y":
+                out["problems"].append(f"{where}: AI label not confirmed (ai_label must be y)")
+            if sched and (posted - sched).total_seconds() > SKIP_AFTER_MIN * 60:
+                out["problems"].append(f"{where}: posted {int((posted - sched).total_seconds() // 60)} min late (rule: skip after {SKIP_AFTER_MIN})")
+            ext = [seg for seg in u.path.split("/") if seg][-1:] or [""]
+            out["posted"].append({**r, "posted_at": posted.isoformat(), "external_post_id": ext[0],
+                                  "permalink": u.geturl()})
+    return out

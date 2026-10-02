@@ -281,4 +281,8 @@ def main() -> int:
 
 
 if __name__ == "__main__":
+    if "--ics" in sys.argv:          # SL-26.3: per-page .ics for the launch day and the week (tools/slots_ics.py)
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        import slots_ics
+        sys.exit(slots_ics.main())
     sys.exit(main())

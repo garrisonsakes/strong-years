@@ -28,6 +28,16 @@ export const TERMS_VERSION = "2026-10-01-draft";
 export const FTC_LINE = "I'm a Strong Years affiliate and earn a commission if you join through my link or code. Your price is the same either way.";
 
 const CODE_RX = /^[A-Z0-9]{4,20}$/;
+/**
+ * Round 6: Shopify discount codes the store already owns (shopify/config/catalog.ts). An affiliate code is
+ * matched against the order's discount codes, so a code that collides with (or merely starts like) a system
+ * code would credit every cell-B / page / win-back order to that affiliate. Never allocate one of these.
+ */
+export const RESERVED_CODE_STEMS = ["STARTER", "WINBACK", "GROUP", "CHANG", "SUNYOON", "CHANGANDSUN", "FAMILY", "JOIN", "BOOK"] as const;
+export function isReservedCode(code: string): boolean {
+  const c = code.toUpperCase();
+  return RESERVED_CODE_STEMS.some((stem) => c === stem || c.startsWith(stem));
+}
 
 export function cleanRef(raw: unknown): string | null {
   const v = typeof raw === "string" ? raw.trim().toUpperCase() : "";
@@ -86,9 +96,11 @@ export async function applyAffiliate(store: Store, input: ApplyInput): Promise<A
 }
 
 export async function uniqueCode(store: Store, name: string): Promise<string> {
-  const stem = name.toUpperCase().replace(/[^A-Z]/g, "").slice(0, 8).padEnd(4, "X");
+  let stem = name.toUpperCase().replace(/[^A-Z]/g, "").slice(0, 8).padEnd(4, "X");
+  if (isReservedCode(stem)) stem = `AF${stem.slice(0, 6)}`;
   for (let i = 0; i < 50; i++) {
     const code = `${stem}${String(10 + Math.floor(Math.random() * 90))}`;
+    if (isReservedCode(code)) continue;
     if (!(await store.findOne("affiliates", { code }))) return code;
   }
   throw new Error("could not allocate an affiliate code");
@@ -136,7 +148,7 @@ export async function creditAffiliateOrder(store: Store, x: CreditInput): Promis
     let referral = await store.findOne("affiliate_referrals", { member_id: x.memberId });
     if (!referral) {
       if (x.renewal) return { commissions: 0, reason: "renewal without referral" };
-      const codes = x.discountCodes.map((c) => cleanRef(c)).filter((c): c is string => !!c);
+      const codes = x.discountCodes.map((c) => cleanRef(c)).filter((c): c is string => !!c && !isReservedCode(c));
       let affiliate: Affiliate | null = null;
       let via: "code" | "link" = "code";
       for (const c of codes) {

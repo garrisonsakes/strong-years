@@ -148,3 +148,9 @@ def caption_check(frames: list[tuple[float, Image.Image]], script_text: str, exp
         rows.append({"t": t, "ocr": txt, "match": match, "cer": cer, "bad_numbers": bad_nums})
     return {"caption_cer": round(total_err / total_len, 4) if total_len else None,
             "caption_number_mismatch": mismatch, "ocr_frames": len(rows), "ocr_samples": rows[:40]}
+
+
+# SL-08.1 frame-1 hook check (present, <= 7 words, contrast), see qa/frame1.py
+def check_frame1(src, platform: str = "ig", expected: str | None = None, **kw) -> dict:
+    from qa.frame1 import check_frame1 as _f  # noqa: PLC0415 (frame1 imports this module)
+    return _f(src, platform, expected, **kw)

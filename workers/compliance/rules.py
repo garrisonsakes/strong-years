@@ -274,13 +274,18 @@ NEGATION_RX = re.compile(
 REFERRAL_RX = re.compile(r"\b(a|see a|ask a|find a|your)\s+licensed\s+(counselor|counsellor|therapist|professional|"
                          r"physical therapist|pt|physio|dietitian|doctor|clinician|pharmacist)", re.I)
 
+# Round 6: Spanish cues (CHARACTERS_ES.md scripts) are recognised too, so an ES script with a real cue is not
+# sent to "revise" for lacking the English wording. The cue must still be present in the script.
 SUPPORT_RX = re.compile(r"\b(counter|chair|wall|rail|railing|sink|bed|sofa|couch|headboard|bench|table|doorframe|door frame|"
-                        r"walker|cane|kitchen counter|corner)\b", re.I)
+                        r"walker|cane|kitchen counter|corner|"
+                        r"encimera|mesada|silla|pared|baranda|barandal|pasamanos|lavabo|fregadero|cama|sof[aá]|mesa|"
+                        r"marco de la puerta|andador|bast[oó]n|respaldo)\b", re.I)
 REGRESSION_RX = re.compile(r"\b(easier|regression|hands on (your )?thighs|higher (seat|chair)|partial|half range|"
                            r"smaller range|wall support|use (your|the) hands|start (with|here)|beginner|shorter hold|"
                            r"fewer reps|hold the counter|two hands)\b", re.I)
 STOP_RULE_RX = re.compile(r"\bstop if\b[^.]{0,80}\b(pain|dizz\w+|chest)", re.I)
-BREATH_CUE_RX = re.compile(r"\b(breathe (out|through|in|slowly|normally)|exhale|keep breathing|breathing|breathe)\b", re.I)
+BREATH_CUE_RX = re.compile(r"\b(breathe (out|through|in|slowly|normally)|exhale|keep breathing|breathing|breathe|"
+                           r"exhal[ae]n?|exhalando|(suelt[ae]n?|saqu[ae]n?|sac[ae]n?|bot[ae]n?) el aire|respir\w+)\b", re.I)
 PAIN_RULE_RX = re.compile(r"\b(3 out of 10|3/10|three out of ten)\b", re.I)
 ADVANCED_LABEL_RX = re.compile(r"(chang'?s level|his level|not your starting point|don'?t start here|not where you start)", re.I)
 

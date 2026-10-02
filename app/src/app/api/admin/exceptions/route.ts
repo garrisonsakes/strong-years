@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { getStore } from "@/lib/db";
 import { decideException, type Decision } from "@/lib/exceptions";
+import { crossSiteReason } from "@/lib/adminGuard";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -17,6 +18,8 @@ function actorFrom(req: Request): string {
 }
 
 export async function POST(req: Request) {
+  // Round 6: a boost/affiliate approval must come from our own admin page, never a forged cross-site form.
+  if (crossSiteReason(req)) return NextResponse.json({ error: "Cross-site request refused." }, { status: 403 });
   const form = await req.formData();
   const id = String(form.get("id") ?? "");
   const decision = String(form.get("decision") ?? "") as Decision;

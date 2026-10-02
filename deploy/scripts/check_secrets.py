@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """make check-secrets: validates a filled secrets file against secrets.example.env, and the repo against leaks.
 
-  python3 deploy/scripts/check_secrets.py [deploy/secrets.env] [--level R|L] [--repo-only]
+  python3 deploy/scripts/check_secrets.py [deploy/secrets.env] [--level R|L] [--repo-only] [--history]
+  python3 deploy/scripts/check_secrets.py --staged          (pre-commit hook: deploy/hooks/pre-commit)
 Checks: (1) every key marked R (or R+L with --level L) is set; no placeholder values; self-generated tokens are 32+
 chars; (2) secrets.example.env holds no values; (3) no secrets file or key material is tracked by git and no tracked
 file contains a live-looking key string. Prints key NAMES only, never values.
@@ -75,13 +76,55 @@ def check_repo() -> list[str]:
     return errs
 
 
+SECRET_NAME_RX = re.compile(r"(^|/)(\.env(\.(?!example$)[^/]*)?|secrets\.env|[^/]+\.(pem|key|p12|pfx))$")
+
+
+def scan_patch(patch: str, where: str) -> list[str]:
+    """Added lines and file names in a unified diff (git diff / git log -p). Names only, never the value."""
+    errs, cur, commit = [], "", ""
+    for line in patch.splitlines():
+        if line.startswith("commit "):
+            commit = line.split()[1][:10]
+        elif line.startswith("+++ "):
+            cur = line[6:] if line.startswith("+++ b/") else ""
+            if cur and SECRET_NAME_RX.search(cur):
+                errs.append(f"{where}{' ' + commit if commit else ''}: secrets/key file added: {cur}")
+        elif line.startswith("+") and not line.startswith("+++"):
+            for label, rx in KEY_PATTERNS:
+                if re.search(rx, line):
+                    errs.append(f"{where}{' ' + commit if commit else ''}: {cur or '?'} adds what looks like a {label} key")
+    return sorted(set(errs))
+
+
+def _git(*args: str) -> str:
+    return subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True, check=True, errors="ignore").stdout
+
+
+def check_staged() -> list[str]:
+    """Pre-commit: only what this commit adds."""
+    return scan_patch(_git("diff", "--cached", "--no-color", "--no-ext-diff", "-U0"), "staged")
+
+
+def check_history() -> list[str]:
+    """Every commit on every ref: a key that was committed and later deleted is still leaked."""
+    return scan_patch(_git("log", "-p", "--all", "--no-color", "--no-ext-diff", "-U0"), "history")
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("file", nargs="?", default=str(ROOT / "deploy" / "secrets.env"))
     ap.add_argument("--level", choices=["R", "L"], default="R")
     ap.add_argument("--repo-only", action="store_true")
+    ap.add_argument("--staged", action="store_true", help="pre-commit hook: scan only the staged diff")
+    ap.add_argument("--history", action="store_true", help="also scan every commit on every ref (CI)")
     a = ap.parse_args(argv)
-    errs = check_repo()
+    if a.staged:
+        errs = check_staged()
+        for e in errs:
+            print("FAIL", e)
+        print("check-secrets (staged):", "OK" if not errs else f"{len(errs)} problem(s); commit blocked")
+        return 0 if not errs else 1
+    errs = check_repo() + (check_history() if a.history else [])
     if not a.repo_only:
         p = Path(a.file)
         errs += check_file(p, a.level) if p.is_file() else [f"{p} not found (copy deploy/secrets.example.env and fill it)"]

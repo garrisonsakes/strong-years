@@ -332,3 +332,9 @@ def fetch(platform: str, post: dict, token: str, client=None, **kw) -> dict:
     if not G.GROWTH_LIVE_METRICS:
         raise net.NetPolicyError("live metrics are disabled (GROWTH_LIVE_METRICS=0)")
     return FETCHERS[platform](post, token, client, **kw)
+
+
+def normalize_manual_csv(src, **kw) -> dict:
+    """SL-28.1: platform CSV exports read by hand -> the same capture shape (see growth/manual_import.py)."""
+    from growth.manual_import import normalize_manual_csv as _f  # noqa: PLC0415 (manual_import imports this module)
+    return _f(src, **kw)

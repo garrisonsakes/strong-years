@@ -272,8 +272,12 @@ def validate(cfg: dict) -> dict:
     if v:
         if not 1 <= int(v["trial_reels_per_page_day"]) <= int(v["trial_reels_max"]) <= 20:
             raise ValueError("growth config: variants.trial_reels_per_page_day must be 1..trial_reels_max (max 20)")
+        if int(v["ig_publish_limit_24h"]) > 100:
+            raise ValueError("growth config: variants.ig_publish_limit_24h is the platform's 100/24 h limit; it cannot be raised")
         if not int(v["ig_publish_hard_stop"]) < int(v["ig_publish_limit_24h"]):
             raise ValueError("growth config: variants.ig_publish_hard_stop must stay below the 100/24 h API limit")
+        if int(v["body_repeat_days"]) < 30 or int(v["max_trials_per_body"]) > 4 or int(v["remix_min_dims"]) < 3:
+            raise ValueError("growth config: variants originality floors (body_repeat_days >= 30, max_trials_per_body <= 4, remix_min_dims >= 3) cannot be lowered")
         if int(v["min_dims_changed"]) < 2:
             raise ValueError("growth config: variants.min_dims_changed must be >= 2 (low-value edits, Meta S3)")
     sc = cfg.get("scorecard") or {}

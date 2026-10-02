@@ -1008,11 +1008,25 @@ OFFER_AI_LINE = re.compile(r"\b(i'm|i am|we're|we are) (an )?ai\b|\bai (coach|ch
 PLAN_GRAMMARS = {"OBJ3", "IF_EVERY", "MYTH_NOT", "WATCH", "TEST_NOW", "SHARE", "DEMO"}
 
 
-def load_wave2():
+WAVE2_QUARANTINE = os.path.join(DATA, "wave2_quarantine.json")
+
+
+def load_wave2_quarantine():
+    """Ids held out of validation and rendering (data/content/wave2_quarantine.json, audit round 6). A quarantined
+    script never reaches WAVE2_SCRIPTS.md or wave2_scripts.json; its plan rows stay GEN-needed."""
+    if not os.path.exists(WAVE2_QUARANTINE):
+        return {}
+    return json.load(open(WAVE2_QUARANTINE, encoding="utf-8")).get("quarantined", {})
+
+
+def load_wave2(include_quarantined=False):
     spec = importlib.util.spec_from_file_location(WAVE2_FILE, os.path.join(DATA, WAVE2_FILE + ".py"))
     m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
+    quarantined = {} if include_quarantined else load_wave2_quarantine()
     out = []
     for s in m.SCRIPTS:
+        if s["id"] in quarantined:
+            continue
         s = dict(s)
         if s["beats"] and len(s["beats"][0]) == 4:   # (speaker, spoken, on-screen, shot) → add time codes from the beat count
             s["beats"] = [(t,) + tuple(b) for t, b in zip(WAVE2_TIMES[len(s["beats"])], s["beats"])]
@@ -1291,8 +1305,10 @@ def build_wave2(library, hooks, ev_ids):
             out.append(j)
         json.dump(out, open(os.path.join(DATA, "wave2_scripts.json"), "w"), indent=1, ensure_ascii=False)
     prov = sum(1 for s in w2 if s.get("_proven"))
+    quarantined = load_wave2_quarantine()
     summary = (f"wave2 scripts: {len(w2)} {dict(collections.Counter(s['speaker'] for s in w2))}; lanes {dict(collections.Counter(s['lane'] for s in w2))}; "
-               f"proven grammar {prov}/{len(w2)}; CTAs {dict(collections.Counter(s['cta'] for s in w2))}; problems {len(problems)}")
+               f"proven grammar {prov}/{len(w2)}; CTAs {dict(collections.Counter(s['cta'] for s in w2))}; problems {len(problems)}; "
+               f"quarantined {len(quarantined)} (data/content/wave2_quarantine.json: not rendered, plan rows stay GEN-needed)")
     return problems, summary
 
 
