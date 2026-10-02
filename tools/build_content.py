@@ -1213,7 +1213,7 @@ def validate_wave2(w2, library, hooks, ev_ids, plan_groups):
                 if d2 - d1 >= BIT_WINDOW_DAYS: break
                 if b1 == b2: P.append(f"{s2}: running bit {b1} repeats {s1} on {page} within {BIT_WINDOW_DAYS} days")
     if w2:
-        share = sum(1 for s in w2 if s["_proven"]) / len(w2)
+        share = sum(1 for s in w2 if s.get("_proven")) / len(w2)
         if share < PROVEN_MIN_SHARE: P.append(f"wave2: proven hook grammar share {share:.0%} < {PROVEN_MIN_SHARE:.0%}")
     for s in w2:   # SAFETY scans shared with the library
         pub = script_published_text(s)
