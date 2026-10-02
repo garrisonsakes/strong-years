@@ -35,6 +35,9 @@ n8n-import:             ## prepare workflows with publishing/spend nodes disable
 check-secrets:
 	python3 deploy/scripts/check_secrets.py $(or $(SECRETS),deploy/secrets.env)
 
+preflight:              ## go/no-go before the first post (tools/preflight.py)
+	python3 tools/preflight.py
+
 test: test-app test-workers test-shopify validate-content
 
 test-app:

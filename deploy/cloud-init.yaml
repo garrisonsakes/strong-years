@@ -1,6 +1,8 @@
 #cloud-config
-# Hetzner Cloud (Ubuntu 24.04, CCX23 or larger for the assembly worker). Create with:
-#   hcloud server create --name strongyears-ops --type ccx23 --image ubuntu-24.04 --ssh-key <key> --user-data-from-file deploy/cloud-init.yaml
+# Hetzner Cloud (Ubuntu 24.04, CCX33: 8 dedicated vCPU / 32 GB / 240 GB, sized for 458 renders/day; deploy/README.md
+# "Capacity"). Create with Hetzner Backups on (off-box copy of the disk):
+#   hcloud server create --name strongyears-ops --type ccx33 --image ubuntu-24.04 --ssh-key <key> --user-data-from-file deploy/cloud-init.yaml
+#   hcloud server enable-backup strongyears-ops
 # Hardens the box, installs Docker, creates the deploy user. The repo and secrets are copied by a person afterwards
 # (git clone over SSH + 1Password-rendered deploy/.env and deploy/secrets.env); nothing secret lives in this file.
 package_update: true
@@ -26,6 +28,14 @@ write_files:
     content: |
       APT::Periodic::Update-Package-Lists "1";
       APT::Periodic::Unattended-Upgrade "1";
+  - path: /etc/cron.d/strongyears
+    content: |
+      # Ops-box housekeeping (deploy/README.md "Capacity"). Logs: /var/log/strongyears-cron.log
+      SHELL=/bin/bash
+      PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+      */30 * * * * deploy cd /opt/strongyears && docker compose --env-file deploy/.env -f deploy/docker-compose.yml exec -T workers python3 -m common.janitor >> /var/log/strongyears-cron.log 2>&1
+      */15 * * * * deploy cd /opt/strongyears/shopify && docker run --rm --env-file ../deploy/secrets.env -e DRY_RUN=false -v "$PWD":/w -w /w node:24-alpine npm run --silent webhooks:heal >> /var/log/strongyears-cron.log 2>&1
+      15 3 * * * deploy /opt/strongyears/deploy/scripts/backup.sh >> /var/log/strongyears-cron.log 2>&1
 runcmd:
   - install -m 0755 -d /etc/apt/keyrings
   - curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
@@ -38,4 +48,5 @@ runcmd:
   - systemctl enable --now fail2ban docker
   - systemctl restart ssh
   - mkdir -p /opt/strongyears && chown deploy:deploy /opt/strongyears
-final_message: "Ready. As deploy: git clone the repo into /opt/strongyears, add deploy/.env + deploy/secrets.env, then make check-secrets && make db-migrate && make up"
+  - touch /var/log/strongyears-cron.log && chown deploy:deploy /var/log/strongyears-cron.log
+final_message: "Ready. As deploy: git clone the repo into /opt/strongyears, add deploy/.env + deploy/secrets.env, then make check-secrets && make db-migrate && make up, and once: cd shopify && docker run --rm -v $PWD:/w -w /w node:24-alpine npm ci"

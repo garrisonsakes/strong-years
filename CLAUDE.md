@@ -142,8 +142,9 @@ At last report: app 595 unit / 18 e2e, workers 737, shopify 128.
 2. ~~`test_render_day1.py` speech-rate error~~ fixed Oct 2 (mock pace 0.45 s/word, hook shot cut at 2.6 s for R3, placeholder seeds when concept renders are absent).
 3. Verify the 7-day trial end to end on a Shopify **dev store**. A 7-day first cycle is not native to the free app.
 4. ~~Webhook re-register job~~ done: `shopify/src/webhookHeal.ts`, `npm run webhooks:heal` (cron every 15 min; RUNBOOK §3).
-5. Draft the YouTube quota increase request (~6 uploads per project per day; 4/day fallback).
-6. Write `LAUNCH_DAY_PROXY.md`: an hour-by-hour plan with day-1 velocity.
+5. ~~YouTube quota request~~ drafted for ONE channel at 6/day (`docs/platform_reviews/youtube_api_compliance.md`); Garrison files it.
+6. ~~`LAUNCH_DAY_PROXY.md`~~ written (L-1 store/accounts, hour-by-hour day 1, D1–D7 ramp, stop rules).
+8. **Go/no-go:** `python3 tools/preflight.py` must print READY before the first post. It blocks on: the POSTDB corpus (`data/posts.csv`, `data/transcripts/`, gitignored and NOT in the repo: the plagiarism guard is empty without it), approved faces, launch secrets.
 7. Never let two agents write `economics.xlsx` at once; it was corrupted once and restored from e7702f0.
 
 ## Waiting on Garrison
@@ -156,6 +157,8 @@ At last report: app 595 unit / 18 e2e, workers 737, shopify 128.
 - Reviewers: attorney, PT/dietitian, cultural.
 - Performer shoot.
 - Names for the single FB page and the single YT channel.
+- The POSTDB data files (`data/posts.csv`, `data/transcripts/`) from the old claude.ai sandbox, if he saved them. Otherwise re-run the POSTDB crawl.
+- Hetzner CCX33 ops box (+ Backups) per `deploy/README.md` "Capacity".
 
 ## Hard rules
 **Never without Garrison:** spend money, create accounts or post from them, message real people, or sign up for anything.

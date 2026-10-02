@@ -26,6 +26,9 @@ x-workers-env: &workers-env
   LAUNCH_MODE: ${LAUNCH_MODE:-prelaunch}
   OUTPUT_DIR: /data/out
   WORK_DIR: /data/work
+  MIN_FREE_GB: ${MIN_FREE_GB:-15}          # assembler refuses a job below this (common/janitor.py)
+  WORK_TTL_HOURS: ${WORK_TTL_HOURS:-6}
+  OUTPUT_TTL_DAYS: ${OUTPUT_TTL_DAYS:-7}
 
 services:
   postgres:
@@ -110,6 +113,8 @@ services:
       C2PA_SIGN_CERT: ${C2PA_SIGN_CERT:-}
       C2PA_PRIVATE_KEY: ${C2PA_PRIVATE_KEY:-}
     volumes: [workers_data:/data]
+    # CCX33 (8 vCPU): 6 for renders, 2 for n8n/Postgres/workers. Docker refuses a limit above the box's vCPUs,
+    # so on a 4-vCPU box set ASSEMBLY_CPUS=3 (and expect ~2x longer render windows; deploy/README.md "Capacity").
     deploy: {resources: {limits: {cpus: "${ASSEMBLY_CPUS:-6}", memory: 12g}}}
 
   caddy:

@@ -1,0 +1,5 @@
+Email Address,First Name,Last Name,MEMBER_RATING,OPTIN_TIME,CONFIRM_TIME,Status,TAGS,CC
+imported@example.test,Joan,Lee,4,2024-01-01 10:00:00,2024-01-01 10:05:00,subscribed,"""sy-waitlist-yes""",US
+notagged@example.test,Pat,Ng,2,2024-01-01 10:00:00,2024-01-01 10:05:00,subscribed,"""buyers""",US
+cleaned@example.test,Lou,Fay,1,2024-01-01 10:00:00,2024-01-01 10:05:00,cleaned,"""sy-waitlist-yes""",US
+pending@example.test,Kim,Day,1,2024-01-01 10:00:00,,pending,"""sy-waitlist-yes""",US

@@ -20,3 +20,25 @@ Copied when present in your shell: the Shopify block, VAPID, rate-limit KV, `ANT
 Never set: any `STRIPE_*`, `LOCAL_DEMO_BUILD`, `ALLOW_RULES_ONLY_CHAT`, `ALLOW_MOCK_CHECKOUT_IN_PROD_BUILD`. Checkout stays shut until `CHECKOUT_OPENS_AT` or `/admin` "Open checkout now".
 
 Smoke in prelaunch (17 checks): health, https, `/waitlist` form and no $1 copy, `/join` → `/waitlist`, checkout API refuses, forged Shopify / unsigned Stripe webhooks refused, cron and growth closed, `/go` hub leads with the waitlist, `/b?t=STRONG` → `/waitlist` with keyword + post id carried, `/admin` and `/app` locked, no password field, CSP. Locally (`SMOKE=1`) health and https fail by design (no email config, http).
+
+## Capacity (ops box, sized for 458 posts/day)
+
+Measured Oct 2 on 4 vCPU: one 35 s 1080×1920 x264 pass takes 11 s (veryfast) and 17 s with the still-image zoompan; `medium` (the assembly default) is about 2× that. A master is about 3 passes plus QA (~70 s on 4 vCPU at veryfast); every page × platform cut is its own render (uniqueness rule), about 1 pass plus QA (~35 s).
+
+Estimated render wall time per day at `medium` (estimates from the benchmark, not a production run):
+
+| Day load | Renders | CCX23, 3 render vCPU | CCX33, 6 render vCPU |
+|---|---|---|---|
+| 300 posts (launch) | 30 masters + 300 cuts | ~9.5 h | ~4.7 h |
+| 458 posts ($30K rung) | 30 masters + 458 cuts | ~13.5 h (too tight) | ~6.7 h |
+
+So the box is a **CCX33** (8 vCPU, 32 GB, 240 GB) with Hetzner Backups on. At 458 posts that still leaves a 3× margin. If renders ever exceed 12 h a day, set `X264_PRESET=fast` before adding a box.
+
+Disk: renders write 10–25 GB a day. `common.janitor` (cron every 30 min) removes job dirs older than 6 h and rendered media older than 7 days, and the assembler refuses a job when free space drops below `MIN_FREE_GB` (15). `GET /health/details` reports `disk_free_gb`.
+
+Cron (`/etc/cron.d/strongyears`, written by cloud-init; log `/var/log/strongyears-cron.log`):
+- every 30 min: disk janitor (exit 2 = still under the free-space floor).
+- every 15 min: Shopify webhook self-heal (`shopify/scripts/webhooks-heal.ts`; exit 2 = re-created a topic, so reconcile orders).
+- 03:15 UTC: `deploy/scripts/backup.sh` dumps the n8n Postgres and the DM SQLite and keeps 14 days. Members data lives in Supabase (its own backups).
+
+Third-party ceilings that matter more than the box: YouTube Data API 6 uploads per project per day (`docs/platform_reviews/youtube_api_compliance.md`), TikTok posts stay private until the API audit passes (post by hand), and Meta Graph rate limits per page.

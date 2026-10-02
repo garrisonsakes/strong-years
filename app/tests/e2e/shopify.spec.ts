@@ -133,7 +133,7 @@ test("waitlist signup → confirm → checkout opens → launch email → its li
   await expect(page.getByRole("heading", { name: "Shopify checkout (test stub)" })).toBeVisible();
   const u1 = landing(one.urls[0]!);
   deviceOneCell = u1.searchParams.get("sku")!;
-  expect(["bundle_m12", "ebook_e12"]).toContain(deviceOneCell);
+  expect(["bundle_t12", "bundle_m12", "ebook_e12"]).toContain(deviceOneCell);   // CANON UPDATE 6 adds the 7-day-trial cell t12
   expect(u1.searchParams.get("vid")).toBe(deviceOneVid);
   expect(u1.searchParams.get("post_id")).toBe("REEL_E2E_01");
   expect(u1.pathname).toMatch(/^\/products\/[a-z0-9-]+$/);

@@ -18,7 +18,7 @@ from assemble import accessibility, c2pa_sign, graphics, virality_gate
 from assemble import captions as C
 from assemble.layout import FPS, H, W, safe_zone
 from assemble.overlay import CaptionStyle, OverlayPlan, burned_in_strings, render_track
-from common import config, disclosure, evidence, media, storage, supabase
+from common import config, disclosure, evidence, janitor, media, storage, supabase
 from uniqueness import audiofp, phash
 
 FULL_LAYOUTS = {None, "", "full", "split"}
@@ -165,6 +165,7 @@ def frame_times(total: float, n: int = 12) -> list[float]:
 def assemble(manifest: dict, workdir: Path | None = None) -> dict:
     t0 = time.time()
     config.ensure_dirs()
+    janitor.headroom(config.WORK_DIR)          # fail one job loudly before a full disk takes the box down
     asset_id = storage.new_id()
     brief = storage.safe_id(manifest.get("brief_id") or "adhoc", "brief_id")   # AUDIT H9: no traversal
     jobdir = Path(workdir or config.WORK_DIR) / f"asm_{asset_id}"

@@ -1,0 +1,5 @@
+Email,First Name,Email Marketing Consent,Email Marketing Consent Timestamp,SMS Marketing Consent,Email Suppressions,Country,Strong Years Waitlist Opt-in,Strong Years Waitlist Opt-in At,Source
+imported@example.test,Linda,SUBSCRIBED,2025-03-01T10:00:00Z,,,United States,true,2026-10-02T14:00:00Z,EXAMPLE imported: subscribed + opted in
+nooptin@example.test,Ray,SUBSCRIBED,2025-03-01T10:00:00Z,,,United States,false,,EXAMPLE skipped: no Strong Years opt-in
+bounced@example.test,Bo,SUBSCRIBED,2025-03-01T10:00:00Z,,HARD_BOUNCE,United States,true,,EXAMPLE suppressed: hard bounce
+unsub@example.test,Una,UNSUBSCRIBED,2025-03-01T10:00:00Z,,,United States,true,,EXAMPLE skipped: unsubscribed

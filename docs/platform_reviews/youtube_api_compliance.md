@@ -1,6 +1,6 @@
 # YouTube API Services: quota extension + compliance audit
 
-Copy-paste answers for the **YouTube API Services – Audit and Quota Extension Form** (Google Cloud project → YouTube Data API v3 → Quotas → "Apply for higher quota"). Nothing has been submitted. One Google Cloud project, OAuth consent screen **verified** (sensitive scopes need it), three Strong Years channels authorized by the client's own Google accounts.
+Copy-paste answers for the **YouTube API Services – Audit and Quota Extension Form** (Google Cloud project → YouTube Data API v3 → Quotas → "Apply for higher quota"). Nothing has been submitted. One Google Cloud project, OAuth consent screen **verified** (sensitive scopes need it), ONE Strong Years Shorts channel (CANON UPDATE 6) authorized by the client's own Google account. **Status Oct 2 2026: ready to submit; Garrison files it from the Google Cloud project that owns the channel.**
 
 **API client name:** Strong Years Publisher · **Website:** `https://strongyears.com` · **Privacy policy:** `https://strongyears.com/privacy` · **Terms:** `https://strongyears.com/terms` · **Contact:** the client's ops email
 
@@ -24,13 +24,13 @@ Not requested: `youtube` (full manage), `youtube.force-ssl`, comment-writing sco
 ## Form answers
 
 **Describe your API client and its use of YouTube API Services.**
-> Strong Years publishes short educational exercise and cooking videos for adults 60+ to its own three YouTube channels and reads those videos' performance. The hosts, Chang Yin and Sun Yoon, are AI characters, and every video discloses it: a burned-in "AI character" tag on every frame, a disclosure line in every description, the channel About section and a pinned introduction Short, and YouTube's altered or synthetic content setting (`status.containsSyntheticMedia: true`) on every upload. Before any upload, the video and its text pass an automated health-claims and disclosure scanner, an automated reviewer, and a person for anything flagged. The client is internal: only our team uses it, and it only acts on channels our company owns.
+> Strong Years publishes short educational exercise and cooking videos for adults 60+ to its own YouTube Shorts channel and reads those videos' performance. The hosts, Chang Yin and Sun Yoon, are AI characters, and every video discloses it: a burned-in "AI character" tag on every frame, a disclosure line in every description, the channel About section and a pinned introduction Short, and YouTube's altered or synthetic content setting (`status.containsSyntheticMedia: true`) on every upload. Before any upload, the video and its text pass an automated health-claims and disclosure scanner, an automated reviewer, and a person for anything flagged. The client is internal: only our team uses it, and it only acts on channels our company owns.
 
 **Which API methods do you call?**
 > `videos.insert` (resumable upload; `snippet` title/description/tags/categoryId 26, `status` privacyStatus, selfDeclaredMadeForKids=false, containsSyntheticMedia=true), `videos.list` (part=statistics for our own video ids), `channels.list` (mine=true), YouTube Analytics `reports.query` (ids=channel==MINE; views, estimatedMinutesWatched, averageViewDuration by video).
 
 **How many users / channels?**
-> 2–3 team members; 3 channels, all owned by our company.
+> 2–3 team members; 1 channel, owned by our company (a second may be added later, also company-owned).
 
 **Do you display YouTube data to anyone outside your organization?**
 > No. Numbers appear only in our internal admin screen.
@@ -45,7 +45,7 @@ Not requested: `youtube` (full manage), `youtube.force-ssl`, comment-writing sco
 > We show YouTube numbers next to our own Instagram and TikTok numbers in one internal table so the team can compare topics. Metrics from each platform are labelled with their source and are not merged into a derived cross-platform metric shown as YouTube data.
 
 **Quota requested and calculation.**
-> At full cadence: 3 channels × up to 4 Shorts/day = 12 uploads/day. Classic costs: 12 × `videos.insert` 1,600 = 19,200; `videos.list` / `channels.list` ≈ 50 calls × 1 = 50; Analytics is billed separately. Requested: **25,000 units/day** (≈ 30% headroom for retries of failed resumable uploads). Under the uploads bucket model: 12 of 100 `videos.insert` calls/day, no extension needed for uploads; we would request only what the calculator shows for the read calls.
+> At full cadence: 1 channel × 6 Shorts/day = 6 uploads/day (12 if a second company channel is added). Classic costs per day: 6 × `videos.insert` 1,600 = 9,600; 6 × `thumbnails.set` 50 = 300; `videos.list` (50 ids per call) / `channels.list` ≈ 50 calls × 1 = 50; total ≈ 9,950 of the default 10,000, so a single failed resumable upload that has to restart breaks the day. Analytics is billed separately. Requested: **25,000 units/day** (two channels at 6/day = 19,900, plus ≈ 25% headroom for retries). Until granted we upload 4/day through the API and the rest by hand in YouTube Studio. Under the uploads bucket model: 6–12 of 100 `videos.insert` calls/day, no extension needed for uploads; we would request only what the calculator shows for the read calls.
 
 **How does your client meet the "Required Minimum Functionality"?**
 > Users authorize with Google OAuth and can see which channel is connected; every upload shows the person the title, description, privacy status and the synthetic-content flag before it is queued; the person can disconnect a channel at any time.

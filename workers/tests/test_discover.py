@@ -250,8 +250,9 @@ def test_genes_use_the_scorecard_decomposition():
 
 
 def test_normalize_posts_csv_schema_and_relative_performance():
-    hdr = (config.SPEC_DIR / "data" / "posts.csv").read_text().splitlines()[0].split(",")
-    assert list(N.POSTS_CSV_COLUMNS) == hdr
+    posts_csv = config.SPEC_DIR / "data" / "posts.csv"   # gitignored research corpus: absent on fresh clones and CI
+    if posts_csv.exists():
+        assert list(N.POSTS_CSV_COLUMNS) == posts_csv.read_text().splitlines()[0].split(",")
     base = dict(platform="youtube", creator="@a", title_or_caption="chair exercise for seniors", duration_s=40)
     items = [SRC.item(id=f"v{k}", published_at=(NOW - timedelta(days=k)).isoformat(), views=v, **base)
              for k, v in enumerate([10000, 1000, 1000, 1000, 1000])]

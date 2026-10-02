@@ -23,7 +23,7 @@ from fastapi.responses import FileResponse
 
 from assemble import api as render_api
 from assemble import c2pa_sign
-from common import auth, config, errors, storage
+from common import auth, config, errors, janitor, storage
 from compliance import api as compliance_api
 from discover import api as discover_api
 from dm import api as dm_api
@@ -86,6 +86,7 @@ def health_details() -> dict:
         "llm_judge": bool(os.environ.get(config.ANTHROPIC_API_KEY_ENV)),
         "reviewer_signed": config.REVIEWER_SIGNED,
         "storage": "r2" if storage.r2_enabled() else "local",
+        "disk_free_gb": round(janitor.free_gb(config.WORK_DIR), 1),
         "fetch_allowed_hosts": storage.allowed_hosts(),
         "font": config.CAPTION_FONT.name if config.CAPTION_FONT.exists() else None,
         "growth": {"spend_enabled": growth_config.SPEND_ENABLED, "dry_run": growth_config.GROWTH_DRY_RUN,

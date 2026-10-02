@@ -36,6 +36,9 @@ def corpus():
 
 def test_corpus_loads_posts_transcripts_and_niche_rows(corpus):
     srcs = {d["source"].split(":")[0] for d in corpus.docs}
+    # data/posts.csv (POSTDB research corpus) is gitignored: required on the ops box, absent on fresh clones and CI
+    if not (ROOT / "data" / "posts.csv").exists():
+        pytest.skip("data/posts.csv (POSTDB corpus) not on this machine; tools/preflight.py blocks launch without it")
     assert {"posts.csv", "niche_posts"} <= srcs
     assert len(corpus.docs) > 100
 
