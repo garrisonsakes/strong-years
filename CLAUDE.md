@@ -165,6 +165,7 @@ Every session here bills Garrison's limited credits, so spend tokens only where 
 - No subagents or parallel threads unless the work is truly independent and large. Do simple tasks directly.
 - Batch independent tool calls in one step. Make edits with one validated push, not several speculative ones.
 - Keep replies short: lead with the answer, no recaps of the investigation.
+- CEOS (Garrison's local token optimizer) runs only on his own machines. Its installer writes hooks with local absolute paths into `.claude/settings.json`; never commit those hooks, its `env` additions or `.claude/skills/ceos-compile/`, because they break cloud sessions. Revert them with `git checkout .claude/settings.json` before committing.
 - Repo settings in `.claude/settings.json` cap Bash and MCP output and block reads of generated or binary files (node_modules, lockfiles, PDFs, media). Grep the source instead.
 
 ## Hard rules
