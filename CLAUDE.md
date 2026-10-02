@@ -70,6 +70,8 @@ The product is the "Strong Years" MRR membership on Shopify. Growth is organic-f
 
 Retained-MRR milestones: $10K d8, $30K d15, $100K d28, $250K d53.
 
+Cash in this table assumes a -$15K start; **there is no pre-launch spend** (Garrison, Oct 2), so add $15K to every cash figure. `tools/projection.py` is the model as code (scenarios v5, ramp12, launch).
+
 Always report **booked MRR, retained MRR and cash** separately. MRR can never exceed what cash implies.
 
 ## Stack

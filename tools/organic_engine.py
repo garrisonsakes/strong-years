@@ -843,7 +843,7 @@ SC_INPUTS = [
  ('coach_day','Member day the coached offer starts',10,10,42,'day','CANON 5 seeded launch.'),
  ('coach_price','Coached program price',147,97,197,'$/mo','CANON 4 R3.'),
  ('fees','Payment fees on revenue',0.03,0.029,0.035,'%','Shopify Payments 2.9% + 30¢ (rounded to 3% in the projection).'),
- ('cash0','Cash on day 0 (pre-launch build + runway)',-15000,-30000,-5000,'$','ASSUMPTION (approved projection). No $30.5K/month team opex in this family.'),
+ ('cash0','Cash on day 0 (pre-launch spend)',0,-1000,0,'$','Garrison Oct 2 2026: almost no money is spent before launch; was -15000.'),
  ('gen_master','Generation cost per master render (incl. its distinct platform cuts)',1.28,1.0,2.0,'$','COSTS.md §2b / ENGINE_NEXT50 IG-1: a fresh REMIX render $1.28.'),
  ('gen_trial','Generation cost per Trial Reel (half new-hook at $0.45, half $0 frame/text/length variants)',0.225,0.0,1.28,'$','COSTS.md §2b (new hook ≈ $0.45; frame/text/length $0); 1.28 = every trial a fresh REMIX.'),
  ('fixed','Tools per day',16,16,40,'$/day','COSTS.md (tools stack).'),

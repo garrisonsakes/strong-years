@@ -54,7 +54,7 @@ SCEN = {
 
 def run(name: str, days: int = 90) -> list[dict]:
     s = SCEN[name]
-    out, trials, paying, coached, cash, rung = [], [], 0.0, 0.0, -15000.0, False
+    out, trials, paying, coached, cash, rung = [], [], 0.0, 0.0, 0.0, False   # no pre-launch spend (Garrison, Oct 2)
     for d in range(1, days + 1):
         m = RAMP[d] if (s["ramp"] and d in RAMP) else mix_full(rung)
         if not s["ramp"] and d >= 8:
@@ -115,7 +115,7 @@ def main(argv=None) -> int:
         print(f"retained ${t // 1000}K: day {hit}")
     first_pos = next((r["day"] for r in rows if r["cash_in"] > r["cost"]), None)
     be = next((r["day"] for r in rows if r["cash_cum"] >= 0), None)
-    print(f"daily cash positive from day {first_pos}; cumulative cash (from -$15K) breaks even day {be}")
+    print(f"daily cash positive from day {first_pos}; cumulative cash positive from day {be}")
     return 0
 
 

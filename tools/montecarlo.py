@@ -11,7 +11,7 @@ PLAT={'ig':(1.0,0.0,1.0),'fb':(0.9,0.05,1.15),'tt':(0.6,-0.15,0.9),'yt':(0.4,0.1
 def pareto(xm,a): return xm*(1-random.random())**(-1/a)
 def sim(L, seed, lists=30000, wl=1500, days=180):
     random.seed(seed); P=LEVELS[L]
-    opens={p:-7 for p in range(4)}; hit_boost={}; cohorts=[]; cash=-15000; ret=0; out=[]
+    opens={p:-7 for p in range(4)}; hit_boost={}; cohorts=[]; cash=0; ret=0; out=[]
     def ladder(r): return (7,9,20) if r>=30000 else (5,8,20) if r>=10000 else (4,6,20)
     for d in range(1,days+1):
         npages,masters,trials=ladder(ret); trials=10 if d<=7 else trials
