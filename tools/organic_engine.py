@@ -33,6 +33,10 @@ Organic layers (pages, cadence, views by account age, platform multipliers, keyw
 rates, runway waitlist, boosts / retargeting caps, shoutouts, affiliates) are unchanged from v1 of
 this file and keep their sources.
 
+ORGANIC-MAX FAMILY R30–R35 (Oct 2 2026, $0 media, 80 Trial Reels/day): see the section near the end of this file;
+`python3 tools/organic_engine.py --max` prints it, `python3 tools/organic_max_sheet.py` writes sheet Organic_Max and the
+r30…r35 columns of mrr_blitz_daily.csv (BLITZ.md §14).
+
 Run:  python3 tools/organic_engine.py              -> prints the run table, solver, runway table
       python3 tools/organic_engine.py --json out    -> also writes the JSON used by the workbook writer
 Every number marked ASSUMPTION is an assumption; sources are listed in SOURCES.
@@ -215,6 +219,7 @@ def gate_pass(r, s=SH):
 # Organic engine (unchanged)
 # ----------------------------------------------------------------------------------------------
 def organic_day(r, t, o=ORG, s=SH):
+    if r.get('mx'): return organic_day_max(r, t, o, s)   # R30–R35 family (Organic-max); R20–R26 never set 'mx'
     mult = o['scen_mult'][r['scen']]
     views = visitors = posts = 0.0; pages = 0
     for pd_, plat in zip(o['page_days'], o['page_plat']):
@@ -243,7 +248,7 @@ def run(r, s=SH, o=ORG, l=LAD, days=360):
         od=organic_day(r,t,o,s)
         wl=od['visitors']*s['lp_org']*r['wl_rate']; wl_org+=wl
         wl_cohorts.append((R-t, wl))
-        cost=(s['fixed']+s['shop_plan'])/30 + od['posts']*s['cost_post']
+        cost=(s['fixed']+s['shop_plan'])/30 + od.get('cost_posts',od['posts'])*s['cost_post'] + od.get('xcost',0.0)
         cash-=cost; runway_cost+=cost
         pre.append(dict(d=-(R-1-t), views=od['views'], visitors=od['visitors'], posts=od['posts'], pages=od['pages'], waitlist=wl, wl_cum=wl_org, cash=cash))
     if r['seed_wl']>0: wl_cohorts.append((R/2.0, r['seed_wl']))
@@ -287,7 +292,7 @@ def run(r, s=SH, o=ORG, l=LAD, days=360):
         v_org=od['visitors']*s['lp_org']
         visitors=v_org+v_warm+v_sh+v_aff+v_cold+v_boost+v_rt
         # ---- ebook orders (one-time-equivalent rate), by source ----
-        c_org=fe_cvr(r,r['cvr_org']); c_cold=fe_cvr(r,r['cvr_cold']); c_warm=fe_cvr(r,r['cvr_warm'])
+        c_org=fe_cvr(r,r['cvr_org'])*r.get('intent_up',1.0); c_cold=fe_cvr(r,r['cvr_cold']); c_warm=fe_cvr(r,r['cvr_warm'])
         E_src=dict(org=v_org*c_org, warm=v_warm*(1-s['gift'])*c_warm, sh=v_sh*c_cold*1.2, aff=v_aff*c_warm, cold=v_cold*c_cold, boost=v_boost*c_org, rt=v_rt*c_org, wl=wl_sched.get(d,0))
         gifts=v_warm*s['gift']*c_warm
         E1=sum(E_src.values())
@@ -355,7 +360,7 @@ def run(r, s=SH, o=ORG, l=LAD, days=360):
         cumaff+=E_src['aff']; cumV+=E1
         mem_all=members+ess+ann
         comm=(cumaff/cumV if cumV else 0)*mrr*s['comm']/30
-        costs=sp*(1+s['media'])+shp*s['sh_cost']+comm+(s['fixed']+s['shop_plan'])/30+od['posts']*s['cost_post']+mem_all*(s['cogs']+s['varm'])/30+(E+P)*s['bump29_take']*s['kit_cogs']
+        costs=sp*(1+s['media'])+shp*s['sh_cost']+comm+(s['fixed']+s['shop_plan'])/30+od.get('cost_posts',od['posts'])*s['cost_post']+od.get('xcost',0.0)+mem_all*(s['cogs']+s['varm'])/30+(E+P)*s['bump29_take']*s['kit_cogs']
         net=receipts-costs
         cash+=net
         cum_media+=sp+shp*s['sh_cost']; cum_fe+=fe_rev+bump_rev
@@ -481,5 +486,302 @@ def main(write_json=None):
                        shared=SH, sources=SOURCES), open(write_json,'w'))
     return res, rw, sens, ladder
 
+# ==============================================================================================
+# ORGANIC-MAX FAMILY R30–R35 (Oct 2 2026 client direction: NO paid media until MRR is real; $100K MRR within 30 days
+# of checkout opening, organic only). 4 IG pages × 6 masters/day on the main feed + up to 20 Trial Reels per IG page
+# per day (80/day), mostly spliced variants of the masters (new hook / first frame / on-screen text / length cut, each
+# a distinct render under the >= 2-dimension rule, workers/growth/variants.py); winners auto-graduate to the feed.
+# Facebook native 6 reels/day/page + 2 long cuts + text + photo; TikTok/YT/Threads/X distinct-cut reposts.
+# R20–R26 above are untouched: run() only calls organic_day_max() when r['mx'] is set.
+# Every input below is labelled; anything without a citation is an ASSUMPTION.
+# ==============================================================================================
+MX_INPUTS = [
+ # key, label, central, upside, unit, source
+ ('tr_ramp','Trial Reels per IG page per day by page age: days 0–6 / 7–13 / 14+',[3,6,20],[3,6,20],'reels','Client direction (3 → 6 → 20 by week 3); variants.py ramp 3/6/cap (max 20). Page age counts from the runway, so every page is at the cap by launch day 1 except the day-7 page.'),
+ ('tr_cap','Hard cap on Trial Reels per page per day (the binding platform limit)',20,20,'reels','ASSUMPTION FLAG: Instagram publishes NO Trial Reel cap. API limit is 100 publishes/24 h incl. trials [ENGINE_100X S18]; one podcast claims caps "as low as five" with a 30-day trial block for exceeding them (ENGINE_NEXT50 N1, anecdotal). Sensitivity runs cap = 5.'),
+ ('tr_days','Runway day each IG page goes live (4 IG pages, CANON 4)',[1,1,4,7],[1,1,4,7],'day','ASSUMPTION. In R30/R31 the feed layer is R20 (3 IG handles) plus the 4th CANON-4 IG page on day 7, so every trial page has a feed to graduate into.'),
+ ('tr_rel','Views per Trial Reel ÷ views per main-feed reel of the same page at the same age, BEFORE variant decay',0.40,0.70,'x','ASSUMPTION. Nothing published: Meta says Trial Reels are shown to non-followers first and may be shared to followers if they perform within 72 h (ENGINE_NEXT50 N2); no reach figures exist. Industry median reel = 344 views (highviz 2026). A trial gets the non-follower test pool only, never follower reach: 0.40 central, 0.70 upside, 0.15 conservative.'),
+ ('var_decay','Modular-variant decay: the n-th variant of one body (n ≥ 1; the master is n = 0) reaches var_decay^n of the master',0.6,0.6,'x','ASSUMPTION (client spec 0.6^n). No public evidence that hook-swapped variants of one body perform as distinct posts; Meta clusters near-identical creatives and demotes low-value edits [ENGINE_100X S3, S20, S44]. With 20 trials over 6 bodies (3.3 variants/body) the mean trial reaches 0.37 of n = 0.'),
+ ('masters','Masters (bodies) per IG page per day',6,6,'bodies','Client direction / CANON 4.'),
+ ('grad_rate','Share of Trial Reels that graduate (auto or by the 6 h composite) to the main feed',0.05,0.10,'%','ASSUMPTION. POSTDB: 25% of posts beat 2.79× the page median, 10% beat 13.7×; graduation needs a clear win on a noisy 6 h read, so 5% central (1 per page per day at 20 trials), 10% upside. Capped by the page\'s feed slots (6/day).'),
+ ('grad_up','Views of a graduated winner on the feed ÷ a default master feed post',2.0,3.0,'x','ASSUMPTION. Selected on early data, so it regresses toward the mean: 2.0× central (below the POSTDB p75 rel 2.79), 3.0× upside. The graduate REPLACES a scheduled master (variants.py), so only the excess (grad_up − 1) is added.'),
+ ('new_hook_share','Share of Trial Reels that carry a new hook (≈$0.45 each: new lip-sync + TTS); the rest are $0 frame / text / length variants',0.5,0.5,'%','COSTS.md §2b (12 trials/page: 6 new-hook at $0.45, 6 at $0). Sensitivity: every trial a fresh REMIX render at $1.28 (ENGINE_NEXT50 IG-1).'),
+ ('fb_pages','Facebook Pages in the native program (one per IG page, same go-live days)',4,4,'pages','Client direction. R20 runs 2 FB pages.'),
+ ('fb_long','Facebook long cuts (60–180 s) per page per day',2,2,'cuts','Client direction; COSTS §2b $0.20 each.'),
+ ('fb_long_rel','Views per FB long cut ÷ a FB reel',0.6,0.8,'x','ASSUMPTION. Facebook removed the Reels length cap (ENGINE_100X §1.3, S5); 65+ lead long-form growth (S30), but long videos complete less.'),
+ ('fb_tp','Facebook text + photo posts per page per day',2,2,'posts','Client direction; COSTS §2b ($0.05 photo, $0 text).'),
+ ('fb_tp_rel','Views per FB text/photo post ÷ a FB reel',0.25,0.4,'x','ASSUMPTION. Format barely changes ENGAGEMENT on FB (images 5.20%, video 4.84%, text 4.76%, Buffer 52M posts, S6) but text/photo get far less recommended reach than Reels.'),
+ ('fb_tp_v2v','Keyword→DM→link rate on FB text/photo ÷ the reel rate',0.5,0.7,'x','ASSUMPTION: no on-video CTA; the keyword lives in the caption.'),
+ ('fb_fit','FB 65+ buyer-fit multiplier on views → landing visitors (FB program runs only)',1.25,1.5,'x','ASSUMPTION. 65+ use Facebook far more than IG (19% daily) or TikTok (5% daily) (Pew, ENGINE_100X S1); the FB-native "send this to your family group" close and FB-specific caption. NOT the +72% native-vs-crosspost reach result (S4, old photo test): R20 already treats FB as native at par, so that gain is not added again.'),
+ ('rp_plat','Distinct-cut repost lanes per IG page and their view multiplier vs base (TT / YT / Threads / X)',{'TT':0.7,'YT':0.5,'TH':0.15,'X':0.10},{'TT':0.7,'YT':0.5,'TH':0.25,'X':0.15},'x','TT/YT from R20 (plat_mult). Threads/X ASSUMPTION (POSTDB: same asset did 40–100× better on IG than TikTok/YouTube in Sep 2026; Threads/X are text-first). Bio-link chain only (v2v_bio); TikTok has no purchase CTA (S32). R32+ only.'),
+ ('learn_x','Scorecard loop: weekly uplift to the hit rate (→ mean views per post), compounding from week 2',0.04,0.08,'%/wk','ASSUMPTION. Thompson sampling over hook/body/close arms works under delayed batched feedback (S46, S47) but no source gives a magnitude. Under a power law, mean views scale ~ with the hit rate (POSTDB: 3 posts = 80% of views).'),
+ ('learn_cap','Bound on the cumulative scorecard uplift',1.4,1.8,'x','ASSUMPTION. Central reaches the cap in ~9 weeks.'),
+ ('intent_up','Intent-routed offers (keyword → matched /b?t= page + qualify-in-2 DM): multiplier on organic visitor → buyer',1.15,1.35,'x','ASSUMPTION with a heavy haircut on vendor data: qualified DM flows convert ~2.4× unqualified; DM→purchase 12–25% qualified vs 2–5% unqualified (Communipass 2026, V-; MONETIZATION_ENGINE S1); ENGINE_100X §8.8 says use vendor bands as gates, not forecasts.'),
+ ('dm_mult','DM chain multiplier (keyword comment → DM open → link click) on IG/FB views → visitors',1.0,1.3,'x','Central = R20 chain (0.3% comments × 85% open × 30% click × 1.25 bio uplift; chatautodm / creatorflow). Upside 1.3 = DM click 39% (inside the 25–45% band). The solver scales this.'),
+ ('asc_coach','R3 coached ($147/mo × 12 weeks): share of members who start at the week-6 trigger',0.05,0.07,'%','Client direction (5%). Fixed-term 3-month program → NOT MRR; a separate line. Contribution 45% after the certified trainer (ASSUMPTION); honest cohort caps ignored.'),
+ ('asc_labs','R4 labs + clinician review ($399, one-time): share of members, at member day 60',0.03,0.04,'%','Client direction (3%). One-time; delivered and billed by the client\'s healthcare business (BRIEF ascension R4). Strong Years cash share 20% ASSUMPTION.'),
+ ('asc_supp','R5 supplements subscribe & save from member month 4 (day 90): take of surviving members, $35/mo, 7%/mo churn, 35% margin',0.08,0.12,'%','Client direction (month 4; OFFER.md §4 says month 7: conflict noted). BRIEF: supplement subs churn 5–8.8%/mo. Recurring, but reported as a SEPARATE supplement MRR line, never in membership MRR. Take, price and margin are ASSUMPTIONS.'),
+ ('seed_lists','R35: real lists that are mailed a runway waitlist invite (Unignorable / K9SUPPS contacts)',(20000,10000),(100000,50000),'contacts','Parametrised (BRIEF: list sizes unknown). Default = the 20K/10K placeholders already in R20.'),
+ ('seed_opt','R35: list contact → waitlist opt-in over the runway',0.05,0.12,'%','ASSUMPTION from the model\'s own warm-list chain: 92% delivered × 30% open × 8% CTOR × 4.7 weighted sends × 45% opt-in ≈ 4.7%. These lists did not opt in to this brand. K9SUPPS counts at k9mult 0.35. Opted-in names leave the launch-email pool (no double counting).'),
+]
+MXC = {k:c for k,_,c,_,_,_ in MX_INPUTS}
+MXU = {k:u for k,_,_,u,_,_ in MX_INPUTS}
+MX_SOURCES = [
+ ('ENGINE_100X.md §2.1, §5, §8; S18 IG trial_params', 'Trial Reels go to non-followers, graduation_strategy SS_PERFORMANCE; count toward the 100/24 h publish limit'),
+ ('ENGINE_NEXT50.md N1 / N2 / IG-1', 'No published Trial Reel cap ("as low as five", anecdotal, riffon / ALM Corp); auto-share to followers within 72 h; trials should be distinct REMIX renders'),
+ ('ENGINE_100X S3 / S20 / S44', 'Meta originality rules (low-value edits demoted account-wide), IG Apr 2026 repost crackdown (V-), near-identical creative clustering (V-)'),
+ ('ENGINE_100X S1 (Pew)', '65+ use Facebook far more than IG (19% daily) or TikTok (5% daily)'),
+ ('ENGINE_100X S6 (Buffer, 52M posts)', 'FB engagement images 5.20% / video 4.84% / text 4.76%'),
+ ('MONETIZATION_ENGINE S1 (Communipass 2026, V-)', 'DM open 85–92%, link CTR 18–35%, DM→purchase 12–25% qualified, 2–5% unqualified; qualified 2.4×'),
+ ('BRIEF.md ascension ladder; OFFER.md §4', 'R3 coached $147/mo 12 weeks; R4 labs $299–499 via the healthcare business; R5 supplements from month 4 (OFFER: month 7)'),
+ ('COSTS.md §2b', 'new hook ≈ $0.45; frame/text/length $0; FB long $0.20; FB photo $0.05; full config 200 posts/day $223/day'),
+ ('POSTDB_FINDINGS.md / BRIEF.md (Yang Mun)', '~1.75 ebook buyers per 100K views; 3-ebook bundle $19.99; Whop Inner Circle $19.99/mo, 3-day trial; ~7,000 ebook buyers in ~90 days'),
+]
+
+def _vpp(o, age, plat_m, mult, cad, posts_max=6):
+    v = min(o['v_base']*o['v_growth']**((age-15)/30.0), o['v_cap'])*plat_m*mult
+    return v*((cad/6.0)**(-0.3) if cad>6 else 1.0)
+
+def _cad(o, r, age):
+    return o['posts_d1'] + (r['posts_max']-o['posts_d1'])*min(1.0, age/o['posts_ramp'])
+
+def _decay_mean(k, d):
+    """Mean reach factor of k variants of one body, the n-th (n = 1..k) reaching d^n (fractional k interpolated)."""
+    if k <= 0: return 0.0
+    return d*(1-d**k)/(1-d)/k if d < 1 else 1.0
+
+def roster(r, o=ORG):
+    """Feed pages (day, platform, role). 'r20' = R20's 7 pages + the 4th CANON-4 IG page; 'canon4' = 4 IG + 4 FB native
+    + 4 each of TT / YT / Threads / X distinct-cut reposts (the 144-placement grid of COSTS §2b)."""
+    days = r['tr_days']
+    if r['roster'] == 'r20':
+        pg = [(d, p, 'feed') for d, p in zip(o['page_days'], o['page_plat'])]
+        if r.get('tr_on'): pg.append((days[3], 'IG', 'feed'))
+        return pg
+    pg = []
+    for d in days:
+        pg += [(d, 'IG', 'feed'), (d, 'FB', 'fbprog'), (d, 'TT', 'rp'), (d, 'YT', 'rp'), (d, 'TH', 'rp'), (d, 'X', 'rp')]
+    return pg
+
+def learn_mult(r, t):
+    if not r.get('learn_x'): return 1.0
+    return min(r['learn_cap'], (1+r['learn_x'])**max(0.0, (t-7)/7.0))
+
+def organic_day_max(r, t, o=ORG, s=SH):
+    mult = o['scen_mult'][r['scen']]*learn_mult(r, t)
+    igp = r.get('ig_pen', 1.0)                       # originality demotion (sensitivity only)
+    dm = o['v2v_dm']*r['dm_mult']; bio = o['v2v_bio']
+    views = visitors = posts = cost_posts = xcost = trials = tr_views = grads = 0.0; pages = 0
+    for pd_, plat, role in roster(r, o):
+        age = t-(pd_-1)
+        if age < 0: continue
+        pages += 1
+        cad = _cad(o, r, age); ramp = cad/r['posts_max']
+        pm = r['rp_plat'][plat] if role == 'rp' else o['plat_mult'][plat]
+        vpp = _vpp(o, age, pm, mult, cad)*(igp if plat == 'IG' else 1.0)
+        rate = (dm if plat in ('IG', 'FB') else bio)
+        fit = r['fb_fit'] if (plat == 'FB' and r.get('fbprog')) else 1.0
+        pv = cad*vpp; views += pv; visitors += pv*rate*fit; posts += cad; cost_posts += cad
+        if role == 'fbprog':
+            nl = r['fb_long']*ramp; nt = r['fb_tp']*ramp
+            lv = nl*vpp*r['fb_long_rel']; tv = nt*vpp*r['fb_tp_rel']
+            views += lv+tv; visitors += lv*rate*fit + tv*rate*fit*r['fb_tp_v2v']
+            posts += nl+nt; xcost += nl*0.20 + nt*0.5*0.05
+    if r.get('tr_on'):
+        for pd_ in r['tr_days']:
+            age = t-(pd_-1)
+            if age < 0: continue
+            ramp_ = r['tr_ramp']; ntr = min(r['tr_cap'], ramp_[0] if age < 7 else ramp_[1] if age < 14 else ramp_[2])
+            cad = _cad(o, r, age)
+            vfeed = _vpp(o, age, o['plat_mult']['IG'], mult, cad)*igp
+            k = ntr/r['masters']
+            tv = ntr*r['tr_rel']*vfeed*_decay_mean(k, r['var_decay'])
+            g = min(ntr*r['grad_rate'], cad)
+            gv = g*vfeed*(r['grad_up']-1)
+            views += tv+gv; visitors += (tv+gv)*dm
+            trials += ntr; tr_views += tv; grads += g; posts += ntr
+            xcost += ntr*r['new_hook_share']*0.45
+    return dict(views=views, visitors=visitors, posts=posts, pages=pages, cost_posts=cost_posts, xcost=xcost,
+                trials=trials, tr_views=tr_views, grads=grads)
+
+MX_OFF = dict(mx=1, roster='r20', tr_on=1, fbprog=0, learn_x=0, learn_cap=1.0, intent_up=1.0, asc=0, seed_lists=None, ig_pen=1.0)
+def _mx(base, up=False, **kw):
+    src = MXU if up else MXC
+    d = dict(base, **{k: v for k, v in src.items() if k not in ('seed_lists',)}); d.update(MX_OFF)
+    d['intent_up'] = 1.0; d['dm_mult'] = src['dm_mult'] if up else 1.0; d['learn_x'] = 0
+    d.update(kw); return d
+
+R30 = _mx(BASE, name='R30 = R20 + 80 Trial Reels/day (4 IG pages × 20, ramp 3→6→20), central trial inputs (0.40 rel, 0.6^n decay, 5% graduate at 2.0×); 4th CANON-4 IG feed page added so every trial page can graduate; $0 media')
+R31 = _mx(UPS, up=True, name='R31 = R30 upside: R21 organic/conversion inputs + upside trial inputs (0.70 rel, 10% graduate at 3.0×, DM chain ×1.3); $0 media')
+R32 = dict(R30, roster='canon4', fbprog=1, name='R32 = R30 + Facebook native program (4 FB Pages × 6 native reels + 2 long cuts + text + photo, FB 65+ fit ×1.25) + distinct-cut TT/YT/Threads/X reposts (the 144-placement CANON-4 grid)')
+R33 = dict(R32, learn_x=MXC['learn_x'], learn_cap=MXC['learn_cap'], name='R33 = R32 + scorecard learning loop (+4%/week hit rate from week 2, capped ×1.4)')
+R34 = dict(R33, intent_up=MXC['intent_up'], asc=1, name='R34 = R33 + intent-routed offers (organic visitor→buyer ×1.15) + ascension lines (R3 coached 5%, R4 labs 3%, R5 supplements from month 4) reported separately')
+R35 = dict(R34, seed_lists=MXC['seed_lists'], seed_opt=MXC['seed_opt'], name='R35 = R34 + seeded waitlist from the real lists (default Unignorable 20K / K9SUPPS 10K, 5% runway opt-in; opted-in names leave the launch-email pool)')
+RUNS_MAX = [R30, R31, R32, R33, R34, R35]
+R34U = dict(_mx(UPS, up=True), roster='canon4', fbprog=1, fb_fit=MXU['fb_fit'], learn_x=MXU['learn_x'], learn_cap=MXU['learn_cap'], intent_up=MXU['intent_up'], asc=1,
+            name='R34 with EVERY organic input at upside (R21 base + all upside Organic-max inputs)')
+
+def prep(r):
+    """Apply R35's list seeding: names that opt in leave the warm-email pool."""
+    r = dict(r)
+    if r.get('seed_lists'):
+        u, k = r['seed_lists']; opt = r['seed_opt']
+        r['seed_wl'] = r.get('seed_wl', 0) + (u + k*SH['k9mult'])*opt
+        r['unig'] = u*(1-opt); r['k9'] = k*(1-opt)
+    return r
+
+def ascension(rows, r, s=SH, a=None):
+    """Separate ascension lines from the daily cell-B purchase series. Returns per-day dicts (not in MRR)."""
+    a = a or (MXU if r.get('_asc_up') else MXC)
+    P = [x['P'] for x in rows]; n = len(rows); out = []; supp = 0.0; cum_c = cum_l = cum_cash = 0.0
+    Sp = lambda k: r['renB1']*Sk(s, k)/Sk(s, 1) if k > 0 else 1
+    coach_starts = [0.0]*n
+    for i in range(n):
+        d = i+1
+        j = i-42
+        coach_starts[i] = P[j]*(1-s['fe_ref'])*Sp(1)*a['asc_coach'] if j >= 0 else 0.0
+        coach_active = sum(coach_starts[max(0, i-83):i+1])
+        coach_rev = coach_active*147/30
+        jl = i-60
+        labs = P[jl]*(1-s['fe_ref'])*Sp(2)*a['asc_labs'] if jl >= 0 else 0.0
+        js = i-90
+        supp += (P[js]*(1-s['fe_ref'])*Sp(3)*a['asc_supp'] if js >= 0 else 0.0) - supp*0.07/30
+        supp_rev = supp*35/30
+        cum_c += coach_rev; cum_l += labs*399
+        cum_cash += coach_rev*0.45 + labs*399*0.20 + supp_rev*0.35
+        out.append(dict(d=d, coach_rr=coach_active*147, labs_cum=cum_l, supp_mrr=supp*35, coach_cum=cum_c, asc_cash=cum_cash))
+    return out
+
+def run_max(r, s=SH, o=ORG, days=360):
+    r = prep(r)
+    rows, pre, info = run(r, s=s, o=o, days=days)
+    asc = ascension(rows, r) if r.get('asc') else None
+    if asc:
+        for x, y in zip(rows, asc): x['cash'] += y['asc_cash']; x['asc'] = y
+    return rows, pre, info, asc
+
+def summ_max(rows, pre, info, asc, r, o=ORG):
+    sm = summ(rows, pre, info)
+    if asc:   # cash already includes ascension contribution: recompute cash-based fields
+        lo = min(range(len(rows)), key=lambda i: rows[i]['cash']); sm['low'] = rows[lo]['cash']; sm['lowday'] = lo+1
+        nets = [rows[0]['cash']] + [rows[i]['cash']-rows[i-1]['cash'] for i in range(1, len(rows))]
+        sm['cfpos'] = next((i+1 for i in range(len(nets)-13) if all(x > 0 for x in nets[i:i+14])), 999)
+        sm['beday'] = next((x['d'] for x in rows if x['d'] > 30 and x['cash'] >= 0), 999)
+        for d in (30, 90, 180): sm[f'supp{d}'] = asc[d-1]['supp_mrr']; sm[f'coach{d}'] = asc[d-1]['coach_rr']; sm[f'labs{d}'] = asc[d-1]['labs_cum']
+    for d in (1, 30, 90, 180):
+        sm[f'v{d}'] = rows[d-1]['views']; sm[f'p{d}'] = rows[d-1]['posts']
+    sm['cost30'] = rows[29]['costs']; sm['cost90'] = rows[89]['costs']
+    od = organic_day_max(prep(r), r['runway']+29, o) if r.get('mx') else organic_day(r, r['runway']+29, o)
+    sm['trials30'] = od.get('trials', 0); sm['trv30'] = od.get('tr_views', 0); sm['grads30'] = od.get('grads', 0)
+    sm['vpt30'] = od['tr_views']/od['trials'] if od.get('trials') else 0
+    sm['vis30'] = rows[29]['visitors']; sm['seed'] = prep(r).get('seed_wl', 0)
+    return sm
+
+def original_ym(days=360, reach=1.0, s=SH, o=ORG):
+    """ORIGINAL: a Yang-Mun-style single page, 3 posts/day, $19.99 3-ebook bundle + Whop "Inner Circle" $19.99/mo
+    (3-day trial). POSTDB / BRIEF: ~1.75 ebook buyers per 100K views; trial→paid 42% (H&F, BRIEF); the renewal curve
+    S of the Blitz sheet. ASSUMPTIONS: 15% of ebook buyers start the Whop trial; 6% fees+refunds; reach uses OUR
+    central per-post curve on one FB-type page (multiplier 1.0) unless `reach` scales it (YM launch era ≈ ×12.8).
+    Lean cost: 3 posts × $1.12 (COSTS §2b) + $16/day tools; with_fixed adds our $30.5K/month team opex."""
+    rows = []; paid = [0.0]*(days+1); cash = cashf = 0.0
+    for d in range(1, days+1):
+        age = d-1 + 15                    # page posts from day 1; age offset so day 1 ≈ our page-age-15 baseline
+        vpp = min(o['v_base']*o['v_growth']**((age-15)/30.0), o['v_cap'])*reach
+        views = 3*vpp; buyers = views*1.75e-5
+        paid[d] = buyers*0.15*0.42
+        act = sum(paid[j]*Sk(s, (d-j)//30) for j in range(1, d+1))
+        mrr = act*19.99
+        cash_in = (buyers*19.99 + mrr/30)*0.94
+        cost = 3*1.12 + 16
+        cash += cash_in - cost; cashf += cash_in - cost - (s['fixed']+s['shop_plan'])/30
+        rows.append(dict(d=d, views=views, posts=3, mrr=mrr, cash=cash, cashf=cashf, cost=cost))
+    g = lambda d, k: rows[d-1][k]
+    be = next((x['d'] for x in rows if x['cash'] >= 0), 999); bef = next((x['d'] for x in rows if x['d'] > 30 and x['cashf'] >= 0), 999)
+    return rows, dict(m30=g(30, 'mrr'), m90=g(90, 'mrr'), m180=g(180, 'mrr'), v30=g(30, 'views'), v90=g(90, 'views'), cost=3*1.12+16, be=be, be_fixed=bef, posts=3)
+
+def solve_key(base, setter, lo, hi, target=100000, day=30, iters=30):
+    def f(x):
+        rows, _, _, _ = run_max(setter(dict(base), x), days=day); return rows[day-1]['mrr']
+    if f(lo) >= target: return lo
+    if f(hi) < target: return None
+    for _ in range(iters):
+        mid = (lo+hi)/2
+        if f(mid) >= target: hi = mid
+        else: lo = mid
+    return hi
+
+def _set(k):
+    def s_(r, x): r[k] = x; return r
+    return s_
+def _set_scen(r, x):
+    r['scen'] = 'x'; ORG['scen_mult']['x'] = x; return r
+
+SENS_MAX = [
+ ('Trial Reel cap 5/page/day (the anecdotal real cap; 20 trials/day total)', dict(tr_cap=5)),
+ ('Trial Reel cap 10/page/day', dict(tr_cap=10)),
+ ('Views per Trial Reel 0.15× feed (conservative)', dict(tr_rel=0.15)), ('Views per Trial Reel 0.70× feed (upside)', dict(tr_rel=0.70)),
+ ('Variant decay 0.4^n (harsher clustering)', dict(var_decay=0.4)), ('Variant decay 0.8^n', dict(var_decay=0.8)), ('No variant decay (every variant = a fresh post)', dict(var_decay=0.9999)),
+ ('Graduation 2% (vs 5%)', dict(grad_rate=0.02)), ('Graduation 10%', dict(grad_rate=0.10)), ('Graduate uplift 1.5× (vs 2.0×)', dict(grad_up=1.5)), ('Graduate uplift 3.0×', dict(grad_up=3.0)),
+ ('Originality demotion: IG reach ×0.7 account-wide (trial volume read as low-value edits)', dict(ig_pen=0.7)), ('Originality demotion ×0.4', dict(ig_pen=0.4)),
+ ('FB 65+ fit 1.0 (vs 1.25)', dict(fb_fit=1.0)), ('FB 65+ fit 1.5', dict(fb_fit=1.5)),
+ ('Scorecard uplift 0 (no learning)', dict(learn_x=0)), ('Scorecard uplift +8%/wk, cap 1.8', dict(learn_x=0.08, learn_cap=1.8)),
+ ('Intent routing 1.0 (no uplift)', dict(intent_up=1.0)), ('Intent routing 1.35', dict(intent_up=1.35)),
+ ('DM chain ×0.7', dict(dm_mult=0.7)), ('DM chain ×1.3', dict(dm_mult=1.3)),
+ ('Organic reach conservative ×0.35', dict(scen='conservative')), ('Organic reach upside ×1.75', dict(scen='upside')), ('Organic breakout ×3', dict(scen='breakout')),
+ ('Ebook/sub page conversion 3% (vs 5%)', dict(cvr_org=0.03)), ('Conversion 8%', dict(cvr_org=0.08)),
+ ('subB 0.55 (vs 0.70)', dict(subB=0.55)), ('subB 0.85', dict(subB=0.85)),
+ ('Lists 100K / 50K seeded at 12% opt-in', dict(seed_lists=(100000, 50000), seed_opt=0.12)),
+ ('Lists 20K / 10K at 12% opt-in', dict(seed_lists=(20000, 10000), seed_opt=0.12)),
+ ('Every Trial Reel a fresh REMIX render ($1.28 each; cost only)', dict(new_hook_share=1.28/0.45)),
+]
+
+def main_max(write_json=None):
+    res = []
+    for r in RUNS_MAX:
+        rows, pre, info, asc = run_max(r); res.append((r, rows, pre, info, asc, summ_max(rows, pre, info, asc, r)))
+    rows, pre, info, asc = run_max(R34U); r34u = summ_max(rows, pre, info, asc, R34U)
+    rows20, pre20, info20 = run(RUNS[0]); s20 = summ(rows20, pre20, info20)
+    s20.update({f'v{d}': rows20[d-1]['views'] for d in (1, 30, 90, 180)}); s20.update({f'p{d}': rows20[d-1]['posts'] for d in (1, 30, 90, 180)}); s20['cost30'] = rows20[29]['costs']
+    print(f"{'run':5s} {'p/d30':>6s} {'v/d1':>7s} {'v/d30':>8s} {'v/d90':>8s} {'d4':>6s} {'d14':>6s} {'d30':>6s} {'d60':>6s} {'d90':>6s} {'d180':>6s} {'ret30':>6s} {'10K':>4s} {'50K':>4s} {'100K':>4s} {'low':>6s} {'lowd':>4s} {'cf+':>4s} {'be':>4s} {'$/d30':>6s} {'seed':>6s}")
+    def line(nm, sm, rows):
+        print(f"{nm:5s} {sm['p30']:6.0f} {sm['v1']/1e3:6.0f}K {sm['v30']/1e3:7.0f}K {sm['v90']/1e3:7.0f}K {sm['m4']/1e3:6.1f} {sm['m14']/1e3:6.1f} {sm['m30']/1e3:6.1f} {rows[59]['mrr']/1e3:6.1f} {sm['m90']/1e3:6.1f} {sm['m180']/1e3:6.1f} {sm['ret30']/1e3:6.1f} {sm['d10']:4d} {sm['d50']:4d} {sm['d100']:4d} {sm['low']/1e3:6.0f} {sm['lowday']:4d} {sm['cfpos']:4d} {sm['beday']:4d} {sm['cost30']:6.0f} {sm.get('seed',0):6.0f}")
+    line('R20', s20, rows20)
+    for r, rows_, pre_, info_, asc_, sm in res: line(r['name'][:3], sm, rows_)
+    line('R34U', r34u, rows)
+    for r, rows_, pre_, info_, asc_, sm in res:
+        if asc_: print(r['name'][:3], 'ascension (not MRR): supp MRR d90/d180', round(sm['supp90']), round(sm['supp180']), '| coached run-rate d90/d180', round(sm['coach90']), round(sm['coach180']), '| labs gross cum d180', round(sm['labs180']))
+    print('trial lane d30 (R30): trials', res[0][5]['trials30'], 'views/trial', round(res[0][5]['vpt30']), 'grads', round(res[0][5]['grads30'], 1))
+    # solver on R34 (and R35) for $100K at day 30, $0 media
+    base = R34
+    rows0, _, _, _ = run_max(base); od0 = organic_day_max(base, base['runway']+29)
+    dm_rate = 0.85*0.30*SH['lp_org']*base['cvr_org']*base['subB']*base['intent_up']   # per keyword commenter, central
+    sol = {}
+    sol['tr_rel'] = solve_key(base, _set('tr_rel'), MXC['tr_rel'], 200.0)
+    sol['grad_rate'] = solve_key(base, _set('grad_rate'), MXC['grad_rate'], 1.0)
+    sol['grad_both'] = solve_key(base, lambda r, x: (r.update(grad_rate=1.0, grad_up=x) or r), 1.0, 500.0)
+    sol['dm_mult'] = solve_key(base, _set('dm_mult'), 1.0, 200.0)
+    sol['cvr_org'] = solve_key(base, _set('cvr_org'), base['cvr_org'], 1.0)
+    sol['seed_wl'] = solve_key(base, _set('seed_wl'), 0, 2_000_000)
+    sol['reach'] = solve_key(base, _set_scen, 1.0, 200.0)
+    sol['seed_wl_r35'] = solve_key(R35, _set('seed_wl'), 0, 2_000_000)
+    ORG['scen_mult'].pop('x', None)
+    print('solver (R34 base, $100K MRR day 30, $0 media):', {k: (round(v, 4) if v is not None else None) for k, v in sol.items()})
+    print('  central views/trial d30', round(od0['tr_views']/od0['trials']), '| DM→purchase per commenter central', round(dm_rate*100, 2), '%')
+    sens = []
+    for bn, b in (('R34', R34), ('R35', R35)):
+        bs = [x for x in res if x[0] is b][0][5]
+        for nm, ch in SENS_MAX:
+            if bn == 'R34' and 'seed_lists' in ch: continue
+            rr = dict(b, **ch); rows_, pre_, info_, asc_ = run_max(rr); sm = summ_max(rows_, pre_, info_, asc_, rr)
+            sens.append(dict(base=bn, name=nm, summ=sm, d30_delta=sm['m30']-bs['m30'], flag=abs(sm['m30']-bs['m30']) > 5000))
+            print(f"  sens {bn} {nm[:60]:60s} d30 {sm['m30']/1e3:6.1f} Δ {(sm['m30']-bs['m30'])/1e3:+6.1f} {'FLAG' if abs(sm['m30']-bs['m30'])>5000 else ''}")
+    orig, osm = original_ym(); orig_ym, osm_ym = original_ym(reach=12.8)
+    print('ORIGINAL (central reach):', {k: round(v) for k, v in osm.items()}); print('ORIGINAL (YM launch reach ×12.8):', {k: round(v) for k, v in osm_ym.items()})
+    out = dict(res=res, r34u=r34u, s20=s20, rows20=rows20, sol=sol, sol_ref=dict(vpt30=od0['tr_views']/od0['trials'], dm_rate=dm_rate, v30=rows0[29]['views']),
+               sens=sens, orig=(orig, osm), orig_ym=(orig_ym, osm_ym))
+    return out
+
+
 if __name__=='__main__':
-    main(sys.argv[2] if len(sys.argv)>2 and sys.argv[1]=='--json' else None)
+    if len(sys.argv)>1 and sys.argv[1]=='--max': main_max()
+    else: main(sys.argv[2] if len(sys.argv)>2 and sys.argv[1]=='--json' else None)
