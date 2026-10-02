@@ -11,7 +11,7 @@ test("landing: one offer, no $1 trial even with ?arm=A (CANON UPDATE 2), real co
   await page.goto("/start?arm=B");
   await expect(page.getByText("Chang Yin and Sun Yoon are AI characters.").first()).toBeVisible();
   await expect(page.getByTestId("arm-b-card")).toBeVisible();
-  await expect(page.getByTestId("cohort-counter")).toContainText("founding spots claimed");
+  await expect(page.getByTestId("cohort-counter")).toContainText("open to everyone until")   // CANON UPDATE 7: no seat cap;
   await expect(page.getByText("The 14-day money-back guarantee.")).toBeVisible();
   await expect(page.getByTestId("hero-cta")).toHaveAttribute("href", "/join");
   expect(await findGrayOrLowContrastText(page)).toEqual([]);
@@ -109,9 +109,7 @@ test("quiz → result → /join (consent enforced, Reset bump) → upsells → m
   await expect(page.getByTestId("cancel-done")).toContainText("You won't be charged again.");
 });
 
-test("founding purchase counts toward the real cohort counter; the price test is logged for analysis", async ({ page, browser }) => {
-  await page.goto("/start");
-  const before = await page.getByTestId("cohort-counter").first().innerText();
+test("founding purchase works with no seat cap (no public count); the price test is logged for analysis", async ({ page, browser }) => {
   await page.goto("/join");
   await page.getByLabel("First name").fill("Walt");
   await page.getByLabel("Email", { exact: true }).fill("walt.e2e@example.com");
@@ -121,9 +119,8 @@ test("founding purchase counts toward the real cohort counter; the price test is
   await page.getByTestId("mock-pay").click();
   await page.waitForURL(/\/upsell\/program/);
   await page.goto("/start");
-  const after = await page.getByTestId("cohort-counter").first().innerText();
-  const n = (s: string) => Number(s.match(/([\d,]+) of/)![1]!.replace(/,/g, ""));
-  expect(n(after)).toBe(n(before) + 1);
+  const box = await page.getByTestId("cohort-counter").first().innerText();
+  expect(box).not.toMatch(/\d[\d,]* of [\d,]+|spots|seats/i);   // CANON UPDATE 7: no seat cap, nothing counted
 
   const admin = await browser.newContext({ httpCredentials: { username: "admin", password: "strongyears-demo" } });
   const ap = await admin.newPage();

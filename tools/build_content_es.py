@@ -78,7 +78,7 @@ URGENCY_ES = re.compile(r"\b(quedan pocos|pocos lugares|lugares disponibles|[uú
                         r"se acaba hoy)\b", re.I)
 MEMBER_MENTION = re.compile(r"\b(membres[ií]a|miembros?|suscri\w*|fundador\w*|al mes|por mes|/mes|cada mes)\b", re.I)
 MEMBER_TERMS = ("{{founding_price}}/mes", "se renueva cada mes", "cancela en línea cuando quieras",
-                "garantía de devolución de 14 días", "bloqueado mientras sigas suscrito", "5,000")
+                "garantía de devolución de 14 días", "bloqueado mientras sigas suscrito", "fecha de cierre")
 BOOK_TERMS = ("{{ebook_price}}", "un solo pago", "no es suscripción", "tuyos para quedártelos")
 GIFT_TERMS = ("$49", "$119", "nunca se renueva solo")
 AI_LINE = re.compile(r"\b(soy|somos|son|es|eres)\s+(un |una )?(personajes? de )?(ia|inteligencia artificial)\b|"

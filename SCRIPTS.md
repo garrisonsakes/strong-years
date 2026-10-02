@@ -156,17 +156,17 @@ Machine-readable copy: `data/content/scripts.json` (CHARACTERS.md §12.4 schema,
 | S132 | @changandsun | DUO | F27 | P17 | H372 | 47 | 99 | STRONG | E01 | OBJ3 DEMO |
 | S133 | @changandsun | DUO | F29 | P17 | H373 | 47 | 102 | BEGIN | E22 | IF_EVERY DEMO |
 | S134 | @changandsun | DUO | F08 | P17 | H374 | 46 | 103 | STRONG | E02, E43 | OBJ3 DEMO |
-| S135 | @changyin | CHANG | F38 | P20 | H375 | 50 | 126 | JOIN | none (opinion/offer) | OBJ3 LAUNCH |
+| S135 | @changyin | CHANG | F38 | P20 | H375 | 50 | 123 | JOIN | none (opinion/offer) | OBJ3 LAUNCH |
 | S136 | @changyin | CHANG | F39 | P20 | H376 | 45 | 99 | BEGIN | none (opinion/offer) | LAUNCH |
 | S137 | @changyin | CHANG | F11 | P19 | H377 | 47 | 104 | BALANCE | E12 | OBJ3 LAUNCH DEMO TEST_NOW · 30-Day Balance (kickoff) |
-| S138 | @changyin | CHANG | F38 | P20 | H378 | 47 | 122 | JOIN | none (opinion/offer) | OBJ3 LAUNCH |
+| S138 | @changyin | CHANG | F38 | P20 | H378 | 47 | 117 | JOIN | none (opinion/offer) | OBJ3 LAUNCH |
 | S139 | @changyin | CHANG | F33 | P16 | H379 | 46 | 103 | FAMILY | none (opinion/offer) | SHARE LAUNCH |
 | S140 | @changyin | CHANG | F38 | P20 | H380 | 48 | 115 | JOIN | none (opinion/offer) | OBJ3 LAUNCH DEMO |
-| S141 | @sunyoon.kitchen | SUN | F38 | P20 | H381 | 48 | 123 | JOIN | none (opinion/offer) | OBJ3 LAUNCH DEMO |
+| S141 | @sunyoon.kitchen | SUN | F38 | P20 | H381 | 48 | 122 | JOIN | none (opinion/offer) | OBJ3 LAUNCH DEMO |
 | S142 | @sunyoon.kitchen | SUN | F33 | P16 | H382 | 46 | 108 | FAMILY | none (opinion/offer) | SHARE LAUNCH |
-| S143 | @sunyoon.kitchen | SUN | F07 | P20 | H383 | 46 | 114 | JOIN | none (opinion/offer) | OBJ3 LAUNCH DEMO |
+| S143 | @sunyoon.kitchen | SUN | F07 | P20 | H383 | 46 | 115 | JOIN | none (opinion/offer) | OBJ3 LAUNCH DEMO |
 | S144 | @sunyoon.kitchen | SUN | F39 | P20 | H384 | 46 | 102 | BEGIN | none (opinion/offer) | OBJ3 LAUNCH |
-| S145 | @changandsun | DUO | F38 | P20 | H385 | 50 | 109 | JOIN | none (opinion/offer) | OBJ3 LAUNCH |
+| S145 | @changandsun | DUO | F38 | P20 | H385 | 50 | 107 | JOIN | none (opinion/offer) | OBJ3 LAUNCH |
 | S146 | @changandsun | DUO | F39 | P20 | H386 | 46 | 121 | JOIN | none (opinion/offer) | LAUNCH WATCH |
 | S147 | @changandsun | DUO | F11 | P19 | H387 | 48 | 105 | STRONG | E01 | OBJ3 LAUNCH DEMO TEST_NOW · 7-Day Strong (couples kickoff) |
 | S148 | @changandsun | DUO | F33 | P16 | H388 | 47 | 117 | FAMILY | none (opinion/offer) | SHARE LAUNCH |
@@ -198,20 +198,20 @@ Machine-readable copy: `data/content/scripts.json` (CHARACTERS.md §12.4 schema,
 | S174 | @changandsun | DUO | F10 | P20 | H414 | 46 | 103 | WAITLIST | none (opinion/offer) | SHARE |
 | S175 | @changandsun | DUO | F22 | P08 | H415 | 47 | 93 | WAITLIST | E17 | IF_EVERY DEMO |
 | S176 | @changyin | CHANG | F38 | P20 | H416 | 50 | 96 | BOOK | none (opinion/offer) | OBJ3 LAUNCH DEMO |
-| S177 | @changyin | CHANG | F38 | P20 | H417 | 52 | 111 | JOIN | none (opinion/offer) | OBJ3 LAUNCH |
+| S177 | @changyin | CHANG | F38 | P20 | H417 | 52 | 109 | JOIN | none (opinion/offer) | OBJ3 LAUNCH |
 | S178 | @changyin | CHANG | F01 | P02 | H418 | 50 | 107 | BOOK | E01 | LAUNCH DEMO |
 | S179 | @changyin | CHANG | F14 | P06 | H419 | 50 | 104 | BOOK | E02 | IF_EVERY LAUNCH DEMO |
-| S180 | @changyin | CHANG | F10 | P20 | H420 | 55 | 122 | BOOK | none (opinion/offer) | LAUNCH |
+| S180 | @changyin | CHANG | F10 | P20 | H420 | 55 | 115 | BOOK | none (opinion/offer) | LAUNCH |
 | S181 | @sunyoon.kitchen | SUN | F38 | P20 | H421 | 48 | 100 | BOOK | E28, E52 | OBJ3 LAUNCH DEMO |
 | S182 | @sunyoon.kitchen | SUN | F31 | P11 | H422 | 48 | 93 | BOOK | E28, E52 | OBJ3 WATCH LAUNCH DEMO KITCHEN_SERIES |
 | S183 | @sunyoon.kitchen | SUN | F07 | P16 | H423 | 46 | 97 | BOOK | E28 | LAUNCH |
-| S184 | @sunyoon.kitchen | SUN | F10 | P20 | H424 | 54 | 117 | JOIN | none (opinion/offer) | LAUNCH |
+| S184 | @sunyoon.kitchen | SUN | F10 | P20 | H424 | 54 | 118 | JOIN | none (opinion/offer) | LAUNCH |
 | S185 | @sunyoon.kitchen | SUN | F33 | P16 | H425 | 48 | 97 | FAMILY | none (opinion/offer) | OBJ3 LAUNCH SHARE |
-| S186 | @changandsun | DUO | F38 | P20 | H426 | 57 | 119 | BOOK | none (opinion/offer) | OBJ3 LAUNCH |
+| S186 | @changandsun | DUO | F38 | P20 | H426 | 57 | 117 | BOOK | none (opinion/offer) | OBJ3 LAUNCH |
 | S187 | @changandsun | DUO | F10 | P20 | H427 | 48 | 100 | BOOK | none (opinion/offer) | IF_EVERY LAUNCH |
-| S188 | @changandsun | DUO | F38 | P20 | H428 | 55 | 107 | JOIN | none (opinion/offer) | OBJ3 LAUNCH |
-| S189 | @changandsun | DUO | F26 | P20 | H429 | 54 | 119 | BOOK | none (opinion/offer) | OBJ3 LAUNCH |
-| S190 | @changandsun | DUO | F39 | P20 | H430 | 50 | 92 | BOOK | none (opinion/offer) | LAUNCH |
+| S188 | @changandsun | DUO | F38 | P20 | H428 | 55 | 108 | JOIN | none (opinion/offer) | OBJ3 LAUNCH |
+| S189 | @changandsun | DUO | F26 | P20 | H429 | 54 | 116 | BOOK | none (opinion/offer) | OBJ3 LAUNCH |
+| S190 | @changandsun | DUO | F39 | P20 | H430 | 50 | 91 | BOOK | none (opinion/offer) | LAUNCH |
 
 ---
 
@@ -5131,39 +5131,39 @@ Heart condition or new chest symptoms? Get cleared first.
 ---
 
 ## S135: Doors open: founding members
-**Page** @changyin · **Speaker** CHANG · **Format** F38 · **Pillar** P20 (Behind the AI / trust) · **Hook** H375 · **Target** 50 s · **Spoken words** 126 · **CTA** `JOIN` → Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)
+**Page** @changyin · **Speaker** CHANG · **Format** F38 · **Pillar** P20 (Behind the AI / trust) · **Hook** H375 · **Target** 50 s · **Spoken words** 123 · **CTA** `JOIN` → Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)
 
-**Hook line:** "Garage door's open. So is Strong Years. Founding members, first 5,000."
+**Hook line:** "Garage door's open. So is Strong Years. Founding members, open now."
 
-**Virality (VIRALITY_SYSTEM.md §2):** 63.3 · gate PASS · hook class OBJ3 · needs: no open loop / re-hook by second 3–6; no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+**Virality (VIRALITY_SYSTEM.md §2):** 70.3 · gate PASS · hook class OBJ3 · needs: no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
 **Grammar:** OBJ3, LAUNCH · **Frame-1 prop:** garage door rolling open at sunrise · **Founding launch week**  
 **3-second skip/safety line:** "Check with your doctor before starting."
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
-| 0-3 | CHANG | Garage door's open. So is Strong Years. Founding members, first 5,000. | DOORS OPEN · FOUNDING 5,000 | SET-GARAGE · C-TRAIN-A · the garage door rolls up on sunrise light; Chang lifts a kettlebell off the mat · wide then medium-full |
+| 0-3 | CHANG | Garage door's open. So is Strong Years. Founding members, open now. | DOORS OPEN · FOUNDING PRICE | SET-GARAGE · C-TRAIN-A · the garage door rolls up on sunrise light; Chang lifts a kettlebell off the mat · wide then medium-full |
 | 3-10 | CHANG | What you get: a new eight-to-twelve-minute session with me every morning. A chair version of everything. | 8–12 min daily · chair version of everything | same · phone screen inset: today's session, level switch Rebuild / Steady / Strong / Iron · insert |
 | 10-17 | CHANG | Sun's Sunday recipes. A monthly strength test so you see your number move. A real human coach live every Wednesday. | Recipes · monthly test · live coach Wednesdays | same · quick product cuts: recipe card, Strength Age chart, Wednesday Q&A screen · quick cuts |
 | 17-27 | CHANG | Founding price: {{FOUNDING_PRICE}} a month. First month charged today. It renews monthly until you cancel. Cancel online, anytime. | {{FOUNDING_PRICE}}/mo · charged today · renews monthly | same · price card, full-contrast, lower third · medium |
 | 27-35 | CHANG | Fourteen days to change your mind, full refund. And your founding price stays as long as you stay. | 14-day money-back · price stays | same · CU terms card · CU |
-| 35-41 | CHANG | Why 5,000? That's how many we can welcome properly in week one. The count is live on the page. | Real cap: 5,000 · live count | same · Chang taps the clipboard · medium |
+| 35-41 | CHANG | Why founding? The price you join at stays while you stay. Close date's on the page. | Price stays · close date on page | same · Chang taps the clipboard · medium |
 | 41-45 | CHANG | I'm an AI coach. The exercises are real. Check with your doctor before starting. | AI coach · real exercises | same · CU · CU |
 | 45-50 | CHANG | Comment JOIN. We'll DM the link and the full terms. | Comment JOIN | same · points at camera · medium CU |
 
-**Full spoken script (126 words):** Garage door's open. So is Strong Years. Founding members, first 5,000. What you get: a new eight-to-twelve-minute session with me every morning. A chair version of everything. Sun's Sunday recipes. A monthly strength test so you see your number move. A real human coach live every Wednesday. Founding price: {{FOUNDING_PRICE}} a month. First month charged today. It renews monthly until you cancel. Cancel online, anytime. Fourteen days to change your mind, full refund. And your founding price stays as long as you stay. Why 5,000? That's how many we can welcome properly in week one. The count is live on the page. I'm an AI coach. The exercises are real. Check with your doctor before starting. Comment JOIN. We'll DM the link and the full terms.
+**Full spoken script (123 words):** Garage door's open. So is Strong Years. Founding members, open now. What you get: a new eight-to-twelve-minute session with me every morning. A chair version of everything. Sun's Sunday recipes. A monthly strength test so you see your number move. A real human coach live every Wednesday. Founding price: {{FOUNDING_PRICE}} a month. First month charged today. It renews monthly until you cancel. Cancel online, anytime. Fourteen days to change your mind, full refund. And your founding price stays as long as you stay. Why founding? The price you join at stays while you stay. Close date's on the page. I'm an AI coach. The exercises are real. Check with your doctor before starting. Comment JOIN. We'll DM the link and the full terms.
 
-**Safety / cautions:** S-02 terms spoken + OST + caption; T-04 real cap only, no countdown or 'spots left'; S-01 access not outcome; AI disclosure; doctor line.
+**Safety / cautions:** S-02 terms spoken + OST + caption; T-04 no cap claims, no countdown or 'spots left'; S-01 access not outcome; AI disclosure; doctor line.
 
 **Caption** (footer auto-appended):
 ```
 Comment JOIN for the founding-member link and full terms.
 Strong Years is open: a new 8–12 minute session with Chang every morning (chair version of everything), Sun Yoon's Sunday recipes, a monthly Strength Age retest, and a real human coach live every Wednesday.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, one per person. Your founding price is locked for as long as you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first; see the live count at {{DOMAIN}}/terms#founding.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, one per person. Your founding price is locked for as long as you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.
 ```
 **Hashtags:** IG/FB #strongyears #foundingmember #strengthafter60 #changyin · TikTok #strongyears #over60 #foundingmember #changyin  
-**YouTube Shorts title:** Strong Years Is Open: Founding Members (First 5,000)  
-**Evidence:** none (opinion content, no health claim): Offer facts per BLITZ.md §3 (real 5,000 cap, charge-today, 14-day refund, price locked while subscribed). No health claim.  
+**YouTube Shorts title:** Strong Years Is Open: Founding Members  
+**Evidence:** none (opinion content, no health claim): Offer facts per BLITZ.md §3 (no seat cap, charge-today, 14-day refund, price locked while subscribed). No health claim.  
 **Production:** Wink: no · Thumbnail: "DOORS OPEN" · Music: warm soul instrumental
 
 ---
@@ -5245,7 +5245,7 @@ Dizzy spells or a recent fall? Tell your doctor before day one.
 ---
 
 ## S138: What 'founding member' actually means
-**Page** @changyin · **Speaker** CHANG · **Format** F38 · **Pillar** P20 (Behind the AI / trust) · **Hook** H378 · **Target** 47 s · **Spoken words** 122 · **CTA** `JOIN` → Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)
+**Page** @changyin · **Speaker** CHANG · **Format** F38 · **Pillar** P20 (Behind the AI / trust) · **Hook** H378 · **Target** 47 s · **Spoken words** 117 · **CTA** `JOIN` → Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)
 
 **Hook line:** "'Founding member.' Sounds fancy. Here's exactly what it means. Four things."
 
@@ -5260,20 +5260,20 @@ Dizzy spells or a recent fall? Tell your doctor before day one.
 | 3-11 | CHANG | One: you pay {{FOUNDING_PRICE}} today for your first month. Then it renews monthly until you cancel. | 1 · {{FOUNDING_PRICE}} today · renews monthly | same · card bullet 1 highlights · CU |
 | 11-18 | CHANG | Two: that price stays yours as long as you stay a member. If our price goes up later, yours doesn't. | 2 · Your price stays | same · bullet 2 · CU |
 | 18-25 | CHANG | Three: fourteen days to change your mind. Full refund. Cancel online, anytime, two screens at most. | 3 · 14-day money-back · cancel online | same · bullet 3; cancel screen inset · insert |
-| 25-32 | CHANG | Four: the first 5,000, or the close date, whichever comes first. The count is on the page. No countdown clocks. | 4 · First 5,000 · real count | same · bullet 4 · CU |
+| 25-32 | CHANG | Four: the founding price closes on a set date, on the page. No countdown clocks. | 4 · Close date on the page | same · bullet 4 · CU |
 | 32-39 | CHANG | What it doesn't mean: a promise about your body. It's a plan and a coach. The work is yours. | Not a promise · a plan + a coach | same · Chang sets the card down · medium |
 | 39-43 | CHANG | Heart condition or new to exercise? Check with your doctor first. | Heart condition? Doctor first. | same · CU · CU |
 | 43-47 | CHANG | Comment JOIN for the link and the full terms. | Comment JOIN | same · points · medium CU |
 
-**Full spoken script (122 words):** 'Founding member.' Sounds fancy. Here's exactly what it means. Four things. One: you pay {{FOUNDING_PRICE}} today for your first month. Then it renews monthly until you cancel. Two: that price stays yours as long as you stay a member. If our price goes up later, yours doesn't. Three: fourteen days to change your mind. Full refund. Cancel online, anytime, two screens at most. Four: the first 5,000, or the close date, whichever comes first. The count is on the page. No countdown clocks. What it doesn't mean: a promise about your body. It's a plan and a coach. The work is yours. Heart condition or new to exercise? Check with your doctor first. Comment JOIN for the link and the full terms.
+**Full spoken script (117 words):** 'Founding member.' Sounds fancy. Here's exactly what it means. Four things. One: you pay {{FOUNDING_PRICE}} today for your first month. Then it renews monthly until you cancel. Two: that price stays yours as long as you stay a member. If our price goes up later, yours doesn't. Three: fourteen days to change your mind. Full refund. Cancel online, anytime, two screens at most. Four: the founding price closes on a set date, on the page. No countdown clocks. What it doesn't mean: a promise about your body. It's a plan and a coach. The work is yours. Heart condition or new to exercise? Check with your doctor first. Comment JOIN for the link and the full terms.
 
 **Safety / cautions:** S-02 terms; T-04 (explicitly no countdown); S-01 (explicitly no outcome promise); doctor line.
 
 **Caption** (footer auto-appended):
 ```
 Comment JOIN for the founding-member link and full terms.
-What 'founding member' means, exactly: 1) you pay today for month one, then it renews monthly; 2) your price stays while you stay subscribed; 3) 14 days to change your mind, full refund, cancel online anytime; 4) the first 5,000 only, with the real count on the page. It isn't a promise about results; it's a daily plan and a coach.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, one per person. Your founding price is locked for as long as you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first; see the live count at {{DOMAIN}}/terms#founding.
+What 'founding member' means, exactly: 1) you pay today for month one, then it renews monthly; 2) your price stays while you stay subscribed; 3) 14 days to change your mind, full refund, cancel online anytime; 4) the founding price is open until the close date on the page. It isn't a promise about results; it's a daily plan and a coach.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, one per person. Your founding price is locked for as long as you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.
 ```
 **Hashtags:** IG/FB #strongyears #foundingmember #over60 #changyin · TikTok #strongyears #foundingmember #over60 #transparency  
 **YouTube Shorts title:** What 'Founding Member' Actually Means (4 Plain Facts)  
@@ -5348,7 +5348,7 @@ Heart condition or dizzy spells? Your parent checks with their doctor first.
 ```
 Comment JOIN for the founding-member link and full terms.
 Your first morning: pick a level (Rebuild is all chair; then Steady, Strong, Iron), use the 'sore knee today' swap if you need it, and do 8–12 minutes with Chang. Retest monthly; a real person on our team answers questions live on Wednesdays.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, one per person. Your founding price is locked for as long as you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first; see the live count at {{DOMAIN}}/terms#founding.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, one per person. Your founding price is locked for as long as you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.
 ```
 **Hashtags:** IG/FB #strongyears #foundingmember #homeworkout #changyin · TikTok #strongyears #over60 #morningroutine #foundingmember  
 **YouTube Shorts title:** What Your First Strong Years Session Looks Like (Founding Week)  
@@ -5358,7 +5358,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 ---
 
 ## S141: Doors open, kitchen side
-**Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F38 · **Pillar** P20 (Behind the AI / trust) · **Hook** H381 · **Target** 48 s · **Spoken words** 123 · **CTA** `JOIN` → Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)
+**Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F38 · **Pillar** P20 (Behind the AI / trust) · **Hook** H381 · **Target** 48 s · **Spoken words** 122 · **CTA** `JOIN` → Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)
 
 **Hook line:** "Recipe card, every Sunday, with a grade on the remedy. Doors are open."
 
@@ -5373,22 +5373,22 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 | 3-12 | SUN | Three recipes a week. A grocery list you can print. And one 'remedy', graded: good evidence, some evidence, or tradition only, enjoy it as food. | 3 recipes · list · remedy grade | same · three grade stamps shown · CU |
 | 12-20 | SUN | Plus his morning sessions, the monthly strength test, and a real person on our team live every Wednesday. | + daily sessions · monthly test · live Wednesdays | same · Chang waves through the window from the garage · two-plane |
 | 20-30 | SUN | Founding members: {{FOUNDING_PRICE}} a month. First month today. Renews monthly until you cancel. Cancel online, anytime. | {{FOUNDING_PRICE}}/mo · today · renews · cancel online | same · price card · medium |
-| 30-37 | SUN | Fourteen days to change your mind. Your price stays while you stay. First 5,000, or the close date. Real number. | 14 days · price stays · first 5,000 | same · CU · CU |
+| 30-37 | SUN | Fourteen days to change your mind. Your price stays while you stay. Founding price open until the close date. | 14 days · price stays · close date on page | same · CU · CU |
 | 37-42 | SUN | Food allergies or a kidney diet? Every recipe says who should skip it. Read that line. | Every recipe: who should skip | same · points at the skip line on the card · CU |
 | 42-48 | SUN | Comment JOIN. The team DMs the link and every term. I read the terms. Twice. | Comment JOIN | same · glasses on, reading · medium |
 
-**Full spoken script (123 words):** Recipe card, every Sunday, with a grade on the remedy. Doors are open. Three recipes a week. A grocery list you can print. And one 'remedy', graded: good evidence, some evidence, or tradition only, enjoy it as food. Plus his morning sessions, the monthly strength test, and a real person on our team live every Wednesday. Founding members: {{FOUNDING_PRICE}} a month. First month today. Renews monthly until you cancel. Cancel online, anytime. Fourteen days to change your mind. Your price stays while you stay. First 5,000, or the close date. Real number. Food allergies or a kidney diet? Every recipe says who should skip it. Read that line. Comment JOIN. The team DMs the link and every term. I read the terms. Twice.
+**Full spoken script (122 words):** Recipe card, every Sunday, with a grade on the remedy. Doors are open. Three recipes a week. A grocery list you can print. And one 'remedy', graded: good evidence, some evidence, or tradition only, enjoy it as food. Plus his morning sessions, the monthly strength test, and a real person on our team live every Wednesday. Founding members: {{FOUNDING_PRICE}} a month. First month today. Renews monthly until you cancel. Cancel online, anytime. Fourteen days to change your mind. Your price stays while you stay. Founding price open until the close date. Food allergies or a kidney diet? Every recipe says who should skip it. Read that line. Comment JOIN. The team DMs the link and every term. I read the terms. Twice.
 
-**Safety / cautions:** S-02 terms; T-04 real cap; evidence-grading promise matches OFFER.md feature 3; skip-line promise.
+**Safety / cautions:** S-02 terms; T-04 no cap claims; evidence-grading promise matches OFFER.md feature 3; skip-line promise.
 
 **Caption** (footer auto-appended):
 ```
 Comment JOIN for the founding-member link and full terms.
 The kitchen side of Strong Years: 3 Sunday recipes, a printable grocery list, and one remedy graded honestly (good evidence / some evidence / tradition only, enjoy it as food). Plus Chang's daily sessions, a monthly strength retest and a live Wednesday Q&A with a real person on our team.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, one per person. Your founding price is locked for as long as you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first; see the live count at {{DOMAIN}}/terms#founding.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, one per person. Your founding price is locked for as long as you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.
 ```
 **Hashtags:** IG/FB #strongyears #foundingmember #koreangrandma #sunyoon · TikTok #strongyears #koreangrandma #foundingmember #over60  
-**YouTube Shorts title:** Sun Yoon's Kitchen Is Open: Founding Members (First 5,000)  
+**YouTube Shorts title:** Sun Yoon's Kitchen Is Open: Founding Members  
 **Evidence:** none (opinion content, no health claim): Offer facts per BLITZ.md; kitchen feature per OFFER.md §1.2.  
 **Production:** Running bit: I read the terms. Twice. · Wink: no · Thumbnail: "DOORS OPEN" · Music: playful jazz
 
@@ -5433,7 +5433,7 @@ New to exercise or a heart condition? Talk to your doctor before starting.
 ---
 
 ## S143: I made them put the cancel button where you can find it
-**Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F07 · **Pillar** P20 (Behind the AI / trust) · **Hook** H383 · **Target** 46 s · **Spoken words** 114 · **CTA** `JOIN` → Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)
+**Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F07 · **Pillar** P20 (Behind the AI / trust) · **Hook** H383 · **Target** 46 s · **Spoken words** 115 · **CTA** `JOIN` → Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)
 
 **Hook line:** "Cancel button. I made them put it where you can find it. Watch."
 
@@ -5448,11 +5448,11 @@ New to exercise or a heart condition? Talk to your doctor before starting.
 | 3-12 | SUN | Account. Membership. Cancel. One screen offers you a deal. Next to it, a button just as big: 'Finish canceling'. Two screens. Done. | 2 screens · 'Finish canceling' as big | same · screen recording of the real two-screen flow · insert |
 | 12-18 | SUN | You never need to call us. No chatbot maze. No 'are you sure' five times. | No call needed · no maze | same · over-the-glasses look · CU |
 | 18-27 | SUN | Founding members pay {{FOUNDING_PRICE}} a month. First month today. Renews monthly. We email you before it renews. | {{FOUNDING_PRICE}}/mo · renews · reminder email | same · price card · medium |
-| 27-35 | SUN | Fourteen days to change your mind, full refund. Your price stays while you stay. First 5,000, or the close date. | 14 days · price stays · first 5,000 | same · CU · CU |
+| 27-35 | SUN | Fourteen days to change your mind, full refund. Your price stays while you stay. Founding price open until the close date. | 14 days · price stays · close date on page | same · CU · CU |
 | 35-40 | SUN | Heart condition or new to exercise? Ask your doctor first. Then come. | Doctor first. Then come. | same · CU · CU |
 | 40-46 | SUN | Comment JOIN for the link and the terms. You'll probably stay. But you can leave. | Comment JOIN | same · puts phone down, smile · medium |
 
-**Full spoken script (114 words):** Cancel button. I made them put it where you can find it. Watch. Account. Membership. Cancel. One screen offers you a deal. Next to it, a button just as big: 'Finish canceling'. Two screens. Done. You never need to call us. No chatbot maze. No 'are you sure' five times. Founding members pay {{FOUNDING_PRICE}} a month. First month today. Renews monthly. We email you before it renews. Fourteen days to change your mind, full refund. Your price stays while you stay. First 5,000, or the close date. Heart condition or new to exercise? Ask your doctor first. Then come. Comment JOIN for the link and the terms. You'll probably stay. But you can leave.
+**Full spoken script (115 words):** Cancel button. I made them put it where you can find it. Watch. Account. Membership. Cancel. One screen offers you a deal. Next to it, a button just as big: 'Finish canceling'. Two screens. Done. You never need to call us. No chatbot maze. No 'are you sure' five times. Founding members pay {{FOUNDING_PRICE}} a month. First month today. Renews monthly. We email you before it renews. Fourteen days to change your mind, full refund. Your price stays while you stay. Founding price open until the close date. Heart condition or new to exercise? Ask your doctor first. Then come. Comment JOIN for the link and the terms. You'll probably stay. But you can leave.
 
 **Safety / cautions:** Cancel flow described exactly as OFFER.md (two screens, save offer next to an equally prominent 'Finish canceling'); S-02 terms; pre-renewal email per BLITZ 'what must be true' #1.
 
@@ -5460,7 +5460,7 @@ New to exercise or a heart condition? Talk to your doctor before starting.
 ```
 Comment JOIN for the founding-member link and full terms.
 Cancelling takes two screens: Account → Membership → one save offer shown next to an equally big 'Finish canceling' button. You never need to call us. We email you before each renewal.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, one per person. Your founding price is locked for as long as you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first; see the live count at {{DOMAIN}}/terms#founding.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, one per person. Your founding price is locked for as long as you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.
 ```
 **Hashtags:** IG/FB #strongyears #transparency #koreangrandma #sunyoon · TikTok #cancelbutton #strongyears #koreangrandma #transparency  
 **YouTube Shorts title:** I Made Them Put the Cancel Button Where You Can Find It  
@@ -5506,7 +5506,7 @@ Sun's four rules: 1) she's an AI character with a fictional story, 2) every numb
 ---
 
 ## S145: Doors open: fifty years (fictional), founding members (real)
-**Page** @changandsun · **Speaker** DUO · **Format** F38 · **Pillar** P20 (Behind the AI / trust) · **Hook** H385 · **Target** 50 s · **Spoken words** 109 · **CTA** `JOIN` → Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)
+**Page** @changandsun · **Speaker** DUO · **Format** F38 · **Pillar** P20 (Behind the AI / trust) · **Hook** H385 · **Target** 50 s · **Spoken words** 107 · **CTA** `JOIN` → Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)
 
 **Hook line:** "Fifty years married. Fictional. Founding members: real. Doors are open."
 
@@ -5517,27 +5517,27 @@ Sun's four rules: 1) she's an AI character with a fictional story, 2) every numb
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
-| 0-3 | SUN | Fifty years married. Fictional. Founding members: real. Doors are open. | DOORS OPEN · FOUNDING 5,000 | SET-LIVING · C-CASUAL + S-CARDI-JADE · Sun flips the living-room whiteboard from '50 YEARS' to 'DOORS OPEN' · two-shot |
+| 0-3 | SUN | Fifty years married. Fictional. Founding members: real. Doors are open. | DOORS OPEN · FOUNDING PRICE | SET-LIVING · C-CASUAL + S-CARDI-JADE · Sun flips the living-room whiteboard from '50 YEARS' to 'DOORS OPEN' · two-shot |
 | 3-10 | CHANG | Every morning, a new session with me. Eight to twelve minutes. A chair version of everything. | Daily 8–12 min · chair version | same · product inset: session screen · insert |
 | 10-16 | SUN | My recipes on Sundays. A strength test every month. A real person live on Wednesdays. | Recipes · monthly test · live Wednesdays | same · product cuts · quick cuts |
 | 16-25 | CHANG | Founding price: {{FOUNDING_PRICE}} a month, first month today. Renews monthly until you cancel. | {{FOUNDING_PRICE}}/mo · today · renews monthly | same · price card · medium |
 | 25-32 | SUN | Cancel online anytime. Two screens. Fourteen days to change your mind, full refund. | Cancel online · 14-day money-back | same · CU · CU |
-| 32-39 | CHANG | And your founding price stays as long as you stay. First 5,000, or the close date. The count is on the page. | Price stays · first 5,000 | same · two-shot · two-shot |
+| 32-39 | CHANG | And your founding price stays as long as you stay. Founding price open until the close date on the page. | Price stays · close date on page | same · two-shot · two-shot |
 | 39-44 | SUN | Heart condition, or new to exercise? Doctor first. Then us. | Doctor first. Then us. | same · CU · CU |
 | 44-50 | CHANG | Comment JOIN. We'll DM the link and the full terms. | Comment JOIN | same · Sun: 'Seven out of ten announcement.' · two-shot |
 
-**Full spoken script (109 words):** Fifty years married. Fictional. Founding members: real. Doors are open. Every morning, a new session with me. Eight to twelve minutes. A chair version of everything. My recipes on Sundays. A strength test every month. A real person live on Wednesdays. Founding price: {{FOUNDING_PRICE}} a month, first month today. Renews monthly until you cancel. Cancel online anytime. Two screens. Fourteen days to change your mind, full refund. And your founding price stays as long as you stay. First 5,000, or the close date. The count is on the page. Heart condition, or new to exercise? Doctor first. Then us. Comment JOIN. We'll DM the link and the full terms.
+**Full spoken script (107 words):** Fifty years married. Fictional. Founding members: real. Doors are open. Every morning, a new session with me. Eight to twelve minutes. A chair version of everything. My recipes on Sundays. A strength test every month. A real person live on Wednesdays. Founding price: {{FOUNDING_PRICE}} a month, first month today. Renews monthly until you cancel. Cancel online anytime. Two screens. Fourteen days to change your mind, full refund. And your founding price stays as long as you stay. Founding price open until the close date on the page. Heart condition, or new to exercise? Doctor first. Then us. Comment JOIN. We'll DM the link and the full terms.
 
-**Safety / cautions:** S-02 terms; T-04 real cap; S-01 access; fictional marriage disclosed; doctor line.
+**Safety / cautions:** S-02 terms; T-04 no cap claims; S-01 access; fictional marriage disclosed; doctor line.
 
 **Caption** (footer auto-appended):
 ```
 Comment JOIN for the founding-member link and full terms.
 Strong Years with Chang & Sun (AI characters, fictional 50-year marriage): a daily 8–12 minute session with a chair version of everything, Sunday recipes, a monthly strength retest and a live Wednesday Q&A with a real person on the team.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, one per person. Your founding price is locked for as long as you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first; see the live count at {{DOMAIN}}/terms#founding.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, one per person. Your founding price is locked for as long as you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.
 ```
 **Hashtags:** IG/FB #strongyears #foundingmember #couplegoals #changandsun · TikTok #strongyears #couplegoals #foundingmember #over60  
-**YouTube Shorts title:** Chang & Sun: Doors Open for Founding Members (First 5,000)  
+**YouTube Shorts title:** Chang & Sun: Doors Open for Founding Members  
 **Evidence:** none (opinion content, no health claim): Offer facts per BLITZ.md §3.  
 **Production:** Running bit: Seven out of ten; anniversary whiteboard · Wink: no · Thumbnail: "DOORS OPEN" · Music: playful jazz
 
@@ -5572,7 +5572,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 ```
 Comment JOIN for the founding-member link and full terms.
 Chang Yin and Sun Yoon are AI characters made by a team; their 50-year marriage is fiction. The research is real and cited in every caption, and the free videos stay free.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, one per person. Your founding price is locked for as long as you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first; see the live count at {{DOMAIN}}/terms#founding.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, one per person. Your founding price is locked for as long as you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.
 ```
 **Hashtags:** IG/FB #aicharacter #changandsun #strongyears #couplegoals · TikTok #aicharacter #changandsun #couplegoals #strongyears  
 **YouTube Shorts title:** Hi, We're AI. (And the Membership Is Open.)  
@@ -5675,19 +5675,19 @@ Gift: 3 months $49 or 12 months $119, prepaid. It starts the day they open it, e
 | 15-21 | CHANG | Not for founding members. Your price stays as long as you stay subscribed. | Your price stays while you stay | same · CU · CU |
 | 21-27 | SUN | And if I hate it? | — | same · eyebrow · CU |
 | 27-35 | CHANG | Fourteen days, full refund. Or cancel online, anytime, two screens. We email before every renewal. | 14-day refund · cancel online · renewal email | same · cancel-screen inset · insert |
-| 35-40 | SUN | And 5,000? | — | same · CU · CU |
-| 40-44 | CHANG | Real cap. Real count, on the page. Heart condition? Doctor first. | Real cap · doctor first | same · CU · CU |
+| 35-40 | SUN | And the close date? | — | same · CU · CU |
+| 40-44 | CHANG | On the page. No countdown. Heart condition? Doctor first. | Close date on page · doctor first | same · CU · CU |
 | 44-47 | SUN | Seven out of ten. Comment JOIN for the terms. | Comment JOIN | same · takes the card · two-shot |
 
-**Full spoken script (84 words):** 'Founding price, locked.' Locked how? Show me the terms. {{FOUNDING_PRICE}} a month. First month charged today. Renews monthly until you cancel. And if the price goes up next year? Not for founding members. Your price stays as long as you stay subscribed. And if I hate it? Fourteen days, full refund. Or cancel online, anytime, two screens. We email before every renewal. And 5,000? Real cap. Real count, on the page. Heart condition? Doctor first. Seven out of ten. Comment JOIN for the terms.
+**Full spoken script (84 words):** 'Founding price, locked.' Locked how? Show me the terms. {{FOUNDING_PRICE}} a month. First month charged today. Renews monthly until you cancel. And if the price goes up next year? Not for founding members. Your price stays as long as you stay subscribed. And if I hate it? Fourteen days, full refund. Or cancel online, anytime, two screens. We email before every renewal. And the close date? On the page. No countdown. Heart condition? Doctor first. Seven out of ten. Comment JOIN for the terms.
 
-**Safety / cautions:** S-02 terms; T-04 real cap; study-card bit repurposed as a terms card (no fake document).
+**Safety / cautions:** S-02 terms; T-04 no cap claims; study-card bit repurposed as a terms card (no fake document).
 
 **Caption** (footer auto-appended):
 ```
 Comment JOIN for the founding-member link and full terms.
-Sun's cross-examination, answered: the founding price stays as long as you stay subscribed; 14 days for a full refund; cancel online anytime in two screens; a reminder email before every renewal; the 5,000 cap is real and counted on the page.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, one per person. Your founding price is locked for as long as you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first; see the live count at {{DOMAIN}}/terms#founding.
+Sun's cross-examination, answered: the founding price stays as long as you stay subscribed; 14 days for a full refund; cancel online anytime in two screens; a reminder email before every renewal; the founding price is open until the close date on the page.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, one per person. Your founding price is locked for as long as you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.
 ```
 **Hashtags:** IG/FB #strongyears #foundingmember #couplegoals #changandsun · TikTok #showmetheterms #couplegoals #strongyears #over60  
 **YouTube Shorts title:** 'Founding Price, Locked.' She Made Him Show the Terms.  
@@ -5724,7 +5724,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 ```
 Comment JOIN for the founding-member link and full terms.
 Founding-week answers: yes, it's a monthly subscription; you need a chair and a counter; the Rebuild level is all chair; we're AI characters (the exercises and studies are real; a real team member answers live on Wednesdays); heart condition questions go to your doctor.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, one per person. Your founding price is locked for as long as you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first; see the live count at {{DOMAIN}}/terms#founding.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, one per person. Your founding price is locked for as long as you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.
 ```
 **Hashtags:** IG/FB #strongyears #qanda #changandsun #foundingmember · TikTok #qanda #strongyears #couplegoals #over60  
 **YouTube Shorts title:** Founding Week Q&A: Is It a Subscription? (Yes. Here Are the Terms.)  
@@ -6720,7 +6720,7 @@ The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's St
 ---
 
 ## S177: Founding membership: the terms, out loud
-**Page** @changyin · **Speaker** CHANG · **Format** F38 · **Pillar** P20 (Behind the AI / trust) · **Hook** H417 · **Target** 52 s · **Spoken words** 111 · **CTA** `JOIN` → Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)
+**Page** @changyin · **Speaker** CHANG · **Format** F38 · **Pillar** P20 (Behind the AI / trust) · **Hook** H417 · **Target** 52 s · **Spoken words** 109 · **CTA** `JOIN` → Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)
 
 **Hook line:** "Founding membership. I'll read you the terms out loud. All of them."
 
@@ -6735,20 +6735,20 @@ The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's St
 | 3-11 | CHANG | {{FOUNDING_PRICE}} a month. Your first month is charged today. It renews monthly at the same price until you cancel. | {{FOUNDING_PRICE}}/mo · charged today · renews monthly | same · terms card CU, full contrast · CU |
 | 11-18 | CHANG | Cancel online, anytime, in two screens. Fourteen days to change your mind, full refund. | Cancel online · 14-day money-back | same · phone inset: the cancel screen · insert |
 | 18-27 | CHANG | Your founding price is locked for as long as you stay subscribed. Pauses included. | Locked while you stay subscribed | same · medium · medium |
-| 27-36 | CHANG | First 5,000 members. That's a real number. The live count is on the page. No countdown clock. | First 5,000 · live count | same · phone inset: the live counter · insert |
+| 27-36 | CHANG | Founding price, open to everyone until the close date on the page. No countdown clock. | Close date on the page | same · phone inset: the terms page · insert |
 | 36-44 | CHANG | What you get: a new session with me every morning, her recipes Sundays, a strength retest each month. | Daily session · recipes · retest | same · quick product cuts · quick cuts |
 | 44-48 | CHANG | I'm AI. Check with your doctor before starting. | AI coach · doctor first | same · CU · CU |
 | 48-52 | CHANG | Comment JOIN for the link and the full terms. | Comment JOIN | same · clips the card back · medium |
 
-**Full spoken script (111 words):** Founding membership. I'll read you the terms out loud. All of them. {{FOUNDING_PRICE}} a month. Your first month is charged today. It renews monthly at the same price until you cancel. Cancel online, anytime, in two screens. Fourteen days to change your mind, full refund. Your founding price is locked for as long as you stay subscribed. Pauses included. First 5,000 members. That's a real number. The live count is on the page. No countdown clock. What you get: a new session with me every morning, her recipes Sundays, a strength retest each month. I'm AI. Check with your doctor before starting. Comment JOIN for the link and the full terms.
+**Full spoken script (109 words):** Founding membership. I'll read you the terms out loud. All of them. {{FOUNDING_PRICE}} a month. Your first month is charged today. It renews monthly at the same price until you cancel. Cancel online, anytime, in two screens. Fourteen days to change your mind, full refund. Your founding price is locked for as long as you stay subscribed. Pauses included. Founding price, open to everyone until the close date on the page. No countdown clock. What you get: a new session with me every morning, her recipes Sundays, a strength retest each month. I'm AI. Check with your doctor before starting. Comment JOIN for the link and the full terms.
 
-**Safety / cautions:** S-02 terms spoken + OST + caption; T-04 real cap only, live count, no countdown; S-01 access not outcome; 'locked for as long as you stay subscribed' wording.
+**Safety / cautions:** S-02 terms spoken + OST + caption; T-04 no cap claims, no countdown; S-01 access not outcome; 'locked for as long as you stay subscribed' wording.
 
 **Caption** (footer auto-appended):
 ```
 Comment JOIN for the founding-member link and full terms.
 What you get: a new 8–12 minute session with Chang every morning (chair version of everything), Sun Yoon's recipes every Sunday and a monthly strength retest.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Open to the first 5,000 founding members; the live count is at {{DOMAIN}}/terms#founding.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.
 ```
 **Hashtags:** IG/FB #strongyears #foundingmember #changyin #over60 · TikTok #strongyears #foundingmember #changyin #over60  
 **YouTube Shorts title:** Founding Membership: Every Term, Read Out Loud  
@@ -6836,42 +6836,42 @@ The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's St
 
 ---
 
-## S180: Why 5,000? The real counter.
-**Page** @changyin · **Speaker** CHANG · **Format** F10 · **Pillar** P20 (Behind the AI / trust) · **Hook** H420 · **Target** 55 s · **Spoken words** 122 · **CTA** `BOOK` → Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)
+## S180: Why a founding price? What locked means.
+**Page** @changyin · **Speaker** CHANG · **Format** F10 · **Pillar** P20 (Behind the AI / trust) · **Hook** H420 · **Target** 55 s · **Spoken words** 115 · **CTA** `BOOK` → Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)
 
-**Hook line:** "Why only 5,000 founding members? Because that's how many we can welcome properly."
+**Hook line:** "Why a founding price? Because the first members shape this."
 
-**Virality (VIRALITY_SYSTEM.md §2):** 66.8 · gate PASS · hook class OBJ3 · needs: no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
+**Virality (VIRALITY_SYSTEM.md §2):** 61.8 · gate PASS · hook class OBJ3 · needs: no concrete number in the hook or re-hook; no visible demo in frame 1 (talking head / symbolic prop: rel 0.71–0.72); no share trigger ('send this to…', 'do it with your…'; shares rank first, POSTDB §3c); no save trigger (a routine / day N / tonight / write it down)
 
-**Grammar:** LAUNCH · **Frame-1 prop:** tally marks chalked on the garage door · **Founding launch week**  
+**Grammar:** LAUNCH · **Frame-1 prop:** a date chalked on the garage door · **Founding launch week**  
 **3-second skip/safety line:** "Check with your doctor before starting."
 
 | Time (s) | Speaker | Spoken | On-screen text | Shot (set · wardrobe · action · camera) |
 |---|---|---|---|---|
-| 0-3 | CHANG | Why only 5,000 founding members? Because that's how many we can welcome properly. | WHY 5,000? THE REAL COUNT | SET-GARAGE · C-TRAIN-A · Chang chalks tally marks on the inside of the garage door · medium |
-| 3-11 | CHANG | The counter on the page is the real number from our system. No fake scarcity tricks. | Live count · real number | same · phone inset: the live counter · insert |
+| 0-3 | CHANG | Why a founding price? Because the first members shape this. | WHY A FOUNDING PRICE? | SET-GARAGE · C-TRAIN-A · Chang chalks the date on the inside of the garage door · medium |
+| 3-11 | CHANG | The close date is on the page. No fake scarcity tricks. | Close date · on the page | same · phone inset: the terms page · insert |
 | 11-20 | CHANG | How it works: you get the two books for {{EBOOK_PRICE}}, one-time. After checkout, one optional offer. | Books: {{EBOOK_PRICE}} one-time | same · the two books on the workbench · medium |
 | 20-30 | CHANG | Founding membership, {{FOUNDING_PRICE}} a month. If you add it, the first month is charged that day. It renews monthly until you cancel. | {{FOUNDING_PRICE}}/mo · renews monthly | same · terms card · CU |
 | 30-38 | CHANG | Cancel online in two screens. Fourteen days to change your mind. The price is locked for as long as you stay subscribed. | Cancel online · 14-day money-back | same · phone inset: the cancel screen · insert |
 | 38-45 | CHANG | Say no to the offer? You keep the books. Nobody chases you. | Say no? Keep the books. | same · shrugs · medium CU |
 | 45-50 | CHANG | I'm an AI coach. Check with your doctor before starting. | AI coach · doctor first | same · CU · CU |
-| 50-55 | CHANG | Comment BOOK for the link. The count is on the page. | Comment BOOK | same · adds one more tally · medium |
+| 50-55 | CHANG | Comment BOOK for the link. The close date is on the page. | Comment BOOK | same · taps the chalked date · medium |
 
-**Full spoken script (122 words):** Why only 5,000 founding members? Because that's how many we can welcome properly. The counter on the page is the real number from our system. No fake scarcity tricks. How it works: you get the two books for {{EBOOK_PRICE}}, one-time. After checkout, one optional offer. Founding membership, {{FOUNDING_PRICE}} a month. If you add it, the first month is charged that day. It renews monthly until you cancel. Cancel online in two screens. Fourteen days to change your mind. The price is locked for as long as you stay subscribed. Say no to the offer? You keep the books. Nobody chases you. I'm an AI coach. Check with your doctor before starting. Comment BOOK for the link. The count is on the page.
+**Full spoken script (115 words):** Why a founding price? Because the first members shape this. The close date is on the page. No fake scarcity tricks. How it works: you get the two books for {{EBOOK_PRICE}}, one-time. After checkout, one optional offer. Founding membership, {{FOUNDING_PRICE}} a month. If you add it, the first month is charged that day. It renews monthly until you cancel. Cancel online in two screens. Fourteen days to change your mind. The price is locked for as long as you stay subscribed. Say no to the offer? You keep the books. Nobody chases you. I'm an AI coach. Check with your doctor before starting. Comment BOOK for the link. The close date is on the page.
 
-**Safety / cautions:** T-04 real cap and live count; S-02 membership terms spoken + OST + caption; book is one-time; declining keeps the books.
+**Safety / cautions:** T-04 no cap claims, close date only; S-02 membership terms spoken + OST + caption; book is one-time; declining keeps the books.
 
 **Caption** (footer auto-appended):
 ```
 Comment BOOK for the link and what's inside.
-Why 5,000? It's how many founding members we can welcome properly. The counter on the page is the real number from our system.
+Why a founding price? The first members shape this, so their price stays while they stay. The close date is on the page.
 The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's Strong Kitchen (PDF). {{EBOOK_PRICE}} one-time, not a subscription, yours to keep. Checkout is on our Shopify store; the link comes in the DM.
-After checkout you'll see one optional offer, the Founding Membership: {{FOUNDING_PRICE}}/month. If you add it, {{FOUNDING_PRICE}} is charged that day for your first month, then it renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Open to the first 5,000 founding members; the live count is at {{DOMAIN}}/terms#founding.
+After checkout you'll see one optional offer, the Founding Membership: {{FOUNDING_PRICE}}/month. If you add it, {{FOUNDING_PRICE}} is charged that day for your first month, then it renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.
 ```
 **Hashtags:** IG/FB #strongyears #foundingmember #changyin #over60 · TikTok #strongyears #foundingmember #changyin #over60  
-**YouTube Shorts title:** Why Only 5,000 Founding Members? (The Real Counter)  
+**YouTube Shorts title:** Why a Founding Price? (What Locked Means)  
 **Evidence:** none (opinion content, no health claim): Offer explainer; matches CANON UPDATE 2 post-purchase flow.  
-**Production:** Wink: no · Thumbnail: "THE REAL COUNT" · Music: warm acoustic
+**Production:** Wink: no · Thumbnail: "FOUNDING PRICE" · Music: warm acoustic
 
 ---
 
@@ -6989,7 +6989,7 @@ The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's St
 ---
 
 ## S184: 'Is the membership worth it?' Short version.
-**Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F10 · **Pillar** P20 (Behind the AI / trust) · **Hook** H424 · **Target** 54 s · **Spoken words** 117 · **CTA** `JOIN` → Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)
+**Page** @sunyoon.kitchen · **Speaker** SUN · **Format** F10 · **Pillar** P20 (Behind the AI / trust) · **Hook** H424 · **Target** 54 s · **Spoken words** 118 · **CTA** `JOIN` → Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)
 
 **Hook line:** "'Is the membership worth it?' Short version: only if you'll use it. Here's how to know."
 
@@ -7005,19 +7005,19 @@ The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's St
 | 11-20 | SUN | Membership is {{FOUNDING_PRICE}} a month, first month charged today. It renews monthly until you cancel. | {{FOUNDING_PRICE}}/mo · renews monthly | same · terms card, full contrast · CU |
 | 20-29 | SUN | Cancel online, two screens. Fourteen days to change your mind, full refund. Price locked for as long as you stay subscribed. | Cancel online · 14-day money-back | same · phone inset: cancel screen · insert |
 | 29-38 | SUN | You get his session every morning, my recipes every Sunday, and a strength retest each month. | Daily session · Sunday recipes | same · product cuts · quick cuts |
-| 38-45 | SUN | Founding seats: the first 5,000. The count on the page is real. I checked. Twice. | First 5,000 · real count | same · phone inset: live counter · insert |
+| 38-45 | SUN | Founding price: open to everyone until the close date. It's on the page. I checked. Twice. | Close date on the page | same · phone inset: the terms page · insert |
 | 45-49 | SUN | New to exercise? Check with your doctor first. | New? Doctor first. | same · CU · CU |
 | 49-54 | SUN | Comment JOIN for the link and every term. | Comment JOIN | same · pats the card · medium |
 
-**Full spoken script (117 words):** 'Is the membership worth it?' Short version: only if you'll use it. Here's how to know. Start with the two books. If you do the seven days and want more, then join. Not before. Membership is {{FOUNDING_PRICE}} a month, first month charged today. It renews monthly until you cancel. Cancel online, two screens. Fourteen days to change your mind, full refund. Price locked for as long as you stay subscribed. You get his session every morning, my recipes every Sunday, and a strength retest each month. Founding seats: the first 5,000. The count on the page is real. I checked. Twice. New to exercise? Check with your doctor first. Comment JOIN for the link and every term.
+**Full spoken script (118 words):** 'Is the membership worth it?' Short version: only if you'll use it. Here's how to know. Start with the two books. If you do the seven days and want more, then join. Not before. Membership is {{FOUNDING_PRICE}} a month, first month charged today. It renews monthly until you cancel. Cancel online, two screens. Fourteen days to change your mind, full refund. Price locked for as long as you stay subscribed. You get his session every morning, my recipes every Sunday, and a strength retest each month. Founding price: open to everyone until the close date. It's on the page. I checked. Twice. New to exercise? Check with your doctor first. Comment JOIN for the link and every term.
 
-**Safety / cautions:** S-02 terms spoken + OST + caption; T-04 real cap; recommends the cheaper path first (anti-pressure, S-03).
+**Safety / cautions:** S-02 terms spoken + OST + caption; T-04 no cap claims; recommends the cheaper path first (anti-pressure, S-03).
 
 **Caption** (footer auto-appended):
 ```
 Comment JOIN for the founding-member link and full terms.
 Short version: start with the books; join only if you'll use it. Members get a new session with Chang every morning, Sun Yoon's recipes every Sunday and a monthly strength retest.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Open to the first 5,000 founding members; the live count is at {{DOMAIN}}/terms#founding.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.
 ```
 **Hashtags:** IG/FB #strongyears #foundingmember #sunyoon #honestanswers · TikTok #strongyears #foundingmember #sunyoon #honestanswers  
 **YouTube Shorts title:** Is the Membership Worth It? Short Version  
@@ -7064,7 +7064,7 @@ Gift: 3 months $49 or 12 months $119, prepaid. It starts the day they open it, e
 ---
 
 ## S186: Doors open: the honest version
-**Page** @changandsun · **Speaker** DUO · **Format** F38 · **Pillar** P20 (Behind the AI / trust) · **Hook** H426 · **Target** 57 s · **Spoken words** 119 · **CTA** `BOOK` → Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)
+**Page** @changandsun · **Speaker** DUO · **Format** F38 · **Pillar** P20 (Behind the AI / trust) · **Hook** H426 · **Target** 57 s · **Spoken words** 117 · **CTA** `BOOK` → Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)
 
 **Hook line:** "Doors open today. Here's the honest version, because he talks too slowly."
 
@@ -7079,21 +7079,21 @@ Gift: 3 months $49 or 12 months $119, prepaid. It starts the day they open it, e
 | 3-11 | CHANG | Two books. My 7-Day Strength Reset and her Strong Kitchen. {{EBOOK_PRICE}}, one-time. Yours to keep. | Two books · {{EBOOK_PRICE}} one-time | same · he holds them up · medium |
 | 11-21 | SUN | After checkout, one optional offer: founding membership. {{FOUNDING_PRICE}} a month, first month charged that day. It renews monthly until you cancel. | {{FOUNDING_PRICE}}/mo · renews monthly | same · terms card CU · CU |
 | 21-30 | CHANG | Cancel online in two screens. Fourteen days to change your mind. The price is locked for as long as you stay subscribed. | Cancel online · 14-day money-back | same · phone inset: cancel screen · insert |
-| 30-38 | SUN | First 5,000 founding members. The count on the page is real. No countdown. Nobody's yelling. | First 5,000 · real count | same · phone inset: live counter · insert |
+| 30-38 | SUN | Founding price until the close date on the page. No countdown. Nobody's yelling. | Close date on the page | same · phone inset: the terms page · insert |
 | 38-45 | CHANG | Say no to the membership? You keep the books. That's it. | Say no? Keep the books. | same · shrug · medium |
 | 45-51 | SUN | We're AI. The exercises and recipes are real. New to exercise? Check with your doctor. | We're AI · doctor first | same · CU · CU |
 | 51-57 | CHANG | Comment BOOK for the link and what's inside. | Comment BOOK | same · Sun hands him the books · two-shot |
 
-**Full spoken script (119 words):** Doors open today. Here's the honest version, because he talks too slowly. Two books. My 7-Day Strength Reset and her Strong Kitchen. {{EBOOK_PRICE}}, one-time. Yours to keep. After checkout, one optional offer: founding membership. {{FOUNDING_PRICE}} a month, first month charged that day. It renews monthly until you cancel. Cancel online in two screens. Fourteen days to change your mind. The price is locked for as long as you stay subscribed. First 5,000 founding members. The count on the page is real. No countdown. Nobody's yelling. Say no to the membership? You keep the books. That's it. We're AI. The exercises and recipes are real. New to exercise? Check with your doctor. Comment BOOK for the link and what's inside.
+**Full spoken script (117 words):** Doors open today. Here's the honest version, because he talks too slowly. Two books. My 7-Day Strength Reset and her Strong Kitchen. {{EBOOK_PRICE}}, one-time. Yours to keep. After checkout, one optional offer: founding membership. {{FOUNDING_PRICE}} a month, first month charged that day. It renews monthly until you cancel. Cancel online in two screens. Fourteen days to change your mind. The price is locked for as long as you stay subscribed. Founding price until the close date on the page. No countdown. Nobody's yelling. Say no to the membership? You keep the books. That's it. We're AI. The exercises and recipes are real. New to exercise? Check with your doctor. Comment BOOK for the link and what's inside.
 
-**Safety / cautions:** S-02 membership terms spoken + OST + caption; T-04 real cap; one-time book; AI disclosure; doctor line.
+**Safety / cautions:** S-02 membership terms spoken + OST + caption; T-04 no cap claims; one-time book; AI disclosure; doctor line.
 
 **Caption** (footer auto-appended):
 ```
 Comment BOOK for the link and what's inside.
 Doors are open. The honest version, start to finish.
 The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's Strong Kitchen (PDF). {{EBOOK_PRICE}} one-time, not a subscription, yours to keep. Checkout is on our Shopify store; the link comes in the DM.
-After checkout you'll see one optional offer, the Founding Membership: {{FOUNDING_PRICE}}/month. If you add it, {{FOUNDING_PRICE}} is charged that day for your first month, then it renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Open to the first 5,000 founding members; the live count is at {{DOMAIN}}/terms#founding.
+After checkout you'll see one optional offer, the Founding Membership: {{FOUNDING_PRICE}}/month. If you add it, {{FOUNDING_PRICE}} is charged that day for your first month, then it renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.
 ```
 **Hashtags:** IG/FB #strongyears #changandsun #foundingmember #over60 · TikTok #strongyears #changandsun #foundingmember #over60  
 **YouTube Shorts title:** Doors Open: The Honest Version (Books + Founding Offer)  
@@ -7140,7 +7140,7 @@ The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's St
 ---
 
 ## S188: Founding seats: what 'locked' means
-**Page** @changandsun · **Speaker** DUO · **Format** F38 · **Pillar** P20 (Behind the AI / trust) · **Hook** H428 · **Target** 55 s · **Spoken words** 107 · **CTA** `JOIN` → Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)
+**Page** @changandsun · **Speaker** DUO · **Format** F38 · **Pillar** P20 (Behind the AI / trust) · **Hook** H428 · **Target** 55 s · **Spoken words** 108 · **CTA** `JOIN` → Founding-membership link + full terms (NEW flow, clone TEST flow; DM states price, monthly renewal, cancel online, 14-day money-back before the /join link)
 
 **Hook line:** "'Locked' price. Locked how? She made me explain it properly."
 
@@ -7156,19 +7156,19 @@ The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's St
 | 12-21 | CHANG | Locked means: for as long as you stay subscribed, your price doesn't go up. Pauses included. | Locked while you stay subscribed | same · snaps the padlock shut · CU |
 | 21-29 | SUN | Cancel and come back later? Then it's the price on that day. That's fair. We say it now. | Cancel + return = that day's price | same · over-the-glasses look · CU |
 | 29-37 | CHANG | Cancel online in two screens. Fourteen days to change your mind, full refund. | Cancel online · 14-day money-back | same · phone inset: cancel screen · insert |
-| 37-44 | SUN | First 5,000 founding members, real count on the page. When it's full, it's full. | First 5,000 · real count | same · phone inset: live counter · insert |
+| 37-44 | SUN | Founding price until the close date on the page. After that, it's the standard price. | Close date on the page | same · phone inset: the terms page · insert |
 | 44-50 | CHANG | We're AI. The sessions are real. New to exercise? Check with your doctor. | We're AI · doctor first | same · CU · CU |
 | 50-55 | SUN | Comment JOIN for the link and every term. | Comment JOIN | same · she pockets the key · two-shot |
 
-**Full spoken script (107 words):** 'Locked' price. Locked how? She made me explain it properly. Founding membership: {{FOUNDING_PRICE}} a month, first month charged today. It renews monthly until you cancel. Locked means: for as long as you stay subscribed, your price doesn't go up. Pauses included. Cancel and come back later? Then it's the price on that day. That's fair. We say it now. Cancel online in two screens. Fourteen days to change your mind, full refund. First 5,000 founding members, real count on the page. When it's full, it's full. We're AI. The sessions are real. New to exercise? Check with your doctor. Comment JOIN for the link and every term.
+**Full spoken script (108 words):** 'Locked' price. Locked how? She made me explain it properly. Founding membership: {{FOUNDING_PRICE}} a month, first month charged today. It renews monthly until you cancel. Locked means: for as long as you stay subscribed, your price doesn't go up. Pauses included. Cancel and come back later? Then it's the price on that day. That's fair. We say it now. Cancel online in two screens. Fourteen days to change your mind, full refund. Founding price until the close date on the page. After that, it's the standard price. We're AI. The sessions are real. New to exercise? Check with your doctor. Comment JOIN for the link and every term.
 
-**Safety / cautions:** S-02 terms spoken + OST + caption; explains what 'locked' does and doesn't mean (no lifetime promise); T-04 real cap.
+**Safety / cautions:** S-02 terms spoken + OST + caption; explains what 'locked' does and doesn't mean (no lifetime promise); T-04 no cap claims.
 
 **Caption** (footer auto-appended):
 ```
 Comment JOIN for the founding-member link and full terms.
 What 'locked' means: your founding price doesn't go up for as long as you stay subscribed, pauses included. Cancel and come back later and it's the price on that day.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Open to the first 5,000 founding members; the live count is at {{DOMAIN}}/terms#founding.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.
 ```
 **Hashtags:** IG/FB #strongyears #foundingmember #changandsun #honestanswers · TikTok #strongyears #foundingmember #changandsun #honest  
 **YouTube Shorts title:** Founding Price 'Locked'? Here's Exactly What That Means  
@@ -7178,7 +7178,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 ---
 
 ## S189: Your questions, launch week
-**Page** @changandsun · **Speaker** DUO · **Format** F26 · **Pillar** P20 (Behind the AI / trust) · **Hook** H429 · **Target** 54 s · **Spoken words** 119 · **CTA** `BOOK` → Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)
+**Page** @changandsun · **Speaker** DUO · **Format** F26 · **Pillar** P20 (Behind the AI / trust) · **Hook** H429 · **Target** 54 s · **Spoken words** 116 · **CTA** `BOOK` → Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)
 
 **Hook line:** "Your questions from launch week. Real questions. No fake reviews. Let's go."
 
@@ -7193,12 +7193,12 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 | 3-11 | CHANG | 'Do I need equipment?' A sturdy chair and a counter. A band later, if you want one. | Chair + counter. That's it. | same · he holds up a card · CU |
 | 11-19 | SUN | 'Can I print the books?' Yes. {{EBOOK_PRICE}}, one-time, and they're yours. Print them. Spill soup on them. | {{EBOOK_PRICE}} one-time · print them | same · she holds up a soup-stained page · CU |
 | 19-30 | CHANG | 'Do I have to join?' No. After checkout there's one offer: {{FOUNDING_PRICE}} a month, first month charged that day, renews monthly until you cancel. | {{FOUNDING_PRICE}}/mo · renews monthly | same · terms card · CU |
-| 30-39 | SUN | Cancel online, two screens. Fourteen days to change your mind. Price locked for as long as you stay subscribed. First 5,000 only. | Cancel online · 14-day money-back | same · phone inset: cancel screen and live count · insert |
+| 30-39 | SUN | Cancel online, two screens. Fourteen days to change your mind. Price locked for as long as you stay subscribed. | Cancel online · 14-day money-back | same · phone inset: cancel screen and close date · insert |
 | 39-44 | CHANG | 'Are you real?' No. We're AI. The exercises are real. | No. We're AI. | same · the wink · CU |
 | 44-49 | SUN | New to exercise? Check with your doctor before starting. | New? Doctor first. | same · CU · CU |
 | 49-54 | CHANG | Comment BOOK for the link and what's inside. | Comment BOOK | same · puts the lid on the box · medium |
 
-**Full spoken script (119 words):** Your questions from launch week. Real questions. No fake reviews. Let's go. 'Do I need equipment?' A sturdy chair and a counter. A band later, if you want one. 'Can I print the books?' Yes. {{EBOOK_PRICE}}, one-time, and they're yours. Print them. Spill soup on them. 'Do I have to join?' No. After checkout there's one offer: {{FOUNDING_PRICE}} a month, first month charged that day, renews monthly until you cancel. Cancel online, two screens. Fourteen days to change your mind. Price locked for as long as you stay subscribed. First 5,000 only. 'Are you real?' No. We're AI. The exercises are real. New to exercise? Check with your doctor before starting. Comment BOOK for the link and what's inside.
+**Full spoken script (116 words):** Your questions from launch week. Real questions. No fake reviews. Let's go. 'Do I need equipment?' A sturdy chair and a counter. A band later, if you want one. 'Can I print the books?' Yes. {{EBOOK_PRICE}}, one-time, and they're yours. Print them. Spill soup on them. 'Do I have to join?' No. After checkout there's one offer: {{FOUNDING_PRICE}} a month, first month charged that day, renews monthly until you cancel. Cancel online, two screens. Fourteen days to change your mind. Price locked for as long as you stay subscribed. 'Are you real?' No. We're AI. The exercises are real. New to exercise? Check with your doctor before starting. Comment BOOK for the link and what's inside.
 
 **Safety / cautions:** Questions only (no testimonials, T-01); S-02 membership terms spoken + OST + caption; AI disclosure.
 
@@ -7207,7 +7207,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 Comment BOOK for the link and what's inside.
 Launch-week questions: you need a sturdy chair and a counter; yes, you can print the books; no, you don't have to join.
 The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's Strong Kitchen (PDF). {{EBOOK_PRICE}} one-time, not a subscription, yours to keep. Checkout is on our Shopify store; the link comes in the DM.
-After checkout you'll see one optional offer, the Founding Membership: {{FOUNDING_PRICE}}/month. If you add it, {{FOUNDING_PRICE}} is charged that day for your first month, then it renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Open to the first 5,000 founding members; the live count is at {{DOMAIN}}/terms#founding.
+After checkout you'll see one optional offer, the Founding Membership: {{FOUNDING_PRICE}}/month. If you add it, {{FOUNDING_PRICE}} is charged that day for your first month, then it renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.
 ```
 **Hashtags:** IG/FB #strongyears #changandsun #faq #over60 · TikTok #strongyears #changandsun #faq #over60  
 **YouTube Shorts title:** Launch Week: Your Questions, Answered  
@@ -7217,7 +7217,7 @@ After checkout you'll see one optional offer, the Founding Membership: {{FOUNDIN
 ---
 
 ## S190: End of launch week: nothing jumps at midnight
-**Page** @changandsun · **Speaker** DUO · **Format** F39 · **Pillar** P20 (Behind the AI / trust) · **Hook** H430 · **Target** 50 s · **Spoken words** 92 · **CTA** `BOOK` → Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)
+**Page** @changandsun · **Speaker** DUO · **Format** F39 · **Pillar** P20 (Behind the AI / trust) · **Hook** H430 · **Target** 50 s · **Spoken words** 91 · **CTA** `BOOK` → Starter books on Shopify ({{EBOOK_PRICE}} one-time: 7-Day Strength Reset + Sun Yoon's Strong Kitchen) + the optional post-purchase founding offer (FUNNEL.md §4.19)
 
 **Hook line:** "Not a countdown, not a midnight price jump. Launch week ends. Here's what changes."
 
@@ -7230,22 +7230,22 @@ After checkout you'll see one optional offer, the Founding Membership: {{FOUNDIN
 |---|---|---|---|---|
 | 0-3 | CHANG | Not a countdown, not a midnight price jump. Launch week ends. Here's what changes. | NO COUNTDOWN. HERE'S WHAT CHANGES. | SET-KITCHEN · C-KITCHEN + S-KITCHEN · Chang flips the kitchen wall calendar; no date is circled · medium |
 | 3-11 | SUN | Nothing about the books. They stay {{EBOOK_PRICE}}, one-time. Yours to keep. | Books: no change | same · she holds them up · medium |
-| 11-20 | CHANG | Founding seats, {{FOUNDING_PRICE}} a month, renew monthly, cancel online anytime. Open until 5,000, or a week's notice before we close. | {{FOUNDING_PRICE}}/mo · open until 5,000 | same · phone inset: live counter · insert |
+| 11-20 | CHANG | Founding seats, {{FOUNDING_PRICE}} a month, renew monthly, cancel online anytime. Open until the close date, with a week's notice. | {{FOUNDING_PRICE}}/mo · open until close date | same · phone inset: the terms page · insert |
 | 20-29 | SUN | We post more of what you liked. Fewer of what you didn't. You told us. We read it. | More of what you liked | same · she taps a stack of printed comments · CU |
 | 29-38 | CHANG | And every morning, a new session, same as before. Chair version of everything. | Every morning, as before | same · Chang in the garage, chair against the wall · medium-full |
 | 38-43 | SUN | New to exercise? Check with your doctor first. | New? Doctor first. | same · CU · CU |
 | 43-50 | CHANG | Comment BOOK for the link. No rush. Really. | Comment BOOK | same · Sun hangs the calendar back up · two-shot |
 
-**Full spoken script (92 words):** Not a countdown, not a midnight price jump. Launch week ends. Here's what changes. Nothing about the books. They stay {{EBOOK_PRICE}}, one-time. Yours to keep. Founding seats, {{FOUNDING_PRICE}} a month, renew monthly, cancel online anytime. Open until 5,000, or a week's notice before we close. We post more of what you liked. Fewer of what you didn't. You told us. We read it. And every morning, a new session, same as before. Chair version of everything. New to exercise? Check with your doctor first. Comment BOOK for the link. No rush. Really.
+**Full spoken script (91 words):** Not a countdown, not a midnight price jump. Launch week ends. Here's what changes. Nothing about the books. They stay {{EBOOK_PRICE}}, one-time. Yours to keep. Founding seats, {{FOUNDING_PRICE}} a month, renew monthly, cancel online anytime. Open until the close date, with a week's notice. We post more of what you liked. Fewer of what you didn't. You told us. We read it. And every morning, a new session, same as before. Chair version of everything. New to exercise? Check with your doctor first. Comment BOOK for the link. No rush. Really.
 
 **Safety / cautions:** T-04: explicitly no countdown or price jump; cohort closure only with a week's public notice; one-time book wording.
 
 **Caption** (footer auto-appended):
 ```
 Comment BOOK for the link and what's inside.
-Launch week is over and nothing jumps at midnight. Founding seats stay open until 5,000 members or until we close the founding cohort, and we'll announce any closing date at least a week ahead.
+Launch week is over and nothing jumps at midnight. The founding price stays open until we close the founding cohort, and we'll announce any closing date at least a week ahead.
 The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's Strong Kitchen (PDF). {{EBOOK_PRICE}} one-time, not a subscription, yours to keep. Checkout is on our Shopify store; the link comes in the DM.
-After checkout you'll see one optional offer, the Founding Membership: {{FOUNDING_PRICE}}/month. If you add it, {{FOUNDING_PRICE}} is charged that day for your first month, then it renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Open to the first 5,000 founding members; the live count is at {{DOMAIN}}/terms#founding.
+After checkout you'll see one optional offer, the Founding Membership: {{FOUNDING_PRICE}}/month. If you add it, {{FOUNDING_PRICE}} is charged that day for your first month, then it renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.
 ```
 **Hashtags:** IG/FB #strongyears #changandsun #norush #over60 · TikTok #strongyears #changandsun #norush #over60  
 **YouTube Shorts title:** End of Launch Week: No Countdown, Here's What Changes  

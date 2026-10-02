@@ -17,7 +17,8 @@ export interface LegalFacts {
   domain: string;
   membersUrl: string;
   foundingCloseDate: string; // human readable, e.g. "January 9, 2027"
-  foundingCap: number;
+  /** null = no seat cap (Oct 2 2026). */
+  foundingCap: number | null;
   foundingPrice: string; // "$25"
   standardPrice: string; // "$35"
   annualPrice: string; // "$249"
@@ -81,7 +82,7 @@ export function membershipPolicyHtml(f: LegalFacts): string {
 <p>Prices are in US dollars. Sales tax is added where it applies. On your bank statement the charge appears as STRONGYEARS MEMBER.</p>
 
 <h3 id="founding">2. The founding group</h3>
-<p>Founding membership is open to the first ${f.foundingCap.toLocaleString("en-US")} members or until ${esc(f.foundingCloseDate)}, whichever comes first. The count is the real number of founding memberships whose first charge succeeded and was not refunded or charged back. It is never reset, extended or reopened. If someone takes a refund, their seat goes back. The live count is shown on the founding membership page. After the group closes, new members join at the standard price of ${f.standardPrice} a month, and that price is actually charged.</p>
+<p>The founding price is open to everyone who joins before ${esc(f.foundingCloseDate)}. There is no limit on founding memberships. The close date is never extended or reopened. After it, new members join at the standard price of ${f.standardPrice} a month, and that price is actually charged.</p>
 <p>Your founding price stays the same for as long as you stay subscribed, including while your membership is paused. If you cancel and rejoin, you pay the price offered at that time.</p>
 
 <h3>3. Your consent</h3>
@@ -246,7 +247,7 @@ export function faqHtml(f: LegalFacts): string {
     ["Is Chang Yin real?", "No. Chang Yin and Sun Yoon are AI characters created by our team, and their story is invented. What is real: the exercises, the progressions and the recipes, built from published exercise and nutrition guidelines for older adults."],
     ["What do I get with the Starter Books?", "Two large-print PDF books to keep: Chang Yin's 7-Day Strength Reset (seven follow-along sessions, most of them next to a chair and a counter) and Sun Yoon's Strong Kitchen. They download instantly and they never renew."],
     ["What happens after I join the membership?", `Your first month is charged today. If you do nothing, your membership continues at the same price every month on the same date, until you cancel. We email you before every renewal. Changed your mind within 14 days? You have a 14-day money-back guarantee on your membership charge, once per person.`],
-    ["What is the founding price?", `${f.foundingPrice} a month, locked for as long as you stay subscribed, pauses included. Founding membership is open to the first ${f.foundingCap.toLocaleString("en-US")} members or until ${f.foundingCloseDate}, whichever comes first. After that, new members pay ${f.standardPrice} a month.`],
+    ["What is the founding price?", `${f.foundingPrice} a month, locked for as long as you stay subscribed, pauses included. The founding price is open to everyone who joins before ${f.foundingCloseDate}; there is no limit on founding memberships. After that, new members pay ${f.standardPrice} a month.`],
     ["How do I cancel?", `Cancel ${cancelMethods(f).replace(/<[^>]+>/g, "")}. Nobody will call you, and you never need to call us to cancel.`],
     ["Do I need equipment?", "No. A sturdy chair against a wall and a kitchen counter are enough. Some people add resistance loops after a few weeks."],
     ["Is this right for me?", "Strong Years is general fitness education for adults. It isn't physical therapy and doesn't replace your doctor. Check with your doctor before starting new exercise, especially with a heart condition, high blood pressure, recent surgery, a joint replacement, osteoporosis or dizziness. Every session has a chair-based version."],

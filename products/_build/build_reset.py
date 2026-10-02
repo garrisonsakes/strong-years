@@ -9,7 +9,7 @@ from evidence import appendix_md
 
 # Pricing canon (BRIEF.md CANON UPDATE 2 + 3, Oct 1 2026): the books are a one-time Shopify product ($7 / $12 / $15 cells,
 # default $12); the launch default is cell B, "$12 today = books + first month, then $25/mo"; founding $25/mo locked for as
-# long as you stay subscribed ($30 only if cell data supports it); $35 standard after the 5,000 cap; Essentials $12/mo as
+# long as you stay subscribed ($30 only if cell data supports it); $35 standard after the founding close date; Essentials $12/mo as
 # the save offer; 14-day money-back guarantee on the membership charge; email reminders; NO $1 trial, ever; no "text CANCEL".
 # build(price_cents) renders one PDF per price for the app (strength_reset_2500/3000/3500.pdf). 2000 = the app's
 # fallback when a buyer has no membership price, so it (and the base strength_reset.pdf) carries the generic canon text.

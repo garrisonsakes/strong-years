@@ -31,8 +31,8 @@ virality gate: 187/190 pass (≥60), 12 top-decile (≥85), median 72.2. Hard ga
 | Band | Scripts |
 |---|---|
 | top decile ≥85 | 12: S40, S73, S117, S153, S154, S155, S156, S158, S160, S161, S167, S175 |
-| 70–84 | 107: S01, S02, S03, S04, S05, S06, S07, S08, S09, S11, S12, S13, S14, S16, S17, S19, S20, S21, S22, S23, S24, S26, S29, S31, S33, S35, S41, S42, S43, S51, S52, S53, S57, S61, S62, S63, S64, S66, S67, S68, S69, S70, S71, S72, S76, S77, S78, S79, S80, S81, S83, S85, S86, S88, S89, S90, S91, S92, S93, S94, S95, S96, S98, S99, S101, S102, S104, S106, S111, S113, S119, S120, S121, S122, S123, S124, S127, S128, S129, S133, S137, S138, S139, S140, S142, S147, S152, S159, S162, S163, S164, S165, S166, S168, S170, S171, S172, S173, S174, S178, S179, S182, S183, S184, S185, S186, S190 |
-| 60–69 (pass) | 68: S10, S15, S18, S25, S27, S28, S30, S32, S34, S36, S38, S39, S44, S45, S46, S48, S50, S54, S55, S56, S58, S59, S60, S65, S74, S75, S82, S84, S87, S97, S100, S103, S105, S107, S108, S109, S110, S112, S114, S115, S116, S118, S125, S126, S130, S131, S132, S134, S135, S136, S141, S143, S144, S145, S146, S148, S149, S150, S151, S157, S169, S176, S177, S180, S181, S187, S188, S189 |
+| 70–84 | 108: S01, S02, S03, S04, S05, S06, S07, S08, S09, S11, S12, S13, S14, S16, S17, S19, S20, S21, S22, S23, S24, S26, S29, S31, S33, S35, S41, S42, S43, S51, S52, S53, S57, S61, S62, S63, S64, S66, S67, S68, S69, S70, S71, S72, S76, S77, S78, S79, S80, S81, S83, S85, S86, S88, S89, S90, S91, S92, S93, S94, S95, S96, S98, S99, S101, S102, S104, S106, S111, S113, S119, S120, S121, S122, S123, S124, S127, S128, S129, S133, S135, S137, S138, S139, S140, S142, S147, S152, S159, S162, S163, S164, S165, S166, S168, S170, S171, S172, S173, S174, S178, S179, S182, S183, S184, S185, S186, S190 |
+| 60–69 (pass) | 67: S10, S15, S18, S25, S27, S28, S30, S32, S34, S36, S38, S39, S44, S45, S46, S48, S50, S54, S55, S56, S58, S59, S60, S65, S74, S75, S82, S84, S87, S97, S100, S103, S105, S107, S108, S109, S110, S112, S114, S115, S116, S118, S125, S126, S130, S131, S132, S134, S136, S141, S143, S144, S145, S146, S148, S149, S150, S151, S157, S169, S176, S177, S180, S181, S187, S188, S189 |
 | below 60 | 3: S37, S47, S49 |
 
 **REWRITE backlog (legacy, unscheduled):** 3: S37 (59.4), S47 (59.5), S49 (55.2)
@@ -42,7 +42,7 @@ Hook classes: IF_EVERY 52 · OBJ3 40 · MYTH 25 · WATCH 23 · STATEMENT 19 · N
 ## Summary
 
 - Organic scripts: **190** (60 original + 130 expansion, of which 31 are founding-launch-week).
-- Expansion scripts with a visible physical demo (movement or food/prop demo on screen): 107/130; target length 30–59 s: 130/130; spoken words 76–126.
+- Expansion scripts with a visible physical demo (movement or food/prop demo on screen): 107/130; target length 30–59 s: 130/130; spoken words 76–123.
 - Expansion grammar tags: DEMO 90 · OBJ3 65 · IF_EVERY 37 · LAUNCH 31 · KITCHEN_SERIES 25 · WATCH 21 · TEST_NOW 19 · SHARE 19 · MYTH 19 · DEBUNK 12.
 - Series: Kitchen Gym 4 · Sun Checks Your Kitchen 21 · Loser Does Dishes 2 · Jajangmyeon Sunday 1 · Frank's Comeback 1 · 30-Day Balance (kickoff) 1 · 7-Day Strong (couples kickoff) 1.
 - Every expansion script has a unique hook (H301–H390), a ~3-second skip/safety line, and a unique frame-1 set + prop; the validator enforces all three across pages.

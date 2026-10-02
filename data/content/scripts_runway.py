@@ -8,7 +8,7 @@
 # Placeholders filled by the pipeline from live config (one value per render, never typed by hand):
 #   {{EBOOK_PRICE}}    the live ebook test-cell price ($7 / $12 / $15; default display $12)
 #   {{FOUNDING_PRICE}} the founding membership price ($25 default; $30 only if cell data supports it)
-#   {{DOMAIN}}         the site domain. The 5,000 founding cap is real; the live count is on {{DOMAIN}}/terms#founding.
+#   {{DOMAIN}}         the site domain. There is no founding seat cap; terms are on {{DOMAIN}}/terms#founding.
 # Honesty rules: no countdowns, no "spots left" numbers, no midnight price jumps, no testimonials, no outcome promises.
 # Founding price wording is always "locked for as long as you stay subscribed" (never "for life").
 # Same schema as scripts_blitz_*.py (see the header of scripts_blitz_chang.py for the v2 keys).
@@ -43,12 +43,12 @@ MEMBER = ("After checkout you'll see one optional offer, the Founding Membership
           "{{FOUNDING_PRICE}} is charged that day for your first month, then it renews monthly at the same price until you cancel. "
           "Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. "
           "Your founding price is locked for as long as you stay subscribed, pauses included. "
-          "Open to the first 5,000 founding members; the live count is at {{DOMAIN}}/terms#founding.")
+          "Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.")
 # Direct membership (JOIN) terms.
 JOIN = ("Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. "
         "Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. "
         "Your founding price is locked for as long as you stay subscribed, pauses included. "
-        "Open to the first 5,000 founding members; the live count is at {{DOMAIN}}/terms#founding.")
+        "Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.")
 GIFT = ("Gift: 3 months $49 or 12 months $119, prepaid. It starts the day they open it, ends after 3 or 12 months, and never auto-renews.")
 
 SCRIPTS = [
@@ -552,12 +552,12 @@ dict(id="S177", page="@changyin", speaker="CHANG", format="F38", pillar="P20", h
   ("3-11","CHANG","{{FOUNDING_PRICE}} a month. Your first month is charged today. It renews monthly at the same price until you cancel.","{{FOUNDING_PRICE}}/mo · charged today · renews monthly","same | terms card CU, full contrast | CU"),
   ("11-18","CHANG","Cancel online, anytime, in two screens. Fourteen days to change your mind, full refund.","Cancel online · 14-day money-back","same | phone inset: the cancel screen | insert"),
   ("18-27","CHANG","Your founding price is locked for as long as you stay subscribed. Pauses included.","Locked while you stay subscribed","same | medium | medium"),
-  ("27-36","CHANG","First 5,000 members. That's a real number. The live count is on the page. No countdown clock.","First 5,000 · live count","same | phone inset: the live counter | insert"),
+  ("27-36","CHANG","Founding price, open to everyone until the close date on the page. No countdown clock.","Close date on the page","same | phone inset: the terms page | insert"),
   ("36-44","CHANG","What you get: a new session with me every morning, her recipes Sundays, a strength retest each month.","Daily session · recipes · retest","same | quick product cuts | quick cuts"),
   ("44-48","CHANG","I'm AI. Check with your doctor before starting.","AI coach · doctor first","same | CU | CU"),
   ("48-52","CHANG","Comment JOIN for the link and the full terms.","Comment JOIN","same | clips the card back | medium"),
  ],
- move=False, tags=["offer"], safety="S-02 terms spoken + OST + caption; T-04 real cap only, live count, no countdown; S-01 access not outcome; 'locked for as long as you stay subscribed' wording.",
+ move=False, tags=["offer"], safety="S-02 terms spoken + OST + caption; T-04 no cap claims, no countdown; S-01 access not outcome; 'locked for as long as you stay subscribed' wording.",
  regression="", cta="JOIN",
  skip="Check with your doctor before starting.",
  caption="Comment JOIN for the founding-member link and full terms.\nWhat you get: a new 8–12 minute session with Chang every morning (chair version of everything), Sun Yoon's recipes every Sunday and a monthly strength retest.\n" + JOIN,
@@ -603,25 +603,25 @@ dict(id="S179", page="@changyin", speaker="CHANG", format="F14", pillar="P06", h
  yt="The Bottom Stair: Day 4 of the 7-Day Reset", ev=["E02"],
  note="NSCA (A) at grade; no outcome promise for the book.", bit="", wink=False, thumb="DAY 4: ONE STAIR", music="warm soul instrumental"),
 
-dict(id="S180", page="@changyin", speaker="CHANG", format="F10", pillar="P20", hook_id="H420", hcat="LCH", title="Why 5,000? The real counter.", secs=55, launch=True,
- prop="tally marks chalked on the garage door", obj="why", grammar=["LAUNCH"], demo=False,
+dict(id="S180", page="@changyin", speaker="CHANG", format="F10", pillar="P20", hook_id="H420", hcat="LCH", title="Why a founding price? What locked means.", secs=55, launch=True,
+ prop="a date chalked on the garage door", obj="why", grammar=["LAUNCH"], demo=False,
  beats=[
-  ("0-3","CHANG","Why only 5,000 founding members? Because that's how many we can welcome properly.","WHY 5,000? THE REAL COUNT",f"{G} | Chang chalks tally marks on the inside of the garage door | medium"),
-  ("3-11","CHANG","The counter on the page is the real number from our system. No fake scarcity tricks.","Live count · real number","same | phone inset: the live counter | insert"),
+  ("0-3","CHANG","Why a founding price? Because the first members shape this.","WHY A FOUNDING PRICE?",f"{G} | Chang chalks the date on the inside of the garage door | medium"),
+  ("3-11","CHANG","The close date is on the page. No fake scarcity tricks.","Close date · on the page","same | phone inset: the terms page | insert"),
   ("11-20","CHANG","How it works: you get the two books for {{EBOOK_PRICE}}, one-time. After checkout, one optional offer.","Books: {{EBOOK_PRICE}} one-time","same | the two books on the workbench | medium"),
   ("20-30","CHANG","Founding membership, {{FOUNDING_PRICE}} a month. If you add it, the first month is charged that day. It renews monthly until you cancel.","{{FOUNDING_PRICE}}/mo · renews monthly","same | terms card | CU"),
   ("30-38","CHANG","Cancel online in two screens. Fourteen days to change your mind. The price is locked for as long as you stay subscribed.","Cancel online · 14-day money-back","same | phone inset: the cancel screen | insert"),
   ("38-45","CHANG","Say no to the offer? You keep the books. Nobody chases you.","Say no? Keep the books.","same | shrugs | medium CU"),
   ("45-50","CHANG","I'm an AI coach. Check with your doctor before starting.","AI coach · doctor first","same | CU | CU"),
-  ("50-55","CHANG","Comment BOOK for the link. The count is on the page.","Comment BOOK","same | adds one more tally | medium"),
+  ("50-55","CHANG","Comment BOOK for the link. The close date is on the page.","Comment BOOK","same | taps the chalked date | medium"),
  ],
- move=False, tags=["offer"], safety="T-04 real cap and live count; S-02 membership terms spoken + OST + caption; book is one-time; declining keeps the books.",
+ move=False, tags=["offer"], safety="T-04 no cap claims, close date only; S-02 membership terms spoken + OST + caption; book is one-time; declining keeps the books.",
  regression="", cta="BOOK",
  skip="Check with your doctor before starting.",
- caption="Comment BOOK for the link and what's inside.\nWhy 5,000? It's how many founding members we can welcome properly. The counter on the page is the real number from our system.\n" + BOOK + "\n" + MEMBER,
+ caption="Comment BOOK for the link and what's inside.\nWhy a founding price? The first members shape this, so their price stays while they stay. The close date is on the page.\n" + BOOK + "\n" + MEMBER,
  ig=["#strongyears","#foundingmember","#changyin","#over60"], tt=["#strongyears","#foundingmember","#changyin","#over60"],
- yt="Why Only 5,000 Founding Members? (The Real Counter)", ev=[],
- note="Offer explainer; matches CANON UPDATE 2 post-purchase flow.", bit="", wink=False, thumb="THE REAL COUNT", music="warm acoustic"),
+ yt="Why a Founding Price? (What Locked Means)", ev=[],
+ note="Offer explainer; matches CANON UPDATE 2 post-purchase flow.", bit="", wink=False, thumb="FOUNDING PRICE", music="warm acoustic"),
 
 # ================================================================ LAUNCH WEEK: @sunyoon.kitchen (Sun solo) ================
 dict(id="S181", page="@sunyoon.kitchen", speaker="SUN", format="F38", pillar="P20", hook_id="H421", hcat="LCH", title="My Strong Kitchen book is out", secs=48, launch=True,
@@ -689,11 +689,11 @@ dict(id="S184", page="@sunyoon.kitchen", speaker="SUN", format="F10", pillar="P2
   ("11-20","SUN","Membership is {{FOUNDING_PRICE}} a month, first month charged today. It renews monthly until you cancel.","{{FOUNDING_PRICE}}/mo · renews monthly","same | terms card, full contrast | CU"),
   ("20-29","SUN","Cancel online, two screens. Fourteen days to change your mind, full refund. Price locked for as long as you stay subscribed.","Cancel online · 14-day money-back","same | phone inset: cancel screen | insert"),
   ("29-38","SUN","You get his session every morning, my recipes every Sunday, and a strength retest each month.","Daily session · Sunday recipes","same | product cuts | quick cuts"),
-  ("38-45","SUN","Founding seats: the first 5,000. The count on the page is real. I checked. Twice.","First 5,000 · real count","same | phone inset: live counter | insert"),
+  ("38-45","SUN","Founding price: open to everyone until the close date. It's on the page. I checked. Twice.","Close date on the page","same | phone inset: the terms page | insert"),
   ("45-49","SUN","New to exercise? Check with your doctor first.","New? Doctor first.","same | CU | CU"),
   ("49-54","SUN","Comment JOIN for the link and every term.","Comment JOIN","same | pats the card | medium"),
  ],
- move=False, tags=["offer"], safety="S-02 terms spoken + OST + caption; T-04 real cap; recommends the cheaper path first (anti-pressure, S-03).",
+ move=False, tags=["offer"], safety="S-02 terms spoken + OST + caption; T-04 no cap claims; recommends the cheaper path first (anti-pressure, S-03).",
  regression="", cta="JOIN",
  skip="New to exercise? Check with your doctor first.",
  caption="Comment JOIN for the founding-member link and full terms.\nShort version: start with the books; join only if you'll use it. Members get a new session with Chang every morning, Sun Yoon's recipes every Sunday and a monthly strength retest.\n" + JOIN,
@@ -728,12 +728,12 @@ dict(id="S186", page="@changandsun", speaker="DUO", format="F38", pillar="P20", 
   ("3-11","CHANG","Two books. My 7-Day Strength Reset and her Strong Kitchen. {{EBOOK_PRICE}}, one-time. Yours to keep.","Two books · {{EBOOK_PRICE}} one-time","same | he holds them up | medium"),
   ("11-21","SUN","After checkout, one optional offer: founding membership. {{FOUNDING_PRICE}} a month, first month charged that day. It renews monthly until you cancel.","{{FOUNDING_PRICE}}/mo · renews monthly","same | terms card CU | CU"),
   ("21-30","CHANG","Cancel online in two screens. Fourteen days to change your mind. The price is locked for as long as you stay subscribed.","Cancel online · 14-day money-back","same | phone inset: cancel screen | insert"),
-  ("30-38","SUN","First 5,000 founding members. The count on the page is real. No countdown. Nobody's yelling.","First 5,000 · real count","same | phone inset: live counter | insert"),
+  ("30-38","SUN","Founding price until the close date on the page. No countdown. Nobody's yelling.","Close date on the page","same | phone inset: the terms page | insert"),
   ("38-45","CHANG","Say no to the membership? You keep the books. That's it.","Say no? Keep the books.","same | shrug | medium"),
   ("45-51","SUN","We're AI. The exercises and recipes are real. New to exercise? Check with your doctor.","We're AI · doctor first","same | CU | CU"),
   ("51-57","CHANG","Comment BOOK for the link and what's inside.","Comment BOOK","same | Sun hands him the books | two-shot"),
  ],
- move=False, tags=["offer"], safety="S-02 membership terms spoken + OST + caption; T-04 real cap; one-time book; AI disclosure; doctor line.",
+ move=False, tags=["offer"], safety="S-02 membership terms spoken + OST + caption; T-04 no cap claims; one-time book; AI disclosure; doctor line.",
  regression="", cta="BOOK",
  skip="New to exercise? Check with your doctor.",
  caption="Comment BOOK for the link and what's inside.\nDoors are open. The honest version, start to finish.\n" + BOOK + "\n" + MEMBER,
@@ -768,11 +768,11 @@ dict(id="S188", page="@changandsun", speaker="DUO", format="F38", pillar="P20", 
   ("12-21","CHANG","Locked means: for as long as you stay subscribed, your price doesn't go up. Pauses included.","Locked while you stay subscribed","same | snaps the padlock shut | CU"),
   ("21-29","SUN","Cancel and come back later? Then it's the price on that day. That's fair. We say it now.","Cancel + return = that day's price","same | over-the-glasses look | CU"),
   ("29-37","CHANG","Cancel online in two screens. Fourteen days to change your mind, full refund.","Cancel online · 14-day money-back","same | phone inset: cancel screen | insert"),
-  ("37-44","SUN","First 5,000 founding members, real count on the page. When it's full, it's full.","First 5,000 · real count","same | phone inset: live counter | insert"),
+  ("37-44","SUN","Founding price until the close date on the page. After that, it's the standard price.","Close date on the page","same | phone inset: the terms page | insert"),
   ("44-50","CHANG","We're AI. The sessions are real. New to exercise? Check with your doctor.","We're AI · doctor first","same | CU | CU"),
   ("50-55","SUN","Comment JOIN for the link and every term.","Comment JOIN","same | she pockets the key | two-shot"),
  ],
- move=False, tags=["offer"], safety="S-02 terms spoken + OST + caption; explains what 'locked' does and doesn't mean (no lifetime promise); T-04 real cap.",
+ move=False, tags=["offer"], safety="S-02 terms spoken + OST + caption; explains what 'locked' does and doesn't mean (no lifetime promise); T-04 no cap claims.",
  regression="", cta="JOIN",
  skip="New to exercise? Check with your doctor.",
  caption="Comment JOIN for the founding-member link and full terms.\nWhat 'locked' means: your founding price doesn't go up for as long as you stay subscribed, pauses included. Cancel and come back later and it's the price on that day.\n" + JOIN,
@@ -787,7 +787,7 @@ dict(id="S189", page="@changandsun", speaker="DUO", format="F26", pillar="P20", 
   ("3-11","CHANG","'Do I need equipment?' A sturdy chair and a counter. A band later, if you want one.","Chair + counter. That's it.","same | he holds up a card | CU"),
   ("11-19","SUN","'Can I print the books?' Yes. {{EBOOK_PRICE}}, one-time, and they're yours. Print them. Spill soup on them.","{{EBOOK_PRICE}} one-time · print them","same | she holds up a soup-stained page | CU"),
   ("19-30","CHANG","'Do I have to join?' No. After checkout there's one offer: {{FOUNDING_PRICE}} a month, first month charged that day, renews monthly until you cancel.","{{FOUNDING_PRICE}}/mo · renews monthly","same | terms card | CU"),
-  ("30-39","SUN","Cancel online, two screens. Fourteen days to change your mind. Price locked for as long as you stay subscribed. First 5,000 only.","Cancel online · 14-day money-back","same | phone inset: cancel screen and live count | insert"),
+  ("30-39","SUN","Cancel online, two screens. Fourteen days to change your mind. Price locked for as long as you stay subscribed.","Cancel online · 14-day money-back","same | phone inset: cancel screen and close date | insert"),
   ("39-44","CHANG","'Are you real?' No. We're AI. The exercises are real.","No. We're AI.","same | the wink | CU"),
   ("44-49","SUN","New to exercise? Check with your doctor before starting.","New? Doctor first.","same | CU | CU"),
   ("49-54","CHANG","Comment BOOK for the link and what's inside.","Comment BOOK","same | puts the lid on the box | medium"),
@@ -805,7 +805,7 @@ dict(id="S190", page="@changandsun", speaker="DUO", format="F39", pillar="P20", 
  beats=[
   ("0-3","CHANG","Not a countdown, not a midnight price jump. Launch week ends. Here's what changes.","NO COUNTDOWN. HERE'S WHAT CHANGES.",f"{DK} | Chang flips the kitchen wall calendar; no date is circled | medium"),
   ("3-11","SUN","Nothing about the books. They stay {{EBOOK_PRICE}}, one-time. Yours to keep.","Books: no change","same | she holds them up | medium"),
-  ("11-20","CHANG","Founding seats, {{FOUNDING_PRICE}} a month, renew monthly, cancel online anytime. Open until 5,000, or a week's notice before we close.","{{FOUNDING_PRICE}}/mo · open until 5,000","same | phone inset: live counter | insert"),
+  ("11-20","CHANG","Founding seats, {{FOUNDING_PRICE}} a month, renew monthly, cancel online anytime. Open until the close date, with a week's notice.","{{FOUNDING_PRICE}}/mo · open until close date","same | phone inset: the terms page | insert"),
   ("20-29","SUN","We post more of what you liked. Fewer of what you didn't. You told us. We read it.","More of what you liked","same | she taps a stack of printed comments | CU"),
   ("29-38","CHANG","And every morning, a new session, same as before. Chair version of everything.","Every morning, as before","same | Chang in the garage, chair against the wall | medium-full"),
   ("38-43","SUN","New to exercise? Check with your doctor first.","New? Doctor first.","same | CU | CU"),
@@ -814,7 +814,7 @@ dict(id="S190", page="@changandsun", speaker="DUO", format="F39", pillar="P20", 
  move=False, tags=["offer"], safety="T-04: explicitly no countdown or price jump; cohort closure only with a week's public notice; one-time book wording.",
  regression="", cta="BOOK",
  skip="New to exercise? Check with your doctor first.",
- caption="Comment BOOK for the link and what's inside.\nLaunch week is over and nothing jumps at midnight. Founding seats stay open until 5,000 members or until we close the founding cohort, and we'll announce any closing date at least a week ahead.\n" + BOOK + "\n" + MEMBER,
+ caption="Comment BOOK for the link and what's inside.\nLaunch week is over and nothing jumps at midnight. The founding price stays open until we close the founding cohort, and we'll announce any closing date at least a week ahead.\n" + BOOK + "\n" + MEMBER,
  ig=["#strongyears","#changandsun","#norush","#over60"], tt=["#strongyears","#changandsun","#norush","#over60"],
  yt="End of Launch Week: No Countdown, Here's What Changes", ev=[],
  note="Anti-fake-urgency post; pins after launch week.", bit="", wink=False, thumb="NO COUNTDOWN", music="warm acoustic"),

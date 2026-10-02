@@ -2,7 +2,7 @@
 # Built to drive MRR fast (BLITZ.md): charge-today founding membership, gift-for-parents, challenge kickoffs, pinned-post variants.
 # REAL COHORT FACTS ONLY (BLITZ.md §3, SAFETY T-04, S-02, S-04). Placeholders are filled by the pipeline from live config:
 #   {{FOUNDING_PRICE}} = the live founding price ($25 or $30 per the day 1–5 split test; one value per render)
-#   {{DOMAIN}} = site domain. The 5,000 cap is real and publicly counted on the join page; scripts never state a "spots left" number.
+#   {{DOMAIN}} = site domain. There is no seat cap (Oct 2 2026); the founding price closes on {{FOUNDING_CLOSE_DATE}}; scripts never state a "spots left" number.
 # Every JOIN script states: price, billed monthly, first month charged today, renews monthly until cancelled, cancel online anytime,
 # 14-day money-back, founding price stays while subscribed. The DM (JOIN flow) repeats the full terms before the link.
 G = "SET-GARAGE | C-TRAIN-A"
@@ -20,7 +20,7 @@ DT = "SET-TABLE | C-CASUAL + S-CARDI-JADE"
 TERMS = ("Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. "
          "Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, one per person. "
          "Your founding price is locked for as long as you stay subscribed, pauses included. "
-         "Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first; see the live count at {{DOMAIN}}/terms#founding.")
+         "Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.")
 GIFT = ("Gift: 3 months $49 or 12 months $119, prepaid. It starts the day they open it, ends after 3 or 12 months, and never auto-renews.")
 
 SCRIPTS = [
@@ -28,22 +28,22 @@ SCRIPTS = [
 dict(id="S135", page="@changyin", speaker="CHANG", format="F38", pillar="P20", hook_id="H375", hcat="LCH", title="Doors open: founding members", secs=50, launch=True,
  prop="garage door rolling open at sunrise", obj="garage", grammar=["OBJ3","LAUNCH"], demo=True,
  beats=[
-  ("0-3","CHANG","Garage door's open. So is Strong Years. Founding members, first 5,000.","DOORS OPEN · FOUNDING 5,000",f"{G} | the garage door rolls up on sunrise light; Chang lifts a kettlebell off the mat | wide then medium-full"),
+  ("0-3","CHANG","Garage door's open. So is Strong Years. Founding members, open now.","DOORS OPEN · FOUNDING PRICE",f"{G} | the garage door rolls up on sunrise light; Chang lifts a kettlebell off the mat | wide then medium-full"),
   ("3-10","CHANG","What you get: a new eight-to-twelve-minute session with me every morning. A chair version of everything.","8–12 min daily · chair version of everything","same | phone screen inset: today's session, level switch Rebuild / Steady / Strong / Iron | insert"),
   ("10-17","CHANG","Sun's Sunday recipes. A monthly strength test so you see your number move. A real human coach live every Wednesday.","Recipes · monthly test · live coach Wednesdays","same | quick product cuts: recipe card, Strength Age chart, Wednesday Q&A screen | quick cuts"),
   ("17-27","CHANG","Founding price: {{FOUNDING_PRICE}} a month. First month charged today. It renews monthly until you cancel. Cancel online, anytime.","{{FOUNDING_PRICE}}/mo · charged today · renews monthly","same | price card, full-contrast, lower third | medium"),
   ("27-35","CHANG","Fourteen days to change your mind, full refund. And your founding price stays as long as you stay.","14-day money-back · price stays","same | CU terms card | CU"),
-  ("35-41","CHANG","Why 5,000? That's how many we can welcome properly in week one. The count is live on the page.","Real cap: 5,000 · live count","same | Chang taps the clipboard | medium"),
+  ("35-41","CHANG","Why founding? The price you join at stays while you stay. Close date's on the page.","Price stays · close date on page","same | Chang taps the clipboard | medium"),
   ("41-45","CHANG","I'm an AI coach. The exercises are real. Check with your doctor before starting.","AI coach · real exercises","same | CU | CU"),
   ("45-50","CHANG","Comment JOIN. We'll DM the link and the full terms.","Comment JOIN","same | points at camera | medium CU"),
  ],
- move=False, tags=["offer"], safety="S-02 terms spoken + OST + caption; T-04 real cap only, no countdown or 'spots left'; S-01 access not outcome; AI disclosure; doctor line.",
+ move=False, tags=["offer"], safety="S-02 terms spoken + OST + caption; T-04 no cap claims, no countdown or 'spots left'; S-01 access not outcome; AI disclosure; doctor line.",
  regression="", cta="JOIN",
  skip="Check with your doctor before starting.",
  caption="Comment JOIN for the founding-member link and full terms.\nStrong Years is open: a new 8–12 minute session with Chang every morning (chair version of everything), Sun Yoon's Sunday recipes, a monthly Strength Age retest, and a real human coach live every Wednesday.\n" + TERMS,
  ig=["#strongyears","#foundingmember","#strengthafter60","#changyin"], tt=["#strongyears","#over60","#foundingmember","#changyin"],
- yt="Strong Years Is Open: Founding Members (First 5,000)", ev=[],
- note="Offer facts per BLITZ.md §3 (real 5,000 cap, charge-today, 14-day refund, price locked while subscribed). No health claim.", bit="", wink=False, thumb="DOORS OPEN", music="warm soul instrumental"),
+ yt="Strong Years Is Open: Founding Members", ev=[],
+ note="Offer facts per BLITZ.md §3 (no seat cap, charge-today, 14-day refund, price locked while subscribed). No health claim.", bit="", wink=False, thumb="DOORS OPEN", music="warm soul instrumental"),
 
 dict(id="S136", page="@changyin", speaker="CHANG", format="F39", pillar="P20", hook_id="H376", hcat="LCH", title="PIN 1-C (founding week): I'm AI. Here's what's real.", secs=45, launch=True,
  prop="printed study card taped to the garage wall", obj="i'm", grammar=["LAUNCH"], demo=True,
@@ -90,7 +90,7 @@ dict(id="S138", page="@changyin", speaker="CHANG", format="F38", pillar="P20", h
   ("3-11","CHANG","One: you pay {{FOUNDING_PRICE}} today for your first month. Then it renews monthly until you cancel.","1 · {{FOUNDING_PRICE}} today · renews monthly","same | card bullet 1 highlights | CU"),
   ("11-18","CHANG","Two: that price stays yours as long as you stay a member. If our price goes up later, yours doesn't.","2 · Your price stays","same | bullet 2 | CU"),
   ("18-25","CHANG","Three: fourteen days to change your mind. Full refund. Cancel online, anytime, two screens at most.","3 · 14-day money-back · cancel online","same | bullet 3; cancel screen inset | insert"),
-  ("25-32","CHANG","Four: the first 5,000, or the close date, whichever comes first. The count is on the page. No countdown clocks.","4 · First 5,000 · real count","same | bullet 4 | CU"),
+  ("25-32","CHANG","Four: the founding price closes on a set date, on the page. No countdown clocks.","4 · Close date on the page","same | bullet 4 | CU"),
   ("32-39","CHANG","What it doesn't mean: a promise about your body. It's a plan and a coach. The work is yours.","Not a promise · a plan + a coach","same | Chang sets the card down | medium"),
   ("39-43","CHANG","Heart condition or new to exercise? Check with your doctor first.","Heart condition? Doctor first.","same | CU | CU"),
   ("43-47","CHANG","Comment JOIN for the link and the full terms.","Comment JOIN","same | points | medium CU"),
@@ -98,7 +98,7 @@ dict(id="S138", page="@changyin", speaker="CHANG", format="F38", pillar="P20", h
  move=False, tags=["offer"], safety="S-02 terms; T-04 (explicitly no countdown); S-01 (explicitly no outcome promise); doctor line.",
  regression="", cta="JOIN",
  skip="Heart condition or new to exercise? Check with your doctor first.",
- caption="Comment JOIN for the founding-member link and full terms.\nWhat 'founding member' means, exactly: 1) you pay today for month one, then it renews monthly; 2) your price stays while you stay subscribed; 3) 14 days to change your mind, full refund, cancel online anytime; 4) the first 5,000 only, with the real count on the page. It isn't a promise about results; it's a daily plan and a coach.\n" + TERMS,
+ caption="Comment JOIN for the founding-member link and full terms.\nWhat 'founding member' means, exactly: 1) you pay today for month one, then it renews monthly; 2) your price stays while you stay subscribed; 3) 14 days to change your mind, full refund, cancel online anytime; 4) the founding price is open until the close date on the page. It isn't a promise about results; it's a daily plan and a coach.\n" + TERMS,
  ig=["#strongyears","#foundingmember","#over60","#changyin"], tt=["#strongyears","#foundingmember","#over60","#transparency"],
  yt="What 'Founding Member' Actually Means (4 Plain Facts)", ev=[],
  note="Offer facts per BLITZ.md §3; no health claim; explicitly no countdown/no outcome promise.", bit="", wink=False, thumb="4 PLAIN FACTS", music="warm acoustic"),
@@ -149,16 +149,16 @@ dict(id="S141", page="@sunyoon.kitchen", speaker="SUN", format="F38", pillar="P2
   ("3-12","SUN","Three recipes a week. A grocery list you can print. And one 'remedy', graded: good evidence, some evidence, or tradition only, enjoy it as food.","3 recipes · list · remedy grade","same | three grade stamps shown | CU"),
   ("12-20","SUN","Plus his morning sessions, the monthly strength test, and a real person on our team live every Wednesday.","+ daily sessions · monthly test · live Wednesdays","same | Chang waves through the window from the garage | two-plane"),
   ("20-30","SUN","Founding members: {{FOUNDING_PRICE}} a month. First month today. Renews monthly until you cancel. Cancel online, anytime.","{{FOUNDING_PRICE}}/mo · today · renews · cancel online","same | price card | medium"),
-  ("30-37","SUN","Fourteen days to change your mind. Your price stays while you stay. First 5,000, or the close date. Real number.","14 days · price stays · first 5,000","same | CU | CU"),
+  ("30-37","SUN","Fourteen days to change your mind. Your price stays while you stay. Founding price open until the close date.","14 days · price stays · close date on page","same | CU | CU"),
   ("37-42","SUN","Food allergies or a kidney diet? Every recipe says who should skip it. Read that line.","Every recipe: who should skip","same | points at the skip line on the card | CU"),
   ("42-48","SUN","Comment JOIN. The team DMs the link and every term. I read the terms. Twice.","Comment JOIN","same | glasses on, reading | medium"),
  ],
- move=False, tags=["offer"], safety="S-02 terms; T-04 real cap; evidence-grading promise matches OFFER.md feature 3; skip-line promise.",
+ move=False, tags=["offer"], safety="S-02 terms; T-04 no cap claims; evidence-grading promise matches OFFER.md feature 3; skip-line promise.",
  regression="", cta="JOIN",
  skip="Food allergies or a kidney diet? Every recipe says who should skip it.",
  caption="Comment JOIN for the founding-member link and full terms.\nThe kitchen side of Strong Years: 3 Sunday recipes, a printable grocery list, and one remedy graded honestly (good evidence / some evidence / tradition only, enjoy it as food). Plus Chang's daily sessions, a monthly strength retest and a live Wednesday Q&A with a real person on our team.\n" + TERMS,
  ig=["#strongyears","#foundingmember","#koreangrandma","#sunyoon"], tt=["#strongyears","#koreangrandma","#foundingmember","#over60"],
- yt="Sun Yoon's Kitchen Is Open: Founding Members (First 5,000)", ev=[],
+ yt="Sun Yoon's Kitchen Is Open: Founding Members", ev=[],
  note="Offer facts per BLITZ.md; kitchen feature per OFFER.md §1.2.", bit="I read the terms. Twice.", wink=False, thumb="DOORS OPEN", music="playful jazz"),
 
 dict(id="S142", page="@sunyoon.kitchen", speaker="SUN", format="F33", pillar="P16", hook_id="H382", hcat="LCH", title="Send this to your daughter: tell her what you want", secs=46, launch=True,
@@ -187,7 +187,7 @@ dict(id="S143", page="@sunyoon.kitchen", speaker="SUN", format="F07", pillar="P2
   ("3-12","SUN","Account. Membership. Cancel. One screen offers you a deal. Next to it, a button just as big: 'Finish canceling'. Two screens. Done.","2 screens · 'Finish canceling' as big","same | screen recording of the real two-screen flow | insert"),
   ("12-18","SUN","You never need to call us. No chatbot maze. No 'are you sure' five times.","No call needed · no maze","same | over-the-glasses look | CU"),
   ("18-27","SUN","Founding members pay {{FOUNDING_PRICE}} a month. First month today. Renews monthly. We email you before it renews.","{{FOUNDING_PRICE}}/mo · renews · reminder email","same | price card | medium"),
-  ("27-35","SUN","Fourteen days to change your mind, full refund. Your price stays while you stay. First 5,000, or the close date.","14 days · price stays · first 5,000","same | CU | CU"),
+  ("27-35","SUN","Fourteen days to change your mind, full refund. Your price stays while you stay. Founding price open until the close date.","14 days · price stays · close date on page","same | CU | CU"),
   ("35-40","SUN","Heart condition or new to exercise? Ask your doctor first. Then come.","Doctor first. Then come.","same | CU | CU"),
   ("40-46","SUN","Comment JOIN for the link and the terms. You'll probably stay. But you can leave.","Comment JOIN","same | puts phone down, smile | medium"),
  ],
@@ -222,21 +222,21 @@ dict(id="S144", page="@sunyoon.kitchen", speaker="SUN", format="F39", pillar="P2
 dict(id="S145", page="@changandsun", speaker="DUO", format="F38", pillar="P20", hook_id="H385", hcat="LCH", title="Doors open: fifty years (fictional), founding members (real)", secs=50, launch=True,
  prop="anniversary countdown whiteboard", obj="fifty", grammar=["OBJ3","LAUNCH"], demo=True,
  beats=[
-  ("0-3","SUN","Fifty years married. Fictional. Founding members: real. Doors are open.","DOORS OPEN · FOUNDING 5,000",f"{DL} | Sun flips the living-room whiteboard from '50 YEARS' to 'DOORS OPEN' | two-shot"),
+  ("0-3","SUN","Fifty years married. Fictional. Founding members: real. Doors are open.","DOORS OPEN · FOUNDING PRICE",f"{DL} | Sun flips the living-room whiteboard from '50 YEARS' to 'DOORS OPEN' | two-shot"),
   ("3-10","CHANG","Every morning, a new session with me. Eight to twelve minutes. A chair version of everything.","Daily 8–12 min · chair version","same | product inset: session screen | insert"),
   ("10-16","SUN","My recipes on Sundays. A strength test every month. A real person live on Wednesdays.","Recipes · monthly test · live Wednesdays","same | product cuts | quick cuts"),
   ("16-25","CHANG","Founding price: {{FOUNDING_PRICE}} a month, first month today. Renews monthly until you cancel.","{{FOUNDING_PRICE}}/mo · today · renews monthly","same | price card | medium"),
   ("25-32","SUN","Cancel online anytime. Two screens. Fourteen days to change your mind, full refund.","Cancel online · 14-day money-back","same | CU | CU"),
-  ("32-39","CHANG","And your founding price stays as long as you stay. First 5,000, or the close date. The count is on the page.","Price stays · first 5,000","same | two-shot | two-shot"),
+  ("32-39","CHANG","And your founding price stays as long as you stay. Founding price open until the close date on the page.","Price stays · close date on page","same | two-shot | two-shot"),
   ("39-44","SUN","Heart condition, or new to exercise? Doctor first. Then us.","Doctor first. Then us.","same | CU | CU"),
   ("44-50","CHANG","Comment JOIN. We'll DM the link and the full terms.","Comment JOIN","same | Sun: 'Seven out of ten announcement.' | two-shot"),
  ],
- move=False, tags=["offer"], safety="S-02 terms; T-04 real cap; S-01 access; fictional marriage disclosed; doctor line.",
+ move=False, tags=["offer"], safety="S-02 terms; T-04 no cap claims; S-01 access; fictional marriage disclosed; doctor line.",
  regression="", cta="JOIN",
  skip="Heart condition, or new to exercise? Doctor first.",
  caption="Comment JOIN for the founding-member link and full terms.\nStrong Years with Chang & Sun (AI characters, fictional 50-year marriage): a daily 8–12 minute session with a chair version of everything, Sunday recipes, a monthly strength retest and a live Wednesday Q&A with a real person on the team.\n" + TERMS,
  ig=["#strongyears","#foundingmember","#couplegoals","#changandsun"], tt=["#strongyears","#couplegoals","#foundingmember","#over60"],
- yt="Chang & Sun: Doors Open for Founding Members (First 5,000)", ev=[],
+ yt="Chang & Sun: Doors Open for Founding Members", ev=[],
  note="Offer facts per BLITZ.md §3.", bit="Seven out of ten; anniversary whiteboard", wink=False, thumb="DOORS OPEN", music="playful jazz"),
 
 dict(id="S146", page="@changandsun", speaker="DUO", format="F39", pillar="P20", hook_id="H386", hcat="LCH", title="PIN 1-D (founding week): Hi, we're AI. Doors are open.", secs=46, launch=True,
@@ -306,14 +306,14 @@ dict(id="S149", page="@changandsun", speaker="DUO", format="F38", pillar="P20", 
   ("15-21","CHANG","Not for founding members. Your price stays as long as you stay subscribed.","Your price stays while you stay","same | CU | CU"),
   ("21-27","SUN","And if I hate it?","","same | eyebrow | CU"),
   ("27-35","CHANG","Fourteen days, full refund. Or cancel online, anytime, two screens. We email before every renewal.","14-day refund · cancel online · renewal email","same | cancel-screen inset | insert"),
-  ("35-40","SUN","And 5,000?","","same | CU | CU"),
-  ("40-44","CHANG","Real cap. Real count, on the page. Heart condition? Doctor first.","Real cap · doctor first","same | CU | CU"),
+  ("35-40","SUN","And the close date?","","same | CU | CU"),
+  ("40-44","CHANG","On the page. No countdown. Heart condition? Doctor first.","Close date on page · doctor first","same | CU | CU"),
   ("44-47","SUN","Seven out of ten. Comment JOIN for the terms.","Comment JOIN","same | takes the card | two-shot"),
  ],
- move=False, tags=["offer"], safety="S-02 terms; T-04 real cap; study-card bit repurposed as a terms card (no fake document).",
+ move=False, tags=["offer"], safety="S-02 terms; T-04 no cap claims; study-card bit repurposed as a terms card (no fake document).",
  regression="", cta="JOIN",
  skip="Heart condition? Doctor first.",
- caption="Comment JOIN for the founding-member link and full terms.\nSun's cross-examination, answered: the founding price stays as long as you stay subscribed; 14 days for a full refund; cancel online anytime in two screens; a reminder email before every renewal; the 5,000 cap is real and counted on the page.\n" + TERMS,
+ caption="Comment JOIN for the founding-member link and full terms.\nSun's cross-examination, answered: the founding price stays as long as you stay subscribed; 14 days for a full refund; cancel online anytime in two screens; a reminder email before every renewal; the founding price is open until the close date on the page.\n" + TERMS,
  ig=["#strongyears","#foundingmember","#couplegoals","#changandsun"], tt=["#showmetheterms","#couplegoals","#strongyears","#over60"],
  yt="'Founding Price, Locked.' She Made Him Show the Terms.", ev=[],
  note="Offer facts per BLITZ.md; the study-card bit becomes a terms card.", bit="Study card from the shorts pocket (terms edition); seven out of ten", wink=False, thumb="SHOW ME THE TERMS", music="playful jazz"),

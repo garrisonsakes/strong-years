@@ -104,3 +104,8 @@ Working assumptions (client asleep; these are our reasonable readings, flagged a
 - **Accounts:** Instagram 4 pages → 6 at $30K retained (each: 6 main + 20 Trial Reels + 3 Stories/day; Threads 12 and X 6 per page). TikTok 4 → 6 accounts × 26/day. Facebook ONE page to start (→ 2 at $30K) × 16/day (12 videos + 2 long cuts + text + photo). YouTube ONE Shorts channel × 6/day (4 until the quota raise). Total 300 → 458 posts/day.
 - **Stories** are a primary conversion path: 3/day/page (poll, question box, link sticker); modeled at 8% of page views, 1.5% link tap, 6% buy.
 - Projection of record: data/projection_master.csv and economics.xlsx sheet Projection_Master (v5). Milestones on retained MRR, central: $10K d8, $30K d15, $50K d19, $100K d28, $250K d53.
+
+## CANON UPDATE 7 (Oct 2 2026, Garrison): no seat cap, ascension later, price tests
+- **No limit on founding seats.** The 5,000 cap is removed everywhere (store inventory, theme, app, scripts, DMs). Founding $25 is open to everyone until `FOUNDING_CLOSE_DATE` (default 2027-01-09), then $35 standard. Any "first 5,000", "seats left" or "live count" claim is false and is blocked by `tools/build_content.py`.
+- **Coaching ascension is deferred.** No ascension to Garrison's coaching at launch. It starts over the first few weeks to a month. Keep the coached tier out of launch plans and the day-10 model start.
+- **Price split tests on the membership.** Test prices around $25 and judge each on conversion, upfront cash, retention/churn and LTV, not on conversion alone.

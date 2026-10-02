@@ -18,6 +18,7 @@
  * Idempotency: every adjustment carries referenceDocumentUri strongyears://seat-ledger/<kind>/<orderId>;
  * the members app stores processed URIs and skips duplicates (webhooks can be delivered more than once).
  */
+import { FOUNDING_CAP } from "../config/catalog.ts";
 import { OPS } from "./operations.ts";
 
 export const FOUNDING_SKU = "SY-FOUNDING-25";
@@ -42,8 +43,10 @@ export type SeatEvent =
 
 export interface SeatAction { op: keyof typeof OPS; variables: Record<string, unknown>; why: string; ref?: string }
 
-export function seatActions(ev: SeatEvent, ctx: SeatContext): SeatAction[] {
+export function seatActions(ev: SeatEvent, ctx: SeatContext, cap: number | null = FOUNDING_CAP): SeatAction[] {
   const actions: SeatAction[] = [];
+  if (cap == null) return actions;   // no seat cap since Oct 2 2026: the founding variant is untracked, nothing to keep
+
   const adjust = (delta: number, ref: string, why: string) => {
     if (ctx.processedRefs.has(ref) || delta === 0) return;
     actions.push({

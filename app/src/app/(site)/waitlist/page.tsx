@@ -126,6 +126,10 @@ export default async function Waitlist({ searchParams }: { searchParams: Promise
         <div className="mt-6 rounded-xl border-2 border-ink bg-rice p-4" data-testid="waitlist-cohort">
           {!f.cohortOpen ? (
             <p className="text-lg font-bold">The founding cohort is full. New members join at {price} a month.</p>
+          ) : !Number.isFinite(f.cap) ? (
+            <p className="text-lg font-bold">
+              Founding membership: {price} a month, locked for as long as you stay subscribed. Open to everyone{f.closeDate ? ` until ${f.closeDate}` : " until the founding close date"}.
+            </p>
           ) : f.claimed < 1000 ? (
             <p className="text-lg font-bold">
               Founding membership: {price} a month, locked for as long as you stay subscribed. Open to the first {capText} members{f.closeDate ? ` or until ${f.closeDate}, whichever comes first` : ""}.
@@ -135,7 +139,7 @@ export default async function Waitlist({ searchParams }: { searchParams: Promise
               {f.claimed.toLocaleString("en-US")} of {capText} founding seats taken. Founding price: {price} a month, locked while you stay subscribed.
             </p>
           )}
-          <p className="fine mt-2">A live count from our member database. No timers, no made-up numbers.</p>
+          {Number.isFinite(f.cap) && <p className="fine mt-2">A live count from our member database. No timers, no made-up numbers.</p>}
         </div>
 
         <p className="mt-6 max-w-prose">

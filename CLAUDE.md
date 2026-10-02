@@ -19,7 +19,7 @@ The product is the "Strong Years" MRR membership on Shopify. Growth is organic-f
 **Content:** 25–30 unique videos/day for ≤$1K/mo. Fully automated, minimal manual work.
 
 ## Canon (read in this order)
-1. `BRIEF.md`. The CANON UPDATE 2–6 sections at the end override the earlier text, and **6 is newest**.
+1. `BRIEF.md`. The CANON UPDATE 2–7 sections at the end override the earlier text, and **7 is newest** (no seat cap, ascension deferred, price tests).
 2. `CHANGELOG.md` is the append-only log of every decision. Append to it after each round.
 3. `LAUNCH_RUNBOOK.md` gives the order of operations, and `LAUNCH_CHECKLIST_TOMORROW.md` is the day-1 checklist.
 4. `INTEGRATION.md` holds the Shopify decisions with citations. `AUDIT_FINAL.md` covers audit rounds 1–5; round 6 is partial.
@@ -28,8 +28,7 @@ The product is the "Strong Years" MRR membership on Shopify. Growth is organic-f
 **Offer**
 - $12 today buys the Starter Books plus a 7-day founding-membership trial (mechanism: STARTER12 first-payment discount).
 - The first $25 charge lands on day 7, then every 30 days.
-- 5,000 founding seats, enforced as inventory.
-- After the cap, standard is $35/mo. Other prices: $249/yr, $12 Essentials, gifts $49/$119.
+- **No founding seat cap** (CANON 7). Founding $25 is open until the close date (default 2027-01-09), then standard is $35/mo. Other prices: $249/yr, $12 Essentials, gifts $49/$119.
 - No $1 trial, ever.
 
 **Accounts**
@@ -53,7 +52,7 @@ The product is the "Strong Years" MRR membership on Shopify. Growth is organic-f
 - Comments: 0.15% of views → 15% keyword → 95% DM delivered → 45% click → 8% buy.
 - Bio: 0.2% click → 4% buy. Landing loads 70% of the time.
 - Trial: 60% convert, 7%/mo churn.
-- Coached tier: 5% at $147 from day 10.
+- Coached tier: 5% at $147 from day 10 in the model, but **deferred** (CANON 7): ascension starts weeks 2–4, not day 10.
 - Seeds: waitlist of 1,500 at 10% over 3 days; lists of 30K at 1.5% over 14 days.
 
 **Cost assumptions**

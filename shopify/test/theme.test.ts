@@ -58,9 +58,10 @@ describe("checkout integrity", () => {
     const s = read(path.join(T, "snippets/sy-bumps.liquid"));
     for (const m of s.matchAll(/<input[^>]*name="sy_bump"[^>]*>/g)) expect(m[0]).not.toMatch(/\bchecked\b|\brequired\b/);
   });
-  it("the founding counter reads real inventory, with no timers", () => {
+  it("the founding box states the close date only: no seat counts, no timers (no cap since Oct 2 2026)", () => {
     const s = read(path.join(T, "snippets/sy-count-line.liquid"));
-    expect(s).toMatch(/variant\.inventory_quantity/);
+    expect(s).toMatch(/close_date/);
+    expect(/inventory_quantity|seats taken|few left|5,000/i.test(s)).toBe(false);
     expect(/countdown|setInterval|timer/i.test(s.replace(/No timers/g, ""))).toBe(false);
   });
 });

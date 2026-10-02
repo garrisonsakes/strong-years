@@ -52,20 +52,20 @@ describe("order classification (initial and renewal orders)", () => {
 describe("founding seat ledger", () => {
   const ctx = (o: Partial<Parameters<typeof seatActions>[1]> = {}) => ({ inventoryItemId: "gid://shopify/InventoryItem/1", locationId: "gid://shopify/Location/1", productId: "gid://shopify/Product/1", variantId: "gid://shopify/ProductVariant/1", customerHadPriorFoundingOrder: false, processedRefs: new Set<string>(), ...o });
   it("first paid founding order consumes a seat (no action)", () => {
-    expect(seatActions({ topic: "orders/paid", orderId: "10", foundingQty: 1 }, ctx())).toEqual([]);
+    expect(seatActions({ topic: "orders/paid", orderId: "10", foundingQty: 1 }, ctx(), 5000)).toEqual([]);
   });
   it("renewal orders give the seat back, once (idempotent by reference URI)", () => {
-    const a = seatActions({ topic: "orders/paid", orderId: "11", foundingQty: 1 }, ctx({ customerHadPriorFoundingOrder: true }));
+    const a = seatActions({ topic: "orders/paid", orderId: "11", foundingQty: 1 }, ctx({ customerHadPriorFoundingOrder: true }), 5000);
     expect(a).toHaveLength(1);
     expect((a[0].variables as any).input.changes[0].delta).toBe(1);
-    expect(seatActions({ topic: "orders/paid", orderId: "11", foundingQty: 1 }, ctx({ customerHadPriorFoundingOrder: true, processedRefs: new Set([a[0].ref!]) }))).toEqual([]);
+    expect(seatActions({ topic: "orders/paid", orderId: "11", foundingQty: 1 }, ctx({ customerHadPriorFoundingOrder: true, processedRefs: new Set([a[0].ref!]) }), 5000)).toEqual([]);
   });
   it("a guarantee refund returns the seat unless Shopify already restocked it", () => {
-    expect(seatActions({ topic: "refunds/create", orderId: "10", refundId: "r1", foundingQtyRefunded: 1, restockType: "no_restock" }, ctx({ refundedOrderWasFirstFounding: true }))).toHaveLength(1);
-    expect(seatActions({ topic: "refunds/create", orderId: "10", refundId: "r1", foundingQtyRefunded: 1, restockType: "return" }, ctx({ refundedOrderWasFirstFounding: true }))).toEqual([]);
+    expect(seatActions({ topic: "refunds/create", orderId: "10", refundId: "r1", foundingQtyRefunded: 1, restockType: "no_restock" }, ctx({ refundedOrderWasFirstFounding: true }), 5000)).toHaveLength(1);
+    expect(seatActions({ topic: "refunds/create", orderId: "10", refundId: "r1", foundingQtyRefunded: 1, restockType: "return" }, ctx({ refundedOrderWasFirstFounding: true }), 5000)).toEqual([]);
   });
   it("at zero seats, renewals are protected (inventoryPolicy CONTINUE)", () => {
-    const a = seatActions({ topic: "orders/paid", orderId: "12", foundingQty: 1 }, ctx({ availableAfter: 0 }));
+    const a = seatActions({ topic: "orders/paid", orderId: "12", foundingQty: 1 }, ctx({ availableAfter: 0 }), 5000);
     expect(a.map((x) => x.op)).toEqual(["VariantInventoryPolicy"]);
   });
   it("public count line follows the FUNNEL.md rule", () => {
@@ -108,5 +108,12 @@ describe("post-purchase server", () => {
   });
   it("rejects requests without Shopify's token", async () => {
     expect((await handleOffer(req("https://x/offer", {}, "bad.token.here"), env)).status).toBe(401);
+  });
+});
+
+describe("founding seat ledger without a cap", () => {
+  it("does nothing when FOUNDING_CAP is null (the Oct 2 2026 default)", () => {
+    const ctx = { processedRefs: new Set<string>(), inventoryItemId: "i", locationId: "l", productId: "p", variantId: "v", customerHadPriorFoundingOrder: true, availableAfter: 0 } as any;
+    expect(seatActions({ topic: "orders/paid", orderId: "1", foundingQty: 1 } as any, ctx)).toEqual([]);
   });
 });

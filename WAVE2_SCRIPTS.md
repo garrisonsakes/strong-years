@@ -1226,7 +1226,7 @@ The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's St
 Comment JOIN for the founding-member link and full terms.
 One day of Sun's eating, weighed: breakfast ≈22 g protein, lunch ≈28 g, dinner ≈30 g (USDA FoodData Central). PROT-AGE suggests 25–30 g per meal for adults over 65. Members get Sun Yoon's recipes every Sunday.
 Kidney disease? Ask your doctor about protein first.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Open to the first 5,000 founding members; the live count is at {{DOMAIN}}/terms#founding.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.
 ```
 **Hashtags:** IG/FB #whatieatinaday #highprotein #koreanfood #sunyoon · TikTok #whatieatinaday #protein #koreangrandma #sunyoon  
 **YouTube Shorts title:** What I Eat in a Day at 76 (Every Gram Weighed)  
@@ -1459,7 +1459,7 @@ The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun Yoon's St
 Comment JOIN for the founding-member link and full terms.
 The lunch for lunch-skippers: tuna rice ball, sesame cucumber, a cup of soy milk, about 25 g protein. PROT-AGE suggests 25–30 g at each meal for adults over 65. Members get Sun Yoon's recipes every week.
 On a protein or fluid limit from your doctor? Follow it.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Open to the first 5,000 founding members; the live count is at {{DOMAIN}}/terms#founding.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.
 ```
 **Hashtags:** IG/FB #lunchideas #highprotein #koreanfood #sunyoon · TikTok #lunchideas #protein #koreangrandma #sunyoon  
 **YouTube Shorts title:** If You Skip Lunch Every Day, Make This  
@@ -2428,7 +2428,7 @@ Soy allergy? Two eggs and some chicken. Watching salt? Rinse the kimchi.
 ```
 Comment JOIN for the founding-member link and full terms.
 Fifty years (in our story), two degrees apart. We settle it with a 10-minute walk. Members get our weekly plans. Cold out? Layers and a hat.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Open to the first 5,000 founding members; the live count is at {{DOMAIN}}/terms#founding.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. Your founding price is locked for as long as you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.
 ```
 **Hashtags:** IG/FB #couplegoals #marriedlife #changandsun #over60 · TikTok #couple #marriage #over60 #changandsun  
 **YouTube Shorts title:** Fifty Years and Still Fighting Over the Thermostat  

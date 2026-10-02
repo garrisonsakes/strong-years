@@ -45,8 +45,8 @@ WL = ("La lista de espera es gratis: un correo cuando abra Años Fuertes, y máx
 # launch: membership terms (S-02, CANON UPDATE 2/3); required in every caption that mentions the membership
 MEMBER = ("La membresía se renueva cada mes al mismo precio hasta que canceles. Cancela en línea cuando quieras (máximo dos "
           "pantallas). Garantía de devolución de 14 días en el cobro de la membresía, una vez por persona. Tu precio fundador "
-          "queda bloqueado mientras sigas suscrito, pausas incluidas. Abierta a los primeros 5,000 miembros fundadores; el "
-          "conteo en vivo está en {{DOMAIN}}/es/terminos#fundadores.")
+          "queda bloqueado mientras sigas suscrito, pausas incluidas. Precio fundador abierto a todos hasta la fecha de cierre; "
+          "términos completos en {{DOMAIN}}/es/terminos#fundadores.")
 LIBRO = ("Los libros de inicio de Años Fuertes (PDF en español): \"Fuerza en 7 Días\" de Don Chuy + \"La Cocina Fuerte\" de "
          "Doña Lupe. {{EBOOK_PRICE}} hoy. La página te dice exactamente qué incluye antes de pagar: para la mayoría, los dos "
          "libros + tu primer mes de la Membresía Fundadora, luego {{FOUNDING_PRICE}}/mes; algunas personas ven solo los "
@@ -547,7 +547,7 @@ dict(id="ES32", title="Sin cuenta regresiva", secs=55, prop="kitchen timer, deli
   ("3-10","LUPE","Somos de inteligencia artificial, comadre. Los términos son de verdad, y te los leo.","Personajes de IA · términos reales","same | puts on her reading glasses | CU"),
   ("10-21","LUPE","Membresía Fundadora: {{FOUNDING_PRICE}} al mes. El primer mes se cobra hoy, se renueva cada mes, y cancelas en línea cuando quieras, en dos pantallas.","{{FOUNDING_PRICE}}/mes · 2 pantallas","same | price card | medium"),
   ("21-30","LUPE","Garantía de devolución de 14 días en el cobro de la membresía, una vez por persona. Tu precio queda bloqueado mientras sigas suscrito.","14 días · precio bloqueado","same | terms card | CU card"),
-  ("30-37","LUPE","Son los primeros cinco mil fundadores, y el conteo en vivo está en la página. Nada de inventar prisa.","5,000 · conteo en vivo","same | phone shows the live count page | CU phone"),
+  ("30-37","LUPE","El precio fundador tiene fecha de cierre, y está en la página. Nada de inventar prisa.","Fecha de cierre en la página","same | phone shows the terms page | CU phone"),
   ("37-43","LUPE",SK_MOVE_TU,"¿Operación reciente? Tu doctor primero.","same | CU | CU"),
   ("43-55","LUPE","Primero la verdad, luego el pan dulce. Comenta UNIRME y te mando el enlace con todo escrito.","Comenta UNIRME","same | offers a concha to camera | medium"),
  ],

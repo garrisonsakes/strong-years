@@ -75,18 +75,14 @@ describe("provisioning plan (DRY_RUN snapshot)", () => {
 });
 
 describe("plan invariants", () => {
-  it("founding cap = 5,000 real inventory, DENY overselling, set only at creation", async () => {
+  it("no founding seat cap: the founding variant is untracked and never sells out", async () => {
+    expect(FOUNDING_CAP).toBeNull();
     const { ops } = await plan("shopify_subscriptions", "core");
     const f = ops.find((o) => o.op === "ProductUpsert" && (o.variables as any).input.handle === "founding-membership")!;
     const v = (f.variables as any).input.variants[0];
-    expect(v.inventoryQuantities).toEqual([{ locationId: "gid://shopify/Location/DRYRUN-1", name: "available", quantity: FOUNDING_CAP }]);
-    expect(v.inventoryPolicy).toBe("DENY");
-    expect(v.inventoryItem.tracked).toBe(true);
-    // Re-run against a provisioned store: no inventory in the input → the seat count is never reset.
-    const again = await plan("shopify_subscriptions", "core", true);
-    const f2 = again.ops.find((o) => o.op === "ProductUpsert" && (o.variables as any).input.handle === "founding-membership")!;
-    expect((f2.variables as any).input.variants[0].inventoryQuantities).toBeUndefined();
-    expect((f2.variables as any).input.variants[0].id).toMatch(/ProductVariant/);
+    expect(v.inventoryQuantities).toBeUndefined();
+    expect(v.inventoryPolicy).toBe("CONTINUE");
+    expect(v.inventoryItem.tracked).toBe(false);
   });
 
   it("STARTER12 discounts only the first subscription payment of the founding product", async () => {

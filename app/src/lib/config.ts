@@ -163,8 +163,13 @@ export const offerRules = {
   guaranteeDaysTrialArm: 14,
   /** Arm B founding membership: 14-day money-back (BRIEF blitz addendum). */
   guaranteeDaysFoundingArm: 14,
+  /** No founding seat cap since Oct 2 2026 (Garrison): Infinity unless FOUNDING_COHORT_CAP is set. The founding
+   *  price closes on FOUNDING_CLOSE_DATE instead. */
   get foundingCap() {
-    return num("FOUNDING_COHORT_CAP", 5000);
+    return num("FOUNDING_COHORT_CAP", Number.POSITIVE_INFINITY);
+  },
+  get foundingCapped() {
+    return Number.isFinite(this.foundingCap);
   },
   /** Share of visitors in arm B (founding, charge today). The rest see the $1 trial. */
   get armBShare() {

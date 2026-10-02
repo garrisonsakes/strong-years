@@ -69,8 +69,9 @@ export interface ProductSpec {
   publishToOnlineStore: boolean;
 }
 
-/** The founding cohort cap is the real inventory of the founding variant. Never reset, extended or reopened. */
-export const FOUNDING_CAP = 5000;
+/** No founding seat cap (Garrison, Oct 2 2026): founding is open to everyone until the close date, then standard.
+ *  null = unlimited. The founding variant is not inventory-tracked, so nothing can sell out or show a count. */
+export const FOUNDING_CAP: number | null = null;
 /** FUNNEL.md canonical: default L90 = Sat Jan 9 2027 (client decision). Override with FOUNDING_CLOSE_DATE. */
 export const FOUNDING_CLOSE_DATE_DEFAULT = "2027-01-09";
 export const FOUNDING_PRICE = "25.00";
@@ -207,9 +208,8 @@ export const PRODUCTS: ProductSpec[] = [
       price: FOUNDING_PRICE,
       sku: "SY-FOUNDING-25",
       requiresShipping: false,
-      tracked: true,
-      initialQuantity: FOUNDING_CAP,
-      inventoryPolicy: "DENY",
+      tracked: false,
+      inventoryPolicy: "CONTINUE",
       taxable: true,
     }],
     collections: ["membership"],
@@ -219,7 +219,7 @@ export const PRODUCTS: ProductSpec[] = [
     seoDescription: "Daily 8 to 12 minute strength sessions with Chang Yin (AI character), Sun Yoon's Sunday recipes and a monthly Strength Age retest. $25 a month, cancel online anytime.",
     descriptionHtml: `<p>Your Daily Practice with Chang Yin, 8 to 12 minutes a day at your level, with a chair-based version of everything. Sun Yoon's recipes every Sunday. A Strength Age you retest every month.</p>
 <p><strong>$25 today for your first month, then $25 a month until you cancel.</strong> Founding price locked for as long as you stay subscribed. 14-day money-back guarantee on your membership charge, once per person. Cancel online anytime in your account.</p>
-<p>Founding membership is open to the first 5,000 members or until the founding close date, whichever comes first.</p>
+<p>The founding price is open to everyone who joins before the founding close date. There is no limit on founding memberships.</p>
 ${DISCLOSURE_P}`,
     publishToOnlineStore: true,
   },
@@ -545,7 +545,7 @@ export interface MetafieldDefSpec {
 export const METAFIELD_NAMESPACE = "strong_years";
 export const METAFIELD_DEFINITIONS: MetafieldDefSpec[] = [
   { ownerType: "SHOP", key: "cells", name: "Pricing cells", type: "json", description: "Ebook price cells and funnel arms with weights. The theme assigns one per visitor (sticky).", storefront: "PUBLIC_READ" },
-  { ownerType: "SHOP", key: "founding", name: "Founding cohort", type: "json", description: "Cap, close date, standard price, closed flag. The seat count itself is the founding variant's real inventory.", storefront: "PUBLIC_READ" },
+  { ownerType: "SHOP", key: "founding", name: "Founding cohort", type: "json", description: "Close date, standard price, closed flag (cap is null: no seat limit since Oct 2 2026). Formerly the seat count was the founding variant's real inventory.", storefront: "PUBLIC_READ" },
   { ownerType: "SHOP", key: "links", name: "Links and company", type: "json", description: "Members app URL, support email, billing phone, company legal name and mailing address.", storefront: "PUBLIC_READ" },
   { ownerType: "PRODUCT", key: "role", name: "Strong Years role", type: "single_line_text_field", description: "ebook | founding | standard | annual | essentials | gift | bump_wallplan | bump_kit | coached", storefront: "PUBLIC_READ" },
   { ownerType: "PRODUCT", key: "cell", name: "Price cell", type: "single_line_text_field", description: "Price cell this product sells (e7, e12, e15, c147, c97, c197).", storefront: "PUBLIC_READ" },

@@ -86,7 +86,9 @@ export default async function Join({ searchParams }: { searchParams: Promise<Rec
           ))}
         </ul>
         <div className="mt-6 rounded-xl border-2 border-ink bg-rice p-4" data-testid="join-cohort">
-          {offer.cohortOpen ? (
+          {offer.cohortOpen && !Number.isFinite(offer.cap) ? (
+            <p className="text-lg font-bold">The founding price is open to everyone until the founding close date. Your price stays the same for as long as you stay subscribed.</p>
+          ) : offer.cohortOpen ? (
             <>
               <p className="text-lg font-bold">
                 {offer.claimed.toLocaleString("en-US")} of {offer.cap.toLocaleString("en-US")} founding spots claimed

@@ -8,7 +8,7 @@
 FOUNDING_LINE = ("Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. "
                  "Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. "
                  "Your founding price stays locked while you stay subscribed, pauses included. "
-                 "Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.")
+                 "Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.")
 STARTER_LINE = ("Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. "
                 "Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person.")
 GIFT_LINE = ("Give 3 months for $49 or 12 months for $119, prepaid and charged today. "
@@ -52,7 +52,7 @@ dict(id="A03", concept="C06 Yes, We're AI (Chang version)", fmt="UGC talking hea
  hooks=["I'm not real. The exercises are.", "I'm AI. Here's what's real.", "Some AI teachers pretend. I won't."],
  body=[("2-9","Chang in the garage: 'A team made me. My story is fiction. The research is real, and it's in every caption.'","AI character · real research"),
        ("9-18","Product: daily session, monthly retest chart, Sunday recipe card, Wednesday live Q&A screen with a real team member (first name only).","Daily session · monthly retest · live Wednesdays"),
-       ("18-25","'Founding Membership opens today.'","Founding Membership: first 5,000")],
+       ("18-25","'Founding Membership opens today.'","Founding Membership: price stays while you stay")],
  cta="Subscribe", dest="/join", optimize=OPT_F,
  primary="Chang Yin is an AI character, and we say so up front. His story is fiction. What's real: a new 8–12 minute strength and balance session every morning, a chair version of everything, a monthly Strength Age retest, Sun Yoon's Sunday recipes, and a real person on our team answering questions live every Wednesday. Every session and recipe is built from published guidelines for older adults, and our sources are on our site.\n" + FOUNDING_LINE,
  headline="Honest AI. Real exercises.", end=END_FOUNDING,
@@ -365,12 +365,12 @@ dict(id="A33", concept="C06 derivative: the cancel button (subscription clarity)
 dict(id="A34", concept="C06 derivative: 'I read the terms. Twice.'", fmt="Sun blunt", character="Sun Yoon + Chang Yin", audience="All 45+", secs=25, offer="founding",
  hooks=["'Founding price.' Show me the terms.", "Locked how? Explain.", "I read the terms. Twice."],
  body=[("2-10","Sun cross-examines Chang, who pulls a folded terms card from his pocket.","AI characters"),
-       ("10-20","Card on screen: price, charged today, renews monthly, cancel online anytime, 14-day money-back guarantee, price locked while subscribed (pauses included), first 5,000 members or the close date.","All the terms, on one card"),
-       ("20-25","Sun: 'Seven out of ten. Fine.'","Founding Membership: first 5,000")],
+       ("10-20","Card on screen: price, charged today, renews monthly, cancel online anytime, 14-day money-back guarantee, price locked while subscribed (pauses included), open until the close date.","All the terms, on one card"),
+       ("20-25","Sun: 'Seven out of ten. Fine.'","Founding Membership: price stays while you stay")],
  cta="Subscribe", dest="/join", optimize=OPT_F,
  primary="Sun Yoon (an AI character) read the founding terms twice so you don't have to guess. Strong Years: a daily 8–12 minute session with Chang Yin (also AI), a chair version of everything, Sunday recipes and a monthly Strength Age retest. " + DISC + "\n" + FOUNDING_LINE,
  headline="The founding terms, in plain words", end=END_FOUNDING,
- compliance="T-04: cap is real (5,000) and publicly counted; no countdown or 'spots left'."),
+ compliance="T-04: no seat cap and no cap claims; no countdown or 'spots left'."),
 
 # ======================================== Adult-child gift (6) ========================================
 dict(id="A35", concept="C15 Ask Your Mom to Do This", fmt="Adult-child gift", character="Chang Yin + labeled dramatization", audience="AC", secs=30, offer="gift",

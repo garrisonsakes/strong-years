@@ -178,7 +178,7 @@ export async function runPlan(gql: GraphQLRunner, o: PlanOptions): Promise<PlanR
   // ---------------------------------------------------------------- 6. shop metafields (theme config)
   const shopMetafields = [
     { key: "cells", value: JSON.stringify({ ebook: EBOOK_CELLS, arms: FUNNEL_ARMS, test: o.armTestOn !== false, version: 2 }) },
-    { key: "founding", value: JSON.stringify({ cap: FOUNDING_CAP, cap_label: FOUNDING_CAP.toLocaleString("en-US"), close_date: o.foundingCloseDateIso, price: FOUNDING_PRICE, standard_price: STANDARD_PRICE, count_line_threshold: 1000, few_left_threshold: 4900, closed: false }) },
+    { key: "founding", value: JSON.stringify({ cap: FOUNDING_CAP, cap_label: FOUNDING_CAP == null ? null : FOUNDING_CAP.toLocaleString("en-US"), close_date: o.foundingCloseDateIso, price: FOUNDING_PRICE, standard_price: STANDARD_PRICE, count_line_threshold: 1000, few_left_threshold: 4900, closed: false }) },
     { key: "links", value: JSON.stringify({ members_url: o.membersAppUrl, support_email: o.facts.supportEmail, phone: o.facts.billingPhone, company: o.facts.companyLegalName, address: o.facts.mailingAddress, domain: o.facts.domain, sms_enabled: o.facts.smsEnabled, reviewer_signed: o.facts.reviewerSigned }) },
   ];
   const ms = await gql.run<any>("Set shop metafields (cells, founding, links)", "MetafieldsSet", {
@@ -395,7 +395,7 @@ async function verifyPhase(gql: GraphQLRunner, o: PlanOptions, r: PlanReport, on
         errs(`requiresSellingPlan ${p.handle}`, res.productUpdate);
         r.updated.push(`subscription-only:${p.handle}`);
       } else r.skipped.push(`subscription-only:${p.handle}`);
-      if (p.role === "founding" && variants[0]?.inventoryQuantity != null) r.ids["founding:seats_taken"] = String(FOUNDING_CAP - variants[0].inventoryQuantity);
+      if (p.role === "founding" && FOUNDING_CAP != null && variants[0]?.inventoryQuantity != null) r.ids["founding:seats_taken"] = String(FOUNDING_CAP - variants[0].inventoryQuantity);
     }
     p.variants.forEach((spec, i) => {
       const v = variants.find((x) => x.sku === spec.sku) || variants[i];
@@ -463,7 +463,7 @@ async function closeFoundingPhase(gql: GraphQLRunner, o: PlanOptions, r: PlanRep
   errs("standard activate", up.productUpdate);
   if (onlineStoreId) await gql.run("Publish standard membership", "PublishToOnlineStore", { id: s.id, input: [{ publicationId: onlineStoreId }] });
   const ms = await gql.run<any>("Mark founding group closed (theme switches every CTA to standard)", "MetafieldsSet", {
-    metafields: [{ ownerId: r.ids.shop, namespace: METAFIELD_NAMESPACE, key: "founding", type: "json", value: JSON.stringify({ cap: FOUNDING_CAP, cap_label: FOUNDING_CAP.toLocaleString("en-US"), close_date: o.foundingCloseDateIso, price: FOUNDING_PRICE, standard_price: STANDARD_PRICE, count_line_threshold: 1000, few_left_threshold: 4900, closed: true }) }],
+    metafields: [{ ownerId: r.ids.shop, namespace: METAFIELD_NAMESPACE, key: "founding", type: "json", value: JSON.stringify({ cap: FOUNDING_CAP, cap_label: FOUNDING_CAP == null ? null : FOUNDING_CAP.toLocaleString("en-US"), close_date: o.foundingCloseDateIso, price: FOUNDING_PRICE, standard_price: STANDARD_PRICE, count_line_threshold: 1000, few_left_threshold: 4900, closed: true }) }],
   });
   errs("founding metafield", ms.metafieldsSet);
   r.updated.push("founding:closed");

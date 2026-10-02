@@ -30,7 +30,7 @@ export default async function Admin({ searchParams }: { searchParams: Promise<Re
     ["Scheduled churn", moneyExact(k.scheduledChurnCents), "MRR that ends at period end (cancelled, still has access)"],
     ["Paying members", String(k.paying), `Active by arm: A ${k.activeByArm.A} · B ${k.activeByArm.B} · gift ${k.activeByArm.gift}`],
     ["Trials running", String(k.trials), `${k.trialConversions} converted · rate ${pct(k.trialConversionRate)}`],
-    ["Founding cohort", `${k.cohort.claimed.toLocaleString("en-US")} / ${k.cohort.cap.toLocaleString("en-US")}`, `${k.cohort.left.toLocaleString("en-US")} spots left (real count)`],
+    ["Founding cohort", Number.isFinite(k.cohort.cap) ? `${k.cohort.claimed.toLocaleString("en-US")} / ${k.cohort.cap.toLocaleString("en-US")}` : k.cohort.claimed.toLocaleString("en-US"), Number.isFinite(k.cohort.cap) ? `${k.cohort.left.toLocaleString("en-US")} spots left (real count)` : "no seat cap; closes on the founding close date"],
     ["Churn, 30 days", String(k.churned30d), `rate ${pct(k.churnRate30d)} · paused ${k.paused}`],
     ["Cancel flow, 30 days", `${k.cancelFlowStarts30d} started`, `${k.saves30d} saved by pause/downgrade`],
     ["Refunds", String(k.refunds.count), moneyExact(k.refunds.cents)],
@@ -63,7 +63,7 @@ export default async function Admin({ searchParams }: { searchParams: Promise<Re
               </div>
             ))}
           </div>
-          <p className="fine mt-3">MRR = active paying memberships × monthly price (annual ÷ 12), partner seats included, prepaid gifts excluded. Founding cap: {offerRules.foundingCap.toLocaleString("en-US")}.</p>
+          <p className="fine mt-3">MRR = active paying memberships × monthly price (annual ÷ 12), partner seats included, prepaid gifts excluded. Founding cap: {offerRules.foundingCapped ? offerRules.foundingCap.toLocaleString("en-US") : "none (closes on the founding close date)"}.</p>
         </section>
 
         <section id="launch" className="space-y-4">

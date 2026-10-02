@@ -19,7 +19,14 @@ export function RenewalNote({ offer, priceCents }: { offer: "trial" | "founding"
   return <p className="fine mt-3 max-w-prose">{text}</p>;
 }
 
-export function CohortCounter({ claimed, cap }: { claimed: number; cap: number }) {
+export function CohortCounter({ claimed, cap, closeDate = null }: { claimed: number; cap: number; closeDate?: string | null }) {
+  if (!Number.isFinite(cap)) {
+    return (
+      <div className="mt-4 rounded-xl border-2 border-ink bg-paper p-4" data-testid="cohort-counter">
+        <p className="text-[20px] font-bold">The founding price is open to everyone{closeDate ? ` until ${closeDate}` : " until the founding close date"}. Your price stays the same for as long as you stay subscribed.</p>
+      </div>
+    );
+  }
   const pct = Math.min(100, (claimed / cap) * 100);
   return (
     <div className="mt-4 rounded-xl border-2 border-ink bg-paper p-4" data-testid="cohort-counter">

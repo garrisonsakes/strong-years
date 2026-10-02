@@ -313,7 +313,7 @@ def validate_v2(s):
         if not any(w.startswith(s.get("obj", "@@").lower()) for w in first):
             P.append(f"{sid}: OBJ3 but '{s.get('obj')}' is not in the first three words {first}")
     if s["cta"] == "JOIN":  # SAFETY S-02 + BLITZ founding terms
-        for need in ("{{FOUNDING_PRICE}}/month", "renews monthly", "Cancel online anytime", "14-day money-back", "5,000"):
+        for need in ("{{FOUNDING_PRICE}}/month", "renews monthly", "Cancel online anytime", "14-day money-back", "{{FOUNDING_CLOSE_DATE}}"):
             if need not in s["caption"]:
                 P.append(f"{sid}: JOIN caption missing '{need}' (S-02 / founding terms)")
         spoken_ost = (s["_spoken"] + " " + ost).lower()
@@ -334,7 +334,7 @@ def validate_v2(s):
 # CANON UPDATE 2 offer rules for S151+ (ORGANIC_ENGINE.md §5, FUNNEL.md §4.18–4.19, SAFETY S-02/T-04).
 MEMBER_MENTION = re.compile(r"\b(membership|member|members|subscri\w*|founding (price|seats?|cohort|members?)|per month|/month|a month)\b", re.I)
 MEMBER_TERMS = ("{{FOUNDING_PRICE}}/month", "renews monthly", "Cancel online anytime", "14-day money-back guarantee",
-                "locked for as long as you stay subscribed", "5,000")
+                "locked for as long as you stay subscribed", "{{FOUNDING_CLOSE_DATE}}")
 BOOK_TERMS = ("{{EBOOK_PRICE}} one-time", "not a subscription", "yours to keep")
 
 
@@ -380,7 +380,9 @@ def validate_runway(s, ost):
                     if need not in spoken_ost.lower():
                         P.append(f"{sid}: membership mentioned in spoken/on-screen text without '{need}' (S-02)")
     if re.search(r"\b(spots?|seats?) left\b|\bends (tonight|at midnight)\b|\blast chance\b|\bhurry\b|\bonly \d+ left\b", everything, re.I):
-        P.append(f"{sid}: urgency/scarcity wording (T-04: real cap and live count only)")
+        P.append(f"{sid}: urgency/scarcity wording (T-04: close date only)")
+    if re.search(r"\b5,?000\b|\bfirst five thousand\b|\b(live|real) count(er)?\b|\bseat cap\b", everything, re.I):
+        P.append(f"{sid}: founding seat-cap claim (there is no cap since Oct 2 2026; T-04)")
     return P
 
 
@@ -1251,7 +1253,7 @@ def validate_v2_core(s, ost):
     if s["hcat"] not in CAT_NAMES: P.append(f"{sid}: hook category {s['hcat']} unknown")
     if s.get("skip") and s["skip"] not in s["_spoken"] + " " + ost: P.append(f"{sid}: skip/safety line not found verbatim in spoken or on-screen text")
     if s["cta"] == "JOIN":
-        for need in ("{{FOUNDING_PRICE}}/month", "renews monthly", "Cancel online anytime", "14-day money-back", "5,000"):
+        for need in ("{{FOUNDING_PRICE}}/month", "renews monthly", "Cancel online anytime", "14-day money-back", "{{FOUNDING_CLOSE_DATE}}"):
             if need not in s["caption"]: P.append(f"{sid}: JOIN caption missing '{need}'")
         so = (s["_spoken"] + " " + ost).lower()
         for need in ("{{founding_price}}", "cancel", "renew"):

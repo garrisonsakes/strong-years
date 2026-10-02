@@ -24,7 +24,7 @@
   "states": {
     "dm1": {
       "dm": [
-        "Hi {first_name}! This is the Strong Years team assistant (automated). Chang Yin and Sun Yoon are AI characters, not real people. Reply STOP anytime.\n\nThe founding membership, in plain words: $25 a month, charged when you join and then monthly until you cancel. The founding price stays the same for as long as you stay subscribed, for the first 5,000 members. 14-day money-back guarantee on the membership charge, once per person. Cancel online anytime in two screens."
+        "Hi {first_name}! This is the Strong Years team assistant (automated). Chang Yin and Sun Yoon are AI characters, not real people. Reply STOP anytime.\n\nThe founding membership, in plain words: $25 a month, charged when you join and then monthly until you cancel. The founding price stays the same for as long as you stay subscribed, until the founding close date. 14-day money-back guarantee on the membership charge, once per person. Cancel online anytime in two screens."
       ],
       "buttons": [
         {

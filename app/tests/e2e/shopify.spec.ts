@@ -76,7 +76,7 @@ test("prelaunch: /join and every checkout API refuse; the waitlist shows honest 
   await expect(page.getByTestId("waitlist-closed-note")).toBeVisible();
   await expect(page.getByTestId("waitlist-opening")).toContainText("opening date isn't set yet");
   await expect(page.getByTestId("launch-countdown")).toHaveCount(0); // no date → no countdown
-  await expect(page.getByTestId("waitlist-cohort")).toContainText("Open to the first 5,000 members");
+  await expect(page.getByTestId("waitlist-cohort")).toContainText("Open to everyone until")   // CANON UPDATE 7: no seat cap;
   await expect(page.locator("body")).not.toContainText(/\$1\b|only \d+ left|spots? left today/i);
   const api = await request.post("/api/checkout", { data: { offer: "founding" } });
   expect(api.status()).toBe(403);

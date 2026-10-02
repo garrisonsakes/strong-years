@@ -42,7 +42,7 @@ BOOK = ("The Strong Years starter books: Chang Yin's 7-Day Strength Reset + Sun 
 JOIN = ("Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. "
         "Cancel online anytime (two screens, max). 14-day money-back guarantee on the membership charge, once per person. "
         "Your founding price is locked for as long as you stay subscribed, pauses included. "
-        "Open to the first 5,000 founding members; the live count is at {{DOMAIN}}/terms#founding.")
+        "Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}; full terms at {{DOMAIN}}/terms#founding.")
 
 TIMES = {6: ["0-3", "3-11", "11-19", "19-27", "27-35", "35-42"],
          7: ["0-3", "3-10", "10-17", "17-24", "24-31", "31-37", "37-42"],

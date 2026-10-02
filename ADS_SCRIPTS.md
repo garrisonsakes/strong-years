@@ -17,7 +17,7 @@ Built from ADS.md's 25 concepts (and its hook bank) for the BLITZ canon's **Foun
 
 ## Offer lines (exact text)
 
-- **Founding Membership (the plain $25 page, /join):** Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+- **Founding Membership (the plain $25 page, /join):** Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 - **Starter variant (launch default, cell B):** Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Destination `/b?t=BOOK`. End card: Session screen + '$12 today: both books + your first month · then $25/mo · renews monthly · cancel online anytime'.
 - **Gift:** Give 3 months for $49 or 12 months for $119, prepaid and charged today. It starts the day they open it and never auto-renews. Starter variant: Or they can start for $12 today: both Starter Books and the first month, then $25/month as a founding member. Renews monthly until cancelled. Cancel online anytime.
 - **Founding end card:** Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper)
@@ -96,7 +96,7 @@ Built from ADS.md's 25 concepts (and its hook bank) for the BLITZ canon's **Foun
 **Primary text:**
 ```
 Chang Yin (an AI character) does the 30-second chair stand, a standard test from senior fitness research. Try it with a sturdy chair against a wall, arms crossed, 30 seconds. Write the number down; Strong Years members retest every month and follow a new 8–12 minute session each morning, with a chair version of everything. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** 30 seconds. One chair. Your number.  
@@ -125,7 +125,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Standing up from a chair is a leg-strength test everyone takes every day. Chang Yin (an AI character) shows three moves that train exactly those muscles, with a seated version of each. It's day one of the Daily Practice inside Strong Years: 8–12 minutes, levelled from all-chair to Iron. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** 8 minutes. One chair. Stronger legs.  
@@ -147,13 +147,13 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 | 0–2 | Hook variant (spoken + on screen) | Hook text + `AI character` tag |
 | 2-9 | Chang in the garage: 'A team made me. My story is fiction. The research is real, and it's in every caption.' | AI character · real research |
 | 9-18 | Product: daily session, monthly retest chart, Sunday recipe card, Wednesday live Q&A screen with a real team member (first name only). | Daily session · monthly retest · live Wednesdays |
-| 18-25 | 'Founding Membership opens today.' | Founding Membership: first 5,000 |
+| 18-25 | 'Founding Membership opens today.' | Founding Membership: price stays while you stay |
 | end | End card | Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper) |
 
 **Primary text:**
 ```
 Chang Yin is an AI character, and we say so up front. His story is fiction. What's real: a new 8–12 minute strength and balance session every morning, a chair version of everything, a monthly Strength Age retest, Sun Yoon's Sunday recipes, and a real person on our team answering questions live every Wednesday. Every session and recipe is built from published guidelines for older adults, and our sources are on our site.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** Honest AI. Real exercises.  
@@ -182,7 +182,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Chang Yin is an AI character: in his story, a retired welder who trains every morning with a chair and two water jugs. The research is real: muscle keeps responding to training at 60, 70 and beyond. Strong Years gives you a new 8–12 minute Daily Practice every morning and a monthly Strength Age retest to track it. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** Plan for the legs too  
@@ -210,7 +210,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Carrying groceries from the car is a strength test: grip, legs and trunk working together. Chang Yin (an AI character) shows how to train it at home with water jugs. It's one of the Daily Practice sessions in Strong Years, with a chair-based version for every move. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** The grocery test, trained at home  
@@ -238,7 +238,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Getting down to the floor and back up is something many people stop practising, which makes it harder over time. Chang Yin (an AI character) shows a step-by-step progression that starts with a sturdy chair for support and someone at home. It's part of Strong Years. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** Floor to standing, step by step  
@@ -266,7 +266,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Golf swing, casting a line, lifting a grandchild: it's all legs, hips, trunk and grip. Chang Yin (an AI character) trains all four in short daily sessions you can do in a garage or kitchen. Every session is built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** Train for what you love doing  
@@ -294,7 +294,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Power is moving with speed, like catching a door or crossing the street before the light changes. Chang Yin (an AI character) trains it with 'fast up, slow down' movements at a kitchen counter. It's built into the Strong Years week. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** Train power, not just strength  
@@ -322,7 +322,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Every Wednesday a real person on our team answers member questions live. Every morning Chang Yin, an AI character, leads the Daily Practice. Strong Years: 8–12 minutes a day, a chair version of everything, and a monthly Strength Age retest. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** AI coach. Real humans on Wednesdays.  
@@ -350,7 +350,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Grip strength is one of the simplest strength measures there is, and it's trainable. Chang Yin (an AI character) shows three grip exercises with a towel, a water jug and a rubber band, from the Grip & Hands program in Strong Years. Sun Yoon (also AI) supervises. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** Three moves for stronger hands  
@@ -379,7 +379,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Chang Yin (an AI character) just led the first minute of today's Daily Practice. Did you do it with him? The full session is 8 minutes, levelled from all-chair Rebuild up to Iron, and there's a new one every morning in Strong Years. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** Minute one done. Seven more?  
@@ -408,7 +408,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Four standard standing positions from senior fitness research, done at the kitchen counter with one hand ready: feet together, one foot slightly ahead, heel to toe, one foot. Chang Yin (an AI character) walks through all four in real time. Steady Feet is one of the 12-week programs in Strong Years. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** The 4-stage counter routine  
@@ -437,7 +437,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Every Strong Years session has a chair-based Rebuild version, done fully seated. Led by Chang Yin (an AI character), with movements demonstrated alongside a real, credited coach. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** Seated strength sessions, daily  
@@ -466,7 +466,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Do it together: Chang Yin and Sun Yoon (both AI characters) show a 10-minute session for two, each at their own level. Add a partner to Strong Years for $8/month, renews monthly with your membership, cancel online anytime. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** Two people, one kitchen table  
@@ -495,7 +495,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 One minute at the kitchen counter with Chang Yin (an AI character): counter squats, heel raises, marching. That's how every Strong Years session starts, then it builds to 8–12 minutes with a chair version of every move. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** One minute at the counter  
@@ -524,7 +524,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 A one-minute hand-strength follow-along with Chang Yin (an AI character): towel wring, water-jug hold, rubber-band finger spreads. It's a taste of the Grip & Hands program inside Strong Years. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** Stronger hands in one minute a day  
@@ -553,7 +553,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 A morning routine that starts in bed: knee rolls, ankle pumps, sit for a count of ten, stand slowly with a hand on the headboard. Chang Yin (an AI character) leads it every morning in Strong Years. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** A morning routine that starts in bed  
@@ -582,7 +582,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Kneel, half-kneel, stand, with a sturdy chair beside you and someone at home. Chang Yin (an AI character) and his neighbor Frank (a fictional character) show two levels side by side. It's the floor-skills week in Strong Years. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** Floor skills, with support  
@@ -608,7 +608,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Created with AI characters. Your birthday gives you one age. Two simple at-home tests from senior fitness research, plus a few questions, give you another: your Strength Age. Free, 3 minutes. On your result page, founding members can start the daily plan the same day. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** Free 3-minute Strength Age test  
@@ -636,7 +636,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Chang Yin (an AI character) took the free Strength Age test. Take yours: two at-home tests from senior fitness research and a few questions, 3 minutes. The result page shows your number and a 7-day plan, and founding members can start the full program the same day. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** Guess his Strength Age. Then yours.  
@@ -663,7 +663,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Sun Yoon's free Kitchen Check: 14 quick questions about breakfast, protein, water, walks and evenings, and a 7-day kitchen plan with three recipes to start tonight. Sun Yoon is an AI character. Recipes built on published nutrition guidance for older adults. Not medical advice.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** Sun Yoon's 2-minute Kitchen Check  
@@ -690,7 +690,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Sun Yoon (an AI character) weighs breakfasts for fun. Guess this one, then take her free 2-minute Kitchen Check for a 7-day plan with three recipes. Most breakfasts are short on protein; general guidance for older adults is about 25–30 g per meal. Recipes built on published nutrition guidance for older adults. Not medical advice.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** Guess the grams. Then score your kitchen.  
@@ -717,7 +717,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Do the 30-second chair stand with Chang Yin (an AI character), then enter your number in the free Strength Age test. You'll see how it compares with typical results by age group from senior fitness research, plus a 7-day plan. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** Count. Tap. See your number.  
@@ -744,7 +744,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Heel to toe at the kitchen counter, one hand ready, count your seconds. Chang Yin (an AI character) shows how. Enter the number in the free Strength Age test for your result and a 7-day plan. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** How many seconds, heel to toe?  
@@ -771,7 +771,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 The grocery carry, as a home test: two water jugs, stand tall, count your steps. Chang Yin (an AI character) shows it. Put the number in the free Strength Age test for your result and a 7-day plan. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** The grocery test: how many steps?  
@@ -798,7 +798,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Not sure where to start? The free Strength Age test asks safety questions first, and if standing tests aren't right today it gives a one-page seated plan to show the doctor. Chang Yin is an AI character. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** A safe first plan, free  
@@ -826,7 +826,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Sun Yoon (an AI character) has opinions about breakfast. Muscles need protein at every meal, about 25–30 grams for older adults, and breakfast is where most people come up short. Her Sunday recipes, a printable grocery list and Chang Yin's daily sessions are all inside Strong Years. Recipes built on published nutrition guidance for older adults. Not medical advice.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** Toast is not breakfast  
@@ -854,7 +854,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Sun Yoon (an AI character) is blunt about evenings: caffeine lasts for hours, big late dinners sit heavy, and a slow exhale helps you wind down. Strong Years includes an evening wind-down session and her recipes. Recipes built on published nutrition guidance for older adults. Not medical advice.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** Sun Yoon's three evening rules  
@@ -882,7 +882,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Sun Yoon and Chang Yin are AI characters with a fictional 50-year marriage. Every morning he complains, and every morning he does his 8 minutes anyway. Strong Years gives you the same daily session, a streak with grace days, and a coach message each morning. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** He complains. He still does it.  
@@ -910,7 +910,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Some wellness accounts pretend their AI teachers are real. We don't. Sun Yoon and Chang Yin are AI characters, and their story is fiction. Every session and recipe is built from published guidelines for older adults, and our sources are on our site. Strong Years: a daily 8–12 minute session, a chair version of everything, Sunday recipes and a live Wednesday Q&A with a real person.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** Honest AI. Real exercises.  
@@ -938,7 +938,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Sun Yoon (an AI character) has one rule for lunch: sit down. Her Sunday recipes include a cooking-for-one collection, with protein at every meal. It's all inside Strong Years, with Chang Yin's daily sessions. Recipes built on published nutrition guidance for older adults. Not medical advice.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** Sit down. Eat like you mean it.  
@@ -966,7 +966,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Sun Yoon and Chang Yin are AI characters with one house rule: no study, no claim. Every video and every Strong Years session is built on published research, and the source is named. Daily 8–12 minute sessions, Sunday recipes and a monthly Strength Age retest. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** No study, no claim. That's the rule.  
@@ -994,7 +994,7 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 **Primary text:**
 ```
 Sun Yoon (an AI character) made sure the cancel button is easy to find: two screens, and the 'Finish canceling' button is as big as the offer. We email before every renewal. Strong Years: a daily strength session with Chang Yin (also AI), Sunday recipes and a monthly retest. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** Easy to join. Easy to cancel.  
@@ -1015,19 +1015,19 @@ Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews
 |---|---|---|
 | 0–2 | Hook variant (spoken + on screen) | Hook text + `AI character` tag |
 | 2-10 | Sun cross-examines Chang, who pulls a folded terms card from his pocket. | AI characters |
-| 10-20 | Card on screen: price, charged today, renews monthly, cancel online anytime, 14-day money-back guarantee, price locked while subscribed (pauses included), first 5,000 members or the close date. | All the terms, on one card |
-| 20-25 | Sun: 'Seven out of ten. Fine.' | Founding Membership: first 5,000 |
+| 10-20 | Card on screen: price, charged today, renews monthly, cancel online anytime, 14-day money-back guarantee, price locked while subscribed (pauses included), open until the close date. | All the terms, on one card |
+| 20-25 | Sun: 'Seven out of ten. Fine.' | Founding Membership: price stays while you stay |
 | end | End card | Session screen + 'Founding Membership · {{FOUNDING_PRICE}}/mo · charged today · renews monthly · cancel online anytime · 14-day money-back guarantee' (full contrast, Ink on Paper) |
 
 **Primary text:**
 ```
 Sun Yoon (an AI character) read the founding terms twice so you don't have to guess. Strong Years: a daily 8–12 minute session with Chang Yin (also AI), a chair version of everything, Sunday recipes and a monthly Strength Age retest. Built on published exercise guidelines for older adults. Check with your doctor before starting new exercise.
-Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Open to the first 5,000 members or until {{FOUNDING_CLOSE_DATE}}, whichever comes first.
+Founding Membership: {{FOUNDING_PRICE}}/month, first month charged today, renews monthly at the same price until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person. Your founding price stays locked while you stay subscribed, pauses included. Founding price open to everyone until {{FOUNDING_CLOSE_DATE}}.
 ```
 **Starter variant (cell B):** replace the offer line with "Start for $12 today: both Starter Books (yours to keep) and your first month as a founding member, then $25/month. Renews monthly until you cancel. Cancel online anytime. 14-day money-back guarantee on the membership charge, one per person."  
 **Headline:** The founding terms, in plain words  
 **Optimization:** Subscribe (server-side at checkout, value = month-one price; dedup with Purchase). Fallback if the pixel is health-restricted: Purchase, then Lead with a cost cap.  
-**Compliance note:** T-04: cap is real (5,000) and publicly counted; no countdown or 'spots left'.
+**Compliance note:** T-04: no seat cap and no cap claims; no countdown or 'spots left'.
 
 ---
 

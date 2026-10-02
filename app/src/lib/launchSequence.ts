@@ -154,7 +154,9 @@ function emailCopy(step: "e1" | "e2" | "e3", entry: WaitlistEntry, line: string,
     subject: "The last launch email",
     text: [
       `${hi}this is the last email in the launch series. After this we won't write again unless you join or ask us to.`,
-      `Founding membership is open to the first ${count.cap.toLocaleString("en-US")} members. Right now ${count.claimed.toLocaleString("en-US")} of ${count.cap.toLocaleString("en-US")} founding spots are claimed. That's a live count from our member database, not a countdown.`,
+      Number.isFinite(count.cap)
+        ? `Founding membership is open to the first ${count.cap.toLocaleString("en-US")} members. Right now ${count.claimed.toLocaleString("en-US")} of ${count.cap.toLocaleString("en-US")} founding spots are claimed. That's a live count from our member database, not a countdown.`
+        : "The founding price is open to everyone until the founding close date, and it stays the same for as long as you stay subscribed. No countdown.",
       line,
       `If you'd like it: ${link}`,
       "— Sun Yoon (AI character)",
