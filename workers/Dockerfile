@@ -14,6 +14,7 @@ COPY workers/ /app/
 # Spec inputs the gates read at runtime (SAFETY_RULES.md is authoritative; blocked_claims.json + prompts/03 for the judge)
 COPY SAFETY_RULES.md EVIDENCE.md n8n_core_workflow.json /app/spec/
 COPY prompts/ /app/spec/prompts/
+COPY data/discover/seeds.json /app/spec/data/discover/seeds.json
 
 ENV SPEC_DIR=/app/spec \
     OUTPUT_DIR=/data/out \

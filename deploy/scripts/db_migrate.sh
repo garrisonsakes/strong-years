@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Applies the database schemas in order, idempotently, then verifies RLS.
-#   pipeline DB : schema.sql, schema_growth.sql   (idempotent by design: re-applied whenever their checksum changes)
+#   pipeline DB : schema.sql, schema_growth.sql, schema_discover.sql   (idempotent by design: re-applied whenever their checksum changes)
 #   app DB      : app/supabase/migrations/*.sql in name order (applied once each; a changed applied file aborts)
 # A ledger table deploy.schema_migrations(target, file, sha256, applied_at) records what ran.
 #
@@ -57,7 +57,7 @@ run_target() { # url target
       if [ "$DRY" = 1 ]; then echo "  + bootstrap (would apply)"; else psqlx "$url" -f - < "$ROOT/deploy/sql/bootstrap_plain_postgres.sql" >/dev/null; echo "  + bootstrap"; fi
     fi
     if [ "$target" = pipeline ]; then
-      apply_set "$url" pipeline rerun "$ROOT/schema.sql" "$ROOT/schema_growth.sql"
+      apply_set "$url" pipeline rerun "$ROOT/schema.sql" "$ROOT/schema_growth.sql" "$ROOT/schema_discover.sql"
     else
       mapfile -t files < <(ls "$ROOT"/app/supabase/migrations/*.sql | sort)
       apply_set "$url" app once "${files[@]}"

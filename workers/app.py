@@ -25,6 +25,7 @@ from assemble import api as render_api
 from assemble import c2pa_sign
 from common import auth, config, errors, storage
 from compliance import api as compliance_api
+from discover import api as discover_api
 from dm import api as dm_api
 from growth import api as growth_api
 from growth import config as growth_config
@@ -44,6 +45,7 @@ errors.install(app)
 for r in (render_api.router, qa_api.router, compliance_api.router, uniqueness_api.router, packaging_api.router,
           growth_api.router, dm_api.router):
     app.include_router(r)
+app.include_router(discover_api.router)
 
 
 async def _files_auth(request: Request) -> None:

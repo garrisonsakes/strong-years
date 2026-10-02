@@ -208,3 +208,76 @@ def db_row(card: dict) -> dict:
             **{f"{c}_score": s.get(c) for c in COMPONENTS}, "composite": card["composite"], "raw": card["raw"],
             "hook_block_id": card.get("hook_block_id"), "body_block_id": card.get("body_block_id"),
             "close_block_id": card.get("close_block_id"), "config_version": card.get("config_version")}
+
+
+# ---------------------------------------------------------------- value score (MRR-weighted iteration)
+VALUE_DEFAULTS = {
+    "modes": {"default": {"virality": 0.5, "money": 0.5}, "print": {"virality": 0.3, "money": 0.7}},
+    "money_mix": {"mrr": 0.7, "buyers": 0.3},        # attributed MRR per 1K views vs buyers per 1K views
+    "prior_mrr_per_1k": 0.5, "prior_buyers_per_1k": 0.05, "prior_strength": 8.0, "spread": 1.0, "min_spread": 0.35,
+    "pseudo_views": 20000,                           # small posts borrow this many views at the prior rate
+}
+
+
+def _vcfg(cfg: dict | None) -> dict:
+    v = dict(VALUE_DEFAULTS)
+    v.update(((cfg or {}).get("value") or {}))
+    return v
+
+
+def virality_score(card: dict, cfg: dict | None = None) -> float | None:
+    """Weighted mean of the card's non-conversion component scores (same weights as the composite), so money is
+    not counted twice when it is blended back in."""
+    w = (cfg or G.load())["scorecard"]["weights"]
+    s = {c: v for c, v in (card.get("scores") or {}).items() if c != "conversion"}
+    den = sum(float(w[c]) for c in s)
+    return round(sum(float(w[c]) * v for c, v in s.items()) / den, 2) if den else None
+
+
+def _money_component(rate: float, history: list[float], prior: float, v: dict, views: float) -> float:
+    """0-100: log(rate + prior/10) against the history's mean/spread on the same scale, the history shrunk toward
+    the prior with prior_strength pseudo-posts; the post's own rate first borrows pseudo_views views at the prior
+    rate, so one lucky sale on a tiny post can't top the board."""
+    k, eps = float(v["prior_strength"]), prior / 10.0
+
+    def lg(x):
+        return math.log(max(0.0, float(x)) + eps)
+    hist = [lg(x) for x in history if x is not None]
+    n, mu0 = len(hist), lg(prior)
+    mp = sum(hist) / n if n else mu0
+    var = sum((x - mp) ** 2 for x in hist) / (n - 1) if n > 1 else float(v["spread"]) ** 2
+    mu = (n * mp + k * mu0) / (n + k)
+    sigma = max(float(v["min_spread"]), math.sqrt((n * var + k * float(v["spread"]) ** 2) / (n + k)))
+    pv = float(v["pseudo_views"])
+    shrunk = (rate * views + prior * pv) / (views + pv)
+    return round(100.0 * phi((lg(shrunk) - mu) / sigma), 2)
+
+
+def value_score(card: dict, attribution: dict, history: list[dict] | None = None, cfg: dict | None = None,
+                mode: str = "default") -> dict:
+    """Blend virality with attributed money. attribution: {views, mrr_usd, buyers} for the post (attributed MRR =
+    new recurring revenue whose first touch / pid is this post). history: earlier {mrr_per_1k, buyers_per_1k} rows
+    for the page (the money baseline). mode "default" = 50/50, "print" (money-printing phase) = 30/70.
+    -> {virality, money, mrr_score, buyers_score, value, mrr_per_1k, buyers_per_1k, mode, weights}"""
+    cfg = cfg or G.load()
+    v = _vcfg(cfg)
+    if mode not in v["modes"]:
+        raise ValueError(f"value mode must be one of {sorted(v['modes'])}")
+    wts = v["modes"][mode]
+    views = float(G.num(attribution.get("views"), lo=0) or card.get("denominator_value") or 0)
+    mrr = float(G.num(attribution.get("mrr_usd"), lo=0) or 0)
+    buyers = float(G.num(attribution.get("buyers"), lo=0) or 0)
+    mrr_1k = 1000.0 * mrr / views if views else 0.0
+    buy_1k = 1000.0 * buyers / views if views else 0.0
+    hist = history or []
+    ms = _money_component(mrr_1k, [h.get("mrr_per_1k") for h in hist], float(v["prior_mrr_per_1k"]), v, views)
+    bs = _money_component(buy_1k, [h.get("buyers_per_1k") for h in hist], float(v["prior_buyers_per_1k"]), v, views)
+    mix = v["money_mix"]
+    money = round((float(mix["mrr"]) * ms + float(mix["buyers"]) * bs) / (float(mix["mrr"]) + float(mix["buyers"])), 2)
+    vir = virality_score(card, cfg)
+    vir_v = 50.0 if vir is None else vir
+    value = round((float(wts["virality"]) * vir_v + float(wts["money"]) * money) / (float(wts["virality"]) + float(wts["money"])), 2)
+    return {"post_id": card.get("post_id"), "page_id": card.get("page_id"), "platform": card.get("platform"),
+            "virality": vir, "money": money, "mrr_score": ms, "buyers_score": bs, "value": value, "views": views,
+            "mrr_usd": mrr, "buyers": buyers, "mrr_per_1k": round(mrr_1k, 4), "buyers_per_1k": round(buy_1k, 4),
+            "mode": mode, "weights": dict(wts)}

@@ -1,0 +1,29 @@
+{
+ "business_discovery": {
+  "username": "maangchi",
+  "followers_count": 1200000,
+  "media": {
+   "data": [
+    {
+     "id": "1789",
+     "caption": "Kimchi soup for cooking for one. Comment SOUP for the recipe",
+     "like_count": 52000,
+     "comments_count": 2100,
+     "media_product_type": "REELS",
+     "timestamp": "2026-09-29T10:00:00+0000",
+     "permalink": "https://www.instagram.com/reel/AAA/"
+    },
+    {
+     "id": "1790",
+     "caption": "Photo dump",
+     "like_count": 9000,
+     "comments_count": 100,
+     "media_product_type": "FEED",
+     "timestamp": "2026-09-28T10:00:00+0000",
+     "permalink": "https://www.instagram.com/p/BBB/"
+    }
+   ]
+  }
+ },
+ "id": "17841"
+}

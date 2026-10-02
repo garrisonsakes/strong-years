@@ -1,0 +1,18 @@
+{
+ "data": [
+  {
+   "id": "fb1",
+   "platform": "facebook",
+   "owner_name": "Bob & Brad",
+   "creation_time": "2026-09-28T12:00:00Z",
+   "text": "Knee pain on the stairs? Do this before you stand up",
+   "statistics": {
+    "views": 3000000,
+    "reactions": 90000,
+    "comments": 4000,
+    "shares": 70000
+   },
+   "url": "https://www.facebook.com/reel/fb1"
+  }
+ ]
+}

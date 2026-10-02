@@ -1,0 +1,54 @@
+{
+ "items": [
+  {
+   "id": "yt1",
+   "snippet": {
+    "title": "If you can't stand up without your hands, try this",
+    "description": "Chair test for seniors over 60 #balance",
+    "channelTitle": "Senior Coach",
+    "publishedAt": "2026-09-30T15:00:00Z"
+   },
+   "statistics": {
+    "viewCount": "900000",
+    "likeCount": "30000",
+    "commentCount": "1200"
+   },
+   "contentDetails": {
+    "duration": "PT42S"
+   }
+  },
+  {
+   "id": "yt2",
+   "snippet": {
+    "title": "Grandma's ginger soup recipe",
+    "description": "Easy soup for cooking for one",
+    "channelTitle": "Senior Coach",
+    "publishedAt": "2026-09-20T15:00:00Z"
+   },
+   "statistics": {
+    "viewCount": "40000",
+    "likeCount": "900",
+    "commentCount": "50",
+    "engagedViews": "35000"
+   },
+   "contentDetails": {
+    "duration": "PT58S"
+   }
+  },
+  {
+   "id": "ytlong",
+   "snippet": {
+    "title": "Full 30 minute chair workout for seniors",
+    "description": "",
+    "channelTitle": "Senior Coach",
+    "publishedAt": "2026-09-25T15:00:00Z"
+   },
+   "statistics": {
+    "viewCount": "10000"
+   },
+   "contentDetails": {
+    "duration": "PT30M"
+   }
+  }
+ ]
+}

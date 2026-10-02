@@ -6,6 +6,7 @@ Python 3.11 + FastAPI services that `n8n_core_workflow.json` calls. One image se
 make install-dev   # pip deps (system deps: ffmpeg with libflite + chromaprint, tesseract-ocr)
 make test          # full suite: renders synthetic audio/video, ~4–5 min
 make test-fast     # compliance, packaging, workflow contract, growth (no rendering)
+make test-discover # niche crawler (fixtures, no network), trends, remake briefs, MRR value, workflow
 make test-growth   # growth engine only (adapters, scoring, actions, allocator, governor property tests, API, workflow)
 make test-sql      # schema.sql + schema_growth.sql on local Postgres 16 (or PGTEST_DSN)
 make sample        # end-to-end sample video -> out/sample/
@@ -30,6 +31,7 @@ make docker        # image built from the rebuild/ root so the spec files ship w
 | `POST /growth/actions` | Growth: Winner Actions | Queued jobs only: remix requests for other pages (uniqueness thresholds attached, YouTube July-2026 limits), boost candidates re-checked under the stricter ad policy + mandatory judge (pass → awaiting a human; flagged or unjudged → human), pin suggestions, LOSER down-weights. |
 | `POST /growth/allocate` | Growth: Allocate Slots | Thompson sampling over pillar × grammar × format × speaker × length per page/platform → tomorrow's slot plan for `tools/build_content.py`. 20% exploration floor (hard), 14-day decay, cadence ≤ 9, pillar and grammar constraints, running bits. |
 | `POST /growth/governor/plan`, `POST /growth/governor/execute`, `GET /growth/governor/audit`, `GET /growth/config` | Growth: Governor Plan (dry run) | The spend governor: a deterministic plan (boosts → retargeting → cold) inside the approved daily / monthly / cash-floor envelope, BLITZ §9 lines (price-aware) and the §11 graduation gate, with an append-only hash-chained audit log. `execute` is a stub that refuses unless `SPEND_ENABLED=1`, `GROWTH_DRY_RUN=0` and a human approval is bound to the plan's `state_hash`, and even then calls no ad API. |
+| `GET /discover/seeds`, `POST /discover/crawl`, `/discover/trends`, `/discover/remake`, `/discover/value` | Discover workflow | Niche crawler (official APIs → yt-dlp metadata → robots-respecting public pages; live only with `DISCOVER_LIVE=1`, otherwise pushed payloads), posts.csv-shape rows with scorecard genes, rising genes + cross-platform transfer opportunities, daily top-20 / weekly top-50, plagiarism-guarded remake briefs, and the MRR-weighted value score + GO-HARD plan. PIPELINE §7.6. |
 | `GET /health`, `GET /health/details`, `GET /files/*` | – | `/health` is an unauthenticated liveness probe (`{"ok": true}` only). `/health/details` (authenticated) is the capability report. `/files` serves local outputs when R2 isn't configured; it's authenticated unless `PUBLIC_FILES=1` and confined to `OUTPUT_DIR`. |
 
 `n8n_growth_workflow.json` (44 nodes: hourly metrics → score → winner actions; nightly allocator → governor dry run → Slack approval) calls the `/growth/*` endpoints through `QA_WORKER_URL`; `tests/test_growth_workflow.py` checks the same contract for it.
@@ -61,6 +63,7 @@ Ops round: `dm/` (Instagram/Messenger keyword → DM bot, Meta-signature webhook
 | `SPEND_ENABLED`, `GROWTH_DRY_RUN` | Growth spend switches, env-only (a request can't change them). Defaults `0` / `1`: governor plans are advisory and the executor refuses. There is no ad API client in this codebase, so even `1` / `0` plus a human approval only records the plan. |
 | `GROWTH_LIVE_METRICS`, `METRICS_ALLOWED_HOSTS` | `0` by default: the metrics adapters parse fixtures or payloads n8n pushes. With `1`, `/growth/metrics/fetch` may call the platform analytics APIs, https only, exact-host allow-list (Graph, Threads, TikTok, YouTube Analytics, X), public IPs, no redirects, 2 MB cap, bearer token in the header only. |
 | `GROWTH_CONFIG_PATH`, `GROWTH_AUDIT_PATH` | JSON deep-merged over `growth/config.DEFAULTS` (thresholds, caps, weights; validated: the 20% exploration floor can't go lower). The governor's audit JSONL (default `OUTPUT_DIR/growth/governor_audit.jsonl`). |
+| `DISCOVER_LIVE`, `YOUTUBE_API_KEY`, `TIKTOK_RESEARCH_TOKEN`, `META_GRAPH_TOKEN` + `IG_BUSINESS_USER_ID`, `META_MCL_TOKEN`, `THREADS_TOKEN`, `X_BEARER_TOKEN` | Discover crawler. `DISCOVER_LIVE=0` by default: no network, payloads are pushed. Each official API is used only when its credential is set; otherwise the platform falls back to yt-dlp metadata (YouTube) or robots-allowed public pages on hosts whose terms permit it. |
 | `REVIEWER_SIGNED` | `1` only once a credentialed reviewer has signed (SAFETY §7). This is the **only** switch for "reviewed by…" wording; request fields are ignored. |
 | `ANTHROPIC_API_KEY`, `MODEL_JUDGE` | LLM compliance judge (defaults to claude-opus-5-5) |
 | `C2PA_SIGN_CERT`, `C2PA_PRIVATE_KEY`, `C2PA_TSA_URL`, `C2PA_ALLOW_DEV_CERT` | Production C2PA signer. `C2PA_ALLOW_DEV_CERT` defaults to `0`: without a certificate, masters ship unsigned and QA holds them at `review`. With `1` (dev and tests), a throwaway dev CA signs, and QA marks the result `c2pa_trusted: false`. Neither case can auto-publish. |
@@ -76,6 +79,12 @@ Ops round: `dm/` (Instagram/Messenger keyword → DM bot, Meta-signature webhook
 - **Transcript:** currently taken from the TTS alignment, which is the exact voiced text. A true ASR pass (Scribe/Whisper) is a TODO for pass 2 on third-party audio.
 - **Font:** Figtree (OFL), from google/fonts on GitHub. `fonts/Figtree-ExtraBold.ttf` is the wght=800 instance of `Figtree[wght].ttf`.
 - **Naming:** the packaging module lives in `packager/`, because a local `packaging/` package would shadow PyPI `packaging`, which pytest itself imports.
+
+## Discover: niche crawler and MRR-weighted iteration
+
+`workers/discover/` (PIPELINE §7.6): `sources.py` (adapters in priority order, request plans + parsers), `crawl.py` (robots, ToS host block-list, per-host spacing and Crawl-delay, https only, no cookies, request cap, dedupe, 500–1,000/day budget, hourly stream), `genes.py` (hook grammar / pillar / format / lane / CTA through `growth.variants.decompose`), `normalize.py` (posts.csv columns + `niche_posts` rows, creator- and niche-relative performance), `trends.py` (rising genes, transfer opportunities, top-20 / top-50, gate-refit rows, allocator exploration observations), `remake.py` (briefs + plagiarism guard + provenance). `growth/scorecard.value_score` and `growth/actions.mrr_plan` / `weekly_readout` add the MRR-weighted layer. Schema: `../schema_discover.sql` (RLS forced, deny by default, service_role only). Tests: `tests/test_discover*.py`, `tests/test_growth_mrr_value.py`; fixtures in `tests/fixtures/discover/`, no network.
+
+What it will never do: log in, send cookies, use a private API, bypass a bot check, download or re-host media, post, DM, spend, or call an external AI. Remake briefs reuse the idea and the gene, never the words: no reused line, no shared 7-word shingle, visual concept only.
 
 ## Growth engine: what it will never do
 

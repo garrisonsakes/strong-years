@@ -290,3 +290,96 @@ def scorecard_plan(cards: list[dict], posts: list[dict], pages: list[dict], cfg:
     out["benched"] = bench
     out["counts"] = {k: len(v) for k, v in out.items() if isinstance(v, list)}
     return out
+
+
+# ---------------------------------------------------------------- MRR-weighted iteration (scorecard.value_score)
+MRR_DEFAULTS = {"go_hard_money": 80.0, "go_hard_min_views": 5000, "go_hard_hooks": 5, "go_hard_trial_reels": 5,
+                "reach_virality": 80.0, "reach_money_max": 40.0, "cta_swap_arms": ("FAMILY", "PLAN", "STRONG"),
+                "spend_gate_mrr_usd": 30000, "readout_top": 10}
+
+
+def _mcfg(cfg: dict) -> dict:
+    m = dict(MRR_DEFAULTS)
+    m.update(((cfg.get("value") or {}).get("actions") or {}))
+    gov = cfg.get("governor") or {}
+    for k in ("spend_gate_mrr_usd", "paid_media_min_mrr_usd"):
+        if gov.get(k) is not None:
+            m["spend_gate_mrr_usd"] = float(gov[k])
+    return m
+
+
+def mrr_plan(values: list[dict], posts: list[dict], pages: list[dict], cfg: dict | None = None, *,
+             now: datetime | None = None, recent_remixes: list[dict] | None = None, current_mrr_usd: float = 0.0) -> dict:
+    """values: scorecard.value_score rows. Queued jobs only (nothing publishes, sends or spends):
+      money >= go_hard_money (and views >= go_hard_min_views) -> GO-HARD bundle:
+          remake with 5 hooks on every other page, the Facebook long cut, 5 Trial Reels, an email feature (human
+          sends), the DM pinned link, and a boost candidate HELD until the spend gate (MRR >= $30K, governor +
+          human approval still required after that)
+      virality >= reach_virality and money < reach_money_max -> reach remix + CTA-swap experiment (close block A/B)"""
+    cfg = cfg or G.load()
+    m = _mcfg(cfg)
+    now = now or datetime.now(timezone.utc)
+    posts_by = {str(p["post_id"]): p for p in posts}
+    pages_by = _page_by_id(pages)
+    recent = list(recent_remixes or [])
+    out = {"go_hard": [], "remix_jobs": [], "fb_long_cuts": [], "trial_reels": [], "email_features": [],
+           "dm_pins": [], "boost_candidates": [], "cta_experiments": []}
+    for v in sorted(values, key=lambda x: (-(x.get("value") or 0), str(x.get("post_id")))):
+        pid = str(v["post_id"])
+        post = posts_by.get(pid, {"post_id": pid})
+        base = {"source_post_id": pid, "page_id": v.get("page_id"), "platform": v.get("platform"), "status": "queued",
+                "created_at": now.isoformat()}
+        sc_like = {"post_id": pid, "page_id": v.get("page_id"), "platform": v.get("platform"), "score": v.get("value"),
+                   "class": post.get("class") or "PROMISING"}
+        if (v.get("money") or 0) >= m["go_hard_money"] and (v.get("views") or 0) >= m["go_hard_min_views"]:
+            r = copy.deepcopy(cfg)
+            r["remix"]["variants_per_winner"] = max(1, len(pages_by) - 1)
+            jobs = remix_jobs_for(sc_like, post, pages_by, r, now, recent)
+            for j in jobs:
+                j.update(rule="GO-HARD", n_hooks=int(m["go_hard_hooks"]), source_platform=v.get("platform"))
+                j["requirements"]["n_hooks"] = int(m["go_hard_hooks"])
+            recent += jobs
+            out["remix_jobs"] += jobs
+            fb = {**base, "kind": "fb_long_cut", "builder": "growth.variants.fb_long_cut", "rule": "GO-HARD"}
+            tr = {**base, "kind": "trial_reels", "count": int(m["go_hard_trial_reels"]), "variant_role": "TEST",
+                  "surface": "ig_trial", "budget_check": "growth.variants.trial_budget", "rule": "GO-HARD"}
+            em = {**base, "kind": "email_feature", "status": "draft", "audience": "members + waitlist (consented)",
+                  "requires": ["human_send", "compliance_pass"], "rule": "GO-HARD"}
+            dm = {**base, "kind": "dm_pinned_link", "status": "suggested", "keyword": post.get("cta_keyword"),
+                  "action": "pin the post's keyword link in the DM flow + pinned first comment", "rule": "GO-HARD"}
+            gate = float(m["spend_gate_mrr_usd"])
+            bc = {**base, "kind": "boost", "status": "held_until_spend_gate", "gate_mrr_usd": gate,
+                  "gate_open": float(current_mrr_usd or 0) >= gate,
+                  "requires": ["spend_gate", "WINNER", "human_approval", "governor_plan", "SPEND_ENABLED"],
+                  "rule": "GO-HARD"}
+            out["fb_long_cuts"].append(fb)
+            out["trial_reels"].append(tr)
+            out["email_features"].append(em)
+            out["dm_pins"].append(dm)
+            out["boost_candidates"].append(bc)
+            out["go_hard"].append({"post_id": pid, "value": v.get("value"), "money": v.get("money"),
+                                   "mrr_usd": v.get("mrr_usd"), "remakes": len(jobs)})
+        elif (v.get("virality") or 0) >= m["reach_virality"] and (v.get("money") or 0) < m["reach_money_max"]:
+            r = copy.deepcopy(cfg)
+            jobs = remix_jobs_for(sc_like, post, pages_by, r, now, recent)
+            for j in jobs:
+                j["rule"] = "reach remix: high virality, low MRR"
+            recent += jobs
+            out["remix_jobs"] += jobs
+            cur = post.get("cta_keyword") or post.get("close_family") or "close"
+            arms = [cur] + [a for a in m["cta_swap_arms"] if a != cur][:2]
+            out["cta_experiments"].append({**base, "kind": "cta_swap_experiment", "dimension": "close",
+                                           "arms": arms, "variant_role": "TEST", "keep_hook_and_body": True,
+                                           "metric": "mrr_per_1k", "rule": "high virality, low MRR"})
+    out["counts"] = {k: len(x) for k, x in out.items() if isinstance(x, list)}
+    return out
+
+
+def weekly_readout(values: list[dict], cfg: dict | None = None, n: int | None = None) -> dict:
+    """Top posts of the week by attributed MRR, by views, and by both (the blended value score)."""
+    n = int(n or _mcfg(cfg or G.load())["readout_top"])
+    keep = ("post_id", "page_id", "platform", "value", "virality", "money", "views", "mrr_usd", "buyers", "mrr_per_1k")
+
+    def top(key):
+        return [{k: v.get(k) for k in keep} for v in sorted(values, key=lambda v: (-(v.get(key) or 0), str(v.get("post_id"))))[:n]]
+    return {"by_mrr": top("mrr_usd"), "by_views": top("views"), "by_both": top("value")}

@@ -1,0 +1,29 @@
+{
+ "data": [
+  {
+   "id": "x1",
+   "text": "If you sit all day, your hips pay for it. 3 moves for over 60s",
+   "created_at": "2026-10-01T09:00:00.000Z",
+   "author_id": "u1",
+   "public_metrics": {
+    "impression_count": 1500000,
+    "like_count": 20000,
+    "reply_count": 800,
+    "retweet_count": 5000,
+    "quote_count": 200,
+    "bookmark_count": 9000
+   }
+  }
+ ],
+ "includes": {
+  "users": [
+   {
+    "id": "u1",
+    "username": "PeterAttiaMD",
+    "public_metrics": {
+     "followers_count": 500000
+    }
+   }
+  ]
+ }
+}

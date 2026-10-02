@@ -1,0 +1,1098 @@
+{
+ "name": "ChangSun Discover: niche crawl → trends → remake briefs (disabled until live)",
+ "nodes": [
+  {
+   "parameters": {
+    "content": "## Niche discover (DISABLED until live)\nDaily 03:00 ET crawl (500-1,000 top performers, last 90 d) -> niche_posts -> trends -> transfer opportunities -> remake briefs (plagiarism-guarded) -> remake_queue. Hourly stream -> velocity reads. Weekly (Mon 04:00 ET) top-50 + gate refit + MRR readout.\n\nThe worker crawls only with DISCOVER_LIVE=1: official APIs first, yt-dlp metadata, then robots-respecting public pages. No login, cookies, posting, spending or media download.",
+    "height": 260,
+    "width": 560,
+    "color": 4
+   },
+   "id": "0c8a4b06-47c3-5cb7-8dd5-a9fa8282db1c",
+   "name": "Note: discover",
+   "type": "n8n-nodes-base.stickyNote",
+   "typeVersion": 1,
+   "position": [
+    0,
+    -340
+   ]
+  },
+  {
+   "parameters": {
+    "rule": {
+     "interval": [
+      {
+       "field": "cronExpression",
+       "expression": "0 3 * * *"
+      }
+     ]
+    }
+   },
+   "id": "6cb35c76-1aae-5886-a384-4cc2ae5894a8",
+   "name": "Daily 03:00 ET: Discover Crawl",
+   "type": "n8n-nodes-base.scheduleTrigger",
+   "typeVersion": 1.2,
+   "position": [
+    0,
+    0
+   ]
+  },
+  {
+   "parameters": {
+    "method": "POST",
+    "url": "={{ $env.QA_WORKER_URL }}/discover/crawl",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify({ mode: 'daily', live: true }) }}",
+    "options": {
+     "timeout": 600000
+    }
+   },
+   "id": "4b1bb876-2827-5931-8698-80481fb318ac",
+   "name": "Worker: Discover Crawl (daily)",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    260,
+    0
+   ],
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "REPLACE_WORKER_TOKEN_CRED",
+     "name": "Worker token"
+    }
+   },
+   "disabled": true
+  },
+  {
+   "parameters": {
+    "mode": "runOnceForAllItems",
+    "jsCode": "const r = $input.first().json;\nreturn [{ json: { rows: r.niche_posts, counts: r.counts, shortfall: r.shortfall } }];"
+   },
+   "id": "7039f7c2-1ab9-5be1-be19-9758b03cea2a",
+   "name": "Rows: niche_posts (daily)",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    520,
+    0
+   ]
+  },
+  {
+   "parameters": {
+    "method": "POST",
+    "url": "={{ $env.SUPABASE_URL }}/rest/v1/niche_posts?on_conflict=platform,external_id",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpCustomAuth",
+    "options": {
+     "timeout": 120000
+    },
+    "sendHeaders": true,
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "Content-Type",
+       "value": "application/json"
+      },
+      {
+       "name": "Prefer",
+       "value": "resolution=merge-duplicates,return=minimal"
+      }
+     ]
+    },
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify($json.rows) }}"
+   },
+   "id": "42743260-7ca5-535d-bf9b-7c673ba80b0a",
+   "name": "Supabase: Upsert niche_posts (daily)",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    780,
+    0
+   ],
+   "credentials": {
+    "httpCustomAuth": {
+     "id": "REPLACE_SUPABASE_SERVICE_CRED",
+     "name": "Supabase service role"
+    }
+   }
+  },
+  {
+   "parameters": {
+    "method": "GET",
+    "url": "={{ $env.SUPABASE_URL }}/rest/v1/niche_posts?select=*&published_at=gte.{{ $now.minus({ days: 30 }).toISO() }}&limit=20000",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpCustomAuth",
+    "options": {
+     "timeout": 120000
+    },
+    "sendHeaders": true,
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "Content-Type",
+       "value": "application/json"
+      }
+     ]
+    }
+   },
+   "id": "0bca47e8-2f7d-593c-b134-a8cecd2fac72",
+   "name": "Supabase: Niche Rows (30 d)",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    1040,
+    0
+   ],
+   "credentials": {
+    "httpCustomAuth": {
+     "id": "REPLACE_SUPABASE_SERVICE_CRED",
+     "name": "Supabase service role"
+    }
+   }
+  },
+  {
+   "parameters": {
+    "mode": "runOnceForAllItems",
+    "jsCode": "const rows = $input.all().map(i => i.json).map(r => ({ ...r, id: r.external_id, account: r.creator }));\nreturn [{ json: { rows } }];"
+   },
+   "id": "6e46e763-91e8-56b1-9662-a511641209d4",
+   "name": "Body: trends",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    1300,
+    0
+   ]
+  },
+  {
+   "parameters": {
+    "method": "POST",
+    "url": "={{ $env.QA_WORKER_URL }}/discover/trends",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify({ rows: $json.rows }) }}",
+    "options": {
+     "timeout": 600000
+    }
+   },
+   "id": "98e8a03b-d39c-566f-80dd-a00c27bcc46f",
+   "name": "Worker: Discover Trends",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    1560,
+    0
+   ],
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "REPLACE_WORKER_TOKEN_CRED",
+     "name": "Worker token"
+    }
+   }
+  },
+  {
+   "parameters": {
+    "method": "POST",
+    "url": "={{ $env.SUPABASE_URL }}/rest/v1/niche_opportunities",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpCustomAuth",
+    "options": {
+     "timeout": 120000
+    },
+    "sendHeaders": true,
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "Content-Type",
+       "value": "application/json"
+      },
+      {
+       "name": "Prefer",
+       "value": "return=minimal"
+      }
+     ]
+    },
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify($json.opportunities.map(o => ({ direction: o.direction, gene: o.gene, from_platform: o.from_platform, to_platforms: o.to_platforms, lift: o.lift, recent_mean: o.recent_mean, recent_n: o.recent_n, evidence_post_ids: o.evidence_post_ids }))) }}"
+   },
+   "id": "51e86928-4fa9-5631-a963-5ccfa7087953",
+   "name": "Supabase: Insert niche_opportunities",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    1820,
+    -120
+   ],
+   "credentials": {
+    "httpCustomAuth": {
+     "id": "REPLACE_SUPABASE_SERVICE_CRED",
+     "name": "Supabase service role"
+    }
+   }
+  },
+  {
+   "parameters": {
+    "method": "POST",
+    "url": "={{ $env.SUPABASE_URL }}/rest/v1/discover_feeds",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpCustomAuth",
+    "options": {
+     "timeout": 120000
+    },
+    "sendHeaders": true,
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "Content-Type",
+       "value": "application/json"
+      },
+      {
+       "name": "Prefer",
+       "value": "return=minimal"
+      }
+     ]
+    },
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify([{ kind: 'daily_top20', payload: $json.daily_top20 }, { kind: 'exploration', payload: $json.exploration_observations }, { kind: 'gate_refit', payload: $json.gate_refit }]) }}"
+   },
+   "id": "0a14f7d1-4d88-53d8-9c13-251de476f71c",
+   "name": "Supabase: Insert discover_feeds (daily)",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    1820,
+    120
+   ],
+   "credentials": {
+    "httpCustomAuth": {
+     "id": "REPLACE_SUPABASE_SERVICE_CRED",
+     "name": "Supabase service role"
+    }
+   }
+  },
+  {
+   "parameters": {
+    "method": "POST",
+    "url": "={{ $env.QA_WORKER_URL }}/discover/remake",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify({ rows: $('Body: trends').first().json.rows, feeds: $('Worker: Discover Trends').first().json, max_items: 20 }) }}",
+    "options": {
+     "timeout": 600000
+    }
+   },
+   "id": "bac54c40-6ee9-59ce-986a-06dc4182f51c",
+   "name": "Worker: Discover Remake Briefs",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    2080,
+    0
+   ],
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "REPLACE_WORKER_TOKEN_CRED",
+     "name": "Worker token"
+    }
+   }
+  },
+  {
+   "parameters": {
+    "method": "POST",
+    "url": "={{ $env.SUPABASE_URL }}/rest/v1/remake_queue",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpCustomAuth",
+    "options": {
+     "timeout": 120000
+    },
+    "sendHeaders": true,
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "Content-Type",
+       "value": "application/json"
+      },
+      {
+       "name": "Prefer",
+       "value": "return=minimal"
+      }
+     ]
+    },
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify($json.remake_queue.map(q => ({ reason: q.reason, priority: q.priority, brief: q.brief, provenance: q.provenance }))) }}"
+   },
+   "id": "d2aff9f4-248c-5fde-9f39-8566970cc585",
+   "name": "Supabase: Insert remake_queue",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    2340,
+    0
+   ],
+   "credentials": {
+    "httpCustomAuth": {
+     "id": "REPLACE_SUPABASE_SERVICE_CRED",
+     "name": "Supabase service role"
+    }
+   }
+  },
+  {
+   "parameters": {
+    "resource": "message",
+    "operation": "post",
+    "select": "channel",
+    "channelId": {
+     "__rl": true,
+     "mode": "name",
+     "value": "={{ $env.SLACK_GROWTH_CHANNEL || '#growth' }}"
+    },
+    "text": "=Discover: kept {{ $('Rows: niche_posts (daily)').first().json.counts.kept }} niche posts (shortfall {{ $('Rows: niche_posts (daily)').first().json.shortfall }}), {{ $('Worker: Discover Trends').first().json.opportunities.length }} transfer opportunities, {{ $('Worker: Discover Remake Briefs').first().json.count }} remake briefs queued (each still needs compliance + judge + uniqueness).",
+    "otherOptions": {}
+   },
+   "id": "0d71104c-65c9-5af3-bff1-f6f4c65ae0a3",
+   "name": "Slack: Discover Daily",
+   "type": "n8n-nodes-base.slack",
+   "typeVersion": 2.2,
+   "position": [
+    2600,
+    0
+   ],
+   "credentials": {
+    "slackApi": {
+     "id": "REPLACE_SLACK_CRED",
+     "name": "Slack"
+    }
+   }
+  },
+  {
+   "parameters": {
+    "rule": {
+     "interval": [
+      {
+       "field": "hours",
+       "hoursInterval": 1
+      }
+     ]
+    }
+   },
+   "id": "699e5488-a63e-590d-8a8f-7c4690fbdf4d",
+   "name": "Hourly: Discover Stream",
+   "type": "n8n-nodes-base.scheduleTrigger",
+   "typeVersion": 1.2,
+   "position": [
+    0,
+    400
+   ]
+  },
+  {
+   "parameters": {
+    "method": "POST",
+    "url": "={{ $env.QA_WORKER_URL }}/discover/crawl",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify({ mode: 'stream', live: true }) }}",
+    "options": {
+     "timeout": 600000
+    }
+   },
+   "id": "fada44e4-4fc8-5e1b-aa10-9a123a6719c7",
+   "name": "Worker: Discover Crawl (stream)",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    260,
+    400
+   ],
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "REPLACE_WORKER_TOKEN_CRED",
+     "name": "Worker token"
+    }
+   },
+   "disabled": true
+  },
+  {
+   "parameters": {
+    "mode": "runOnceForAllItems",
+    "jsCode": "const r = $input.first().json;\nreturn [{ json: { rows: r.niche_posts } }];"
+   },
+   "id": "a52d0c3e-5861-5585-bc33-db506fb65242",
+   "name": "Rows: niche_posts (stream)",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    520,
+    400
+   ]
+  },
+  {
+   "parameters": {
+    "method": "POST",
+    "url": "={{ $env.SUPABASE_URL }}/rest/v1/niche_posts?on_conflict=platform,external_id&select=id,metric_value",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpCustomAuth",
+    "options": {
+     "timeout": 120000
+    },
+    "sendHeaders": true,
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "Content-Type",
+       "value": "application/json"
+      },
+      {
+       "name": "Prefer",
+       "value": "resolution=merge-duplicates,return=representation"
+      }
+     ]
+    },
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify($json.rows) }}"
+   },
+   "id": "25f5ea08-45f6-5d1c-934b-a086355da2da",
+   "name": "Supabase: Upsert niche_posts (stream)",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    780,
+    400
+   ],
+   "credentials": {
+    "httpCustomAuth": {
+     "id": "REPLACE_SUPABASE_SERVICE_CRED",
+     "name": "Supabase service role"
+    }
+   }
+  },
+  {
+   "parameters": {
+    "mode": "runOnceForAllItems",
+    "jsCode": "const now = new Date().toISOString();\nconst rows = $input.all().map(i => i.json).filter(r => r.metric_value !== null).map(r => ({ niche_post_id: r.id, captured_at: now, metric_value: r.metric_value }));\nreturn [{ json: { rows } }];"
+   },
+   "id": "4ba4291b-72bd-551c-809e-d0fb58ffb25a",
+   "name": "Rows: niche_post_reads",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    1040,
+    400
+   ]
+  },
+  {
+   "parameters": {
+    "method": "POST",
+    "url": "={{ $env.SUPABASE_URL }}/rest/v1/niche_post_reads",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpCustomAuth",
+    "options": {
+     "timeout": 120000
+    },
+    "sendHeaders": true,
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "Content-Type",
+       "value": "application/json"
+      },
+      {
+       "name": "Prefer",
+       "value": "return=minimal"
+      }
+     ]
+    },
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify($json.rows) }}"
+   },
+   "id": "f4a37e34-b5a1-5ccd-8fca-06ac81f3f299",
+   "name": "Supabase: Insert niche_post_reads",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    1300,
+    400
+   ],
+   "credentials": {
+    "httpCustomAuth": {
+     "id": "REPLACE_SUPABASE_SERVICE_CRED",
+     "name": "Supabase service role"
+    }
+   }
+  },
+  {
+   "parameters": {
+    "rule": {
+     "interval": [
+      {
+       "field": "cronExpression",
+       "expression": "0 4 * * 1"
+      }
+     ]
+    }
+   },
+   "id": "1379eeae-1813-5c22-baf7-0e4e521301ee",
+   "name": "Weekly Mon 04:00 ET: Top-50 + Readout",
+   "type": "n8n-nodes-base.scheduleTrigger",
+   "typeVersion": 1.2,
+   "position": [
+    0,
+    800
+   ]
+  },
+  {
+   "parameters": {
+    "method": "GET",
+    "url": "={{ $env.SUPABASE_URL }}/rest/v1/niche_posts?select=*&published_at=gte.{{ $now.minus({ days: 7 }).toISO() }}&limit=20000",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpCustomAuth",
+    "options": {
+     "timeout": 120000
+    },
+    "sendHeaders": true,
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "Content-Type",
+       "value": "application/json"
+      }
+     ]
+    }
+   },
+   "id": "ef90c7a6-1e15-521a-9b00-1880a5a3af88",
+   "name": "Supabase: Niche Rows (7 d)",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    260,
+    800
+   ],
+   "credentials": {
+    "httpCustomAuth": {
+     "id": "REPLACE_SUPABASE_SERVICE_CRED",
+     "name": "Supabase service role"
+    }
+   }
+  },
+  {
+   "parameters": {
+    "mode": "runOnceForAllItems",
+    "jsCode": "const rows = $input.all().map(i => i.json).map(r => ({ ...r, id: r.external_id, account: r.creator }));\nreturn [{ json: { rows } }];"
+   },
+   "id": "1700adc3-1fe5-5bf8-9c20-d11c1b93cbec",
+   "name": "Body: weekly trends",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    520,
+    800
+   ]
+  },
+  {
+   "parameters": {
+    "method": "POST",
+    "url": "={{ $env.QA_WORKER_URL }}/discover/trends",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify({ rows: $json.rows }) }}",
+    "options": {
+     "timeout": 600000
+    }
+   },
+   "id": "a5820e98-a705-5677-9a97-c9cdb8a11d9e",
+   "name": "Worker: Discover Trends (weekly)",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    780,
+    800
+   ],
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "REPLACE_WORKER_TOKEN_CRED",
+     "name": "Worker token"
+    }
+   }
+  },
+  {
+   "parameters": {
+    "method": "POST",
+    "url": "={{ $env.SUPABASE_URL }}/rest/v1/discover_feeds",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpCustomAuth",
+    "options": {
+     "timeout": 120000
+    },
+    "sendHeaders": true,
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "Content-Type",
+       "value": "application/json"
+      },
+      {
+       "name": "Prefer",
+       "value": "return=minimal"
+      }
+     ]
+    },
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify([{ kind: 'weekly_top50', payload: $json.weekly_top50 }, { kind: 'gate_refit', payload: $json.gate_refit }]) }}"
+   },
+   "id": "0ad2990e-c1e9-5d4f-b4ac-93b4a2ad1989",
+   "name": "Supabase: Insert discover_feeds (weekly)",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    1040,
+    800
+   ],
+   "credentials": {
+    "httpCustomAuth": {
+     "id": "REPLACE_SUPABASE_SERVICE_CRED",
+     "name": "Supabase service role"
+    }
+   }
+  },
+  {
+   "parameters": {
+    "method": "GET",
+    "url": "={{ $env.SUPABASE_URL }}/rest/v1/post_scores_components?select=*&horizon_h=eq.168&limit=5000",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpCustomAuth",
+    "options": {
+     "timeout": 120000
+    },
+    "sendHeaders": true,
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "Content-Type",
+       "value": "application/json"
+      }
+     ]
+    }
+   },
+   "id": "c3e00907-175b-5d7b-bac1-04111f54068d",
+   "name": "Supabase: Scorecards (7 d)",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    1300,
+    800
+   ],
+   "credentials": {
+    "httpCustomAuth": {
+     "id": "REPLACE_SUPABASE_SERVICE_CRED",
+     "name": "Supabase service role"
+    }
+   }
+  },
+  {
+   "parameters": {
+    "method": "GET",
+    "url": "={{ $env.SUPABASE_URL }}/rest/v1/v_post_attribution?select=post_id,views,mrr_usd,buyers&limit=5000",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpCustomAuth",
+    "options": {
+     "timeout": 120000
+    },
+    "sendHeaders": true,
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "Content-Type",
+       "value": "application/json"
+      }
+     ]
+    }
+   },
+   "id": "79956592-eb37-5014-8e66-7aac7e398f4c",
+   "name": "Supabase: Attribution (7 d)",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    1560,
+    800
+   ],
+   "credentials": {
+    "httpCustomAuth": {
+     "id": "REPLACE_SUPABASE_SERVICE_CRED",
+     "name": "Supabase service role"
+    }
+   }
+  },
+  {
+   "parameters": {
+    "mode": "runOnceForAllItems",
+    "jsCode": "const cards = $('Supabase: Scorecards (7 d)').all().map(i => i.json).map(c => ({ post_id: c.post_id, page_id: c.page_id, platform: c.platform, horizon_h: c.horizon_h, scores: Object.fromEntries(['hook','body','close','shares','saves','conversation','non_follower','conversion','novelty'].filter(k => c[k + '_score'] !== null && c[k + '_score'] !== undefined).map(k => [k, c[k + '_score']])) }));\nconst attribution = {};\nfor (const a of $('Supabase: Attribution (7 d)').all().map(i => i.json)) attribution[a.post_id] = a;\nreturn [{ json: { cards, attribution, mode: $env.VALUE_MODE || 'default', current_mrr_usd: Number($env.CURRENT_MRR_USD || 0) } }];"
+   },
+   "id": "5cf6a0d3-9665-56c3-93d2-4cb630c70263",
+   "name": "Body: value",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    1820,
+    800
+   ]
+  },
+  {
+   "parameters": {
+    "method": "POST",
+    "url": "={{ $env.QA_WORKER_URL }}/discover/value",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify($json) }}",
+    "options": {
+     "timeout": 600000
+    }
+   },
+   "id": "08112995-ef21-5576-8a4f-76a5b0915b20",
+   "name": "Worker: Discover Value (MRR x virality)",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    2080,
+    800
+   ],
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "REPLACE_WORKER_TOKEN_CRED",
+     "name": "Worker token"
+    }
+   }
+  },
+  {
+   "parameters": {
+    "resource": "message",
+    "operation": "post",
+    "select": "channel",
+    "channelId": {
+     "__rl": true,
+     "mode": "name",
+     "value": "={{ $env.SLACK_GROWTH_CHANNEL || '#growth' }}"
+    },
+    "text": "=Weekly readout. By MRR: {{ $json.readout.by_mrr.slice(0,5).map(r => r.post_id + ' $' + r.mrr_usd).join(', ') }}. By views: {{ $json.readout.by_views.slice(0,5).map(r => r.post_id + ' ' + r.views).join(', ') }}. By both: {{ $json.readout.by_both.slice(0,5).map(r => r.post_id + ' ' + r.value).join(', ') }}. GO-HARD: {{ $json.plan.counts.go_hard }} (boosts held until the spend gate).",
+    "otherOptions": {}
+   },
+   "id": "1a38a593-56cc-5f4c-ad40-df52b62e6f48",
+   "name": "Slack: Weekly Readout",
+   "type": "n8n-nodes-base.slack",
+   "typeVersion": 2.2,
+   "position": [
+    2340,
+    800
+   ],
+   "credentials": {
+    "slackApi": {
+     "id": "REPLACE_SLACK_CRED",
+     "name": "Slack"
+    }
+   }
+  }
+ ],
+ "connections": {
+  "Daily 03:00 ET: Discover Crawl": {
+   "main": [
+    [
+     {
+      "node": "Worker: Discover Crawl (daily)",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Worker: Discover Crawl (daily)": {
+   "main": [
+    [
+     {
+      "node": "Rows: niche_posts (daily)",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Rows: niche_posts (daily)": {
+   "main": [
+    [
+     {
+      "node": "Supabase: Upsert niche_posts (daily)",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Supabase: Upsert niche_posts (daily)": {
+   "main": [
+    [
+     {
+      "node": "Supabase: Niche Rows (30 d)",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Supabase: Niche Rows (30 d)": {
+   "main": [
+    [
+     {
+      "node": "Body: trends",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Body: trends": {
+   "main": [
+    [
+     {
+      "node": "Worker: Discover Trends",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Worker: Discover Trends": {
+   "main": [
+    [
+     {
+      "node": "Supabase: Insert niche_opportunities",
+      "type": "main",
+      "index": 0
+     },
+     {
+      "node": "Supabase: Insert discover_feeds (daily)",
+      "type": "main",
+      "index": 0
+     },
+     {
+      "node": "Worker: Discover Remake Briefs",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Worker: Discover Remake Briefs": {
+   "main": [
+    [
+     {
+      "node": "Supabase: Insert remake_queue",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Supabase: Insert remake_queue": {
+   "main": [
+    [
+     {
+      "node": "Slack: Discover Daily",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Hourly: Discover Stream": {
+   "main": [
+    [
+     {
+      "node": "Worker: Discover Crawl (stream)",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Worker: Discover Crawl (stream)": {
+   "main": [
+    [
+     {
+      "node": "Rows: niche_posts (stream)",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Rows: niche_posts (stream)": {
+   "main": [
+    [
+     {
+      "node": "Supabase: Upsert niche_posts (stream)",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Supabase: Upsert niche_posts (stream)": {
+   "main": [
+    [
+     {
+      "node": "Rows: niche_post_reads",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Rows: niche_post_reads": {
+   "main": [
+    [
+     {
+      "node": "Supabase: Insert niche_post_reads",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Weekly Mon 04:00 ET: Top-50 + Readout": {
+   "main": [
+    [
+     {
+      "node": "Supabase: Niche Rows (7 d)",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Supabase: Niche Rows (7 d)": {
+   "main": [
+    [
+     {
+      "node": "Body: weekly trends",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Body: weekly trends": {
+   "main": [
+    [
+     {
+      "node": "Worker: Discover Trends (weekly)",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Worker: Discover Trends (weekly)": {
+   "main": [
+    [
+     {
+      "node": "Supabase: Insert discover_feeds (weekly)",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Supabase: Insert discover_feeds (weekly)": {
+   "main": [
+    [
+     {
+      "node": "Supabase: Scorecards (7 d)",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Supabase: Scorecards (7 d)": {
+   "main": [
+    [
+     {
+      "node": "Supabase: Attribution (7 d)",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Supabase: Attribution (7 d)": {
+   "main": [
+    [
+     {
+      "node": "Body: value",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Body: value": {
+   "main": [
+    [
+     {
+      "node": "Worker: Discover Value (MRR x virality)",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Worker: Discover Value (MRR x virality)": {
+   "main": [
+    [
+     {
+      "node": "Slack: Weekly Readout",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  }
+ },
+ "active": false,
+ "settings": {
+  "executionOrder": "v1",
+  "saveManualExecutions": true,
+  "callerPolicy": "workflowsFromSameOwner",
+  "timezone": "America/New_York",
+  "errorWorkflow": "REPLACE_ERROR_WORKFLOW_ID"
+ },
+ "staticData": null,
+ "meta": {
+  "templateCredsSetupCompleted": false
+ },
+ "pinData": {},
+ "versionId": "03600c82-f193-5bec-a7e6-efd1136d4ce7",
+ "tags": [
+  {
+   "name": "discover"
+  }
+ ]
+}

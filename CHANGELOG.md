@@ -35,4 +35,5 @@ Every round, decision, canon update, number and file is logged here so nothing i
 
 ## 2026-10-02 (launch prep)
 - (this round) niche crawler + MRR-weighted go-hard; Spanish character; 10-more-per-sublayer; 20-item savage round; R30–R36 scale model + governor gate/cap/ladder; brutal audit round 6; launch-day pack for proxy accounts; LAUNCH_LOG.md started
+- Discover: workers/discover/ niche crawler (official APIs → yt-dlp → robots/ToS-gated public pages, DISCOVER_LIVE off by default), posts.csv + niche_posts genes, trend/transfer detector, guarded remake briefs, value_score (50/50, print 30/70) + GO-HARD mrr_plan + weekly readout, schema_discover.sql, n8n_discover_workflow.json (disabled), data/discover/seeds.json (60 queries, 100 creators to verify) → PIPELINE §7.6
 - Sublayer + savage round: ENGINE_SUBLAYERS.md (48 sub-units × 10 = 480 items; new facts P1–P6: YT quota 6 uploads/project/day, TikTok unaudited = private, Shopify drops webhooks after 19 fails, Supabase 7-day backups, Gmail/Yahoo 0.3%) and ENGINE_SAVAGE20.md (20 new moves + launch-tomorrow cut: 8 offline builds, zero-build rules, week 1, later) → docs only, nothing built

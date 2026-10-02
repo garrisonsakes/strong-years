@@ -1,0 +1,1048 @@
+{
+ "version": "2026-10-02",
+ "note": "Seeds for workers/discover. Every creator is status 'to_verify': handles were compiled from memory and the POSTDB reference set, NOT checked live. A to_verify creator is only crawled through an official API or yt-dlp (which resolve or reject the handle), never the public-page fallback; flip status to 'verified' after a human checks the handle.",
+ "queries": [
+  {
+   "id": "Q01",
+   "query": "chair exercises for seniors"
+  },
+  {
+   "id": "Q02",
+   "query": "sit to stand test over 60"
+  },
+  {
+   "id": "Q03",
+   "query": "balance exercises for older adults"
+  },
+  {
+   "id": "Q04",
+   "query": "strength training over 60"
+  },
+  {
+   "id": "Q05",
+   "query": "leg strength after 70"
+  },
+  {
+   "id": "Q06",
+   "query": "grip strength test seniors"
+  },
+  {
+   "id": "Q07",
+   "query": "mobility routine over 50"
+  },
+  {
+   "id": "Q08",
+   "query": "hip mobility for seniors"
+  },
+  {
+   "id": "Q09",
+   "query": "morning stretch for older adults"
+  },
+  {
+   "id": "Q10",
+   "query": "knee pain exercises seniors"
+  },
+  {
+   "id": "Q11",
+   "query": "back stiffness morning routine over 60"
+  },
+  {
+   "id": "Q12",
+   "query": "shoulder mobility over 50"
+  },
+  {
+   "id": "Q13",
+   "query": "tai chi for beginners seniors"
+  },
+  {
+   "id": "Q14",
+   "query": "qigong morning routine"
+  },
+  {
+   "id": "Q15",
+   "query": "gentle yoga over 60"
+  },
+  {
+   "id": "Q16",
+   "query": "breathing exercise for sleep"
+  },
+  {
+   "id": "Q17",
+   "query": "fall prevention exercises"
+  },
+  {
+   "id": "Q18",
+   "query": "getting up off the floor seniors"
+  },
+  {
+   "id": "Q19",
+   "query": "walking after meals benefits"
+  },
+  {
+   "id": "Q20",
+   "query": "wall push ups seniors"
+  },
+  {
+   "id": "Q21",
+   "query": "resistance band workout seniors"
+  },
+  {
+   "id": "Q22",
+   "query": "kettlebell over 60"
+  },
+  {
+   "id": "Q23",
+   "query": "grandma workout"
+  },
+  {
+   "id": "Q24",
+   "query": "grandpa strength"
+  },
+  {
+   "id": "Q25",
+   "query": "70 year old fitness"
+  },
+  {
+   "id": "Q26",
+   "query": "80 year old exercise"
+  },
+  {
+   "id": "Q27",
+   "query": "seniors weight training"
+  },
+  {
+   "id": "Q28",
+   "query": "sarcopenia exercise"
+  },
+  {
+   "id": "Q29",
+   "query": "bone density exercise women over 50"
+  },
+  {
+   "id": "Q30",
+   "query": "menopause strength training"
+  },
+  {
+   "id": "Q31",
+   "query": "protein for older adults"
+  },
+  {
+   "id": "Q32",
+   "query": "high protein breakfast seniors"
+  },
+  {
+   "id": "Q33",
+   "query": "cooking for one senior"
+  },
+  {
+   "id": "Q34",
+   "query": "korean soup recipe easy"
+  },
+  {
+   "id": "Q35",
+   "query": "chinese home cooking soup"
+  },
+  {
+   "id": "Q36",
+   "query": "healthy recipes for seniors"
+  },
+  {
+   "id": "Q37",
+   "query": "fiber rich breakfast"
+  },
+  {
+   "id": "Q38",
+   "query": "prunes constipation"
+  },
+  {
+   "id": "Q39",
+   "query": "ginger tea recipe"
+  },
+  {
+   "id": "Q40",
+   "query": "honey cough remedy"
+  },
+  {
+   "id": "Q41",
+   "query": "kimchi recipe beginner"
+  },
+  {
+   "id": "Q42",
+   "query": "bone broth recipe"
+  },
+  {
+   "id": "Q43",
+   "query": "anti inflammatory dinner easy"
+  },
+  {
+   "id": "Q44",
+   "query": "blood sugar friendly dinner"
+  },
+  {
+   "id": "Q45",
+   "query": "easy dinner for two retirees"
+  },
+  {
+   "id": "Q46",
+   "query": "longevity habits"
+  },
+  {
+   "id": "Q47",
+   "query": "healthy aging tips"
+  },
+  {
+   "id": "Q48",
+   "query": "aging myths"
+  },
+  {
+   "id": "Q49",
+   "query": "retirement fitness"
+  },
+  {
+   "id": "Q50",
+   "query": "over 60 motivation"
+  },
+  {
+   "id": "Q51",
+   "query": "sleep routine older adults"
+  },
+  {
+   "id": "Q52",
+   "query": "posture fix seniors"
+  },
+  {
+   "id": "Q53",
+   "query": "ankle mobility seniors"
+  },
+  {
+   "id": "Q54",
+   "query": "stair climbing strength"
+  },
+  {
+   "id": "Q55",
+   "query": "farmer carry older adults"
+  },
+  {
+   "id": "Q56",
+   "query": "calf raises seniors"
+  },
+  {
+   "id": "Q57",
+   "query": "chair yoga"
+  },
+  {
+   "id": "Q58",
+   "query": "seated workout for seniors"
+  },
+  {
+   "id": "Q59",
+   "query": "10 minute workout over 60"
+  },
+  {
+   "id": "Q60",
+   "query": "couple workout over 60"
+  }
+ ],
+ "creators": [
+  {
+   "id": "C001",
+   "platform": "youtube",
+   "handle": "@BobandBrad",
+   "name": "Bob & Brad (physical therapists)",
+   "niche": "mobility/rehab",
+   "status": "to_verify"
+  },
+  {
+   "id": "C002",
+   "platform": "youtube",
+   "handle": "@SeniorFitnessWithMeredith",
+   "name": "Senior Fitness With Meredith",
+   "niche": "strength 55+",
+   "status": "to_verify"
+  },
+  {
+   "id": "C003",
+   "platform": "youtube",
+   "handle": "@MoreLifeHealth",
+   "name": "More Life Health",
+   "niche": "strength 55+",
+   "status": "to_verify"
+  },
+  {
+   "id": "C004",
+   "platform": "youtube",
+   "handle": "@GrowYoungFitness",
+   "name": "Grow Young Fitness",
+   "niche": "strength 55+",
+   "status": "to_verify"
+  },
+  {
+   "id": "C005",
+   "platform": "youtube",
+   "handle": "@JessicaSmithtv",
+   "name": "Jessica Smith TV",
+   "niche": "walking/strength",
+   "status": "to_verify"
+  },
+  {
+   "id": "C006",
+   "platform": "youtube",
+   "handle": "@HASfit",
+   "name": "HASfit",
+   "niche": "senior workouts",
+   "status": "to_verify"
+  },
+  {
+   "id": "C007",
+   "platform": "youtube",
+   "handle": "@eldergym",
+   "name": "Eldergym",
+   "niche": "balance 55+",
+   "status": "to_verify"
+  },
+  {
+   "id": "C008",
+   "platform": "youtube",
+   "handle": "@Fabulous50s",
+   "name": "Fabulous50s",
+   "niche": "strength women 50+",
+   "status": "to_verify"
+  },
+  {
+   "id": "C009",
+   "platform": "youtube",
+   "handle": "@doctorjo",
+   "name": "Ask Doctor Jo",
+   "niche": "mobility/rehab",
+   "status": "to_verify"
+  },
+  {
+   "id": "C010",
+   "platform": "youtube",
+   "handle": "@SquatUniversity",
+   "name": "Squat University",
+   "niche": "mobility/rehab",
+   "status": "to_verify"
+  },
+  {
+   "id": "C011",
+   "platform": "youtube",
+   "handle": "@E3Rehab",
+   "name": "E3 Rehab",
+   "niche": "rehab",
+   "status": "to_verify"
+  },
+  {
+   "id": "C012",
+   "platform": "youtube",
+   "handle": "@BodyweightWarrior",
+   "name": "Tom Merrick",
+   "niche": "mobility",
+   "status": "to_verify"
+  },
+  {
+   "id": "C013",
+   "platform": "youtube",
+   "handle": "@PeterAttiaMD",
+   "name": "Peter Attia MD",
+   "niche": "longevity",
+   "status": "to_verify"
+  },
+  {
+   "id": "C014",
+   "platform": "youtube",
+   "handle": "@Maangchi",
+   "name": "Maangchi",
+   "niche": "korean kitchen",
+   "status": "to_verify"
+  },
+  {
+   "id": "C015",
+   "platform": "youtube",
+   "handle": "@AaronandClaire",
+   "name": "Aaron & Claire",
+   "niche": "korean kitchen",
+   "status": "to_verify"
+  },
+  {
+   "id": "C016",
+   "platform": "youtube",
+   "handle": "@MadeWithLau",
+   "name": "Made With Lau",
+   "niche": "chinese home kitchen",
+   "status": "to_verify"
+  },
+  {
+   "id": "C017",
+   "platform": "youtube",
+   "handle": "@ChineseCookingDemystified",
+   "name": "Chinese Cooking Demystified",
+   "niche": "chinese kitchen",
+   "status": "to_verify"
+  },
+  {
+   "id": "C018",
+   "platform": "youtube",
+   "handle": "@SeonkyoungLongest",
+   "name": "Seonkyoung Longest",
+   "niche": "asian kitchen",
+   "status": "to_verify"
+  },
+  {
+   "id": "C019",
+   "platform": "youtube",
+   "handle": "@TaiChiHealth",
+   "name": "Tai Chi Health",
+   "niche": "tai chi",
+   "status": "to_verify"
+  },
+  {
+   "id": "C020",
+   "platform": "youtube",
+   "handle": "@YogaWithAdriene",
+   "name": "Yoga With Adriene",
+   "niche": "gentle yoga",
+   "status": "to_verify"
+  },
+  {
+   "id": "C021",
+   "platform": "youtube",
+   "handle": "@SeniorShapeFitness",
+   "name": "SeniorShape Fitness",
+   "niche": "chair workouts",
+   "status": "to_verify"
+  },
+  {
+   "id": "C022",
+   "platform": "youtube",
+   "handle": "@LivingWellWithLinda",
+   "name": "Living well 60+ channel",
+   "niche": "strength 55+",
+   "status": "to_verify"
+  },
+  {
+   "id": "C023",
+   "platform": "youtube",
+   "handle": "@Physiotutors",
+   "name": "Physiotutors",
+   "niche": "rehab",
+   "status": "to_verify"
+  },
+  {
+   "id": "C024",
+   "platform": "youtube",
+   "handle": "@FitnessForSeniors",
+   "name": "Fitness for seniors channel",
+   "niche": "senior workouts",
+   "status": "to_verify"
+  },
+  {
+   "id": "C025",
+   "platform": "youtube",
+   "handle": "@ChairYogaWithSherry",
+   "name": "Chair yoga channel",
+   "niche": "chair yoga",
+   "status": "to_verify"
+  },
+  {
+   "id": "C026",
+   "platform": "youtube",
+   "handle": "@StrongerSeniors",
+   "name": "Stronger Seniors",
+   "niche": "chair workouts",
+   "status": "to_verify"
+  },
+  {
+   "id": "C027",
+   "platform": "youtube",
+   "handle": "@QigongWithLeeHolden",
+   "name": "Lee Holden Qigong",
+   "niche": "qigong",
+   "status": "to_verify"
+  },
+  {
+   "id": "C028",
+   "platform": "youtube",
+   "handle": "@DrMandellDC",
+   "name": "Dr Mandell",
+   "niche": "posture/mobility",
+   "status": "to_verify"
+  },
+  {
+   "id": "C029",
+   "platform": "youtube",
+   "handle": "@KoreanBapsang",
+   "name": "Korean Bapsang",
+   "niche": "korean kitchen",
+   "status": "to_verify"
+  },
+  {
+   "id": "C030",
+   "platform": "youtube",
+   "handle": "@FutureCanoe",
+   "name": "Future Canoe",
+   "niche": "korean kitchen",
+   "status": "to_verify"
+  },
+  {
+   "id": "C031",
+   "platform": "tiktok",
+   "handle": "@seniorfitnesswithmeredith",
+   "name": "Senior Fitness With Meredith",
+   "niche": "strength 55+",
+   "status": "to_verify"
+  },
+  {
+   "id": "C032",
+   "platform": "tiktok",
+   "handle": "@grandma_droniak",
+   "name": "Grandma Droniak",
+   "niche": "55+ humor/lifestyle",
+   "status": "to_verify"
+  },
+  {
+   "id": "C033",
+   "platform": "tiktok",
+   "handle": "@bobandbradpt",
+   "name": "Bob & Brad",
+   "niche": "mobility/rehab",
+   "status": "to_verify"
+  },
+  {
+   "id": "C034",
+   "platform": "tiktok",
+   "handle": "@morelifehealth",
+   "name": "More Life Health",
+   "niche": "strength 55+",
+   "status": "to_verify"
+  },
+  {
+   "id": "C035",
+   "platform": "tiktok",
+   "handle": "@maangchi",
+   "name": "Maangchi",
+   "niche": "korean kitchen",
+   "status": "to_verify"
+  },
+  {
+   "id": "C036",
+   "platform": "tiktok",
+   "handle": "@madewithlau",
+   "name": "Made With Lau",
+   "niche": "chinese home kitchen",
+   "status": "to_verify"
+  },
+  {
+   "id": "C037",
+   "platform": "tiktok",
+   "handle": "@aaronandclaire",
+   "name": "Aaron & Claire",
+   "niche": "korean kitchen",
+   "status": "to_verify"
+  },
+  {
+   "id": "C038",
+   "platform": "tiktok",
+   "handle": "@eldergym",
+   "name": "Eldergym",
+   "niche": "balance 55+",
+   "status": "to_verify"
+  },
+  {
+   "id": "C039",
+   "platform": "tiktok",
+   "handle": "@fabulous50s",
+   "name": "Fabulous50s",
+   "niche": "strength women 50+",
+   "status": "to_verify"
+  },
+  {
+   "id": "C040",
+   "platform": "tiktok",
+   "handle": "@doctorjo",
+   "name": "Ask Doctor Jo",
+   "niche": "rehab",
+   "status": "to_verify"
+  },
+  {
+   "id": "C041",
+   "platform": "tiktok",
+   "handle": "@squat_university",
+   "name": "Squat University",
+   "niche": "rehab",
+   "status": "to_verify"
+  },
+  {
+   "id": "C042",
+   "platform": "tiktok",
+   "handle": "@growyoungfitness",
+   "name": "Grow Young Fitness",
+   "niche": "strength 55+",
+   "status": "to_verify"
+  },
+  {
+   "id": "C043",
+   "platform": "tiktok",
+   "handle": "@jessicasmithtv",
+   "name": "Jessica Smith",
+   "niche": "walking/strength",
+   "status": "to_verify"
+  },
+  {
+   "id": "C044",
+   "platform": "tiktok",
+   "handle": "@seonkyounglongest",
+   "name": "Seonkyoung Longest",
+   "niche": "asian kitchen",
+   "status": "to_verify"
+  },
+  {
+   "id": "C045",
+   "platform": "tiktok",
+   "handle": "@koreanbapsang",
+   "name": "Korean Bapsang",
+   "niche": "korean kitchen",
+   "status": "to_verify"
+  },
+  {
+   "id": "C046",
+   "platform": "tiktok",
+   "handle": "@taichihealth",
+   "name": "Tai Chi Health",
+   "niche": "tai chi",
+   "status": "to_verify"
+  },
+  {
+   "id": "C047",
+   "platform": "tiktok",
+   "handle": "@chairyoga",
+   "name": "Chair yoga creator",
+   "niche": "chair yoga",
+   "status": "to_verify"
+  },
+  {
+   "id": "C048",
+   "platform": "tiktok",
+   "handle": "@fitover60",
+   "name": "Fit over 60 creator",
+   "niche": "strength 55+",
+   "status": "to_verify"
+  },
+  {
+   "id": "C049",
+   "platform": "tiktok",
+   "handle": "@strongseniors",
+   "name": "Strong seniors creator",
+   "niche": "strength 55+",
+   "status": "to_verify"
+  },
+  {
+   "id": "C050",
+   "platform": "tiktok",
+   "handle": "@grandpalifts",
+   "name": "Grandpa lifting creator",
+   "niche": "strength 55+",
+   "status": "to_verify"
+  },
+  {
+   "id": "C051",
+   "platform": "tiktok",
+   "handle": "@grandmacooks",
+   "name": "Grandma cooking creator",
+   "niche": "kitchen",
+   "status": "to_verify"
+  },
+  {
+   "id": "C052",
+   "platform": "tiktok",
+   "handle": "@mobilitymaker",
+   "name": "Mobility creator",
+   "niche": "mobility",
+   "status": "to_verify"
+  },
+  {
+   "id": "C053",
+   "platform": "tiktok",
+   "handle": "@balancecoach",
+   "name": "Balance coach creator",
+   "niche": "balance",
+   "status": "to_verify"
+  },
+  {
+   "id": "C054",
+   "platform": "tiktok",
+   "handle": "@agingwell",
+   "name": "Aging well creator",
+   "niche": "longevity",
+   "status": "to_verify"
+  },
+  {
+   "id": "C055",
+   "platform": "tiktok",
+   "handle": "@fiberkitchen",
+   "name": "Fiber recipes creator",
+   "niche": "gut/kitchen",
+   "status": "to_verify"
+  },
+  {
+   "id": "C056",
+   "platform": "instagram",
+   "handle": "@maangchi",
+   "name": "Maangchi",
+   "niche": "korean kitchen",
+   "status": "to_verify"
+  },
+  {
+   "id": "C057",
+   "platform": "instagram",
+   "handle": "@madewithlau",
+   "name": "Made With Lau",
+   "niche": "chinese home kitchen",
+   "status": "to_verify"
+  },
+  {
+   "id": "C058",
+   "platform": "instagram",
+   "handle": "@aaronandclaire",
+   "name": "Aaron & Claire",
+   "niche": "korean kitchen",
+   "status": "to_verify"
+  },
+  {
+   "id": "C059",
+   "platform": "instagram",
+   "handle": "@seniorfitnesswithmeredith",
+   "name": "Senior Fitness With Meredith",
+   "niche": "strength 55+",
+   "status": "to_verify"
+  },
+  {
+   "id": "C060",
+   "platform": "instagram",
+   "handle": "@bobandbrad",
+   "name": "Bob & Brad",
+   "niche": "mobility/rehab",
+   "status": "to_verify"
+  },
+  {
+   "id": "C061",
+   "platform": "instagram",
+   "handle": "@morelifehealth",
+   "name": "More Life Health",
+   "niche": "strength 55+",
+   "status": "to_verify"
+  },
+  {
+   "id": "C062",
+   "platform": "instagram",
+   "handle": "@growyoungfitness",
+   "name": "Grow Young Fitness",
+   "niche": "strength 55+",
+   "status": "to_verify"
+  },
+  {
+   "id": "C063",
+   "platform": "instagram",
+   "handle": "@fabulous50s",
+   "name": "Fabulous50s",
+   "niche": "strength women 50+",
+   "status": "to_verify"
+  },
+  {
+   "id": "C064",
+   "platform": "instagram",
+   "handle": "@squat_university",
+   "name": "Squat University",
+   "niche": "rehab",
+   "status": "to_verify"
+  },
+  {
+   "id": "C065",
+   "platform": "instagram",
+   "handle": "@e3rehab",
+   "name": "E3 Rehab",
+   "niche": "rehab",
+   "status": "to_verify"
+  },
+  {
+   "id": "C066",
+   "platform": "instagram",
+   "handle": "@tommerrick",
+   "name": "Tom Merrick",
+   "niche": "mobility",
+   "status": "to_verify"
+  },
+  {
+   "id": "C067",
+   "platform": "instagram",
+   "handle": "@peterattiamd",
+   "name": "Peter Attia",
+   "niche": "longevity",
+   "status": "to_verify"
+  },
+  {
+   "id": "C068",
+   "platform": "instagram",
+   "handle": "@yangmunus",
+   "name": "Yang Mun (reference account, POSTDB)",
+   "niche": "55+ wellness",
+   "status": "to_verify"
+  },
+  {
+   "id": "C069",
+   "platform": "instagram",
+   "handle": "@itsyangmuns",
+   "name": "Yang Mun 2 (reference account, POSTDB)",
+   "niche": "55+ wellness",
+   "status": "to_verify"
+  },
+  {
+   "id": "C070",
+   "platform": "instagram",
+   "handle": "@koreanbapsang",
+   "name": "Korean Bapsang",
+   "niche": "korean kitchen",
+   "status": "to_verify"
+  },
+  {
+   "id": "C071",
+   "platform": "instagram",
+   "handle": "@seonkyounglongest",
+   "name": "Seonkyoung Longest",
+   "niche": "asian kitchen",
+   "status": "to_verify"
+  },
+  {
+   "id": "C072",
+   "platform": "instagram",
+   "handle": "@jessicasmithtv",
+   "name": "Jessica Smith",
+   "niche": "walking/strength",
+   "status": "to_verify"
+  },
+  {
+   "id": "C073",
+   "platform": "instagram",
+   "handle": "@doctorjo",
+   "name": "Ask Doctor Jo",
+   "niche": "rehab",
+   "status": "to_verify"
+  },
+  {
+   "id": "C074",
+   "platform": "instagram",
+   "handle": "@eldergym",
+   "name": "Eldergym",
+   "niche": "balance 55+",
+   "status": "to_verify"
+  },
+  {
+   "id": "C075",
+   "platform": "instagram",
+   "handle": "@taichihealth",
+   "name": "Tai Chi Health",
+   "niche": "tai chi",
+   "status": "to_verify"
+  },
+  {
+   "id": "C076",
+   "platform": "instagram",
+   "handle": "@leeholdenqigong",
+   "name": "Lee Holden",
+   "niche": "qigong",
+   "status": "to_verify"
+  },
+  {
+   "id": "C077",
+   "platform": "instagram",
+   "handle": "@yogawithadriene",
+   "name": "Yoga With Adriene",
+   "niche": "gentle yoga",
+   "status": "to_verify"
+  },
+  {
+   "id": "C078",
+   "platform": "instagram",
+   "handle": "@fitover60",
+   "name": "Fit over 60 creator",
+   "niche": "strength 55+",
+   "status": "to_verify"
+  },
+  {
+   "id": "C079",
+   "platform": "instagram",
+   "handle": "@grandpalifts",
+   "name": "Grandpa lifting creator",
+   "niche": "strength 55+",
+   "status": "to_verify"
+  },
+  {
+   "id": "C080",
+   "platform": "instagram",
+   "handle": "@agingwell",
+   "name": "Aging well creator",
+   "niche": "longevity",
+   "status": "to_verify"
+  },
+  {
+   "id": "C081",
+   "platform": "facebook",
+   "handle": "Bob & Brad",
+   "name": "Bob & Brad",
+   "niche": "mobility/rehab",
+   "status": "to_verify"
+  },
+  {
+   "id": "C082",
+   "platform": "facebook",
+   "handle": "Senior Fitness With Meredith",
+   "name": "Senior Fitness With Meredith",
+   "niche": "strength 55+",
+   "status": "to_verify"
+  },
+  {
+   "id": "C083",
+   "platform": "facebook",
+   "handle": "Maangchi",
+   "name": "Maangchi",
+   "niche": "korean kitchen",
+   "status": "to_verify"
+  },
+  {
+   "id": "C084",
+   "platform": "facebook",
+   "handle": "Made With Lau",
+   "name": "Made With Lau",
+   "niche": "chinese home kitchen",
+   "status": "to_verify"
+  },
+  {
+   "id": "C085",
+   "platform": "facebook",
+   "handle": "Yang Mun",
+   "name": "Yang Mun (reference page, POSTDB)",
+   "niche": "55+ wellness",
+   "status": "to_verify"
+  },
+  {
+   "id": "C086",
+   "platform": "facebook",
+   "handle": "Eldergym",
+   "name": "Eldergym",
+   "niche": "balance 55+",
+   "status": "to_verify"
+  },
+  {
+   "id": "C087",
+   "platform": "facebook",
+   "handle": "Jessica Smith TV",
+   "name": "Jessica Smith",
+   "niche": "walking/strength",
+   "status": "to_verify"
+  },
+  {
+   "id": "C088",
+   "platform": "facebook",
+   "handle": "More Life Health",
+   "name": "More Life Health",
+   "niche": "strength 55+",
+   "status": "to_verify"
+  },
+  {
+   "id": "C089",
+   "platform": "threads",
+   "handle": "@maangchi",
+   "name": "Maangchi",
+   "niche": "korean kitchen",
+   "status": "to_verify"
+  },
+  {
+   "id": "C090",
+   "platform": "threads",
+   "handle": "@yangmunus",
+   "name": "Yang Mun (reference, POSTDB)",
+   "niche": "55+ wellness",
+   "status": "to_verify"
+  },
+  {
+   "id": "C091",
+   "platform": "threads",
+   "handle": "@itsyangmuns",
+   "name": "Yang Mun 2 (reference, POSTDB)",
+   "niche": "55+ wellness",
+   "status": "to_verify"
+  },
+  {
+   "id": "C092",
+   "platform": "threads",
+   "handle": "@peterattiamd",
+   "name": "Peter Attia",
+   "niche": "longevity",
+   "status": "to_verify"
+  },
+  {
+   "id": "C093",
+   "platform": "threads",
+   "handle": "@squat_university",
+   "name": "Squat University",
+   "niche": "rehab",
+   "status": "to_verify"
+  },
+  {
+   "id": "C094",
+   "platform": "threads",
+   "handle": "@madewithlau",
+   "name": "Made With Lau",
+   "niche": "chinese home kitchen",
+   "status": "to_verify"
+  },
+  {
+   "id": "C095",
+   "platform": "x",
+   "handle": "@PeterAttiaMD",
+   "name": "Peter Attia",
+   "niche": "longevity",
+   "status": "to_verify"
+  },
+  {
+   "id": "C096",
+   "platform": "x",
+   "handle": "@BobandBrad",
+   "name": "Bob & Brad",
+   "niche": "mobility/rehab",
+   "status": "to_verify"
+  },
+  {
+   "id": "C097",
+   "platform": "x",
+   "handle": "@Maangchi",
+   "name": "Maangchi",
+   "niche": "korean kitchen",
+   "status": "to_verify"
+  },
+  {
+   "id": "C098",
+   "platform": "x",
+   "handle": "@E3Rehab",
+   "name": "E3 Rehab",
+   "niche": "rehab",
+   "status": "to_verify"
+  },
+  {
+   "id": "C099",
+   "platform": "x",
+   "handle": "@SquatUniversity",
+   "name": "Squat University",
+   "niche": "rehab",
+   "status": "to_verify"
+  },
+  {
+   "id": "C100",
+   "platform": "x",
+   "handle": "@DrMandellDC",
+   "name": "Dr Mandell",
+   "niche": "posture/mobility",
+   "status": "to_verify"
+  }
+ ]
+}

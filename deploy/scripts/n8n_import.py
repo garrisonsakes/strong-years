@@ -18,9 +18,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "deploy" / "n8n" / "prepared"
-WORKFLOWS = ["n8n_core_workflow.json", "n8n_growth_workflow.json"]
+WORKFLOWS = ["n8n_core_workflow.json", "n8n_growth_workflow.json", "n8n_discover_workflow.json"]
 NAME_RX = re.compile(r"publisher tick|ig: create reel|ig: publish|tiktok: direct post|yt: init|yt: upload|upload-post: publish|"
-                     r"governor execute|governor: execute|boost: launch|ads? api", re.I)
+                     r"governor execute|governor: execute|boost: launch|ads? api|worker: discover crawl", re.I)
 URL_RX = re.compile(r"media_publish|/media\b|open\.tiktokapis\.com/v2/post|googleapis\.com/upload|upload-post\.com|"
                     r"/growth/governor/execute|graph\.facebook\.com/[^ ]*/(ads|adsets|campaigns)", re.I)
 
