@@ -23,6 +23,11 @@ def _founding(P):
 
 
 ARMS = {
+    # CANON UPDATE 6 (Oct 2 2026): the launch offer. $12 today for both books; the membership is a 7-day trial ($0 today);
+    # the first $25 is charged on day 7, then every month. Money-back window: 14 days from that first charge.
+    "trial_2500": dict(label="$12 today for both books and a 7-day trial, then $25/month from day 7", price="$25", today="$12", founding=True,
+        billing=lambda P, D: f"""You paid **$12 today** for Chang Yin's 7-Day Strength Reset and Sun Yoon's Strong Kitchen (both yours to keep). Your founding membership started as a **7-day trial: $0 today**. Seven days after you joined, your card is charged **{P}**, and your membership then **renews at {P} every month, on the same date, until you cancel**. Cancel before day 7 and the membership costs nothing. Your founding price stays the same for as long as you stay subscribed. We email you a reminder **2 days before your first {P} charge** and before every renewal.""",
+        first_charge="Day 5: An email reminding you that your first $25 charge is in 2 days (cancel online before then and nothing is charged). Day 7: your first $25 charge. Day 19: an email reminding you that your 14-day money-back window closes in 2 days.", guarantee=GUARANTEE),
     "starter_2500": dict(label="$12 today for both books and your first month, then $25/month", price="$25", today="$12", founding=True,
         billing=lambda P, D: f"""You paid **$12 today** for Chang Yin's 7-Day Strength Reset, Sun Yoon's Strong Kitchen (both yours to keep) and your first month as a founding member. One month after you joined, your membership **renews at {P} every month, on the same date, until you cancel**. Your founding price stays the same for as long as you stay subscribed. We email you a reminder **before your first {P} charge** and before every renewal.""",
         first_charge="Day 12: An email reminding you that your 14-day money-back window closes in 2 days; another reminder 2 days before your first $25 charge.", guarantee=GUARANTEE),

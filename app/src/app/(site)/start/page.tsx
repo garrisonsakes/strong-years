@@ -398,7 +398,7 @@ export default async function StartPage() {
           </div>
         </div>
       </section>
-      <StickyBar href={primaryHref} label={ctaLabel} note={shop ? (shop.todayCents && shop.memberCents && shop.label.includes("first month") ? `Then ${money(shop.memberCents)}/mo. Cancel online anytime.` : "One time. Membership optional.") : primaryOffer === "trial" ? `Then ${money(live.trialRenewCents)}/mo. Cancel online anytime.` : `Renews ${fp}/mo. Cancel online anytime.`} />
+      <StickyBar href={primaryHref} label={ctaLabel} note={shop ? (shop.recurring ? (shop.trialDays ? `$0 for the membership today; ${money(shop.memberCents)} on day ${shop.trialDays}, then monthly. Cancel online anytime.` : `Then ${money(shop.memberCents)}/mo. Cancel online anytime.`) : "One time. Membership optional.") : primaryOffer === "trial" ? `Then ${money(live.trialRenewCents)}/mo. Cancel online anytime.` : `Renews ${fp}/mo. Cancel online anytime.`} />
     </>
   );
 }

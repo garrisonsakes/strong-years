@@ -35,6 +35,16 @@ export function grantsAccess(m: Membership | null | undefined, now = Date.now())
   if (m.pending_verification) return false;
   switch (m.status) {
     case "trialing":
+      // CANON UPDATE 6 (Shopify): the trial grants access until trial_end plus the same float as a paid period, so a
+      // day-7 charge whose renewal order is late never locks a converting member out, and a trial that never charges
+      // lapses (runShopifyLapses) instead of staying open forever. Stripe trials are ended by Stripe's own events.
+      if (m.processor === "shopify") {
+        const end = m.trial_end ?? m.current_period_end;
+        if (!end) return false;
+        const t = new Date(end).getTime();
+        const grace = m.grace_until ? new Date(m.grace_until).getTime() : t + shopifyFloatMs();
+        return Math.max(t, grace) > now;
+      }
       return true;
     case "past_due":
       // Shopify: a failed billing attempt opens a grace period; after it, access

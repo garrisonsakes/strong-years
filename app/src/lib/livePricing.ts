@@ -50,6 +50,8 @@ export interface ShopifyLivePrices {
   foundingCents: number;
   standardCents: number;
   annualCents: number;
+  /** Canon 6: the Starter Books line sold with the 7-day trial ($12, the e12 row). */
+  booksCents: number;
 }
 
 export function shopifyLivePrices(rows: Pick<ShopifyProductRow, "sku" | "recurring_cents" | "price_cents">[], cohortOpen: boolean): ShopifyLivePrices {
@@ -59,5 +61,5 @@ export function shopifyLivePrices(rows: Pick<ShopifyProductRow, "sku" | "recurri
   };
   const foundingCents = cents("founding_monthly", 2500);
   const standardCents = cents("standard_monthly", 3500);
-  return { cohortOpen, foundingCents, standardCents, memberCents: cohortOpen ? foundingCents : standardCents, annualCents: cents("annual_founding", 24900) };
+  return { cohortOpen, foundingCents, standardCents, memberCents: cohortOpen ? foundingCents : standardCents, annualCents: cents("annual_founding", 24900), booksCents: rows.find((x) => x.sku === "ebook_e12")?.price_cents ?? 1200 };
 }

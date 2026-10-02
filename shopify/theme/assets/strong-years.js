@@ -88,7 +88,8 @@
     return Array.from(new Uint8Array(buf)).map(function (b) { return b.toString(16).padStart(2, '0'); }).join('');
   }
   function textOf(sel, root) { var el = root.querySelector(sel); return el ? el.innerText.replace(/\s+/g, ' ').trim() : ''; }
-  /* sy_consent_price records what the page showed. A starter page (first-payment code) shows BOTH prices, "12|25":
+  /* sy_consent_price records what the page showed. A starter page (first-payment code) shows BOTH prices, "12|25"; a canon-6
+     trial page records "0.00|25.00" (nothing today for the membership, the plan price on day 7):
      the code price and the plan price the checkout charges a returning customer; the members app compares the
      charged line with this record on orders/paid (R5-8). */
   async function consentAttrs(root, price) {
@@ -117,20 +118,23 @@
       var btn = form.querySelector('button[type="submit"]');
       if (btn) { btn.setAttribute('aria-busy', 'true'); btn.disabled = true; }
       try {
-        var chosen = form.querySelector('input[name="id"]:checked') || form.querySelector('[name="id"]');
+        /* Canon 6 trial form: items[1] is the membership on the trial plan ($0 today), items[0] the Starter Books ($12). */
+        var chosen = form.querySelector('input[name="id"]:checked') || form.querySelector('[name="id"]') || form.querySelector('[data-sy-main-id]');
         var main = { id: Number(chosen.value), quantity: 1 };
-        var plan = form.querySelector('[name="selling_plan"]');
+        var plan = form.querySelector('[name="selling_plan"]') || form.querySelector('[data-sy-main-plan]');
         if (plan && plan.value) main.selling_plan = Number(plan.value);
         var props = {};
         form.querySelectorAll('[name^="properties["]').forEach(function (p) { if (p.value) props[p.name.slice(11, -1)] = p.value; });
         if (Object.keys(props).length) main.properties = props;
         var items = [main];
+        var extra = form.querySelector('[data-sy-extra-id]');
+        if (extra && extra.value) items.push({ id: Number(extra.value), quantity: 1 });
         form.querySelectorAll('input[name="sy_bump"]:checked').forEach(function (b) { items.push({ id: Number(b.value), quantity: 1 }); });
         /* R5-11: a membership is one seat per contract; quantity is always 1 (the cart page has no quantity control either). */
         items.forEach(function (it) { it.quantity = 1; });
 
-        var extra = { sy_entry: form.getAttribute('data-sy-offer') || '', sy_sku: chosen.getAttribute('data-sy-sku') || form.getAttribute('data-sy-sku') || '' };
-        if (consent) Object.assign(extra, await consentAttrs(form, form.getAttribute('data-sy-price')));
+        var attrs = { sy_entry: form.getAttribute('data-sy-offer') || '', sy_sku: chosen.getAttribute('data-sy-sku') || form.getAttribute('data-sy-sku') || '' };
+        if (consent) Object.assign(attrs, await consentAttrs(form, form.getAttribute('data-sy-price')));
 
         await fetch('/cart/clear.js', { method: 'POST', headers: { Accept: 'application/json' } });
         var add = await fetch('/cart/add.js', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify({ items: items }) });
@@ -138,7 +142,7 @@
           var body = await add.json().catch(function () { return {}; });
           throw new Error(body.description || 'That could not be added. Please try again.');
         }
-        await syncAttributes(extra);
+        await syncAttributes(attrs);
         var code = form.getAttribute('data-sy-discount');
         location.href = code ? '/discount/' + encodeURIComponent(code) + '?redirect=%2Fcheckout' : '/checkout';
       } catch (e) {

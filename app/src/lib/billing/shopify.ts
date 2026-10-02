@@ -75,23 +75,30 @@ export const shopifyConfig = {
     return Number.isFinite(n) && n >= 0 && n <= 30 ? n : 7;
   },
   /**
-   * Live front-end cells (must exist in the catalog). CANON UPDATE 3: m12 ("$12 today = books + first month, then
-   * $25/mo") is the launch default; e12 (books only, founding offer on the thank-you page + 3 emails) is the test cell.
-   * e7 / e15 stay in the catalog for a later price test.
+   * Live front-end cells (must exist in the catalog). CANON UPDATE 6: t12 ("$12 today = Starter Books + a 7-day trial
+   * of the founding membership; first $25 on day 7, then monthly") is THE offer. m12 (cell B, "$12 = books + first
+   * month" on the free Shopify Subscriptions app) is the fallback when the store has no trial-capable plan yet, e12
+   * (books only) the old test cell. resolveFrontEnd keeps only cells whose rows exist, so a store whose catalog has no
+   * t12 row serves m12 without any config change. The cell split test is OFF by default (one offer, canon 6).
    */
   cells(e: Env = process.env): string[] {
-    const list = str(e, "FRONT_END_CELLS", "m12,e12")
+    const list = str(e, "FRONT_END_CELLS", "t12,m12,e12")
       .split(",")
       .map((x) => x.trim().toLowerCase())
       .filter((x) => /^[a-z0-9]{1,12}$/.test(x));
-    return list.length ? [...new Set(list)] : ["m12"];
+    return list.length ? [...new Set(list)] : ["t12"];
   },
   defaultCell(e: Env = process.env) {
-    return str(e, "FRONT_END_DEFAULT_CELL", "m12").toLowerCase();
+    return str(e, "FRONT_END_DEFAULT_CELL", "t12").toLowerCase();
   },
   cellTestOn(e: Env = process.env) {
-    const v = str(e, "FRONT_END_CELL_TEST", "true");
+    const v = str(e, "FRONT_END_CELL_TEST", "false");
     return v === "true" || v === "1";
+  },
+  /** Canon 6 trial length; the catalog row's trial_days wins when set. */
+  trialDays(e: Env = process.env) {
+    const n = Number(str(e, "SHOPIFY_TRIAL_DAYS", "7"));
+    return Number.isInteger(n) && n >= 1 && n <= 31 ? n : 7;
   },
   /**
    * Who owns the subscription contracts. "shopify_subscriptions" (launch default): the free app owns them, so our
@@ -295,10 +302,11 @@ export function cartContextFromAttributes(list: unknown): CartContext {
  */
 export function checkoutUrl(row: ShopifyProductRow, ctx: CartContext, e: Env = process.env): string {
   const q = new URLSearchParams();
-  if (row.discount_code) q.set("view", "starter");
-  const arm = row.cell === "m12" ? "B" : row.entitlement === "ebook" ? "A" : null;
+  if (row.trial_days) q.set("view", "trial");
+  else if (row.discount_code) q.set("view", "starter");
+  const arm = row.trial_days ? "T" : row.cell === "m12" ? "B" : row.entitlement === "ebook" ? "A" : null;
   if (arm) q.set("arm", arm);
-  if (row.cell && row.cell !== "m12") q.set("cell", row.cell);
+  if (row.cell && row.cell !== "m12" && row.cell !== "t12") q.set("cell", row.cell);
   if (ctx.visitorId && /^[0-9a-f-]{36}$/.test(ctx.visitorId)) q.set("vid", ctx.visitorId);
   const a = sanitizeAttribution(ctx.attribution);
   const touch = (a?.last_touch ?? a) as Record<string, unknown> | null;
@@ -520,6 +528,10 @@ export const DEMO_CATALOG: Omit<ShopifyProductRow, "id" | "created_at">[] = [
   { sku: "founding_monthly", entitlement: "founding", title: "Founding membership", shopify_product_id: "9100000002", shopify_variant_id: "9000000025", selling_plan_id: "7000000025", inventory_item_id: "8000000025", price_cents: 2500, recurring_cents: 2500, interval: "month", includes_ebook: false, gift_months: null, cell: null, cohort: "founding", active: true, product_handle: "founding-membership", discount_code: null },
   // Cell B (launch default): same variant + plan as founding_monthly, $13 off the first payment with STARTER12.
   { sku: "bundle_m12", entitlement: "founding", title: "Starter books + first month of founding membership", shopify_product_id: "9100000002", shopify_variant_id: "9000000025", selling_plan_id: "7000000025", inventory_item_id: "8000000025", price_cents: 1200, recurring_cents: 2500, interval: "month", includes_ebook: true, gift_months: null, cell: "m12", cohort: "founding", active: true, product_handle: "founding-membership", discount_code: "STARTER12" },
+  // CANON UPDATE 6 (the launch offer): founding variant on the subscription app's 7-day-trial plan; $0 membership line at
+  // checkout, the Starter Books ride as a separate $12 one-time line (ebook_e12) on the same order; first $25 on day 7.
+  { sku: "bundle_t12", entitlement: "founding", title: "7-day trial of founding membership (with the Starter Books)", shopify_product_id: "9100000002", shopify_variant_id: "9000000025", selling_plan_id: "7000000070", inventory_item_id: "8000000025", price_cents: 0, recurring_cents: 2500, interval: "month", includes_ebook: false, gift_months: null, cell: "t12", cohort: "founding", active: true, product_handle: "founding-membership", discount_code: null, trial_days: 7 },
+  { sku: "bundle_t12_standard", entitlement: "standard", title: "7-day trial of membership (with the Starter Books)", shopify_product_id: "9100000003", shopify_variant_id: "9000000035", selling_plan_id: "7000000071", inventory_item_id: null, price_cents: 0, recurring_cents: 3500, interval: "month", includes_ebook: false, gift_months: null, cell: "t12", cohort: "standard", active: true, product_handle: "strong-years-membership", discount_code: null, trial_days: 7 },
   { sku: "standard_monthly", entitlement: "standard", title: "Membership", shopify_product_id: "9100000003", shopify_variant_id: "9000000035", selling_plan_id: "7000000035", inventory_item_id: null, price_cents: 3500, recurring_cents: 3500, interval: "month", includes_ebook: false, gift_months: null, cell: null, cohort: "standard", active: true, product_handle: "strong-years-membership", discount_code: null },
   { sku: "bundle_m12_standard", entitlement: "standard", title: "Starter books + first month of membership", shopify_product_id: "9100000003", shopify_variant_id: "9000000035", selling_plan_id: "7000000035", inventory_item_id: null, price_cents: 1200, recurring_cents: 3500, interval: "month", includes_ebook: true, gift_months: null, cell: "m12", cohort: "standard", active: true, product_handle: "strong-years-membership", discount_code: "STARTER12S" },
   { sku: "essentials_monthly", entitlement: "essentials", title: "Essentials", shopify_product_id: "9100000004", shopify_variant_id: "9000000120", selling_plan_id: "7000000120", inventory_item_id: null, price_cents: 1200, recurring_cents: 1200, interval: "month", includes_ebook: false, gift_months: null, cell: null, cohort: null, active: true, product_handle: "essentials-membership", discount_code: null },

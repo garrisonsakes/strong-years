@@ -29,7 +29,7 @@
   "states": {
     "dm1": {
       "dm": [
-        "Hi {first_name}! This is the Strong Years team assistant (automated). Chang Yin and Sun Yoon are AI characters, not real people. Reply STOP anytime.\n\nThe starter books, in plain words:\n• Chang Yin's 7-Day Strength Reset: seven mornings, one chair, about 8 minutes a day, an easier version of every move.\n• Sun Yoon's Strong Kitchen: recipes with the protein and fiber grams written in, and a who-should-skip box on every page.\n• $12 today. The page you land on says exactly what that $12 buys: for most people it's both books plus your first month of Strong Years (then $25 a month until you cancel, cancel online anytime); some people see the books alone, one-time. Either way the books are yours to keep."
+        "Hi {first_name}! This is the Strong Years team assistant (automated). Chang Yin and Sun Yoon are AI characters, not real people. Reply STOP anytime.\n\nThe starter books, in plain words:\n• Chang Yin's 7-Day Strength Reset: seven mornings, one chair, about 8 minutes a day, an easier version of every move.\n• Sun Yoon's Strong Kitchen: recipes with the protein and fiber grams written in, and a who-should-skip box on every page.\n• $12 today. The page you land on says exactly what that $12 buys: for most people it's both books plus a 7-day trial of Strong Years (first $25 on day 7, then $25 a month until you cancel; cancel online anytime, before day 7 too); some people see the books alone, one-time. Either way the books are yours to keep."
       ],
       "buttons": [
         {
@@ -54,7 +54,7 @@
     },
     "sub": {
       "dm": [
-        "It depends on the page you get, and the page says so before you pay. The starter offer is $12 today for both books and your first month of the Founding Membership, then $25 a month until you cancel. The books-only page is $12 once, not a subscription. Either way: cancel online anytime in two screens, 14-day money-back guarantee on the membership charge (once per person), founding price locked for as long as you stay subscribed."
+        "It depends on the page you get, and the page says so before you pay. The starter offer is $12 today for both books plus a 7-day trial of the Founding Membership: $0 more today, then $25 on day 7 and $25 a month until you cancel. Cancel before day 7 and the membership costs nothing. The books-only page is $12 once, not a subscription. Either way: cancel online anytime in two screens, 14-day money-back guarantee on the first membership charge (once per person), founding price locked for as long as you stay subscribed."
       ],
       "buttons": [
         {
@@ -112,7 +112,7 @@
     },
     "dm1_direct": {
       "dm": [
-        "Hi {first_name}! This is the Strong Years team assistant (automated). Chang Yin and Sun Yoon are AI characters, not real people. Reply STOP anytime.\n\nThe starter books, in plain words:\n• Chang Yin's 7-Day Strength Reset: seven mornings, one chair, about 8 minutes a day, an easier version of every move.\n• Sun Yoon's Strong Kitchen: recipes with the protein and fiber grams written in, and a who-should-skip box on every page.\n• $12 today. The page you land on says exactly what that $12 buys: for most people it's both books plus your first month of Strong Years (then $25 a month until you cancel, cancel online anytime); some people see the books alone, one-time. Either way the books are yours to keep."
+        "Hi {first_name}! This is the Strong Years team assistant (automated). Chang Yin and Sun Yoon are AI characters, not real people. Reply STOP anytime.\n\nThe starter books, in plain words:\n• Chang Yin's 7-Day Strength Reset: seven mornings, one chair, about 8 minutes a day, an easier version of every move.\n• Sun Yoon's Strong Kitchen: recipes with the protein and fiber grams written in, and a who-should-skip box on every page.\n• $12 today. The page you land on says exactly what that $12 buys: for most people it's both books plus a 7-day trial of Strong Years (first $25 on day 7, then $25 a month until you cancel; cancel online anytime, before day 7 too); some people see the books alone, one-time. Either way the books are yours to keep."
       ],
       "buttons": [
         {

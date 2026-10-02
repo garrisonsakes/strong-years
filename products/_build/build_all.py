@@ -22,7 +22,7 @@ for o in outs:
 print("queue:", q, summ["videos"], "videos,", summ["base_runtime_minutes"], "min; standard $", summ["est_cost_usd"]["standard"], "; with reuse $", summ["with_loop_reuse"]["est_cost_usd"]["standard"])
 
 # copy what the app serves (app/src/lib/products.ts ALL_DOWNLOAD_FILES) plus the new books it can add
-served = ["daily_practice_sessions_1-14.pdf", "daily_practice_sessions_1-30.pdf", "welcome_kit_starter_2500.pdf", "welcome_kit_founding_2500.pdf",
+served = ["daily_practice_sessions_1-14.pdf", "daily_practice_sessions_1-30.pdf", "welcome_kit_trial_2500.pdf", "welcome_kit_starter_2500.pdf", "welcome_kit_founding_2500.pdf",
           "welcome_kit_founding_3000.pdf", "welcome_kit_standard_3500.pdf", "strength_reset_2000.pdf", "strength_reset_2500.pdf",
           "strength_reset_3000.pdf", "strength_reset_3500.pdf", "strong_kitchen.pdf", "twelve_week_printable.pdf"]
 if os.path.isdir(APP_DL):

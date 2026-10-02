@@ -7,8 +7,8 @@ import { readFileSync } from "node:fs";
 
 const facts = factsFromEnv({ COMPANY_LEGAL_NAME: "Strong Years LLC", MAILING_ADDRESS: "1 Test St, Austin, TX 78701", SUPPORT_EMAIL: "help@strongyears.com", BILLING_PHONE: "(555) 010-0000", GOVERNING_STATE: "Texas", SY_DOMAIN: "strongyears.com", LEGAL_EFFECTIVE_DATE: "2026-10-01" } as any);
 
-async function plan(engine: Engine, phase: Phase, simulateProvisioned = false, confirmCloseFounding = false) {
-  const g = dryRunner(() => {}, { simulateProvisioned, engine });
+async function plan(engine: Engine, phase: Phase, simulateProvisioned = false, confirmCloseFounding = false, simulateTrialPlan = true) {
+  const g = dryRunner(() => {}, { simulateProvisioned, engine, simulateTrialPlan });
   const report = await runPlan(g, { engine, phase, membersAppUrl: "https://members.strongyears.com", facts, foundingCloseDateIso: "2027-01-09", nowIso: "2026-10-01T00:00:00Z", confirmCloseFounding });
   return { ops: g.recorded, report };
 }
@@ -28,7 +28,14 @@ describe("provisioning plan (DRY_RUN snapshot)", () => {
     const spg = ops.filter((o) => o.op === "SellingPlanGroupCreate");
     expect(spg).toHaveLength(3);
     const founding = spg.find((o) => (o.variables as any).input.merchantCode === "sy-founding")!;
-    const starter = (founding.variables as any).input.sellingPlansToCreate.find((p: any) => p.pricingPolicies.length);
+    const plansMade = (founding.variables as any).input.sellingPlansToCreate as any[];
+    const starter = plansMade.find((p: any) => /first month/.test(p.name));
+    // Canon 6 trial plan in the app engine: $0 first cycle, $25 after; the app sets nextBillingDate = checkout + 7 days.
+    const trial = plansMade.find((p: any) => /7-day trial/.test(p.name));
+    expect(trial.pricingPolicies).toEqual([
+      { fixed: { adjustmentType: "PRICE", adjustmentValue: { fixedValue: "0.00" } } },
+      { recurring: { afterCycle: 1, adjustmentType: "PRICE", adjustmentValue: { fixedValue: "25.00" } } },
+    ]);
     expect(starter.pricingPolicies).toEqual([
       { fixed: { adjustmentType: "PRICE", adjustmentValue: { fixedValue: "12.00" } } },
       { recurring: { afterCycle: 1, adjustmentType: "PRICE", adjustmentValue: { fixedValue: "25.00" } } },
@@ -41,6 +48,21 @@ describe("provisioning plan (DRY_RUN snapshot)", () => {
     const { ops, report } = await plan("shopify_subscriptions", "verify", true);
     expect(summary(ops)).toMatchSnapshot();
     expect(report.membersCatalog).toMatchSnapshot("members catalog");
+  });
+
+  it("verify phase, canon 6: the 7-day-trial plan yields t12 rows ($0 today, $25 recurring, trial_days 7); without it the catalog falls back to cell B and warns", async () => {
+    const { report } = await plan("shopify_subscriptions", "verify", true);
+    const cat = report.membersCatalog!;
+    const t = cat.find((r) => r.sku === "bundle_t12")!;
+    expect(t).toMatchObject({ entitlement: "founding", price_cents: 0, recurring_cents: 2500, interval: "month", cell: "t12", cohort: "founding", trial_days: 7, includes_ebook: false, discount_code: null, product_handle: "founding-membership" });
+    expect(t.selling_plan_id).not.toBe(cat.find((r) => r.sku === "founding_monthly")!.selling_plan_id);
+    const ts = cat.find((r) => r.sku === "bundle_t12_standard")!;
+    expect(ts).toMatchObject({ entitlement: "standard", price_cents: 0, recurring_cents: 3500, cell: "t12", cohort: "standard", trial_days: 7 });
+    expect(FUNNEL_ARMS.find((a) => a.default)!.id).toBe("T");
+    const without = await plan("shopify_subscriptions", "verify", true, false, false);
+    expect(without.report.membersCatalog!.some((r) => r.sku.startsWith("bundle_t12"))).toBe(false);
+    expect(without.report.membersCatalog!.find((r) => r.sku === "bundle_m12")!.discount_code).toBe("STARTER12");
+    expect(without.report.warnings.join("\n")).toMatch(/no "7-day trial" selling plan attached/);
   });
 
   it("close-founding is one-way and needs explicit confirmation", async () => {
@@ -116,9 +138,11 @@ describe("plan invariants", () => {
     expect(appHooks).toEqual([...fixture.core, ...fixture.enrichment].map(toEnum));
   });
 
-  it("arm B (cell B) is the launch default; A is the test arm (CANON UPDATE 3)", () => {
-    expect(FUNNEL_ARMS.find((a) => a.default)?.id).toBe("B");
+  it("arm T (the 7-day trial, cell t12) is the launch default (CANON UPDATE 6); B (cell B) is the fallback, A the old test arm", () => {
+    expect(FUNNEL_ARMS.find((a) => a.default)?.id).toBe("T");
+    expect(FUNNEL_ARMS.find((a) => a.id === "T")?.cell).toBe("t12");
     expect(FUNNEL_ARMS.find((a) => a.id === "B")?.cell).toBe("m12");
+    expect(FUNNEL_ARMS.filter((a) => a.default)).toHaveLength(1);
   });
 
   it("ebook cells are separate products with one real price each; gifts never renew; kit ships", () => {

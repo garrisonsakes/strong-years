@@ -100,6 +100,10 @@ export function shopifyPriceLine(fe: FrontEnd | null, live: ShopifyLivePrices): 
   const m = money(live.memberCents);
   const lock = live.cohortOpen ? ", locked for as long as you stay subscribed" : " until you cancel";
   const kind = live.cohortOpen ? "founding membership" : "membership";
+  if (fe && fe.row.entitlement !== "ebook" && fe.row.recurring_cents && fe.row.trial_days) {
+    const r = money(fe.row.recurring_cents);
+    return `${money(live.booksCents ?? 1200)} today gets you the starter books (the 7-Day Strength Reset and Sun Yoon's Strong Kitchen, yours to keep) and a ${fe.row.trial_days}-day trial of the ${kind}: $0 today, then ${r} on day ${fe.row.trial_days} and ${r} a month${lock}. Cancel online anytime, before the first charge too. 14-day money-back guarantee on the first membership charge.`;
+  }
   if (fe && fe.row.entitlement !== "ebook" && fe.row.recurring_cents) {
     return `${money(fe.row.price_cents)} today gets you the starter books (the 7-Day Strength Reset and Sun Yoon's Strong Kitchen, yours to keep) and your first month of the ${kind}. Then ${money(fe.row.recurring_cents)} a month${lock}. 14-day money-back guarantee on the membership.`;
   }

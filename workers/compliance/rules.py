@@ -176,11 +176,14 @@ EXTRA_RULES: list[Rule] = [
     Rule("T-01b", "block",
          r"[\"\u201c][^\"\u201d]{8,160}[\"\u201d]\s*[-\u2013\u2014,]\s*[A-Z][a-z]+\.?( [A-Z]\.?)?,?\s*(\d{2}\b|member since|age \d)",
          "Attributed quote reads as a testimonial", "SAFETY_RULES.md T-01"),
-    # BRIEF.md CANON UPDATE 2: no "$1", no trial, ever; founding price is "locked while you stay subscribed", never "for life".
+    # BRIEF.md CANON UPDATE 2 + 6: no "$1" ever, no FREE trial, no trial of any other length; the ONLY trial wording allowed is
+    # the canon-6 "7-day trial" (es: "prueba de 7 días") of the $12 Starter Books offer, whose first charge is on day 7. The
+    # founding price is "locked while you stay subscribed", never "for life".
     Rule("CANON-TRIAL", "block",
          r"(\$\s?1(?![\d,.])\s*(for|today|to start|trial|a day)|\b(for|just|only)\s*\$\s?1\b(?![\d,.])|"
-         r"\b(free|\$\s?\d+|\d+[- ]day|7[- ]day|seven[- ]day) trial\b|\btrial (offer|membership|arm|period|month|week)\b|\bstart (your|a|the) trial\b)",
-         "'$1' / trial offer (CANON UPDATE 2: no $1 trial, ever)", "BRIEF.md CANON UPDATE 2"),
+         r"\b(free|\$\s?\d+|(?!7\b|seven\b)\d+[- ]day|(?!seven\b)(one|two|three|five|ten|fourteen|thirty)[- ]day) trial\b|"
+         r"\b(free|no[- ]cost|no[- ]charge) (7|seven)[- ]day trial\b|\btrial (offer|arm|month|week)\b|\bstart (your|a|the) free trial\b)",
+         "'$1' / free trial / non-7-day trial (CANON UPDATE 2 + 6: the only trial is the paid $12 → 7-day trial, first charge day 7)", "BRIEF.md CANON UPDATE 6"),
     Rule("CANON-FORLIFE", "block",
          r"\b(locked|price|rate|founding price|membership)\b[^.!?\n]{0,30}\bfor\s+life\b|\blifetime (price|rate|lock)\b|\bfor life of (your|the) membership\b",
          "'for life' price promise (say 'locked for as long as you stay subscribed')", "OFFER.md §0.1"),

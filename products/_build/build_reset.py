@@ -22,7 +22,7 @@ def price_text(cents):
             "(strongyears.com/account), or email us and a person handles it within one business day. If you bought the books on their own, nothing renews; you can add the membership later.")
     if cents == 2500:
         head = ("Your Strong Years membership is **$25 a month**. Founding members keep that price for as long as they stay subscribed. "
-                "If you started with the $12 starter offer (both books plus your first month), your first renewal is the first $25 charge.")
+                "If you started with the $12 starter offer (both books plus a 7-day trial of the membership), your first $25 charge is on day 7, then monthly.")
     elif cents == 3000:
         head = "Your Strong Years founding membership is **$30 a month**, and it stays $30 for as long as you stay subscribed."
     elif cents == 3500:
@@ -30,7 +30,7 @@ def price_text(cents):
     else:
         head = ("During our launch, a Strong Years founding membership is **$25 a month**, locked for as long as you stay subscribed. "
                 "When the founding group is full, new members pay $35 a month. "
-                "If you started with the $12 starter offer (both books plus your first month), it renews at $25 a month.")
+                "If you started with the $12 starter offer (both books plus a 7-day trial of the membership), your first $25 charge is on day 7, then $25 a month.")
     return head + " " + tail
 
 

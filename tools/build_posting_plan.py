@@ -487,10 +487,20 @@ def write_csv(rows: list[dict], path: Path = OUT_CSV, fields: list[str] = FIELDS
 
 
 if __name__ == "__main__":
+    import account_topology as AT
     rows = build()
     write_csv(rows)
     vrows = build_variants(rows)
+    # CANON UPDATE 6 topology: one FB page (text/photo once per page), 3 Stories per IG page per day, and the account
+    # plan (1 YouTube channel at 4/day until the quota raise, FB 12 + 2 long, TikTok accounts separate from IG pages).
+    vrows = AT.fb_text_photo_rows(vrows) + AT.stories_rows(rows, stage)
     write_csv(vrows, VAR_CSV, VFIELDS)
+    acc = AT.apply(rows)
+    AT.write(acc, FIELDS)
+    held = Counter((r["platform"], r["hold_reason"]) for r in acc if r["publish"] != "y")
+    print(f"account plan: {sum(r['publish'] == 'y' for r in acc)} scheduled + {sum(r['publish'] != 'y' for r in acc)} held "
+          f"-> {AT.ACCOUNTS_CSV.relative_to(ROOT)}; held by reason: {dict(held)}")
+    print(f"day 1 per account: {AT.summary(acc, vrows, 1)}")
     print(f"{len(vrows)} variant rows ({sum(r['platform'] == 'ig_trial' for r in vrows)} Trial Reels, "
           f"{sum(r['platform'] != 'ig_trial' for r in vrows)} FB text/photo) -> {VAR_CSV.relative_to(ROOT)}")
     wm = build.wave2_map  # type: ignore[attr-defined]

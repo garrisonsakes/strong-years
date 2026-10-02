@@ -135,10 +135,18 @@ export const EBOOK_CELLS = [
  *      arm test is off (ARM_TEST_ON=false in the theme config).
  */
 export const FUNNEL_ARMS = [
-  { id: "B", weight: 0.5, cell: "m12", default: true },
-  { id: "A", weight: 0.5, default: false },
+  // CANON UPDATE 6 (Oct 2 2026): T = "$12 today = Starter Books + a 7-day trial of the founding membership; first $25
+  // on day 7, then monthly" is THE launch offer. It needs a selling plan with a 7-day trial period, which the free
+  // Shopify Subscriptions app cannot make (INTEGRATION.md §9: trial-capable app, e.g. Appstle "Trial periods", or the
+  // app engine). Until `npm run verify` finds that plan (name contains "7-day trial"), the theme and the members app
+  // fall back to B automatically, so the store is never without an offer.
+  { id: "T", weight: 1, cell: "t12", default: true },
+  { id: "B", weight: 0, cell: "m12", default: false },
+  { id: "A", weight: 0, default: false },
 ] as const;
-/** Cell ids match the members app catalog (app/src/lib/billing/shopify.ts: e7, e12, e15, m12). */
+/** The trial length of arm T (days). The plan must bill the first $25 exactly this many days after checkout. */
+export const TRIAL_DAYS = 7;
+/** Cell ids match the members app catalog (app/src/lib/billing/shopify.ts: e7, e12, e15, m12, t12). */
 
 /**
  * R3 (BRIEF.md CANON UPDATE 4, ASCENSION.md): the 12-week coached group program, delivered by a certified
@@ -206,7 +214,7 @@ export const PRODUCTS: ProductSpec[] = [
     }],
     collections: ["membership"],
     subscriptionOnly: true,
-    sellingPlans: ["monthly", "starter_b"],
+    sellingPlans: ["monthly", "trial_7", "starter_b"],
     seoTitle: "Founding Membership | Strong Years",
     seoDescription: "Daily 8 to 12 minute strength sessions with Chang Yin (AI character), Sun Yoon's Sunday recipes and a monthly Strength Age retest. $25 a month, cancel online anytime.",
     descriptionHtml: `<p>Your Daily Practice with Chang Yin, 8 to 12 minutes a day at your level, with a chair-based version of everything. Sun Yoon's recipes every Sunday. A Strength Age you retest every month.</p>
@@ -401,6 +409,8 @@ export interface SellingPlanSpec {
   name: string;
   interval: "MONTH" | "YEAR";
   intervalCount: number;
+  /** Trial length in days (canon 6): the first charge is this many days after checkout, $0 at checkout. */
+  trialDays?: number;
   /** For the app engine only: first-cycle price then recurring price. */
   firstCyclePrice?: string;
   recurringPrice?: string;
@@ -408,6 +418,10 @@ export interface SellingPlanSpec {
 }
 export const SELLING_PLANS: SellingPlanSpec[] = [
   { key: "monthly", name: "Monthly, renews until you cancel", interval: "MONTH", intervalCount: 1, description: "Billed every month on the same date until you cancel. Cancel online anytime." },
+  // CANON UPDATE 6. Created by hand in the trial-capable subscription app (Appstle: plan → "Trial period" 7 days) or by
+  // provision.ts in the app engine (pricing policy: first cycle 100% off + the app sets nextBillingDate = checkout + 7
+  // days and runs the day-7 billing attempt). verifyPhase keys on the name containing "7-day trial".
+  { key: "trial_7", name: "7-day trial, then $25 a month", interval: "MONTH", intervalCount: 1, trialDays: TRIAL_DAYS, firstCyclePrice: "0.00", recurringPrice: FOUNDING_PRICE, description: "$0 today. Your first $25 is charged 7 days after checkout, then $25 every month on the same date until you cancel. Cancel online anytime; cancel in the first 7 days and the membership costs nothing." },
   { key: "yearly", name: "Yearly, renews until you cancel", interval: "YEAR", intervalCount: 1, description: "Billed every year until you cancel. We email you 30 days before each renewal." },
   {
     key: "starter_b",

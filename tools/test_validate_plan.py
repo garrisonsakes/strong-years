@@ -104,6 +104,10 @@ def test_broll_cap_detected():
 
 # ---- variants: Trial Reels + Facebook native (ENGINE_100X §1, §2.1, §5) ------------------------------------------
 VROWS = bp.build_variants(ROWS)
+import account_topology as AT  # noqa: E402
+# CANON UPDATE 6: the build adds one text + one photo per FB PAGE and 3 Stories per IG page per day (build_posting_plan __main__).
+VROWS = AT.fb_text_photo_rows(VROWS) + AT.stories_rows(ROWS, bp.stage)
+AROWS = AT.apply(ROWS)
 
 
 def _vfails(rows, vrows, needle):
@@ -111,7 +115,7 @@ def _vfails(rows, vrows, needle):
 
 
 def test_variant_plan_valid_and_ramped():
-    assert vp.validate_all(ROWS, VROWS) == []
+    assert vp.validate_all(ROWS, VROWS, AROWS) == []
     trials = [r for r in VROWS if r["platform"] == "ig_trial"]
     per = lambda d: sum(1 for r in trials if r["page"] == "@changyin" and r["day_index"] == d)
     assert (per(-7), per(7), per(14), per(60)) == (3, 6, 12, 12)
@@ -148,3 +152,27 @@ def test_low_value_trial_and_fb_crosspost_detected():
     fb = next(r for r in rows if r["variant"] == "fb_long")
     fb["seconds"] = 200
     assert _vfails(rows, VROWS, "outside 60-180 s")
+
+
+def test_account_topology_canon6():
+    """CANON UPDATE 6: 1 YouTube channel (4/day until the quota raise), 1 FB page (12 videos + 2 long + text + photo),
+    TikTok accounts separate from IG pages, 3 Stories per IG page per day; held rows stay packaged, never scheduled."""
+    day1 = AT.summary(AROWS, VROWS, 1)
+    assert day1["@strongyears|yt_shorts"] == 4 and not any(k.endswith("|yt_shorts") and not k.startswith("@strongyears") for k in day1)
+    assert day1["Strong Years|fb_reels"] == 14 and day1["Strong Years|fb_text"] == 1 and day1["Strong Years|fb_photo"] == 1
+    assert all(day1[f"{p}|ig_story"] == 3 for p in bp.PAGES if p in AT.TT_ACCOUNTS)
+    for p in bp.PAGES:
+        assert day1[f"{AT.TT_ACCOUNTS[p]}|tiktok"] == 6 and AT.TT_ACCOUNTS[p] != p
+    held = [r for r in AROWS if r["publish"] == "held"]
+    assert held and all(r["platform"] in ("yt_shorts", "fb_reels") for r in held)
+    # A YT row over the cap or a TikTok row on the IG handle is caught.
+    bad = copy.deepcopy(AROWS)
+    extra = next(r for r in bad if r["platform"] == "yt_shorts" and r["publish"] == "held")
+    extra["publish"] = "y"
+    assert any("youtube" in e for e in AT.validate(bad, VROWS))
+    bad2 = copy.deepcopy(AROWS)
+    tt = next(r for r in bad2 if r["platform"] == "tiktok")
+    tt["account"] = tt["page"]
+    assert any("separate accounts" in e for e in AT.validate(bad2, VROWS))
+    # Dropping a Stories row is caught.
+    assert any("stories" in e for e in AT.validate(AROWS, [v for v in VROWS if v["file_id"] != "ST-CY-+01-poll"]))

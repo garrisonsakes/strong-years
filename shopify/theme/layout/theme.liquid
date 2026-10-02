@@ -48,7 +48,7 @@
         var q = new URLSearchParams(location.search);
         function get(k) { try { return localStorage.getItem(k); } catch (e) { var m = document.cookie.match('(?:^|; )' + k + '=([^;]*)'); return m ? decodeURIComponent(m[1]) : null; } }
         function set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} document.cookie = k + '=' + encodeURIComponent(v) + ';path=/;max-age=15552000;samesite=lax'; }
-        /* With the arm/cell test off (cells.test === false) everyone gets the entry marked default (CANON UPDATE 3: arm B, cell e12). */
+        /* With the arm/cell test off (cells.test === false) everyone gets the entry marked default (CANON UPDATE 6: arm T (the 7-day trial), cell e12 for the books). */
         function pick(list) { var t = 0, i, r; if (C.cells && C.cells.test === false) { for (i = 0; i < list.length; i++) if (list[i]['default']) return list[i].id; } for (i = 0; i < list.length; i++) t += +list[i].weight || 0; r = Math.random() * t; for (i = 0; i < list.length; i++) { r -= +list[i].weight || 0; if (r <= 0) return list[i].id; } return list.length ? list[0].id : null; }
         /* The members app's /b redirect hands over its signed visitor id so the order is credited to the same visitor. */
         var vid = q.get('vid'); if (vid && /^[0-9a-f-]{36}$/.test(vid)) set('sy_vid', vid);
@@ -60,7 +60,7 @@
         if (!valid(arms, arm)) arm = pick(arms);
         if (cell) { set('sy_ebook_cell', cell); d.setAttribute('data-cell', cell); }
         if (arm) { set('sy_arm', arm); d.setAttribute('data-arm', arm); }
-        /* sy_cell = the cell the members app reports on: m12 for arm B, else the ebook price cell. */
+        /* sy_cell = the cell the members app reports on: t12 for arm T, m12 for arm B, else the ebook price cell. */
         var armB = null; for (var j = 0; j < arms.length; j++) if (arms[j].id === arm && arms[j].cell) armB = arms[j].cell;
         set('sy_cell', armB || cell || '');
         var P = C.page || {};

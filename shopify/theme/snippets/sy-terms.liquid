@@ -1,20 +1,25 @@
 {%- comment -%}
   Auto-renewal terms box (FUNNEL.md §5.6 item 9, OFFER.md §2.3), placed directly above the pay button,
   in type at least as large as the price. SMS lines appear only when links.sms_enabled is true.
-  Params: today (money), recurring (money), interval ('month'|'year'), founding (bool), starter (bool), standard_price (money)
+  Params: today (money), recurring (money), interval ('month'|'year'), founding (bool), starter (bool), trial (bool), trial_charge_date (text), standard_price (money)
 {%- endcomment -%}
 {%- assign links = shop.metafields.strong_years.links.value -%}
 {%- assign months = 1 -%}{%- if interval == 'year' -%}{%- assign months = 12 -%}{%- endif -%}
 <div class="terms" data-sy-terms>
-  {%- if starter -%}
+  {%- if trial -%}
+    <p><strong>Today: $12</strong> for the Starter Books, yours to keep, plus any add-ons you ticked above. <strong>$0 today for the membership:</strong> your 7-day trial starts now.</p>
+    <p><strong>On {{ trial_charge_date }}, your first membership charge is {{ recurring }}</strong>, then {{ recurring }} every {{ interval }} on the same date, until you cancel.{% if founding %} As a founding member, your price stays the same for as long as you stay subscribed.{% endif %} Cancel before {{ trial_charge_date }} and the membership costs nothing. One trial per person.</p>
+  {%- elsif starter -%}
     <p><strong>Today: {{ today }}</strong> for the Starter Books and your first month of Strong Years, plus any add-ons you ticked above.</p>
     <p><strong>One starter offer per person.</strong> If you have used it before, the {{ today }} does not apply: checkout shows <strong>{{ recurring }} today</strong> for your first month instead, before you pay, and you can stop there.</p>
   {%- else -%}
     <p><strong>Today: {{ today }}</strong> for your first {{ interval }} of Strong Years, plus any add-ons you ticked above.</p>
   {%- endif -%}
+  {%- unless trial -%}
   <p><strong>On <span data-sy-renew="{{ months }}">the same date next {{ interval }}</span>, your membership renews at {{ recurring }}</strong>, then every {{ interval }} on the same date, until you cancel.{% if founding %} As a founding member, your price stays the same for as long as you stay subscribed.{% endif %}</p>
-  <p><strong>14-day money-back guarantee:</strong> ask for a refund in your account within 14 days of today's charge, or reply to any email. Once per person.</p>
+  {%- endunless -%}
+  <p><strong>14-day money-back guarantee:</strong> ask for a refund in your account within 14 days of {% if trial %}your first membership charge{% else %}today's charge{% endif %}, or reply to any email. Once per person.</p>
   <p><strong>Cancel anytime</strong> online in at most two screens in your account (no phone call, no email needed){% if links.sms_enabled %}, or text CANCEL{% endif %}.</p>
-  <p><strong>We'll remind you</strong> by email before every renewal{% if interval == 'year' %}: 30 days before each yearly renewal{% else %}: 7 and 2 days before the first, 3 days before each one after that{% endif %}, plus a yearly summary.</p>
+  <p><strong>We'll remind you</strong> by email before every {% if trial %}charge{% else %}renewal{% endif %}{% if interval == 'year' %}: 30 days before each yearly renewal{% elsif trial %}: 2 days before the first charge, 3 days before each one after that{% else %}: 7 and 2 days before the first, 3 days before each one after that{% endif %}, plus a yearly summary.</p>
   <p><strong>Add-ons:</strong> digital downloads, refund on request within 14 days (email us). The kit: 30 days, no return needed.</p>
 </div>

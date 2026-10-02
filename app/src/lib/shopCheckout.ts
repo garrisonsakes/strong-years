@@ -1,3 +1,4 @@
+import type { ShopifyProductRow } from "./db/types";
 import "server-only";
 import { getStore } from "./db";
 import { catalog, checkoutUrl, NAMED_OFFERS, resolveFrontEnd } from "./billing/shopify";
@@ -65,6 +66,15 @@ export interface ShopCta {
   todayCents: number;
   memberCents: number;
   cohortOpen: boolean;
+  /** The CTA leads to a subscription checkout (cell B or the canon-6 trial), not a one-time books purchase. */
+  recurring: boolean;
+  /** Canon 6: the membership starts as a trial of this many days ($0 today, first memberCents charge on that day). */
+  trialDays: number | null;
+}
+
+/** Canon 6: the Starter Books line that rides along with the trial ($12 by default: the e12 row). */
+export function starterBooksCents(rows: ShopifyProductRow[]): number {
+  return rows.find((r) => r.sku === "ebook_e12")?.price_cents ?? rows.find((r) => r.entitlement === "ebook" && r.cell === "e12")?.price_cents ?? 1200;
 }
 
 /**
@@ -81,6 +91,22 @@ export async function getShopCta(): Promise<ShopCta | null> {
   const fe = resolveFrontEnd(rows, { visitorId: await getVisitorId(), cohortOpen });
   const m = money(live.memberCents);
   const lock = cohortOpen ? ", locked for as long as you stay subscribed" : " until you cancel";
+  if (fe && fe.row.entitlement !== "ebook" && fe.row.recurring_cents && fe.row.trial_days) {
+    // CANON UPDATE 6: "$12 today = Starter Books + a 7-day trial; first $25 on day 7, then monthly".
+    const books = starterBooksCents(rows);
+    const t = money(books);
+    const r = money(fe.row.recurring_cents);
+    const d = fe.row.trial_days;
+    return {
+      label: `Start my ${d}-day trial: ${t} today`,
+      note: `${t} today for the starter books (yours to keep). The membership is a ${d}-day trial: $0 today, then ${r} on day ${d} and ${r} a month${lock}. Cancel online anytime, before day ${d} too, and the membership costs nothing. We email you 2 days before the first charge. 14-day money-back guarantee on the first membership charge.`,
+      todayCents: books,
+      memberCents: fe.row.recurring_cents,
+      cohortOpen,
+      recurring: true,
+      trialDays: d,
+    };
+  }
   if (fe && fe.row.entitlement !== "ebook" && fe.row.recurring_cents) {
     const t = money(fe.row.price_cents);
     return {
@@ -89,6 +115,8 @@ export async function getShopCta(): Promise<ShopCta | null> {
       todayCents: fe.row.price_cents,
       memberCents: fe.row.recurring_cents,
       cohortOpen,
+      recurring: true,
+      trialDays: null,
     };
   }
   const t = fe ? money(fe.row.price_cents) : null;
@@ -97,6 +125,8 @@ export async function getShopCta(): Promise<ShopCta | null> {
     note: `${t ? `${t}, one time, ` : "One time, "}for the 7-Day Strength Reset and Sun Yoon's Strong Kitchen, yours to keep. Right after, you can add the ${cohortOpen ? "founding " : ""}membership with one tap: ${m} for your first month, then ${m} a month${lock}. Nothing renews unless you choose the membership.`,
     todayCents: fe?.row.price_cents ?? 0,
     memberCents: live.memberCents,
+    recurring: false,
+    trialDays: null,
     cohortOpen,
   };
 }

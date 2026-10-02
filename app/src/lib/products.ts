@@ -211,9 +211,11 @@ export function entitledDownloads(
     // The sessions themselves are in the app from day 1; the printable program book vests on day 15.
     out.push({ file: "daily_practice_sessions_1-14.pdf", title: "Daily Practice, sessions 1–14 (printable book)", blurb: "Every session's moves, all four levels, with the safety cues.", ...(locked ? { lockedUntil: locked } : {}) });
     if (m.plan !== "gift") {
-      // No $1 trial exists (CANON UPDATE 2); a legacy arm-A row gets the founding kit for its price.
+      // No $1 trial exists (CANON UPDATE 2); a legacy arm-A row gets the founding kit for its price. CANON UPDATE 6: the
+      // 7-day-trial founding row ($12 books today, first $25 on day 7) gets the kit whose billing text says exactly that.
       const starter = (m.offer_code ?? "").startsWith("bundle_m12") && m.founding;
-      const kit = starter ? "welcome_kit_starter_2500.pdf" : m.founding ? `welcome_kit_founding_${m.price_cents === 3000 ? 3000 : 2500}.pdf` : "welcome_kit_standard_3500.pdf";
+      const trial = (m.offer_code ?? "").startsWith("bundle_t12") && m.founding;
+      const kit = trial ? "welcome_kit_trial_2500.pdf" : starter ? "welcome_kit_starter_2500.pdf" : m.founding ? `welcome_kit_founding_${m.price_cents === 3000 ? 3000 : 2500}.pdf` : "welcome_kit_standard_3500.pdf";
       out.push({ file: kit, title: "Your Welcome Kit", blurb: "How it works, staying safe, reaching a human, and how to cancel." });
     }
   }
@@ -225,6 +227,7 @@ export function entitledDownloads(
 
 export const ALL_DOWNLOAD_FILES = [
   "daily_practice_sessions_1-14.pdf",
+  "welcome_kit_trial_2500.pdf",
   "welcome_kit_starter_2500.pdf",
   "welcome_kit_founding_2500.pdf",
   "welcome_kit_founding_3000.pdf",

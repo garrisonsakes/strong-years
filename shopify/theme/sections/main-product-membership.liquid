@@ -2,7 +2,11 @@
   Membership offer page (FUNNEL.md §5.6 /join layout). One page, one offer, terms directly above the button,
   separate unticked consent checkbox, no express-checkout buttons (they would skip the consent record).
   Roles: founding | standard | annual | essentials | coached (R3, ASCENSION.md; template product.coached.json). Template product.starter.json sets offer = starter (cell B):
-  "$12 today = books + first month, then $25/mo".
+  "$12 today = books + first month, then $25/mo". Template product.trial.json sets offer = trial (CANON UPDATE 6, the
+  launch offer): "$12 today = the Starter Books + a 7-day trial; first $25 on day 7, then monthly". The trial needs a
+  selling plan whose name contains "7-day trial" (a trial-capable subscription app or the app engine, INTEGRATION.md §9);
+  when the product has none, this section serves the starter (cell B) offer instead, so the page is never dishonest.
+  The trial cart holds TWO lines: the Starter Books ($12, one-time) and the membership on the trial plan ($0 today).
   Selling plan: in the app engine the founding product has a "$12 first month" plan (fixed first-cycle price);
   in the Shopify Subscriptions engine (launch) the $12 comes from STARTER12 / STARTER12S (first payment only,
   once per customer), applied at /discount/<code>?redirect=/checkout by the offer form (and pre-applied by the
@@ -31,15 +35,25 @@
 
   assign plan_id = blank
   assign starter_plan_id = blank
+  assign trial_plan_id = blank
   for g in product.selling_plan_groups
     for sp in g.selling_plans
       if sp.name contains 'first month'
         assign starter_plan_id = sp.id
+      elsif sp.name contains '7-day trial'
+        assign trial_plan_id = sp.id
       elsif plan_id == blank
         assign plan_id = sp.id
       endif
     endfor
   endfor
+  assign membership_role = false
+  if role == 'founding' or role == 'standard'
+    assign membership_role = true
+  endif
+  if offer == 'trial' and trial_plan_id == blank and membership_role
+    assign offer = 'starter'
+  endif
 
   case role
     when 'founding'
@@ -86,6 +100,20 @@
     assign today = '$12'
     assign discount = 'STARTER12S'
   endif
+  assign trial = false
+  assign books = all_products['strong-years-starter-books']
+  assign books_variant = books.selected_or_first_available_variant
+  if offer == 'trial' and membership_role
+    assign trial = true
+    assign plan_id = trial_plan_id
+    assign today = '$12'
+    if founding
+      assign app_sku = 'bundle_t12'
+    else
+      assign app_sku = 'bundle_t12_standard'
+    endif
+    assign trial_charge_date = 'now' | date: '%s' | plus: 604800 | date: '%B %-d'
+  endif
 -%}
 <section class="wrap stack" aria-labelledby="join-h">
   {%- if coached_full -%}
@@ -97,7 +125,9 @@
     <div class="cohort"><p><strong>The founding group is full.</strong> New members join at the standard price of {{ std.price | money_without_trailing_zeros }} a month.</p></div>
     <a class="btn" href="/products/strong-years-membership{% if offer == 'starter' %}?view=starter{% endif %}">Continue to Strong Years</a>
   {%- else -%}
-    {%- if starter -%}
+    {%- if trial -%}
+      <h1 id="join-h">$12 today: the Starter Books and a 7-day trial of Strong Years.</h1>
+    {%- elsif starter -%}
       <h1 id="join-h">$12 today: the Starter Books and your first month of Strong Years.</h1>
     {%- elsif founding -%}
       <h1 id="join-h">Join as a founding member: {{ today }} today.</h1>
@@ -118,7 +148,10 @@
     {%- endif -%}
 
     <ul class="checklist jade bold">
-      {%- if starter -%}
+      {%- if trial -%}
+        <li>$12 today for the Starter Books (yours to keep). The membership is $0 today: a 7-day trial</li>
+        <li>On {{ trial_charge_date }} your first membership charge is {{ recurring }}, then {{ recurring }} a month until you cancel. Cancel before then and the membership costs nothing</li>
+      {%- elsif starter -%}
         <li>$12 today for the Starter Books and your first month, then {{ recurring }} a month until you cancel</li>
       {%- else -%}
         <li>{{ today }} today for your first {{ interval }}, then {{ recurring }} a {{ interval }} until you cancel</li>
@@ -139,28 +172,46 @@
     <div class="card">{% render 'sy-who-runs' %}</div>
 
     <form action="{{ routes.cart_add_url }}" method="post" class="stack" novalidate
-      data-sy-offer="{% if starter %}starter{% else %}join{% endif %}" data-sy-sku="{{ app_sku }}"
-      data-sy-price="{% if starter %}12.00{% else %}{{ v.price | money_without_currency }}{% endif %}" data-sy-full-price="{{ v.price | money_without_currency }}" data-sy-interval="{{ interval }}"
+      data-sy-offer="{% if trial %}trial{% elsif starter %}starter{% else %}join{% endif %}" data-sy-sku="{{ app_sku }}"
+      data-sy-price="{% if trial %}0.00{% elsif starter %}12.00{% else %}{{ v.price | money_without_currency }}{% endif %}" data-sy-full-price="{{ v.price | money_without_currency }}" data-sy-interval="{{ interval }}"
       {% if discount != '' %}data-sy-discount="{{ discount }}"{% endif %}>
+      {%- if trial -%}
+      {%- comment -%} Two lines: items[0] = the Starter Books (one-time, $12), items[1] = the membership on the trial plan ($0 today).
+      The JS reads the same fields; the no-JS post uses the cart form's items[] array. {%- endcomment -%}
+      <input type="hidden" name="items[0][id]" value="{{ books_variant.id }}" data-sy-extra-id>
+      <input type="hidden" name="items[0][quantity]" value="1">
+      <input type="hidden" name="items[1][id]" value="{{ v.id }}" data-sy-main-id>
+      <input type="hidden" name="items[1][quantity]" value="1">
+      <input type="hidden" name="items[1][selling_plan]" value="{{ plan_id }}" data-sy-main-plan>
+      {%- else -%}
       <input type="hidden" name="id" value="{{ v.id }}">
       <input type="hidden" name="quantity" value="1">
       <input type="hidden" name="selling_plan" value="{{ plan_id }}">
+      {%- endif -%}
       <input type="hidden" name="return_to" value="/checkout">
       {%- comment -%} R5-10: the no-JS post still carries a consent marker (the required checkbox gates the submit); the members app
       treats a missing consent price as "unknown" and has a person check the order. {%- endcomment -%}
       <input type="hidden" name="attributes[sy_consent_v]" value="nojs">
       <input type="hidden" name="attributes[sy_sku]" value="{{ app_sku }}">
-      <input type="hidden" name="attributes[sy_entry]" value="{% if starter %}starter{% else %}join{% endif %}">
+      <input type="hidden" name="attributes[sy_entry]" value="{% if trial %}trial{% elsif starter %}starter{% else %}join{% endif %}">
       {%- unless role == 'annual' or role == 'essentials' or role == 'coached' -%}{% render 'sy-bumps' %}{%- endunless -%}
-      {% render 'sy-terms', today: today, recurring: recurring, interval: interval, founding: founding, starter: starter %}
+      {% render 'sy-terms', today: today, recurring: recurring, interval: interval, founding: founding, starter: starter, trial: trial, trial_charge_date: trial_charge_date %}
       <label class="tick">
         <input type="checkbox" name="sy_consent" value="yes" required>
+        {%- if trial -%}
+        <span data-sy-consent-label>I agree to the automatic renewal terms above: $12 today for the Starter Books, $0 today for the membership, then {{ recurring }} on {{ trial_charge_date }} and every {{ interval }} after that until I cancel. I can cancel online anytime, including before the first charge.</span>
+        {%- else -%}
         <span data-sy-consent-label>I agree to the automatic renewal terms above: {{ today }} today, then {{ recurring }}/{{ interval }} from <span data-sy-renew="{% if interval == 'year' %}12{% else %}1{% endif %}">next {{ interval }}</span> until I cancel. I can cancel online anytime.</span>
+        {%- endif -%}
       </label>
       <p class="small"><a href="/pages/membership-and-cancellation">Membership and cancellation policy</a> · <a href="/policies/terms-of-service">Terms</a></p>
       <p class="alert" data-sy-error role="alert" hidden></p>
-      <button type="submit" class="btn">{% if starter %}Start for $12 today{% elsif role == 'coached' %}Join the group for {{ today }} today{% elsif founding %}Join for {{ today }} today{% else %}Join for {{ today }}{% endif %}</button>
+      <button type="submit" class="btn">{% if trial %}Start my 7-day trial: $12 today{% elsif starter %}Start for $12 today{% elsif role == 'coached' %}Join the group for {{ today }} today{% elsif founding %}Join for {{ today }} today{% else %}Join for {{ today }}{% endif %}</button>
+      {%- if trial -%}
+      <p class="under">First membership charge {{ recurring }} on {{ trial_charge_date }}, then {{ recurring }}/{{ interval }} on the same date. Cancel online anytime.</p>
+      {%- else -%}
       <p class="under">Renews at {{ recurring }}/{{ interval }} on <span data-sy-renew="{% if interval == 'year' %}12{% else %}1{% endif %}">the same date next {{ interval }}</span>. Cancel online anytime.</p>
+      {%- endif -%}
     </form>
     <p class="small"><strong>General fitness and nutrition education, not medical advice.</strong> Check with your doctor before starting new exercise. On your statement: STRONGYEARS MEMBER.</p>
   {%- endif -%}
@@ -170,7 +221,7 @@
   "name": "Membership offer",
   "settings": [
     { "type": "select", "id": "offer", "label": "Offer", "default": "standard",
-      "options": [ { "value": "standard", "label": "Plan price" }, { "value": "starter", "label": "Cell B: $12 books + first month" } ] }
+      "options": [ { "value": "standard", "label": "Plan price" }, { "value": "trial", "label": "Canon 6: $12 books + 7-day trial, then $25" }, { "value": "starter", "label": "Cell B: $12 books + first month" } ] }
   ]
 }
 {% endschema %}

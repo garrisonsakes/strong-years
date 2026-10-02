@@ -1,4 +1,6 @@
 export type Arm = "A" | "B";
+/** On a membership row: A = the old $1 trial (never live), B = charge-today, T = the canon-6 7-day trial (Shopify). */
+export type MembershipArm = Arm | "T";
 export type Track = "rebuild" | "steady" | "strong" | "iron";
 export type ProcessorId = "stripe" | "braintree" | "shopify";
 export type Sex = "woman" | "man" | "na";
@@ -107,7 +109,7 @@ export interface Membership {
   id: string;
   member_id: string;
   plan: Plan;
-  arm: Arm | null;
+  arm: MembershipArm | null;
   offer_code: string;
   price_cents: number;
   interval: "month" | "year" | "none";
@@ -591,6 +593,11 @@ export interface ShopifyProductRow {
    * first-payment-only discount code (STARTER12 / STARTER12S). matchLine prefers the row whose code is on the order.
    */
   discount_code: string | null;
+  /**
+   * CANON UPDATE 6: a trial row. The membership line is $0 at checkout (the subscription app's trial period), the
+   * first recurring_cents charge is trial_days later and arrives as a renewal order. Null = no trial.
+   */
+  trial_days?: number | null;
   created_at: string;
 }
 

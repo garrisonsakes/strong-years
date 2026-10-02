@@ -89,7 +89,7 @@ export function liveRunner(shop: string, token: string, f: Fetch = fetch): Graph
  * DRY_RUN: records and prints the operation, and answers with deterministic fake data so later steps
  * can be planned. Existence checks answer "not found", so the printed plan is the full first-run plan.
  */
-export function dryRunner(print: (s: string) => void = (s) => process.stdout.write(s), opts: { simulateProvisioned?: boolean; engine?: "shopify_subscriptions" | "app" } = {}): GraphQLRunner {
+export function dryRunner(print: (s: string) => void = (s) => process.stdout.write(s), opts: { simulateProvisioned?: boolean; engine?: "shopify_subscriptions" | "app"; simulateTrialPlan?: boolean } = {}): GraphQLRunner {
   const recorded: RecordedOp[] = [];
   let seq = 0;
   const fakeId = (type: string, key: string) => `gid://shopify/${type}/DRYRUN-${key}`;
@@ -118,6 +118,8 @@ export function dryRunner(print: (s: string) => void = (s) => process.stdout.wri
             sellingPlans: { nodes: [
               { id: fakeId("SellingPlan", `${spec.handle}-${spec.role === "annual" ? "yearly" : "monthly"}`), name: spec.role === "annual" ? "Yearly, renews until you cancel" : "Monthly, renews until you cancel", billingPolicy: { interval: spec.role === "annual" ? "YEAR" : "MONTH", intervalCount: 1 } },
               ...(opts.engine === "app" && spec.role === "founding" ? [{ id: fakeId("SellingPlan", "starter-b"), name: "$12 first month with the Starter Books, then $25 a month", billingPolicy: { interval: "MONTH", intervalCount: 1 } }] : []),
+              // CANON UPDATE 6: the simulated store has the 7-day-trial plan on the two membership products (TRIAL_SIMULATED=0 to test the fallback).
+              ...((spec.role === "founding" || spec.role === "standard") && opts.simulateTrialPlan !== false ? [{ id: fakeId("SellingPlan", `${spec.handle}-trial-7`), name: "7-day trial, then $25 a month", billingPolicy: { interval: "MONTH", intervalCount: 1 } }] : []),
             ] },
           }];
           return { productByIdentifier: {

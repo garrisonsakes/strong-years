@@ -19,7 +19,7 @@ import { env } from "../config";
 import type { Store } from "../db/store";
 import type { Member, Membership, Order, ShopifyProductRow } from "../db/types";
 import { defaultMember, findMemberByEmail, normalizeEmail } from "../members";
-import { addDays, addMonths, moneyExact } from "../pricing";
+import { addDays, addMonths, formatDate, moneyExact } from "../pricing";
 import { alertOnCall, sendEmail } from "../notify";
 import { isCheckoutOpen } from "../launch";
 import { createGift } from "../gifts";
@@ -289,15 +289,23 @@ async function orderPaid(store: Store, p: Json, now: Date, admin: ShopifyAdmin):
     // A renewal order IS the renewal (billing-attempt webhooks never reach us on the launch path): it extends the
     // paid-through date by one period from the later of today and the current period end, and clears any grace.
     if (membership && renewal && !(await store.findOne("sy_orders", { shopify_line_id: line.lineId, kind: "membership_charge" }))) {
-      const base = membership.current_period_end && new Date(membership.current_period_end).getTime() > paidAt.getTime() ? new Date(membership.current_period_end) : paidAt;
+      const converting = membership.status === "trialing";
+      // CANON UPDATE 6: the day-7 charge of a trial is its first real membership payment: the paid month runs from the
+      // charge date, the 14-day money-back window starts now (not at the $0 checkout), the row becomes active.
+      // Otherwise the renewal extends from the later of today and the current period end.
+      const base = !converting && membership.current_period_end && new Date(membership.current_period_end).getTime() > paidAt.getTime() ? new Date(membership.current_period_end) : paidAt;
       await store.update("memberships", membership.id, {
         current_period_end: addInterval(base, membership.interval).toISOString(),
         grace_until: null,
         // "expired" here means the period lapsed with no renewal order (runShopifyLapses); the money came, so it's back.
-        status: ["past_due", "paused", "canceled", "expired"].includes(membership.status) ? "active" : membership.status,
+        status: ["past_due", "paused", "canceled", "expired", "trialing"].includes(membership.status) ? "active" : membership.status,
         cancel_at_period_end: false,
         canceled_at: null,
+        ...(converting ? { first_paid_at: paidAt.toISOString(), guarantee_until: addDays(paidAt, GUARANTEE_DAYS).toISOString(), price_cents: line.amountCents > 0 ? line.amountCents : membership.price_cents } : {}),
       });
+      if (converting && line.amountCents !== (membership.price_cents ?? 0)) {
+        await ticket(store, member, `Shopify order ${orderId}: the first charge after the 7-day trial was ${moneyExact(line.amountCents)} but the trial page promised ${moneyExact(membership.price_cents)} (${line.row.sku}). Check the selling plan's price; refund the difference if the page misled.`);
+      }
       // Founding seat ledger rule 2: a renewal order consumed a seat it must not keep (renewals never count).
       if (line.row.entitlement === "founding" && line.row.inventory_item_id) await giveSeatBack(store, admin, line.row.inventory_item_id, `strongyears://seat-ledger/renewal/${orderId}`, orderId);
     }
@@ -347,7 +355,7 @@ async function orderPaid(store: Store, p: Json, now: Date, admin: ShopifyAdmin):
 
   await linkWaitlistToMember(store, (await store.get("members", member.id)) ?? member, ctx.attribution, now);
   if (!renewal) await conversions(store, member, orderId, ebookCents, newMembership, ctx.attribution);
-  if (newMembership) await welcome(store, member, newMembership);
+  if (newMembership) await welcome(store, member, newMembership, mapped.some((l) => l.row.entitlement === "ebook"));
   else if (!renewal && mapped.some((l) => l.row.entitlement === "ebook")) await booksWelcome(store, member);
   // Affiliates (30% x 12 months, 60-day link window, no self-referral). Never throws, never blocks access.
   await creditAffiliateOrder(store, { memberId: member.id, email, shopifyOrderId: orderId, discountCodes: codes, attribution: ctx.attribution, renewal, paidAt });
@@ -362,18 +370,30 @@ async function orderPaid(store: Store, p: Json, now: Date, admin: ShopifyAdmin):
 
 async function initialMembership(store: Store, member: Member, row: ShopifyProductRow, orderId: string, cell: string | null, paidAt: Date, now: Date): Promise<Membership> {
   const interval: Membership["interval"] = row.interval === "year" ? "year" : "month";
+  // CANON UPDATE 6: a trial row starts "trialing". Nothing is paid for the membership yet, so the period that grants
+  // access is the trial itself (current_period_end = trial_end); the day-7 renewal order converts it (orderPaid), and
+  // no renewal order by trial_end + grace lapses it (runShopifyLapses) and returns the founding seat. The money-back
+  // window is set at the first charge; until then guarantee_until = trial_end + 14 days keeps the bonus PDFs vested
+  // on the same day they would be for a charge-today member.
+  const trialDays = row.trial_days && row.trial_days >= 1 && row.trial_days <= 31 ? row.trial_days : 0;
+  const trialEnd = trialDays ? addDays(paidAt, trialDays) : null;
+  if (trialDays) {
+    const prior = (await store.find("memberships", { member_id: member.id })).filter((m) => m.shopify_origin_order_id !== orderId && m.status !== "incomplete" && m.plan !== "gift");
+    if (prior.length) await ticket(store, member, `Shopify order ${orderId}: ${member.email} started a second ${trialDays}-day trial (${row.sku}) after an earlier membership (${prior[0]!.offer_code ?? prior[0]!.plan}, ${prior[0]!.status}). One trial per person: cancel the new contract in the subscription app before day ${trialDays}, or convert it by hand if the earlier row was never charged.`);
+  }
   const fields: Partial<Membership> = {
     member_id: member.id,
     plan: planFor(row),
-    arm: "B",
+    arm: trialDays ? "T" : "B",
     offer_code: row.sku,
     price_cents: row.recurring_cents ?? row.price_cents,
     interval,
-    status: "active",
+    status: trialDays ? "trialing" : "active",
     founding: row.entitlement === "founding",
-    first_paid_at: paidAt.toISOString(),
-    guarantee_until: addDays(paidAt, GUARANTEE_DAYS).toISOString(),
-    current_period_end: addInterval(paidAt, interval).toISOString(),
+    first_paid_at: trialDays ? null : paidAt.toISOString(),
+    guarantee_until: addDays(trialEnd ?? paidAt, GUARANTEE_DAYS).toISOString(),
+    current_period_end: trialEnd ? trialEnd.toISOString() : addInterval(paidAt, interval).toISOString(),
+    trial_end: trialEnd ? trialEnd.toISOString() : null,
     processor: "shopify",
     price_cell: cell ?? row.cell,
     shopify_origin_order_id: orderId,
@@ -391,7 +411,6 @@ async function initialMembership(store: Store, member: Member, row: ShopifyProdu
   try {
     return await store.insert("memberships", {
       ...fields,
-      trial_end: null,
       cancel_at_period_end: false,
       canceled_at: null,
       paused_until: null,
@@ -447,8 +466,30 @@ async function conversions(store: Store, member: Member, orderId: string, ebookC
   }
 }
 
-async function welcome(store: Store, member: Member, m: Membership) {
+async function welcome(store: Store, member: Member, m: Membership, withBooks = false) {
   const link = await issueMagicLink(store, member.id, env.siteUrl, "/app", 24 * 3600_000);
+  const trial = m.status === "trialing" && m.trial_end;
+  if (trial) {
+    // CANON UPDATE 6: the 7-day trial welcome restates the full auto-renewal terms (ROSCA / state ARLs): the charge date,
+    // the amount, the cadence, how to cancel online, and that cancelling before day 7 means no membership charge.
+    const chargeDate = formatDate(m.trial_end!, member.timezone || env.displayTimeZone);
+    await sendEmail({
+      to: member.email,
+      from: "chang",
+      template: "SH_welcome_trial",
+      subject: `Your 7-day trial has started. First charge ${chargeDate} unless you cancel.`,
+      secrets: [link],
+      text: [
+        `${member.first_name}, welcome. Your 7-day trial of the ${m.founding ? "founding membership" : "membership"} started today${withBooks ? ", and your two Starter Books are yours to keep" : ""}.`,
+        `Open the members area (this link works for 24 hours): ${link}`,
+        `Later, sign in at ${env.siteUrl}/login with this email address. We send you a code; there's no password.`,
+        `The terms, in plain words: nothing was charged for the membership today. On ${chargeDate} your card is charged ${moneyExact(m.price_cents)}, then ${moneyExact(m.price_cents)} every ${m.interval === "year" ? "year" : "month"} on the same date until you cancel${m.founding ? ". Founding price locked for as long as you stay subscribed (pauses included)" : ""}. We email you 2 days before that first charge.`,
+        `Cancel online anytime, in at most two screens, on your account page: ${shopifyConfig.customerAccountUrl()}. Cancel before ${chargeDate} and the membership costs nothing. After the first charge: 14-day money-back guarantee, once per person, from your membership page.`,
+        "— Chang Yin (AI character)",
+      ].join("\n\n"),
+    });
+    return;
+  }
   await sendEmail({
     to: member.email,
     from: "chang",
@@ -813,6 +854,14 @@ async function inventoryUpdate(store: Store, p: Json, admin: ShopifyAdmin): Prom
  * +1 on the founding variant for a renewal order or a refunded first charge. Idempotent by reference URI
  * (shopify_seat_ledger); the location comes from the inventory mirror, else SHOPIFY_LOCATION_ID, else a person.
  */
+/** A trial that lapsed without its first charge gives its founding seat back (the $0 checkout consumed one). */
+export async function releaseTrialSeat(store: Store, m: Pick<Membership, "id" | "founding" | "shopify_origin_order_id">, admin: ShopifyAdmin = shopifyAdmin()): Promise<void> {
+  if (!m.founding) return;
+  const row = (await store.find("shopify_products", { entitlement: "founding", active: true })).find((x) => x.inventory_item_id);
+  if (!row?.inventory_item_id) return;
+  await giveSeatBack(store, admin, row.inventory_item_id, `strongyears://seat-ledger/trial-lapse/${m.shopify_origin_order_id ?? m.id}`, m.shopify_origin_order_id ?? null);
+}
+
 async function giveSeatBack(store: Store, admin: ShopifyAdmin, inventoryItemId: string, ref: string, orderId: string | null) {
   try {
     await store.insert("shopify_seat_ledger", { ref, delta: 1, shopify_order_id: orderId });
@@ -855,5 +904,5 @@ export async function shopifyFoundingTaken(store: Store, cap: number): Promise<n
       return Math.max(0, Math.min(cap, cap - available));
     }
   }
-  return store.count("memberships", { founding: true, status: { in: ["active", "past_due", "paused", "canceled", "expired"] } });
+  return store.count("memberships", { founding: true, status: { in: ["trialing", "active", "past_due", "paused", "canceled", "expired"] } });
 }

@@ -176,8 +176,8 @@ def check_variants(main_rows: list[dict], var_rows: list[dict]) -> list[str]:
     trials_per_body: dict[tuple, int] = {}
     for r in sorted(allr, key=_when):
         surf = PLAT_SURFACE.get(r["platform"], r["platform"])
-        if r["platform"] in ("fb_text", "fb_photo"):
-            continue                                   # text/photo posts carry no video body
+        if r["platform"] in ("fb_text", "fb_photo", "ig_story"):
+            continue                                   # text/photo posts and Stories stickers carry no video body
         k = (r["page"], surf, r.get("body_id"))
         if surf == "ig_trial":
             trials_per_body[k] = trials_per_body.get(k, 0) + 1
@@ -189,6 +189,9 @@ def check_variants(main_rows: list[dict], var_rows: list[dict]) -> list[str]:
             err.append(f"{r['file_id']}: body {r.get('body_id')} twice on {r['page']} x {surf} within 30 d")
         last[k] = t
     # Trial Reel caps, the IG hard stop, the FB per-Page budget
+    # CANON UPDATE 6: Facebook is ONE page for every IG page's content, so its budget is counted per FB account over the
+    # rows the account plan actually schedules (publish != held); a bare placement plan counts every row.
+    import account_topology as AT
     trials, ig, fb = Counter(), Counter(), Counter()
     for r in allr:
         key = (r["page"], r["date"])
@@ -196,8 +199,8 @@ def check_variants(main_rows: list[dict], var_rows: list[dict]) -> list[str]:
             trials[key] += 1
         if r["platform"] in ("ig_trial", "ig_reels"):
             ig[key] += 1
-        if r["platform"] in ("fb_reels", "fb_text", "fb_photo"):
-            fb[key] += 1
+        if r["platform"] in ("fb_reels", "fb_text", "fb_photo") and r.get("publish", "y") != "held":
+            fb[(AT.fb_page_for(r["page"]) or r["page"], r["date"])] += 1
     day_index = {(r["page"], r["date"]): int(r["day_index"]) for r in allr}
     for key, n in trials.items():
         cap = trial_cap(key[0], day_index[key])
@@ -249,11 +252,13 @@ def check_variants(main_rows: list[dict], var_rows: list[dict]) -> list[str]:
     for key, cad in fb_cad.items():
         if fb_long[key] != fb_long_target(cad):
             err.append(f"FB long cuts {key[0]} {key[1]}: {fb_long[key]} != {fb_long_target(cad)}")
-    tp = Counter((r["page"], r["date"], r["platform"]) for r in var_rows if r["platform"] in ("fb_text", "fb_photo"))
-    for key in fb_cad:
+    # one text + one photo per FB PAGE per day (the variants CSV carries them under the FB page's name since canon 6;
+    # an older per-IG-page CSV is accepted too)
+    tp = Counter((AT.fb_page_for(r["page"]) or r["page"], r["date"], r["platform"]) for r in var_rows if r["platform"] in ("fb_text", "fb_photo"))
+    for key in {(AT.fb_page_for(k[0]) or k[0], k[1]) for k in fb_cad}:
         for p in ("fb_text", "fb_photo"):
-            if tp[(key[0], key[1], p)] != 1:
-                err.append(f"{p} {key[0]} {key[1]}: {tp[(key[0], key[1], p)]} != 1")
+            if tp[(key[0], key[1], p)] < 1:
+                err.append(f"{p} {key[0]} {key[1]}: {tp[(key[0], key[1], p)]} < 1")
     return err
 
 
@@ -263,7 +268,10 @@ def main() -> int:
     vpath = os.path.join(DATA, "posting_plan_variants_90d.csv")
     vrows = list(csv.DictReader(open(vpath))) if os.path.exists(vpath) else []
     problems, flags = check_plan(rows)
-    problems += check_variants(rows, vrows)
+    # CANON UPDATE 6: the Facebook budget is per FB PAGE over the rows the account plan schedules.
+    import account_topology as AT
+    apath = AT.ACCOUNTS_CSV
+    problems += check_variants(AT.load(apath) if apath.exists() else AT.apply(rows), vrows)
     problems += check_scripts(json.load(open(os.path.join(DATA, "scripts.json"))))
     with open(os.path.join(DATA, "posting_plan_flags.csv"), "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=["file_id", "date", "page", "platform", "slot_et", "slot_ok", "prime", "ig_trial_reel"])

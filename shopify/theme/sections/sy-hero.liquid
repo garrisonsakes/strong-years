@@ -1,6 +1,7 @@
 {%- comment -%}
   Landing hero, arm-aware (assigned before paint in layout/theme.liquid):
   Arm A: Starter Books first (cell price $7/$12/$15), founding offer after purchase.
+  Arm T (CANON UPDATE 6, default): "$12 today = Starter Books + a 7-day trial; first $25 on day 7, then $25/mo".
   Arm B: "$12 today = books + first month, then $25/mo" as one subscription purchase.
   If the founding group is closed, arm B points to the standard membership instead.
 {%- endcomment -%}
@@ -27,6 +28,15 @@
     <p class="under">One payment. Nothing renews. Instant download.</p>
   </div>
 
+  <div class="stack-s" data-arm-only="T">
+    {%- if f.closed or founding.available == false -%}
+      <a class="btn" href="/products/strong-years-membership?view=trial">Start my 7-day trial: $12 today</a>
+      <p class="under">The founding group is full. $12 today for the Starter Books and a 7-day trial; then the standard price monthly until you cancel.</p>
+    {%- else -%}
+      <a class="btn" href="/products/founding-membership?view=trial">Start my 7-day trial: $12 today</a>
+      <p class="under">$12 today for the Starter Books and a 7-day trial of the membership. First $25 on day 7, then $25 a month until you cancel. Cancel online anytime.</p>
+    {%- endif -%}
+  </div>
   <div class="stack-s" data-arm-only="B">
     {%- if closed -%}
       <a class="btn" href="/products/strong-years-membership">Join Strong Years</a>

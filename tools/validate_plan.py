@@ -126,14 +126,19 @@ def validate(rows: list[dict]) -> list[str]:
     return err
 
 
-def validate_all(rows: list[dict], vrows: list[dict]) -> list[str]:
-    return validate(rows) + PR.check_variants(rows, vrows)
+def validate_all(rows: list[dict], vrows: list[dict], acc_rows: list[dict] | None = None) -> list[str]:
+    import account_topology as AT
+    # CANON UPDATE 6 topology: caps per publishing account (1 YT channel, 1 FB page, TikTok accounts != IG pages, Stories).
+    acc = acc_rows if acc_rows is not None else AT.apply(rows)
+    return validate(rows) + PR.check_variants(acc, vrows) + AT.validate(acc, vrows)
 
 
 def main() -> int:
+    import account_topology as AT
     rows = load()
     vrows = load(bp.VAR_CSV) if bp.VAR_CSV.exists() else []
-    errs = validate_all(rows, vrows)
+    acc = AT.load() if AT.ACCOUNTS_CSV.exists() else None
+    errs = validate_all(rows, vrows, acc)
     for e in errs[:50]:
         print("FAIL", e)
     print(f"{len(rows)} placements + {len(vrows)} variant rows (Trial Reels, FB text/photo), "

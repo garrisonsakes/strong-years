@@ -16,6 +16,7 @@ import { sendEmail, sendSms } from "../notify";
 import { sendPushToMember } from "../push";
 import { handleStripeEvent } from "./webhook";
 import { shopifyConfig } from "./shopify";
+import { releaseTrialSeat } from "./shopifyWebhook";
 
 /**
  * Shopify-mode re-check (INTEGRATION.md §5). A cancellation or pause made on Shopify's
@@ -111,7 +112,7 @@ export async function runReminders(store: Store, now = new Date()): Promise<{ se
         text: [
           `Hi ${member.first_name}, a quick, honest reminder.`,
           trial
-            ? `Your 7-day trial of Strong Years ends on ${date}. If you'd like to continue, you don't need to do anything: we'll charge ${price} on ${date} and then monthly until you cancel.`
+            ? `Your 7-day trial of Strong Years ends on ${date}. If you'd like to continue, you don't need to do anything: we'll charge ${price} on ${date} and then monthly on the same date until you cancel.${unsure ? ` If you already cancelled it on your account page, nothing is charged and you can ignore this email.` : ""}`
             : unsure
               ? `${firstRenewalAfterStarter ? `Your $12 starter month ends and, if` : `If`} your Strong Years membership is still active, it renews on ${date} at ${price}, then monthly until you cancel. If you already cancelled or paused it on your account page, nothing is charged and you can ignore this email.`
               : `${firstRenewalAfterStarter ? `Your $12 starter month ends and your` : `Your`} Strong Years membership renews on ${date} at ${price}, then monthly until you cancel.`,
@@ -187,7 +188,7 @@ export async function runShopifyLapses(store: Store, now = new Date()): Promise<
     return Number.isFinite(n) && n >= 0 && n <= 30 ? n : 7;
   })();
   const cutoff = new Date(now.getTime() - floatDays * 86_400_000).toISOString();
-  const rows = await store.find("memberships", { processor: "shopify", status: { in: ["active", "past_due", "canceled", "paused"] }, current_period_end: { lte: cutoff } });
+  const rows = await store.find("memberships", { processor: "shopify", status: { in: ["trialing", "active", "past_due", "canceled", "paused"] }, current_period_end: { lte: cutoff } });
   let n = 0;
   for (const m of rows) {
     if (m.plan === "gift" || !m.current_period_end) continue;
@@ -197,6 +198,22 @@ export async function runShopifyLapses(store: Store, now = new Date()): Promise<
     n++;
     const member = await store.get("members", m.member_id);
     if (!member) continue;
+    if (m.status === "trialing") {
+      // CANON UPDATE 6: a 7-day trial whose first charge never produced a renewal order (cancelled during the trial, or
+      // the day-7 payment failed and dunning gave up). The founding seat the $0 checkout consumed goes back.
+      await releaseTrialSeat(store, m);
+      await sendEmail({
+        to: member.email,
+        template: "SH_trial_ended",
+        subject: "Your Strong Years trial has ended",
+        text: [
+          `${member.first_name}, your 7-day trial ended on ${formatDate(m.current_period_end, member.timezone || env.displayTimeZone)} and no membership payment came through, so the members area is closed for now. Nothing further is charged.`,
+          `If you cancelled during the trial, that's all working as it should. If you meant to keep going and the payment failed, update your card on your account page and the next successful payment opens everything again: ${shopifyConfig.customerAccountUrl()}`,
+          "Your Starter Books are yours to keep.",
+        ].join("\n\n"),
+      });
+      continue;
+    }
     await sendEmail({
       to: member.email,
       template: "SH_membership_ended",

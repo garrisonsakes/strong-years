@@ -8,7 +8,7 @@
  * resets the founding seat count.
  */
 import {
-  COLLECTIONS, DISCOUNTS, EBOOK_CELLS, HARDSHIP_POLICY, MARKETS, FOUNDING_CAP, FOUNDING_CLOSE_DATE_DEFAULT, FUNNEL_ARMS,
+  COLLECTIONS, DISCOUNTS, EBOOK_CELLS, HARDSHIP_POLICY, MARKETS, FOUNDING_CAP, FOUNDING_CLOSE_DATE_DEFAULT, FUNNEL_ARMS, TRIAL_DAYS,
   METAFIELD_DEFINITIONS, METAFIELD_NAMESPACE, PRODUCTS, REDIRECTS, SELLING_PLANS, STANDARD_PRICE,
   FOUNDING_PRICE, WEBHOOK_PATH, WEBHOOK_TOPICS_APP_ENGINE, WEBHOOK_TOPICS_CORE, type ProductSpec,
 } from "../config/catalog.ts";
@@ -39,6 +39,8 @@ export interface MembersCatalogRow {
   includes_ebook: boolean; gift_months: number | null; cell: string | null; cohort: "founding" | "standard" | null; active: boolean;
   /** Storefront handle: the members app's /b and /join redirect to the PRODUCT PAGE (selling plans don't work with cart permalinks, shopify.dev "Create cart permalinks" → Limitations). */
   product_handle: string;
+  /** CANON UPDATE 6: trial rows (t12). Null for everything else. */
+  trial_days?: number | null;
   /** Cell B in the Shopify Subscriptions engine: the same (variant, plan) as founding_monthly, told apart by this discount code on the order. Null otherwise. */
   discount_code: string | null;
 }
@@ -335,8 +337,8 @@ export function discountInput(d: (typeof DISCOUNTS)[number], nowIso: string, pro
 
 async function createAppSellingPlans(gql: GraphQLRunner, productIds: Record<string, string>, r: PlanReport) {
   const groups = [
-    { code: "sy-founding", name: "Founding membership", plans: ["monthly", "starter_b"], products: ["founding-membership"] },
-    { code: "sy-monthly", name: "Membership", plans: ["monthly"], products: ["strong-years-membership", "essentials-membership", "coached-12-week", "coached-12-week-c97", "coached-12-week-c197"] },
+    { code: "sy-founding", name: "Founding membership", plans: ["monthly", "trial_7", "starter_b"], products: ["founding-membership"] },
+    { code: "sy-monthly", name: "Membership", plans: ["monthly", "trial_7"], products: ["strong-years-membership", "essentials-membership", "coached-12-week", "coached-12-week-c97", "coached-12-week-c197"] },
     { code: "sy-yearly", name: "Yearly membership", plans: ["yearly"], products: ["founding-annual"] },
   ];
   for (const g of groups) {
@@ -375,6 +377,7 @@ async function createAppSellingPlans(gql: GraphQLRunner, productIds: Record<stri
     errs(`requiresSellingPlan ${h}`, res.productUpdate);
   }
   r.warnings.push("App engine: the Strong Years app owns these contracts and MUST run billing (subscriptionBillingAttemptCreate on schedule), update the starter_b contract price to $25 after cycle 1, and handle dunning. That scheduler is not part of this package.");
+  r.warnings.push(`App engine, canon 6 trial_7: the plan's first cycle is $0 (pricing policy); on subscription_contracts/create the app must call subscriptionContractSetNextBillingDate(contract, checkout + ${TRIAL_DAYS} days) and bill on that date (subscriptionBillingAttemptCreate); the plan's recurring price applies from cycle 2. Without that scheduler use a trial-capable subscription app instead (INTEGRATION.md §9).`);
 }
 
 const num = (gid: string | null | undefined) => (gid ? String(gid).split("/").pop()! : null);
@@ -387,12 +390,16 @@ async function verifyPhase(gql: GraphQLRunner, o: PlanOptions, r: PlanReport, on
     const prod = found.productByIdentifier;
     if (!prod) { r.warnings.push(`${p.handle}: product missing; run the core phase first.`); continue; }
     const variants = prod.variants.nodes as any[];
-    let planId: string | null = null, starterPlanId: string | null = null;
+    let planId: string | null = null, starterPlanId: string | null = null, trialPlanId: string | null = null;
     if (p.subscriptionOnly) {
       const wanted = p.role === "annual" ? "YEAR" : "MONTH";
       const plans = (prod.sellingPlanGroups.nodes as any[]).flatMap((g) => g.sellingPlans.nodes as any[]);
-      const match = plans.find((s) => s.billingPolicy?.interval === wanted && s.billingPolicy?.intervalCount === 1 && !/first month/i.test(s.name));
+      const match = plans.find((s) => s.billingPolicy?.interval === wanted && s.billingPolicy?.intervalCount === 1 && !/first month|trial/i.test(s.name));
       starterPlanId = plans.find((s) => /first month/i.test(s.name))?.id ?? null;
+      // CANON UPDATE 6: the 7-day-trial plan (trial-capable app or the app engine). Absent → no t12 rows → the members
+      // app and the theme serve cell B; the warning says what to create.
+      trialPlanId = plans.find((s) => /7[- ]day trial/i.test(s.name))?.id ?? null;
+      if ((p.role === "founding" || p.role === "standard") && !trialPlanId) r.warnings.push(`${p.handle}: no "7-day trial" selling plan attached (CANON UPDATE 6). Create it in a trial-capable subscription app (INTEGRATION.md §9); until then visitors get cell B (STARTER12).`);
       if (!match) { r.warnings.push(`${p.handle}: no ${wanted === "YEAR" ? "yearly" : "monthly"} selling plan attached yet (Shopify Subscriptions → Plans).`); continue; }
       planId = match.id;
       r.ids[`selling-plan:${p.handle}`] = match.id;
@@ -423,11 +430,15 @@ async function verifyPhase(gql: GraphQLRunner, o: PlanOptions, r: PlanReport, on
           rows.push(starterPlanId
             ? mk({ sku: "bundle_m12", entitlement: "founding", selling_plan_id: num(starterPlanId), price_cents: 1200, includes_ebook: true, cell: "m12", cohort: "founding" })
             : mk({ sku: "bundle_m12", entitlement: "founding", price_cents: 1200, includes_ebook: true, cell: "m12", cohort: "founding", discount_code: "STARTER12" }));
+          // CANON UPDATE 6 (the launch offer): founding variant on the 7-day-trial plan, $0 membership line at checkout
+          // (the $12 Starter Books are the ebook_e12 line on the same order), first $25 on day 7 as a renewal order.
+          if (trialPlanId) rows.push(mk({ sku: "bundle_t12", entitlement: "founding", selling_plan_id: num(trialPlanId), price_cents: 0, cell: "t12", cohort: "founding", trial_days: TRIAL_DAYS }));
           break;
         case "standard":
           rows.push(mk({ sku: "standard_monthly", entitlement: "standard", cohort: "standard" }));
           // Cell B after the founding group closes: $12 today (books + first month), then the $35 standard price.
           if (!starterPlanId) rows.push(mk({ sku: "bundle_m12_standard", entitlement: "standard", price_cents: 1200, includes_ebook: true, cell: "m12", cohort: "standard", discount_code: "STARTER12S" }));
+          if (trialPlanId) rows.push(mk({ sku: "bundle_t12_standard", entitlement: "standard", selling_plan_id: num(trialPlanId), price_cents: 0, cell: "t12", cohort: "standard", trial_days: TRIAL_DAYS }));
           break;
         case "essentials": rows.push(mk({ sku: "essentials_monthly", entitlement: "essentials" })); break;
         case "annual": rows.push(mk({ sku: "annual_founding", entitlement: "annual" })); break;

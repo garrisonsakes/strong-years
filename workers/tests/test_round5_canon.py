@@ -95,8 +95,10 @@ from compliance.scanner import scan as _scan
     ("Founding price locked for  life of your membership", "CANON-FORLIFE"),
     ("Try it for $1 for 7 days.", "CANON-TRIAL"),
     ("Try it for ＄ 1 today.", "CANON-TRIAL"),
-    ("Join the 7-day trial", "CANON-TRIAL"),
+    ("Join the 14-day trial", "CANON-TRIAL"),
     ("Start your free trial", "CANON-TRIAL"),
+    ("A free 7-day trial, no charge", "CANON-TRIAL"),
+    ("Try the 3-day trial", "CANON-TRIAL"),
     ("Only 37 founding spots left, closes at midnight!", "T-04"),
     ("Normally $99, today $12", "T-04"),
     ("\"My knees haven't hurt since week 2.\" — Linda, 68, member since March", "T-01b"),
@@ -110,6 +112,10 @@ def test_round5_canon_rules_block(text, rule):
 @_pt.mark.parametrize("text", [
     "In a 204-person trial, tai chi matched physical therapy.",
     "trial and error in the kitchen",
+    # CANON UPDATE 6: the paid $12 offer with a 7-day trial of the membership is the launch offer and must pass.
+    "$12 today for the Starter Books and a 7-day trial of the membership. First $25 on day 7, then $25 a month until you cancel.",
+    "Start my 7-day trial: $12 today",
+    "Your 7-day trial ends on Friday; we charge $25 then unless you cancel.",
     "Learning to cook is a skill for life.",
     "Eggs cost about $1.50 a dozen here.",
     "$1 a pound for cabbage",

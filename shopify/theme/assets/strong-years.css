@@ -145,6 +145,7 @@ details > div{padding-bottom:12px}
 
 /* Arm / cell / offer visibility, set on <html> before first paint by the boot script (no flicker). */
 html[data-arm="A"] [data-arm-only="B"],html:not([data-arm="A"]) [data-arm-only="A"]{display:none!important}
+html[data-arm="T"] [data-arm-only="B"],html:not([data-arm="T"]) [data-arm-only="T"]{display:none!important}
 html:not([data-cell="e7"]) [data-cell-only="e7"],html:not([data-cell="e15"]) [data-cell-only="e15"],html[data-cell="e7"] [data-cell-only="e12"],html[data-cell="e15"] [data-cell-only="e12"]{display:none!important}
 
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}

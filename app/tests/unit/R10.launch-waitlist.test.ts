@@ -38,6 +38,11 @@ beforeEach(async () => {
   vi.stubEnv("LAUNCH_MODE", "prelaunch");
   vi.stubEnv("SHOPIFY_STORE_DOMAIN", "strongyears-test.myshopify.com");
   vi.stubEnv("WAITLIST_MIN_FILL_MS", "0");
+  // These suites exercise the canon-3 cell B / cell A split mechanics explicitly. Canon 6 (the 7-day trial, t12)
+  // is the default and is covered by R12.canon6-seven-day-trial.test.ts.
+  vi.stubEnv("FRONT_END_CELLS", "m12,e12");
+  vi.stubEnv("FRONT_END_DEFAULT_CELL", "m12");
+  vi.stubEnv("FRONT_END_CELL_TEST", "true");
   vi.stubEnv("DISPLAY_TZ", "America/Los_Angeles");
   store = new MemoryStore();
   setStoreForTests(store);
